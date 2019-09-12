@@ -221,6 +221,13 @@ het Nederlands.")
     #:caption "Virtual machine started with 'guix system vm'")
 
    (screenshot
+    #:title "Sway"
+    #:slug "sway"
+    #:image (guix-url "static/media/img/sway.png")
+    #:preview (guix-url "static/media/img/sway.mini.png")
+    #:caption "Sway window manager running wayland")
+
+   (screenshot
     #:title "Enlightenment"
     #:slug "enlightenment"
     #:image (guix-url "static/media/img/enlightenment-inkscape.png")

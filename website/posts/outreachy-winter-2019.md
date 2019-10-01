@@ -4,15 +4,15 @@ author: Gábor Boskovits
 tags: Outreachy
 ---
 We are happy to announce that for the third time GNU Guix offers a
-[three-month internship through Outreachy](https://www.outreachy.org/december-2019-march-2020-internship-round/communities/gnu-guix/),
+[three-month internship through Outreachy](https://www.outreachy.org),
 the inclusion program for groups traditionally underrepresented in free software
-and tech. We currently propose two subjects to work on:
+and tech. We currently propose [two subjects](https://www.outreachy.org/apply/project-selection/#gnu-guix) to work on:
 
-1. [Create Netlink bindings in Guile](https://www.outreachy.org/december-2019-march-2020-internship-round/communities/gnu-guix/#create-netlink-bindings-in-guile).
-2. [Improve internationalization support for the Guix Data Service](https://www.outreachy.org/december-2019-march-2020-internship-round/communities/gnu-guix/#improve-internationalization-support-the-guix-).
+1. Create Netlink bindings in Guile
+2. Improve internationalization support for the Guix Data Service
 
-[Eligible persons](https://www.outreachy.org/apply/eligibility/) should apply
-[by November 22th](https://www.outreachy.org/communities/cfp/).
+[Eligible persons](https://www.outreachy.org/apply/eligibility/)
+should [apply by November 22th](https://www.outreachy.org/apply/).
 
 If you’d like to [contribute](https://guix.gnu.org/manual/en/html_node/Contributing.html)
 to computing freedom, Scheme, functional programming, or operating system

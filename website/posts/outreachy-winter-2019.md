@@ -11,9 +11,6 @@ and tech. We currently propose [two subjects](https://www.outreachy.org/apply/pr
 1. Create Netlink bindings in Guile
 2. Improve internationalization support for the Guix Data Service
 
-[Eligible persons](https://www.outreachy.org/apply/eligibility/)
-should [apply by November 22th](https://www.outreachy.org/apply/).
-
 If you’d like to [contribute](https://guix.gnu.org/manual/en/html_node/Contributing.html)
 to computing freedom, Scheme, functional programming, or operating system
 development, now is a good time to join us. Let’s get in touch on

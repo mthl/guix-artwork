@@ -92,7 +92,8 @@
        "Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim
 Cournoyer, Tobias Geerinckx-Rice, and Ricardo Wurmus.  Please use the "
        (a (@ (href ,(guix-url "contact/"))) "mailing lists")
-       " for contact. ")
+       " for contact.  For sensitive issues, you can reach them "
+       "using the " (code "guix-maintainers@gnu.org") " private alias.")
 
 
       (h3 (@ (id "license")) "Licensing")

@@ -86,11 +86,11 @@
        ".")
 
 
-      (h3 (@ (id "mantainer")) "Maintainer")
+      (h3 (@ (id "mantainer")) "Maintainers")
 
       (p
-       "Guix is currently maintained by Ludovic Courtès and Ricardo
-       Wurmus.  Please use the "
+       "Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim
+Cournoyer, Tobias Geerinckx-Rice, and Ricardo Wurmus.  Please use the "
        (a (@ (href ,(guix-url "contact/"))) "mailing lists")
        " for contact. ")
 

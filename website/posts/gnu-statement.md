@@ -42,4 +42,5 @@ one that _everyone_ can trust to defend their freedom.
   17. Jeff Law (GCC, Binutils — *not* signing on behalf of the GCC
       Steering Committee)
   18. Han-Wen Nienhuys (GNU LilyPond)
+  19. Joshua Gay (GNU and Free Software Speaker)
 

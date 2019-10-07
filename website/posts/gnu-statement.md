@@ -43,4 +43,5 @@ one that _everyone_ can trust to defend their freedom.
       Steering Committee)
   18. Han-Wen Nienhuys (GNU LilyPond)
   19. Joshua Gay (GNU and Free Software Speaker)
+  20. Ian Jackson (GNU adns, GNU userv)
 

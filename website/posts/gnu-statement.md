@@ -47,4 +47,5 @@ one that _everyone_ can trust to defend their freedom.
   21. Tobias Geerinckx-Rice (GNU Guix)
   22. Andrej Shadura (GNU indent)
   23. Zack Weinberg (developer on GCC, GNU libc, GNU Binutils)
+  24. John W. Eaton (GNU Octave)
 

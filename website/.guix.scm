@@ -84,11 +84,11 @@
             (match (read pipe)
               (('values ('value ((load-path ...) (compiled-path ...))))
                (setenv "GUILE_LOAD_PATH" (string-join
-                                          (append %load-path load-path)
+                                          (append load-path %load-path)
                                           ":"))
                (setenv "GUILE_LOAD_COMPILED_PATH"
-                       (string-join (append %load-compiled-path
-                                            compiled-path)
+                       (string-join (append compiled-path
+                                            %load-compiled-path)
                                     ":"))))
             (close-pipe pipe))
 

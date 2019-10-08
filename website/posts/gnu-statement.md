@@ -46,4 +46,5 @@ one that _everyone_ can trust to defend their freedom.
   20. Ian Jackson (GNU adns, GNU userv)
   21. Tobias Geerinckx-Rice (GNU Guix)
   22. Andrej Shadura (GNU indent)
+  23. Zack Weinberg (developer on GCC, GNU libc, GNU Binutils)
 

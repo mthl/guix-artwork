@@ -128,8 +128,8 @@ provider](https://guix.gnu.org/blog/2015/reproducible-builds-a-means-to-an-end/)
 
 For comparison, _traditional_ distros often have an informally
 specified bootstrap story, usually relying on much bigger binary
-seeds.  We those seeds to weigh in at ~550MB (the size of `debootstrap
---arch=i386
+seeds.  We estimate those seeds to weigh in at ~550MB (the size of
+`debootstrap --arch=i386
 --include=build-essential,dpkg-dev,debhelper,gcc,libc6-dev,make,texinfo
 bullseye ./bullseye-chroot http://deb.debian.org/debian`, with
 `bullseye-chroot/var/cache/apt/archives` removed) in the case of
@@ -176,7 +176,7 @@ simplified C subset.
 [encouraged](https://lists.nongnu.org/archive/html/tinycc-devel/2017-09/msg00040.html)
 to make MesCC a full blown C99 compliant compiler.  That felt as a
 setback but it gave us the perspective of removing TCC from the
-bootstrap lateron.  Using
+bootstrap later on.  Using
 [Nyacc](https://savannah.nongnu.org/projects/nyacc), the amazing
 parser framework with C99 parser by Matt Wette, has even made that a
 feasible perspective.

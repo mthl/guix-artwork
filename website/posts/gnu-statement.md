@@ -48,4 +48,7 @@ one that _everyone_ can trust to defend their freedom.
   22. Andrej Shadura (GNU indent)
   23. Zack Weinberg (developer on GCC, GNU libc, GNU Binutils)
   24. John W. Eaton (GNU Octave)
+  25. Jonathan Wakely (developer on GCC)
+  26. Siddhesh Poyarekar (developer on GNU libc)
+  27. Damian Rouson (developer on GFortran)
 

@@ -51,4 +51,5 @@ one that _everyone_ can trust to defend their freedom.
   25. Jonathan Wakely (developer on GCC)
   26. Siddhesh Poyarekar (developer on GNU libc)
   27. Damian Rouson (developer on GFortran)
+  28. David Malcolm (developer on GCC)
 

@@ -20,7 +20,7 @@ On a multi-user system, this allowed a malicious user to create and
 populate that `$USER` sub-directory for another user that had not yet
 logged in.  Since `/var/…/$USER` is in `$PATH`, the target user could
 end up running attacker-provided code.  See
-https://issues.guix.gnu.org/issue/37744 for more information.
+[the bug report](https://issues.guix.gnu.org/issue/37744) for more information.
 
 This issue was initially [reported by Michael Orlitzky for
 Nix](https://www.openwall.com/lists/oss-security/2019/10/09/4)
@@ -28,7 +28,8 @@ Nix](https://www.openwall.com/lists/oss-security/2019/10/09/4)
 
 # Fix
 
-The [fix](https://issues.guix.gnu.org/issue/37744) consists in letting
+The [fix](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=81c580c8664bfeeb767e2c47ea343004e88223c7)
+consists in letting
 `guix-daemon` create these directories on behalf of users and removing
 the world-writable permissions on `per-user`.
 

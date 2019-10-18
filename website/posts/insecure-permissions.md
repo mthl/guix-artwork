@@ -48,7 +48,7 @@ preventing it from creating that directory on its behalf.
 
 On multi-user systems, we recommend upgrading the daemon now.
 
-To upgrade the daemon On Guix System, run:
+To upgrade the daemon on Guix System, run:
 
 ```
 guix pull

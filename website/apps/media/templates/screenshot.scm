@@ -2,11 +2,12 @@
 ;;; Initially written by sirgazil who waves all
 ;;; copyright interest on this file.
 
-(define-module (apps base templates screenshot)
-  #:use-module (apps base templates components)
+(define-module (apps media templates screenshot)
   #:use-module (apps base templates theme)
   #:use-module (apps base types)
   #:use-module (apps base utils)
+  #:use-module (apps media templates components)
+  #:use-module (apps media types)
   #:export (screenshot-t))
 
 
@@ -24,7 +25,7 @@
        "Functional package management" "Reproducibility")
      #:active-menu-item "Overview"
      #:css (list (guix-url "static/base/css/index.css")
-		 (guix-url "static/base/css/screenshots.css"))
+                 (guix-url "static/media/css/screenshots.css"))
      #:content
      `(main
        (section

@@ -5,6 +5,7 @@
 (use-modules ((apps base builder) #:prefix base:)
 	     ((apps blog builder) #:prefix blog:)
 	     ((apps download builder) #:prefix download:)
+             ((apps media builder) #:prefix media:)
 	     ((apps packages builder) #:prefix packages:)
 	     (haunt asset)
              (haunt builder assets)
@@ -20,5 +21,6 @@
       #:builders (list base:builder
 		       blog:builder
 		       download:builder
+                       media:builder
 		       packages:builder
 		       (static-directory "static")))

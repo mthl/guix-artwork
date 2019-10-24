@@ -3,7 +3,6 @@
 ;;; copyright interest on this file.
 
 (define-module (apps base builder)
-  #:use-module (apps aux system)
   #:use-module (apps base data)
   #:use-module (apps base templates about)
   #:use-module (apps base templates contact)
@@ -14,10 +13,10 @@
   #:use-module (apps base templates help)
   #:use-module (apps base templates home)
   #:use-module (apps base templates menu)
-  #:use-module (apps base templates screenshot)
   #:use-module (apps base templates security)
   #:use-module (apps base types)
   #:use-module (apps blog utils)
+  #:use-module (apps media data)
   #:use-module (haunt html)
   #:use-module (haunt page)
   #:use-module (haunt post)
@@ -48,7 +47,6 @@
   (flatten
    (list (menu-builder)
 	 (home-builder site posts)
-	 (screenshots-builder)
 	 (help-builder)
 	 (donate-builder)
 	 (about-builder)
@@ -113,21 +111,6 @@
 (define (menu-builder)
   "Return a Haunt page representing the website menu."
   (make-page "menu/index.html" (menu-t) sxml->html))
-
-
-(define (screenshots-builder)
-  "Return a list of Haunt page representing screenshot pages."
-  (map
-   (lambda (shot)
-     (let ((context
-	    (list (cons "screenshot" shot)
-		  (cons "screenshots" screenshots))))
-       (make-page (path-join "screenshots"
-			     (screenshot-slug shot)
-			     "index.html")
-		  (screenshot-t context)
-		  sxml->html)))
-   screenshots))
 
 
 (define (security-builder)

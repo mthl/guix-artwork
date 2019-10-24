@@ -8,6 +8,7 @@
   #:use-module (apps base types)
   #:use-module (apps base utils)
   #:use-module (apps blog templates components)
+  #:use-module (apps media templates components)
   #:export (home-t))
 
 

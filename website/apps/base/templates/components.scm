@@ -25,8 +25,7 @@
 	    link-yellow
 	    navbar
 	    page-indicator
-	    page-selector
-	    screenshot->shtml))
+            page-selector))
 
 
 ;;;
@@ -359,21 +358,3 @@
 	     " ")) ; NOTE: Force space for readability in non-CSS browsers.
 	  (iota pages 1))
 	 "")))
-
-
-(define (screenshot->shtml shot)
-  "Return an SHTML representation of the given screenshot object.
-
-   SHOT (<screenshot>)
-     A screenshot object as defined in (apps base types)."
-  `(div
-    (@ (class "screenshot-preview"))
-    (a
-     (@ (href ,(guix-url (url-path-join "screenshots"
-					(screenshot-slug shot) ""))))
-     (img
-      (@ (class "responsive-image")
-	 (src ,(screenshot-preview shot))
-	 (alt "")))
-     (span (@ (class "screenshot-inset-shadow")) ""))
-    (p ,(screenshot-caption shot) (span (@ (class "hidden")) "."))))

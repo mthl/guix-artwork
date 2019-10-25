@@ -33,3 +33,8 @@ article {
     font-weight: bold;
     margin-bottom: 30px;
 }
+
+/* Aim for ~12 words per line for good readability.  */
+article.limit-width {
+    max-width: 720px;
+}

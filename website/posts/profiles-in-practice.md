@@ -32,7 +32,7 @@ Multiple profiles have many benefits:
     shells, each of them running different profiles.
 
 -   Isolation: Programs from one profile will not use programs from the other, and
-    they user can even install different versions of the same programs to the two
+    the user can even install different versions of the same programs to the two
     profiles without conflict.
 
 -   Deduplication: Profiles share dependencies that happens to be the exact same.

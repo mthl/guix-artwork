@@ -71,6 +71,9 @@
                        (ice-9 popen)
                        (ice-9 match))
 
+          (setvbuf (current-output-port) 'line)
+          (setvbuf (current-error-port) 'line)
+
           (copy-recursively #$source ".")
 
           ;; Set 'GUILE_LOAD_PATH' so that Haunt find the Guix modules and
@@ -81,6 +84,7 @@
                                   "repl" "-t" "machine")))
             (pk 'repl-version (read pipe))
             (write '(list %load-path %load-compiled-path) pipe)
+            (force-output pipe)
             (match (read pipe)
               (('values ('value ((load-path ...) (compiled-path ...))))
                (setenv "GUILE_LOAD_PATH" (string-join
@@ -101,6 +105,7 @@
           ;; Use a sane default.
           (setenv "XDG_CACHE_HOME" "/tmp/.cache")
 
+          (format #t "Running 'haunt build'...~%")
           (invoke #+(file-append (specification->package "haunt")
                                  "/bin/haunt")
                   "build")

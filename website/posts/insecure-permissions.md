@@ -1,7 +1,7 @@
 title: Insecure permissions on profile directory (CVE-2019-18192)
 date: 2019-10-17 22:15
 author: Ludovic Courtès
-tags: Security
+tags: Security Advisory
 ---
 We have become aware of a security issue for Guix on multi-user systems
 [that we have just fixed](https://issues.guix.gnu.org/issue/37744)

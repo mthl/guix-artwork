@@ -41,7 +41,7 @@ Multiple profiles have many benefits:
 -   Reproducible: when used with declarative manifests, a profile can be fully
     specified by the Guix commit that was active when it was set up.  This means
     that the exact same profile can be [set up anywhere, anytime](https://guix.gnu.org/blog/2018/multi-dimensional-transactions-and-rollbacks-oh-my/), with just the
-    commit information.  See the section on [5](#org98fddee).
+    commit information.  See section “Reproducible profiles” below.
 
 -   Easier upgrades and maintenance: Multiple profiles make it easy to keep
     package listings at hand and make upgrades completely friction-less.
@@ -301,8 +301,6 @@ hacking environment will be available at all times.
 *Security warning:* While keeping old profiles around can be convenient, keep in
 mind that outdated packages may not have received the latest security fixes.
 
-
-<a id="org98fddee"></a>
 
 # Reproducible profiles
 

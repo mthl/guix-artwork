@@ -70,7 +70,13 @@
        "When security vulnerabilities are found in Guix or the "
        "packages provided by Guix, we will provide "
        (a (@ (href ,(manual-url "Security-Updates.html"))) "security updates")
-       " quickly and with minimal disruption for users.")
+       " quickly and with minimal disruption for users.  When appropriate, "
+       "a security advisory is published on the blog with the "
+       (a (@ (href ,(guix-url "blog/tags/security-advisory")))
+          "Security Advisory tag")
+       " and on the " (a (@ (href ,(guix-url "contact")))
+                         (code "info-guix") " mailing list")
+       "; " (code "guix pull --news") " may also display the advisory.")
       (p
        "Guix uses a “rolling release” model.  All security "
        "bug-fixes are pushed directly to the master branch.  There"

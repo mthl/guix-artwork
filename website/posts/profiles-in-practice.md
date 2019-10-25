@@ -1,10 +1,10 @@
 title: Guix Profiles in Practice
-date: 2019-10-24
+date: 2019-10-25 12:15
 author: Pierre Neidhardt
 tags: Functional package management, Reproducibility, User interfaces, Customization, Software development, Cookbook
 ---
 
-*Note: An updated version of this article is available in the [cookbook](https://guix.gnu.org/cookbook/en/).*
+*Note: An updated version of this article is available in the brand new [cookbook](https://guix.gnu.org/cookbook/en/).*
 
 Guix provides a very useful feature that may be quite foreign to newcomers:
 *profiles*.  They are a way to group package installations together and all users

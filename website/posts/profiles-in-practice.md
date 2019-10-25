@@ -68,24 +68,24 @@ A Guix profile can be set up *via* a so-called *manifest specification* that loo
 this:
 
 ```scheme
-    (specifications->manifest
-      '("package-1"
-        ;; Version 1.3 of package-2.
-        "package-2@1.3"
-        ;; The "lib" output of package-3.
-        "package-3:lib"
-        ; ...
-        "package-N"))
+(specifications->manifest
+  '("package-1"
+	;; Version 1.3 of package-2.
+	"package-2@1.3"
+	;; The "lib" output of package-3.
+	"package-3:lib"
+	; ...
+	"package-N"))
 ```
 
 See [(guix) Invoking guix package](https://guix.gnu.org/manual/en/html_node/Invoking-guix-package.html) for the syntax details.
 
 We can create a manifest specification per profile and install them this way:
 
-```scheme
-    GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
-    mkdir -p "$GUIX_EXTRA_PROFILES"/my-project # if it does not exist yet
-    guix package --manifest=/path/to/guix-my-project-manifest.scm --profile="$GUIX_EXTRA_PROFILES"/my-project/my-project
+```
+GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
+mkdir -p "$GUIX_EXTRA_PROFILES"/my-project # if it does not exist yet
+guix package --manifest=/path/to/guix-my-project-manifest.scm --profile="$GUIX_EXTRA_PROFILES"/my-project/my-project
 ```
 
 Here we set an arbitrary variable `GUIX_EXTRA_PROFILES` to point to the directory
@@ -99,23 +99,23 @@ simply looping over the sub-directories of `$GUIX_EXTRA_PROFILES`.
 
 Note that it's also possible to loop over the output of
 
-```scheme
-    guix package --list-profiles
+```
+guix package --list-profiles
 ```
 
 although you'll probably have to filter out `~/.config/guix/current`.
 
 To enable all profiles on login, add this to your `~/.bash_profile` (or similar):
 
-```scheme
-    for i in $GUIX_EXTRA_PROFILES/*; do
-    	profile=$i/$(basename "$i")
-    	if [ -f "$profile"/etc/profile ]; then
-    		GUIX_PROFILE="$profile"
-    		. "$GUIX_PROFILE"/etc/profile
-    	fi
-    	unset profile
-    done
+```
+for i in $GUIX_EXTRA_PROFILES/*; do
+	profile=$i/$(basename "$i")
+	if [ -f "$profile"/etc/profile ]; then
+		GUIX_PROFILE="$profile"
+		. "$GUIX_PROFILE"/etc/profile
+	fi
+	unset profile
+done
 ```
 
 Note to Guix System users: the above reflects how your default profile
@@ -124,22 +124,22 @@ Note to Guix System users: the above reflects how your default profile
 
 You can obviously choose to only enable a subset of them:
 
-```scheme
-    for i in "$GUIX_EXTRA_PROFILES"/my-project-1 "$GUIX_EXTRA_PROFILES"/my-project-2; do
-    	profile=$i/$(basename "$i")
-    	if [ -f "$profile"/etc/profile ]; then
-    		GUIX_PROFILE="$profile"
-    		. "$GUIX_PROFILE"/etc/profile
-    	fi
-    	unset profile
-    done
+```
+for i in "$GUIX_EXTRA_PROFILES"/my-project-1 "$GUIX_EXTRA_PROFILES"/my-project-2; do
+	profile=$i/$(basename "$i")
+	if [ -f "$profile"/etc/profile ]; then
+		GUIX_PROFILE="$profile"
+		. "$GUIX_PROFILE"/etc/profile
+	fi
+	unset profile
+done
 ```
 
 When a profile is off, it's straightforward to enable it for an individual shell
 without "polluting" the rest of the user session:
 
-```scheme
-    GUIX_PROFILE="path/to/my-project" ; . "$GUIX_PROFILE"/etc/profile
+```
+GUIX_PROFILE="path/to/my-project" ; . "$GUIX_PROFILE"/etc/profile
 ```
 
 The key to enabling a profile is to *source* its `etc/profile` file.  This file
@@ -148,16 +148,16 @@ activate the software contained in the profile.  It is built automatically by
 Guix and meant to be sourced.
 It contains the same variables you would get if you ran:
 
-```scheme
-    guix package --search-paths=prefix --profile=$my_profile"
+```
+guix package --search-paths=prefix --profile=$my_profile"
 ```
 
 Once again, see [(guix) Invoking guix package](https://guix.gnu.org/manual/en/html_node/Invoking-guix-package.html) for the command line options.
 
 To upgrade a profile, simply install the manifest again:
 
-```scheme
-    guix package -m /path/to/guix-my-project-manifest.scm -p "$GUIX_EXTRA_PROFILES"/my-project/my-project
+```
+guix package -m /path/to/guix-my-project-manifest.scm -p "$GUIX_EXTRA_PROFILES"/my-project/my-project
 ```
 
 To upgrade all profiles, it's easy enough to loop over them.  For instance,
@@ -165,22 +165,22 @@ assuming your manifest specifications are stored in
 `~/.guix-manifests/guix-$profile-manifest.scm`, with `$profile` being the name
 of the profile (e.g. "project1"), you could do the following in Bourne shell:
 
-```scheme
-    for profile in "$GUIX_EXTRA_PROFILES"/*; do
-      guix package --profile="$profile" --manifest="$HOME/.guix-manifests/guix-$profile-manifest.scm"
-    done
+```
+for profile in "$GUIX_EXTRA_PROFILES"/*; do
+  guix package --profile="$profile" --manifest="$HOME/.guix-manifests/guix-$profile-manifest.scm"
+done
 ```
 
 Each profile has its own generations:
 
-```scheme
-    guix package -p "$GUIX_EXTRA_PROFILES"/my-project/my-project --list-generations
+```
+guix package -p "$GUIX_EXTRA_PROFILES"/my-project/my-project --list-generations
 ```
 
 You can roll-back to any generation of a given profile:
 
-```scheme
-    guix package -p "$GUIX_EXTRA_PROFILES"/my-project/my-project --switch-generations=17
+```
+guix package -p "$GUIX_EXTRA_PROFILES"/my-project/my-project --switch-generations=17
 ```
 
 
@@ -218,9 +218,9 @@ Alternatively, you could keep it "manifest-less" for throw-away packages
 that you would just use for a couple of days.
 This way makes it convenient to run
 
-```scheme
-    guix install package-foo
-    guix upgrade package-bar
+```
+guix install package-foo
+guix upgrade package-bar
 ```
 
 without having to specify the path to a profile.
@@ -321,15 +321,15 @@ Save this to a file, say `channel-specs.scm`.
 On another computer, you can use the channel specification file and the manifest
 to reproduce the exact same profile:
 
-```scheme
-    GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
-    GUIX_EXTRA=$HOME/.guix-extra
+```
+GUIX_EXTRA_PROFILES=$HOME/.guix-extra-profiles
+GUIX_EXTRA=$HOME/.guix-extra
 
-    mkdir "$GUIX_EXTRA"/my-project
-    guix pull --channels=channel-specs.scm --profile "$GUIX_EXTRA/my-project/guix"
+mkdir "$GUIX_EXTRA"/my-project
+guix pull --channels=channel-specs.scm --profile "$GUIX_EXTRA/my-project/guix"
 
-    mkdir -p "$GUIX_EXTRA_PROFILES/my-project"
-    "$GUIX_EXTRA"/my-project/guix/bin/guix package --manifest=/path/to/guix-my-project-manifest.scm --profile="$GUIX_EXTRA_PROFILES"/my-project/my-project
+mkdir -p "$GUIX_EXTRA_PROFILES/my-project"
+"$GUIX_EXTRA"/my-project/guix/bin/guix package --manifest=/path/to/guix-my-project-manifest.scm --profile="$GUIX_EXTRA_PROFILES"/my-project/my-project
 ```
 
 It's safe to delete the Guix channel profile you've just installed with the

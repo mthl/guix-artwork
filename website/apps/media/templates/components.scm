@@ -1,4 +1,5 @@
 ;;; GNU Guix web site
+;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
 ;;; Initially written by sirgazil who waves all
 ;;; copyright interest on this file.
 
@@ -8,7 +9,8 @@
   #:use-module (apps aux web)
   #:use-module (apps base utils)
   #:use-module (apps media types)
-  #:export (screenshot->shtml))
+  #:export (screenshot->shtml
+            screenshots-box))
 
 
 ;;;
@@ -31,3 +33,14 @@
          (alt "")))
      (span (@ (class "screenshot-inset-shadow")) ""))
     (p ,(screenshot-caption shot) (span (@ (class "hidden")) "."))))
+
+
+(define* (screenshots-box screenshots #:key shadow)
+  "Return SHTML for a box displaying all SCREENSHOTS.  If SHADOW is
+true, a shadow is displayed at the top."
+  `(div
+    (@ (class ,(string-join `("screenshots-box"
+                              ,@(if shadow
+                                    '("top-shadow-bg")
+                                    '())))))
+    ,@(map screenshot->shtml screenshots)))

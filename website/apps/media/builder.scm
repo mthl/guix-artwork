@@ -1,4 +1,5 @@
 ;;; GNU Guix web site
+;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
 ;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 
@@ -6,6 +7,7 @@
   #:use-module (apps aux system)
   #:use-module (apps media data)
   #:use-module (apps media templates screenshot)
+  #:use-module (apps media templates screenshots-overview)
   #:use-module (apps media types)
   #:use-module (haunt html)
   #:use-module (haunt page)
@@ -34,7 +36,8 @@
      A list of page objects that represent the web resources of the
      application. See Haunt <page> objects for more information."
   (flatten
-   (list (screenshots-builder))))
+   (list (screenshots-overview-builder)
+         (screenshots-builder))))
 
 
 ;;;
@@ -54,3 +57,10 @@
                   (screenshot-t context)
                   sxml->html)))
    screenshots))
+
+
+(define (screenshots-overview-builder)
+  "Return a Haunt page representing the screenshots overview page."
+  (make-page "screenshots/index.html"
+             (screenshots-overview-t screenshots)
+             sxml->html))

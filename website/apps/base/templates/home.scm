@@ -113,9 +113,7 @@
        ,(link-yellow #:label "GNU Guix" #:url "#guix-in-other-distros")
        " package manager.")
 
-      (div
-       (@ (class "screenshots-box"))
-       ,@(map screenshot->shtml (context-datum context "screenshots")))
+      ,(screenshots-box (context-datum context "screenshots"))
 
       (div
        (@ (class "action-box centered-text"))

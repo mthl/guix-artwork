@@ -41,6 +41,4 @@
 	     (src ,(screenshot-image shot))
 	     (alt ,(screenshot-caption shot)))))
 
-	(div
-	 (@ (class "screenshots-box top-shadow-bg"))
-	 ,@(map screenshot->shtml shots)))))))
+        ,(screenshots-box shots #:shadow #t))))))

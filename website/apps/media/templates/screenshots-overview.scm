@@ -20,7 +20,7 @@
      "Operating system" "GNU Hurd" "GNU Guix package manager"
      "GNU Guile" "Guile Scheme" "Transactional upgrades"
      "Functional package management" "Reproducibility")
-   #:active-menu-item "Overview"
+   #:active-menu-item "Media"
    #:css (list (guix-url "static/base/css/index.css")
                (guix-url "static/base/css/screenshots.css"))
    #:content

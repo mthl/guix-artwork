@@ -21,6 +21,7 @@
 	    contact->shtml
 	    horizontal-separator
 	    link-more
+            link-light
 	    link-subtle
 	    link-yellow
 	    navbar
@@ -193,6 +194,21 @@
     ,label))
 
 
+(define* (link-light #:key (label "More") (url "#"))
+  "Return an SHTML a element with light-colored label text.
+
+   LABEL (string)
+     The text for the link. For example: 'Installation from Script'.
+
+   URL (string)
+     A URL to use for the href attribute of the a element. If not
+     specified, the value defaults to #."
+  `(a
+    (@ (class "link-light")
+       (href ,url))
+    ,label))
+
+
 (define* (link-subtle #:key (label "link") (url "#"))
   "Return an SHTML a element that does not stand too much on white backgrounds.
 
@@ -293,6 +309,13 @@
       ,(menu-item #:label "Download" #:active-item active-item #:url (guix-url "download/"))
       ,(menu-item #:label "Packages" #:active-item active-item #:url (guix-url "packages/"))
       ,(menu-item #:label "Blog" #:active-item active-item #:url (guix-url "blog/"))
+
+      ,(menu-dropdown #:label "Media" #:active-item active-item
+        #:items
+        (list
+         (menu-item #:label "Videos" #:active-item active-item #:url (guix-url "videos/"))
+         (menu-item #:label "Screenshots" #:active-item active-item #:url (guix-url "screenshots/"))))
+
       ,(menu-item #:label "Help" #:active-item active-item #:url (guix-url "help/"))
       ,(menu-item #:label "Donate" #:active-item active-item #:url (guix-url "donate/"))
 

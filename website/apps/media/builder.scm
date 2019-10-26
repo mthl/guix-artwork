@@ -8,10 +8,15 @@
   #:use-module (apps media data)
   #:use-module (apps media templates screenshot)
   #:use-module (apps media templates screenshots-overview)
+  #:use-module (apps media templates video)
+  #:use-module (apps media templates video-list)
   #:use-module (apps media types)
   #:use-module (haunt html)
   #:use-module (haunt page)
   #:use-module (haunt utils)
+  #:use-module (apps aux web)
+  #:use-module (apps media utils)
+  #:use-module (srfi srfi-1)
   #:export (builder))
 
 
@@ -37,7 +42,9 @@
      application. See Haunt <page> objects for more information."
   (flatten
    (list (screenshots-overview-builder)
-         (screenshots-builder))))
+         (screenshots-builder)
+         (videos-builder)
+         (video-list-builder))))
 
 
 ;;;
@@ -63,4 +70,26 @@
   "Return a Haunt page representing the screenshots overview page."
   (make-page "screenshots/index.html"
              (screenshots-overview-t screenshots)
+             sxml->html))
+
+
+(define (videos-builder)
+  "Return a list of Haunt pages representing videos."
+  (map-in-order
+   (lambda (playlist)
+     (map-in-order
+      (lambda (previous video next)
+        (make-page (video->url video)
+                   (video-t previous video next)
+                   sxml->html))
+      (cons #f (drop-right playlist 1))
+      playlist
+      (append (cdr playlist) '(#f))))
+   playlists))
+
+
+(define (video-list-builder)
+  "Return a Haunt page displaying all videos."
+  (make-page (url-path-join "videos" "index.html")
+             (video-list-t)
              sxml->html))

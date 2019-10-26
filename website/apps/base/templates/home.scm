@@ -115,8 +115,19 @@
 
       ,(screenshots-box (context-datum context "screenshots"))
 
+      (h3 "Instructional videos")
+
       (div
-       (@ (class "action-box centered-text"))
+       ,@(map video-preview (context-datum context "videos")))
+
+      (div
+       (@ (class "fields-box"))
+
+       ,(button-big
+         #:label "VIDEOS"
+         #:url (guix-url "videos/")
+         #:light #true)
+       " "
        ,(button-big
 	 #:label "ALL PACKAGES"
 	 #:url (guix-url "packages/")

@@ -8,10 +8,16 @@
 (define-module (apps media templates components)
   #:use-module (apps aux lists)
   #:use-module (apps aux web)
+  #:use-module (apps base templates components)
   #:use-module (apps base utils)
   #:use-module (apps media types)
+  #:use-module (apps media utils)
+  #:use-module (srfi srfi-19)
   #:export (screenshot->shtml
-            screenshots-box))
+            screenshots-box
+            video->shtml
+            video-content
+            video-preview))
 
 
 ;;;
@@ -46,3 +52,51 @@ top."
                                     '("top-shadow-bg")
                                     '())))))
     ,@(map screenshot->shtml (take-random screenshots n))))
+
+
+
+(define (video->shtml video)
+  "Return SHTML for a representation of the given video object.
+
+   VIDEO (<video>)
+     A video object as defined in (apps media types)."
+  `(video
+     (@ (class "video-preview")
+        (src ,(video-url video))
+        (poster ,(video-poster video))
+        (controls "controls"))
+      ;; TODO: Insert missing video-tracks.
+      (p
+       "Download video: "
+       ,(link-subtle
+         #:label (video-title video)
+         #:url (video-url video)))))
+
+
+(define (video-preview video)
+  "Return SHTML for a box with a representation of the given video
+object.
+
+   VIDEO (<video>)
+     A video object as defined in (apps media types)."
+  `(div
+    (@ (class "item-preview"))
+    ,(video->shtml video)
+    ,(link-light
+      #:label (video-title video)
+      #:url (guix-url (video->url video)))))
+
+
+(define (video-content video)
+  "Return SHTML with a representation and detailed information for the
+given video object.
+
+   VIDEO (<video>)
+     A video object as defined in (apps media types)."
+  `(div
+    ,(video->shtml video)
+    ,(video-description video)
+    ,(let ((date (video-last-updated video)))
+       (if date
+           `(p "Last updated: " ,(date->string date))
+           ""))))

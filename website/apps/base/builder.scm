@@ -21,6 +21,7 @@
   #:use-module (haunt page)
   #:use-module (haunt post)
   #:use-module (haunt utils)
+  #:use-module (srfi srfi-1)
   #:export (builder))
 
 
@@ -104,7 +105,8 @@
 	 (list
 	  (cons "screenshots" screenshots)
 	  (cons "posts" (posts/latest posts 3))
-	  (cons "contact-media" (list-head contact-media 3)))))
+          (cons "contact-media" (list-head contact-media 3))
+          (cons "videos" (take (flatten playlists) 3)))))
     (make-page "guix.html" (home-t context) sxml->html)))
 
 

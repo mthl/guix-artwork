@@ -86,6 +86,22 @@
     color: #E6E6E6;
 }
 
+.link-light:active,
+.link-light:focus,
+.link-light:hover {
+    color: black;
+}
+
+.link-light:link,
+.link-light:visited {
+    border-style: none;
+    color: #E6E6E6;
+    font-size: 1.2em;
+    line-height: 20px;
+    margin: 20px 0px;
+    padding-right: 30px;
+}
+
 .link-subtle:link,
 .link-subtle:visited {
     border-color: transparent;

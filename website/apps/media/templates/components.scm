@@ -6,6 +6,7 @@
 ;;; This module defines HTML parts related to media.
 
 (define-module (apps media templates components)
+  #:use-module (apps aux lists)
   #:use-module (apps aux web)
   #:use-module (apps base utils)
   #:use-module (apps media types)
@@ -35,12 +36,13 @@
     (p ,(screenshot-caption shot) (span (@ (class "hidden")) "."))))
 
 
-(define* (screenshots-box screenshots #:key shadow)
-  "Return SHTML for a box displaying all SCREENSHOTS.  If SHADOW is
-true, a shadow is displayed at the top."
+(define* (screenshots-box screenshots #:optional (n 6) #:key shadow)
+  "Return SHTML for a box displaying up to N many SCREENSHOTS randomly
+chosen at build time.  If SHADOW is true, a shadow is displayed at the
+top."
   `(div
     (@ (class ,(string-join `("screenshots-box"
                               ,@(if shadow
                                     '("top-shadow-bg")
                                     '())))))
-    ,@(map screenshot->shtml screenshots)))
+    ,@(map screenshot->shtml (take-random screenshots n))))

@@ -27,4 +27,4 @@
    `(main
      (section
       (@ (class "light-text centered-text noise-bg"))
-      ,(screenshots-box screenshots #:shadow #t)))))
+      ,(screenshots-box screenshots (length screenshots) #:shadow #t)))))

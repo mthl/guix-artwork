@@ -1,14 +1,17 @@
 ;;; GNU Guix web site
+;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
 ;;; Initially written by sirgazil who waves all
 ;;; copyright interest on this file.
 
 (define-module (apps aux lists)
   #:use-module (apps aux numbers)
   #:use-module (srfi srfi-1)
+  #:use-module (srfi srfi-27)
   #:export (list-group
 	    list-slice
 	    rest
-	    separate))
+            separate
+            take-random))
 
 
 (define (list-group los limit)
@@ -49,3 +52,19 @@
 	(else
 	 (cons (first los)
 	       (cons separator (separate (rest los) separator))))))
+
+(define (take-random list n)
+  "Return a list containing N elements from LIST, if possible, chosen
+randomly and evenly distributed.  If LIST has less than N elements,
+the result is a permutation of LIST."
+  (let loop ((list list)
+             (n n)
+             (len (length list)))
+    (if (<= (min n len) 0)
+        '()
+        (let ((r (random-integer len)))
+          (cons (list-ref list r)
+                (loop (append (take list r)
+                              (drop list (1+ r)))
+                      (- len 1)
+                      (- n 1)))))))

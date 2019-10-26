@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Initially written by sirgazil who waves all
+;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 
 (define-module (tests apps aux numbers)

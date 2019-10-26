@@ -1,6 +1,6 @@
 ;;; GNU Guix web site
 ;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
-;;; Initially written by sirgazil who waves all
+;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 
 (define-module (apps aux lists)

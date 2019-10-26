@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Initially written by sirgazil who waves all
+;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 
 ;;; This module defines HTML parts like header, breadcrumbs, footer,

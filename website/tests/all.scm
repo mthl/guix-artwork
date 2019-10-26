@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Initially written by sirgazil who waves all
+;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 
 ;;; XXX: This module is just a provisional way to run all the tests at once.

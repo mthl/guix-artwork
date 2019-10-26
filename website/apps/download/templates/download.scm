@@ -1,6 +1,6 @@
 ;;; GNU Guix web site
 ;; Copyright © 2017 ng0 <ng0@infotropique.org>
-;;; Initially written by sirgazil who waves all
+;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 ;;;
 ;;; This file is part of the GNU Guix web site.

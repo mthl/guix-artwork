@@ -53,4 +53,5 @@ one that _everyone_ can trust to defend their freedom.
   27. Damian Rouson (developer on GFortran)
   28. David Malcolm (developer on GCC)
   29. Maciej W. Rozycki (developer on GCC, GDB, GNU Binutils, GNU libc)
+  30. Martin Jambor (developer on GCC)
 

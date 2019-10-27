@@ -54,9 +54,9 @@
 	       (cons separator (separate (rest los) separator))))))
 
 (define (take-random list n)
-  "Return a list containing N elements from LIST, if possible, chosen
-randomly and evenly distributed.  If LIST has less than N elements,
-the result is a permutation of LIST."
+  "Return a list containing N different elements from LIST, if
+possible, chosen randomly and evenly distributed.  If LIST has less
+than N elements, the result is a permutation of LIST."
   (let loop ((list list)
              (n n)
              (len (length list)))

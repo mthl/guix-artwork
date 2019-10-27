@@ -64,6 +64,22 @@
 
 
        (div
+        (@ (class "summary-box"))
+        (img (@ (src ,(guix-url "static/base/img/videos-icon.png"))
+                (alt "")))
+        (h3 "Videos")
+        (p
+         "The collection of videos includes instructional material
+         to help you get started with every day use of GNU Guix as
+         well as other topics that present advanced features of the
+         system.")
+        (p
+         ,(link-more
+           #:label "Browse all videos"
+           #:url (guix-url "videos/"))))
+
+
+       (div
 	(@ (class "summary-box"))
 	(img (@ (src ,(guix-url "static/base/img/library-icon.png"))
 		(alt "")))

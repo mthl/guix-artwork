@@ -8,7 +8,7 @@ tags: Functional package management, Reproducibility, User interfaces, Customiza
 
 Guix provides a very useful feature that may be quite foreign to newcomers:
 *profiles*.  They are a way to group package installations together and all users
-on a same system are free to use as many profiles as they want.
+on the same system are free to use as many profiles as they want.
 
 Whether you're a developer or not, you may find that multiple profiles bring you
 great power and flexibility.  While they shift the paradigm somewhat compared to
@@ -199,7 +199,7 @@ the profile is loaded, you've got two options:
 
 -   Either export the variable manually, e.g.
 
-        export MANPATH=/path/to/profile${MANPATH:+:}$MANPATH"
+        export MANPATH=/path/to/profile${MANPATH:+:}$MANPATH
 
 -   Or include `man-db` to the profile manifest.
 

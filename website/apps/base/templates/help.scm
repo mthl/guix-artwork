@@ -80,6 +80,22 @@
 
 
        (div
+        (@ (class "summary-box"))
+        (img (@ (src ,(guix-url "static/base/img/cookbook-icon.png"))
+                (alt "")))
+        (h3 "Cookbook")
+        (p
+         "Tutorials, how-to guides and examples contributed by the
+         Guix community which show you how to use the system and its
+         collection of packages to achieve common and not-so-common
+         goals users may have.")
+        (p
+         ,(link-more
+           #:label "Browse the recipes"
+           #:url (guix-url "cookbook/"))))
+
+
+       (div
 	(@ (class "summary-box"))
 	(img (@ (src ,(guix-url "static/base/img/library-icon.png"))
 		(alt "")))

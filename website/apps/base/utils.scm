@@ -47,7 +47,11 @@
 
 (define guix-root-url-path
   ;; Path to GNU Guix site at guix.gnu.org.
-  (make-parameter (or (getenv "GUIX_WEB_SITE_ROOT_PATH") "/")))
+  (make-parameter (or (getenv "GUIX_WEB_SITE_ROOT_PATH") "/")
+                  (lambda (path)
+                    (if (string-suffix? "/" path)
+                        path
+                        (string-append path "/")))))
 
 (define latest-guix-version
   (make-parameter "1.1.0"))

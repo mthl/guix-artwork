@@ -38,6 +38,9 @@
               #:recursive? #t
               #:select? (git-predicate this-directory)))
 
+(define root-path
+  (getenv "GUIX_WEB_SITE_ROOT_PATH"))
+
 (define (package+propagated-inputs package)
   (match (package-transitive-propagated-inputs package)
     (((labels packages) ...)
@@ -125,6 +128,10 @@
 
           ;; Use a sane default.
           (setenv "XDG_CACHE_HOME" "/tmp/.cache")
+
+          ;; Use GUIX_WEB_SITE_ROOT_PATH from the environment in which
+          ;; this script was run.
+          (setenv "GUIX_WEB_SITE_ROOT_PATH" #$root-path)
 
           (format #t "Running 'haunt build'...~%")
           (invoke #+(file-append haunt-with-latest-guile "/bin/haunt")

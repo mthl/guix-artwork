@@ -47,11 +47,17 @@
 
 (define guix-root-url-path
   ;; Path to GNU Guix site at guix.gnu.org.
-  (make-parameter (or (getenv "GUIX_WEB_SITE_ROOT_PATH") "/")
-                  (lambda (path)
-                    (if (string-suffix? "/" path)
-                        path
-                        (string-append path "/")))))
+  (let ((path (cond
+               ;; If we are trying out the website locally, use "/" as the root.
+               ((getenv "GUIX_WEB_SITE_LOCAL") "/")
+               (else (or (getenv "GUIX_WEB_SITE_ROOT_PATH") "/")))))
+    (make-parameter
+     path
+     ;; When setting guix-root-url-path, make it end in a slash.
+     (lambda (path)
+       (if (string-suffix? "/" path)
+           path
+           (string-append path "/"))))))
 
 (define latest-guix-version
   (make-parameter "1.1.0"))
@@ -97,11 +103,7 @@
 
    RETURN VALUE (string)
      A URL path. For example: /software/guix/packages/icecat-XYZ/."
-  ;; If we are trying out the website locally, use "/" as the root.
-  ;; Otherwise use guix-root-url-path for deployment to gnu.org.
-  (if (getenv "GUIX_WEB_SITE_LOCAL")
-      (string-append "/" subpath)
-      (string-append (guix-root-url-path) subpath)))
+  (string-append (guix-root-url-path) subpath))
 
 
 (define* (manual-url #:optional (subpath "")

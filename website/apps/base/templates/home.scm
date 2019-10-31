@@ -29,7 +29,8 @@
    #:active-menu-item "Overview"
    #:css (list
 	  (guix-url "static/base/css/item-preview.css")
-	  (guix-url "static/base/css/index.css"))
+	  (guix-url "static/base/css/index.css")
+          (guix-url "static/media/css/video-preview.css"))
    #:content
    `(main
      ;; Featured content.
@@ -182,8 +183,7 @@
       (div
        (@ (class "info-box"))
        (video
-	(@ (class "video-preview")
-	   (src "https://audio-video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm")
+	(@ (src "https://audio-video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm")
 	   (poster ,(guix-url "static/media/img/guix-demo.png"))
 	   (controls "controls"))
 	(p

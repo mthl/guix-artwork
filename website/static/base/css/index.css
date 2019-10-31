@@ -110,14 +110,6 @@ h3 {
     vertical-align: top;
 }
 
-.video-preview {
-    border-color: black;
-    border-style: solid;
-    border-width: thin;
-    box-shadow: 0 0 4px black;
-    width: 100%;
-}
-
 .contact-box {
     background-color: #F5F5F5;
     background-image: url("../img/h-separator-dark.png"),

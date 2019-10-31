@@ -61,8 +61,7 @@ top."
    VIDEO (<video>)
      A video object as defined in (apps media types)."
   `(video
-     (@ (class "video-preview")
-        (src ,(video-url video))
+     (@ (src ,(video-url video))
         (poster ,(video-poster video))
         (controls "controls"))
       ;; TODO: Insert missing video-tracks.
@@ -80,11 +79,11 @@ object.
    VIDEO (<video>)
      A video object as defined in (apps media types)."
   `(div
-    (@ (class "item-preview"))
+    (@ (class "video-preview"))
     ,(video->shtml video)
-    ,(link-light
-      #:label (video-title video)
-      #:url (guix-url (video->url video)))))
+    (a
+     (@ (class "video-link") (href ,(guix-url (video->url video))))
+     ,(video-title video))))
 
 
 (define (video-content video)

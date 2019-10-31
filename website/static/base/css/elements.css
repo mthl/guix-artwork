@@ -88,3 +88,11 @@ td {
 th {
     background-color: #F5F5F5;
 }
+
+video {
+    border-color: black;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: 0 0 4px black;
+    max-width: 100%;
+}

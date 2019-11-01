@@ -6,14 +6,11 @@
 (define-module (apps media utils)
   #:use-module (apps aux web)
   #:use-module (apps media types)
-  #:use-module (ice-9 regex)
   #:export (video->url))
 
 
 (define (video->url video)
   (url-path-join
    "videos"
-   (string-downcase
-    (regexp-substitute/global #f "[ \t]+" (video-title video)
-                              'pre "-" 'post))
+   (video-page-subpath video)
    "index.html"))

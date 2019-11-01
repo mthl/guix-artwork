@@ -23,6 +23,7 @@
    (list
     (video
      #:title (C_ "video title" "Installation from Script")
+     #:page-subpath "installation-from-script"
      #:description
      (G_ '(p "Explains how to install Guix on distributions not running
 GNU Guix."))
@@ -32,6 +33,7 @@ GNU Guix."))
    (list
     (video
      #:title (C_ "video title" "Everyday use of GNU Guix, Part One")
+     #:page-subpath "everyday-use-of-gnu-guix,-part-one"
      #:description
      (G_ '(p "How to install packages and how to manage software package
 generations."))
@@ -40,6 +42,7 @@ generations."))
      #:last-updated (string->date "2020-03-28T16:00:00" "~Y-~m-~dT~H:~M:~S"))
     (video
      #:title (C_ "video title" "Everyday use of GNU Guix, Part Two")
+     #:page-subpath "everyday-use-of-gnu-guix,-part-two"
      #:description
      (G_ '(p "How to upgrade software and how to reclaim storage space."))
      #:url "https://guix.gnu.org/guix-videos/02-everyday-use-part-two.webm"
@@ -48,6 +51,7 @@ generations."))
    (list
     (video
      #:title (C_ "video title" "Asking for help")
+     #:page-subpath "asking-for-help"
      #:description
      (G_ '(p "How to get help from the Guix community."))
      #:url "https://guix.gnu.org/guix-videos/03-help.webm"
@@ -56,6 +60,7 @@ generations."))
    (list
     (video
      #:title (C_ "video title" "Packaging, Part One")
+     #:page-subpath "packaging,-part-one"
      #:description
      (G_ '(p "How to set up a development environment for GNU Guix."))
      #:url "https://guix.gnu.org/guix-videos/04-packaging-part-one.webm"
@@ -63,6 +68,7 @@ generations."))
      #:last-updated (string->date "2020-03-28T16:00:00" "~Y-~m-~dT~H:~M:~S"))
     (video
      #:title (C_ "video title" "Packaging, Part Two")
+     #:page-subpath "packaging,-part-two"
      #:description
      (G_ '(p "How to create a package recipe for not yet packaged software."))
      #:url "https://guix.gnu.org/guix-videos/04-packaging-part-two.webm"
@@ -70,6 +76,7 @@ generations."))
      #:last-updated (string->date "2020-03-28T16:00:00" "~Y-~m-~dT~H:~M:~S"))
                     (video
      #:title (C_ "video title" "Packaging, Part Three")
+     #:page-subpath "packaging,-part-three"
      #:description
      (G_ '(p "How to submit a package for inclusion in the GNU Guix
 distribution."))

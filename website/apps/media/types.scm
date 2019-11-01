@@ -22,6 +22,7 @@
             video?
             video-description
             video-last-updated
+            video-page-subpath
             video-poster
             video-title
             video-url))
@@ -144,6 +145,12 @@
 ;;; url (string)
 ;;;   A URL to the video file.
 ;;;
+;;; page-subpath (string)
+;;;   The subpath to the webpage for this video.  It should correspond
+;;;   to the English video title converted to lower case with spaces
+;;;   replaced by hyphens.  For example:
+;;;   'everyday-use-of-gnu-guix,-part-one'.
+;;;
 ;;; poster (string)
 ;;;   A URL to a representative preview image for the video.
 ;;;
@@ -157,18 +164,19 @@
 ;;;   possibly become outdated over time such as documentation videos.
 ;;;
 (define-record-type <video>
-  (make-video title description url poster tracks last-updated)
+  (make-video title description url page-subpath poster tracks last-updated)
   video?
   (title video-title)
   (description video-description)
   (url video-url)
+  (page-subpath video-page-subpath)
   (poster video-poster)
   (tracks video-tracks)
   (last-updated video-last-updated))
 
 ;;; Helper procedures.
 
-(define* (video #:key (title "") (description "")
-                (url "") (poster "") (tracks '()) (last-updated #f))
+(define* (video #:key (title "") (description "") (url #f) (page-subpath #f)
+                (poster "") (tracks '()) (last-updated #f))
   "Return a <video> object with the given attributes."
-  (make-video title description url poster tracks last-updated))
+  (make-video title description url page-subpath poster tracks last-updated))

@@ -21,7 +21,6 @@
 	    contact->shtml
 	    horizontal-separator
 	    link-more
-            link-light
 	    link-subtle
 	    link-yellow
 	    navbar
@@ -190,21 +189,6 @@
      otherwise (this is the default)."
   `(a
     (@ (class ,(string-append "link-more" (if light " link-more-light" "")))
-       (href ,url))
-    ,label))
-
-
-(define* (link-light #:key (label "More") (url "#"))
-  "Return an SHTML a element with light-colored label text.
-
-   LABEL (string)
-     The text for the link. For example: 'Installation from Script'.
-
-   URL (string)
-     A URL to use for the href attribute of the a element. If not
-     specified, the value defaults to #."
-  `(a
-    (@ (class "link-light")
        (href ,url))
     ,label))
 

@@ -1,5 +1,5 @@
 title: Managing Servers with GNU Guix: A Tutorial
-date: 2019-11-04 22:00
+date: 2019-11-04 15:00
 author: Jakob L. Kreuze
 tags: GSoC, Programming inferfaces, Scheme API
 ---

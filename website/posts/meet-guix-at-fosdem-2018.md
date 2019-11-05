@@ -2,7 +2,7 @@ title: Meet Guix at FOSDEM
 slug: meet-guix-at-fosdem-2018
 date: 2018-01-29 16:00:00
 author: Ludovic Courtès
-tags: FOSDEM
+tags: FOSDEM, Talks
 ---
 
 GNU Guix will be present at [FOSDEM](https://fosdem.org/2018/) in the

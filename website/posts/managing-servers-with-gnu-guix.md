@@ -75,7 +75,7 @@ root ALL=(ALL) ALL
        (configuration (machine-ssh-configuration
                        (host-name "alyssa-p-hacker.tld")
                        (system "i686-linux")
-                       (identity "/home/alyssa/.ssh/server_key")))))
+                       (identity "/path/to/ssh-key")))))
 ```
 
 Even if Scheme isn't your forté, parts of this should look familiar if
@@ -83,7 +83,7 @@ you've used Guix before.  The "operating system description" section
 in particular is something you might use with `guix system
 reconfigure`.  What's new is the last part: We construct a `list`
 containing one `machine` of the `managed-host-environment-type`, for
-which we've specified that `%system` is the `operating-system`
+which we've specified that `os` is the `operating-system`
 declaration that we want to install on it, and that we can connect to
 it using the parameters specified by the `machine-ssh-configuration`.
 
@@ -108,7 +108,7 @@ This gives `guix deploy` the information it needs to connect to the
 machine's SSH daemon.
 
 Running `guix deploy` with this file would build the "operating system
-closure" of `%system` -- a bundle of the packages, configuration
+closure" of `os` -- a bundle of the packages, configuration
 files, and other dependencies necessary to realize that configuration
 -- for the architecture specified by `system` (in this case
 `i686-linux`), send it over SSH to `alyssa-p-hacker.tld`, and then

@@ -1,20 +1,20 @@
-title: Running a Guix XFCE Desktop on CentOS 7
+title: Running a Guix Xfce Desktop on CentOS 7
 date: 2019-11-17 19:00
 author: Marius Bakke
-tags: XFCE, foreign distribution
+tags: Xfce, Foreign distribution
 ---
 
-This tutorial will show how to run a fully fledged XFCE desktop environment
+This tutorial will show how to run a fully fledged Xfce desktop environment
 installed with Guix on top of an existing GNU/Linux distribution.  This guide
 uses CentOS 7 as the base operating system and assumes that Xorg is already
 configured and running on VT2 under a different user account.
 
-We will borrow Xorg and `xinit` from the host distribution and run Guix XFCE on
-virtual terminal 4 as user 'alice'.  No system-wide configuration files need to
+We will borrow Xorg and `xinit` from the host distribution and run Guix Xfce on
+virtual terminal 4 as user `alice`.  No system-wide configuration files need to
 be touched (apart from the Guix install), but we do make a couple of changes
 for convenience.
 
-#### From scratch to XFCE
+#### From scratch to Xfce
 
 If Guix is not already installed, go grab the
 [installation script](https://git.savannah.gnu.org/cgit/guix.git/plain/etc/guix-install.sh)
@@ -23,7 +23,7 @@ and run it as `sudo bash guix-install.sh`.
 The script creates `/gnu/store/` and `/var/guix/` and configures a system service
 for `guix-daemon`.  By default the daemon runs from the 'root' users Guix; we
 won't be using the root account in this guide, so let's start by making the
-guix-daemon service refer to our local user 'alice' instead.
+guix-daemon service refer to our local user `alice` instead.
 
 ```sh
 sudo sed -i 's/root/alice/' /etc/systemd/system/guix-daemon.service
@@ -35,6 +35,7 @@ installed Guix just now, make sure to run `guix pull` before proceeding further.
 Next we'll add some lines to Alices `.bash_profile` to set up PATH and related
 variables:
 
+`~/.bash_profile`:
 ```sh
 GUIX_PROFILE="${HOME}/.guix-profile"
 [[ -L "${GUIX_PROFILE}" ]] && . "${GUIX_PROFILE}/etc/profile"
@@ -48,11 +49,11 @@ export XDG_DATA_DIRS="${HOME}/.desktop-profile/share:${HOME}/.guix-profile/share
 ```
 
 This will look familiar if you have used Guix on a foreign distribution before.
-The `XDG_` variables tell XFCE where to look for installed programs and things
-like autostart files: we want minimal interference from the host system, so we
-"hard code" them to refer to just our Guix profiles.
+The `XDG_` variables tell desktop environments where to look for installed
+programs and things like autostart files: we want minimal interference from the
+host system, so we "hard code" them to refer to just our Guix profiles.
 
-We will install XFCE and related programs to a
+We will install Xfce and related programs to a
 [separate Guix profile](https://guix.gnu.org/cookbook/en/html_node/Guix-Profiles-in-Practice.html)
 that can be updated and rolled back independently of the main user profile.
 That allows us to distinguish between "stable desktop environment" and "end user
@@ -87,10 +88,10 @@ That installs a union of all packages listed in the manifest to
 To update this profile, simply invoke the same command again after running
 `guix pull` or modifying the manifest.
 
-Before XFCE can be started, we need to create a configuration file for the X
+Before Xfce can be started, we need to create a configuration file for the X
 server to ensure the host executable is used, and we will tell it to to stay
 on virtual terminal 4.  We also create a `.xinitrc` script that automatically
-starts XFCE every time `xinit` is invoked.
+starts Xfce every time `xinit` is invoked.
 
 `~/.xserverrc`:
 ```sh
@@ -123,7 +124,7 @@ source ~/.desktop-profile/etc/profile
 xinit -- :1
 ```
 
-Cool, we're in XFCE!  Let's open a terminal and install a browser & some fonts:
+Cool, we're in Xfce!  Let's open a terminal and install a browser & some fonts:
 
 ```sh
 guix install icecat font-liberation font-dejavu
@@ -155,16 +156,16 @@ for profile in "${GUIX_PROFILES[@]}"; do
 done
 ```
 
-Phew!  It took some work, but by now you should have a working XFCE desktop
+Phew!  It took some work, but by now you should have a working Xfce desktop
 environment, with bash completions and all.  If you are content with starting
 it manually, skip to "final tweaks" below.  Otherwise, read on.
 
 (If you do not have a working desktop after following these steps, please email
-guix-devel@gnu.org so we can adjust the tutorial!)
+`guix-devel@gnu.org` so we can adjust the tutorial!)
 
-#### Starting XFCE automatically on boot
+#### Starting Xfce automatically on boot
 
-We can configure our login shell to start XFCE every time we log in to VT4 by
+We can configure our login shell to run `xinit` every time we log in to VT4 by
 adding these lines at the end of `~/.bash_profile`:
 
 ```sh
@@ -192,7 +193,7 @@ ExecStart=-/sbin/agetty --autologin alice --noclear %I $TERM
 Restart=on-success
 ```
 
-Now just switching to VT4 will start XFCE!  To do this when the system boots,
+Now just switching to VT4 will start Xfce!  To do this when the system boots,
 simply enable the `getty@tty4` service:
 
 ```sh
@@ -201,12 +202,13 @@ sudo systemctl enable getty@tty4.service
 
 ## Final tweaks
 
-Some issues were found during usage of the XFCE environment.  Launching programs
+Some issues were found during usage of the Xfce environment.  Launching programs
 from the file manager failed because `gio-launch-desktop` was unavailable, and
-xfce4-terminal complained that `__vte_prompt_command` was not found.
+xfce4-terminal complained that the shell function `__vte_prompt_command` was not
+found.
 
 These problems will be fixed in Guix eventually, but for now we'll work around
-them in our manifest:
+them by adding the `glib:bin` and `vte` packages to our manifest:
 
 `~/desktop-manifest.scm`:
 ```scheme
@@ -238,9 +240,10 @@ sudo yum install nscd
 
 #### Bonus section: Installing programs with a custom build of Qt
 
-One additional issue was that Qt programs did not work due to the stock CentOS
-kernel being too old.  Specifically it lacks the `renameat2()` system call.
-Luckily Qt can be configured to not use it.  A patch has been submitted to
+One additional issue was that Qt programs did not work due to the
+[stock CentOS kernel being too old](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/packages/qt.scm?id=5544f1e3ea9a98f7d277b7ac76734b84b03df7f6#n445).
+Specifically it lacks the `renameat2()` system call.  Luckily Qt can be configured
+not to use it.  A [patch has been submitted](https://issues.guix.gnu.org/issue/38210) to
 Guix, but since we are in a hurry, we will add a procedure to our manifest so
 we can use Qt programs (here `wpa-supplicant-gui`) until the Guix fix is merged:
 
@@ -261,6 +264,7 @@ we can use Qt programs (here `wpa-supplicant-gui`) until the Guix fix is merged:
        `(modify-phases ,phases
           (add-after 'unpack 'disable-renameat2
             (lambda _
+              ;; Mimic the '-no-feature-renameat2' configure flag.
               (substitute* "src/corelib/configure.json"
                 (("config\\.linux && tests\\.renameat2")
                  "false"))

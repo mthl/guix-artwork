@@ -21,7 +21,7 @@ If Guix is not already installed, go grab the
 and run it as `sudo bash guix-install.sh`.
 
 The script creates `/gnu/store/` and `/var/guix/` and configures a system service
-for `guix-daemon`.  By default the daemon runs from the 'root' users Guix; we
+for `guix-daemon`.  By default the daemon runs from the `root` users Guix; we
 won't be using the root account in this guide, so let's start by making the
 guix-daemon service refer to our local user `alice` instead.
 

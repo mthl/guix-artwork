@@ -18,7 +18,7 @@ ARM and can be installed on a foreign distribution running on that architecture.
 The trick is to use the Guix installed on that foreign distribution to initialize
 the Guix System.  This article will show you how to install the Guix System on
 your board, without using an installer image.  As we have previously
-[mentionned](https://guix.gnu.org/blog/2017/porting-guixsd-to-armv7/) it is
+[mentioned](https://guix.gnu.org/blog/2017/porting-guixsd-to-armv7/) it is
 possible to generate an installation image yourself, if your board is supported.
 
 Most boards can be booted from an existing GNU+Linux distribution.  You will

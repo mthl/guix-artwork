@@ -1,5 +1,5 @@
 title: Guix on an ARM Board
-date: 2019-10-25 21:00
+date: 2019-10-27 12:00
 author: Julien Lepiller
 tags: ARM
 ---

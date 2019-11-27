@@ -262,24 +262,21 @@ Make sure there is an empty /etc, or the new system won't boot properly.  You ca
 copy your config.scm to the new `/etc` directory.  You can now reboot and enjoy your
 new Guix System!
 
-About GNU Guix
---------------
+#### About GNU Guix
 
 [GNU Guix](https://www.gnu.org/software/guix) is a transactional package
-manager for the GNU system.  The Guix System Distribution or GuixSD is
-an advanced distribution of the GNU system that relies on GNU Guix and
-[respects the user's
+manager and an advanced distribution of the GNU system that [respects
+user
 freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).
+Guix can be used on top of any system running the kernel Linux, or it
+can be used as a standalone operating system distribution for i686,
+x86_64, ARMv7, and AArch64 machines.
 
 In addition to standard package management features, Guix supports
 transactional upgrades and roll-backs, unprivileged package management,
-per-user profiles, and garbage collection.  Guix uses low-level
-mechanisms from the Nix package manager, except that packages are
-defined as native [Guile](https://www.gnu.org/software/guile) modules,
-using extensions to the [Scheme](http://schemers.org) language.  GuixSD
-offers a declarative approach to operating system configuration
-management, and is highly customizable and hackable.
-
-GuixSD can be used on an i686, x86_64 and armv7 machines.  It is also
-possible to use Guix on top of an already installed GNU/Linux system,
-including on mips64el and aarch64.
+per-user profiles, and garbage collection.  When used as a standalone
+GNU/Linux distribution, Guix offers a declarative, stateless approach to
+operating system configuration management.  Guix is highly customizable
+and hackable through [Guile](https://www.gnu.org/software/guile)
+programming interfaces and extensions to the
+[Scheme](http://schemers.org) language.

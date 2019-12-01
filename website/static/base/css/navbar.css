@@ -53,8 +53,13 @@
     position: relative;
 }
 
+.menu-hidden-input {
+    display: none;
+}
+
 .menu-item:link,
-.menu-item:visited {
+.menu-item:visited,
+label.menu-item {
     background-color: transparent;
     background-image: url("../img/link-arrow.png");
     background-position: 97% 50%;
@@ -104,6 +109,10 @@
     background-position: top;
 }
 
+.hline {
+    display: none;
+}
+
 
 
 
@@ -130,15 +139,15 @@
         background-image: none;
         border-style: none;
         display: inline-block;
-	margin: 0px 8px;
+        margin: 0px 2px;
         text-align: center;
     }
 
-    .menu-item:active,
-    .menu-item:focus,
-    .menu-item:hover,
-    .menu-item-active:link,
-    .menu-item-active:visited {
+    a.menu-item:active,
+    a.menu-item:focus,
+    a.menu-item:hover,
+    a.menu-item-active:link,
+    a.menu-item-active:visited {
 	background-image: url("../img/menu-item-active-bg.png");
 	background-position: bottom center;
 	background-repeat: no-repeat;
@@ -149,31 +158,63 @@
     }
 
     .dropdown:hover .submenu {
-	display: block;
-	right: 0px;
+        min-width: 150px;
+        /* reset to initial values: */
+        width: auto;
+        height: auto;
+        overflow: visible;
     }
 
-    .dropdown-btn:link,
-    .dropdown-btn:visited {
+    /* This CSS rule is separate from the rule for :hover
+       because :hover should still be applied even when
+       the browser does not support :focus-within. */
+    .submenu:focus-within {
+        min-width: 150px;
+        /* reset to initial values: */
+        width: auto;
+        height: auto;
+        overflow: visible;
+    }
+
+    .dropdown-btn {
 	background-image: url("../img/dropdown-bg.png");
 	background-position: bottom right;
 	background-repeat: no-repeat;
-	padding-right: 13px;
+        padding: 0px 10px;
+        cursor: pointer;
+        margin: 0px 2px;
     }
 
     .dropdown-btn:active,
-    .dropdown-btn:focus,
     .dropdown-btn:hover {
-	background-position: top right;
+        background-image: url("../img/dropdown-bg.png");
+        background-position: top right;
+    }
+
+    .navbar label {
+        cursor: pointer;
+    }
+
+    label[for=all-dropdowns-hidden] {
+        text-shadow: #fff 0px -2px 15px, #fff 0px -2px 10px;
+    }
+
+    .hline {
+        display: block;
+        width: 100%;
+        height: 1px;
     }
 
     .submenu {
 	background-color: transparent;
-	display: none;
-	min-width: 150px;
+        z-index: 10;
+        display: block;
+        overflow: hidden;
+        width: 0;
+        height: 0;
 	padding-top: 20px;
 	position: absolute;
-	z-index: 10;
+        right: 0px;
     }
 
     .submenu-triangle {

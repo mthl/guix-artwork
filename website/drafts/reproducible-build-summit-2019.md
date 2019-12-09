@@ -57,7 +57,9 @@ summit](https://guix.gnu.org/blog/2015/reproducible-builds-a-means-to-an-end/).
 During this year’s hacking sessions, it [gained a `--diff`
 option](https://issues.guix.gnu.org/issue/38518) that automates the
 steps of downloading, decompressing, and diffing non-reproducible
-archives, possibly with [Diffoscope](https://diffoscope.org/).
+archives, possibly with [Diffoscope](https://diffoscope.org/).  The idea
+[came up some time ago](https://issues.guix.gnu.org/issue/35621), and
+it’s good that we can cross that line from our to-do list.
 
 # Thanks!
 

@@ -55,3 +55,5 @@ one that _everyone_ can trust to defend their freedom.
   29. Maciej W. Rozycki (developer on GCC, GDB, GNU Binutils, GNU libc)
   30. Martin Jambor (developer on GCC)
   31. David Thompson (developer on Guix)
+  32. Thomas Rodgers (developer on GCC)
+  33. Rafal Luzynski (developer on GNU libc)

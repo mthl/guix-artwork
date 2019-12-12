@@ -123,7 +123,10 @@ with all the necessary machinery:
      implementation](https://github.com/weinholt/hashing) to compute and
      display the hash of the build result.
 
-More on that in a future post!
+More on that in a future post!  Interestingly, we learned that
+[NBS](https://gitlab.com/giomasce/nbs) is taking a similar
+approach—building from the initrd—though with different binary seeds and
+specific build and packaging tooling.
 
 We went on exploring the space of what we called “extreme bootstrapping”
 some more.  How could we further reduce the TCB?  The kernel is an
@@ -133,7 +136,12 @@ Fabrice Bellard’s 2004 [impressive `tcc-boot`
 experiment](https://bellard.org/tcc/tccboot.html) reminds us that we
 could even aim for a bootloader that builds the OS kernel before it
 boots it; this removes Linux entirely from the TCB, in exchange for
-[TinyCC](http://www.tinycc.org/).
+[TinyCC](http://www.tinycc.org/).  As part of the “Bootstrappable
+Debian” project, [`asmc`](https://gitlab.com/giomasce/asmc) takes a
+similar approach: providing a very small OS kernel that’s enough to
+compile simple things.  This is like going “_from inorganic matter to
+organic molecules_”, [as Giovanni Mascellani nicely puts
+it](https://debconf19.debconf.org/talks/152-bootstrappable-debian-bof/).
 
 When a [Mirage](https://mirage.io/) developer and hackers familiar with
 [GNU/Hurd](https://hurd.gnu.org) talk about bootstrapping, it is no

@@ -32,6 +32,66 @@ life on the roof top of the lovely riad that was home to the summit.
 
 # _Extreme_ bootstrapping!
 
+As part of the discussions about bootstrapping, people noted that Guix’
+[build
+daemon](https://guix.gnu.org/manual/en/html_node/Invoking-guix_002ddaemon.html)
+is usually ignored from [bootstrapping
+considerations](https://guix.gnu.org/manual/devel/en/html_node/Bootstrapping.html),
+and wondered whether it should be taken into account.  In effect, the
+build daemon _emulates_ builds from scratch, as if one had booted into
+an empty machine.  It does that by creating [isolated build
+environments](https://guix.gnu.org/manual/en/html_node/Invoking-guix_002ddaemon.html)
+that contain nothing but the explicitly declared inputs.  However, the
+build daemon is part of the [Trusted Computing
+Base](https://en.wikipedia.org/wiki/Trusted_computing_base) (TCB): like
+compilers in the “trusting trust” attack, it could inject backdoors into
+build results.  Thus, the question becomes: how can we reduce the TCB by
+removing `guix-daemon` from it?
+
+Vagrant Cascadian came up with this crazy-looking idea: what if we
+started building things straight from [the
+initrd](https://guix.gnu.org/manual/en/html_node/Initial-RAM-Disk.html)?
+That way, our TCB would be stripped of `guix-daemon`, the Shepherd, and
+other services running on a normal system.  Since Guix has all the build
+information available in the form of
+[derivations](https://guix.gnu.org/manual/devel/en/html_node/Derivations.html),
+which are normally interpreted by the daemon, we found that it
+_shouldn’t be that hard_ to convert them to a minimal Guile script that
+would be executed during startup, from the initrd.  Some hack hours
+later, we had a proof-of-concept branch, adding [a `(gnu system
+bootstrap)`
+module](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/bootstrap.scm?h=wip-system-bootstrap)
+with all the necessary machinery:
+
+  1. a function that converts an arbitrary derivation to a linear build
+     script that builds all the dependency graph in topological order;
+  2. the declaration of an operating system that boots into such a
+     script from the initrd;
+  3. a function to run [a pure-Scheme SHA256
+     implementation](https://github.com/weinholt/hashing) to compute and
+     display the hash of the build result.
+
+More on that in a future post!
+
+We went on exploring the space of what we called “extreme bootstrapping”
+some more.  How could we further reduce the TCB?  The kernel is an
+obvious target: as long as we use the Linux kernel, we could disable
+many optional features, even perhaps networking and storage drivers.
+Fabrice Bellard’s 2004 [impressive `tcc-boot`
+experiment](https://bellard.org/tcc/tccboot.html) reminds us that we
+could even aim for a bootloader that builds the OS kernel before it
+boots it; this removes Linux entirely from the TCB, in exchange for
+[TinyCC](http://www.tinycc.org/).
+
+When a [Mirage](https://mirage.io/) developer and hackers familiar with
+[GNU/Hurd](https://hurd.gnu.org) talk about bootstrapping, it is no
+surprise that they end up looking at library OSes and microkernels.
+Indeed, one could imagine booting into a dedicated Mirage unikernel
+(though it would lack a POSIX personality), or booting into GNU Mach
+with few or no Hurd services initially running.  That would be a way to
+strip the TCB to a bare minimum…  It will be some time before we get
+there, but it could well be our horizon!
+
 # More cool hacks
 
   - Ten Years reproducibility challenge

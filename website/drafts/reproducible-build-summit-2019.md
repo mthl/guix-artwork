@@ -30,6 +30,58 @@ life on the roof top of the lovely riad that was home to the summit.
 
 # Bootstrapping
 
+This year the summit had an official extended format; encouraging
+participants to attend for a full week by adding coding time around
+the usual three more structured core days that were facilitated in a
+lovely productive and high-energy fashion by Gunner an Evelyn of
+[Aspiration Tech](https://aspirationtech.org).
+
+Even before the core days started, David had packaged GNU Mes for Nix
+with the aim of creating a [Reduced Binary Seed
+bootstrap](https://guix.gnu.org/blog/2019/guix-reduces-bootstrap-seed-by-50/)
+for NixOS.  As Vagrant
+[managed](https://deb.debian.org/debian/pool/main/m/mes/mes_0.21-3_i386.deb)
+to get Mes into Debian unstable before the summit, he expressed that
+wanted to _do_ something with it.  We decided to attempt a
+cross-distribution [Diverse Double
+Compilation](https://dwheeler.com/trusting-trust/dissertation/html/wheeler-trusting-trust-ddc.html)
+of Mes.  Initially, David ([Nix](https://nixos.org)), Vagrant
+([Debian](https://debian.org)) and janneke ([GNU
+Guix](https://guix.gnu.org)) took up the challange, soon to be joined
+by Jelle ([Arch](https://archlinux.org)).  David was the first do do a
+diffoscope comparison to find that Mes v0.21
+[actually](http://git.savannah.gnu.org/cgit/mes.git/tree/src/mes.c?h=v0.21#n1781)
+[embeds](http://git.savannah.gnu.org/cgit/mes.git/tree/configure.sh?h=v0.21#n244)
+a store file name.  Always nice to see Reproducible meet
+Bootstrappable ;-) Upstream was easily convinced to write a
+[patch](http://git.savannah.gnu.org/cgit/mes.git/patch/?id=0549ebd0f79a7741f3f560e35171182d4afbd6b5).
+More news on this real soon!
+
+Ludovic and janneke took the opportunity to take the Guix [Scheme-only
+bootstrap](http://git.savannah.gnu.org/cgit/guix.git/log/?h=wip-bootstrap)
+a couple of steps further.  In a joint effort the last functional bug
+was fixed and Ludovic came up with a way to avoid actually adding
+[Gash](https://savannah.nongnu.org/projects/gash) and [Gash Core
+Utils](https://gitlab.com/janneke/gash/tree/gash-core-utils) to the
+bootstrap binary seeds.  The idea of bootstrapping from the current
+%bootstrap-mes (v0.19) instead of updating to v0.21 presented itself
+and was implemented by janneke right after the summit.
+
+Andreas was wondering about the use of GCC 2.95.3 in the Guix
+bootstrap and then worked to create a patch to compile gmp, mpfr, and
+mpc using tinycc.  That work is helping the effort to remove the
+intermediate GCC 2.95.3 from the Guix bootstrap and instead target GCC
+4.6.4 directly.
+
+All in all a very productive and especially inspiring summit for
+[bootstrapping](https://bootstrappable.org) with more people and
+projects on board, giving new perspectives to work on... and dream
+about.
+
+In the last _extreme bootstrapping_ work session, Hannes from
+[MirageOS](https://mirage.io) was inspired to start an initial port of
+Mes to FreeBSD and gave rise to...
+
 # _Extreme_ bootstrapping!
 
 As part of the discussions about bootstrapping, people noted that Guix’

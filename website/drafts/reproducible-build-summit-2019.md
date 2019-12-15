@@ -1,6 +1,6 @@
 title: Reproducible Builds Summit, 5th edition
 date: 2019-11-12 14:00
-author: Ludovic Courtès, YOUR NAME HERE!
+author: Ludovic Courtès, Jan Nieuwenhuizen, Andreas Enge, YOUR NAME HERE!
 tags: Reproducible builds
 ---
 
@@ -22,11 +22,75 @@ life on the roof top of the lovely riad that was home to the summit.
 
 # Java
 
-  - F-Droid
-  - Maven
-  - ?
+Java is a notoriously difficult topic, as far as bootstrapping and
+reproducibility go.  For instance, [Gradle](https://gradle.org/)
+is now the most common tool
+for building Java code, and in particular Android apps. However, the
+current way of building Gradle is to use Gradle and a
+[build script](https://github.com/gradle/gradle/blob/master/build.gradle.kts)
+written in Kotlin.  The 
+[Kotlin](https://kotlinlang.org/)
+project, in turn, is also built using Gradle and a 
+[build script](https://github.com/JetBrains/kotlin/blob/master/build.gradle.kts)
+written in Kotlin.  So we end up with the _most cyclic_ graph one
+can imagine with two packages: a circle between the two, and two additional
+loops from the packages to themselves.  However, the Kotlin dependency
+of Gradle was introduced less than two years ago, so there is some hope we
+can disentangle the bootstrapping mess...
+
+Andreas took part in a session on bootstrapping the Android toolchain,
+with a very vague hope of getting more than adb, fastboot and a few more
+utilities into Guix.  The task looks daunting, since the sourcecode is
+spread over a large number of git repositories with gigabytes of data,
+and the idea of modular builds apparently has not influenced the design
+decisions.  But all is not lost, people from the Reproducible/Rebuild Android (?)
+project have done a lot of work to disentangle the sources, and we could
+also look for inspiration from the Replicant project.  Interestingly, the
+Android NDK, which provides a _foreign function interface_ to C libraries,
+appears to be an easier target.
+
+Some discussions have also evolved around F-Droid, the free app store for
+Android, and the topic of building the apps reproducibly and adding
+relevant information to the
+[competition](https://tests.reproducible-builds.org/).
+
 
 # Verifying and sharing build results
+
+Speaking of which, the [website](https://tests.reproducible-builds.org/)
+retracing reproducibility feats and issues was also the subject of a
+cross-distribution discussion round between Debian, Arch, Nix, Guix and
+OpenWRT.  Currently the page is tightly connected to a continuous
+integration instance rebuilding distributions such as Debian and Arch.
+We have discussed a file format (probably based on JSON) that would
+help to separate the process of creating the reproducibility information
+from collecting, evaluating and displaying it.  From a Guix point of view,
+the idea would be to have the website communicate with an instance of
+the Guix Data Service.
+
+
+# Guix Data Service
+
+This nifty project
+can serve to collect data from a number of independent
+Guix build farms (of which we currently have two, the farm behind
+[ci.guix.gnu.org](https://ci.guix.gnu.org/), and the farmlet of one or two
+machines behind
+[bayfront.guix.gnu.org](https://bayfront.guix.gnu.org/).
+Meeting in person was the occasion to update the bayfront configuration
+to mimic more closely that of ci; in particular, the build farm results
+are now exported to the web frontend.
+
+We had quite some discussion (so far without conclusion) about the exact
+boundaries between the Cuirass and the Guix Data Service: should the former
+only be a thin layer on top of the Guix daemon with the latter processing
+all the data towards a web frontend, or should Cuirass continue to handle
+its own web page?  In any case, Chris worked tirelessly in all free moments
+to get the Guix Data Service into good shape, and as a result we can
+already compare build results and check for reproducibility between the
+two build farms
+TODO: Add a [link to](https://data.guix.gnu.org), or what it is called.
+
 
 # Bootstrapping
 
@@ -153,8 +217,6 @@ strip the TCB to a bare minimum…  It will be some time before we get
 there, but it could well be our horizon!
 
 # More cool hacks
-
-  - Ten Years reproducibility challenge
 
 During the summit, support for [_system provenance tracking_ in `guix
 system`](https://issues.guix.gnu.org/issue/38441) landed in Guix.  This

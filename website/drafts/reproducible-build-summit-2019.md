@@ -33,7 +33,7 @@ life on the roof top of the lovely riad that was home to the summit.
 This year the summit had an official extended format; encouraging
 participants to attend for a full week by adding coding time around
 the usual three more structured core days that were facilitated in a
-lovely productive and high-energy fashion by Gunner an Evelyn of
+lovely productive and high-energy fashion by Gunner and Evelyn of
 [Aspiration Tech](https://aspirationtech.org).
 
 Even before the core days started, David had packaged GNU Mes for Nix
@@ -41,13 +41,13 @@ with the aim of creating a [Reduced Binary Seed
 bootstrap](https://guix.gnu.org/blog/2019/guix-reduces-bootstrap-seed-by-50/)
 for NixOS.  As Vagrant
 [managed](https://deb.debian.org/debian/pool/main/m/mes/mes_0.21-3_i386.deb)
-to get Mes into Debian unstable before the summit, he expressed that
-wanted to _do_ something with it.  We decided to attempt a
+to get Mes into Debian unstable before the summit, he expressed that we
+should _do_ something with it.  We decided to attempt a
 cross-distribution [Diverse Double
 Compilation](https://dwheeler.com/trusting-trust/dissertation/html/wheeler-trusting-trust-ddc.html)
 of Mes.  Initially, David ([Nix](https://nixos.org)), Vagrant
 ([Debian](https://debian.org)) and janneke ([GNU
-Guix](https://guix.gnu.org)) took up the challange, soon to be joined
+Guix](https://guix.gnu.org)) took up the challenge, soon to be joined
 by Jelle ([Arch](https://archlinux.org)).  David was the first do do a
 diffoscope comparison to find that Mes v0.21
 [actually](http://git.savannah.gnu.org/cgit/mes.git/tree/src/mes.c?h=v0.21#n1781)
@@ -100,7 +100,7 @@ compilers in the “trusting trust” attack, it could inject backdoors into
 build results.  Thus, the question becomes: how can we reduce the TCB by
 removing `guix-daemon` from it?
 
-Vagrant Cascadian came up with this crazy-looking idea: what if we
+Vagrant came up with this crazy-looking idea: what if we
 started building things straight from [the
 initrd](https://guix.gnu.org/manual/en/html_node/Initial-RAM-Disk.html)?
 That way, our TCB would be stripped of `guix-daemon`, the Shepherd, and
@@ -116,7 +116,7 @@ module](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/bootstrap.scm
 with all the necessary machinery:
 
   1. a function that converts an arbitrary derivation to a linear build
-     script that builds all the dependency graph in topological order;
+     script that builds the complete dependency graph in topological order;
   2. the declaration of an operating system that boots into such a
      script from the initrd;
   3. a function to run [a pure-Scheme SHA256
@@ -125,7 +125,7 @@ with all the necessary machinery:
 
 More on that in a future post!  Interestingly, we learned that
 [NBS](https://gitlab.com/giomasce/nbs) is taking a similar
-approach—building from the initrd—though with different binary seeds and
+approach — building from the initrd — though with different binary seeds and
 specific build and packaging tooling.
 
 We went on exploring the space of what we called “extreme bootstrapping”
@@ -172,7 +172,7 @@ it.
 
 The [`guix
 challenge`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-challenge.html)
-command started its life [shortly before first
+command started its life [shortly before the first
 summit](https://guix.gnu.org/blog/2015/reproducible-builds-a-means-to-an-end/).
 During this year’s hacking sessions, it [gained a `--diff`
 option](https://issues.guix.gnu.org/issue/38518) that automates the

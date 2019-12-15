@@ -1,6 +1,6 @@
 title: Reproducible Builds Summit, 5th edition
 date: 2019-11-12 14:00
-author: Ludovic Courtès, Jan Nieuwenhuizen, Andreas Enge, YOUR NAME HERE!
+author: Ludovic Courtès, Jan Nieuwenhuizen, Andreas Enge, Christopher Baines, YOUR NAME HERE!
 tags: Reproducible builds
 ---
 
@@ -66,7 +66,14 @@ We have discussed a file format (probably based on JSON) that would
 help to separate the process of creating the reproducibility information
 from collecting, evaluating and displaying it.  From a Guix point of view,
 the idea would be to have the website communicate with an instance of
-the Guix Data Service.
+the [Guix Data Service](https://git.savannah.gnu.org/cgit/guix/data-service.git).
+
+Additionally, Bernhard started a discussion about a possible new site
+to easily show for a package, if it builds reproducibly in different
+distributions, this is mentioned on [this post about the
+summit](https://lizards.opensuse.org/2019/12/13/opensuse-on-reproducible-builds-summit/).
+This would probably also consume some data about the reproducibility
+of packages within Guix from the Guix Data Service.
 
 
 # Guix Data Service
@@ -76,20 +83,31 @@ can serve to collect data from a number of independent
 Guix build farms (of which we currently have two, the farm behind
 [ci.guix.gnu.org](https://ci.guix.gnu.org/), and the farmlet of one or two
 machines behind
-[bayfront.guix.gnu.org](https://bayfront.guix.gnu.org/).
+[bayfront.guix.gnu.org](http://bayfront.guix.gnu.org/).
 Meeting in person was the occasion to update the bayfront configuration
 to mimic more closely that of ci; in particular, the build farm results
 are now exported to the web frontend.
 
-We had quite some discussion (so far without conclusion) about the exact
-boundaries between the Cuirass and the Guix Data Service: should the former
-only be a thin layer on top of the Guix daemon with the latter processing
-all the data towards a web frontend, or should Cuirass continue to handle
-its own web page?  In any case, Chris worked tirelessly in all free moments
-to get the Guix Data Service into good shape, and as a result we can
-already compare build results and check for reproducibility between the
-two build farms
-TODO: Add a [link to](https://data.guix.gnu.org), or what it is called.
+We had quite some discussion (so far without conclusion) about the
+exact boundaries between the
+[Cuirass](https://git.savannah.gnu.org/cgit/guix/guix-cuirass.git) and
+the [Guix Data
+Service](https://git.savannah.gnu.org/cgit/guix/data-service.git):
+should the former only be a thin layer on top of the Guix daemon with
+the latter processing all the data towards a web frontend, or should
+Cuirass continue to handle its own web page?
+
+While the Guix Data Service is not currently running at
+data.guix.gnu.org as the server is down for maintenance, lots of
+progress was made with the code.  Information about [normalized
+archives
+(nars)](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-archive.html),
+such as package binaries, that are provided by [substitute
+servers](https://guix.gnu.org/manual/en/html_node/Substitutes.html)
+can now be imported and stored in the database, and the ability to
+fetch and store builds from Cuirass has been improved.  This is
+building towards being able to automatically and continuously track
+the reproducibility of Guix packages.
 
 
 # Bootstrapping

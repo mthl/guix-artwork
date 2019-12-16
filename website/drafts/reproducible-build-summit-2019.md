@@ -16,9 +16,9 @@ Marrakesh for [the fifth Reproducible Builds
 Summit](https://reproducible-builds.org/events/Marrakesh2019/), which
 was attended by about thirty people.
 
-This blog post summarizes the (subjective!) takeaways from the different
-sessions we attended, and introduces some of the cool hacks that came to
-life on the roof top of the lovely riad that was home to the summit.
+This blog post summarizes takeaways from the different sessions we
+attended, and introduces some of the cool hacks that came to life on the
+roof top of the lovely riad that was home to the summit.
 
 # Java
 
@@ -157,11 +157,11 @@ bootstrap binary seeds.  The idea of bootstrapping from the current
 %bootstrap-mes (v0.19) instead of updating to v0.21 presented itself
 and was implemented by janneke right after the summit.
 
-Andreas was wondering about the use of GCC 2.95.3 in the Guix
-bootstrap and then worked to create a patch to compile gmp, mpfr, and
-mpc using tinycc.  That work is helping the effort to remove the
-intermediate GCC 2.95.3 from the Guix bootstrap and instead target GCC
-4.6.4 directly.
+Andreas was wondering about the use of GCC 2.95.3 in the Guix
+bootstrap and then worked to create a patch to compile GMP, MPFR, and
+MPC using TinyCC.  That work is helping the effort to remove the
+intermediate GCC 2.95.3 from the Guix bootstrap and instead target
+GCC 4.6.4 directly.
 
 All in all a very productive and especially inspiring summit for
 [bootstrapping](https://bootstrappable.org) with more people and

@@ -1,6 +1,6 @@
 title: Reproducible Builds Summit, 5th edition
 date: 2019-11-12 14:00
-author: Ludovic Courtès, Jan Nieuwenhuizen, Andreas Enge, Christopher Baines, YOUR NAME HERE!
+author: Ludovic Courtès, Jan Nieuwenhuizen, Andreas Enge, Christopher Baines
 tags: Reproducible builds
 ---
 
@@ -43,11 +43,19 @@ with a very vague hope of getting more than adb, fastboot and a few more
 utilities into Guix.  The task looks daunting, since the sourcecode is
 spread over a large number of git repositories with gigabytes of data,
 and the idea of modular builds apparently has not influenced the design
-decisions.  But all is not lost, people from the Reproducible/Rebuild Android (?)
-project have done a lot of work to disentangle the sources, and we could
-also look for inspiration from the Replicant project.  Interestingly, the
-Android NDK, which provides a _foreign function interface_ to C libraries,
+decisions.  But all is not lost, Sylvain from
+[Android Rebuilds](http://android-rebuilds.beuc.net/)
+has done a lot of work to disentangle the sources, and we could
+also look for inspiration from the
+[Replicant project](https://www.replicant.us/).
+Interestingly, the Android NDK, which provides a
+_foreign function interface_ to C libraries,
 appears to be an easier target.
+
+Another working group, in which none of us took part, evolved around
+[Maven](https://maven.apache.org/); Hans wrote a short
+[summary](https://forum.f-droid.org/t/trip-report-reproducible-builds-summit/8025)
+of the outcome.
 
 Some discussions have also evolved around F-Droid, the free app store for
 Android, and the topic of building the apps reproducibly and adding
@@ -89,7 +97,7 @@ to mimic more closely that of ci; in particular, the build farm results
 are now exported to the web frontend.
 
 We had quite some discussion (so far without conclusion) about the
-exact boundaries between the
+exact boundaries between
 [Cuirass](https://git.savannah.gnu.org/cgit/guix/guix-cuirass.git) and
 the [Guix Data
 Service](https://git.savannah.gnu.org/cgit/guix/data-service.git):

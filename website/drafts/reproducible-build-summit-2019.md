@@ -1,6 +1,6 @@
 title: Reproducible Builds Summit, 5th edition
-date: 2019-11-12 14:00
-author: Ludovic Courtès, Jan Nieuwenhuizen, Andreas Enge, Christopher Baines
+date: 2019-12-16 14:00
+author: Christopher Baines, Ludovic Courtès, Andreas Enge, Jan Nieuwenhuizen
 tags: Reproducible builds
 ---
 
@@ -15,6 +15,8 @@ related issues.  This year, several of us had the chance to be in
 Marrakesh for [the fifth Reproducible Builds
 Summit](https://reproducible-builds.org/events/Marrakesh2019/), which
 was attended by about thirty people.
+
+![Reproducible Builds logo](https://guix.gnu.org/static/blog/img/reproducible-builds.png)
 
 This blog post summarizes takeaways from the different sessions we
 attended, and introduces some of the cool hacks that came to life on the

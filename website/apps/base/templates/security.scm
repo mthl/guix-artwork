@@ -51,6 +51,9 @@
         (li "Ludovic Courtès"
           (ul (@ (class "mono"))
             (li ,ludovics-key)))
+        (li "Mark H Weaver"
+          (ul (@ (class "mono"))
+            (li "D919 0965 CE03 199E AF28 B3BE 7CEF 2984 7562 C516")))
         (li "Ricardo Wurmus"
           (ul (@ (class "mono"))
             (li "BCA6 89B6 3655 3801 C3C6 2150 197A 5888 235F ACAC"))))

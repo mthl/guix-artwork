@@ -65,9 +65,9 @@ be quite a few talks about Guix and related projects!
 The [Minimalistic, Experimental and Emerging Languages
 devroom](https://fosdem.org/2020/schedule/track/minimalistic_experimental_and_emerging_languages/)
 will also feature talks about about [Racket](https://racket-lang.org),
-[Lua](https://www.lua.org/), [Crystal](https://crystal-lang.org/) and
-[Nim](https://nim-lang.org/) that you should not miss under any
-circumstances!
+[Lua](https://www.lua.org/), [Crystal](https://crystal-lang.org/),
+[Nim](https://nim-lang.org/), and [Pharo](https://pharo.org/)
+that you should not miss under any circumstances!
 
 ![Guix Days logo.](https://guix.gnu.org/static/blog/img/Guix-Days-2020.png)
 

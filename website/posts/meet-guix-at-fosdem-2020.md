@@ -56,7 +56,7 @@ be quite a few talks about Guix and related projects!
    [Guile 3](https://www.gnu.org/software/guile/news)—which will soon
    power Guix—making it a faster implementation, with [*Celebrating
    Guile 2020*](https://fosdem.org/2020/schedule/event/guile2020/).
- - Last Chris Marusich will give an [*Introduction to
+ - Last, Chris Marusich will give an [*Introduction to
    G-Expressions*](https://fosdem.org/2020/schedule/event/gexpressionsguile),
    the magic behind
    [them](https://guix.gnu.org/manual/devel/en/html_node/G_002dExpressions.html),

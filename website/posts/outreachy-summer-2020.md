@@ -1,5 +1,5 @@
 title: Join GNU Guix through Outreachy
-date: 2020-01-07 14:00
+date: 2020-01-13 14:30
 author: Gábor Boskovits
 tags: Outreachy
 ---
@@ -8,27 +8,29 @@ We are happy to announce that for the fourth time GNU Guix offers a
 the inclusion program for groups traditionally underrepresented in free software
 and tech. We currently propose [four subjects](https://www.outreachy.org/apply/project-selection/#gnu-guix) to work on:
 
-1. Create [Netlink](https://linux.die.net/man/7/netlink) bindings in Guile
-2. Improve internationalization support for the [Guix Data Service](http://data.guix.gnu.org) 
-3. Add accessibility support for the [Guix System Installer](https://guix.gnu.org/manual/en/html_node/Guided-Graphical-Installation.html)
-4. Add monitoring support for [Guix](https://guix.gnu.org) daemon and [Cuirass](https://guix.gnu.org/manual/en/html_node/Continuous-Integration.html)
+1. Implement [netlink](https://linux.die.net/man/7/netlink) bindings for Guile.
+2. Improve internationalization support for the [Guix Data Service](http://data.guix.gnu.org).
+3. Add accessibility support for the [Guix System Installer](https://guix.gnu.org/manual/en/html_node/Guided-Graphical-Installation.html).
+4. Add monitoring support for the Guix daemon and [Cuirass](https://guix.gnu.org/manual/en/html_node/Continuous-Integration.html).
 
-The initial applications for this round open on Jan. 20, 2020 at 4pm UTC and the initial application deadline is on Feb. 25, 2020 at 4pm UTC.
+The initial applications for this round open on Jan. 20, 2020 at 4PM UTC and the initial application deadline is on Feb. 25, 2020 at 4PM UTC.
 
 The final project list is announced on Feb. 25, 2020.
 
-For further information see: [timeline](https://www.outreachy.org/apply/project-selection).
-
-For information about the application process see: [application](https://www.outreachy.org/apply).
-
-For the eligibilty rules see: [eligibility](https://www.outreachy.org/apply/eligibility).
+For further information, check out the
+[timeline](https://www.outreachy.org/apply/project-selection),
+[information about the application
+process](https://www.outreachy.org/apply), and the [eligibility
+rules](https://www.outreachy.org/apply/eligibility).
 
 If you’d like to [contribute](https://guix.gnu.org/manual/en/html_node/Contributing.html)
 to computing freedom, Scheme, functional programming, or operating system
 development, now is a good time to join us. Let’s get in touch on
-[the mailing lists and on the #guix channel on the Freenode IRC network](https://guix.gnu.org/contact/)!
+[the mailing lists and on the `#guix` channel on the Freenode IRC
+network](https://guix.gnu.org/contact/), or come chat with us [at
+FOSDEM](https://guix.gnu.org/blog/2020/meet-guix-at-fosdem-2020/)!
 
-Last year we had the pleasure to welcome Laura Lazzati as an Outreachy intern working on [documentation video creation](https://guix.gnu.org/blog/2019/documentation-video-creation/) which lead to the videos you can now see on the home page.
+Last year we had the pleasure to welcome Laura Lazzati as an Outreachy intern working on [documentation video creation](https://guix.gnu.org/blog/2019/documentation-video-creation/), which led to the videos you can now see on the home page.
 
 #### About GNU Guix
 

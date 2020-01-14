@@ -394,31 +394,20 @@ unit.
 The following figure illustrates how the various pieces of information
 from a package are used in the build process (done explicitly by
 `guix build`, or implicitly when installing or otherwise using a
-package): ![](guix-package.png)
+package): ![Diagram of a Guix package.](https://guix.gnu.org/static/blog/img/guix-package.png)
 
 It may help to translate the Guix jargon to the vocabulary of C
 programming:
 
-<table>
-  <tr>
-    <th>Guix package</th>   <th>C program</th>
-  </tr>
-  <tr>
-    <td>source code</td>    <td>source code</td>
-  </tr>
-  <tr>
-    <td>inputs</td>         <td>libraries</td>
-  </tr>
-  <tr>
-    <td>arguments</td>      <td>compiler options</td>
-  </tr>
-  <tr>
-    <td>build system</td>   <td>compiler</td>
-  </tr>
-  <tr>
-    <td>output</td>         <td>executable</td>
-  </tr>
-</table>
+```
+| Guix package | C program        |
+|--------------+------------------|
+| source code  | source code      |
+| inputs       | libraries        |
+| arguments    | compiler options |
+| build system | compiler         |
+| output       | executable       |
+```
 
 Building a package can be considered a generalization of compiling a
 program. We could in fact create a \"GCC build system\" for Guix that
@@ -569,9 +558,9 @@ fundamentally distinct from its inputs. You could define a
 special-purpose build system for one package, and put all the source
 code in there. At the level of the CPU and the computer\'s memory, a
 build process (as in fact *any* computation) looks like
-![](computation.png) It is human interpretation that decomposes this
-into ![](data-code.png) and in a next step into
-![](data-program-environment.png) We can go on and divide the
+![Image of a computation.](https://guix.gnu.org/static/blog/img/computation.png) It is human interpretation that decomposes this
+into ![Code and data.](https://guix.gnu.org/static/blog/img/data-code.png) and in a next step into
+![Data, program, and environment.](https://guix.gnu.org/static/blog/img/data-program-environment.png) We can go on and divide the
 environment into operating system, development tools, and application
 software, for example, but the further we go in decomposing the input to
 a computation, the more arbitrary it gets.

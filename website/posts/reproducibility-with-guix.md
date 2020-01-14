@@ -1,7 +1,7 @@
 title: Reproducible computations with Guix
 author: Konrad Hinsen
 tags: Reproducibility, Research
-date: 2020-1-14 12:00:00
+date: 2020-01-14 16:30:00
 ---
 
 This post is about reproducible computations, so let\'s start with a

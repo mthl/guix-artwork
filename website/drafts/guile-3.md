@@ -28,8 +28,7 @@ to
 [manifests](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-package.html#profile_002dmanifest)
 and [operating
 systems](https://guix.gnu.org/manual/devel/en/html_node/Using-the-Configuration-System.html)—and
-anyone who starts packaging software and anyone who starts packaging
-software knows that [package
+anyone who starts packaging software knows that [package
 definitions](https://guix.gnu.org/manual/devel/en/html_node/Defining-Packages.html)
 are in fact Scheme code as well.
 
@@ -59,7 +58,7 @@ properties of Scheme.
 
 Why do that?  Our arguments, right from the start, were twofold: using a
 general-purpose language allows us to benefit from its implementation
-tooling, and having interface for “everything” in Scheme makes it easy
+tooling, and having interfaces for “everything” in Scheme makes it easy
 for users to navigate their distro or OS code and to reuse code to build
 new features or applications.  Guix developers benefit from the ease of
 code reuse every day; demonstrative examples include the [use of Guix
@@ -110,7 +109,7 @@ nice.  We’ll have performed a smooth transition if users and tools see
 that the packages named `guile` and `guile-ssh` (say) transparently move
 from Guile 2.2 to 3.0, _in lockstep_.
 
-Put differently, most the upgrade work upon a programming language
+Put differently, most of the upgrade work upon a programming language
 version bump deals with conventions, and in particular package names.
 Currently, `guile` corresponds to the 2.2 stable series and all the
 `guile-*` packages are built against it.  In the meantime, the package
@@ -133,7 +132,7 @@ changed in the language itself; what did change—e.g., semantics on fine
 points of the module system, support for structured exceptions—is either
 optional or backwards-compatible.
 
-As Guile 2.9 pre-releases trickled, we started testing all the Guile
+As Guile 2.9 pre-releases trickled in, we started testing all the Guile
 libraries Guix relies on against 2.9.  For the vast majority of them,
 all we had to do was to [update their `configure.ac` to allow builds
 with
@@ -143,7 +142,7 @@ Guix itself was a bit more work, mostly because it’s a rather large code
 base with a picky test suite.  The bit that required most work has to do
 with the introduction of [_declarative
 modules_](https://www.gnu.org/software/guile/manual/html_node/Declarative-Modules.html),
-an optional semantic change on modules to support more compiler
+an optional semantic change in modules to support more compiler
 optimizations.  We had several [“white-box
 tests”](https://en.wikipedia.org/wiki/White-box_testing) where tests
 would happily peek at private module bindings through [the magical-evil
@@ -157,7 +156,7 @@ variant](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=da7651806102d6372
 primarily for testing purposes.  Soon after, we told [`guix
 pull`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pull.html)
 to [build Guix with 3.0 instead of 2.2](XXX).  Thus, Guix users who
-upgrade transparently find themselves running Guix on Guile 3.0.
+upgrade will transparently find themselves running Guix on Guile 3.0.
 
 The main benefit is improved performance.  Guile 3 is known to be [up to
 32 times faster than
@@ -193,12 +192,12 @@ XXX: Add AArch64 figures.
 
 ## Gluing it all together
 
-The last part of the Guile 3 migration has to do with how Guix, an in
+The last part of the Guile 3 migration has to do with how Guix, and in
 particular Guix System, glues things together.  As explained above, Guix
 manipulates several stages of Scheme code that will run a different
 points in time.
 
-First, the code that runs package builds, such as [the one that runs
+Firstly, the code that runs package builds, such as [the one that runs
 `./configure && make && make
 install`](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/build/gnu-build-system.scm),
 is Guile code.  Currently that code runs on Guile 2.2, but on the next
@@ -221,7 +220,7 @@ remains a cheap transition compared to what it brings: better
 performance and new features.  That’s another benefit of using a
 general-purpose language.  
 
-Thumbs up to everyone involved in its development, and long live,
+Thumbs up to everyone involved in its development, and long live
 Guile 3!
 
 #### About GNU Guix

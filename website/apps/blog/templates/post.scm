@@ -38,7 +38,7 @@
      `(main
        (article
 	(@ (class "page centered-block limit-width"))
-	(h2 ,(post-ref post 'title))
+	(h1 (@ (class "centered-text")) ,(post-ref post 'title))
 	(p
 	 (@ (class "post-metadata centered-text"))
 	 ,(post-ref post 'author) " — "

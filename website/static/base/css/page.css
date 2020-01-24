@@ -9,14 +9,18 @@ h5 {
     line-height: 1.2em;
 }
 
+h1 {
+    font-size: 3.0em;
+    line-height: 1.2em;
+}
+
 h2 {
-    font-size: 2.5em;
-    text-align: center;
+    font-size: 1.5em;
     line-height: 1.2em;
 }
 
 h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
     line-height: 1.2em;
 }
 

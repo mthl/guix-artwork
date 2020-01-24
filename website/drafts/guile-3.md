@@ -1,5 +1,5 @@
 title: Guile 3 & Guix
-date: 2020-01-23 14:30
+date: 2020-01-24 15:00
 author: Ludovic Courtès
 tags: Scheme API, Programming interfaces
 --
@@ -56,7 +56,7 @@ different points in time, Guix includes a [_code staging_
 mechanism](https://hal.inria.fr/hal-01580582/en) built upon the nice
 properties of Scheme.
 
-Why do that?  Our arguments, right from the start, were twofold: using a
+Why do that?  The arguments, right from the start, were twofold: using a
 general-purpose language allows us to benefit from its implementation
 tooling, and having interfaces for “everything” in Scheme makes it easy
 for users to navigate their distro or OS code and to reuse code to build
@@ -114,7 +114,9 @@ version bump deals with conventions, and in particular package names.
 Currently, `guile` corresponds to the 2.2 stable series and all the
 `guile-*` packages are built against it.  In the meantime, the package
 for Guile 3 is named `guile-next` and packages built against it are
-called `guile3.0-*`.
+called `guile3.0-*`.  Over the last few weeks we created `guile3.0-`
+variants for most Guile packages, something that’s [easily achieved with
+Guix](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=89a99d53f56c7c383659d821c28286b6d71e458d).
 
 The big switch will consist in renaming all current `guile-*` packages
 to `guile2.2-*` packages, for use with the legacy 2.2 series, and
@@ -155,8 +157,10 @@ At that point, we were able to [create a `guile3.0-guix` package
 variant](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=da7651806102d637253cb9f5677b96d6a178fc05),
 primarily for testing purposes.  Soon after, we told [`guix
 pull`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-pull.html)
-to [build Guix with 3.0 instead of 2.2](XXX).  Thus, Guix users who
-upgrade will transparently find themselves running Guix on Guile 3.0.
+to [build Guix with 3.0 instead of
+2.2](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=8234fe653e61d0090138cbd4c48d877568355439).
+Thus, Guix users who upgrade will transparently find themselves running
+Guix on Guile 3.0.
 
 The main benefit is improved performance.  Guile 3 is known to be [up to
 32 times faster than
@@ -188,7 +192,12 @@ but it’s probably no surprise: these `guix` commands are short-lived (a
 couple of seconds) and they’re rather I/O- and GC-intensive—something
 JIT compilation cannot help with.
 
-XXX: Add AArch64 figures.
+On 32-bit ARM, we temporarily disabled JIT [due to a
+bug](https://issues.guix.gnu.org/issue/39208); there we observe a slight
+_slowdown_ compared to 2.2.  This can be explained by the fact that
+[virtual machine (VM) instructions in 3.0 are lower-level than in
+2.2](https://wingolog.org/archives/2018/01/17/instruction-explosion-in-guile)
+and will hopefully be more than compensated for when JIT is re-enabled.
 
 ## Gluing it all together
 

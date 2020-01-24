@@ -2,7 +2,8 @@ title: Guile 3 & Guix
 date: 2020-01-24 15:00
 author: Ludovic Courtès
 tags: Scheme API, Programming interfaces
---
+slug: guile-3-and-guix
+---
 
 Version 3.0 of GNU Guile, an implementation of the [Scheme programming
 language](https://schemers.org), [was released just last
@@ -167,7 +168,7 @@ The main benefit is improved performance.  Guile 3 is known to be [up to
 Guile 2.2](https://www.gnu.org/software/guile/news/gnu-guile-300-released.html)
 on some micro-benchmarks.  Assessing the performance gains on a
 “real-world” application like Guix is the real test.  What would be a
-relevant test?  At its core, Guix is essentially a compiler from
+relevant benchmark?  At its core, Guix is essentially a compiler from
 high-level descriptions of packages, operating systems, and the like, to
 low-level build instructions
 ([_derivations_](https://guix.gnu.org/manual/devel/en/html_node/Derivations.html)).

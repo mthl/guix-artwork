@@ -211,7 +211,7 @@ Firstly, the code that runs package builds, such as [the one that runs
 `./configure && make && make
 install`](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/build/gnu-build-system.scm),
 is Guile code.  Currently that code runs on Guile 2.2, but on the next
-major rebuild-the-world upgrade, we will switch to Guile_3.
+major rebuild-the-world upgrade, we will switch to Guile 3.
 
 Additionally, Guix produces Scheme code consumed by [the
 Shepherd](https://www.gnu.org/software/shepherd), by
@@ -221,7 +221,7 @@ These will soon switch to Guile 3 as well.  This kind of change is made
 easy by the fact that both the package definitions and the staged code
 that depends on those packages live in the same repository.
 
-# Long live, Guile 3!
+# Long live Guile 3!
 
 Migrating Guix to Guile 3 is a bit of work because of the many ways Guix
 interacts with Guile and because of the sheer size of the code base.

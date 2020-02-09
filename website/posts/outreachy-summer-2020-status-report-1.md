@@ -26,8 +26,7 @@ If you’d like to [contribute](https://guix.gnu.org/manual/en/html_node/Contrib
 to computing freedom, Scheme, functional programming, or operating system
 development, now is a good time to join us. Let’s get in touch on
 [the mailing lists and on the `#guix` channel on the Freenode IRC
-network](https://guix.gnu.org/contact/), or come chat with us [at
-FOSDEM](https://guix.gnu.org/blog/2020/meet-guix-at-fosdem-2020/)!
+network](https://guix.gnu.org/contact/)!
 
 Should you have any questions regarding the internship, please feel free to join the Outreachy Twitter
 Chat on Feb. 11, 2020, at 4PM UTC. Look for the hashtag: #OutreachyChat

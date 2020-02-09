@@ -16,7 +16,7 @@ The initial application deadline is on Feb. 25, 2020 at 4PM UTC.
 
 The final project list is announced on Feb. 25, 2020.
 
-For further information, check out the
+Should you have any questions regarding the internship, please check out the
 [timeline](https://www.outreachy.org/apply/project-selection),
 [information about the application
 process](https://www.outreachy.org/apply), and the [eligibility
@@ -27,9 +27,6 @@ to computing freedom, Scheme, functional programming, or operating system
 development, now is a good time to join us. Let’s get in touch on
 [the mailing lists and on the `#guix` channel on the Freenode IRC
 network](https://guix.gnu.org/contact/)!
-
-Should you have any questions regarding the internship, please feel free to join the Outreachy Twitter
-Chat on Feb. 11, 2020, at 4PM UTC. Look for the hashtag: #OutreachyChat
 
 Last year we had the pleasure to welcome Laura Lazzati as an Outreachy intern working on [documentation video creation](https://guix.gnu.org/blog/2019/documentation-video-creation/), which led to the videos you can now see on the home page.
 

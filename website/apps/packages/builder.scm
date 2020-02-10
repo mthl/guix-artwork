@@ -2,6 +2,7 @@
 ;;; Copyright © 2017 Ludovic Courtès <ludo@gnu.org>
 ;;; Copyright © 2019 Ricardo Wurmus <rekado@elephly.net>
 ;;; Copyright © 2019 Nicolò Balzarotti <nicolo@nixo.xyz>
+;;; Copyright © 2020 Simon Tournier <zimon.toutoune@gmail.com>
 ;;;
 ;;; Initially written by sirgazil
 ;;; who waives all copyright interest on this file.
@@ -37,13 +38,16 @@
   #:use-module (haunt page)
   #:use-module (haunt utils)
   #:use-module (srfi srfi-1)
+  #:use-module (srfi srfi-26)
   #:use-module (guix packages)
   #:use-module (guix download)
   #:use-module (guix git-download)
   #:use-module (guix svn-download)
   #:use-module (guix utils)                       ;location
+  #:use-module ((guix build download) #:select (maybe-expand-mirrors))
   #:use-module (json)
   #:use-module (ice-9 match)
+  #:use-module ((web uri) #:select (string->uri uri->string))
   #:export (builder))
 
 
@@ -84,33 +88,44 @@
   ;; Maximum number of packages shown on /packages.
   30)
 
+(define (origin->json origin)
+  "Return a JSON representation (an alist) of ORIGIN."
+  (define method
+    (origin-method origin))
+
+  (define uri                                     ;represented as string
+    (origin-uri origin))
+
+  (define (resolve urls)
+    (map uri->string
+         (append-map (cut maybe-expand-mirrors <> %mirrors)
+                     (map string->uri urls))))
+
+  `((type . ,(cond ((eq? url-fetch method) 'url)
+                   ((eq? git-fetch method) 'git)
+                   ((eq? svn-fetch method) 'svn)
+                   (else                   #nil)))
+    ,@(cond ((eq? url-fetch method)
+             `(("url" . ,(list->vector
+                          (resolve
+                           (match uri
+                             ((? string? url) (list url))
+                             ((urls ...) urls)))))))
+            ((eq? git-fetch method)
+             `(("git_url" . ,(git-reference-url uri))))
+            ((eq? svn-fetch method)
+             `(("svn_url" . ,(svn-reference-url uri))))
+            (else '()))
+    ,@(if (eq? method git-fetch)
+          `(("git_ref" . ,(git-reference-commit uri)))
+          '())
+    ,@(if (eq? method svn-fetch)
+          `(("svn_revision" . ,(svn-reference-revision
+                                uri)))
+          '())))
+
 (define (packages-json-builder)
   "Return a JSON page listing all packages."
-  (define (origin->json origin)
-    (define method
-      (origin-method origin))
-
-    `((type . ,(cond ((eq? url-fetch method) 'url)
-                     ((eq? git-fetch method) 'git)
-                     ((eq? svn-fetch method) 'svn)
-                     (else                   #nil)))
-      ,@(cond ((eq? url-fetch method)
-               `(("url" . ,(match (origin-uri origin)
-                             ((? string? url) (vector url))
-                             ((urls ...) (list->vector urls))))))
-              ((eq? git-fetch method)
-               `(("git_url" . ,(git-reference-url (origin-uri origin)))))
-              ((eq? svn-fetch method)
-               `(("svn_url" . ,(svn-reference-url (origin-uri origin)))))
-              (else '()))
-      ,@(if (eq? method git-fetch)
-            `(("git_ref" . ,(git-reference-commit (origin-uri origin))))
-            '())
-      ,@(if (eq? method svn-fetch)
-            `(("svn_revision" . ,(svn-reference-revision
-                                  (origin-uri origin))))
-            '())))
-
   (define (package->json package)
     (define cpe-name
       (assoc-ref (package-properties package) 'cpe-name))

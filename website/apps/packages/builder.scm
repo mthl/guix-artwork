@@ -74,6 +74,7 @@
   (flatten
    (list
     (index-builder)
+    (sources-json-builder)
     (packages-json-builder)
     (packages-builder)
     (package-list-builder))))
@@ -154,6 +155,21 @@
 
   (make-page "packages.json"
 	     (list->vector (map package->json (all-packages)))
+             scm->json))
+
+(define (sources-json-builder)
+  "Return a JSON page listing all the sources.
+
+See <https://forge.softwareheritage.org/D2025#51269>."
+  (define (package->json package)
+    `(,@(if (origin? (package-source package))
+            (origin->json (package-source package))
+            `(("type" . "no-origin")
+              ("name" . ,(package-name package))))))
+
+  (make-page "sources.json"
+             `(("sources" . ,(list->vector (map package->json (all-packages))))
+               ("version" . "1"))
              scm->json))
 
 (define (index-builder)

@@ -39,7 +39,7 @@ English).")
     #:description
     `(("de"
        "Melden Sie sich bei der „Help“-Mailingliste an, um per E-Mail
-gemeinschaftlichen Rat zu GuixSD und Guix zu bekommen.  Sie können
+gemeinschaftlichen Rat zu Guix System und Guix zu bekommen.  Sie können
 Nachrichten auch auf deutsch verfassen.")
       ("en"
        "Subscribe to the Help mailing list to get support from the
@@ -57,30 +57,30 @@ de la communauté sur GNU Guix par courrier électronique.  Vous
 pouvez envoyer des messages en français.")
       ("hu"
        "Iratkozzon fel a „Help“ levelezőlistára, hogy segítséget kaphasson
-e-mailben a GuixSD és a GNU Guix közösségtől. Magyarul is küldhet
+e-mailben a Guix System és a GNU Guix közösségtől. Magyarul is küldhet
 üzeneteket.")
       ("it"
        "Iscrivetevi alla mailing list 'Help' per essere aiutati da altri
-utenti di Guix e GuixSD.  Potete scrivere sulla mailing list anche in
+utenti di Guix e Guix System.  Potete scrivere sulla mailing list anche in
 italiano.")
       ("ja"
-       "メールでGNU GuixとGuixSDのコミュニティからサポートを受けるには、
+       "メールでGNU GuixとGuix Systemのコミュニティからサポートを受けるには、
 「Help」のメーリングリストに登録してください。
 メッセージ内容は日本語でも問題ございませんが、多言語でも受け付けております。")
       ("nb"
        "Meld deg på diskusjonslisten «Help» for å få råd og tips fra
-andre GuixSD- og GNU Guix-brukere via e-post.  Du kan legge inn
+andre Guix System- og GNU Guix-brukere via e-post.  Du kan legge inn
 meldinger på norsk.")
       ("nl"
        "Abonneer je op de discussielijst \"Help\" om hulp te vragen
-van de GuixSD- en GNU Guix-gemeenschap.  Je kunt berichten sturen in
+van de Guix System- en GNU Guix-gemeenschap.  Je kunt berichten sturen in
 het Nederlands.")
       ("ru"
        "Подпишитесь на список рассылки «Help», чтобы получить помощь от
-сообщества GuixSD и GNU Guix по электронной почте.  Вы можете писать на русском
+сообщества Guix System и GNU Guix по электронной почте.  Вы можете писать на русском
 языке.")
       ("zh-Hant"
-       "訂閱「Help」郵件群組以電郵從GuixSD及GNU Guix社群取得支援。你可以使用
+       "訂閱「Help」郵件群組以電郵從Guix System及GNU Guix社群取得支援。你可以使用
 正體、繁體中文發送訊息。"))
 
     #:url "https://lists.gnu.org/mailman/listinfo/help-guix"

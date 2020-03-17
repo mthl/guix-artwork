@@ -89,16 +89,16 @@ distribution.")
    (screenshot
     #:title "GNOME"
     #:slug "gnome"
-    #:image (guix-url "static/media/img/gnome-totem-epiphany.png")
-    #:preview (guix-url "static/media/img/gnome-totem-epiphany.mini.png")
-    #:caption "Control your computer with the GNOME desktop environment")
+    #:image (guix-url "static/media/img/gnome.png")
+    #:preview (guix-url "static/media/img/gnome.mini.png")
+    #:caption "GNOME desktop environment")
 
    (screenshot
     #:title "Xfce"
     #:slug "xfce"
-    #:image (guix-url "static/media/img/guixsd-xfce-icecat-emacs.png")
-    #:preview (guix-url "static/media/img/guixsd-xfce-icecat-emacs.mini.png")
-    #:caption "The Xfce desktop environment with GNU Emacs and IceCat")
+    #:image (guix-url "static/media/img/xfce.png")
+    #:preview (guix-url "static/media/img/xfce.mini.png")
+    #:caption "Xfce desktop environment")
 
    (screenshot
     #:title "Virtual machine"

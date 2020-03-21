@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Copyright © 2017, 2019 Ludovic Courtès <ludo@gnu.org>
+;;; Copyright © 2017, 2019, 2020 Ludovic Courtès <ludo@gnu.org>
 ;;;
 ;;; This file is part of the GNU Guix web site.
 ;;;
@@ -60,10 +60,10 @@
 (define build
   ;; We need Guile-JSON for 'packages-json-builder'.
   (with-extensions (append (package+propagated-inputs
-                            (specification->package "guile-json@3"))
+                            (specification->package "guile3.0-json@3"))
 
                            (package+propagated-inputs
-                            (specification->package "guile-syntax-highlight")))
+                            (specification->package "guile3.0-syntax-highlight")))
     (with-imported-modules (source-module-closure
                             '((guix build utils)))
       #~(begin
@@ -106,7 +106,7 @@
           (setenv "XDG_CACHE_HOME" "/tmp/.cache")
 
           (format #t "Running 'haunt build'...~%")
-          (invoke #+(file-append (specification->package "haunt")
+          (invoke #+(file-append (specification->package "guile3.0-haunt")
                                  "/bin/haunt")
                   "build")
 
@@ -115,7 +115,9 @@
                             #:log (%make-void-port "w"))
           (symlink "guix.html" (string-append #$output "/index.html"))))))
 
-(computed-file "guix-web-site" build)
+(computed-file "guix-web-site" build
+               #:guile (specification->package "guile-next@3")
+               #:options '(#:effective-version "3.0"))
 
 ;; Local Variables:
 ;; eval: (put 'let-package 'scheme-indent-function 1)

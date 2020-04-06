@@ -1,4 +1,4 @@
-title: Guix builds a `Hello World' VM running the Hurd
+title: A `Hello World' VM running the Hurd
 date: 2020-04-06 09:00
 author: Jan Nieuwenhuizen, Ludovic Courtès
 tags: GNU Hurd
@@ -6,16 +6,39 @@ tags: GNU Hurd
 Hello GNU World!
 
 For all you who tried our April 1st image and ran `guix` we sure hope
-you had a good laugh!
+you had a good laugh.  We set out to build that image using Guix and
+while we made some good progress on Wednesday in the end we decided to
+cheat to make the release deadline.
 
-We wanted to produce that image using Guix but in the end we had to
-cheat to make the release deadline.  Sorry about that.
+What we got stuck on for a while was to get past the ex2fs server
+seemingly freezing on boot, saying:
+
+```
+start ext2fs:
+```
+
+and then nothing...Running the guix-built `ext2fs` on Debian Hurd
+showed us that it was not servicing [this page
+fault](http://git.savannah.gnu.org/cgit/hurd/hurd.git/tree/ext2fs/pager.c#n1146)
+
+
+```C
+  /* Try to read page.  */
+  *(volatile char *) bptr;
+```
+
+We tried a lot of things, even reverting to glibc-2.29 with [all of
+Debian's patches for the
+Hurd](https://salsa.debian.org/glibc-team/glibc/-/tree/glibc-2.29/debian/patches/hurd-i386)
+until Ludovic found that our use of a 64-bit
+[MIG](https://gnu.org/s/mig) was generating incompatible stubs.
 
 Today we have a much more humble gift for you: On the [wip-hurd-vm
-branch](http://git.savannah.gnu.org/cgit/guix.git/tree/?h=wip-hurd-vm) we
-have an [initial
+branch](http://git.savannah.gnu.org/cgit/guix.git/log/?h=wip-hurd-vm)
+we have an [initial
 hurd.scm](http://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/hurd.scm?h=wip-hurd-vm)
-system description that can be used to cross build a VM running the Hurd.
+system description that can be used to cross build a VM running the
+Hurd.
 
 Running
 
@@ -43,6 +66,19 @@ and voilà:
 
 ![Initial Guix VM running the Hurd](../../../static/blog/img/guix-hello-hurd.png)
 
+And that's about it right now: No `guix` executable, `herd`, or
+`ssh-daemon` yet.  Also, the current bootstrap goes like this
+
+```
+/hurd/startup -> /libexec/runsystem -> /hurd/init ->
+    /libexec/runsystem.hurd ->
+        /libexec/rc
+        /libexec/runttys -> /libexec/getty
+```
+
+where `runsystem` and `runsystem.hurd` are upstream bash scripts and
+only `rc` is written in Guile right now.
+
 Happy hacking!
 
 #### About GNU Guix
@@ -63,3 +99,20 @@ operating system configuration management.  Guix is highly customizable
 and hackable through [Guile](https://www.gnu.org/software/guile)
 programming interfaces and extensions to the
 [Scheme](http://schemers.org) language.
+
+#### About the GNU Hurd
+
+[The GNU Hurd](https://www.gnu.org/software/hurd) is the GNU project's
+replacement for the Unix kernel.  It is a collection of servers that
+run on the Mach microkernel to implement file systems, network
+protocols, file access control, and other features that are
+implemented by the Unix kernel or similar kernels (such as Linux).
+[More
+info](https://www.gnu.org/software/hurd/hurd/documentation.html).
+
+The [mission of the GNU Hurd]
+(https://www.gnu.org/software/hurd/community/weblogs/antrik/hurd-mission-statement.html)
+project is to create a general-purpose kernel suitable for the GNU
+operating system, which is viable for everyday use, and gives users
+and programs as much control over their computing environment as
+possible.

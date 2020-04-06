@@ -1,13 +1,20 @@
-title: A `Hello World' VM running the Hurd
+title: A “Hello World” virtual machine running the Hurd
 date: 2020-04-06 09:00
 author: Jan Nieuwenhuizen, Ludovic Courtès
 tags: GNU Hurd
 ---
 Hello GNU World!
 
+There’s been a bit of speculation as to whether our [April 1st
+post](https://guix.gnu.org/blog/2020/deprecating-support-for-the-linux-kernel/)
+was a joke.  Part of it was a joke: we’re _not_ deprecating Linux-libre,
+fear not!  But when we published it, it was already April 2nd in Eastern
+part of the world and thus, not surprisingly, the remainder of the post
+was less of a joke.
+
 For all you who tried our April 1st image and ran `guix` we sure hope
-you had a good laugh.  We set out to build that image using Guix and
-while we made some good progress on Wednesday in the end we decided to
+you had a good laugh.  We set out to cross-build that image using Guix and
+while we made some good progress on Wednesday, in the end we decided to
 cheat to make the release deadline.
 
 What we got stuck on for a while was to get past the ex2fs server

@@ -38,9 +38,9 @@ delightful hacking journey ensuring the Hurd boot process would
 correctly run in our VM up to a proper login prompt.
 
 Today we have a humble gift for you: On the [wip-hurd-vm
-branch](http://git.savannah.gnu.org/cgit/guix.git/log/?h=wip-hurd-vm)
+branch](https://git.savannah.gnu.org/cgit/guix.git/log/?h=wip-hurd-vm)
 we have an [initial
-hurd.scm](http://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/hurd.scm?h=wip-hurd-vm)
+hurd.scm](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/hurd.scm?h=wip-hurd-vm)
 system description that can be used to cross build a VM running the
 Hurd.
 

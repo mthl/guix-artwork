@@ -13,34 +13,31 @@ part of the world and thus, not surprisingly, the remainder of the post
 was less of a joke.
 
 For all you who tried our April 1st image and ran `guix` we sure hope
-you had a good laugh.  We set out to cross-build that image using Guix and
-while we made some good progress on Wednesday, in the end we decided to
-cheat to make the release deadline.
+you had a good laugh.  We set out to cross-build that virtual machine
+(VM) image using Guix and while we made some good progress on Wednesday,
+in the end we decided to cheat to make the release deadline.
 
-What we got stuck on for a while was to get past the ex2fs server
-seemingly freezing on boot, saying:
+What we got stuck on for a while was to get past the ext2fs
+[_translator_](https://www.gnu.org/software/hurd/doc/hurd_6.html#SEC43)
+(the user-land process that implements the ext2 file system) seemingly
+freezing on boot, saying:
 
 ```
 start ext2fs:
 ```
 
-and then nothing...Running the guix-built `ext2fs` on Debian Hurd
-showed us that it was not servicing [this page
-fault](http://git.savannah.gnu.org/cgit/hurd/hurd.git/tree/ext2fs/pager.c#n1146)
+and then nothing...  Running `ext2fs` cross-built with Guix on
+Debian GNU/Hurd would hang similarly.  The kernel debugger would show an
+intriguing backtrace in `ext2fs` suggesting that `ext2fs` was not
+handling [page fault
+messages](https://www.gnu.org/software/hurd/gnumach-doc/Memory-Object-Server.html).
+Long story short: we eventually realized that the server interfaces were
+compiled with a 64-bit [MiG](https://www.gnu.org/software/mig) whereas
+we were targeting a 32-bit platform.  From there on, we embarked on a
+delightful hacking journey ensuring the Hurd boot process would
+correctly run in our VM up to a proper login prompt.
 
-
-```C
-  /* Try to read page.  */
-  *(volatile char *) bptr;
-```
-
-We tried a lot of things, even reverting to glibc-2.29 with [all of
-Debian's patches for the
-Hurd](https://salsa.debian.org/glibc-team/glibc/-/tree/glibc-2.29/debian/patches/hurd-i386)
-until Ludovic found that our use of a 64-bit
-[MIG](https://gnu.org/s/mig) was generating incompatible stubs.
-
-Today we have a much more humble gift for you: On the [wip-hurd-vm
+Today we have a humble gift for you: On the [wip-hurd-vm
 branch](http://git.savannah.gnu.org/cgit/guix.git/log/?h=wip-hurd-vm)
 we have an [initial
 hurd.scm](http://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/hurd.scm?h=wip-hurd-vm)

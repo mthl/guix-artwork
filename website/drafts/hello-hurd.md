@@ -110,8 +110,8 @@ implemented by the Unix kernel or similar kernels (such as Linux).
 [More
 info](https://www.gnu.org/software/hurd/hurd/documentation.html).
 
-The [mission of the GNU Hurd]
-(https://www.gnu.org/software/hurd/community/weblogs/antrik/hurd-mission-statement.html)
+The [mission of the GNU
+Hurd](https://www.gnu.org/software/hurd/community/weblogs/antrik/hurd-mission-statement.html)
 project is to create a general-purpose kernel suitable for the GNU
 operating system, which is viable for everyday use, and gives users
 and programs as much control over their computing environment as

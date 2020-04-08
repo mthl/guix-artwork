@@ -12,6 +12,8 @@ fear not!  But when we published it, it was already April 2nd in Eastern
 part of the world and thus, not surprisingly, the remainder of the post
 was less of a joke.
 
+# Getting to a bootable system
+
 For all you who tried our April 1st image and ran `guix` we sure hope
 you had a good laugh.  We set out to cross-build that virtual machine
 (VM) image using Guix and while we made some good progress on Wednesday,
@@ -81,9 +83,45 @@ And that's about it right now: No `guix` executable, `herd`, or
 ```
 
 where `runsystem` and `runsystem.hurd` are upstream bash scripts and
-only `rc` is written in Guile right now.
+only `rc` is written in Guile right now.  Woohoo!
 
-Happy hacking!
+# Why bother?
+
+Why bother with the Hurd anyway?  Isn’t it a pipe dream or “vaporware”,
+depending on one’s perspective?  There’s some unquestionable truth in
+that: we know that Hurd development started in the early 90’s, months
+before Linux development started, and yet it still lacks so much in
+terms of hardware support, even though significant progress was made in
+recent years in particular with the use of [Rump
+kernels](http://rumpkernel.org/).
+
+The more we witness how new features are retrofitted in the kernel
+Linux, the more we think the Hurd’s design is better suited to today’s
+needs.  [Linux
+namespaces](http://man7.org/linux/man-pages/man7/namespaces.7.html), the
+foundation of “containers”, are such an example of an afterthought;
+unprivileged user namespaces, which allow unprivileged users to benefit
+from lightweight “container” virtualization, are still often disabled by
+distros due to a lack of confidence.  This is in sharp contrast with the
+Hurd’s inherent unrestricted support for fine-grain virtualization: a
+PID namespace is just another `proc` server, and file system name space
+is just another root file system server, and so on.  Container-like
+lightweight virtualization is _native_ on the Hurd.
+
+Last but not least, with an eye on the security and transparency of free
+software systems, a microkernel-based systems seems to naturally lend
+itself well to bootstrapping from a reduced trusted base.  This is one
+of the topics [we discussed on the last Reproducible Builds
+Summit](https://guix.gnu.org/blog/2019/reproducible-builds-summit-5th-edition/).
+
+The question is not so much whether 2020 or 2021 will be the year of the
+Hurd.  It’s more about the kind of systems we want to _build_.  A lot of
+work remains to be done, but we think, in 2020 more than ever, that this
+is a promising approach for the betterment of the security of our
+systems and the freedom of users.
+
+We also have to admit that this is an amazing system to hack on, even
+more so when combined with Guix, so… happy hacking!  :-)
 
 #### About GNU Guix
 

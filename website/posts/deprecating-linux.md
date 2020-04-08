@@ -4,6 +4,11 @@ author: Jan (janneke) Nieuwenhuizen, Ludovic (civodul) Courtès, Marius (mbakke)
 tags: GNU Hurd, Linux
 ---
 
+> _Hey, this post was published on April 1st, so take it with a grain of
+> salt!  [Read the
+> followup](https://guix.gnu.org/blog/2020/a-hello-world-virtual-machine-running-the-hurd/)
+> for some clarifications._
+
 After [years in the
 making](https://lists.gnu.org/archive/html/guix-devel/2015-08/msg00379.html),
 Guix [recently gained support](https://lists.gnu.org/archive/html/guix-devel/2020-03/msg00081.html)

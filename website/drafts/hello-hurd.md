@@ -70,20 +70,10 @@ qemu-system-i386 -enable-kvm -m 512 -snapshot -hda \
 
 and voilà:
 
-![Initial Guix VM running the Hurd](../../../static/blog/img/guix-hello-hurd.png)
+![Initial Guix VM running the Hurd](https://guix.gnu.org/static/blog/img/hello-hurd.png)
 
-And that's about it right now: No `guix` executable, `herd`, or
-`ssh-daemon` yet.  Also, the current bootstrap goes like this
-
-```
-/hurd/startup -> /libexec/runsystem -> /hurd/init ->
-    /libexec/runsystem.hurd ->
-        /libexec/rc
-        /libexec/runttys -> /libexec/getty
-```
-
-where `runsystem` and `runsystem.hurd` are upstream bash scripts and
-only `rc` is written in Guile right now.  Woohoo!
+Woohoo!  (Actually we already have more stuff not shown here, such as
+`guix` itself running… for a future post!  :-))
 
 # Why bother?
 

@@ -70,7 +70,7 @@ qemu-system-i386 -enable-kvm -m 512 -snapshot -hda \
 
 and voilà:
 
-![Initial Guix VM running the Hurd](https://guix.gnu.org/static/blog/img/hello-hurd.png)
+![Initial Guix VM running the Hurd](https://guix.gnu.org/static/blog/img/hello-hurd.gif)
 
 Woohoo!  (Actually we already have more stuff not shown here, such as
 `guix` itself running… for a future post!  :-))

@@ -9,7 +9,7 @@ There’s been a bit of speculation as to whether our [April 1st
 post](https://guix.gnu.org/blog/2020/deprecating-support-for-the-linux-kernel/)
 was a joke.  Part of it was a joke: we’re _not_ deprecating Linux-libre,
 fear not!  But when we published it, it was already April 2nd in Eastern
-part of the world and thus, not surprisingly, the remainder of the post
+parts of the world and thus, not surprisingly, the remainder of the post
 was less of a joke.
 
 # Getting to a bootable system
@@ -46,26 +46,26 @@ hurd.scm](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/hurd.scm?h=
 system description that can be used to cross build a VM running the
 Hurd.
 
-Running
+Running:
 
 ```
 ./pre-inst-env guix build -f gnu/system/hurd.scm
 ```
 
-produces a VM image
-
+cross-compiles all the relevant packages for GNU/Hurd—specifically the
+`i586-pc-gnu`
+[triplet](https://www.gnu.org/savannah-checkouts/gnu/autoconf/manual/autoconf-2.69/html_node/Specifying-Target-Triplets.html)—and produces a VM image:
 
 ```
 /gnu/store/yqnabv1zmlkviwzikc23w9qvfnyfwvj7-qemu-image
 ```
 
-that you can start like so
+You can build it and start it from your GNU/Linux machine with this
+command:
 
 ```
-cp /gnu/store/yqnabv1zmlkviwzikc23w9qvfnyfwvj7-qemu-image hello-hurd.img
-chmod +w hello.img
-guix environment --ad-hoc qemu -- \
-    qemu-system-i386 -drive file=hello-hurd.img,cache=writeback -m 1G
+qemu-system-i386 -enable-kvm -m 512 -snapshot -hda \
+  $(./pre-inst-env guix build -f gnu/system/hurd.scm)
 ```
 
 and voilà:

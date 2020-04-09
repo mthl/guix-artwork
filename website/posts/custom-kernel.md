@@ -1,7 +1,7 @@
 title: Creating and using a custom Linux kernel on Guix System
 date: 2019-05-21 12:00
 author: Efraim Flashner
-tags: Software development, Kernel, Customization
+tags: Software development, Linux, Customization
 ---
 
 Guix is, at its core, a source based distribution with

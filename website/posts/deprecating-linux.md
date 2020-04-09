@@ -1,7 +1,7 @@
 title: Deprecating support for the Linux kernel
 date: 2020-04-01 23:00
 author: Jan (janneke) Nieuwenhuizen, Ludovic (civodul) Courtès, Marius (mbakke) Bakke, Ricardo (rekado) Wurmus
-tags: GNU Hurd, Linux
+tags: GNU/Hurd, Linux
 ---
 
 > _Hey, this post was published on April 1st, so take it with a grain of

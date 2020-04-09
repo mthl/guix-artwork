@@ -1,7 +1,7 @@
 title: A “Hello World” virtual machine running the Hurd
 date: 2020-04-08 17:50
 author: Jan Nieuwenhuizen, Ludovic Courtès
-tags: GNU Hurd
+tags: GNU/Hurd
 ---
 Hello GNU World!
 

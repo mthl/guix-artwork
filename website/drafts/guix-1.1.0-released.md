@@ -92,7 +92,9 @@ On the distro side:
     packages](https://guix.gnu.org/packages).  XXX packages were
     upgraded.  The distribution comes with GNU libc 2.29,
     Linux-libre 5.4.28, and LibreOffice 6.4.2.2 among others.
-  - XXX what else?
+  - 19 new services were added, providing support for running NFS servers,
+    loading out-of-tree kernel modules, configuring the nftables firewall,
+    running Singularity containers, and many others.
 	
 At the programming interface level and under the hood, many things
 changed as well, notably:

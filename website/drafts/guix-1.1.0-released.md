@@ -68,7 +68,7 @@ highlights as far as tooling is concerned:
     supports a `--target` option providing some support for the
     cross-compilation of complete systems.  More on that in [this FOSDEM
     talk](https://fosdem.org/2020/schedule/event/ggaaattyp/).
-  - Guix now [run on
+  - Guix now [runs on
     Guile 3](https://guix.gnu.org/blog/2020/guile-3-and-guix/), which
     improves performance.
 

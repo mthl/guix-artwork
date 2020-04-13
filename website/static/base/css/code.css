@@ -12,9 +12,15 @@
     font-weight: bold;
 }
 
-.syntax-symbol, .syntax-default {
+.syntax-symbol, a[href].syntax-symbol, .syntax-default {
     color: #423;
     background-color: #f2efe4;	/* This must match pre.lisp! */
+}
+
+a[href].syntax-symbol:hover {
+    border-bottom-width: 1px;
+    border-bottom-color: color: grey;
+    border-bottom-style: dotted;
 }
 
 .syntax-string {

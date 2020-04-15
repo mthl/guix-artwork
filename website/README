@@ -1,8 +1,8 @@
 -*- mode: org -*-
 
-#+TITLE: GuixSD website
+#+TITLE: Guix website
 
-The GuixSD website available at https://www.gnu.org/software/guix/ is
+The Guix website available at https://www.gnu.org/software/guix/ is
 a static website built with [[https://haunt.dthompson.us/][Haunt]].  This directory contains the source
 files of the website.
 

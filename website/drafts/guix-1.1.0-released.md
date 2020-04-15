@@ -1,6 +1,6 @@
-title: GNU Guix 1.1.0 released [DRAFT XXX]
-date: 2020-03-09 14:00:00
-author: Ludovic Courtès
+title: GNU Guix 1.1.0 released
+date: 2020-04-15 15:00:00
+author: Ludovic Courtès, Marius Bakke
 slug: gnu-guix-1.1.0-released
 tags: Releases, System tests
 ---
@@ -17,14 +17,19 @@ source](https://guix.gnu.org/manual/en/html_node/Requirements.html) or
 binaries](https://guix.gnu.org/manual/en/html_node/Binary-Installation.html).
 Guix users can update by running `guix pull`.
 
-It’s been 11 months since the previous release, during which XXX people
+If you wonder what installing Guix System is like, this video gives an
+overview of the guided installation process:
+
+![Video of the system installation process.](https://guix.gnu.org/guix-videos/guix-system-install-1.1.0.webm)
+
+It’s been 11 months since the previous release, during which 201 people
 contributed code and packages.  This is a long time for a release, which
 is in part due to the fact that bug fixes and new features are
 continuously delivered to our users _via_ `guix pull`.  However, a
 number of improvements, in particular in the installer, will greatly
 improve the experience of first-time users.
 
-It’s hard to summarize more than 13,000 commits, but here are the
+It’s hard to summarize more than 14,000 commits!  Here are some
 highlights as far as tooling is concerned:
 
   - The new [`guix
@@ -32,8 +37,8 @@ highlights as far as tooling is concerned:
     tool allows you to deploy several machines at once, [be it remote
     machines over
     SSH](https://guix.gnu.org/blog/2019/towards-guix-for-devops/) or
-    [machines at a
-    VPS](https://guix.gnu.org/blog/2019/managing-servers-with-gnu-guix-a-tutorial/).
+    [machines at a virtual private server
+    (VPS)](https://guix.gnu.org/blog/2019/managing-servers-with-gnu-guix-a-tutorial/).
   - Channel authors can now write news entries for their users, [which
     are readily readable using `guix pull
     --news`](https://guix.gnu.org/blog/2019/spreading-the-news/).  As a
@@ -45,7 +50,8 @@ highlights as far as tooling is concerned:
     deploy your system, and also contains a link to your operating
     system configuration file.  Precise provenance tracking that gives
     users and admins the ability to know _exactly_ what changed between
-    two different system instances!
+    two different system instances!  This feature builds upon the new
+    [`provenance`](https://guix.gnu.org/manual/en/html_node/Service-Reference.html#index-provenance_002dservice_002dtype) service.
   - [`guix
     pack`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-pack.html)
     has improved support for generating Singularity and Docker images,
@@ -77,10 +83,13 @@ highlights as far as tooling is concerned:
 
 On the distro side:
 
-  - The package dependency graph is [rooted in a reduced set of “binary
+  - The big change is that the package dependency graph is [rooted in a
+    reduced set of “binary
     seeds”](https://guix.gnu.org/blog/2019/guix-reduces-bootstrap-seed-by-50/)—a
-    huge step towards a fully auditable bootstrap.  There’s [more to
-    come soon](https://fosdem.org/2020/schedule/event/gnumes/)!
+    huge step towards a fully auditable
+    [bootstrap](https://guix.gnu.org/manual/en/html_node/Bootstrapping.html).
+    There’s [more to come
+    soon](https://fosdem.org/2020/schedule/event/gnumes/)!
   - The [graphical installer for Guix
     System](https://guix.gnu.org/manual/en/html_node/Guided-Graphical-Installation.html)
     benefited from many bug fixes and improvements.  Following the [bugs
@@ -91,13 +100,18 @@ On the distro side:
     integration runs automated tests of the installer for different
     configurations (encrypted root, non-encrypted root, with or without
     a desktop environment, etc.).
-  - 3514 packages were added, for a total of [more than 13K
-    packages](https://guix.gnu.org/packages).  3368 packages were
-    upgraded.  The distribution comes with GNU libc 2.29,
-    Linux-libre 5.4.28, and LibreOffice 6.4.2.2 among others.
-  - 19 new services were added, providing support for running NFS servers,
-    loading out-of-tree kernel modules, configuring the nftables firewall,
-    running Singularity containers, and many others.
+  - 3,514 packages were added, for a total of more than [13K
+    packages](https://guix.gnu.org/packages).  3,368 packages were
+    upgraded.  The distribution comes with GNU libc 2.29, GCC 9.3,
+    GNOME 3.32, MATE 1.24.0, Xfce 4.14.0, Linux-libre 5.4.28, and
+    LibreOffice 6.4.2.2 to name a few.
+  - 19 new services were added, notably providing support for running
+    [NFS
+    servers](https://guix.gnu.org/manual/devel/en/html_node/Network-File-System.html#index-nfs_002dservice_002dtype),
+    configuring the [nftables
+    firewall](https://guix.gnu.org/manual/devel/en/html_node/Networking-Services.html#index-nftables_002dservice_002dtype),
+    or even a high-level Web service like
+    [Patchwork](https://guix.gnu.org/manual/devel/en/html_node/Web-Services.html#index-patchwork_002dservice_002dtype).
   - Build systems for Node, Julia, and Qt were added, making it easier to
     write package definitions for these ecosystems.  In addition there is a
     new `copy-build-system` that does what you might expect.
@@ -112,11 +126,18 @@ changed as well, notably:
     longstanding user
     interface](https://issues.guix.gnu.org/issue/28310) and [performance
     issue](https://issues.guix.gnu.org/issue/22990).
-  - The `remote-eval` procedure supports remote execution of Scheme code
-    as G-expressions after having first built and _deployed_ any code it
-    relies on.  This capability was key to allowing code sharing between
-    `guix deploy`, which operates on remote hosts, and `guix system
-    reconfigure`.
+  - The `remote-eval` procedure in [`(guix
+    remote)`](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/remote.scm)
+    supports remote execution of Scheme code as G-expressions after
+    having first built and _deployed_ any code it relies on.  This
+    capability was key to allowing code sharing between `guix deploy`,
+    which operates on remote hosts, and `guix system reconfigure`.
+    Similarly, there’s a new
+    [`eval/container`](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/linux-container.scm#n226)
+    procedure to run code in an automatically-provisioned container.
+  - The new `lower-gexp` procedure returns a low-level intermediate
+    representation of a G-expression.  `remove-eval`, `eval/container`,
+    and `gexp->derivation` are repressed in terms of `lower-gexp`.
   - The
     [`with-parameters`](https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html)
     form allows you, for instance, to _pin_ objects such as packages to a
@@ -125,7 +146,6 @@ changed as well, notably:
     [was](https://lists.gnu.org/archive/html/guix-devel/2019-10/msg00350.html)
     [improved](https://lists.gnu.org/archive/html/guix-devel/2019-10/msg00650.html)
     for common low-level operations.
-  - XXX what else?
 
 That’s a long list!  The [release announcement](XXX) lists additional
 noteworthy changes and bug fixes you may be interested in.

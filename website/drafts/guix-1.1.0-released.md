@@ -4,7 +4,7 @@ author: Ludovic Courtès
 slug: gnu-guix-1.1.0-released
 tags: Releases, System tests
 ---
-We are pleased to announce the release of GNU Guix version 1.0.0!
+We are pleased to announce the release of GNU Guix version 1.1.0!
 
 The release comes with [ISO-9660 installation
 images](https://guix.gnu.org/manual/en/html_node/System-Installation.html),

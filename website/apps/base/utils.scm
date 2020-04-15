@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Copyright © 2013, 2014, 2015, 2016, 2017, 2018, 2019 Ludovic Courtès <ludo@gnu.org>
+;;; Copyright © 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 Ludovic Courtès <ludo@gnu.org>
 ;;; Copyright © 2015 Mathieu Lirzin <mthl@openmailbox.org>
 ;;; Copyright © 2013 Alex Sassmannshausen <alex.sassmannshausen@gmail.com>
 ;;; Copyright © 2017 Eric Bavier <bavier@member.fsf.org>
@@ -50,7 +50,7 @@
   (make-parameter (or (getenv "GUIX_WEB_SITE_ROOT_PATH") "/")))
 
 (define latest-guix-version
-  (make-parameter "1.0.1"))
+  (make-parameter "1.1.0"))
 
 
 

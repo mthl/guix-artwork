@@ -100,7 +100,7 @@ On the distro side:
     running Singularity containers, and many others.
   - Build systems for Node, Julia, and Qt were added, making it easier to
     write package definitions for these ecosystems.  In addition there is a
-    new "copy-build-system" that does what you might expect.
+    new `copy-build-system` that does what you might expect.
 
 At the programming interface level and under the hood, many things
 changed as well, notably:

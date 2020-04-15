@@ -91,8 +91,8 @@ On the distro side:
     integration runs automated tests of the installer for different
     configurations (encrypted root, non-encrypted root, with or without
     a desktop environment, etc.).
-  - More than XXX packages were added, for a total of [almost 13K
-    packages](https://guix.gnu.org/packages).  XXX packages were
+  - 3514 packages were added, for a total of [more than 13K
+    packages](https://guix.gnu.org/packages).  3368 packages were
     upgraded.  The distribution comes with GNU libc 2.29,
     Linux-libre 5.4.28, and LibreOffice 6.4.2.2 among others.
   - 19 new services were added, providing support for running NFS servers,

@@ -71,6 +71,9 @@ highlights as far as tooling is concerned:
   - Guix now [runs on
     Guile 3](https://guix.gnu.org/blog/2020/guile-3-and-guix/), which
     improves performance.
+  - The manual now includes a
+    "[cookbook](https://guix.gnu.org/cookbook/en/html_node/index.html)" that
+    contains tutorials and explorations of topics not covered by the manual alone.
 
 On the distro side:
 
@@ -95,7 +98,10 @@ On the distro side:
   - 19 new services were added, providing support for running NFS servers,
     loading out-of-tree kernel modules, configuring the nftables firewall,
     running Singularity containers, and many others.
-	
+  - Build systems for Node, Julia, and Qt were added, making it easier to
+    write package definitions for these ecosystems.  In addition there is a
+    new "copy-build-system" that does what you might expect.
+
 At the programming interface level and under the hood, many things
 changed as well, notably:
 

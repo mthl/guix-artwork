@@ -136,8 +136,8 @@ changed as well, notably:
     [`eval/container`](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/system/linux-container.scm#n226)
     procedure to run code in an automatically-provisioned container.
   - The new `lower-gexp` procedure returns a low-level intermediate
-    representation of a G-expression.  `remove-eval`, `eval/container`,
-    and `gexp->derivation` are repressed in terms of `lower-gexp`.
+    representation of a G-expression.  `remote-eval`, `eval/container`,
+    and `gexp->derivation` are expressed in terms of `lower-gexp`.
   - The
     [`with-parameters`](https://guix.gnu.org/manual/en/html_node/G_002dExpressions.html)
     form allows you, for instance, to _pin_ objects such as packages to a

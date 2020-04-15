@@ -22,6 +22,8 @@ overview of the guided installation process:
 
 ![Video of the system installation process.](https://guix.gnu.org/guix-videos/guix-system-install-1.1.0.webm)
 
+There are more [“getting started” videos](https://guix.gnu.org/videos/).
+
 It’s been 11 months since the previous release, during which 201 people
 contributed code and packages.  This is a long time for a release, which
 is in part due to the fact that bug fixes and new features are
@@ -147,8 +149,10 @@ changed as well, notably:
     [improved](https://lists.gnu.org/archive/html/guix-devel/2019-10/msg00650.html)
     for common low-level operations.
 
-That’s a long list!  The [release announcement](XXX) lists additional
-noteworthy changes and bug fixes you may be interested in.
+That’s a long list!  The [`NEWS`
+file](https://git.savannah.gnu.org/cgit/guix.git/tree/NEWS?h=v1.1.0&id=d62c9b2671be55ae0305bebfda17b595f33797f2)
+lists additional noteworthy changes and bug fixes you may be interested
+in.
 
 Enjoy!
 

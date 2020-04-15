@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Copyright © 2016, 2017 Ludovic Courtès <ludo@gnu.org>
+;;; Copyright © 2016, 2017, 2020 Ludovic Courtès <ludo@gnu.org>
 ;;;
 ;;; This file is part of the GNU Guix web site.
 ;;;
@@ -30,6 +30,7 @@
 	    post-url-path
 	    posts/latest
 	    syntax-highlight
+            change-image-to-video
 	    tag-first?
 	    tag-system-path
 	    tag-url-path))
@@ -124,5 +125,26 @@
      `(,tag (@ ,@attributes) ,@(map syntax-highlight body)))
     ((tag body ...)
      `(,tag ,@(map syntax-highlight body)))
+    ((? string? str)
+     str)))
+
+(define (change-image-to-video sxml)
+  "Replace <img> tags in SXML that refer to WebM videos with proper <video>
+tags.  This hack allows one to refer to a video from a Markdown document."
+  (match sxml
+    (('img ('@ attributes ...) body ...)
+     (let ((src (match (assoc 'src attributes)
+                  ((_ url) url)))
+           (alt (match (assoc 'alt attributes)
+                  ((_ text) text))))
+       (if (string-suffix? ".webm" src)
+           `(video (@ (src ,src) (controls "controls"))
+                   (p (a (@ (href ,src) (class "link-subtle"))
+                         "Download video.")))
+           sxml)))
+    ((tag ('@ attributes ...) body ...)
+     `(,tag (@ ,@attributes) ,@(map change-image-to-video body)))
+    ((tag body ...)
+     `(,tag ,@(map change-image-to-video body)))
     ((? string? str)
      str)))

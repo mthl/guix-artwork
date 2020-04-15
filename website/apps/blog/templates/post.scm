@@ -44,7 +44,8 @@
 	 ,(post-ref post 'author) " — "
 	 ,(date->string (post-date post) "~B ~e, ~Y"))
 
-	,(syntax-highlight (post-sxml post))
+	,(change-image-to-video
+          (syntax-highlight (post-sxml post)))
 
 	(div
 	 (@ (class "tag-list"))

@@ -125,18 +125,11 @@ i686-linux, and dedicated storage")
 	     (a (@ (href ,(guix-url "blog/2016/growing-our-build-farm/")))
 		"Igalia")))))
 	 (tr
-	  (td "guix.sjd.se")
-	  (td "x86_64-linux, i686-linux")
-	  (td
-	   (ul
-	    (li (a (@ (href "http://josefsson.org"))
-		   "Simon Josefsson")))))
-	 (tr
-	  (td "x15.sjd.se")
+	  (td "guix-x15.sjd.se, guix-x15b.sjd.se")
 	  (td "armhf-linux")
 	  (td
 	   (ul
-	    (li (a (@ (href "http://josefsson.org"))
+	    (li (a (@ (href "https://blog.josefsson.org/"))
 		   "Simon Josefsson")))))
 	 (tr
 	  (td "hydra-slave1")

@@ -97,14 +97,7 @@
 	     (th "system")
 	     (th "donors")))
 	(tbody
-	 (tr
-	  (td "hydra.gnu.org")
-	  (td "build farm front-end")
-	  (td
-	   (ul
-	    (li
-	     (a (@ (href "https://www.fsf.org/"))
-            "Free Software Foundation")))))
+
      (tr
       (td "berlin.guixsd.org")
       (td "build farm with 25 build nodes for x86_64-linux and
@@ -120,7 +113,7 @@ i686-linux, and dedicated storage")
 	  (td "aarch64-linux")
 	  (td
 	   (ul
-	    (li (a (@ (href "https://www.arm.com/"))
+	    (li (a (@ (href ,(guix-url "blog/2018/aarch64-build-machines-donated/")))
 		   "ARM Holdings") " (hardware)"))))
 	 (tr
 	  (td "bayfront.guixsd.org")
@@ -128,38 +121,8 @@ i686-linux, and dedicated storage")
 	  (td
 	   (ul
 	    (li
-	     (a (@ (href ,(guix-url "news/growing-our-build-farm.html")))
+	     (a (@ (href ,(guix-url "blog/2016/growing-our-build-farm/")))
 		"Igalia")))))
-	 (tr
-	  (td "hydra.gnunet.org")
-	  (td "x86_64-linux, i686-linux")
-	  (td (ul (li (a (@ (href "https://gnunet.org/fsnsg"))
-			 "Free Secure Network Systems Group")
-		      " at the "
-		      (a (@ (href "https://www.tum.de/"))
-			 "Technische Universität München")))))
-	 (tr
-	  (td "chapters.gnu.org")
-	  (td "x86_64-linux, i686-linux")
-	  (td
-	   (ul
-	    (li (a (@ (href "https://es.gnu.org"))
-		   "GNU\xa0España") " (hardware)")
-	    (li (a (@ (href "https://fsffrance.org/index.en.html"))
-		   "FSF\xa0France")
-		" (hosting)"))))
-	 (tr
-	  (td "librenote")
-	  (td "mips64el-linux")
-	  (td (ul (li "Daniel Clark (hardware)")
-		  (li "Mark H Weaver (hosting)"))))
-	 (tr
-	  (td "hydra-slave0")
-	  (td "mips64el-linux")
-	  (td
-	   (ul
-	    (li (a (@ (href "https://www.fsf.org/"))
-		   "Free Software Foundation")))))
 	 (tr
 	  (td "guix.sjd.se")
 	  (td "x86_64-linux, i686-linux")
@@ -209,4 +172,14 @@ i686-linux, and dedicated storage")
 	    (li (a (@ (href "http://www.kosagi.com/w/index.php?title=Novena_Main_Page"))
 		   "Kosagi (Sutajio Ko-Usagi Pte Ltd)")
 		" (hardware)")
-	    (li "Andreas Enge (hosting)")))))))))))
+	    (li "Andreas Enge (hosting)")))))))
+
+      (p "Other organizations and individuals helped Guix with hardware and
+hosting in the past and we thank them: "
+         (a (@ (href "https://www.fsf.org")) "Free Software Foundation") ", "
+         (a (@ (href "https://es.gnu.org")) "GNU España") ", "
+         (a (@ (href "https://fsffrance.org/index.en.html")) "FSF France") ", "
+         (a (@ (href "https://gnunet.org/fsnsg")) "Free Secure Network Systems Group")
+         " at the "
+         (a (@ (href "https://www.tum.de/")) "Technische Universität München")
+         ".")))))

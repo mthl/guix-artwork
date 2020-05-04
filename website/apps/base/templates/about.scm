@@ -90,7 +90,7 @@
 
       (p
        "Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim
-Cournoyer, Tobias Geerinckx-Rice, and Ricardo Wurmus.  Please use the "
+Cournoyer, Tobias Geerinckx-Rice and Mathieu Othacehe.  Please use the "
        (a (@ (href ,(guix-url "contact/"))) "mailing lists")
        " for contact.  For sensitive issues, you can reach them "
        "using the " (code "guix-maintainers@gnu.org") " private alias.")

@@ -1,0 +1,17 @@
+digraph "Grafts" {
+  perl [ label = "perl", shape = box, fontname = Helvetica];
+  inkscape [ label = "inkscape", shape = box, fontname = Helvetica];
+  libc [ label = "glibc", shape = box, fontname = Helvetica ];
+
+  inkscape -> perl [ color = darkviolet ];
+  inkscape -> libc [ color = darkviolet ];
+  perl -> libc [ color = darkviolet ];
+
+  inkscapeg [ label = "inkscape (grafted)", shape = box, fontname = Helvetica,
+              color = dimgrey, fontcolor = dimgrey, margin = 0.2 ];
+  perlf [ label = "perl (fixed)", shape = box, fontname = Helvetica];
+
+  perlf -> libc [ color = darkviolet ];
+  inkscapeg -> inkscape [ color = orange ];
+  inkscapeg -> perlf [ color = orange ];
+}

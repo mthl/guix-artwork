@@ -1,4 +1,4 @@
-title: Grafts, the continuation
+title: Grafts, continued
 author: Ludovic Courtès
 tags: Functional programming, Scheme API
 --
@@ -8,7 +8,7 @@ users with [security
 updates](https://guix.gnu.org/manual/en/html_node/Security-Updates.html)
 in a timely fashion, even for core packages deep down in the dependency
 graph.  Most users value the benefits of grafts, but newcomers were also
-unavoidably stroke by what turned out to be the undesirable side effect
+unavoidably struck by what turned out to be the undesirable side effect
 of our graft implementation on user experience.  This had been a
 well-known problem for a while, but [1.1.0 finally addressed these
 issues](https://guix.gnu.org/blog/2020/gnu-guix-1.1.0-released/).
@@ -52,7 +52,7 @@ potentially applicable grafts.  Why “potentially applicable”?  Consider
 this scenario: assume `perl` has a `replacement`; `coreutils` has a
 dependency on `perl`, but it’s a build-time dependency: `coreutils` does
 not depend on `perl` at run time.  Thus, `coreutils` can be used as is,
-there is no need to try to graft it.
+there is no need to graft it.
 
 But how do we know whether a dependency is a built-time-only dependency?
 The [`native-inputs`
@@ -61,10 +61,11 @@ of a package usually lists build-time dependencies, but it’s more of
 hint.  Ultimately, the set of run-time dependencies, which we call the
 _references_, is the subset of the build-time dependencies that the
 garbage collector (GC) in the build daemon finds _in the build
-result_—Section 5.5.1 of [Eelco Dolstra’s PhD thesis on
-Nix](http://nixos.org/~eelco/pubs/phd-thesis.pdf) describes how the GC
+result_—Section 5.5.1 of [Eelco Dolstra’s PhD
+thesis](http://nixos.org/~eelco/pubs/phd-thesis.pdf) describes how the
+GC
 scans for references.  In our example, we first have to actually build
-`coreutils` before we can tell whether or not it depends on `perl` at
+`coreutils` before we can tell whether it depends on `perl` at
 run time.
 
 Guix arranges to graft only when necessary.  In this example, `guix
@@ -72,7 +73,11 @@ build coreutils` would return the same as `guix build coreutils
 --no-grafts`.  Conversely, since `inkscape` has a run-time dependency on
 `perl`, `guix build inkscape` returns a derivation that grafts the
 `perl` replacement onto the original `inkscape` build result, the one
-returned by `guix build inkscape --no-grafts`.
+returned by `guix build inkscape --no-grafts`.  The (simplified)
+dependency graph of the derivation for the grafted `inkscape` looks like
+this:
+
+![Dependency graph of the graft derivation of Inkscape.](https://guix.gnu.org/static/blog/img/inkscape-graft.svg)
 
 Grafts are a form of what [_Build Systems à la
 Carte_](https://www.microsoft.com/en-us/research/uploads/prod/2018/03/build-systems.pdf)
@@ -146,7 +151,7 @@ as specified by
 # Gathering dynamic dependencies
 
 To address this, all these individual dynamic dependencies need to be
-gathered somehow instead of being treated one-by-one.  Conceptually, we
+gathered somehow instead of being treated one by one.  Conceptually, we
 would like to, roughly, do a first pass lowering packages to derivations
 as if grafting was disabled, build all these derivations, and then do a
 second pass determine which packages in the graph need to be grafted and
@@ -159,7 +164,27 @@ the “ungrafted” one followed by the grafted one.
 
 The problem is that our API is inherently serial: the
 `package-derivation` function takes _one_ package, lowers it, and
-returns its derivation.  Lowering includes dealing with grafts, and
+returns its derivation:
+
+```scheme
+(use-modules (guix)
+             (gnu packages base)
+             (gnu packages inkscape))
+
+(define s (open-connection))
+
+(package-derivation s coreutils)
+⇒ #<derivation /gnu/store/rpfdbax1py483m9ydhvp73s7dgmn6xh4-coreutils-8.31.drv => /gnu/store/jkj7wxybgcpdamkl6fz7wwbb1ak5wxvk-coreutils-8.31-debug /gnu/store/zibwkb5xavnv6z3gzknfqjsxb9b0izh0-coreutils-8.31 7f6c92e3a000>
+(package-derivation s coreutils #:graft? #f)
+⇒ #<derivation /gnu/store/rpfdbax1py483m9ydhvp73s7dgmn6xh4-coreutils-8.31.drv => /gnu/store/jkj7wxybgcpdamkl6fz7wwbb1ak5wxvk-coreutils-8.31-debug /gnu/store/zibwkb5xavnv6z3gzknfqjsxb9b0izh0-coreutils-8.31 7f6c92e3a000>
+
+(package-derivation s inkscape)
+⇒ #<derivation /gnu/store/jzm2zsq8m0rj8wdsmikc0p2ik0cprrcf-inkscape-0.92.4.drv => /gnu/store/clj8rjnsip8a35hyd9nf4l65w7ahn0gs-inkscape-0.92.4 7f6c9c15b730>
+(package-derivation s inkscape #:graft? #f)
+⇒ #<derivation /gnu/store/psd31x1fq0v2g594z217mh56xzg21dym-inkscape-0.92.4.drv => /gnu/store/zz28ckjwfxwkx3gsm8sc452kmvfiky6y-inkscape-0.92.4 7f6c90ad4f50>
+```
+
+Lowering includes dealing with grafts, and
 that’s why we ended up with one-by-one inefficiencies.  An option would
 be to make all the API “plural”: have `package-derivation` and its
 friends accept a _list_ of packages instead of a single one.  That would
@@ -246,8 +271,9 @@ What we see above is first a build plan that downloads binaries for the
 two ungrafted packages, followed by a build plan for one grafting
 derivations: we have successfully preserved parallelism.
 
-The solution is not as principled as the excellent decomposition the _à
-la Carte_ paper proposes.  It remains an approximation and not the
+The solution resembles the `suspending` scheduler discussed in the _à
+la Carte_ paper, though decomposition is not as principled as what the
+paper describes.  It remains an approximation and not the
 optimal way to deal with dynamic dependencies.  There are still
 situations [where that shows](https://issues.guix.gnu.org/issue/40612),
 but overall, it’s a significant improvement.  Unlike [other solutions
@@ -286,8 +312,8 @@ welcome ideas!
 # Dynamic dependencies of all shapes
 
 We have seen how Guix deals with dynamic dependencies.  Nix supports a
-similar but limited form of dynamic dependencies (contrary to what
-_Build Systems à la Carte_ says) through the `import` primitive of the
+similar but limited form of dynamic dependencies through
+the `import` primitive of the
 Nix language, [which can take the result of a derivation
 build](https://github.com/NixOS/nix/blob/master/src/libexpr/primops.cc#L74);
 it does not attempt to gather the resulting `buildPaths` calls.
@@ -306,9 +332,11 @@ Another form of dynamic dependency is _derivation-building derivations_
 or _recursive derivations_, which were [recently implemented in
 Nix](https://github.com/NixOS/nix/pull/3205).  It supports another form
 of dynamic dependency where the build process of a derivation can itself
-create and build derivations.  It’s a great feature because in a
-nutshell, it allows Nix to be used not only to compose packages, but
-also at a finer grain as part of a package build process.
+create and build derivations (these are [_moldable
+tasks_](https://en.wikipedia.org/wiki/Parallel_task_scheduling_problem)
+in scheduling parlance).  It’s a great feature because in a nutshell, it
+allows Nix to be used not only to compose packages, but also at a finer
+grain as part of a package build process.
 
 Guix supports yet another form of dynamic dependencies.  The newfangled
 [`guix deploy`
@@ -326,10 +354,20 @@ along with all its dependencies on that target machine, runs it, and
 retrieves the result.  This form of dynamic dependency also benefits
 from the gathering machinery discussed above.
 
-# Conclusions
+# Conclusion
 
 This is a long article on what may look like a fine point of Guix design
-and implementation, but there’s so much to say about it!  Indeed, it
-took time to reach the current implementation.  Grafts are key to the
-use of functional deployment in production because they enable for
-security updates.
+and implementation, but there’s much to say about it!  Grafts are key to
+the use of functional deployment in production because they enable quick
+security updates, and it’s a lot better if they don’t harm the user
+experience.
+
+The pre-1.1.0 implementation of grafts had a negative impact on the user
+interface and on performance, which was due to the sequential handling
+of grafts, one package at a time.  In 1.1.0 we addressed it by using
+delimited continuations to gather dynamic dependencies such as grafts,
+perform builds in bulk, and resume each derivation computation.
+
+As it turned out, the implementation of dynamic dependencies raises lots
+of interesting design and implementation issues, and it’s probably not
+the end of the road!

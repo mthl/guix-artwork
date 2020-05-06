@@ -1,7 +1,8 @@
 title: Grafts, continued
+date: 2020-05-06 15:00
 author: Ludovic Courtès
-tags: Functional programming, Scheme API
---
+tags: Functional programming, Scheme API, Security updates
+---
 
 Guix includes a mechanism called _grafts_ that allows us to provide
 users with [security
@@ -175,11 +176,13 @@ returns its derivation:
 
 (package-derivation s coreutils)
 ⇒ #<derivation /gnu/store/rpfdbax1py483m9ydhvp73s7dgmn6xh4-coreutils-8.31.drv => /gnu/store/jkj7wxybgcpdamkl6fz7wwbb1ak5wxvk-coreutils-8.31-debug /gnu/store/zibwkb5xavnv6z3gzknfqjsxb9b0izh0-coreutils-8.31 7f6c92e3a000>
+
 (package-derivation s coreutils #:graft? #f)
 ⇒ #<derivation /gnu/store/rpfdbax1py483m9ydhvp73s7dgmn6xh4-coreutils-8.31.drv => /gnu/store/jkj7wxybgcpdamkl6fz7wwbb1ak5wxvk-coreutils-8.31-debug /gnu/store/zibwkb5xavnv6z3gzknfqjsxb9b0izh0-coreutils-8.31 7f6c92e3a000>
 
 (package-derivation s inkscape)
 ⇒ #<derivation /gnu/store/jzm2zsq8m0rj8wdsmikc0p2ik0cprrcf-inkscape-0.92.4.drv => /gnu/store/clj8rjnsip8a35hyd9nf4l65w7ahn0gs-inkscape-0.92.4 7f6c9c15b730>
+
 (package-derivation s inkscape #:graft? #f)
 ⇒ #<derivation /gnu/store/psd31x1fq0v2g594z217mh56xzg21dym-inkscape-0.92.4.drv => /gnu/store/zz28ckjwfxwkx3gsm8sc452kmvfiky6y-inkscape-0.92.4 7f6c90ad4f50>
 ```

@@ -154,7 +154,7 @@ To address this, all these individual dynamic dependencies need to be
 gathered somehow instead of being treated one by one.  Conceptually, we
 would like to, roughly, do a first pass lowering packages to derivations
 as if grafting was disabled, build all these derivations, and then do a
-second pass determine which packages in the graph need to be grafted and
+second pass to determine which packages in the graph need to be grafted and
 to compute the relevant grafting derivation.  That would address the
 performance issue: we’d now have as much parallelism as possible, so we
 wouldn’t query substitutes or build packages one by one.  If we reify

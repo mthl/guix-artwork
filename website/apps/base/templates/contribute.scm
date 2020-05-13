@@ -136,13 +136,13 @@
 	 (a (@ (href ,(guix-url "packages/")))
 	    "package database")
 	 " for a list of available packages, and the "
-	 (a (@ (href "//bugs.gnu.org/guix-patches"))
+	 (a (@ (href "//issues.guix.gnu.org/search?query=tag%3Apatch+is%3Aopen"))
 	    "patch-tracking database")
 	 " for a list of pending submissions.")
 	(p
 	 ,(link-more
 	   #:label "Send a new package"
-	   #:url "https://lists.gnu.org/mailman/listinfo/guix-patches")))
+	   #:url "https://issues.guix.gnu.org")))
 
 
        (div
@@ -201,7 +201,11 @@
 	(h3 (@ (id "testing")) "Test and Bug Reports")
 	(p
 	 "Install the software and send feedback to the community
-         about your experience. Help the project by reporting bugs.")
+         about your experience. Help the project by reporting bugs. "
+         "You can also get started by "
+         (a (@ (href "https://issues.guix.gnu.org/easy"))
+            "picking an “easy” bug")
+         " to work on.")
 	(p
 	 "Before reporting a bug, please check whether the bug is
          already "
@@ -214,7 +218,7 @@
 	(p
 	 ,(link-more
 	   #:label "Report a bug"
-	   #:url "https://lists.gnu.org/mailman/listinfo/bug-guix")))
+	   #:url "https://issues.guix.gnu.org")))
 
 
        (div

@@ -58,7 +58,7 @@ there is no need to graft it.
 But how do we know whether a dependency is a built-time-only dependency?
 The [`native-inputs`
 field](https://guix.gnu.org/manual/en/html_node/package-Reference.html#index-package)
-of a package usually lists build-time dependencies, but it’s more of
+of a package usually lists build-time dependencies, but it’s more of a
 hint.  Ultimately, the set of run-time dependencies, which we call the
 _references_, is the subset of the build-time dependencies that the
 garbage collector (GC) in the build daemon finds _in the build
@@ -351,7 +351,7 @@ runs code on the remote node to perform sanity checks: checking whether
 the declared file system UUIDs or labels are valid, checking whether
 additional kernel modules should be added to the initial RAM disk, and
 so forth.  To do that,
-[`remove-eval`](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/remote.scm#n109)
+[`remote-eval`](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/remote.scm#n109)
 first builds a derivation that produces a Scheme program, deploys it
 along with all its dependencies on that target machine, runs it, and
 retrieves the result.  This form of dynamic dependency also benefits

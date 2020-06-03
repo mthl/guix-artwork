@@ -43,6 +43,7 @@
   #:use-module (guix download)
   #:use-module (guix git-download)
   #:use-module (guix svn-download)
+  #:use-module (guix hg-download)
   #:use-module (guix utils)                       ;location
   #:use-module ((guix build download) #:select (maybe-expand-mirrors))
   #:use-module (json)
@@ -102,11 +103,17 @@
          (append-map (cut maybe-expand-mirrors <> %mirrors)
                      (map string->uri urls))))
 
-  `((type . ,(cond ((eq? url-fetch method) 'url)
+  `((type . ,(cond ((or (eq? url-fetch method)
+                        (eq? url-fetch/tarbomb method)
+                        (eq? url-fetch/zipbomb method)) 'url)
                    ((eq? git-fetch method) 'git)
-                   ((eq? svn-fetch method) 'svn)
+                   ((or (eq? svn-fetch method)
+                        (eq? svn-multi-fetch method)) 'svn)
+                   ((eq? hg-fetch method) 'hg)
                    (else                   #nil)))
-    ,@(cond ((eq? url-fetch method)
+    ,@(cond ((or (eq? url-fetch method)
+                 (eq? url-fetch/tarbomb method)
+                 (eq? url-fetch/zipbomb method))
              `(("url" . ,(list->vector
                           (resolve
                            (match uri
@@ -116,13 +123,22 @@
              `(("git_url" . ,(git-reference-url uri))))
             ((eq? svn-fetch method)
              `(("svn_url" . ,(svn-reference-url uri))))
+            ((eq? svn-multi-fetch method)
+             `(("svn_url" . ,(svn-multi-reference-url uri))))
+            ((eq? hg-fetch method)
+             `(("hg_url" . ,(hg-reference-url uri))))
             (else '()))
     ,@(if (eq? method git-fetch)
           `(("git_ref" . ,(git-reference-commit uri)))
           '())
     ,@(if (eq? method svn-fetch)
-          `(("svn_revision" . ,(svn-reference-revision
-                                uri)))
+          `(("svn_revision" . ,(svn-reference-revision uri)))
+          '())
+    ,@(if (eq? method svn-multi-fetch)
+          `(("svn_revision" . ,(svn-multi-reference-revision uri)))
+          '())
+    ,@(if (eq? method hg-fetch)
+          `(("hg_changeset" . ,(hg-reference-changeset uri)))
           '())))
 
 (define (packages-json-builder)

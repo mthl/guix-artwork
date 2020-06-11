@@ -41,11 +41,10 @@
            (sort (parameterize ((%package-module-path (last-pair
                                                        (%package-module-path))))
                    (fold-packages (lambda (package lst)
-                                    (if (package-superseded package)
+                                    (if (or (package-superseded package)
+                                            (package-replacement package))
                                         lst
-                                        (cons (or (package-replacement package)
-                                                  package)
-                                              lst)))
+                                        (cons package lst)))
                                   '()))
                  (lambda (p1 p2)
                    (string<? (package-name p1)

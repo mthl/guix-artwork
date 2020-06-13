@@ -158,7 +158,7 @@ het Nederlands.")
     #:description
     '(p
       "Private mailing list for the "
-      (a (@ (href "https://hydra.gnu.org/")) "build farm")
+      (a (@ (href "https://ci.guix.gnu.org/")) "build farm")
       " system administration.")
     #:url "https://lists.gnu.org/mailman/listinfo/guix-sysadmin"
     #:log "")

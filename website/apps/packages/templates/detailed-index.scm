@@ -44,10 +44,10 @@ packages to advertise."
 	 (@ (class "limit-width centered-block"))
 	 "GNU Guix provides " ,(number* (or total (length packages)))
 	 " packages transparently "
-	 (a (@ (href "https://hydra.gnu.org/jobset/gnu/master#tabs-status"))
+	 (a (@ (href "https://ci.guix.gnu.org/jobset/guix-master"))
 	    "available as pre-built binaries")
 	 ". These pages provide a complete list of the packages.  Our "
-	 (a (@ (href "https://hydra.gnu.org/jobset/gnu/master"))
+	 (a (@ (href "https://ci.guix.gnu.org/jobset/guix-master"))
 	    "continuous integration system")
 	 " shows their current build status "
 	 "(updated " ,(date->string (current-date) "~B ~e, ~Y") ").")

@@ -256,7 +256,7 @@
      If the list of supported systems of the package is empty, return
      the string 'None'. Otherwise, return a list of links to systems
      builds in hydra."
-  (let ((build-url "https://hydra.gnu.org/job/gnu/master/")
+  (let ((build-url "https://ci.guix.gnu.org/job/gnu/master/")
 	(package-id (string-append (package-name package)
 				   "-"
 				   (package-version package)))
@@ -266,12 +266,7 @@
                   (package-transitive-supported-systems package))))
     (if (null? systems)
 	"None"
-	(separate
-	 (map (lambda (system)
-		(link-subtle #:label system
-			     #:url (string-append build-url
-						  package-id
-						  "."
-						  system)))
-	      systems)
-	 ", "))))
+        ;; TODO: There's currently no way to refer to a job like
+        ;; 'coreutils-8.32' in the Cuirass web UI.  Add such a link once it's
+        ;; become available.
+	(separate systems ", "))))

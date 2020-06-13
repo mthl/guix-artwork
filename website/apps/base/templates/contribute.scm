@@ -189,7 +189,7 @@
 	 (a (@ (href ,(guix-url "donate/")))
 	    "donate hardware or hosting")
 	 " for our "
-	 (a (@ (href "https://hydra.gnu.org")) "build farm") ".  ")
+	 (a (@ (href "https://ci.guix.gnu.org")) "build farm") ".  ")
 	(p
 	 ,(link-more
 	   #:label "Contribute"

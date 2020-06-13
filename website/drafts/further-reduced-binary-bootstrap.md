@@ -21,12 +21,16 @@ and at [FOSDEM2020](https://fosdem.org/2020) I also gave [a short talk
 
 #### Further Reduced Binary Seed bootstrap
 
-Last year, the first reduction removed the gcc, glibc and binutils
-binary seeds; the new _Further Reduced Binary Seed_ bootstrap removes
-the static-binaries tarball (a.k.a. `%bootstrap-coreutils&co`)
+Last year, the first reduction removed the GCC, glibc and Binutils
+binary seeds.  The new _Further Reduced Binary Seed_ bootstrap, merged
+in Guix `master` last month, removes the “static-binaries tarball”
 containing GNU Awk, Bash, Bzip2, the GNU Core Utilities, Grep, Gzip,
-GNU Make, Patch, sed, Tar, and XZ; and replaces them by [Gash and Gash
-Utils](https://savannah.nongnu.org/projects/gash).
+GNU Make, Patch, sed, Tar, and Xz.  It replaces them by [Gash and Gash
+Core Utils](https://savannah.nongnu.org/projects/gash).  Gash is a
+minimalist POSIX shell written in Guile Scheme, while Gash Core Utils
+is a Scheme implementation for most of the tools found in
+GNU Coreutils, as well as the most essential bits of Awk, grep and
+sed.
 
 After three new [GNU Mes](https://gnu.org/s/mes) releases with
 numerous Mes C Library updates and fixes, a major update of Gash and

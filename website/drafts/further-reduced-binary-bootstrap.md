@@ -1,5 +1,5 @@
 title: Guix Further Reduces Bootstrap Seed to 25%
-date: 2020-06-15 00:00
+date: 2020-06-15 12:00
 author: Jan Nieuwenhuizen
 tags: Bootstrapping, Reproducible builds, Trust
 ---
@@ -7,7 +7,7 @@ We are delighted to announce that the second reduction by 50% of the
 Guix _bootstrap binaries_ has now been officially released!
 
 The initial set of binaries from which packages are built now weighs
-in at approximately 60 MB, a quarter of what it used to be.
+in at approximately 60~MiB, a quarter of what it used to be.
 
 In [a previous blog
 post](https://guix.gnu.org/blog/2019/guix-reduces-bootstrap-seed-by-50/)
@@ -46,38 +46,38 @@ versions](https://bugs.gnu.org/38390), the bottom of the package graph
 now looks like this (woohoo!):
 
 ```
-                        gcc-mesboot (4.9.4)
-                                ^
-                                |
-                              (...)
-                                ^
-                                |
-         binutils-mesboot (2.14), glibc-mesboot (2.2.5),
-                    gcc-core-mesboot (2.95.3)
-                                ^
-                                |
-      bash-mesboot (2.05), bzip2-mesboot, gawk-mesboot (3.0.0)
-        diffutils-mesboot, patch-mesboot, sed-mesboot (1.18)
-                                ^
-                                |
-                       gnu-make-mesboot (3.82)
-                                ^
-                                |
-                          gzip-mesboot
-                                ^
-                                |
-                            tcc-boot
-                                ^
-                                |
-                            mes-boot
-                                ^
-                                |
-                    gash-boot, gash-utils-boot
-                                ^
-                                |
-                                *
-           bootstrap-mescc-tools, bootstrap-mes (~12MB)
-                      bootstrap-guile (~48MB)
+                              gcc-mesboot (4.9.4)
+                                      ^
+                                      |
+                                    (...)
+                                      ^
+                                      |
+               binutils-mesboot (2.14), glibc-mesboot (2.2.5),
+                          gcc-core-mesboot (2.95.3)
+                                      ^
+                                      |
+            bash-mesboot (2.05), bzip2-mesboot, gawk-mesboot (3.0.0)
+       diffutils-mesboot (2.7), patch-mesboot (2.5.9), sed-mesboot (1.18)
+                                      ^
+                                      |
+                             gnu-make-mesboot (3.82)
+                                      ^
+                                      |
+                                gzip-mesboot (1.2.4)
+                                      ^
+                                      |
+                                  tcc-boot
+                                      ^
+                                      |
+                                  mes-boot
+                                      ^
+                                      |
+                          gash-boot, gash-utils-boot
+                                      ^
+                                      |
+                                      *
+                 bootstrap-mescc-tools, bootstrap-mes (~12 MiB)
+                            bootstrap-guile (~48 MiB)
 ```
 [full graph](../../../static/blog/img/gcc-core-mesboot0-graph.svg)
 
@@ -88,15 +88,22 @@ However, we aren't done yet; far from it.
 
 ### Lost Paths
 
-Readers who are familiar with the GNU toolchain may have noticed
-the version numbers of the ``*-mesboot`` source packages in this
-great new bootstrap: they are ancient!  That's a problem.
+The idea of reproducible builds and bootstrappable software [is not
+very
+new](https://lists.reproducible-builds.org/pipermail/rb-general/2017-January/000309.html).
+Much of that was implemented for the GNU tools in the early 1990s.
+Working to recreate it in present time shows us much of that practice
+was forgotten.
+
+Readers who are familiar with the GNU toolchain may have
+noticed the version numbers of the ``*-mesboot`` source packages in
+this great new bootstrap: They are ancient!  That's a problem.
 
 Typically, newer versions of the tool chain fix all kinds of bugs,
 make the software easier to build and add support for new CPU
 architectures, which is great.  However---more often than not---
 simultaneously new features are introduced or dependencies are added
-that are not necessary for bootstrapping, but may increase the
+that are not necessary for bootstrapping and may increase the
 bootstrap hurdle.  Sometimes, newer tools are more strict or old
 configure scripts do not recognise newer tool versions.
 
@@ -107,15 +114,18 @@ releases ship as `xz`-compressed tarballs only, and `xz` is
 notoriously difficult to bootstrap (it needs a fairly recent GCC and
 try building that without sed).
 
-Luckily, the sed maintainers (Jim Meyering) were happy to correct this
-mistake and starting from release
+Luckily, the sed maintainers (Jim Meyering) [were happy to
+correct](https://lists.gnu.org/archive/html/sed-devel/2020-01/msg00016.html)
+this mistake and starting from release
 [sed-4.8](http://ftp.gnu.org/pub/gnu/sed/sed-4.8.tar.gz) (2020) also
 `gzip`-compressed tarballs will be shipped.  Similar for the GNU Core
-Utils: releases made between 2011 and 2019 will probably be useless
+Utils: Releases made between 2011 and 2019 will probably be useless
 for bootstrapping.  Confronted with this information, also the
-coreutils maintainers (Pádraig Brady) were happy to release
+coreutils maintainers (Pádraig Brady) [were happy
+to](https://lists.gnu.org/archive/html/coreutils/2020-02/msg00043.html)
+release
 [coreutils-8.32](http://ftp.gnu.org/pub/gnu/coreutils/coreutils-8.32.tar.gz)
-also in `gzip' compression from now on.
+also in `gzip` compression from now on.
 
 Even these simple cases show that solving bootstrap problems can only
 be done together: For GNU it really is a project-wide responsibility
@@ -136,8 +146,8 @@ sometimes there are no obvious answers, for example:
 
 and while these examples make for a delightful puzzle from a
 bootstrappability perspective, we would love to see the maintainers of
-GNU softwares to start taking more responsibility for the bootstrap
-story of their packages.
+GNU softwares to consider bootstrappability and start taking more
+responsibility for the bootstrap story of their packages.
 
 #### Towards a Universal, Full Source Bootstrap
 
@@ -208,7 +218,7 @@ entire Guix System for i686-linux and x86_64-linux.
 
 #### About GNU Guix
 
-[GNU Guix](https://www.gnu.org/software/guix) is a transactional package
+[GNU Guix](https://guix.gnu.org) is a transactional package
 manager and an advanced distribution of the GNU system that [respects
 user
 freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).

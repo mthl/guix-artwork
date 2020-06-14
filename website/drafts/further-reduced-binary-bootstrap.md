@@ -1,7 +1,7 @@
 title: Guix Further Reduces Bootstrap Seed to 25%
 date: 2020-06-15 00:00
 author: Jan Nieuwenhuizen
-tags: Bootstrapping, Reproducible builds
+tags: Bootstrapping, Reproducible builds, Trust
 ---
 We are delighted to announce that the second reduction by 50% of the
 Guix _bootstrap binaries_ has now been officially released!
@@ -12,12 +12,18 @@ in at approximately 60 MB, a quarter of what it used to be.
 In [a previous blog
 post](https://guix.gnu.org/blog/2019/guix-reduces-bootstrap-seed-by-50/)
 we elaborate on why this reduction and bootstrappability in general is
-so important.  Last summer at the [Breaking Bitcoin
+so important.  One reason is to eliminate---or greatly reduce the
+attack surface of---a [“trusting
+trust”](https://www.archive.ece.cmu.edu/~ganger/712.fall02/papers/p761-thompson.pdf)
+attack.  Last summer at the [Breaking Bitcoin
 conference](https://breaking-bitcoin.com), Carl Dong gave a [fun and
 remarkably gentle
 introduction](http://diyhpl.us/wiki/transcripts/breaking-bitcoin/2019/bitcoin-build-system)
 and at [FOSDEM2020](https://fosdem.org/2020) I also gave [a short talk
-](https://fosdem.org/2020/schedule/event/gnumes/) about this.
+](https://fosdem.org/2020/schedule/event/gnumes/) about this.  If you
+choose to believe that building from source is the proper way to do
+computing, then it follows that the “trusting trust” attack is only a
+symptom of an incomplete or missing bootstrap story.
 
 #### Further Reduced Binary Seed bootstrap
 
@@ -133,7 +139,7 @@ bootstrappability perspective, we would love to see the maintainers of
 GNU softwares to start taking more responsibility for the bootstrap
 story of their packages.
 
-#### Towards a Full Source Bootstrap
+#### Towards a Universal, Full Source Bootstrap
 
 Our next target will be a third reduction by ~50%; the Full-Source
 bootstrap will replace the MesCC-Tools and GNU Mes binaries by
@@ -144,17 +150,31 @@ The Stage0 project by Jeremiah Orians starts everything from ~512
 bytes; virtually nothing.  Have a look at this incredible project if
 you haven’t already done so.
 
-We are grateful and excited that the [Nlnet
+We are most grateful and excited that the [Nlnet
 Foundation](https://nlnet.nl) has [again decided to sponsor this
-work](https://nlnet.nl/project/https://nlnet.nl/project/GNUMes-fullsource/).
+work](https://nlnet.nl/project/https://nlnet.nl/project/GNUMes-fullsource/)!
 
-@Danny: Could you say some words on bringing the reduced binary seed
-bootstrap to ARM/AARCH64?
+While the reduced bootstrap currently only applies to the i686-linux
+and x86_64-linux architectures, we are thrilled that ARM will be
+joining soon.  The [Trusted ARM bootstrapping
+work](https://nlnet.nl/project/GNUMes-arm/) is progressing nicely, and
+GNU Mes is now passing its entire mescc test suite on native ARMv7,
+and passing nigh its entire gcc test suite on native ARMv7.  Work is
+underway to compile tcc using that GNU Mes.  Adding this second
+architecture is a very important one towards the creation of a
+universal bootstrap!
 
-[Trusted ARM bootstrap](https://nlnet.nl/project/GNUMes-arm/)
+Upcoming releases of Gash and Gash-Utils will allow us to clean up the
+bottom of the package graph and remove many of the “vintage” packages.
+In particular, the next version of Gash-Utils will be sophisticated
+enough to build everything up to `gcc-mesboot` using only old versions
+of GNU Make and Gzip.  This is largely thanks to improvements to the
+implementation of Awk, which now includes nearly all of the standard
+features.
 
-@Timothy: could you add some words on Gash / Gash Utils0.3: enabling
-the removal of ancient tools like sed-1.18 or so?
+Looking even further into the future, we will likely have to remove
+the “vintage” GCC-2.95.3 that was such a helpful stepping stone and
+reach straight for GCC-4.6.4.  Interesting times ahead!
 
 #### About Bootstrappable Builds and GNU Mes
 

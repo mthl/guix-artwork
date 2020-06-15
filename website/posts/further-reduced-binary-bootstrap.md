@@ -1,6 +1,6 @@
 title: Guix Further Reduces Bootstrap Seed to 25%
 date: 2020-06-15 12:00
-author: Jan Nieuwenhuizen
+author: Jan (janneke) Nieuwenhuizen
 tags: Bootstrapping, Reproducible builds, Trust
 ---
 We are delighted to announce that the second reduction by 50% of the

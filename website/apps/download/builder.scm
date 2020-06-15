@@ -4,6 +4,7 @@
 
 (define-module (apps download builder)
   #:use-module (apps download templates download)
+  #:use-module (apps download templates download-latest)
   #:use-module (apps download data)
   #:use-module (haunt html)
   #:use-module (haunt page)
@@ -30,13 +31,16 @@
    RETURN (list of <page>)
      A list of page objects that represent the web resources of the
      application. See Haunt <page> objects for more information."
-  (list (download-builder)))
+  (list (download-builder)
+        (download-latest-builder)))
 
 
 
 ;;;
 ;;; Helper builders.
 ;;;
+(define (download-latest-builder)
+  (make-page "download/latest/index.html" (download-latest-t) sxml->html))
 
 (define (download-builder)
   "Return a Haunt page representing the Download page of the website."

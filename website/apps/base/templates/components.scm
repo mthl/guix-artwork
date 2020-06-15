@@ -290,7 +290,17 @@
      (h2 (@ (class "a11y-offset")) "Website menu:")
      (ul
       ,(menu-item #:label "Overview" #:active-item active-item #:url (guix-url))
-      ,(menu-item #:label "Download" #:active-item active-item #:url (guix-url "download/"))
+
+      ,(menu-dropdown #:label "Download"
+                      #:active-item active-item
+                      #:items
+                      (list
+                       (menu-item #:label "Stable"
+                                  #:active-item active-item
+                                  #:url (guix-url "download/"))
+                       (menu-item #:label "Latest"
+                                  #:active-item active-item
+                                  #:url (guix-url "download/latest/"))))
       ,(menu-item #:label "Packages" #:active-item active-item #:url (guix-url "packages/"))
       ,(menu-item #:label "Blog" #:active-item active-item #:url (guix-url "blog/"))
 

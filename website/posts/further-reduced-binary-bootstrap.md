@@ -162,7 +162,7 @@ you haven’t already done so.
 
 We are most grateful and excited that the [Nlnet
 Foundation](https://nlnet.nl) has [again decided to sponsor this
-work](https://nlnet.nl/project/https://nlnet.nl/project/GNUMes-fullsource/)!
+work](https://nlnet.nl/project/GNUMes-fullsource/)!
 
 While the reduced bootstrap currently only applies to the i686-linux
 and x86_64-linux architectures, we are thrilled that ARM will be

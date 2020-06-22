@@ -32,11 +32,12 @@
 (define default-spec "guix-master")
 
 (define-record-type <image>
-  (make-image description logo job type)
+  (make-image description logo job system type)
   image?
   (description image-description)   ;string
   (logo        image-logo)          ;string
   (job         image-job)           ;string
+  (system      image-system)
   (type        image-type))         ;string
 
 (define images
@@ -44,25 +45,27 @@
          "GNU Guix System ISO-9660 image for x86_64"
          (guix-url "static/base/img/GuixSD-package.png")
          "iso9660-image"
+         "x86_64-linux"
          "ISO-9660")))
 
-(define (build-query job)
-  (format #f "query=spec:~a+status:success+system:x86_64-linux+~a"
-          default-spec job))
+(define (build-query job system)
+  (format #f "query=spec:~a+status:success+system:~a+~a"
+          default-spec system job))
 
-(define (build-detail-url job)
+(define (build-detail-url job system)
   "Return the detail page for BUILD hosted on CI server at URL."
-  (format #f  "~a/search/latest?~a" ci-url (build-query job)))
+  (format #f  "~a/search/latest?~a" ci-url (build-query job system)))
 
-(define (build-product-download-url job type)
+(define (build-product-download-url job system type)
   "Return a download URL for BUILD-PRODUCT hosted on CI server at URL."
   (format #f  "~a/search/latest/~a?~a"
-          ci-url type (build-query job)))
+          ci-url type (build-query job system)))
 
 (define (image-table-row image)
   "Return as an HTML table row, the representation of IMAGE."
   (let* ((description (image-description image))
          (job (image-job image))
+         (system (image-system image))
          (type (image-type image))
          (logo (image-logo image)))
     `(tr
@@ -78,9 +81,9 @@
            (@ (class "download-table-box"))
            (h3 ,description))))))
       (td
-       (a (@ (href ,(build-product-download-url job type))) "Download")
+       (a (@ (href ,(build-product-download-url job system type))) "Download")
        " "
-       (a (@ (href ,(build-detail-url job))) "(details)")))))
+       (a (@ (href ,(build-detail-url job system))) "(details)")))))
 
 (define (download-latest-t)
   "Return the Download latest page in SHTML."

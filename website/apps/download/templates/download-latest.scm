@@ -29,6 +29,7 @@
   #:export (download-latest-t))
 
 (define ci-url "https://ci.guix.gnu.org")
+(define default-spec "guix-master")
 
 (define-record-type <image>
   (make-image description logo job type)
@@ -45,60 +46,21 @@
          "iso9660-image.x86_64-linux"
          "ISO-9660")))
 
-(define (build-detail-url url build)
+(define (build-detail-url job)
   "Return the detail page for BUILD hosted on CI server at URL."
-  (format #f "~a/build/~a/details" url (build-id build)))
+  (format #f  "~a/search/latest?query=spec:~a+~a" ci-url default-spec job))
 
-(define (build-product-download-url url build-product)
+(define (build-product-download-url job type)
   "Return a download URL for BUILD-PRODUCT hosted on CI server at URL."
-  (string-append url "/download/" (number->string
-                                   (build-product-id build-product))))
-(define* (products-latest-urls job type
-                               #:optional (limit 15)
-                               #:key url)
-  "Fetch the latest LIMIT jobs from URL matching the given JOB. Then, for the
-first job with a build output of the given TYPE, return '(DETAIL-URL
-. DOWNLOAD-URL), where DETAIL-URL is the URL describing the matching build in
-the CI, and DOWNLOAD-URL is the URL to download the build output. If no
-matching jobs are found, return an empty list."
-  ;; See build-status enumeration in (cuirass database).
-  (define build-status-success 0)
-
-  (define (find-product-by-type build-products type)
-    (find (lambda (build-product)
-            (string=? (build-product-type build-product) type))
-          build-products))
-
-  (define (latest-build-products)
-    (let ((builds
-           (latest-builds url limit
-                          #:job job
-                          #:status build-status-success)))
-      (filter-map
-       (lambda (build)
-         (let ((products (build-products build)))
-           (match products
-             (() #f)
-             (x (let ((product
-                       (find-product-by-type products type)))
-                  (and product
-                       (cons build product)))))))
-       builds)))
-
-  (match (latest-build-products)
-    (((build . product) . rest)
-     (cons
-      (build-detail-url url build)
-      (build-product-download-url url product)))
-    (_ '())))
+  (format #f  "~a/search/latest/~a?query=spec:~a+~a"
+          ci-url type default-spec job))
 
 (define (image-table-row image)
   "Return as an HTML table row, the representation of IMAGE."
   (let* ((description (image-description image))
          (job (image-job image))
          (type (image-type image))
-         (logo (image-logo image))
-         (urls (products-latest-urls job type #:url ci-url)))
+         (logo (image-logo image)))
     `(tr
       (td
        (table
@@ -111,14 +73,10 @@ matching jobs are found, return an empty list."
           (td
            (@ (class "download-table-box"))
            (h3 ,description))))))
-      ,(if (null? urls)
-           '(td "No available image")
-           (match urls
-             ((detail-url . download-url)
-              `(td
-                (a (@ (href ,download-url)) "Download")
-                " "
-                (a (@ (href ,detail-url)) "(details)"))))))))
+      (td
+       (a (@ (href ,(build-product-download-url job type))) "Download")
+       " "
+       (a (@ (href ,(build-detail-url job))) "(details)")))))
 
 (define (download-latest-t)
   "Return the Download latest page in SHTML."

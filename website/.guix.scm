@@ -60,10 +60,10 @@
 (define build
   ;; We need Guile-JSON for 'packages-json-builder'.
   (with-extensions (append (package+propagated-inputs
-                            (specification->package "guile3.0-json@3"))
+                            (specification->package "guile-json"))
 
                            (package+propagated-inputs
-                            (specification->package "guile3.0-syntax-highlight")))
+                            (specification->package "guile-syntax-highlight")))
     (with-imported-modules (source-module-closure
                             '((guix build utils)))
       #~(begin
@@ -106,7 +106,7 @@
           (setenv "XDG_CACHE_HOME" "/tmp/.cache")
 
           (format #t "Running 'haunt build'...~%")
-          (invoke #+(file-append (specification->package "guile3.0-haunt")
+          (invoke #+(file-append (specification->package "haunt")
                                  "/bin/haunt")
                   "build")
 
@@ -116,7 +116,7 @@
           (symlink "guix.html" (string-append #$output "/index.html"))))))
 
 (computed-file "guix-web-site" build
-               #:guile (specification->package "guile-next@3")
+               #:guile (specification->package "guile")
                #:options '(#:effective-version "3.0"))
 
 ;; Local Variables:

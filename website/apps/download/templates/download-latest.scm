@@ -43,17 +43,21 @@
   (list (make-image
          "GNU Guix System ISO-9660 image for x86_64"
          (guix-url "static/base/img/GuixSD-package.png")
-         "iso9660-image.x86_64-linux"
+         "iso9660-image"
          "ISO-9660")))
+
+(define (build-query job)
+  (format #f "query=spec:~a+status:success+system:x86_64-linux+~a"
+          default-spec job))
 
 (define (build-detail-url job)
   "Return the detail page for BUILD hosted on CI server at URL."
-  (format #f  "~a/search/latest?query=spec:~a+~a" ci-url default-spec job))
+  (format #f  "~a/search/latest?~a" ci-url (build-query job)))
 
 (define (build-product-download-url job type)
   "Return a download URL for BUILD-PRODUCT hosted on CI server at URL."
-  (format #f  "~a/search/latest/~a?query=spec:~a+~a"
-          ci-url type default-spec job))
+  (format #f  "~a/search/latest/~a?~a"
+          ci-url type (build-query job)))
 
 (define (image-table-row image)
   "Return as an HTML table row, the representation of IMAGE."

@@ -128,7 +128,7 @@
           (symlink "guix.html" (string-append #$output "/index.html"))))))
 
 (computed-file "guix-web-site" build
-               #:guile (specification->package "guile")
+               #:guile guile-3.0/libgc-7
                #:options '(#:effective-version "3.0"))
 
 ;; Local Variables:

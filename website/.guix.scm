@@ -19,10 +19,13 @@
 ;; Run 'guix build -f .guix.scm' to build the web site.
 
 (use-modules (guix) (gnu)
+             (gnu packages guile)
+             (gnu packages guile-xyz)
              (guix modules)
              (guix git-download)
              (guix gexp)
              (guix channels)
+             (srfi srfi-1)
              (srfi srfi-9)
              (ice-9 match))
 
@@ -56,6 +59,16 @@
   ;; The latest Guix.  Using it rather than the 'guix' package ensures we
   ;; build the latest package list.
   (latest-channels %default-channels))
+
+;; Remove on the next rebuild cycle when Haunt will be built with Guile
+;; 3.0.3. Until then, this is needed to avoid a discrepancy when running Haunt
+;; with Guile 3.0.2 but loading Guix modules built for Guile 3.0.3.
+(define haunt-with-guile-3.0.3
+  (package
+    (inherit haunt)
+    (inputs
+     `(("guile" ,guile-3.0/libgc-7)
+       ,@(alist-delete "guile" (package-inputs haunt))))))
 
 (define build
   ;; We need Guile-JSON for 'packages-json-builder'.
@@ -106,8 +119,7 @@
           (setenv "XDG_CACHE_HOME" "/tmp/.cache")
 
           (format #t "Running 'haunt build'...~%")
-          (invoke #+(file-append (specification->package "haunt")
-                                 "/bin/haunt")
+          (invoke #+(file-append haunt-with-guile-3.0.3 "/bin/haunt")
                   "build")
 
           (mkdir-p #$output)

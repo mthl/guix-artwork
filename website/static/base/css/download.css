@@ -29,6 +29,11 @@
     background-color: #F4BB15;
 }
 
+.detail-btn {
+    display: inline-block;
+    margin: 0px 5px;
+}
+
 .signature-btn {
     display: inline-block;
     margin: 0px 5px;

@@ -32,20 +32,22 @@
 (define default-spec "guix-master")
 
 (define-record-type <image>
-  (make-image description logo job system type)
+  (make-image title description logo job systems type)
   image?
+  (title       image-title)         ;string
   (description image-description)   ;string
   (logo        image-logo)          ;string
   (job         image-job)           ;string
-  (system      image-system)
+  (systems     image-systems)       ;list of strings
   (type        image-type))         ;string
 
 (define images
   (list (make-image
-         "GNU Guix System ISO-9660 image for x86_64"
+         "GNU Guix System"
+         "USB/DVD ISO installer of the standalone Guix System."
          (guix-url "static/base/img/GuixSD-package.png")
          "iso9660-image"
-         "x86_64-linux"
+         (list "x86_64-linux")
          "ISO-9660")))
 
 (define (build-query job system)
@@ -61,29 +63,37 @@
   (format #f  "~a/search/latest/~a?~a"
           ci-url type (build-query job system)))
 
-(define (image-table-row image)
+(define (image-download image)
   "Return as an HTML table row, the representation of IMAGE."
-  (let* ((description (image-description image))
+  (let* ((title (image-title image))
+         (description (image-description image))
          (job (image-job image))
-         (system (image-system image))
+         (systems (image-systems image))
          (type (image-type image))
          (logo (image-logo image)))
-    `(tr
-      (td
-       (table
-        (@ (class "download-table-box"))
-        (tbody
-         (tr
-          (td
-           (@ (class "download-table-box"))
-           (img (@ (src ,logo) (alt ""))))
-          (td
-           (@ (class "download-table-box"))
-           (h3 ,description))))))
-      (td
-       (a (@ (href ,(build-product-download-url job system type))) "Download")
-       " "
-       (a (@ (href ,(build-detail-url job system))) "(details)")))))
+    `(div
+      (@ (class "download-box"))
+      (img (@ (src ,logo) (alt "")))
+      (h3 ,title)
+      ,description
+      (p "Download options:")
+      ,@(map (lambda (system)
+               `(a
+                 (@ (class "download-btn")
+                    (download "")
+                    (href ,(build-product-download-url job system type)))
+                 ,system
+                 " ")) ; Force a space for readability in non-CSS browsers.
+             systems)
+      (p "Build details: "
+         ,@(map (lambda (system)
+                  `(a
+                    (@ (class "detail-btn")
+                       (download "")
+                       (href ,(build-detail-url job system)))
+                    ,system
+                    " ")) ; Force a space for readability in non-CSS browsers.
+                systems)))))
 
 (define (download-latest-t)
   "Return the Download latest page in SHTML."
@@ -117,10 +127,5 @@ integration system."
        ", you might prefer to use stable images that can be found "
        (a (@ (href ,(guix-url "download/"))) "here."))
       (div
-       (@ (class "centered-block limit-width table-box"))
-       (table
-        (thread
-         (tr (th "image")
-             (th "download")))
-        (tbody
-         ,(map image-table-row images))))))))
+       (@ (class "centered-block limit-width"))
+       ,(map image-download images))))))

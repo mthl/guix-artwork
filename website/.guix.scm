@@ -24,6 +24,7 @@
              (guix modules)
              (guix git-download)
              (guix gexp)
+             (guix inferior)
              (guix channels)
              (srfi srfi-1)
              (srfi srfi-9)
@@ -60,15 +61,22 @@
   ;; build the latest package list.
   (latest-channels %default-channels))
 
-;; Remove on the next rebuild cycle when Haunt will be built with Guile
-;; 3.0.3. Until then, this is needed to avoid a discrepancy when running Haunt
-;; with Guile 3.0.2 but loading Guix modules built for Guile 3.0.3.
-(define haunt-with-guile-3.0.3
+(define (inferior-package spec)
+  (first (lookup-inferior-packages
+          (inferior-for-channels
+           (latest-channels-channels latest-guix))
+          spec)))
+
+;; Make sure that Haunt uses the same Guile as the one from
+;; "latest-guix". Otherwise there could be a mismatch between the Guile
+;; revision used by Haunt and the one from the latest Guix modules used by
+;; Haunt.
+(define haunt-with-latest-guile
   (package
     (inherit haunt)
     (inputs
-     `(("guile" ,guile-3.0/libgc-7)
-       ,@(alist-delete "guile" (package-inputs haunt))))))
+     `(("guile" ,(inferior-package "guile"))
+       ,@(package-inputs haunt)))))
 
 (define build
   ;; We need Guile-JSON for 'packages-json-builder'.
@@ -119,7 +127,7 @@
           (setenv "XDG_CACHE_HOME" "/tmp/.cache")
 
           (format #t "Running 'haunt build'...~%")
-          (invoke #+(file-append haunt-with-guile-3.0.3 "/bin/haunt")
+          (invoke #+(file-append haunt-with-latest-guile "/bin/haunt")
                   "build")
 
           (mkdir-p #$output)
@@ -128,7 +136,7 @@
           (symlink "guix.html" (string-append #$output "/index.html"))))))
 
 (computed-file "guix-web-site" build
-               #:guile guile-3.0/libgc-7
+               #:guile (specification->package "guile")
                #:options '(#:effective-version "3.0"))
 
 ;; Local Variables:

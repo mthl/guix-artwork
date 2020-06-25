@@ -45,13 +45,21 @@
 
 (define images
   (list (make-image
-         "GNU Guix System"
-         "USB/DVD ISO installer of the standalone Guix System."
+         "GNU Guix System on Linux"
+         "USB/DVD ISO installer of the standalone Guix System on Linux."
          (guix-url "static/base/img/GuixSD-package.png")
          "iso9660-image"
          (list default-system)
          (list default-system)
-         "ISO-9660")))
+         "ISO-9660")
+        (make-image
+         "GNU Guix System on GNU Hurd"
+         "Virtual machine image of the standalone Guix System on GNU Hurd."
+         (guix-url "static/base/img/hurd.png")
+         "hurd-barebones-disk-image"
+         (list "qcow2")
+         (list default-system)
+         "image")))
 
 (define (build-query job system)
   (format #f "query=spec:~a+status:success+system:~a+~a"

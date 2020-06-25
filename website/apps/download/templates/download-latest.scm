@@ -30,14 +30,16 @@
 
 (define ci-url "https://ci.guix.gnu.org")
 (define default-spec "guix-master")
+(define default-system "x86_64-linux")
 
 (define-record-type <image>
-  (make-image title description logo job systems type)
+  (make-image title description logo job labels systems type)
   image?
   (title       image-title)         ;string
   (description image-description)   ;string
   (logo        image-logo)          ;string
   (job         image-job)           ;string
+  (labels      image-labels)        ;list of strings
   (systems     image-systems)       ;list of strings
   (type        image-type))         ;string
 
@@ -47,7 +49,8 @@
          "USB/DVD ISO installer of the standalone Guix System."
          (guix-url "static/base/img/GuixSD-package.png")
          "iso9660-image"
-         (list "x86_64-linux")
+         (list default-system)
+         (list default-system)
          "ISO-9660")))
 
 (define (build-query job system)
@@ -68,6 +71,7 @@
   (let* ((title (image-title image))
          (description (image-description image))
          (job (image-job image))
+         (labels (image-labels image))
          (systems (image-systems image))
          (type (image-type image))
          (logo (image-logo image)))
@@ -77,23 +81,23 @@
       (h3 ,title)
       ,description
       (p "Download options:")
-      ,@(map (lambda (system)
+      ,@(map (lambda (system label)
                `(a
                  (@ (class "download-btn")
                     (download "")
                     (href ,(build-product-download-url job system type)))
-                 ,system
+                 ,label
                  " ")) ; Force a space for readability in non-CSS browsers.
-             systems)
+             systems labels)
       (p "Build details: "
-         ,@(map (lambda (system)
+         ,@(map (lambda (system label)
                   `(a
                     (@ (class "detail-btn")
                        (download "")
                        (href ,(build-detail-url job system)))
-                    ,system
+                    ,label
                     " ")) ; Force a space for readability in non-CSS browsers.
-                systems)))))
+                systems labels)))))
 
 (define (download-latest-t)
   "Return the Download latest page in SHTML."

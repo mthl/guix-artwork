@@ -46,6 +46,9 @@
   #:use-module (guix hg-download)
   #:use-module (guix utils)                       ;location
   #:use-module ((guix build download) #:select (maybe-expand-mirrors))
+  #:use-module ((guix base64) #:select (base64-encode))
+  #:use-module ((guix describe) #:select (current-profile))
+  #:use-module ((guix config) #:select (%guix-version))
   #:use-module (json)
   #:use-module (ice-9 match)
   #:use-module ((web uri) #:select (string->uri uri->string))
@@ -114,11 +117,11 @@
     ,@(cond ((or (eq? url-fetch method)
                  (eq? url-fetch/tarbomb method)
                  (eq? url-fetch/zipbomb method))
-             `(("url" . ,(list->vector
-                          (resolve
-                           (match uri
-                             ((? string? url) (list url))
-                             ((urls ...) urls)))))))
+             `(("urls" . ,(list->vector
+                           (resolve
+                            (match uri
+                              ((? string? url) (list url))
+                              ((urls ...) urls)))))))
             ((eq? git-fetch method)
              `(("git_url" . ,(git-reference-url uri))))
             ((eq? svn-fetch method)
@@ -128,6 +131,16 @@
             ((eq? hg-fetch method)
              `(("hg_url" . ,(hg-reference-url uri))))
             (else '()))
+    ,@(if (or (eq? url-fetch method)
+              (eq? url-fetch/tarbomb method)
+              (eq? url-fetch/zipbomb method))
+          (let* ((content-hash (origin-hash origin))
+                 (hash-value (content-hash-value content-hash))
+                 (hash-algorithm (content-hash-algorithm content-hash))
+                 (algorithm-string (symbol->string hash-algorithm)))
+            `(("integrity" . ,(string-append algorithm-string "-"
+                                             (base64-encode hash-value)))))
+          '())
     ,@(if (eq? method git-fetch)
           `(("git_ref" . ,(git-reference-commit uri)))
           '())
@@ -174,9 +187,11 @@
              scm->json))
 
 (define (sources-json-builder)
-  "Return a JSON page listing all the sources.
-
-See <https://forge.softwareheritage.org/D2025#51269>."
+  "Return a JSON page listing all the sources."
+  ;; The Software Heritage format is described here:
+  ;; https://forge.softwareheritage.org/source/swh-loader-core/browse/master/swh/loader/package/nixguix/tests/data/https_nix-community.github.io/nixpkgs-swh_sources.json
+  ;; And the loader is implemented here:
+  ;; https://forge.softwareheritage.org/source/swh-loader-core/browse/master/swh/loader/package/nixguix/
   (define (package->json package)
     `(,@(if (origin? (package-source package))
             (origin->json (package-source package))
@@ -185,7 +200,13 @@ See <https://forge.softwareheritage.org/D2025#51269>."
 
   (make-page "sources.json"
              `(("sources" . ,(list->vector (map package->json (all-packages))))
-               ("version" . "1"))
+               ("version" . "1")
+               ("revision" .
+                ,(match (current-profile)
+                   (#f %guix-version)   ;for lack of a better ID
+                   (profile
+                    (let ((channel (find guix-channel? (profile-channels profile))))
+                      (channel-commit channel))))))
              scm->json))
 
 (define (index-builder)

@@ -1,0 +1,16 @@
+digraph "Grafts" {
+  ratio = .4;
+  A [ label = "A\nauthor: Alice", shape = box, fontname = Helvetica, xlabel = "authorized: Alice", color="#aa4422" ];
+  B [ label = "B\nauthor: Alice", shape = box, fontname = Helvetica, xlabel = "authorized: Alice, Bob", color="#aa4422"  ];
+  C [ label = "C\nauthor: Bob", shape = box, fontname = Helvetica, xlabel = "authorized: Alice, Bob", color="#22aa44" ];
+  D [ label = "D\nauthor: Alice", shape = box, fontname = Helvetica, xlabel = "authorized: Alice, Bob", color="#aa4422"  ];
+  E [ label = "E\nauthor: Bob", shape = box, fontname = Helvetica, xlabel = "authorized: Alice, Bob", color="#22aa44" ];
+  F [ label = "F\nauthor: Alice", shape = box, fontname = Helvetica, xlabel = "authorized: Alice, Bob", color="#aa4422"  ];
+
+  B -> A [ color = orange ];
+  C -> B [ color = orange ];
+  D -> C [ color = orange ];
+  F -> D [ color = orange ];
+  F -> E [ color = darkviolet ];
+  E -> B [ color = darkviolet ];
+}

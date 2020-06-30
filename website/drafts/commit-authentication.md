@@ -339,7 +339,37 @@ documented in the
 manual](https://guix.gnu.org/manual/devel/en/html_node/Channels.html),
 and we’d love to get your feedback!
 
-# SHA1
+# SHA-1
+
+We can’t really discuss Git commit signing without mentioning
+[SHA-1](https://en.wikipedia.org/wiki/SHA-1).  The venerable
+crytographic hash function is approaching end of life, as evidenced by
+[recent](https://shattered.io/)
+[breakthroughs](https://sha-mbles.github.io/).  Signing a Git commit
+essentially boils down to signing a SHA-1 hash, because all objects in
+the Git store are identified by their SHA-1 hash.
+
+Git is now relies on a [collision attack detection
+library](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-stevens.pdf),
+that appears to mitigate practical attacks.  Furthermore, the Git
+project is planning a [hash function
+transition](https://git-scm.com/docs/hash-function-transition/) to
+address the problem.
+
+Some projects such as Bitcoin Core choose to not rely on SHA-1 at all.
+Instead, for the commits they sign, they include in the commit log the
+SHA512 hash of the tree, which the [verification scripts
+check](https://github.com/bitcoin/bitcoin/tree/master/contrib/verify-commits).
+
+Computing a tree hash _for each commit_ in Guix would probably be
+prohibitively costly.  For now, for lack of a better solution, we rely
+on Git’s collision attack detection and look forward to a hash function
+transition.
+
+As for SHA-1 in an OpenPGP context: our authentication code [rejects
+SHA-1 OpenPGP signatures](https://issues.guix.gnu.org/41787), as
+recommended.
+
 # Related work
 # Future work
 

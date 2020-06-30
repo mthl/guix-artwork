@@ -276,13 +276,68 @@ a quick tour of the implementation, the next section is for you!
 
 # A long process
 
-  - start signing commits
-  - add "make authenticate"
-  - implement .guix-authorizations
-  - generalize to channels
-  - prevent downgrades
-  - add primary URL
-  - third-party channels
+We’re kinda celebrating these days, but the [initial bug
+report](https://issues.guix.gnu.org/22883) was opened… in 2016.  One of
+the reasons was that we were hoping the general problem was solved
+already and we’d “just” have to adapt what others had done.  As for the
+actual design: you would think it can be implemented in ten lines of
+shell script invoking `gpgv` and `git`.  Perhaps that’s a possibility,
+but the resulting performance would be problematic—keep in mind that
+users may routinely have to authenticate hundreds of commits.  So we
+took a long road, but the end result is worth it.  Let’s recap.
+
+Back in April 2016, committers [started signing
+commits](https://issues.guix.gnu.org/22883#4), with a [server-side hook
+prohibiting unsigned commits](https://issues.guix.gnu.org/22883#36).  In
+July 2016, we had [proof-of-concept libgit2
+bindings](https://issues.guix.gnu.org/22883#33) with the primitives
+needed to verify signatures on commits, passing them to `gpgv`; later
+[Guile-Git](https://gitlab.com/guile-git/guile-git/) was born, providing
+good coverage of the libgit2 interface.  Then there was a two-year
+hiatus during which no code was produced in that area.
+
+Everything went faster starting from December 2019.  Progress was
+incremental and may have been hard to follow, even for die-hard Guix
+hackers, so here are the major milestones:
+
+  - In December 2019, a first [authentication program for use by Guix
+    developers](https://issues.guix.gnu.org/22883#48) landed; it could
+    be run from a checkout with the `make authenticate` command.  It
+    would use Guile-Git but call out to `gpgv` for signature
+    verification, which made it rather slow.  The list of authorized
+    keys was hard-coded.
+  - In April 2020, we had [an implementation of OpenPGP for signature
+    verification purposes](https://issues.guix.gnu.org/22883#61)
+    available as [`(guix
+    openpgp)`](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/openpgp.scm).
+    The code is based on Göran Weinholt’s pure Scheme
+    [Industria](https://github.com/weinholt/industria/) library, with
+    the addition of a few features and using
+    [Guile-Gcrypt](https://notabug.org/cwebber/guile-gcrypt) for faster
+    crypto.  That led to a tenfold speedup compared to invoking `gpgv`,
+    which is primarily due to the fact that our code [foregoes OpenPGP
+    bells and whistles](https://issues.guix.gnu.org/22883#62) and
+    focuses on “just” signature verification.
+  - In May, [`.guix-authorizations` support was
+    added](https://issues.guix.gnu.org/22883#64), superseding the
+    hard-coded list of authorized keys.  The OpenPGP keyring could now
+    be loaded straight from a [Git branch containing all the OpenPGP
+    keys ever
+    used](https://git.savannah.gnu.org/cgit/guix.git/tree/?h=keyring).
+  - Early June, the authentication code was [moved to its own
+    module](https://issues.guix.gnu.org/41653), `(guix
+    git-authenticate)` with a test suite.
+  - Soon after, Git authentication was [integrated in
+    channels](https://issues.guix.gnu.org/41767): `guix pull` would now
+    authenticate the `guix` channel, [closing the 4-year old
+    mega-issue](https://issues.guix.gnu.org/22883).
+  - Just today, we added the final bits, [allowing channel authors to
+    benefit from the feature](https://issues.guix.gnu.org/42048).
+
+Whether you’re a channel author or a user, the feature is now [fully
+documented in the
+manual](https://guix.gnu.org/manual/devel/en/html_node/Channels.html),
+and we’d love to get your feedback!
 
 # SHA1
 # Related work

@@ -45,9 +45,8 @@ go wrong.  An attacker can trick the user into pulling code from an
 alternate repository that contains malicious code or definitions for
 backdoored packages.  This is made more difficult by the fact that code
 is fetched over HTTPS from
-[Savannah](https://git.savannah.gnu.org/cgit/guix.git/) by default, but
-not impossible (FIXME: xref).  If Savannah is compromised ([as happened
-in
+[Savannah](https://git.savannah.gnu.org/cgit/guix.git/) by default.  If
+Savannah is compromised ([as happened in
 2010](https://www.fsf.org/blogs/sysadmin/savannah-and-www.gnu.org-downtime)),
 an attacker can push code to the Guix repository, which everyone would
 pull.  The change might even go unnoticed and remain in the repository
@@ -69,13 +68,12 @@ to pull at arbitrary point in the commit history of Guix and Guix
 
 Checkout authentication requires [cryptographically signed
 commits](https://git-scm.com/book/en/v2/Git-Tools-Signing-Your-Work).
-By signing a commit, a Guix developer takes reponsibility asserts that
-they are the one who made the commit; they may be its author, or they
-may be the person who applied somebody else’s changes after review.  It
-also requires a notion of authorization: we don’t simply want commits to
-have a valid signature, we want them to be signed by an authorized key.
-The set of authorized keys changes over time as people join and leave
-the project.
+By signing a commit, a Guix developer asserts that they are the one who
+made the commit; they may be its author, or they may be the person who
+applied somebody else’s changes after review.  It also requires a notion
+of authorization: we don’t simply want commits to have a valid
+signature, we want them to be signed by an authorized key.  The set of
+authorized keys changes over time as people join and leave the project.
 
 To implement that, we came up with the following mechanism and rule:
 
@@ -154,7 +152,7 @@ holds, and the fingerprint of the OpenPGP key used to sign that commit
 As always when it comes to establishing trust, distributing channel
 introductions is very sensitive.  The introduction of the official
 `guix` channel is [built into
-Guix](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/channels.scm#n155).
+Guix](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/channels.scm?id=d2fde340adf197cc42bc4e0187deaf3a7bd3968d#n155).
 Users obtain it when they install Guix the first time; hopefully they
 verify the signature on the Guix tarball or ISO image, [as noted in the
 installation
@@ -178,8 +176,8 @@ introduction in their `channels.scm` file, like so:
 ```
 
 The `guix describe` command now prints the introduction if there’s one.
-That way, it’s easy for a user to share their channel configuration,
-including introductions, without having to be an expert
+That way, one can share their channel configuration, including
+introductions, without having to be an expert.
 
 Channel introductions also solve another problem: forks.  Respecting the
 authorization invariant “forever” would effectively prevent
@@ -349,7 +347,7 @@ crytographic hash function is approaching end of life, as evidenced by
 essentially boils down to signing a SHA-1 hash, because all objects in
 the Git store are identified by their SHA-1 hash.
 
-Git is now relies on a [collision attack detection
+Git now relies on a [collision attack detection
 library](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-stevens.pdf),
 that appears to mitigate practical attacks.  Furthermore, the Git
 project is planning a [hash function

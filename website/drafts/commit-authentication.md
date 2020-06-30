@@ -30,7 +30,7 @@ Guix and Nix implement is very different: conceptually, Guix is a
 _source distribution_, like Gentoo if you will.
 
 Pre-built binaries are of course available and very useful, but they’re
-optional; we can them
+optional; we call them
 [_substitutes_](https://guix.gnu.org/manual/en/html_node/Substitutes.html)
 because they’re just that: substitutes for local builds.  When you do
 choose to accept substitutes, they must be signed by one of the keys you
@@ -64,7 +64,7 @@ _authenticating Git checkouts_.  By that, we mean that when `guix pull`
 obtains code from Git, it should be able to tell that all the commits it
 fetched were pushed by authorized developers of the project.  We’re
 really looking at individual commits, not tags, because users can choose
-to pool at arbitrary point in the commit history of Guix and Guix
+to pull at arbitrary point in the commit history of Guix and Guix
 [channels](https://guix.gnu.org/manual/en/html_node/Channels.html).
 
 Checkout authentication requires [cryptographically signed

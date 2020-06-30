@@ -369,6 +369,61 @@ SHA-1 OpenPGP signatures](https://issues.guix.gnu.org/41787), as
 recommended.
 
 # Related work
+
+A lot of work has gone into securing the software supply chain, often in
+the context of binary distros, sometimes in a more general context; a
+lot of work has also gone into Git authentication and related issues.
+This section attempts to summarize how Guix relates to similar work that
+we’re aware of in these two areas.  More detailed discussions can be
+found in the [issue tracker](https://issues.guix.gnu.org/22883).
+
+[The Update Framework](https://theupdateframework.io/) (TUF) is a
+reference for secure update systems, with [a well-structured
+spec](https://github.com/theupdateframework/specification/blob/master/tuf-spec.md#the-update-framework-specification)
+with a number of
+[implementations](https://github.com/theupdateframework/specification/blob/master/tuf-spec.md#the-update-framework-specification).
+TUF is a great source of inspiration to think about this problem space.
+Many of its goals are shared by Guix.  Some of the attacks it aims to
+protect against (Section 1.5.2 of the spec) are in fact not fully
+addressed by what’s presented in this post: _indefinite freeze attacks_,
+where updates never become available, are not addressed _per se_ (though
+easily observable), and _slow retrieval attacks_ aren’t addressed
+either.  The notion of _role_ is also something currently missing from
+the Guix authentication model, where any authorized committer can touch
+any files, though the model and `.guix-authorizations` format leave room
+for such an extension.
+
+However, both in its goals and system descriptions, TUF is biased
+towards systems that distribute binaries as plain files with associated
+meta-data.  That creates a fundamental impedance mismatch.  As an
+example, attacks such as _fast-forward attacks_ or _mix-and-match
+attacks_ don’t apply in the context of Guix; likewise, the _repository_
+depicted in Section 3 of the spec has little in common with a Git
+repository.
+
+Developers of OPAM, the OCaml package manager, [adapted TUF for use with
+their Git-based package
+repository](http://opam.ocaml.org/blog/Signing-the-opam-repository/),
+later updated to write [Conex](https://github.com/hannesm/conex), a
+separate too to authenticate OPAM repository.  OPAM is interesting
+because like Guix it’s a source distro and its [package
+repository](https://github.com/ocaml/opam-repository) is a Git
+repository containing “build recipe”.  However, `opam update` itself
+does not authenticate repositories.
+
+FIXME: Remove?
+
+  - in-toto
+  - “On omitting commits…”
+
+
+
 # Future work
 
   - 'guix channel add'
+  - substitute key authorization/revocation
+
+# Acknowledgments
+
+Thanks to everyone who provided feedback or carried out code review
+during this process.

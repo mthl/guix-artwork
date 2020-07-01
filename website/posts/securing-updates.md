@@ -1,6 +1,6 @@
 title: Securing updates
 author: Ludovic Courtès
-date: 2020-07-01 17:30
+date: 2020-07-01 17:40
 tags: Security, Software development, Scheme API
 ---
 Software deployment tools like Guix are in a key position when it comes
@@ -94,7 +94,7 @@ for a pedagogical overview!)
 Let’s take an example to illustrate.  In the figure below, each box is a
 commit, and each arrow is a parent relationship:
 
-![Example commit graph.](/static/blog/img/commit-graph.svg)
+![Example commit graph.](https://guix.gnu.org/static/blog/img/commit-graph.svg)
 
 This figure shows two lines of development: the orange line may be the
 main development branch, while the purple line may correspond to a
@@ -158,6 +158,13 @@ introducing a channel to users, one needs to provide an additional piece
 of information: the first commit where the authorization invariant
 holds, and the fingerprint of the OpenPGP key used to sign that commit
 (it’s not strictly necessary but provides an additional check).
+Consider this commit graph:
+
+![Example commit graph with introduction.](https://guix.gnu.org/static/blog/img/commit-graph-intro.svg)
+
+On this figure, _B_ is the introduction commit.  Its ancestors, such as
+_A_ are considered authentic.  To authenticate, _C_, _D_, _E_, and _F_,
+we check the authorization invariant.
 
 As always when it comes to establishing trust, distributing channel
 introductions is very sensitive.  The introduction of the official
@@ -200,7 +207,9 @@ manipulates branch heads on Savannah to have them point to unrelated
 commits (such as commits on an orphan branch that do not share any
 history with the “official” branches), authentication will necessarily
 fail as it stumbles upon the first unauthorized commit made by the
-attacker.
+attacker.  In the figure above, the red branch with commits _G_ and _H_
+cannot be authenticated because it starts from _A_, which lacks
+`.guix-authorizations` and thus fails the authorization invariant.
 
 That’s all for authentication!  I’m glad you read this far.  At this
 point you can take a break or continue with the next section on how
@@ -235,7 +244,7 @@ Git parlance—just like `git pull` does, but compared to the
 previously-deployed Guix.  A fast-forward update is when the new commit
 is a descendant of the current commit.  Going back to the figure above,
 going from commit _A_ to commit _F_ is a fast-forward update, but going
-from _F_ to _A_ or from _C_ to _E_ is not.
+from _F_ to _A_ or from _D_ to _E_ is not.
 
 Not doing a fast-forward update would mean that the user is deploying an
 older version of the Guix currently used, or deploying an unrelated

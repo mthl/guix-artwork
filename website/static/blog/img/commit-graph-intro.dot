@@ -1,0 +1,21 @@
+digraph "Grafts" {
+  A [ label = "A", shape = box, fontname = Helvetica, color="#22aa44" ];
+  B [ label = "B", shape = box, fontname = Helvetica, color="#22aa44",
+      style = bold, xlabel = "introductory commit" ];
+  C [ label = "C", shape = box, fontname = Helvetica, color="#22aa44" ];
+  D [ label = "D", shape = box, fontname = Helvetica, color="#22aa44"  ];
+  E [ label = "E", shape = box, fontname = Helvetica, color="#22aa44" ];
+  F [ label = "F", shape = box, fontname = Helvetica, color="#22aa44"  ];
+  G [ label = "G", shape = box, fontname = Helvetica, color="#22aa44",
+      style = filled, fillcolor = "#ddeedd", color = "#ff0000", fontcolor = "#ff0000" ];
+  H [ label = "H", shape = box, fontname = Helvetica, color="#22aa44"
+      style = filled, fillcolor = "#ddeedd", color = "#ff0000", fontcolor = "#ff0000" ];
+
+  B -> A [ color = orange ];
+  C -> B [ color = orange ];
+  D -> C [ color = orange ];
+  E -> C [ color = darkviolet ];
+  F -> E [ color = darkviolet ];
+  G -> A [ color = red ];
+  H -> G [ color = red ];
+}

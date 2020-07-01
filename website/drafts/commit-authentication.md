@@ -1,7 +1,8 @@
-title: DRAFT Authenticated channels
+title: Securing updates
 author: Ludovic Courtès
+date: 2020-07-01 16:40
+tags: Security, Software development, Scheme API
 ---
-
 Software deployment tools like Guix are in a key position when it comes
 to securing the “software supply chain”—taking source code fresh from
 repositories and providing users with ready-to-use binaries.  We have
@@ -21,7 +22,7 @@ the tool that updates Guix and its package collection.  This article
 looks at what we set out to address, how we achieved it, and how it
 compares to existing work in this area.
 
-# Securing updates
+# What updates should be protected against
 
 The problem of securing distro updates is often viewed through the lens
 of binary distributions such as Debian, where the main asset to be
@@ -487,4 +488,25 @@ Thanks to everyone who provided feedback, ideas, or carried out code
 review during this long process, notably (in no particular order):
 Christopher Lemmer Webber, Leo Famulari, David Thompson, Mike Gerwitz,
 Ricardo Wurmus, Werner Koch, Justus Winter, Vagrant Cascadian, Maxim
-Cournoyer, Simon Tournier, John Soo, and Jakub Kądziołka.
+Cournoyer, Simon Tournier, John Soo, and Jakub Kądziołka.  Thanks also
+to janneke, Ricardo, Marius, and Simon for reviewing an earlier draft of
+this post!
+
+#### About GNU Guix
+
+[GNU Guix](https://guix.gnu.org) is a transactional package
+manager and an advanced distribution of the GNU system that [respects
+user
+freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).
+Guix can be used on top of any system running the kernel Linux, or it
+can be used as a standalone operating system distribution for i686,
+x86_64, ARMv7, and AArch64 machines.
+
+In addition to standard package management features, Guix supports
+transactional upgrades and roll-backs, unprivileged package management,
+per-user profiles, and garbage collection.  When used as a standalone
+GNU/Linux distribution, Guix offers a declarative, stateless approach to
+operating system configuration management.  Guix is highly customizable
+and hackable through [Guile](https://www.gnu.org/software/guile)
+programming interfaces and extensions to the
+[Scheme](http://schemers.org) language.

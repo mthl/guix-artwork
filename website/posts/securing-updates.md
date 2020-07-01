@@ -1,6 +1,6 @@
 title: Securing updates
 author: Ludovic Courtès
-date: 2020-07-01 16:40
+date: 2020-07-01 17:30
 tags: Security, Software development, Scheme API
 ---
 Software deployment tools like Guix are in a key position when it comes
@@ -12,8 +12,8 @@ binaries](https://guix.gnu.org/manual/en/html_node/Substitute-Authentication.htm
 [reproducible
 builds](https://guix.gnu.org/blog/tags/reproducible-builds/),
 [bootstrapping](https://guix.gnu.org/blog/tags/bootstrapping/), and
-[fast security
-updates](https://guix.gnu.org/blog/2016/timely-delivery-of-security-updates/).
+[security
+updates](https://guix.gnu.org/blog/tags/security-updates/).
 
 A couple of weeks ago, we addressed the elephant in the room:
 authentication of Guix code itself by [`guix
@@ -64,7 +64,7 @@ _authenticating Git checkouts_.  By that, we mean that when `guix pull`
 obtains code from Git, it should be able to tell that all the commits it
 fetched were pushed by authorized developers of the project.  We’re
 really looking at individual commits, not tags, because users can choose
-to pull at arbitrary point in the commit history of Guix and Guix
+to pull arbitrary points in the commit history of Guix and third-party
 [channels](https://guix.gnu.org/manual/en/html_node/Channels.html).
 
 Checkout authentication requires [cryptographically signed
@@ -83,7 +83,7 @@ To implement that, we came up with the following mechanism and rule:
      that lists the OpenPGP key fingerprints of authorized committers.
   2. A commit is considered authentic if and only if it is signed by one
      of the keys listed in the `.guix-authorizations` file of each of
-     its parent(s).  This is the _authorization invariant_.
+     its parents.  This is the _authorization invariant_.
 
 (Remember that Git commits form a directed acyclic graph (DAG) where
 each commit can have zero or more parents; merge commits have two parent
@@ -94,7 +94,7 @@ for a pedagogical overview!)
 Let’s take an example to illustrate.  In the figure below, each box is a
 commit, and each arrow is a parent relationship:
 
-![Example commit graph.](https://guix.gnu.org/static/blog/img/commit-graph.svg)
+![Example commit graph.](/static/blog/img/commit-graph.svg)
 
 This figure shows two lines of development: the orange line may be the
 main development branch, while the purple line may correspond to a
@@ -136,7 +136,7 @@ similar: any authorized committer can remove entries from
 committer can remove their former key and add their new key in a single
 commit, signed by the former key.
 
-The authorization invariant satisfies our needs to Guix.  It has one
+The authorization invariant satisfies our needs for Guix.  It has one
 downside: it prevents pull-request-style workflows.  Indeed, merging the
 branch of a contributor not listed in `.guix-authorizations` would break
 the authorization invariant.  It’s a good tradeoff for Guix because our
@@ -149,8 +149,8 @@ project out there.
 
 The attentive reader may have noticed that something’s missing from the
 explanation above: what do we do about commit _A_ in the example above?
-Or, in other words, which commit do we pick as the first one where we
-can start verifying the authentication invariant?
+In other words, which commit do we pick as the first one where we
+can start verifying the authorization invariant?
 
 We solve this bootstrapping issue by defining _channel introductions_.
 Previously, one would identify a channel simply by its URL.  Now, when
@@ -167,7 +167,7 @@ Users obtain it when they install Guix the first time; hopefully they
 verify the signature on the Guix tarball or ISO image, [as noted in the
 installation
 instructions](https://guix.gnu.org/manual/en/html_node/Binary-Installation.html),
-which reduces chances of getting the “wrong” Guix but is still very much
+which reduces chances of getting the “wrong” Guix, but it is still very much
 [trust-on-first-use](https://en.wikipedia.org/wiki/Trust_on_first_use)
 (TOFU).
 
@@ -191,8 +191,8 @@ introductions, without having to be an expert.
 
 Channel introductions also solve another problem: forks.  Respecting the
 authorization invariant “forever” would effectively prevent
-“unauthorized” forks (forks made by someone who’s not a committer).
-Someone willing to make a fork simply needs to emit a new introduction
+“unauthorized” forks—forks made by someone who’s not in `.guix-authorizations`.
+Someone publishing a fork simply needs to emit a new introduction
 for their fork, pointing to a different starting commit.
 
 Last, channel introductions give a _point of reference_: if an attacker
@@ -243,8 +243,8 @@ version from another branch.  In both cases, the user is at risk of
 ending up installing older, vulnerable software.
 
 By default `guix pull` now errors out on non-fast-forward updates,
-thereby protecting from roll-backs.  Users [who know what they’re
-doing](https://issues.guix.gnu.org/41882) can override that by passing
+thereby protecting from roll-backs.  Users [who understand the
+risks](https://issues.guix.gnu.org/41882) can override that by passing
 `--allow-downgrades`.
 
 Authentication and roll-back prevention allow users to safely refer to
@@ -260,7 +260,7 @@ or if it’s not a genuine mirror, `guix pull` will abort.  In other
 cases, it will proceed.
 
 Unfortunately, there is no way to answer the general question “_is_ X
-_the latest commit of branch_ B_?_”.  Rollback detection prevents just
+_the latest commit of branch_ B _?_”.  Rollback detection prevents just
 that, rollbacks, but there’s no mechanism in place to tell whether a
 given mirror is stale.  To mitigate that, channel authors can specify,
 in the repository, the channel’s _primary URL_.  This piece of
@@ -315,10 +315,10 @@ hackers, so here are the major milestones:
     verification, which made it rather slow.  The list of authorized
     keys was hard-coded.
   - In April 2020, we had [an implementation of OpenPGP for signature
-    verification purposes](https://issues.guix.gnu.org/22883#61)
+    verification purposes only](https://issues.guix.gnu.org/22883#61)
     available as [`(guix
     openpgp)`](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/openpgp.scm).
-    The code is based on Göran Weinholt’s pure Scheme
+    The code is based on Göran Weinholt’s pure-Scheme
     [Industria](https://github.com/weinholt/industria/) library, with
     the addition of a few features and using
     [Guile-Gcrypt](https://notabug.org/cwebber/guile-gcrypt) for faster
@@ -335,7 +335,7 @@ hackers, so here are the major milestones:
     used](https://git.savannah.gnu.org/cgit/guix.git/tree/?h=keyring).
   - Early June, the authentication code was [moved to its own
     module](https://issues.guix.gnu.org/41653), `(guix
-    git-authenticate)` with a test suite.
+    git-authenticate)`, with a test suite.
   - Soon after, Git authentication was [integrated in
     channels](https://issues.guix.gnu.org/41767): `guix pull` would now
     authenticate the `guix` channel, [closing the 4-year old
@@ -355,17 +355,17 @@ We can’t really discuss Git commit signing without mentioning
 crytographic hash function is approaching end of life, as evidenced by
 [recent](https://shattered.io/)
 [breakthroughs](https://sha-mbles.github.io/).  Signing a Git commit
-essentially boils down to signing a SHA-1 hash, because all objects in
+boils down to signing a SHA-1 hash, because all objects in
 the Git store are identified by their SHA-1 hash.
 
 Git now relies on a [collision attack detection
-library](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-stevens.pdf),
-that appears to mitigate practical attacks.  Furthermore, the Git
+library](https://www.usenix.org/system/files/conference/usenixsecurity17/sec17-stevens.pdf)
+to mitigate practical attacks.  Furthermore, the Git
 project is planning a [hash function
 transition](https://git-scm.com/docs/hash-function-transition/) to
 address the problem.
 
-Some projects such as Bitcoin Core choose to not rely on SHA-1 at all.
+Some projects such as Bitcoin Core choose to not rely on SHA-1 at all.
 Instead, for the commits they sign, they include in the commit log the
 SHA512 hash of the tree, which the [verification scripts
 check](https://github.com/bitcoin/bitcoin/tree/master/contrib/verify-commits).
@@ -382,8 +382,8 @@ recommended.
 # Related work
 
 A lot of work has gone into securing the software supply chain, often in
-the context of binary distros, sometimes in a more general context; a
-lot of work has also gone into Git authentication and related issues.
+the context of binary distros, sometimes in a more general context; more
+recent work also looks into Git authentication and related issues.
 This section attempts to summarize how Guix relates to similar work that
 we’re aware of in these two areas.  More detailed discussions can be
 found in the [issue tracker](https://issues.guix.gnu.org/22883).
@@ -391,12 +391,12 @@ found in the [issue tracker](https://issues.guix.gnu.org/22883).
 [The Update Framework](https://theupdateframework.io/) (TUF) is a
 reference for secure update systems, with [a well-structured
 spec](https://github.com/theupdateframework/specification/blob/master/tuf-spec.md#the-update-framework-specification)
-with a number of
+and a number of
 [implementations](https://github.com/theupdateframework/specification/blob/master/tuf-spec.md#the-update-framework-specification).
 TUF is a great source of inspiration to think about this problem space.
-Many of its goals are shared by Guix.  Some of the attacks it aims to
-protect against (Section 1.5.2 of the spec) are in fact not fully
-addressed by what’s presented in this post: _indefinite freeze attacks_,
+Many of its goals are shared by Guix.  Not all the attacks it aims to
+protect against (Section 1.5.2 of the spec) are addressed by what’s
+presented in this post: _indefinite freeze attacks_,
 where updates never become available, are not addressed _per se_ (though
 easily observable), and _slow retrieval attacks_ aren’t addressed
 either.  The notion of _role_ is also something currently missing from
@@ -477,7 +477,7 @@ you!  We’ve already gotten feedback that these new mechanisms [broke
 someone’s workflow](https://issues.guix.gnu.org/41882); hopefully it
 didn’t break yours, but either way your input is important in improving
 the system.  If you’re into security and think this design is terrible
-(or awesome :-)), please do provide feedback.
+or awesome, please do provide feedback.
 
 It’s a long and article describing a long ride on a path we discovered
 as we went, and it felt like an important milestone to share!
@@ -490,7 +490,7 @@ Christopher Lemmer Webber, Leo Famulari, David Thompson, Mike Gerwitz,
 Ricardo Wurmus, Werner Koch, Justus Winter, Vagrant Cascadian, Maxim
 Cournoyer, Simon Tournier, John Soo, and Jakub Kądziołka.  Thanks also
 to janneke, Ricardo, Marius, and Simon for reviewing an earlier draft of
-this post!
+this post.
 
 #### About GNU Guix
 

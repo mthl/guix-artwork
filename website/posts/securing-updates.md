@@ -53,7 +53,7 @@ an attacker can push code to the Guix repository, which everyone would
 pull.  The change might even go unnoticed and remain in the repository
 forever.  An attacker with access to Savannah can also reset the main
 branch to an earlier revision, leading users to install outdated
-software with known vulunerabilities—a _downgrade attack_.  These are
+software with known vulnerabilities—a _downgrade attack_.  These are
 the kind of attacks we want to protect against.
 
 # Authenticating Git checkouts

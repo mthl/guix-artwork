@@ -18,7 +18,7 @@ A couple of weeks ago, we addressed the elephant in the room:
 authentication of Guix code itself by [`guix
 pull`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-pull.html),
 the tool that updates Guix and its package collection.  This article
-looks at what set out to address, how we achieved it, and how it
+looks at what we set out to address, how we achieved it, and how it
 compares to existing work in this area.
 
 # Securing updates
@@ -125,6 +125,15 @@ are known to be already authenticated.  `guix pull` keeps a local cache
 of the commits it has previously authenticated, which allows it to
 traverse only new commits.  For instance, if you’re at commit _F_ and
 later update to a descendant of _F_, authentication starts at _F_.
+
+Since `.guix-authorizations` is a regular file under version control,
+granting or revoking commit authorization does not require special
+support.  In the example above, commit _B_ is an authorized commit by
+Alice that adds Bob’s key to `.guix-authorizations`.  Revocation is
+similar: any authorized committer can remove entries from
+`.guix-authorizations`.  Key rotation can be handled similarly: a
+committer can remove their former key and add their new key in a single
+commit, signed by the former key.
 
 The authorization invariant satisfies our needs to Guix.  It has one
 downside: it prevents pull-request-style workflows.  Indeed, merging the
@@ -315,7 +324,8 @@ hackers, so here are the major milestones:
     crypto.  That led to a tenfold speedup compared to invoking `gpgv`,
     which is primarily due to the fact that our code [foregoes OpenPGP
     bells and whistles](https://issues.guix.gnu.org/22883#62) and
-    focuses on “just” signature verification.
+    focuses on “just” signature verification.  Notably, it ignores key
+    expiration and revocation.
   - In May, [`.guix-authorizations` support was
     added](https://issues.guix.gnu.org/22883#64), superseding the
     hard-coded list of authorized keys.  The OpenPGP keyring could now
@@ -405,25 +415,76 @@ Developers of OPAM, the OCaml package manager, [adapted TUF for use with
 their Git-based package
 repository](http://opam.ocaml.org/blog/Signing-the-opam-repository/),
 later updated to write [Conex](https://github.com/hannesm/conex), a
-separate too to authenticate OPAM repository.  OPAM is interesting
+separate tool to authenticate OPAM repositories.  OPAM is interesting
 because like Guix it’s a source distro and its [package
 repository](https://github.com/ocaml/opam-repository) is a Git
-repository containing “build recipe”.  However, `opam update` itself
-does not authenticate repositories.
+repository containing “build recipe”.  To date, it appears that `opam
+update` itself does not authenticate repositories though; it’s up to
+users or developer to run Conex.
 
-FIXME: Remove?
+Another very insightful piece of work is the 2016 paper [_On omitting
+commits and committing
+omissions_](https://www.usenix.org/system/files/conference/usenixsecurity16/sec16_paper_torres-arias.pdf).
+The paper focuses on the impact of malicious modifications to Git
+repository meta-data.  An attacker with access to the repository can
+modify, for instance, branch references, to cause a rollback attack or a
+“teleport” attack, causing users to pull an older commit or an unrelated
+commit.  As written above, `guix pull` would detect such attacks.
+However, `guix pull` would fail to detect cases where metadata
+modification does not yield a rollback or teleport, yet gives users a
+different view than the intended one—for instance, a user is directed to
+an authentic but different branch rather than the intended one.  The
+“secure push” operation and the associated _reference state log_ (RSL)
+the authors propose would be an improvement.
 
-  - in-toto
-  - “On omitting commits…”
+# Wrap-up and outlook
 
+Guix now has a mechanism that allows it to authenticate updates.  If
+you’ve run `guix pull` recently, perhaps you’ve noticed additional
+output and a progress bar as new commits are being authenticated.  Apart
+from that, the switch has been completely transparent.  The
+authentication mechanism is built around the commit graph of Git; in
+fact, it’s a mechanism to _authenticate Git checkouts_ and in that sense
+it is not tied to Guix and its application domain.  It is available not
+only for the main `guix` channel, but also for third-party channels.
 
+To bootstrap trust, we added the notion of _channel introductions_.
+These are now visible in the user interface, in particular in the output
+of `guix describe` and in the configuration file of `guix pull` and
+`guix time-machine`.  While channel configuration remains a few lines of
+code that users typically paste, this extra bit of configuration might
+be intimidating.  It certainly gives an incentive to provide a
+command-line interface to manage the user’s list of channels: `guix
+channel add`, etc.
 
-# Future work
+The solution here is built around the assumption that Guix is
+fundamentally a source-based distribution, and is thus completely
+orthogonal to the [public key infrastructure (PKI) Guix uses for the
+signature of
+substitutes](https://guix.gnu.org/manual/en/html_node/Substitute-Server-Authorization.html).
+Yet, the substitute PKI could probably benefit from the fact that we now
+have a secure update mechanism for the Guix source code: since `guix
+pull` can securely retrieve a new substitute signing key, perhaps it
+could somehow handle substitute signing key revocation and delegation
+automatically?  Related to that, channels could perhaps advertise a
+substitute URL and its signing key, possibly allowing users to register
+those when they first pull from the channel.  All this requires more
+thought, but it looks like there are new opportunities here.
 
-  - 'guix channel add'
-  - substitute key authorization/revocation
+Until then, if you’re a user or a channel author, we’d love to hear from
+you!  We’ve already gotten feedback that these new mechanisms [broke
+someone’s workflow](https://issues.guix.gnu.org/41882); hopefully it
+didn’t break yours, but either way your input is important in improving
+the system.  If you’re into security and think this design is terrible
+(or awesome :-)), please do provide feedback.
+
+It’s a long and article describing a long ride on a path we discovered
+as we went, and it felt like an important milestone to share!
 
 # Acknowledgments
 
-Thanks to everyone who provided feedback or carried out code review
-during this process.
+Thanks to everyone who provided feedback, ideas, or carried out code
+review during this long process, notably (in no particular order):
+Christopher Lemmer Webber, Leo Famulari, David Thompson, Mike Gerwitz,
+Ricardo Wurmus, Werner Koch, Justus Winter, Vagrant Cascadian, Maxim
+Cournoyer, Simon Tournier, John Soo, and Jakub Kądziołka.

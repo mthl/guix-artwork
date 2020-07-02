@@ -1,5 +1,6 @@
 ;;; GNU Guix web site
 ;;; Copyright © 2017, 2019, 2020 Ludovic Courtès <ludo@gnu.org>
+;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
 ;;;
 ;;; This file is part of the GNU Guix web site.
 ;;;
@@ -18,6 +19,17 @@
 
 ;; Run 'guix build -f .guix.scm' to build the web site.
 
+(define this-directory
+  (dirname (current-filename)))
+
+;; Make sure po/LINGUAS will be found in the current working
+;; directory.
+(chdir this-directory)
+
+;; We need %linguas from the (sexp-xgettext) module.
+;; Therefore, we add its path to the load path.
+(set! %load-path (cons this-directory %load-path))
+
 (use-modules (guix) (gnu)
              (gnu packages guile)
              (gnu packages guile-xyz)
@@ -28,10 +40,10 @@
              (guix channels)
              (srfi srfi-1)
              (srfi srfi-9)
-             (ice-9 match))
-
-(define this-directory
-  (dirname (current-filename)))
+             (ice-9 match)
+             (ice-9 rdelim)
+             (ice-9 regex)
+             (sexp-xgettext))
 
 (define source
   (local-file this-directory "guix-web-site"
@@ -120,11 +132,39 @@
                                     ":"))))
             (close-pipe pipe))
 
+          ;; Make the copy writable so Haunt can overwrite duplicate assets.
+          (invoke #+(file-append (specification->package "coreutils")
+                                 "/bin/chmod")
+                  "--recursive" "u+w" ".")
+
+          ;; For translations, create MO files from PO files.
+          (for-each
+           (lambda (lingua)
+             (let* ((msgfmt #+(file-append
+                               (specification->package "gettext-minimal")
+                               "/bin/msgfmt"))
+                    (lingua-file (string-append "po/" lingua ".po"))
+                    (lang (car (string-split lingua #\_)))
+                    (lang-file (string-append "po/" lang ".po")))
+               (define (create-mo filename)
+                 (begin
+                   (invoke msgfmt filename)
+                   (mkdir-p (string-append lingua "/LC_MESSAGES"))
+                   (rename-file "messages.mo"
+                                (string-append lingua "/LC_MESSAGES/"
+                                               "guix-website.mo"))))
+               (cond
+                ((file-exists? lingua-file)
+                 (create-mo lingua-file))
+                ((file-exists? lang-file)
+                 (create-mo lang-file))
+                (else #t))))
+           (list #$@%linguas))
+
           ;; So we can read/write UTF-8 files.
           (setenv "GUIX_LOCPATH"
                   #+(file-append (specification->package "glibc-utf8-locales")
                                  "/lib/locale"))
-          (setenv "LC_ALL" "en_US.utf8")
 
           ;; Use a sane default.
           (setenv "XDG_CACHE_HOME" "/tmp/.cache")
@@ -133,14 +173,25 @@
           ;; this script was run.
           (setenv "GUIX_WEB_SITE_ROOT_PATH" #$root-path)
 
-          (format #t "Running 'haunt build'...~%")
-          (invoke #+(file-append haunt-with-latest-guile "/bin/haunt")
-                  "build")
-
-          (mkdir-p #$output)
-          (copy-recursively "/tmp/gnu.org/software/guix" #$output
-                            #:log (%make-void-port "w"))
-          (symlink "guix.html" (string-append #$output "/index.html"))))))
+          ;; Build the website for each translation.
+          (for-each
+           (lambda (lingua)
+             (begin
+               (setenv "LC_ALL" (string-append lingua ".utf8"))
+               (format #t "Running 'haunt build' for lingua ~a...~%" lingua)
+               (invoke #+(file-append haunt-with-latest-guile
+                                      "/bin/haunt")
+                       "build")
+               (mkdir-p #$output)
+               (copy-recursively "/tmp/gnu.org/software/guix" #$output
+                                 #:log (%make-void-port "w"))
+               (let ((tag (assoc-ref
+                           (call-with-input-file "po/ietf-tags.scm"
+                             (lambda (port) (read port)))
+                           lingua)))
+                 (symlink "guix.html"
+                          (string-append #$output "/" tag "/index.html")))))
+           (list #$@%linguas))))))
 
 (computed-file "guix-web-site" build
                #:guile (specification->package "guile")

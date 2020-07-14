@@ -131,6 +131,15 @@ het Nederlands.")
     #:log "https://issues.guix.gnu.org")
 
    (contact
+    #:name "Science Mailing List"
+    #:description
+    '(p
+      "Discussions about using GNU Guix for scientific purposes: "
+      "reproducible research, high-performance computing (HPC), and more.")
+    #:url "https://lists.gnu.org/mailman/listinfo/guix-science"
+    #:log "https://lists.gnu.org/archive/html/guix-science")
+
+   (contact
     #:name "Commits Mailing List"
     #:description
     `(p

@@ -18,10 +18,12 @@
 ;;; along with the GNU Guix web site.  If not, see <http://www.gnu.org/licenses/>.
 
 (define-module (apps download templates download-latest)
+  #:use-module (apps base templates components)
   #:use-module (apps base templates theme)
   #:use-module (apps base types)
   #:use-module (apps base utils)
   #:use-module (apps download templates components)
+  #:use-module (apps i18n)
   #:use-module (guix ci)
   #:use-module (srfi srfi-1)
   #:use-module (srfi srfi-9)
@@ -45,16 +47,16 @@
 
 (define images
   (list (make-image
-         "GNU Guix System on Linux"
-         "USB/DVD ISO installer of the standalone Guix System on Linux."
+         (C_ "download page title" "GNU Guix System on Linux")
+         (G_ "USB/DVD ISO installer of the standalone Guix System on Linux.")
          (guix-url "static/base/img/GuixSD-package.png")
          "iso9660-image"
          (list default-system)
          (list default-system)
          "ISO-9660")
         (make-image
-         "GNU Guix System on GNU Hurd"
-         "Virtual machine image of the standalone Guix System on GNU Hurd."
+         (C_ "download page title" "GNU Guix System on GNU Hurd")
+         (G_ "Virtual machine image of the standalone Guix System on GNU Hurd.")
          (guix-url "static/base/img/hurd.png")
          "hurd-barebones-disk-image"
          (list "qcow2")
@@ -88,7 +90,7 @@
       (img (@ (src ,logo) (alt "")))
       (h3 ,title)
       ,description
-      (p "Download options:")
+      ,(G_ `(p "Download options:"))
       ,@(map (lambda (system label)
                `(a
                  (@ (class "download-btn")
@@ -97,47 +99,52 @@
                  ,label
                  " ")) ; Force a space for readability in non-CSS browsers.
              systems labels)
-      (p "Build details: "
-         ,@(map (lambda (system label)
-                  `(a
-                    (@ (class "detail-btn")
-                       (download "")
-                       (href ,(build-detail-url job system)))
-                    ,label
-                    " ")) ; Force a space for readability in non-CSS browsers.
-                systems labels)))))
+      ,(G_
+        `(p "Build details: "
+            ,@(map (lambda (system label)
+                     `(a
+                       (@ (class "detail-btn")
+                          (download "")
+                          (href ,(build-detail-url job system)))
+                       ,label
+                       " ")) ; Force a space for readability in non-CSS browsers.
+                   systems labels))))))
 
 (define (download-latest-t)
   "Return the Download latest page in SHTML."
   (theme
-   #:title '("Download latest")
+   #:title (C_ "webpage title" '("Download latest"))
    #:description
-   "Download latest GNU Guix System images built by the Cuirass continuous
-integration system."
+   (G_ "Download latest GNU Guix System images built by the Cuirass continuous
+integration system.")
    #:keywords
-   '("GNU" "Linux" "Unix" "Free software" "Libre software"
-     "Operating system" "GNU Hurd" "GNU Guix package manager"
-     "Installer" "Source code" "Package manager")
-   #:active-menu-item "Download"
+   (string-split ;TRANSLATORS: |-separated list of webpage keywords
+    (G_ "GNU|Linux|Unix|Free software|Libre software|Operating \
+system|GNU Hurd|GNU Guix package manager|Installer|Source code|\
+Package manager") #\|)
+   #:active-menu-item (C_ "website menu" "Download")
    #:css (list
           (guix-url "static/base/css/page.css")
           (guix-url "static/base/css/download.css"))
-   #:crumbs (list (crumb "Download" (guix-url "download/"))
-                  (crumb "Latest" "./"))
+   #:crumbs (list (crumb (C_ "website menu" "Download") (guix-url "download/"))
+                  (crumb (C_ "website menu" "Latest") "./"))
    #:content
    `(main
      (section
       (@ (class "page"))
-      (h2 "Download latest images")
-      (p
-       (@ (class "centered-block limit-width"))
-       "Download latest GNU Guix System images built by the "
-       (a (@ (href ,(manual-url "Continuous-Integration.html"))) "Cuirass")
-       " continuous integration system at "
-       (a (@ (href ,ci-url)) "ci.guix.gnu.org")
-       ". These images are " (b "development snapshots")
-       ", you might prefer to use stable images that can be found "
-       (a (@ (href ,(guix-url "download/"))) "here."))
+      ,(G_ `(h2 "Download latest images"))
+      ;; TRANSLATORS: Continuous Integration is a section name
+      ;; in the English (en) manual.
+      ,(G_
+        `(p
+          (@ (class "centered-block limit-width"))
+          "Download latest GNU Guix System images built by the "
+          ,(G_ (manual-href "Cuirass"  (G_ "en") (G_ "Continuous-Integration.html")))
+          " continuous integration system at "
+          (a (@ (href ,ci-url)) "ci.guix.gnu.org")
+          ". These images are " ,(G_ `(b "development snapshots"))
+          ", you might prefer to use stable images that can be found "
+          ,(G_ `(a (@ (href ,(guix-url "download/"))) "here."))))
       (div
        (@ (class "centered-block limit-width"))
        ,(map image-download images))))))

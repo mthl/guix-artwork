@@ -8,6 +8,7 @@
   #:use-module (apps base templates theme)
   #:use-module (apps base types)
   #:use-module (apps base utils)
+  #:use-module (apps i18n)
   #:use-module (apps media data)
   #:use-module (apps media templates components)
   #:use-module (apps media types)
@@ -18,18 +19,18 @@
 (define (video-list-t)
   "Return a list of videos in SHTML."
   (theme
-   #:title '("Videos")
+   #:title (C_ "webpage title" '("Videos"))
    #:description
-   "Video about GNU Guix."
+   (G_ "Video about GNU Guix.")
    #:keywords
-   '("GNU" "Linux" "Unix" "Free software" "Libre software"
-     "Operating system" "GNU Hurd" "GNU Guix package manager"
-     "Help resources" "Videos")
-   #:active-menu-item "Videos"
+   (string-split ;TRANSLATORS: |-separated list of webpage keywords
+    (G_ "GNU|Linux|Unix|Free software|Libre software|Operating \
+system|GNU Hurd|GNU Guix package manager|Help resources|Videos") #\|)
+   #:active-menu-item (C_ "website menu" "Media")
    #:css (list
           (guix-url "static/base/css/page.css")
           (guix-url "static/base/css/index.css"))
-   #:crumbs (list (crumb "Videos" (guix-url "videos/")))
+   #:crumbs (list (crumb (C_ "website menu" "Videos") (guix-url "videos/")))
    #:content
    `(main
      (@ (class "page centered-block limit-width"))

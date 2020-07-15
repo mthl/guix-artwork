@@ -10,6 +10,7 @@
   #:use-module (apps aux web)
   #:use-module (apps base templates components)
   #:use-module (apps base utils)
+  #:use-module (apps i18n)
   #:use-module (apps media types)
   #:use-module (apps media utils)
   #:use-module (srfi srfi-19)
@@ -66,7 +67,7 @@ top."
         (controls "controls"))
       ;; TODO: Insert missing video-tracks.
       (p
-       "Download video: "
+       (G_ "Download video: ")
        ,(link-subtle
          #:label (video-title video)
          #:url (video-url video)))))
@@ -97,5 +98,5 @@ given video object.
     ,(video-description video)
     ,(let ((date (video-last-updated video)))
        (if date
-           `(p "Last updated: " ,(date->string date))
+           (G_ `(p "Last updated: " ,(date->string date) ""))
            ""))))

@@ -3,6 +3,7 @@
 ;;; Copyright © 2015 Mathieu Lirzin <mthl@openmailbox.org>
 ;;; Copyright © 2013 Alex Sassmannshausen <alex.sassmannshausen@gmail.com>
 ;;; Copyright © 2017 Eric Bavier <bavier@member.fsf.org>
+;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
 ;;; Initially written by sirgazil who waives all copyright interest on this
 ;;; file.
 ;;;
@@ -25,6 +26,7 @@
   #:use-module (apps aux lists)
   #:use-module (apps aux system)
   #:use-module (apps base types)
+  #:use-module (apps i18n)
   #:use-module (haunt page)
   #:use-module (ice-9 i18n)
   #:use-module (ice-9 match)
@@ -34,7 +36,9 @@
 	    guix-irc-log-url
 	    guix-url
 	    latest-guix-version
+            locale-display-name
 	    manual-url
+            manual-url-with-language
 	    number*
 	    paginate))
 
@@ -61,6 +65,14 @@
 
 (define latest-guix-version
   (make-parameter "1.1.0"))
+
+(define (locale-display-name)
+  "Return the display name of the current locale."
+  ;; TRANSLATORS: The locale’s display name; please include a country
+  ;; code like in English (US) *only* if there are multiple
+  ;; Translation Project teams for the same language.
+  (let ((str '(G_ "English (US)")))
+    (gettext (cadr str))))
 
 
 
@@ -94,16 +106,21 @@
   (string-append "https://git.savannah.gnu.org/cgit/guix.git/tree/" subpath))
 
 
-(define* (guix-url #:optional (subpath ""))
+(define* (guix-url #:optional (subpath "") #:key (localize #t))
   "Append SUBPATH to GNU Guix root URL path (see guix-root-url-path).
 
    SUBPATH (string)
      An optional relative URL path to a resource in the GNU Guix path.
      For example: 'packages/icecat-XYZ/'.
 
+   LOCALIZE (boolean)
+     Whether to prepend the result of 'localized-root-path' to the URL path.
+
    RETURN VALUE (string)
      A URL path. For example: /software/guix/packages/icecat-XYZ/."
-  (string-append (guix-root-url-path) subpath))
+  (string-append (guix-root-url-path)
+                 (if localize (localized-root-path subpath) "")
+                 subpath))
 
 
 (define* (manual-url #:optional (subpath "")
@@ -120,7 +137,28 @@
   (string-append
    (guix-url (string-append (string-append "manual/" language
                                            "/html_node/")
-                            subpath))))
+                            subpath) #:localize #f)))
+
+(define* (manual-url-with-language _ language #:optional (subpath ""))
+  "Shorthand for manual-url without keywords for prettier output
+PO files when marked for translation.  It can be marked for translation
+as:
+
+  (G_ (manual-url-with-language (G_ \"en\") (G_ \"Some-section.html\")))
+
+   LANGUAGE (string)
+     Normalized language for the Guix manual as produced by
+'doc/build.scm' in the Guix source tree, i.e. \"en\" for the English
+manual.
+
+   SUBPATH (string)
+     Like manual-url.
+
+   RETURN VALUE (string)
+     A URL path. For example:
+     /software/guix/manual/en/html_node/System-installation.html."
+  ;; The _ argument is a placeholder for an arg added by G_, cf. i18n-howto.txt.
+  (manual-url subpath #:language language))
 
 
 

@@ -22,6 +22,7 @@ apps/blog/templates/tag.scm
 apps/download/data.scm
 apps/download/templates/components.scm
 apps/download/templates/download.scm
+apps/download/templates/download-latest.scm
 apps/media/data.scm
 apps/media/templates/components.scm
 apps/media/templates/screenshot.scm

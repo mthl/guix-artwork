@@ -1,12 +1,13 @@
 title: Running a Ganeti cluster on Guix
-date: 2020-07-17 12:00
+date: 2020-07-17 15:00
 author: Marius Bakke
 tags: Virtualization, Ganeti
 ---
-The latest addition to Guix's ever-growing list of services is a little-known
-virtualization toolkit called [Ganeti](http://www.ganeti.org/).  Ganeti is
-designed to keep virtual machines running on a cluster of servers even in the
-event of hardware failures, and to make maintenance and recovery tasks easy.
+The [latest addition](https://guix.gnu.org/manual/devel/en/guix.html#index-ganeti)
+to Guix's ever-growing list of services is a little-known virtualization toolkit
+called [Ganeti](http://www.ganeti.org/).  Ganeti is designed to keep virtual
+machines running on a cluster of servers even in the event of hardware failures,
+and to make maintenance and recovery tasks easy.
 
 It is comparable to tools such as
 [Proxmox](https://www.proxmox.com/en/proxmox-ve) or
@@ -39,7 +40,7 @@ nodes are on different power distribution lines.
 (Note: if you are looking for a way to run just a few virtual machines on
 your local computer, you are probably better off using
 [libvirt](https://guix.gnu.org/manual/en/guix.html#index-libvirt) or even a
-[Childhurd](https://guix.gnu.org/manual/devel/en/guix.html#index-hurd_002dvm_002dservice_002dtype),
+[Childhurd](https://guix.gnu.org/manual/devel/en/guix.html#index-hurd-1)
 as Ganeti is fairly heavyweight and requires a complicated networking setup.)
 
 
@@ -127,8 +128,8 @@ system.  We also create an `ifup` service that can bring network interfaces
 up and down.  By themselves these variables do nothing, we also have to add
 them to our `operating-system` configuration below.
 
-Such a configuration might be suitable for a small home network.  In most
-"real world" deployments you would use tagged VLANs, and maybe a traditional
+Such a configuration might be suitable for a small home network.  In a
+datacenter deployment you would likely use tagged VLANs, and maybe a traditional
 Linux bridge instead of Open vSwitch.  You can also forego bridging altogether
 with a `routed` networking setup, or do any combination of the three.
 
@@ -209,12 +210,12 @@ that we will use for the Ganeti servers:
                    %base-services)))
 ```
 
-Here we declare two OS "variants" for the debootstrap provider.  Debootstrap
+Here we declare two OS "variants" for the debootstrap OS provider.  Debootstrap
 variants rely on a set of scripts (known as "hooks") in the installation process
 to do things like configure networking, install bootloader, create users, etc.
 In the example above, the "buster" variant uses the default hooks provided by
 Guix which configures network and GRUB, whereas the "testing+contrib+paravirtualized"
-variant uses a local directory next to the configuration file named "paravirt-hooks"
+variant use a local directory next to the configuration file named "paravirt-hooks"
 (it is copied into the final system closure).
 
 We also declare a default `guix-os` variant provided by Guix's Ganeti service.
@@ -388,7 +389,7 @@ By default Ganeti assumes that the new instance is already configured in DNS,
 so we need `--no-name-check` and `--no-ip-check` to bypass some sanity tests.
 
 Try adding another instance, now using the Guix OS provider with the 'plain'
-(LVM, not redundant) disk backend:
+(LVM) disk backend:
 
 ```
 gnt-instance add --no-name-check --no-ip-check -o guix+default \
@@ -430,10 +431,12 @@ If you wish to start over for any reason, you can use `gnt-cluster destroy`.
 
 The declarative nature of Guix maps well to Ganetis OS API.  OS variants can be
 composed and inherit from each other, something that is not easily achieved with
-traditional configuration management tools.  This convenience does however make
-me wish other parts of Ganeti could be made declarative, such as instance and
-cluster configuration.  Nevertheless I'm happy and excited to finally be able
-to use Guix as a Ganeti host OS.
+traditional configuration management tools.  The author had a lot of fun creating
+[native data types](https://guix.gnu.org/manual/devel/en/guix.html#index-debootstrap_002dconfiguration)
+in the Guix configuration system for Ganetis OS configuration, and it made me
+wonder whether other parts of Ganeti could be made declarative such as aspects
+of instance and cluster configuration.  In any case I'm happy and excited to
+finally be able to use Guix as a Ganeti host OS.
 
 Like most services in Guix, Ganeti comes with a
 [system test](https://guix.gnu.org/blog/2016/guixsd-system-tests/)

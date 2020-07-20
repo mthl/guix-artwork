@@ -64,7 +64,7 @@ equivalent `ovs-vsctl` commands on the host once and be done with it, but we
 do it through the configuration system to ensure we don't forget it in the
 future when adding or reinstalling nodes.
 
-```
+```scheme
 (use-modules (gnu)
              (gnu packages linux)
              (gnu packages networking)
@@ -136,8 +136,8 @@ with a `routed` networking setup, or do any combination of the three.
 With this in place, we can start creating the `operating-system` configuration
 that we will use for the Ganeti servers:
 
-```
-[continued from the above configuration snippet]
+```scheme
+;; [continued from the above configuration snippet]
 
 (use-service-modules base ganeti linux networking ssh)
 

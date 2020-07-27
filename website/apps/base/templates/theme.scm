@@ -67,7 +67,7 @@
   `((doctype "html")
 
     (html
-     (@ (lang lang-tag))
+     (@ (lang ,lang-tag))
 
      (head
       ,(if (null? title)

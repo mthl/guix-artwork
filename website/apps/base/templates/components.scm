@@ -405,6 +405,7 @@ manual.
                            (menu-item #:label "Latest"
                                       #:active-item active-item
                                       #:url (guix-url "download/latest/")))))
+      ,(C_ "website menu" (menu-item #:label "Help" #:active-item active-item #:url (guix-url "help/")))
       ,(C_ "website menu" (menu-item #:label "Packages" #:active-item active-item #:url (guix-url "packages/")))
       ,(C_ "website menu" (menu-item #:label "Blog" #:active-item active-item #:url (guix-url "blog/")))
 
@@ -414,7 +415,6 @@ manual.
          (C_ "website menu" (menu-item #:label "Videos" #:active-item active-item #:url (guix-url "videos/")))
          (C_ "website menu" (menu-item #:label "Screenshots" #:active-item active-item #:url (guix-url "screenshots/")))))
 
-      ,(C_ "website menu" (menu-item #:label "Help" #:active-item active-item #:url (guix-url "help/")))
       ,(C_ "website menu" (menu-item #:label "Donate" #:active-item active-item #:url (guix-url "donate/")))
 
       ,(menu-dropdown #:label (C_ "website menu" "About") #:active-item active-item

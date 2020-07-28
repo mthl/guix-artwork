@@ -70,8 +70,11 @@
   "Return the display name of the current locale."
   ;; TRANSLATORS: The locale’s display name; please include a country
   ;; code like in English (US) *only* if there are multiple
-  ;; Translation Project teams for the same language.
-  (let ((str '(G_ "English (US)")))
+  ;; translations for the same language.
+  (let ((str '(G_ "English")))
+    ;;; XXX: If we ever add a separate English (UK) translation, then
+    ;;; change the display name to English (US), but maybe do not
+    ;;; change str, because it would break translated PO files.
     (gettext (cadr str))))
 
 

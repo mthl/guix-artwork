@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website\n"
 "Report-Msgid-Bugs-To: ludo@gnu.org\n"
-"POT-Creation-Date: 2020-07-15 08:13+0200\n"
-"PO-Revision-Date: 2020-07-15 08:21+0200\n"
+"POT-Creation-Date: 2020-07-28 10:47+0200\n"
+"PO-Revision-Date: 2020-07-28 10:49+0200\n"
 "Last-Translator: Florian Pelz <pelzflorian@pelzflorian.de>\n"
 "Language-Team: none\n"
 "Language: de\n"
@@ -19,9 +19,9 @@ msgstr ""
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
-#. Translation Project teams for the same language.
+#. translations for the same language.
 #: apps/base/utils.scm:74
-msgid "English (US)"
+msgid "English"
 msgstr "Deutsch"
 
 #: apps/base/templates/home.scm:19
@@ -64,7 +64,7 @@ msgstr ""
 msgid "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU Guix package manager|GNU Guile|Guile Scheme|Transactional upgrades|Functional package management|Reproducibility"
 msgstr "GNU|Linux|Unix|Freie Software|Libre-Software|Betriebssystem|GNU Hurd|GNU-Guix-Paketverwaltung|GNU Guile|Guile Scheme|Transaktionelle Aktualisierungen|Funktionale Paketverwaltung|Reproduzierbarkeit"
 
-#: apps/base/templates/home.scm:31 apps/base/templates/components.scm:343
+#: apps/base/templates/home.scm:31 apps/base/templates/components.scm:394
 msgctxt "website menu"
 msgid "Overview"
 msgstr "Übersicht"
@@ -193,10 +193,11 @@ msgctxt "button"
 msgid "ALL CONTACT MEDIA"
 msgstr "ALLE KONTAKTMÖGLICHKEITEN"
 
-#: apps/base/templates/theme.scm:17 apps/base/templates/components.scm:367
-#: apps/base/templates/about.scm:27 apps/base/templates/about.scm:30
-#: apps/base/templates/contact.scm:26 apps/base/templates/contribute.scm:26
-#: apps/base/templates/graphics.scm:24 apps/base/templates/security.scm:28
+#: apps/base/templates/theme.scm:17 apps/base/templates/components.scm:418
+#: apps/base/templates/components.scm:421 apps/base/templates/about.scm:27
+#: apps/base/templates/about.scm:30 apps/base/templates/contact.scm:26
+#: apps/base/templates/contribute.scm:26 apps/base/templates/graphics.scm:24
+#: apps/base/templates/security.scm:28
 msgctxt "website menu"
 msgid "About"
 msgstr "Über Guix"
@@ -215,28 +216,28 @@ msgstr "GNU Guix — Aktivitäten-Feed"
 msgid "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source code</3> under the <4>GNU AGPL</4>."
 msgstr "Mit <1>♥</1> von Menschen gemacht und durch <2>GNU Guile</2> ermöglicht. <3>Quellcode</3> unter der <4>GNU AGPL</4>."
 
-#: apps/base/templates/components.scm:47
+#: apps/base/templates/components.scm:49
 msgid "Your location:"
 msgstr "Sie befinden sich hier:"
 
-#: apps/base/templates/components.scm:49
+#: apps/base/templates/components.scm:51
 msgid "Home"
 msgstr "Hauptseite"
 
-#: apps/base/templates/components.scm:153
+#: apps/base/templates/components.scm:155
 msgid "archive"
 msgstr "Archiv"
 
-#: apps/base/templates/components.scm:337
+#: apps/base/templates/components.scm:384
 msgctxt "website menu"
 msgid "Guix"
 msgstr "Guix"
 
-#: apps/base/templates/components.scm:341
+#: apps/base/templates/components.scm:388
 msgid "website menu:"
 msgstr "Menü des Webauftritts:"
 
-#: apps/base/templates/components.scm:345
+#: apps/base/templates/components.scm:396
 #: apps/download/templates/download.scm:43
 #: apps/download/templates/download.scm:47
 #: apps/download/templates/download-latest.scm:125
@@ -245,18 +246,18 @@ msgctxt "website menu"
 msgid "Download"
 msgstr "Herunterladen"
 
-#: apps/base/templates/components.scm:351
+#: apps/base/templates/components.scm:402
 msgctxt "website menu"
 msgid "Stable"
 msgstr "Stabil"
 
-#: apps/base/templates/components.scm:354
+#: apps/base/templates/components.scm:405
 #: apps/download/templates/download-latest.scm:130
 msgctxt "website menu"
 msgid "Latest"
 msgstr "Am neuesten"
 
-#: apps/base/templates/components.scm:355
+#: apps/base/templates/components.scm:406
 #: apps/packages/templates/detailed-index.scm:31
 #: apps/packages/templates/detailed-index.scm:38
 #: apps/packages/templates/detailed-package-list.scm:34
@@ -270,7 +271,7 @@ msgctxt "website menu"
 msgid "Packages"
 msgstr "Pakete"
 
-#: apps/base/templates/components.scm:356 apps/blog/templates/post-list.scm:33
+#: apps/base/templates/components.scm:407 apps/blog/templates/post-list.scm:33
 #: apps/blog/templates/post-list.scm:39 apps/blog/templates/post.scm:29
 #: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:37
 #: apps/blog/templates/tag.scm:43
@@ -278,7 +279,7 @@ msgctxt "website menu"
 msgid "Blog"
 msgstr "Blog"
 
-#: apps/base/templates/components.scm:358
+#: apps/base/templates/components.scm:409
 #: apps/media/templates/screenshot.scm:28
 #: apps/media/templates/screenshots-overview.scm:25
 #: apps/media/templates/video.scm:29 apps/media/templates/video-list.scm:29
@@ -286,54 +287,54 @@ msgctxt "website menu"
 msgid "Media"
 msgstr "Medien"
 
-#: apps/base/templates/components.scm:361 apps/media/templates/video.scm:33
+#: apps/base/templates/components.scm:412 apps/media/templates/video.scm:33
 #: apps/media/templates/video-list.scm:33
 msgctxt "website menu"
 msgid "Videos"
 msgstr "Videos"
 
-#: apps/base/templates/components.scm:362
+#: apps/base/templates/components.scm:413
 msgctxt "website menu"
 msgid "Screenshots"
 msgstr "Screenshots"
 
-#: apps/base/templates/components.scm:364 apps/base/templates/help.scm:26
+#: apps/base/templates/components.scm:415 apps/base/templates/help.scm:26
 #: apps/base/templates/help.scm:30
 msgctxt "website menu"
 msgid "Help"
 msgstr "Hilfe"
 
-#: apps/base/templates/components.scm:365 apps/base/templates/donate.scm:26
+#: apps/base/templates/components.scm:416 apps/base/templates/donate.scm:26
 #: apps/base/templates/donate.scm:29
 msgctxt "website menu"
 msgid "Donate"
 msgstr "Spenden"
 
-#: apps/base/templates/components.scm:370 apps/base/templates/contact.scm:31
+#: apps/base/templates/components.scm:423 apps/base/templates/contact.scm:31
 msgctxt "website menu"
 msgid "Contact"
 msgstr "Kontakt"
 
-#: apps/base/templates/components.scm:371 apps/base/templates/contribute.scm:30
+#: apps/base/templates/components.scm:424 apps/base/templates/contribute.scm:30
 msgctxt "website menu"
 msgid "Contribute"
 msgstr "Mitmachen"
 
-#: apps/base/templates/components.scm:372 apps/base/templates/security.scm:31
+#: apps/base/templates/components.scm:425 apps/base/templates/security.scm:31
 msgctxt "website menu"
 msgid "Security"
 msgstr "Sicherheit"
 
-#: apps/base/templates/components.scm:373 apps/base/templates/graphics.scm:27
+#: apps/base/templates/components.scm:426 apps/base/templates/graphics.scm:27
 msgctxt "website menu"
 msgid "Graphics"
 msgstr "Grafiken"
 
-#: apps/base/templates/components.scm:391
+#: apps/base/templates/components.scm:463
 msgid " (Page <1/> of <2/>)"
 msgstr " (Seite <1/> von <2/>)"
 
-#: apps/base/templates/components.scm:415
+#: apps/base/templates/components.scm:487
 msgid "Page <1/> of <2/>. Go to another page: "
 msgstr "Seite <1/> von <2/>. Besuchen Sie eine andere Seite: "
 
@@ -455,89 +456,89 @@ msgctxt "unique lingua code like en or zh-cn"
 msgid "en"
 msgstr "de"
 
-#: apps/base/data.scm:126
+#: apps/base/data.scm:122
 msgid "Bug Reporting"
 msgstr "Fehler melden"
 
-#: apps/base/data.scm:128
+#: apps/base/data.scm:124
 msgid ""
 "If you found a bug in Guix, check whether the bug is\n"
 "       already in the <1>bug database</1>. If it is not, please <2>report it.</2>"
 msgstr "Wenn Sie einen Fehler in Guix gefunden haben, schauen Sie bitte, ob er bereits in der <1>Fehlerdatenbank</1> steht. Wenn nicht, sind wir dankbar, wenn Sie <2>ihn melden</2>."
 
-#: apps/base/data.scm:140
+#: apps/base/data.scm:136
 msgid "Development Mailing List"
 msgstr "Entwicklungs-Mailing-Liste"
 
-#: apps/base/data.scm:142
+#: apps/base/data.scm:138
 msgid "Discussion about the development of GNU Guix. <1> Until July 2013</1>, the bug-Guix mailing list filled that role. "
 msgstr "Hier finden Diskussionen über die Entwicklung von GNU Guix statt. <1>Bis zum Juli 2013</1> hat die Mailing-Liste bug-Guix diese Rolle übernommen. "
 
-#: apps/base/data.scm:152
+#: apps/base/data.scm:148
 msgid "Patches Mailing List"
 msgstr "Patches-Mailing-Liste"
 
-#: apps/base/data.scm:154
+#: apps/base/data.scm:150
 msgid ""
 "Submission of patches.  Every message sent to this mailing list\n"
 "       leads to a new entry in our <1>patch tracking tool</1>.  See <2>this page</2> for more information on how to use it; see <3>the manual<3.1>en</3.1><3.2>Submitting-Patches.html</3.2></3> for more information on how to submit a patch.  <4>Until February 2017</4>, the guix-devel mailing list filled that role."
 msgstr "Hier werden Patches eingereicht. Jede E-Mail, die an diese Liste geschickt wird, hat die Erzeugung eines neuen Eintrags in unserem <1>Werkzeug zur Erfassung von Patches</1> zur Folge. Auf <2>dieser Seite</2> finden Sie weitere Informationen darüber, wie Sie mit der Liste umgehen; <3>im Handbuch<3.1>de</3.1><3.2>Einreichen-von-Patches.html</3.2></3> sind Informationen zu finden, wie Sie einen Patch einreichen. <4>Bis zum 4. Februar 2017</4> hatte die Mailing-Liste guix-devel diese Rolle inne."
 
-#: apps/base/data.scm:173
+#: apps/base/data.scm:169
 msgid "Science Mailing List"
 msgstr "Science-Mailing-Liste"
 
-#: apps/base/data.scm:175
+#: apps/base/data.scm:171
 msgid "Discussions about using GNU Guix for scientific purposes: reproducible research, high-performance computing (HPC), and more."
 msgstr "Diskussionen über die Nutzung von GNU Guix zu wissenschaftlichen Zwecken: reproduzierbare Forschung, Hochleistungsrechnen (High-Performance Computing, HPC) und mehr."
 
-#: apps/base/data.scm:183
+#: apps/base/data.scm:179
 msgid "Commits Mailing List"
 msgstr "Commits-Mailing-Liste"
 
-#: apps/base/data.scm:185
+#: apps/base/data.scm:181
 msgid "Notifications of commits made to the <1>Git repositories</1>."
 msgstr "Benachrichtigt über Commits auf den <1>Git-Repositorys</1>."
 
-#: apps/base/data.scm:194
+#: apps/base/data.scm:190
 msgid "Security Mailing List"
 msgstr "Sicherheits-Mailing-Liste"
 
-#: apps/base/data.scm:196
+#: apps/base/data.scm:192
 msgid ""
 "This is a private mailing list that anyone can post to to <1>report security issues</1> in Guix itself or in the <2>packages</2> it provides.  Posting here allows Guix developers to address\n"
 "       the problem before it is widely publicized."
 msgstr "Dies ist eine private Mailing-Liste, an die jeder schreiben kann, um <1>Sicherheitslücken zu melden</1>, die sich in Guix selbst oder in den zur Verfügung gestellten <2>Paketen</2> befinden. Eine E-Mail an diese Liste gibt den Guix-Entwicklern die Gelegenheit, Lücken zu beseitigen, bevor sie weithin bekannt werden."
 
-#: apps/base/data.scm:208
+#: apps/base/data.scm:204
 msgid "Sysadmin Mailing List"
 msgstr "Sysadmin-Mailing-Liste"
 
-#: apps/base/data.scm:210
+#: apps/base/data.scm:206
 msgid "Private mailing list for the <1>build farm</1> system administration."
 msgstr "Private Mailing-Liste für Systemadministratoren der <1>Erstellungsfarm</1>."
 
-#: apps/base/data.scm:222
+#: apps/base/data.scm:218
 msgid "GNU System Discuss Mailing List"
 msgstr "Mailing-Liste für GNU-System-Diskussionen"
 
-#: apps/base/data.scm:224
+#: apps/base/data.scm:220
 msgid "Discussion about the development of the broader GNU system."
 msgstr "Für Diskussionen über die Entwicklung des GNU-Systems allgemein."
 
-#: apps/base/data.scm:229
+#: apps/base/data.scm:225
 msgid "GNU/Linux-libre Mailing List"
 msgstr "GNU/Linux-libre-Mailing-Liste"
 
-#: apps/base/data.scm:231
+#: apps/base/data.scm:227
 msgid "Workgroup for fully free GNU/Linux distributions."
 msgstr "Arbeitsgruppe für völlig freie GNU/Linux-Distributionen."
 
-#: apps/base/data.scm:236
+#: apps/base/data.scm:232
 msgid "GNU Info Mailing List"
 msgstr "GNU-Info-Mailing-Liste"
 
-#: apps/base/data.scm:238
+#: apps/base/data.scm:234
 msgid "GNU software announcements."
 msgstr "Ankündigungen für GNU-Software."
 
@@ -1394,121 +1395,121 @@ msgctxt "video title"
 msgid "Installation from Script"
 msgstr "Installation per Skript"
 
-#: apps/media/data.scm:27
+#: apps/media/data.scm:28
 msgid ""
 "Explains how to install Guix on distributions not running\n"
 "GNU Guix."
 msgstr "Erklärt, wie man Guix auf Distributionen installiert, auf denen noch kein GNU Guix läuft."
 
-#: apps/media/data.scm:34
+#: apps/media/data.scm:35
 msgctxt "video title"
 msgid "Everyday use of GNU Guix, Part One"
 msgstr "Alltägliche Nutzung von GNU Guix, Teil eins"
 
-#: apps/media/data.scm:36
+#: apps/media/data.scm:38
 msgid ""
 "How to install packages and how to manage software package\n"
 "generations."
 msgstr "Wie man Pakete installiert und Generationen von Softwarepaketen verwaltet."
 
-#: apps/media/data.scm:42
+#: apps/media/data.scm:44
 msgctxt "video title"
 msgid "Everyday use of GNU Guix, Part Two"
 msgstr "Alltägliche Nutzung von GNU Guix, Teil zwei"
 
-#: apps/media/data.scm:44
+#: apps/media/data.scm:47
 msgid "How to upgrade software and how to reclaim storage space."
 msgstr "Wie man Software aktualisiert und Speicherplatz zurückgewinnt."
 
-#: apps/media/data.scm:50
+#: apps/media/data.scm:53
 msgctxt "video title"
 msgid "Asking for help"
 msgstr "Um Hilfe bitten"
 
-#: apps/media/data.scm:52
+#: apps/media/data.scm:56
 msgid "How to get help from the Guix community."
 msgstr "Wie man Hilfe von der Guix-Gemeinde bekommt."
 
-#: apps/media/data.scm:58
+#: apps/media/data.scm:62
 msgctxt "video title"
 msgid "Packaging, Part One"
 msgstr "Pakete schreiben, Teil eins"
 
-#: apps/media/data.scm:60
+#: apps/media/data.scm:65
 msgid "How to set up a development environment for GNU Guix."
 msgstr "Wie man eine Entwicklungsumgebung für GNU Guix einrichtet."
 
-#: apps/media/data.scm:65
+#: apps/media/data.scm:70
 msgctxt "video title"
 msgid "Packaging, Part Two"
 msgstr "Pakete schreiben, Teil zwei"
 
-#: apps/media/data.scm:67
+#: apps/media/data.scm:73
 msgid "How to create a package recipe for not yet packaged software."
 msgstr "Wie man ein Paketrezept für Software schreibt, für die es noch kein Paket gibt."
 
-#: apps/media/data.scm:72
+#: apps/media/data.scm:78
 msgctxt "video title"
 msgid "Packaging, Part Three"
 msgstr "Pakete schreiben, Teil drei"
 
-#: apps/media/data.scm:74
+#: apps/media/data.scm:81
 msgid ""
 "How to submit a package for inclusion in the GNU Guix\n"
 "distribution."
 msgstr "Wie man ein Paket einreicht, damit es in der GNU-Guix-Distribution aufgenommen wird."
 
-#: apps/media/data.scm:84
+#: apps/media/data.scm:91
 msgctxt "screenshot title"
 msgid "Graphical log-in"
 msgstr "Grafische Anmeldung"
 
-#: apps/media/data.scm:88
+#: apps/media/data.scm:95
 msgid "Graphical log-in screen"
 msgstr "Grafischer Anmeldebildschirm"
 
-#: apps/media/data.scm:91
+#: apps/media/data.scm:98
 msgctxt "screenshot title"
 msgid "GNOME"
 msgstr "GNOME"
 
-#: apps/media/data.scm:95
+#: apps/media/data.scm:102
 msgid "GNOME desktop environment"
 msgstr "GNOME-Arbeitsumgebung"
 
-#: apps/media/data.scm:98
+#: apps/media/data.scm:105
 msgctxt "screenshot title"
 msgid "Xfce"
 msgstr "Xfce"
 
-#: apps/media/data.scm:102
+#: apps/media/data.scm:109
 msgid "Xfce desktop environment"
 msgstr "Xfce-Arbeitsumgebung"
 
-#: apps/media/data.scm:105
+#: apps/media/data.scm:112
 msgctxt "screenshot title"
 msgid "Virtual machine"
 msgstr "Virtuelle Maschine"
 
-#: apps/media/data.scm:109
+#: apps/media/data.scm:116
 msgid "Virtual machine started with 'guix system vm'"
 msgstr "Über ‚guix system vm‘ gestartete Virtuelle Maschine"
 
-#: apps/media/data.scm:112
+#: apps/media/data.scm:119
 msgctxt "screenshot title"
 msgid "Sway"
 msgstr "Sway"
 
-#: apps/media/data.scm:116
+#: apps/media/data.scm:123
 msgid "Sway window manager running wayland"
 msgstr "Sway-Fensterverwalter mit Wayland"
 
-#: apps/media/data.scm:119
+#: apps/media/data.scm:126
 msgctxt "screenshot title"
 msgid "Enlightenment"
 msgstr "Enlightenment"
 
-#: apps/media/data.scm:123
+#: apps/media/data.scm:130
 msgid "Enlightenment, Inkscape, and Serbian text"
 msgstr "Enlightenment, Inkscape und serbische Schrift"
 

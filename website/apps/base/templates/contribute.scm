@@ -55,7 +55,7 @@ Translation|I18N|L10N|Artwork") #\|)
            this end our project uses a “Contributor Covenant”, which was adapted
            from "
           ,(G_ ((lambda (url)
-                  `(a (@ (href ,url)) url))
+                  `(a (@ (href ,url)) ,url))
                 "https://contributor-covenant.org/"))
           ".  You can find the full pledge in the "
           ,(G_

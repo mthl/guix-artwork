@@ -253,7 +253,7 @@ manual.
    SUBPATH (string)
      The same as in the manual-url procedure."
   ;; The _ arguments are placeholders for args added by G_, cf. i18n-howto.txt.
-  `(a (@ (href ,(manual-url subpath #:language manual-lang))) label))
+  `(a (@ (href ,(manual-url subpath #:language manual-lang))) ,label))
 
 (define* (manual-link-yellow label manual-lang _1 #:optional (subpath "") _2)
   "Return a link-yellow component pointing to the manual.  It can be

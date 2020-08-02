@@ -8,9 +8,9 @@ h5 {
     font-size: 1.5em;
 }
 
-audio,
-img,
-video {
+article audio,
+article img,
+article video {
     display: block;
     margin: 50px auto;
     max-width: 100%;

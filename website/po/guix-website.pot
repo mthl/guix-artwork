@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: guix-website\n"
+"Project-Id-Version: guix-website 20200821\n"
 "Report-Msgid-Bugs-To: ludo@gnu.org\n"
-"POT-Creation-Date: 2020-07-28 10:47+0200\n"
+"POT-Creation-Date: 2020-08-21 02:01+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -228,34 +228,34 @@ msgctxt "website menu"
 msgid "Latest"
 msgstr ""
 
-#: apps/base/templates/components.scm:406 apps/packages/templates/detailed-index.scm:31 apps/packages/templates/detailed-index.scm:38 apps/packages/templates/detailed-package-list.scm:34 apps/packages/templates/detailed-package-list.scm:43 apps/packages/templates/index.scm:31 apps/packages/templates/index.scm:37 apps/packages/templates/package-list.scm:34 apps/packages/templates/package-list.scm:40 apps/packages/templates/package.scm:36 apps/packages/templates/package.scm:41
+#: apps/base/templates/components.scm:406 apps/base/templates/help.scm:26 apps/base/templates/help.scm:30
+msgctxt "website menu"
+msgid "Help"
+msgstr ""
+
+#: apps/base/templates/components.scm:407 apps/packages/templates/detailed-index.scm:31 apps/packages/templates/detailed-index.scm:38 apps/packages/templates/detailed-package-list.scm:34 apps/packages/templates/detailed-package-list.scm:43 apps/packages/templates/index.scm:31 apps/packages/templates/index.scm:37 apps/packages/templates/package-list.scm:34 apps/packages/templates/package-list.scm:40 apps/packages/templates/package.scm:36 apps/packages/templates/package.scm:41
 msgctxt "website menu"
 msgid "Packages"
 msgstr ""
 
-#: apps/base/templates/components.scm:407 apps/blog/templates/post-list.scm:33 apps/blog/templates/post-list.scm:39 apps/blog/templates/post.scm:29 apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:37 apps/blog/templates/tag.scm:43
+#: apps/base/templates/components.scm:408 apps/blog/templates/post-list.scm:33 apps/blog/templates/post-list.scm:39 apps/blog/templates/post.scm:29 apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:37 apps/blog/templates/tag.scm:43
 msgctxt "website menu"
 msgid "Blog"
 msgstr ""
 
-#: apps/base/templates/components.scm:409 apps/media/templates/screenshot.scm:28 apps/media/templates/screenshots-overview.scm:25 apps/media/templates/video.scm:29 apps/media/templates/video-list.scm:29
+#: apps/base/templates/components.scm:410 apps/media/templates/screenshot.scm:28 apps/media/templates/screenshots-overview.scm:25 apps/media/templates/video.scm:29 apps/media/templates/video-list.scm:29
 msgctxt "website menu"
 msgid "Media"
 msgstr ""
 
-#: apps/base/templates/components.scm:412 apps/media/templates/video.scm:33 apps/media/templates/video-list.scm:33
+#: apps/base/templates/components.scm:413 apps/media/templates/video.scm:33 apps/media/templates/video-list.scm:33
 msgctxt "website menu"
 msgid "Videos"
 msgstr ""
 
-#: apps/base/templates/components.scm:413
+#: apps/base/templates/components.scm:414
 msgctxt "website menu"
 msgid "Screenshots"
-msgstr ""
-
-#: apps/base/templates/components.scm:415 apps/base/templates/help.scm:26 apps/base/templates/help.scm:30
-msgctxt "website menu"
-msgid "Help"
 msgstr ""
 
 #: apps/base/templates/components.scm:416 apps/base/templates/donate.scm:26 apps/base/templates/donate.scm:29

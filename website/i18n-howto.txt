@@ -34,13 +34,14 @@ The following commands are an example of the translation for locale
 de_DE.  Adapt as necessary.  We assume the software requirements
 mentioned in the README are installed.
 
-To create a pot file:
+To create a pot file (adjust the package version!):
 
 guile scripts/sexp-xgettext.scm -f po/POTFILES \
                                 -o po/guix-website.pot \
                                 --from-code=UTF-8 \
                                 --copyright-holder="Ludovic Courtès" \
                                 --package-name="guix-website" \
+                                --package-version="20200821" \
                                 --msgid-bugs-address="ludo@gnu.org" \
                                 --keyword=G_ \
                                 --keyword=N_:1,2 \

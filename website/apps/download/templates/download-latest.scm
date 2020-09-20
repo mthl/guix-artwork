@@ -50,7 +50,7 @@
          (C_ "download page title" "GNU Guix System on Linux")
          (G_ "USB/DVD ISO installer of the standalone Guix System on Linux.")
          (guix-url "static/base/img/GuixSD-package.png")
-         "iso9660-image"
+         "image.iso"
          (list default-system)
          (list default-system)
          "ISO-9660")

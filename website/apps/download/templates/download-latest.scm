@@ -58,7 +58,7 @@
          (C_ "download page title" "GNU Guix System on GNU Hurd")
          (G_ "Virtual machine image of the standalone Guix System on GNU Hurd.")
          (guix-url "static/base/img/hurd.png")
-         "hurd-barebones-disk-image"
+         "hurd-barebones.qcow2"
          (list "qcow2")
          (list default-system)
          "image")))

@@ -1,7 +1,7 @@
 title: Guix Reduces Bootstrap Seed by 50%
 date: 2019-10-08 00:00
 author: Jan Nieuwenhuizen
-tags: Bootstrapping, Reproducible builds
+tags: Bootstrapping, Reproducible builds, Security
 ---
 We are delighted to announce that the first reduction by 50% of the
 Guix _bootstrap binaries_ has now been officially released!

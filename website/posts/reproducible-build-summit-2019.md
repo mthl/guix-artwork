@@ -1,7 +1,7 @@
 title: Reproducible Builds Summit, 5th edition
 date: 2019-12-16 14:00
 author: Christopher Baines, Ludovic Courtès, Andreas Enge, Jan Nieuwenhuizen
-tags: Reproducible builds, Bootstrapping
+tags: Reproducible builds, Bootstrapping, Security
 ---
 
 [For](https://guix.gnu.org/blog/2018/reproducible-builds-summit-4th-edition/)

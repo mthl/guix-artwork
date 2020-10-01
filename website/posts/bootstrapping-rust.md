@@ -1,7 +1,7 @@
 title: Bootstrapping Rust
 date: 2018-12-11 14:36
 author: Danny Milosavljevic
-tags: Bootstrapping, Reproducible builds
+tags: Bootstrapping, Reproducible builds, Security
 ---
 Slowly, systems programming languages are getting better in the sense
 of giving more guarantees and automating what can be automated without

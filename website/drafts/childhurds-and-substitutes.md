@@ -181,7 +181,7 @@ The Hurd—being based on a microkernel—has some beautiful built-in
 [neighborhurd](https://www.gnu.org/software/hurd/hurd/neighborhurd.html)s,
 [subhurd](https://www.gnu.org/software/hurd/hurd/subhurd.html)s.
 Similarly, we are adding
-[_childhurds_](https://guix.gnu.org/development/manual/en/html_node/Virtualization-Services.html#Childhurd)
+[_childhurds_](https://guix.gnu.org/manual/devel/en/html_node/Virtualization-Services.html#Childhurd)
 to this mix: a childhurd is a GNU/Hurd VM running on GNU/Linux and
 managed by Guix.
 
@@ -274,10 +274,8 @@ Signature: 1;berlin.guix.gnu.org;KHNpZ25hdHVyZSAKIChkYXRhIAogIChmbGFncyByZmM2OTc
 Any day now, more [Hurd
 substitutes](https://ci.guix.gnu.org/jobset/hurd-hello) will follow.
 
-
-XXX: "It works"...but maybe "wait" until we have substitutes to support this? XXX
-
-For development, I am using something like this
+For development, porting and fixing of packages, you can use a
+Childhurd configuration like this:
 
 ```scheme
 (use-modules (srfi srfi-1) (guix packages) (guix records))
@@ -309,12 +307,6 @@ Last login: Sat Oct  3 15:31:55 2020 from 10.0.2.2
 
   This is the GNU Hurd.  Welcome.
 
-janneke@childhurd ~$ guix environment guix
-The following derivations will be built:
-   /gnu/store/76dv7icw720jzxdylfdaphv6x09m6q93-libx11-1.6.A.drv
-   /gnu/store/1nmm09wksvvln1b51cx7fzyy4g7a0s7w-libpthread-stubs-0.4.drv
-   /gnu/store/8rigw1wzqpmhkxqj00svgaq78kg42x4z-pkg-config-0.29.2.drv
-[..]
 janneke@childhurd ~$ git config --global url."git+ssh://git.sv.gnu.org/srv/git/".insteadOf gnu:
 janneke@childhurd ~$ git clone gnu:guix
 Cloning into 'guix'...
@@ -325,16 +317,48 @@ Receiving objects: 100% (394436/394436), 137.05 MiB | 1.18 MiB/s, done.
 Resolving deltas: 100% (309572/309572), done.
 Updating files: 100% (2199/2199), done.
 janneke@childhurd ~$ cd guix
-janneke@childhurd ~$ ./bootstrap
+janneke@childhurd ~/guix$ guix environment --bootstrap\
+  --without-tests=gettext-minimal --without-tests=libgcrypt\
+  --ad-hoc gcc-toolchain@7 libgcrypt zlib
+substitute: updating substitutes from 'https://ci.guix.gnu.org'... 100.0%
+The following derivations will be built:
+   /gnu/store/1qvhg07k5dca00a514fqhcmlrpx2dvpm-profile.drv
+   /gnu/store/raa0ccwr055s7gyw4jgmfv3lk68b51rv-libgcrypt-1.8.5.drv
+   /gnu/store/vfkjnwgl4ckyklrl2z4q8x2vnlrwwyfr-gcc-toolchain-7.5.0.drv
+   /gnu/store/zh6snj49ayrpw24jn7whpzygj1fpy9cm-module-import-compiled.drv
+
+76.6 MB will be downloaded
 [..]
-janneke@childhurd ~$ ./configure --with-courage
-janneke@childhurd ~$ make
+building profile with 3 packages...
+janneke@childhurd ~/guix [env]$ ./bootstrap
 [..]
-janneke@childhurd ~$ ./pre-inst-env guix build hello
+janneke@childhurd ~/guix [env]$ ./configure --with-courage\
+  --localstatedir=/var --sysconfdir=/etc
 [..]
+janneke@childhurd ~/guix [env]$ make
+[..]
+janneke@childhurd ~/guix [env]$ ./pre-inst-env guix build hello
+substitute: updating substitutes from 'https://ci.guix.gnu.org'... 100.0%
+0.1 MB will be downloaded:
+   /gnu/store/803q5wapfnmr91ag8d9dzwabkbdxz3ay-hello-2.10
+substituting /gnu/store/803q5wapfnmr91ag8d9dzwabkbdxz3ay-hello-2.10...
+downloading from https://ci.guix.gnu.org/nar/lzip/803q5wapfnmr91ag8d9dzwabkbdxz3ay-hello-2.10 ...
+ hello-2.10  52KiB                    258KiB/s 00:00 [##################] 100.0%
+
+/gnu/store/803q5wapfnmr91ag8d9dzwabkbdxz3ay-hello-2.10
 ```
 
-just like we are used to.
+just like we are used to do…almost.  Hopefully we will be able to drop
+the [`--without-tests`
+transformations](https://guix.gnu.org/manual/devel/en/html_node/Package-Transformation-Options.html)
+and use a regular
+
+```bash
+guix environment guix
+```
+
+real soon.  First, let's see what's up with `gettext-minimal` ;-)
+
 
 
 # What's next?
@@ -345,10 +369,12 @@ obvious question because it is [all too easy to get
 discouraged](https://xkcd.com/1508), to downplay or underestimate the
 potential social impact of GNU and the Hurd.
 
-We tried to make Hurd development as easy and as pleasant as we
-could... but in a way this is “merely packaging” the amazing
-work of others.  Some of the real work that needs to be done and which
-is being discussend and is in progress right now is
+We tried to make Hurd development as easy and as pleasant as we could.
+As you have seen, things start to work pretty nicely and there is
+still plenty of work to do in Guix.  But in a way this is “merely
+packaging” the amazing work of others.  Some of the real work that
+needs to be done and which is being discussend and is in progress
+right now is
 
    * [user-space driver/modern hardware
 support](https://lists.gnu.org/archive/html/bug-hurd/2020-07/msg00042.html)

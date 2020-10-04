@@ -19,7 +19,7 @@ removed and no longer work; using Guix you can now build a GNU/Hurd VM
 just like you would build a GNU/Linux VM:
 
 ```
-guix system disk-image --target=i586-pc-gnu bare-hurd.tmpl
+guix system disk-image -t hurd-raw bare-hurd.tmpl
 ```
 
 This cross-compiles all the relevant packages for GNU/Hurd—specifically the
@@ -35,7 +35,7 @@ command:
 
 ```
 qemu-system-i386 -enable-kvm -m 512 -snapshot -hda \
-  $(guix system disk-image --target=i586-pc-gnu bare-hurd.tmpl)
+  $(guix system disk-image -t hurd-raw bare-hurd.tmpl)
 ```
 
 We are using this ready-made, minimal GNU/Hurd operating system
@@ -121,7 +121,7 @@ image was [the way Guix produces VM
 images](https://issues.guix.gnu.org/41350): it would run a target
 QEMU, e.g. `qemu-ARM`.  That does not work for the Hurd, as there is
 no `qemu-HURD`.  Without going into the hairy details, when Ludo and
-Janneke were—three patch sets, 50 messages and and 13 days
+Janneke were—three patch sets, 50 messages and 13 days
 later—almost ready to give up, Mathieu came to the rescue with his
 [brand-new
 implementation](https://git.savannah.gnu.org/cgit/guix.git/?commit=
@@ -133,7 +133,19 @@ mix_](https://lists.gnu.org/archive/html/bug-guix/2020-04/msg00610.html)
 of the two branches; we managed to create the first Hurd system that
 really felt like Guix System.
 
-XXX TODO: on the goodies of --image-type, qcow2-hurd
+The new implementation of the `disk-image` command was followed by the
+introduction of an `--image-type` or `-t` option.  This option allows to
+produce disk images targeting different supports. The `hurd-raw` and
+`hurd-qcow2` image types, producing respectively a raw Hurd disk-image and a
+Hurd QCOW2 disk-image were introduced. They can be used this way:
+
+```
+guix system disk-image -t hurd-raw bare-hurd.tmpl
+guix system disk-image -t hurd-qcow2 bare-hurd.tmpl
+```
+
+This mechanism providing much more flexibility in the Guix System image
+generation will be described in a future blog post.
 
 We also offer downloads of continuously built (actually cross-built)
 [Guix System on

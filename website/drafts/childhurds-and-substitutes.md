@@ -121,14 +121,12 @@ image was [the way Guix produces VM
 images](https://issues.guix.gnu.org/41350): it would run a target
 QEMU, e.g. `qemu-ARM`.  That does not work for the Hurd, as there is
 no `qemu-HURD`.  Without going into the hairy details, when Ludo and
-Janneke were—three patch sets, 50 messages and 13 days
-later—almost ready to give up, Mathieu came to the rescue with his
-[brand-new
-implementation](https://git.savannah.gnu.org/cgit/guix.git/?commit=
-f19cf27c2b9ff92e2c0fd931ef7fde39c376adaa) of the `disk-image` command.
-At the time, Hurd work was done on the `wip-hurd` branch and the
-disk-image work on `wip-disk-image`.  Soon after, Mathieu proposed an
-[_explosive
+Janneke were—three patch sets, 50 messages and 13 days later—almost
+ready to give up, Mathieu came to the rescue with his [brand-new
+implementation](https://git.savannah.gnu.org/cgit/guix.git/?commit=f19cf27c2b9ff92e2c0fd931ef7fde39c376adaa)
+of the `disk-image` command.  At the time, Hurd work was done on the
+`wip-hurd` branch and the disk-image work on `wip-disk-image`.  Soon
+after, Mathieu proposed an [_explosive
 mix_](https://lists.gnu.org/archive/html/bug-guix/2020-04/msg00610.html)
 of the two branches; we managed to create the first Hurd system that
 really felt like Guix System.
@@ -210,7 +208,7 @@ herd start childhurd
 
 *WARNING*
 
-![This Hurd is fully operational](https://guix.gnu.org/static/blog/img/hurd-substitutes.gif)
+![This Hurd is fully operational](/static/blog/img/hurd-substitutes.gif)
 
 It is highly addictive.
 
@@ -251,9 +249,9 @@ Hurrah!
 
 # Hurd substitutes
 
-The very first [GNU Hello
+Last Friday we produced the very first [GNU Hello
 substitute](https://ci.guix.gnu.org/803q5wapfnmr91ag8d9dzwabkbdxz3ay.narinfo)
-for the Hurd, which looks like this:
+for the Hurd:
 
 ```
 StorePath: /gnu/store/803q5wapfnmr91ag8d9dzwabkbdxz3ay-hello-2.10
@@ -270,9 +268,6 @@ System: i586-gnu
 Deriver: jqdvjhcxxnbq370y8i2c973c9zfiqrgl-hello-2.10.drv
 Signature: 1;berlin.guix.gnu.org;KHNpZ25hdHVyZSAKIChkYXRhIAogIChmbGFncyByZmM2OTc5KQogIChoYXNoIHNoYTI1NiAjMDVGOEY5NjMxRUU5QzcxM0REQUNBRTYwNUNCNjJBNzlDNUY4NEVFQTIwMjc5OERBNTQ3NURCOUU2Q0FBRDMwMSMpCiAgKQogKHNpZy12YWwgCiAgKGVjZHNhIAogICAociAjMDVBMzkzMTgwOUY1RkQyMTdGMDM4MUVDMTJEODYyNzIyOEYyNjJGRDA4MTcxQjREMzZBNEM0RjBBNjZEQkY4NSMpCiAgIChzICMwQTc2RjZGNENCOTMzQTczNzA4QkNGMzRGREExMzkyOTRGQTQxREQzQTUwQkEwOUE0ODRCQUQyOTA4MjQ5ODIxIykKICAgKQogICkKIChwdWJsaWMta2V5IAogIChlY2MgCiAgIChjdXJ2ZSBFZDI1NTE5KQogICAocSAjOEQxNTZGMjk1RDI0QjBEOUE4NkZBNTc0MUE4NDBGRjJEMjRGNjBGN0I2QzQxMzQ4MTRBRDU1NjI1OTcxQjM5NCMpCiAgICkKICApCiApCg==
 ```
-
-Any day now, more [Hurd
-substitutes](https://ci.guix.gnu.org/jobset/hurd-hello) will follow.
 
 For development, porting and fixing of packages, you can use a
 Childhurd configuration like this:
@@ -316,18 +311,40 @@ remote: Total 394436 (delta 309572), reused 392294 (delta 307893)
 Receiving objects: 100% (394436/394436), 137.05 MiB | 1.18 MiB/s, done.
 Resolving deltas: 100% (309572/309572), done.
 Updating files: 100% (2199/2199), done.
+```
+
+but before we continue let's first check the
+[weather](https://guix.gnu.org/development/manual/en/html_node/Invoking-guix-weather.html#Invoking-guix-weather):
+
+```bash
+janneke@childhurd ~$ guix weather
+computing 11079 package derivations for i586-gnu...
+looking for 11521 store items on https://ci.guix.gnu.org...
+updating substitutes from 'https://ci.guix.gnu.org'... 100.0%
+https://ci.guix.gnu.org
+  1.5% substitutes available (169 out of 11521)
+  at least 443.3 MiB of nars (compressed)
+  966.7 MiB on disk (uncompressed)
+  0.012 seconds per request (142.2 seconds in total)
+  81.0 requests per second
+[..]
+```
+
+this gives an idea of how young this project is.  Any day now, more
+[Hurd substitutes](https://ci.guix.gnu.org/jobset/hurd-master) will
+follow.  Now let's configure and build Guix:
+
+```bash
 janneke@childhurd ~$ cd guix
 janneke@childhurd ~/guix$ guix environment --bootstrap\
-  --without-tests=gettext-minimal --without-tests=libgcrypt\
   --ad-hoc gcc-toolchain@7 libgcrypt zlib
 substitute: updating substitutes from 'https://ci.guix.gnu.org'... 100.0%
 The following derivations will be built:
-   /gnu/store/1qvhg07k5dca00a514fqhcmlrpx2dvpm-profile.drv
-   /gnu/store/raa0ccwr055s7gyw4jgmfv3lk68b51rv-libgcrypt-1.8.5.drv
+   /gnu/store/gxq5flc8kwpn999dw9xxvldy9xfd0q2x-profile.drv
    /gnu/store/vfkjnwgl4ckyklrl2z4q8x2vnlrwwyfr-gcc-toolchain-7.5.0.drv
    /gnu/store/zh6snj49ayrpw24jn7whpzygj1fpy9cm-module-import-compiled.drv
 
-76.6 MB will be downloaded
+66.3 MB will be downloaded
 [..]
 building profile with 3 packages...
 janneke@childhurd ~/guix [env]$ ./bootstrap
@@ -348,17 +365,9 @@ downloading from https://ci.guix.gnu.org/nar/lzip/803q5wapfnmr91ag8d9dzwabkbdxz3
 /gnu/store/803q5wapfnmr91ag8d9dzwabkbdxz3ay-hello-2.10
 ```
 
-just like we are used to do…almost.  Hopefully we will be able to drop
-the [`--without-tests`
-transformations](https://guix.gnu.org/manual/devel/en/html_node/Package-Transformation-Options.html)
-and use a regular
-
-```bash
-guix environment guix
-```
-
-real soon.  First, let's see what's up with `gettext-minimal` ;-)
-
+just like we are used to do…almost.  We are using `--bootstrap` and a
+targeted `--ad-hoc` to avoid dependencies like `libx11`,
+`python-minimal`, and other packages that do not build yet.
 
 
 # What's next?

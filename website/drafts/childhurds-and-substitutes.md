@@ -97,6 +97,13 @@ A lot of things had to be in place to support this, we worked on
    - Add Hurd support to the [%boot-service](https://git.savannah.gnu.org/cgit/guix.git/?commit=b37c544196898cc3dfa3da07ed344fbe11abc120)
    - Add a [hurd-startup-service](https://git.savannah.gnu.org/cgit/guix.git/?commit=68d8c094659565fe19abc1c433a17337ce5cacb7),
    - Add Hurd support to the [activation-service](https://git.savannah.gnu.org/cgit/guix.git/?commit=c3fd2df705695a0dc9f393545606360be1ea6104),
+   - Add Hurd support for syscalls
+   [_define-c-struct_](https://git.savannah.gnu.org/cgit/guix.git/?commit=86f5decd2066889bf2e60df388d6c812aede0917),
+   [_ioctl_](https://git.savannah.gnu.org/cgit/guix.git/?commit=598be42dfa3aa1f6a92b5562397742b3fa96a3e0),
+   [_readdir*_](https://git.savannah.gnu.org/cgit/guix.git/?commit=82d8959e5d137b2061a68878d78a8f74a238ac44),
+   [_sockaddr-in_](https://git.savannah.gnu.org/cgit/guix.git/?commit=0d371c633f7308cfde2432d6119d386a5c63198c),
+   [_getxattr_](https://git.savannah.gnu.org/cgit/guix.git/?commit=df05842332be80ed7f53022402b95cf711163b41),
+   [_setxattr_](https://git.savannah.gnu.org/cgit/guix.git/?commit=d155c9d93496ae620829fbc33b5694e74cda9683),
 
 counting some ~200 patches by ten people over six months; including
 generic cross-compilation fixes and support, and Hurd fixes and
@@ -109,15 +116,22 @@ and [for
 Linux](https://git.kernel.org/pub/scm/linux/kernel/git/torvalds/linux.git/commit/?id=88ee9d571b6d8ed345f877e05f685814412e359b).
 
 You may notice that we are using the new `disk-image` command rather
-than the old `vm-image`.  One of the big hurdles in producing a
-VM image was the way Guix produces VM images: it would run a GNU/Linux
-system in QEMU to initialize the image.  Without going into the hairy
-details, when Ludo and Janneke were almost ready to give up, Matthieu
-came to the rescue with his brand-new implementation of the
-`disk-image` command.  At the time, Hurd work was done on the
-`wip-hurd` branch and the disk-image work on `wip-disk-image`.  Soon
-after, Mattieu proposed an "explosive mix" of the two branches, we
-managed to create the first Hurd system that really felt like Guix System.
+than the old `vm-image`.  One of the big hurdles in producing a VM
+image was [the way Guix produces VM
+images](https://issues.guix.gnu.org/41350): it would run a target
+QEMU, e.g. `qemu-ARM`.  That does not work for the Hurd, as there is
+no `qemu-HURD`.  Without going into the hairy details, when Ludo and
+Janneke were—three patch sets, 50 messages and and 13 days
+later—almost ready to give up, Mathieu came to the rescue with his
+[brand-new
+implementation](https://git.savannah.gnu.org/cgit/guix.git/?commit=
+f19cf27c2b9ff92e2c0fd931ef7fde39c376adaa) of the `disk-image` command.
+At the time, Hurd work was done on the `wip-hurd` branch and the
+disk-image work on `wip-disk-image`.  Soon after, Mathieu proposed an
+[_explosive
+mix_](https://lists.gnu.org/archive/html/bug-guix/2020-04/msg00610.html)
+of the two branches; we managed to create the first Hurd system that
+really felt like Guix System.
 
 XXX TODO: on the goodies of --image-type, qcow2-hurd
 

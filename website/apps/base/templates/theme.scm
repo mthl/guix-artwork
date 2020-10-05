@@ -1,4 +1,5 @@
 ;;; GNU Guix web site
+;;; Public domain 2020 Luis Felipe López Acevedo
 ;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 
@@ -14,6 +15,7 @@
 		(title '())
 		(description "")
 		(keywords '())
+                (index? #true)
                 (active-menu-item (C_ "website menu" "About"))
 		(css '())
 		(scripts '())
@@ -41,6 +43,11 @@
    KEYWORDS (list)
      A list of keyword strings that will be used as the value for
      the keywords meta element of the document.
+
+   INDEX? (boolean)
+     Indicate whether the page should be indexed by Internet robots,
+     such as search engine robots. If not provided, it defaults to
+     true.
 
    ACTIVE-MENU-ITEM (string)
      The label of the menu item in the navigation bar that should be
@@ -79,6 +86,10 @@
       (meta (@ (name "keywords") (content ,(string-join keywords ", "))))
       (meta (@ (name "description") (content ,description)))
       (meta (@ (name "viewport") (content "width=device-width, initial-scale=1.0")))
+      ;; Info for Internet robots.
+      ,(if index?
+           ""
+           '(meta (@ (name "robots") (content "noindex"))))
       ;; Menu prefetch.
       (link (@ (rel "prefetch") (href ,(guix-url "menu/index.html"))))
       ;; Base CSS.

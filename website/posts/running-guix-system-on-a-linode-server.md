@@ -221,7 +221,8 @@ have an easy time spinning up new Guix images!  You may need to
 down-size the Guix image to 6144MB, to save it as an image.  Then you
 can resize it again to the max size.
 
-A variant of this guide is available in the [Guix
-Cookbook](https://guix.gnu.org/cookbook/en/html_node/Running-Guix-on-a-Linode-Server.html#Running-Guix-on-a-Linode-Server). That's
-all for today!  We hope you have fun playing with your brand new Guix System
-Server!
+That's all for today!  We hope you have fun playing with your brand new
+Guix System Server!
+
+> A variant of this guide is available in the [Guix
+> Cookbook](https://guix.gnu.org/cookbook/en/html_node/Running-Guix-on-a-Linode-Server.html).

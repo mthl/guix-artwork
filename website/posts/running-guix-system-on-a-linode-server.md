@@ -1,6 +1,6 @@
 title: Running Guix System on a Linode Server
 date: 2020-10-06 14:30
-author: Christopher Lemmer Webber, Ludovic Courtès, Joshua Branson
+author: Joshua Branson, Christopher Lemmer Webber
 tags: Virtualization, Devops
 ---
 

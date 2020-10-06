@@ -1,7 +1,7 @@
 title: Running a Ganeti cluster on Guix
 date: 2020-07-17 15:00
 author: Marius Bakke
-tags: Virtualization, Ganeti
+tags: Virtualization, Devops
 ---
 The [latest addition](https://guix.gnu.org/manual/devel/en/guix.html#index-ganeti)
 to Guix's ever-growing list of services is a little-known virtualization toolkit

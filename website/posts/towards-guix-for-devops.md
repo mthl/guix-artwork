@@ -1,7 +1,7 @@
 title: Towards Guix for DevOps
 date: 2019-07-12 19:00
 author: Jakob L. Kreuze
-tags: GSoC, Programming interfaces, Scheme API
+tags: GSoC, Programming interfaces, Scheme API, Devops
 ---
 
 Hey, there! I'm Jakob, a Google Summer of Code intern and new contributor to

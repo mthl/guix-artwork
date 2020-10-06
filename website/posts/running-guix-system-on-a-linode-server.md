@@ -226,3 +226,22 @@ Guix System Server!
 
 > A variant of this guide is available in the [Guix
 > Cookbook](https://guix.gnu.org/cookbook/en/html_node/Running-Guix-on-a-Linode-Server.html).
+
+#### About GNU Guix
+
+[GNU Guix](https://guix.gnu.org) is a transactional package
+manager and an advanced distribution of the GNU system that [respects
+user
+freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).
+Guix can be used on top of any system running the kernel Linux, or it
+can be used as a standalone operating system distribution for i686,
+x86_64, ARMv7, and AArch64 machines.
+
+In addition to standard package management features, Guix supports
+transactional upgrades and roll-backs, unprivileged package management,
+per-user profiles, and garbage collection.  When used as a standalone
+GNU/Linux distribution, Guix offers a declarative, stateless approach to
+operating system configuration management.  Guix is highly customizable
+and hackable through [Guile](https://www.gnu.org/software/guile)
+programming interfaces and extensions to the
+[Scheme](http://schemers.org) language.

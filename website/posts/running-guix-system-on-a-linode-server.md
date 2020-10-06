@@ -1,7 +1,7 @@
 title: Running Guix System on a Linode Server
-date: 2020-09-22 20:00
+date: 2020-10-06 14:30
 author: Christopher Lemmer Webber, Ludovic Courtès, Joshua Branson
-tags: linode
+tags: Virtualization, Devops
 ---
 
 Christopher Lemmer Webber recently discovered how to run Guix System on a
@@ -9,7 +9,7 @@ Christopher Lemmer Webber recently discovered how to run Guix System on a
 your Linode server to run Guix System. We invite you to run your website using
 Guix system!
 
-To run Guix on a server hosted by [Linode](https://www.linode.com),
+To run Guix on a server hosted by Linode,
 start with a recommended Debian server.  We recommend using the default
 distro as a way to bootstrap Guix. Create your SSH keys.
 
@@ -26,31 +26,32 @@ Copy into it the output of:
 cat ~/.ssh/<username>_rsa.pub
 ```
 
-Power the Linode down. In the Linode's Disks/Configurations tab, resize
-the Debian disk to be smaller. 30 GB is recommended.
+Power the Linode down. In the Linode's _Disks/Configurations_ tab, resize
+the Debian disk to be smaller.  30 GB is recommended.
 
-In the Linode settings, "Add a disk", with the following:
-- Label: "Guix"
+In the Linode settings, choose _Add a disk_ with the following:
+- Label: `Guix`
 - Filesystem: ext4
 - Set it to the remaining size
 
-On the "configuration" field that comes with the default image, press
-"..." and select "Edit", then on that menu add to `/dev/sdc` the "Guix"
+On the _configuration_ field that comes with the default image, press
+_..._ and select _Edit_, then on that menu add to `/dev/sdc` the `Guix`
 label.
 
-Now "Add a Configuration", with the following:
-- Label: Guix
-- Kernel:GRUB 2 (it's at the bottom!  This step is @b{IMPORTANT!})
+Now select _Add a Configuration_, with the following:
+- Label: `Guix`
+- Kernel: GRUB 2 (it's at the bottom!  This step is *important*!
 - Block device assignment:
-- `/dev/sda`: Guix
-- `/dev/sdb`: swap
+  - `/dev/sda`: Guix
+  - `/dev/sdb`: swap
 - Root device: `/dev/sda`
-- Turn off all the filesystem/boot helpers
+- Turn off all the filesystem/boot helpers.
 
 Now power it back up, picking the Debian configuration.  Once it's booted up,
 ssh in your server via `ssh root@<your-server-IP-here>`. (You can find your
-server IP address in your Linode Summary section.) Now you can run the "install
-guix from Binary Installation from the official GNU Guix manual.
+server IP address in your Linode Summary section.)  Now you can run the
+[binary installation as explained in the
+manual](https://guix.gnu.org/manual/en/html_node/Binary-Installation.html):
 
 ```
 sudo apt-get install gpg
@@ -91,12 +92,9 @@ is below. Save the resulting file as `guix-config.scm`.
                         (mount-point "/")
                         (type "ext4"))
                       %base-file-systems))
-
-
   (swap-devices (list "/dev/sdb"))
 
-
-  (initrd-modules (cons "virtio_scsi"    ; Needed to find the disk
+  (initrd-modules (cons "virtio_scsi"    ;needed to find the disk
                         %base-initrd-modules))
 
   (users (cons (user-account
@@ -125,6 +123,7 @@ is below. Save the resulting file as `guix-config.scm`.
 ```
 
 Replace the following fields in the above configuration:
+
 ```scheme
 (host-name "my-server")       ; replace with your server name
 ; if you chose a linode server outside the U.S., then
@@ -150,7 +149,7 @@ put /home/<username>/ssh/id_rsa.pub .
 put /path/to/linode/guix-config.scm .
 ```
 
-In your first terminal, mount the guix drive:
+In your first terminal, mount the `guix` drive:
 
 ```
 mkdir /mnt/guix
@@ -173,13 +172,13 @@ guix system init guix-config.scm /mnt/guix
 ```
 
 Ok, power it down!
-Now from the Linode console, select boot and select "Guix".
+Now from the Linode console, select boot and select _Guix_.
 
 Once it boots, you should be able to log in via SSH!  (The server config
 will have changed though.)  You may encounter an error like:
 
 ```
-$ ssh root@@<server ip address>
+$ ssh root@<server ip address>
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
@@ -208,17 +207,17 @@ passwd <username> ; for the user password
 
 You may not be able to run the above commands at this point.  If you have issues
 remotely logging into your linode box via SSH, then you may still need to set
-your root and user password initially by clicking on the "Launch Console" option
-in your linode.  Choose the "Glish" instead of "Weblish".  Now you should be
+your root and user password initially by clicking on the _Launch Console_ option
+in your linode.  Choose the _Glish_ instead of _Weblish_.  Now you should be
 able to ssh into the machine.
 
-Horray!  At this point you can shut down the server, delete the
+Hooray!  At this point you can shut down the server, delete the
 Debian disk, and resize the Guix to the rest of the size.
 Congratulations!
 
 By the way, if you save it as a disk image right at this point, you'll
 have an easy time spinning up new Guix images!  You may need to
-down-size the Guix image to 6144MB, to save it as an image.  Then you
+down-size the Guix image to 6144 MB, to save it as an image.  Then you
 can resize it again to the max size.
 
 That's all for today!  We hope you have fun playing with your brand new

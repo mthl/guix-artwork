@@ -437,7 +437,7 @@ Tricky, but exciting.
 # What's next?
 
 In [an earlier post](https://guix.gnu.org/blog/2020/hello-hurd/) we
-tried to answer the question ``Why bother with the Hurd anyway?`` An
+tried to answer the question “Why bother with the Hurd anyway?” An
 obvious question because it is [all too easy to get
 discouraged](https://xkcd.com/1508), to downplay or underestimate the
 potential social impact of GNU and the Hurd.
@@ -446,21 +446,30 @@ We tried to make Hurd development as easy and as pleasant as we could.
 As you have seen, things start to work pretty nicely and there is
 still plenty of work to do in Guix.  But in a way this is “merely
 packaging” the amazing work of others.  Some of the real work that
-needs to be done and which is being discussend and is in progress
-right now is
+needs to be done and which is being discussed and is in progress
+right now includes:
 
    * [user-space driver/modern hardware
 support](https://lists.gnu.org/archive/html/bug-hurd/2020-07/msg00042.html)
-   * Implementing [Hurd Audio
-support](https://nlnet.nl/project/Hurd-Audio/), sponsored by
-[NLnet](hthtps://nlnet.nl),
+   * [audio support](https://nlnet.nl/project/Hurd-Audio/) (this is
+sponsored by [NLnet](https://nlnet.nl), thanks!),
    * [SMP
 support](https://lists.gnu.org/archive/html/bug-hurd/2020-07/msg00048.html),
-   * [64bit](https://github.com/etienne02/gnumach/tree/master/x86_64)/
-[x86_64](http://richtlijn.be/~larstiq/hurd/hurd-2020-03-28) support,
-non-Intel CPU support.
+   * [64-bit](https://github.com/etienne02/gnumach/tree/master/x86_64)/
+[x86_64](http://richtlijn.be/~larstiq/hurd/hurd-2020-03-28) support
+(!), as well as porting to non-Intel CPUs.
 
-Join `#guix` and `#hurd` on irc.freenode.net to get involved!
+All these tasks look daunting, and indeed that’s a lot of work ahead.
+But the development environment is certainly an advantage.  Take an
+example: surely anyone who’s hacked on device drivers or file systems
+before would have loved to be able to GDB into the code, restart it, add
+breakpoints and so on—that’s exactly the experience that the Hurd
+offers.  As for Guix, it will make it easy to test changes to the
+micro-kernel and to the Hurd servers, and that too has the potential to
+speed up development and make it a very nice experience.
+
+Join `#guix` and `#hurd` on irc.freenode.net or the [mailing
+lists](https://guix.gnu.org/en/contact) and get involved!
 
 #### About GNU Guix
 

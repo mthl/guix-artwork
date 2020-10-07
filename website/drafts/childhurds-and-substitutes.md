@@ -336,7 +336,7 @@ follow.  Now let's configure and build Guix:
 
 ```bash
 janneke@childhurd ~$ cd guix
-janneke@childhurd ~/guix$ guix environment --bootstrap\
+janneke@childhurd ~/guix$ guix environment --bootstrap \
   --ad-hoc gcc-toolchain@7 libgcrypt zlib
 substitute: updating substitutes from 'https://ci.guix.gnu.org'... 100.0%
 The following derivations will be built:
@@ -369,6 +369,70 @@ just like we are used to do…almost.  We are using `--bootstrap` and a
 targeted `--ad-hoc` to avoid dependencies like `libx11`,
 `python-minimal`, and other packages that do not build yet.
 
+# Isolated build environments
+
+To help achieve [reproducible
+builds](https://reproducible-builds.org/docs/definition/), Guix builds
+packages in _isolated build environments_: build environments contain
+nothing but the inputs explicitly declared in the package
+definition—[not even
+`/bin/sh`](https://lists.gnu.org/archive/html/bug-guix/2013-01/msg00041.html).
+Build environments also lack network access.  On GNU/Linux this is
+achieved by running builds in separate _namespaces_.  Besides, the
+environment contains device nodes and “special” file systems that are
+usually expected to be available: `/dev/null`, `/dev/pts`, `/dev/shm`,
+`/proc`, the loopback networking device, and so on.  (The exact contents
+[are
+documented](https://guix.gnu.org/manual/en/html_node/Build-Environment-Setup.html).)
+
+On GNU/Linux, these special files and file systems are implemented by
+the kernel.  Guix only cares about user-land software, meaning that
+these devices “leak” from the host kernel instead of being an explicit
+“input” of
+[derivations](https://guix.gnu.org/manual/en/html_node/Derivations.html),
+but that’s OK, that’s the deal: the kernel and hardware are considered
+outside of Guix’s control.
+
+What about GNU/Hurd, though?  In GNU/Hurd, `/dev/null`, a
+Linux-compatible `/proc`, the TCP/IP stack necessary to implement the
+loopback device, and even support for pipes are all implemented in
+user-land: writing to `/dev/null` amounts to talking to the `/hurd/null`
+service (or _translator_), operations on `AF_INET` sockets translate to
+remote procedure calls (RPCs) to `/servers/socket/2`, which the
+`/hurd/pfinet` program listens to, and so on.
+
+That raises an interesting question: what should the build environment
+contain on GNU/Hurd?  So far our GNU/Hurd builds were made in
+non-isolated environments; we have just [started implementing](XXX:
+link?) support for isolated builds but we’ll have to answer that
+question first.  If we stick to our approach—every piece of user-land
+software must be an explicit input of the build process—then code that
+implements TCP/IP, `/dev/null`, or even `pipe` should be an explicit
+input of any build process that needs those facilities.
+
+This principled approach can push the notion of controlled, reproducible
+build environments to a whole new level.  For example, we’ve
+[had](https://issues.guix.gnu.org/21280#7)
+[cases](https://issues.guix.gnu.org/20877#5) where the choice of the
+root file system—e.g., ext4 vs. Btrfs—has an observable effect on
+software behavior, leading to concrete issues such as test failures in
+one case and not in the other.  On GNU/Hurd, build processes could run
+their own root file system, doing away with this kind of discrepancy.
+
+On the other hand, there are practical issues that cannot be ignored:
+virtually all build processes need these facilities so they’ll need to
+be set up one way or another.  Also, one could argue that things like
+`/dev/null` have a well-defined interface that’s set in stone and that,
+consequently, how they’re implemented does not matter at all.  Can we
+say the same of the TCP/IP stack though?  Maybe not.  A line needs to be
+drawn somewhere.
+
+We have yet to decide where to draw the line and to precisely define
+what the build environment contains on GNU/Hurd.  These questions are
+closely related to bootstrapping issues we notably [discussed at the
+2019 Reproducible Builds
+Summit](https://guix.gnu.org/blog/2019/reproducible-builds-summit-5th-edition/).
+Tricky, but exciting.
 
 # What's next?
 

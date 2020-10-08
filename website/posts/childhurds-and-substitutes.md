@@ -212,12 +212,12 @@ herd start childhurd
 
 It is highly addictive.
 
-Having shaved this yak, let’s not use sight that our initial goal was to
+Having shaved this yak, let’s not lose sight that our initial goal was to
 offload builds to those GNU/Hurd VMs.  The childhurd service does all
 the heavy lifting.  To offload from GNU/Linux to my childhurd, I added
 this to my `/etc/guix/machines.scm`:
 
-```
+```scheme
  (build-machine
   (name "localhost")
   (systems (list "i586-gnu"))

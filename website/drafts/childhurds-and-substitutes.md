@@ -1,8 +1,8 @@
-title: DRAFT Childhurds and GNU/Hurd substitutes
-date: 2020-10-07 00:00
+title: Childhurds and GNU/Hurd substitutes
+date: 2020-10-08 14:15
 author: Jan (janneke) Nieuwenhuizen, Ludovic Courtès, Mathieu Othacehe
 slug: childhurds-and-substitutes
-tags: GNU/Hurd
+tags: GNU/Hurd, Reproducible builds
 ---
 
 A lot has happened since our [Hello Hurd
@@ -403,12 +403,13 @@ remote procedure calls (RPCs) to `/servers/socket/2`, which the
 
 That raises an interesting question: what should the build environment
 contain on GNU/Hurd?  So far our GNU/Hurd builds were made in
-non-isolated environments; we have just [started implementing](XXX:
-link?) support for isolated builds but we’ll have to answer that
-question first.  If we stick to our approach—every piece of user-land
-software must be an explicit input of the build process—then code that
-implements TCP/IP, `/dev/null`, or even `pipe` should be an explicit
-input of any build process that needs those facilities.
+non-isolated environments; we have just [started
+implementing](https://issues.guix.gnu.org/43857) support for isolated
+builds but we’ll have to answer that question first.  If we stick to our
+approach—every piece of user-land software must be an explicit input of
+the build process—then code that implements TCP/IP, `/dev/null`, or even
+`pipe` should be an explicit input of any build process that needs those
+facilities.
 
 This principled approach can push the notion of controlled, reproducible
 build environments to a whole new level.  For example, we’ve

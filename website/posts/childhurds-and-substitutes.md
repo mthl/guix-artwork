@@ -6,7 +6,8 @@ tags: GNU/Hurd, Reproducible builds
 ---
 
 A lot has happened since our [Hello Hurd
-post](https://guix.gnu.org/blog/2020/hello-hurd/) beginning of April.
+post](https://guix.gnu.org/en/blog/2020/a-hello-world-virtual-machine-running-the-hurd/)
+beginning of April.
 No, not nearly as much as [we joked on April 1st
 ](https://guix.gnu.org/blog/2020/deprecating-support-for-the-linux-kernel/),
 but more than enough to share and be proud of.

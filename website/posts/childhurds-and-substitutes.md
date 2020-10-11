@@ -193,8 +193,8 @@ system description:
 ```scheme
 (service hurd-vm-service-type
          (hurd-vm-configuration
-          (* 12 (expt 2 30))      ;12GiB
-          (memory-size 1024)))    ; 1GiB
+          (disk-size (* 12 (expt 2 30))) ;12GiB
+          (memory-size 1024)))           ; 1GiB
 ```
 
 and this will build a childhurd for you when you reconfigure your

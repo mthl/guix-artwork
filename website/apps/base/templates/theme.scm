@@ -107,6 +107,12 @@
 	     scripts))
 
      (body
+      (div (@ (id "confbar"))
+           (p ,(G_ `("Guix will hold its first online conference November 22nd. "
+                     "Propose a talk before November 6th. "
+                     (a
+                      (@ (href ,(guix-url "blog/2020/online-guix-day-announce-1/")))
+                      "Learn more!")))))
       ,(navbar #:active-item active-menu-item)
 
       ,(if (null? crumbs) "" (breadcrumbs crumbs))

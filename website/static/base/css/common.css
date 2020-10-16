@@ -156,6 +156,17 @@
     background-repeat: repeat-x;
 }
 
+#confbar {
+    background-color: #542414;
+    color: #F5F5F5;
+    padding: 10px;
+    text-align: center;
+}
+
+#confbar a {
+    color: white;
+}
+
 
 
 @media screen and (min-width: 1280px) {

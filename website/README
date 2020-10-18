@@ -14,8 +14,12 @@ following command to install all the software needed to build the
 website:
 
 #+BEGIN_EXAMPLE
-$ guix package -i git glibc-locales gnutls guile guile-json guile-syntax-highlight guix haunt
+  guix package -m manifest.scm
 #+END_EXAMPLE
+
+*Note*: the packages =guix= and =haunt= should have the same version of Guile,
+otherwise building the website is slow and raises bunch of warnings.  The
+manifest file takes care.
 
 * Running the website
 
@@ -23,11 +27,24 @@ To try out the website locally while you work on it, run the following
 commands:
 
 #+BEGIN_EXAMPLE
-$ cd path/to/guix-artwork/website
-$ export GUILE_LOAD_PATH=$(guix build guile-syntax-highlight)/share/guile/site/3.0:$GUILE_LOAD_PATH
-$ LC_ALL=en_US.utf8 GUIX_WEB_SITE_LOCAL=yes haunt build
-$ haunt serve
+  cd path/to/guix-artwork/website
 #+END_EXAMPLE
+
+** Build locally
+#+begin_example
+  GUIX_WEB_SITE_LOCAL=yes guix environment -C -m manifest.scm                            \
+                          -E GUIX_LOCPATH -E LANG --share=$HOME/.guix-profile/lib/locale \
+                          -E GUIX_WEB_SITE_LOCAL  --share=/tmp                           \
+                          -- haunt build
+#+end_example
+
+** Serve locally
+#+begin_example
+  guix environment -CN -m manifest.scm                                \
+       -E GUIX_LOCPATH -E LANG --share=$HOME/.guix-profile/lib/locale \
+       --share=/tmp                                                   \
+       -- haunt serve -w
+#+end_example
 
 Then, visit http://localhost:8080/en/guix.html in a web browser.
 

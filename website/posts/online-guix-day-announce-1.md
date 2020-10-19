@@ -16,6 +16,8 @@ Important dates:
 1. **November 16th**: Release of the schedule.
 1. **November 22nd**: Conference day!
 
+![Guix Days logo](/static/blog/img/Guix-Days-online-2020.png)
+
 The agenda of the day is:
 
  - pre-recorded talks with live question and answer sessions

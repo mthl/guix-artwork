@@ -52,3 +52,20 @@ a[href].syntax-symbol:hover {
 .syntax-paren7:hover { background-color:#DB7859; }
 .syntax-paren8:hover { background-color:#78DB59; }
 .syntax-paren9:hover { background-color:#5978DB; }
+
+/* Additional syntax for the post-processed manual.  */
+
+.symbol-definition-category { 	/* first argument to @deffn etc. */
+    border-width: 0 0 0px 1px;
+    border-style: solid;
+    border-color: #bbb;
+    font-size: 80%;
+    color: #333;
+    margin-right: 10px;
+    padding: 5px;
+}
+
+.symbol-definition-prototype { /* remaining arguments to @deffn etc. */
+    font-family: monospace;
+    font-size: 110%;
+}

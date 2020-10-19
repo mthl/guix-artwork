@@ -55,6 +55,8 @@ a[href].syntax-symbol:hover {
 
 /* Additional syntax for the post-processed manual.  */
 
+.symbol-definition { font-weight: normal; }
+
 .symbol-definition-category { 	/* first argument to @deffn etc. */
     border-width: 0 0 0px 1px;
     border-style: solid;

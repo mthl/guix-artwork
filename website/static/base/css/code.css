@@ -55,12 +55,15 @@ a[href].syntax-symbol:hover {
 
 /* Additional syntax for the post-processed manual.  */
 
-.symbol-definition { font-weight: normal; }
+.symbol-definition {
+    font-weight: normal;
+    border-top: 3px solid #d4cbb6;
+    background: #eee;
+    margin: 0;
+    padding: .5em 0;
+}
 
 .symbol-definition-category { 	/* first argument to @deffn etc. */
-    border-width: 0 0 0px 1px;
-    border-style: solid;
-    border-color: #bbb;
     font-size: 80%;
     color: #333;
     margin-right: 10px;
@@ -70,4 +73,10 @@ a[href].syntax-symbol:hover {
 .symbol-definition-prototype { /* remaining arguments to @deffn etc. */
     font-family: monospace;
     font-size: 110%;
+}
+
+.symbol-definition + dd {
+    background: #fafafa;
+    margin: 0;
+    padding: .5em 3% 1em 3%;
 }

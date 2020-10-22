@@ -61,7 +61,16 @@
          "hurd-barebones.qcow2"
          (list "qcow2")
          (list default-system)
-         "image")))
+         "image")
+        (make-image
+         (C_ "download page title" "GNU Guix binary")
+         (G_ "Self-contained tarball providing binaries for Guix and its
+       dependencies, to be installed on top of your Linux-based system.")
+         (guix-url "static/base/img/Guix-package.png")
+         "guix-binary.tar.xz"
+         (list default-system)
+         (list default-system)
+         "archive")))
 
 (define (build-query job system)
   (format #f "query=spec:~a+status:success+system:~a+~a"

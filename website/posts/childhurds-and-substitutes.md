@@ -438,8 +438,9 @@ Tricky, but exciting.
 
 # What's next?
 
-In [an earlier post](https://guix.gnu.org/blog/2020/hello-hurd/) we
-tried to answer the question “Why bother with the Hurd anyway?” An
+In [an earlier
+post](https://guix.gnu.org/en/blog/2020/a-hello-world-virtual-machine-running-the-hurd/)
+we tried to answer the question “Why bother with the Hurd anyway?” An
 obvious question because it is [all too easy to get
 discouraged](https://xkcd.com/1508), to downplay or underestimate the
 potential social impact of GNU and the Hurd.

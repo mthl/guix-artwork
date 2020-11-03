@@ -29,7 +29,7 @@ The agenda of the day is:
 
 ##### Until November 6th: talks proposal
 
-Propose your talks by sending them to `guix-devel@gnu.org`.  Feel free to drop
+Propose your talks by sending them to `guix-days@gnu.org`.  Feel free to drop
 in `#guix` on irc.freenode.net to discuss what you would like to talk about
 before submitting. :)
 

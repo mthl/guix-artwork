@@ -3,7 +3,7 @@
 #+TITLE: Guix website
 
 The Guix website available at https://www.gnu.org/software/guix/ is
-a static website built with [[https://haunt.dthompson.us/][Haunt]].  This directory contains the source
+a static website built with [[https://dthompson.us/projects/haunt.html][Haunt]].  This directory contains the source
 files of the website.
 
 

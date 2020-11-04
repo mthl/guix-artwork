@@ -53,6 +53,10 @@ To create a po file from a pot file, do the usual:
 cd po
 msginit -l de --no-translator
 
+To add a new translation:
+$EDITOR po/LINGUAS <-- Add full locale name (ll_LL)
+$EDITOR po/ietf-tags.scm <-- Add locale name association
+
 To merge an existing po file with a new pot file:
 
 cd po

@@ -7,4 +7,5 @@
 ;;; be used for the Azerbaijani language (not az-Latn) and zh-CN would
 ;;; be used for mainland Chinese (not zh-Hans-CN).
 (("en_US" . "en")
- ("de_DE" . "de"))
+ ("de_DE" . "de")
+ ("es_ES" . "es"))

@@ -163,7 +163,7 @@
 
           ;; So we can read/write UTF-8 files.
           (setenv "GUIX_LOCPATH"
-                  #+(file-append (specification->package "glibc-utf8-locales")
+                  #+(file-append (specification->package "glibc-locales")
                                  "/lib/locale"))
 
           ;; Use a sane default.

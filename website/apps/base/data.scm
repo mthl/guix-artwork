@@ -79,9 +79,6 @@ though we also accept other languages."))
          `(("eo"
             "Subskribu al la retmesaĝolisto \"Help\" por demandi helpon pri
 GNU Guix al la grupo.  Vi povas skribi esperantlingve.")
-           ("es"
-            "Suscríbete a la lista de correo electrónico \"Help\" por pedir
-ayuda con Guix.  Puedes escribir mensajes en Español.")
            ("fr"
             "Abonnez-vous à la liste de diffusion « Help » pour obtenir l'aide
 de la communauté sur GNU Guix par courrier électronique.  Vous

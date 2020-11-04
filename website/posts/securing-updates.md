@@ -13,7 +13,7 @@ binaries](https://guix.gnu.org/manual/en/html_node/Substitute-Authentication.htm
 builds](https://guix.gnu.org/blog/tags/reproducible-builds/),
 [bootstrapping](https://guix.gnu.org/blog/tags/bootstrapping/), and
 [security
-updates](https://guix.gnu.org/blog/tags/security-updates/).
+updates](https://guix.gnu.org/blog/tags/security/).
 
 A couple of weeks ago, we addressed the elephant in the room:
 authentication of Guix code itself by [`guix

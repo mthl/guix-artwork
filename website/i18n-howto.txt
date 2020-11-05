@@ -39,10 +39,10 @@ To create a pot file (adjust the package version!):
 guile scripts/sexp-xgettext.scm -f po/POTFILES \
                                 -o po/guix-website.pot \
                                 --from-code=UTF-8 \
-                                --copyright-holder="Ludovic Courtès" \
+                                --copyright-holder="the authors of the Guix Website" \
                                 --package-name="guix-website" \
-                                --package-version="20200821" \
-                                --msgid-bugs-address="ludo@gnu.org" \
+                                --package-version="20201005" \
+                                --msgid-bugs-address="bug-guix@gnu.org" \
                                 --keyword=G_ \
                                 --keyword=N_:1,2 \
                                 --keyword=C_:1c,2 \

@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: guix-website 20201105\n"
+"Project-Id-Version: guix-website 20201105-2\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2020-11-05 18:12+0100\n"
+"POT-Creation-Date: 2020-11-05 18:38+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1374,7 +1374,13 @@ msgstr ""
 msgid "Browse alphabetically"
 msgstr ""
 
-#: apps/packages/templates/components.scm:204 apps/packages/templates/components.scm:270
+#: apps/packages/templates/components.scm:204
+msgctxt "patches"
+msgid "None"
+msgstr ""
+
+#: apps/packages/templates/components.scm:270
+msgctxt "systems"
 msgid "None"
 msgstr ""
 

@@ -201,7 +201,7 @@
      If the list of patches is empty, return the string 'None'.
      Otherwise, return a list of links to patches."
   (if (null? patches)
-      (G_ "None")
+      (C_ "patches" "None")
       (separate
        (map (lambda (patch)
 	      (link-subtle #:label (ilink-name patch)
@@ -267,7 +267,7 @@
                   %hydra-supported-systems
                   (package-transitive-supported-systems package))))
     (if (null? systems)
-        (G_ "None")
+        (C_ "systems" "None")
         ;; TODO: There's currently no way to refer to a job like
         ;; 'coreutils-8.32' in the Cuirass web UI.  Add such a link once it's
         ;; become available.

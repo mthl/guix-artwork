@@ -4,13 +4,13 @@
 # Miguel Ángel Arruga Vivas <rosen644835@gmail.com>, 2020.
 #
 # * Se usa blog como término literal cuando no existe otra alternativa.
-# * Feed se traduce como tablón [de anuncios].
+# * Feed se traduce como tablón [de anuncios] cuando es posible.
 msgid ""
 msgstr ""
-"Project-Id-Version: guix-website 20200821\n"
-"Report-Msgid-Bugs-To: ludo@gnu.org\n"
-"POT-Creation-Date: 2020-08-21 02:01+0200\n"
-"PO-Revision-Date: 2020-11-04 14:55+0100\n"
+"Project-Id-Version: guix-website 20201005\n"
+"Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
+"POT-Creation-Date: 2020-11-05 18:12+0100\n"
+"PO-Revision-Date: 2020-11-05 18:25+0100\n"
 "Last-Translator: Miguel Ángel Arruga Vivas <rosen644835@gmail.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
 "Language: es\n"
@@ -256,7 +256,7 @@ msgctxt "button"
 msgid "ALL CONTACT MEDIA"
 msgstr "TODOS LOS MEDIOS DE CONTACTO"
 
-#: apps/base/templates/theme.scm:17 apps/base/templates/components.scm:418
+#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:418
 #: apps/base/templates/components.scm:421 apps/base/templates/about.scm:27
 #: apps/base/templates/about.scm:30 apps/base/templates/contact.scm:26
 #: apps/base/templates/contribute.scm:26 apps/base/templates/graphics.scm:24
@@ -265,17 +265,25 @@ msgctxt "website menu"
 msgid "About"
 msgstr "Acerca de"
 
-#: apps/base/templates/theme.scm:74 apps/base/templates/theme.scm:76
+#: apps/base/templates/theme.scm:81 apps/base/templates/theme.scm:83
 msgctxt "webpage title"
 msgid "GNU Guix"
 msgstr "GNU Guix"
 
-#: apps/base/templates/theme.scm:98
+#: apps/base/templates/theme.scm:109
 msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
 msgstr "GNU Guix — Tablón de actividad"
 
-#: apps/base/templates/theme.scm:115
+#: apps/base/templates/theme.scm:122
+msgid ""
+"Guix will hold its first online conference November 22nd. Propose a talk "
+"before November 6th. "
+msgstr ""
+"Guix acogerá su primera conferencia en línea el 22 de noviembre. Proponga "
+"una charla antes del 6 de noviembre. "
+
+#: apps/base/templates/theme.scm:132
 msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
@@ -307,8 +315,8 @@ msgstr "menú del sitio web:"
 #: apps/base/templates/components.scm:396
 #: apps/download/templates/download.scm:43
 #: apps/download/templates/download.scm:47
-#: apps/download/templates/download-latest.scm:125
-#: apps/download/templates/download-latest.scm:129
+#: apps/download/templates/download-latest.scm:134
+#: apps/download/templates/download-latest.scm:138
 msgctxt "website menu"
 msgid "Download"
 msgstr "Descarga"
@@ -319,7 +327,7 @@ msgid "Stable"
 msgstr "Estable"
 
 #: apps/base/templates/components.scm:405
-#: apps/download/templates/download-latest.scm:130
+#: apps/download/templates/download-latest.scm:139
 msgctxt "website menu"
 msgid "Latest"
 msgstr "Última"
@@ -589,11 +597,11 @@ msgctxt "unique lingua code like en or zh-cn"
 msgid "en"
 msgstr "es"
 
-#: apps/base/data.scm:122
+#: apps/base/data.scm:119
 msgid "Bug Reporting"
 msgstr "Informar de errores"
 
-#: apps/base/data.scm:124
+#: apps/base/data.scm:121
 msgid ""
 "If you found a bug in Guix, check whether the bug is\n"
 "       already in the <1>bug database</1>. If it is not, please <2>report it."
@@ -603,11 +611,11 @@ msgstr ""
 "       registrado en la <1>base de datos de errores</1>. Si no se encuentra\n"
 "       allí le rogamos <2>que informe de él.</2>"
 
-#: apps/base/data.scm:136
+#: apps/base/data.scm:133
 msgid "Development Mailing List"
 msgstr "Lista de correo para desarrollo"
 
-#: apps/base/data.scm:138
+#: apps/base/data.scm:135
 msgid ""
 "Discussion about the development of GNU Guix. <1> Until July 2013</1>, the "
 "bug-Guix mailing list filled that role. "
@@ -615,11 +623,11 @@ msgstr ""
 "Discusiones sobre el desarrollo de GNU Guix. <1> Hasta julio de 2013</1> la "
 "lista de correo bug-guix tenía dicho rol."
 
-#: apps/base/data.scm:148
+#: apps/base/data.scm:145
 msgid "Patches Mailing List"
 msgstr "Lista de correo para parches"
 
-#: apps/base/data.scm:150
+#: apps/base/data.scm:147
 msgid ""
 "Submission of patches.  Every message sent to this mailing list\n"
 "       leads to a new entry in our <1>patch tracking tool</1>.  See <2>this "
@@ -635,11 +643,11 @@ msgstr ""
 "html</3.2></3> para obtener más información sobre cómo enviar un parche.  "
 "<4>Hasta febrero de 2017</4>, la lista de correo guix-devel tenía dicho rol."
 
-#: apps/base/data.scm:169
+#: apps/base/data.scm:166
 msgid "Science Mailing List"
 msgstr "Lista de correo para ciencia"
 
-#: apps/base/data.scm:171
+#: apps/base/data.scm:168
 msgid ""
 "Discussions about using GNU Guix for scientific purposes: reproducible "
 "research, high-performance computing (HPC), and more."
@@ -647,22 +655,22 @@ msgstr ""
 "Discusiones sobre el uso de GNU Guix para propósitos científicos: "
 "investigación reproducible, computación de alto rendimiento (HPC) y más."
 
-#: apps/base/data.scm:179
+#: apps/base/data.scm:176
 msgid "Commits Mailing List"
 msgstr "Lista de correo para «commits»"
 
-#: apps/base/data.scm:181
+#: apps/base/data.scm:178
 msgid "Notifications of commits made to the <1>Git repositories</1>."
 msgstr ""
 "Notificaciones de las revisiones subidas («commit» en inglés) a los "
 "<1>repositorios de Git</1>."
 
-#: apps/base/data.scm:190
+#: apps/base/data.scm:187
 msgid "Security Mailing List"
 msgstr "Lista de correo de seguridad"
 
 # FUZZY FUZZY
-#: apps/base/data.scm:192
+#: apps/base/data.scm:189
 msgid ""
 "This is a private mailing list that anyone can post to to <1>report security "
 "issues</1> in Guix itself or in the <2>packages</2> it provides.  Posting "
@@ -675,39 +683,39 @@ msgstr ""
 "quienes desarrollan Guix atajar el problema antes\n"
 "       de que sea algo ampliamente conocido."
 
-#: apps/base/data.scm:204
+#: apps/base/data.scm:201
 msgid "Sysadmin Mailing List"
 msgstr "Lista de correo de administración de sistemas"
 
-#: apps/base/data.scm:206
+#: apps/base/data.scm:203
 msgid "Private mailing list for the <1>build farm</1> system administration."
 msgstr ""
 "Lista de correo privada para la administración de los sistemas de la "
 "<1>granja de construcción</1>."
 
-#: apps/base/data.scm:218
+#: apps/base/data.scm:215
 msgid "GNU System Discuss Mailing List"
 msgstr "Lista de correo para discusiones sobre el sistema GNU"
 
 # FUZZY
-#: apps/base/data.scm:220
+#: apps/base/data.scm:217
 msgid "Discussion about the development of the broader GNU system."
 msgstr ""
 "Discusiones sobre el desarrollo del sistema GNU en el sentido más amplio."
 
-#: apps/base/data.scm:225
+#: apps/base/data.scm:222
 msgid "GNU/Linux-libre Mailing List"
 msgstr "Lista de correo de GNU/Linux-libre"
 
-#: apps/base/data.scm:227
+#: apps/base/data.scm:224
 msgid "Workgroup for fully free GNU/Linux distributions."
 msgstr "Grupo de trabajo sobre distribuciones GNU/Linux completamente libres."
 
-#: apps/base/data.scm:232
+#: apps/base/data.scm:229
 msgid "GNU Info Mailing List"
 msgstr "Lista de correo informativa de GNU"
 
-#: apps/base/data.scm:234
+#: apps/base/data.scm:231
 msgid "GNU software announcements."
 msgstr "Anuncios de software de GNU."
 
@@ -857,7 +865,7 @@ msgid ""
 "            several mailing list. The messages sent to the lists are\n"
 "            public and archived online."
 msgstr ""
-"A través de correo electronico también puede obtener ayuda por parte\n"
+"A través de correo electrónico también puede obtener ayuda por parte\n"
 "            de la comunidad a través de varias listas de correo. Los "
 "mensajes\n"
 "            enviados a dichas listas son públicos y se almacenan en línea."
@@ -1752,7 +1760,7 @@ msgctxt "download page title"
 msgid "GNU Guix <1/> Binary"
 msgstr "Binarios de GNU Guix <1/>"
 
-#: apps/download/data.scm:51
+#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:67
 msgid ""
 "Self-contained tarball providing binaries for Guix and its\n"
 "       dependencies, to be installed on top of your Linux-based system."
@@ -1783,7 +1791,7 @@ msgid "<1>en</1>Requirements.html"
 msgstr "<1>es</1>Requisitos.html"
 
 #: apps/download/templates/components.scm:25
-#: apps/download/templates/download-latest.scm:93
+#: apps/download/templates/download-latest.scm:102
 msgid "Download options:"
 msgstr "Opciones de descarga:"
 
@@ -1811,7 +1819,7 @@ msgstr ""
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/download/templates/download.scm:40
-#: apps/download/templates/download-latest.scm:122
+#: apps/download/templates/download-latest.scm:131
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Installer|Source code|Package manager"
@@ -1874,16 +1882,23 @@ msgstr "Sistema GNU Guix sobre GNU Hurd"
 msgid "Virtual machine image of the standalone Guix System on GNU Hurd."
 msgstr "Imagen de máquina virtual con un sistema Guix completo sobre GNU Hurd."
 
-#: apps/download/templates/download-latest.scm:102
+#: apps/download/templates/download-latest.scm:66
+#, fuzzy
+#| msgid "GNU Guix Manual"
+msgctxt "download page title"
+msgid "GNU Guix binary"
+msgstr "Manual de GNU Guix"
+
+#: apps/download/templates/download-latest.scm:111
 msgid "Build details: "
 msgstr "Detalles de la construcción: "
 
-#: apps/download/templates/download-latest.scm:116
+#: apps/download/templates/download-latest.scm:125
 msgctxt "webpage title"
 msgid "Download latest"
 msgstr "Descargar lo último"
 
-#: apps/download/templates/download-latest.scm:118
+#: apps/download/templates/download-latest.scm:127
 msgid ""
 "Download latest GNU Guix System images built by the Cuirass continuous\n"
 "integration system."
@@ -1891,13 +1906,13 @@ msgstr ""
 "Descargar las últimas imagenes del sistema GNU Guix construidas con el "
 "sistemade integración continua Cuirass."
 
-#: apps/download/templates/download-latest.scm:135
+#: apps/download/templates/download-latest.scm:144
 msgid "Download latest images"
 msgstr "Descarga de las últimas imágenes"
 
 #. TRANSLATORS: Continuous Integration is a section name
 #. in the English (en) manual.
-#: apps/download/templates/download-latest.scm:138
+#: apps/download/templates/download-latest.scm:147
 msgid ""
 "Download latest GNU Guix System images built by the "
 "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> continuous "

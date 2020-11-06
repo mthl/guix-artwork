@@ -1,16 +1,15 @@
 # German translations for guix-website package.
-# Copyright (C) 2020 Ludovic Courtès
+# Copyright (C) 2020 the authors of the Guix Website
 # This file is distributed under the same license as the guix-website package.
 # Florian Pelz <pelzflorian@pelzflorian.de>, 2019, 2020.
-#
 msgid ""
 msgstr ""
-"Project-Id-Version: guix-website\n"
-"Report-Msgid-Bugs-To: ludo@gnu.org\n"
-"POT-Creation-Date: 2020-07-28 10:47+0200\n"
-"PO-Revision-Date: 2020-07-28 10:49+0200\n"
+"Project-Id-Version: guix-website 20201005-2\n"
+"Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
+"POT-Creation-Date: 2020-11-05 18:38+0100\n"
+"PO-Revision-Date: 2020-11-06 08:20+0100\n"
 "Last-Translator: Florian Pelz <pelzflorian@pelzflorian.de>\n"
-"Language-Team: none\n"
+"Language-Team: German <translation-team-de@lists.sourceforge.net>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -212,7 +211,11 @@ msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
 msgstr "GNU Guix — Aktivitäten-Feed"
 
-#: apps/base/templates/theme.scm:115
+#: apps/base/templates/theme.scm:122
+msgid "Guix will hold its first online conference November 22nd. Propose a talk before November 6th. "
+msgstr "Guix wird seine erste Online-Konferenz am 22. November abhalten. Reichen Sie einen Vortrag vor dem 6. November ein. "
+
+#: apps/base/templates/theme.scm:132
 msgid "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source code</3> under the <4>GNU AGPL</4>."
 msgstr "Mit <1>♥</1> von Menschen gemacht und durch <2>GNU Guile</2> ermöglicht. <3>Quellcode</3> unter der <4>GNU AGPL</4>."
 
@@ -571,7 +574,7 @@ msgstr "Handbuch von GNU Guix"
 msgid ""
 "Documentation for GNU Guix is available\n"
 "            online.  You may also find more information about Guix by running <1>info guix</1>."
-msgstr "Sie können Dokumentation für GNU Guix online lesen. Sie können weitere Informationen über Guix auch bekommen, indem Sie <1>info guix</1> ausführen."
+msgstr "Sie können Dokumentation für GNU Guix online lesen. Sie können weitere Informationen über Guix auch bekommen, indem Sie <1>info guix.de</1> ausführen."
 
 #: apps/base/templates/help.scm:53
 msgid "Read Guix manual"
@@ -1607,9 +1610,14 @@ msgid "Browse alphabetically"
 msgstr "Alphabetisch anzeigen"
 
 #: apps/packages/templates/components.scm:204
-#: apps/packages/templates/components.scm:270
+msgctxt "patches"
 msgid "None"
 msgstr "Keine"
+
+#: apps/packages/templates/components.scm:270
+msgctxt "systems"
+msgid "None"
+msgstr "Keines"
 
 #: apps/packages/templates/detailed-index.scm:22
 #: apps/packages/templates/detailed-package-list.scm:25

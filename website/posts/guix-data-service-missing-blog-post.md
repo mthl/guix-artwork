@@ -10,7 +10,7 @@ provides data about Guix over time, at least that is what the
 2019][announcement], and while there have been plenty of long emails
 to the guix-devel mailing list about it and a [blog post about a
 related Outreachy project][outreachy-blog-post], this is the first
-blog post covering what is it and why it exists.
+blog post covering what it is and why it exists.
 
 [data-service.git]: https://git.savannah.gnu.org/cgit/guix/data-service.git/
 [README]: https://data.guix.gnu.org/README

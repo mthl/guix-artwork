@@ -178,7 +178,7 @@ Coordinator to send these requests.
 Following on from one of the initial motivations for the Guix Data
 Service, comparing two revisions to determine which packages have
 changed, the schema for the database is organised to facilitate fast
-comparisons between to arbitrary revisions.  The compromise here is
+comparisons between two arbitrary revisions.  The compromise here is
 the storage space taken up.
 
 Similar to version control systems, an alternative schema would have
@@ -193,7 +193,7 @@ that revision, there is some indirection, and deduplication involved.
 For example, each revision is associated against entries in the
 `package_derivations` table, which represents a package plus
 derivation for a specific system and target.  If this information
-doesn't differ between to revisions, they'll just reference the same
+doesn't differ between two revisions, they'll just reference the same
 entries in this table.
 
 # Making information available

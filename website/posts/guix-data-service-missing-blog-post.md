@@ -22,7 +22,7 @@ blog post covering what it is and why it exists.
 The initial motivation came from trying to automate aspects of
 reviewing patches for Guix.  If you have some patches for Guix, one
 aspect of review might be to apply the patches and then build the
-affected patches.  How do you know what packages are affected though?
+affected packages.  How do you know what packages are affected though?
 
 You could try and guess based on the content of the patches, and this
 could work some of the time, but because Guix packages relate to one

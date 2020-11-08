@@ -1,5 +1,5 @@
 title: Introduction to the Guix Data Service, the missing blog post
-date: 2020-11-01 12:00
+date: 2020-11-08 20:30
 author: Christopher Baines
 tags: Guix Data Service, Reproducible builds, Continuous integration
 ---
@@ -13,14 +13,14 @@ related Outreachy project][outreachy-blog-post], this is the first
 blog post covering what is it and why it exists.
 
 [data-service.git]: https://git.savannah.gnu.org/cgit/guix/data-service.git/
-[README]: http://data.guix.gnu.org/README
+[README]: https://data.guix.gnu.org/README
 [announcement]: https://lists.gnu.org/archive/html/guix-devel/2019-02/msg00089.html
-[outreachy-blog-post]: /en/blog/2020/improve-internationalization-support-for-the-guix-data-service/
+[outreachy-blog-post]: https://guix.gnu.org/en/blog/2020/improve-internationalization-support-for-the-guix-data-service/
 
 # Why?
 
 The initial motivation came from trying to automate aspects of
-reviewing patches for Guix.  If you have some patches for Guix, oneq
+reviewing patches for Guix.  If you have some patches for Guix, one
 aspect of review might be to apply the patches and then build the
 affected patches.  How do you know what packages are affected though?
 
@@ -28,7 +28,10 @@ You could try and guess based on the content of the patches, and this
 could work some of the time, but because Guix packages relate to one
 another, changing one package may cause dependent packages to change.
 Additionally, there are places in Guix where small changes could
-affect a large number of packages, build systems for example.
+affect a large number of packages, build systems for example.  The
+`guix refresh -l` command is really helpful when testing packages
+locally, but it can in some cases miss some packages that are effected
+by changes, as it only explores the package graph.
 
 The approach taken to working out what packages are affected by a set
 of patches, was to record information about all the packages in the
@@ -39,6 +42,8 @@ can then compare the data to determine what's changed.  This goes
 beyond finding out what packages are affected, and includes things
 like looking at changes to lint warnings, channel news entries, and
 more.
+
+[![Screenshot of the comparision between two commits](https://guix.gnu.org/static/blog/img/data-guix-gnu-org-compare.png)](https://data.guix.gnu.org/compare?base_commit=f503cfc9c51ea4ddd6cc9c027f1897e7866e411e&target_commit=f161bd2cd7af6a0a7027a2e4ed97912027d5033d)
 
 This approach of storing information about revisions has applications
 beyond reviewing patches, which is another reason why this approach
@@ -55,25 +60,26 @@ because the Guix Data Service can store the available package names
 and versions in a range of revisions, it can provide this information
 more quickly and with less effort.
 
+[![Screenshot of a Guix Data Service package versions page for emacs](https://guix.gnu.org/static/blog/img/data-guix-gnu-org-emacs-versions.png)](https://data.guix.gnu.org/repository/1/branch/master/package/emacs)
+
 Now, questions about package versions is something a user of Guix
 might have.  However, so far I haven't seen the Guix Data Service as
 something that users of Guix should necessarily use or be aware of.
 Instead, I think it has a place to provide information to enable
 things that users of Guix would directly use.
 
-I don't think there's a great example of something building on the
-Guix Data Service, but there are a few in varying states of
-development.
-
-I've been attempting to automate parts of a [weekly news publication
-about Guix][weekly-news] through using the Guix Data Service, I've
-also been writing a [service for building
+There are a few applications of data from the Guix Data Service in
+varying states of development. I've been attempting to automate parts
+of a [weekly news publication about Guix][weekly-news] through using
+the Guix Data Service, I've also been writing a [service for building
 derivations][guix-build-coordinator], which I've been using in
 conjunction with the Guix Data Service to provide substitutes.  As
 part of an Outreachy internship on improving internationalisation
 support in the Guix Data Service, Danjela worked on creating a package
 search page for the Guix website, which wrapped the package search
 functionality in the Guix Data Service.
+
+[![Screenshot of the prototype weekly news site](https://guix.gnu.org/static/blog/img/prototype-guix-weekly-news.png)](https://prototype-guix-weekly-news.cbaines.net/)
 
 [weekly-news]: https://git.cbaines.net/guix/weekly-news/
 [guix-build-coordinator]: https://git.cbaines.net/guix/build-coordinator/
@@ -85,11 +91,13 @@ up data about which packages in Guix don't build reproducibly.
 Hopefully the Guix Data Service is well positioned to help with
 technical questions like this.
 
+[![Screenshot of the Guix Data Service package reproducibility page](https://guix.gnu.org/static/blog/img/data-guix-patches-package-reproducibility.png)](https://data.guix-patches.cbaines.net/repository/2/branch/master/latest-processed-revision/package-reproducibility)
+
 # Architecture
 
 The Guix Data Service is written in Guile, and uses PostgreSQL for the
-database.  There's plenty of SQL queries, including some quite long
-ones in the code as well.
+database.  There's plenty of SQL queries in the code, including some
+quite long ones.
 
 There are several scripts which act as entry points to different parts
 of the Guile codebase:
@@ -107,6 +115,11 @@ There's also other scripts which perform a range of functions, like
 backing up the database, generating a minimal database which is
 hopefully small in size and querying build/substitute servers for
 information.
+
+When running on a Guix system, there's a [service to help with
+deployment][guix-manual-guix-data-service].
+
+[guix-manual-guix-data-service]: https://guix.gnu.org/manual/devel/en/html_node/Guix-Services.html#Guix-Data-Service
 
 # Getting information in
 
@@ -146,11 +159,14 @@ a long process to extract information about that revision of Guix, and
 store it in the database.
 
 The first part of this is to actually fetch and build the relevant
-revision.  The Guix Data Service uses channels, the same code used by
-`guix pull` and `guix time-machine`, in conjunction with the `(guix
-inferior)` module for communication with another revision of Guix.
-It's through the inferior REPL that information from the target
-revision is extracted.
+revision.  The Guix Data Service uses [channels][guix-manual-channels]
+and [inferiors][guix-manual-inferiors], the same code used by `guix
+pull` and `guix time-machine` for communication with another revision
+of Guix.  It's through the inferior REPL that information from the
+target revision is extracted.
+
+[guix-manual-channels]: https://guix.gnu.org/manual/devel/en/html_node/Channels.html
+[guix-manual-inferiors]: https://guix.gnu.org/manual/devel/en/html_node/Inferiors.html
 
 In addition to receiving information about new revisions, the Guix
 Data Service can accept POST requests to receive information about
@@ -242,3 +258,22 @@ last two years, I've linked to most of these below:
  - [2019/05/06 - Linting, and how to get the information in to the Guix Data Serivce](https://lists.gnu.org/archive/html/guix-devel/2019-05/msg00127.html)
  - [2019/04/04 - Progress with the Guix Data Service](https://lists.gnu.org/archive/html/guix-devel/2019-04/msg00094.html)
  - [2019/02/08 - Tracking and inspecting how Guix changes over time](https://lists.gnu.org/archive/html/guix-devel/2019-02/msg00089.html)
+
+#### About GNU Guix
+
+[GNU Guix](https://www.gnu.org/software/guix) is a transactional package
+manager and an advanced distribution of the GNU system that [respects
+user
+freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).
+Guix can be used on top of any system running the Hurd or the Linux
+kernel, or it can be used as a standalone operating system distribution
+for i686, x86_64, ARMv7, and AArch64 machines.
+
+In addition to standard package management features, Guix supports
+transactional upgrades and roll-backs, unprivileged package management,
+per-user profiles, and garbage collection.  When used as a standalone
+GNU/Linux distribution, Guix offers a declarative, stateless approach to
+operating system configuration management.  Guix is highly customizable
+and hackable through [Guile](https://www.gnu.org/software/guile)
+programming interfaces and extensions to the
+[Scheme](http://schemers.org) language.

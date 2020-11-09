@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: guix-website 20201005-2\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
 "POT-Creation-Date: 2020-11-05 18:38+0100\n"
-"PO-Revision-Date: 2020-11-05 18:48+0100\n"
+"PO-Revision-Date: 2020-11-09 13:36+0100\n"
 "Last-Translator: Miguel Ángel Arruga Vivas <rosen644835@gmail.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
 "Language: es\n"
@@ -74,10 +74,11 @@ msgstr ""
 "transaccionales|Gestión de paquetes funcional|Gestor de paquetes funcional|"
 "Reproducibilidad"
 
+# FUZZY FUZZY FUZZY
 #: apps/base/templates/home.scm:31 apps/base/templates/components.scm:394
 msgctxt "website menu"
 msgid "Overview"
-msgstr "Vista previa"
+msgstr "Página principal"
 
 #: apps/base/templates/home.scm:41
 msgid "Summary"
@@ -156,7 +157,7 @@ msgstr ""
 
 #: apps/base/templates/home.scm:132
 msgid "Instructional videos"
-msgstr "Vídeos instructivos"
+msgstr "Material audiovisual instructivo"
 
 #: apps/base/templates/home.scm:146
 msgctxt "button"
@@ -210,9 +211,9 @@ msgid ""
 "video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm</1> (1 minute, 30 "
 "seconds)."
 msgstr ""
-"Vídeo: <1>Demostración de Guix en otra distribución GNU/Linux<1.1/>https://"
-"audio-video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm</1> (1 minuto "
-"30 segundos)."
+"Material audiovisual: <1>Demostración de Guix en otra distribución GNU/"
+"Linux<1.1/>https://audio-video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2."
+"webm</1> (1 minuto 30 segundos)."
 
 # FUZZY FUZZY FUZZY
 #: apps/base/templates/home.scm:215
@@ -319,7 +320,7 @@ msgstr "menú del sitio web:"
 #: apps/download/templates/download-latest.scm:138
 msgctxt "website menu"
 msgid "Download"
-msgstr "Descarga"
+msgstr "Descargar"
 
 #: apps/base/templates/components.scm:402
 msgctxt "website menu"
@@ -372,7 +373,7 @@ msgstr "Medios"
 #: apps/media/templates/video-list.scm:33
 msgctxt "website menu"
 msgid "Videos"
-msgstr "Vídeos"
+msgstr "Material audiovisual"
 
 #: apps/base/templates/components.scm:414
 msgctxt "website menu"
@@ -771,7 +772,7 @@ msgstr "Obtenga la tarjeta de referencia de Guix"
 
 #: apps/base/templates/help.scm:72
 msgid "Videos"
-msgstr "Vídeos"
+msgstr "Material audiovisual"
 
 # FUZZY
 #: apps/base/templates/help.scm:73
@@ -781,13 +782,14 @@ msgid ""
 "            well as other topics that present advanced features of the\n"
 "            system."
 msgstr ""
-"La colección de vídeos incluye material instructivo para ayudarle\n"
-"            a empezar a usar GNU Guix de manera habitual, así como otros\n"
-"            temas que presentan características avanzadas del sistema."
+"La colección de medios audiovisuales incluye material instructivo para\n"
+"            ayudarle a empezar a usar GNU Guix de manera habitual, así\n"
+"            como otros temas que presentan características avanzadas\n"
+"            del sistema."
 
 #: apps/base/templates/help.scm:81
 msgid "Browse all videos"
-msgstr "Explore todos los vídeos"
+msgstr "Explore todos los materiales audiovisuales"
 
 #: apps/base/templates/help.scm:89
 msgid "Cookbook"
@@ -961,7 +963,7 @@ msgstr ""
 "Contribución'',\n"
 "           que fue adaptado de <1>https://www.contributor-covenant.org/"
 "translations</1>.\n"
-"           Puede encontrar el texto completo en el fichero <2>CODE-OF-"
+"           Puede encontrar el texto completo en el archivo <2>CODE-OF-"
 "CONDUCT</2>."
 
 #: apps/base/templates/contribute.scm:72
@@ -983,7 +985,7 @@ msgid ""
 "            including software, web site, documentation, and artwork, are\n"
 "            available in <1>Git repositories</1> at Savannah. "
 msgstr ""
-"Los ficheros de fuentes para todos los componentes del proyecto,\n"
+"Los archivos de fuentes para todos los componentes del proyecto,\n"
 "            incluyendo el software, la página web, documentación y obras\n"
 "            de arte se encuentran disponibles en los\n"
 "            <1>repositorios Git</1> en Savannah. "
@@ -1028,7 +1030,7 @@ msgid ""
 "            developers discover what we do. "
 msgstr ""
 "Puede leer la <1>documentación del proyecto</1> disponible en el\n"
-"            sistema y en la página web, y ayudarnos a identificar\n"
+"            sistema y en el sitio web, y ayudarnos a identificar\n"
 "            errores u omisiones. La creación de nuevos manuales,\n"
 "            tutoriales y artículos del blog también ayuda a usuarias y\n"
 "            desarrolladoras a descubrir lo que hacemos."
@@ -1059,7 +1061,7 @@ msgid ""
 "            favorite tools with the Guix package manager, and be\n"
 "            productive using the system. "
 msgstr ""
-"Se debe empaquetar una gran cantidad de software, documentación y ficheros\n"
+"Se debe empaquetar una gran cantidad de software, documentación y archivos\n"
 "            de datos para hacer más fácil a quienes usan el sistema\n"
 "            instalar sus herramientas favoritas con el gestor de paquetes\n"
 "            Guix y sacar provecho al uso del sistema."
@@ -1202,7 +1204,7 @@ msgid ""
 "            tools.  Visit their websites and help translate. "
 msgstr ""
 "<1>Los paquetes de software</1> proporcionados por el sistema pueden sus\n"
-"            propias herramientas de traducción. Visite sus páginas web y "
+"            propias herramientas de traducción. Visite sus sitios web y "
 "ayude\n"
 "            en la traducción."
 
@@ -1494,7 +1496,7 @@ msgid ""
 "          by Nikita Karetnikov in 2013 and <2>superseded</2> by the golden "
 "GNU in 2016."
 msgstr ""
-"Los ficheros de fuentes (SVG) para estos logotipos, sus variantes y otras\n"
+"Los archivos de fuentes (SVG) para estos logotipos, sus variantes y otras\n"
 "          obras de arte usadas en los diferentes componentes del proyecto\n"
 "          GNU Guix están disponibles en el repositorio <1>guix-artwork</1>,\n"
 "          incluyendo el diseño previo del logotipo de GNU Guix creado por\n"
@@ -1806,14 +1808,14 @@ msgstr "<1>Instrucciones de instalación</1>."
 #: apps/download/templates/download.scm:34
 msgctxt "webpage title"
 msgid "Download"
-msgstr "Descarga"
+msgstr "Descargar"
 
 #: apps/download/templates/download.scm:36
 msgid ""
 "Installers and source files for GNU Guix.  GNU Guix can be\n"
 "   installed on different GNU/Linux distributions."
 msgstr ""
-"Instaladores y ficheros de código fuente para GNU Guix. GNU Guix se puede\n"
+"Instaladores y archivos de código fuente para GNU Guix. GNU Guix se puede\n"
 "   instalar sobre diferentes distribuciones GNU/Linux."
 
 #. TRANSLATORS: |-separated list of webpage keywords
@@ -1830,7 +1832,7 @@ msgstr ""
 
 #: apps/download/templates/download.scm:52
 msgid "Download"
-msgstr "Descarga"
+msgstr "Descargar"
 
 #. TRANSLATORS: System Installation is a section name
 #. in the English (en) manual.
@@ -1894,7 +1896,7 @@ msgstr "Detalles de la construcción: "
 #: apps/download/templates/download-latest.scm:125
 msgctxt "webpage title"
 msgid "Download latest"
-msgstr "Descargar lo último"
+msgstr "Descargar la última versión"
 
 #: apps/download/templates/download-latest.scm:127
 msgid ""
@@ -1902,11 +1904,11 @@ msgid ""
 "integration system."
 msgstr ""
 "Descargar las últimas imagenes del sistema GNU Guix construidas con el "
-"sistemade integración continua Cuirass."
+"sistema de integración continua Cuirass."
 
 #: apps/download/templates/download-latest.scm:144
 msgid "Download latest images"
-msgstr "Descarga de las últimas imágenes"
+msgstr "Descargar las últimas imágenes"
 
 #. TRANSLATORS: Continuous Integration is a section name
 #. in the English (en) manual.
@@ -2057,7 +2059,7 @@ msgstr "Enlightenment, Inkscape y texto en serbio"
 
 #: apps/media/templates/components.scm:70
 msgid "Download video: "
-msgstr "Descargar vídeo: "
+msgstr "Descargar archivo audiovisual: "
 
 #: apps/media/templates/components.scm:101
 msgid "Last updated: <1/>"
@@ -2076,11 +2078,11 @@ msgstr "Vista previa de todas las capturas de pantalla."
 #: apps/media/templates/video.scm:22
 msgctxt "webpage title"
 msgid "Video"
-msgstr "Vídeos"
+msgstr "Material audiovisual"
 
 #: apps/media/templates/video.scm:24 apps/media/templates/video-list.scm:24
 msgid "Video about GNU Guix."
-msgstr "Vídeos sobre GNU Guix."
+msgstr "Material audiovisual sobre GNU Guix."
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
@@ -2090,7 +2092,7 @@ msgid ""
 "Guix package manager|Help resources|Videos"
 msgstr ""
 "GNU|Linux|Unix|Free software|Software libre|Sistema operativo|GNU Hurd|"
-"Gestor de paquetes GNU Guix|Recursos de ayuda|Vídeos|Videos"
+"Gestor de paquetes GNU Guix|Recursos de ayuda|Vídeos|Videos|Audiovisual"
 
 #: apps/media/templates/video.scm:45
 msgctxt "button"
@@ -2105,7 +2107,7 @@ msgstr "Siguiente →"
 #: apps/media/templates/video-list.scm:22
 msgctxt "webpage title"
 msgid "Videos"
-msgstr "Vídeos"
+msgstr "Material audiovisual"
 
 #: apps/packages/templates/components.scm:59
 #: apps/packages/templates/package.scm:56
@@ -2118,7 +2120,7 @@ msgstr "<1>Licencia:</1> <2/>."
 
 #: apps/packages/templates/components.scm:70
 msgid "<1>Website:</1> <2/>."
-msgstr "<1>Página web:</1> <2/>."
+msgstr "<1>Sitio web:</1> <2/>."
 
 #: apps/packages/templates/components.scm:74
 msgid "<1>Package source:</1> <2/>."
@@ -2197,7 +2199,7 @@ msgstr "Paquetes — "
 
 #: apps/packages/templates/package.scm:62
 msgid "<1>Website: </1>"
-msgstr "<1>Página web: </1>"
+msgstr "<1>Sitio web: </1>"
 
 #: apps/packages/templates/package.scm:65
 msgid "<1>License: </1>"

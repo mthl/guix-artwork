@@ -40,6 +40,9 @@ back in July.  The manual explains [what you need to know as a
 user](https://guix.gnu.org/manual/devel/en/html_node/Channel-Authentication.html)
 and [as a channel
 author](https://guix.gnu.org/manual/devel/en/html_node/Specifying-Channel-Authorizations.html).
+There’s also a new [`guix git authenticate`
+command](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-git-authenticate.html)
+to use this authentication mechanism for arbitrary Git repositories!
 
 ![Example commit graph.](https://guix.gnu.org/static/blog/img/commit-graph.svg)
 
@@ -99,7 +102,12 @@ addition of three [*package transformation
 options*](https://guix.gnu.org/manual/en/html_node/Package-Transformation-Options.html):
 `--with-debug-info` ([always debug in good
 conditions](https://guix.gnu.org/manual/devel/en/html_node/Rebuilding-Debug-Info.html)!),
-`--with-c-toolchain`, and `--without-tests`.
+`--with-c-toolchain`, and `--without-tests`.  Transformations are now
+recorded in the profile and replayed upon `guix upgrade`.  The new
+`(guix transformations)` module additionally provides a [simple
+interface to the transformation options available at the command
+line](https://guix.gnu.org/manual/devel/en/html_node/Defining-Package-Variants.html),
+which is useful if you want to use such transformations in a manifest.
 
 The *reference manual* has been expounded: there’s a new [“Getting
 Started”
@@ -118,9 +126,19 @@ Last but not least, *the manual is fully translated* to
 translations in [Russian](https://guix.gnu.org/manual/ru/html_node/) and
 [Chinese](https://guix.gnu.org/manual/zh-cn/html_node/).
 
-### More goodies
+### GNU/Hurd, disk images, services, packages, …
 
-But there’s more!  Support for *whole-system cross-compilation*—as in
+But there’s more!  If you’re interesting in bringing applications from
+Guix to Guix-less machines, [`guix pack
+-RR`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-pack.html#Invoking-guix-pack)
+now supports a *new ‘fakechroot’ execution engine* for relocatable
+packs, and the ability to choose among different engines at run time
+with the `GUIX_EXECUTION_ENGINE` variable.  The `fakechroot` engine
+[improves performance compared to the `proot`
+engine](https://hpc.guix.info/blog/2020/05/faster-relocatable-packs-with-fakechroot/),
+for hosts that do not support unprivileged user namespaces.
+
+Support for *whole-system cross-compilation*—as in
 `guix system build --target=arm-linux-gnueabihf config.scm`—has been
 improved.  That, together with a lot of porting work both for packages
 and for the Guix System machinery, brings [the `hurd-vm`
@@ -142,6 +160,7 @@ In addition to those already mentioned, a dozen of new system services
 are available, including services for
 [Ganeti](https://guix.gnu.org/blog/2020/running-a-ganeti-cluster-on-guix/),
 [LXQt](https://guix.gnu.org/manual/devel/en/html_node/Desktop-Services.html#index-lxqt_002ddesktop_002dservice_002dtype),
+[R Shiny](https://guix.gnu.org/manual/devel/en/html_node/Miscellaneous-Services.html#index-rshiny_002dservice_002dtype),
 [Gemini](https://guix.gnu.org/manual/devel/en/html_node/Web-Services.html#index-gmnisrv),
 and [Guix Build
 Coordinator](https://guix.gnu.org/manual/devel/en/html_node/Guix-Services.html).

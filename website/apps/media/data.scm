@@ -29,16 +29,7 @@
 GNU Guix."))
      #:url "https://guix.gnu.org/guix-videos/01-installation-from-script.webm"
      #:poster (guix-url "static/videos/img/installation-from-script.png")
-     #:last-updated (string->date "2020-03-28T16:00:00" "~Y-~m-~dT~H:~M:~S"))
-    (video
-     #:title (C_ "video title"
-                 "Demonstration of the Guix System graphical installer")
-     #:page-subpath "system-graphical-installer"
-     #:description
-     (G_ '(p "Walks you through the graphical installer of GNU Guix System."))
-     #:url "https://guix.gnu.org/guix-videos/guix-system-install-1.1.0.webm"
-     #:poster (guix-url "static/videos/img/guix-system-install.png")
-     #:last-updated (string->date "2020-04-15T16:00:00" "~Y-~m-~dT~H:~M:~S")))
+     #:last-updated (string->date "2020-03-28T16:00:00" "~Y-~m-~dT~H:~M:~S")))
 
    (list
     (video
@@ -58,6 +49,18 @@ generations."))
      #:url "https://guix.gnu.org/guix-videos/02-everyday-use-part-two.webm"
      #:poster (guix-url "static/videos/img/everyday-use-02.png")
      #:last-updated (string->date "2020-03-28T16:00:00" "~Y-~m-~dT~H:~M:~S")))
+
+   (list
+    (video
+     #:title (C_ "video title"
+                 "Demonstration of the Guix System graphical installer")
+     #:page-subpath "system-graphical-installer"
+     #:description
+     (G_ '(p "Walks you through the graphical installer of GNU Guix System."))
+     #:url "https://guix.gnu.org/guix-videos/guix-system-install-1.1.0.webm"
+     #:poster (guix-url "static/videos/img/guix-system-install.png")
+     #:last-updated (string->date "2020-04-15T16:00:00" "~Y-~m-~dT~H:~M:~S")))
+
    (list
     (video
      #:title (C_ "video title" "Asking for help")

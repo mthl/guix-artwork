@@ -119,11 +119,16 @@
 
      (body
       (div (@ (id "confbar"))
-           (p ,(G_ `("Guix will hold its first online conference November 22nd. "
-                     "Propose a talk before November 6th. "
+           (p ,(G_ `("Online conference November 22nd. "
+                     "Watch the "
                      (a
-                      (@ (href ,(guix-url "blog/2020/online-guix-day-announce-1/")))
-                      "Learn more!")))))
+                      (@ (href "https://xana.lepiller.eu/guix-days-2020/"))
+                      "pre-recorded talks")
+                     ". Learn "
+                     (a
+                      (@ (href ,(guix-url "blog/2020/online-guix-day-announce-2/")))
+                      "more")
+                     "!"))))
       ,(navbar #:active-item active-menu-item)
 
       ,(if (null? crumbs) "" (breadcrumbs crumbs))

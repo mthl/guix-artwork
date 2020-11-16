@@ -103,7 +103,7 @@ to pick.
 Chaired by *Simon Tournier*.
 
 The session covers a proposal to smooth the release process; ironic for a
-rolling-release project, isnt’t it?  Make a release means:
+rolling-release project, isn’t it?  Make a release means:
 
  1. how and what to do: tools
  2. schedule / track
@@ -238,7 +238,7 @@ interesting challenges when building from source.
 
 One of these challenges is
 [Maven](https://maven.apache.org/what-is-maven.html), a build tool and package
-manager that is used by many if not most of the Java developpers nowadays.
+manager that is used by many if not most of the Java developers nowadays.
 One key challenge is that Maven is itself a Java package, that is built with
 Maven and has a lot of dependencies, that themselves use Maven.
 

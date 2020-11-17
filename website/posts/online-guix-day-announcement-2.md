@@ -17,21 +17,21 @@ schedule, read on!
 Live discussions will take place on Sunday, November 22nd, and the agenda is
 the following (UTC+1):
 
- - 10:00–10:25: **[GNU Guix in psychology research and teaching](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-gnu-guix-in-psychology.webm)**
+ - 10:00–10:25: **[GNU Guix in psychology research and teaching](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-gnu-guix-in-psychology.mp4)**
  - 10:30–10:55: **[Fixing the CI](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.mp4)**
  - 11:00–11:25: **[Nix and Guix: similarities and differences](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.mp4)**
 
  `(break)`
 
  - 12:00–12:25: (BoF) **From v1.2 to release process**
- - 12:30–12:55: **[Porting Guix to modern PowerPC](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.mkv)**
+ - 12:30–12:55: **[Porting Guix to modern PowerPC](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.mp4)**
  - 13:00–13:25: **[Just build it with Guix](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.mp4)**
 
  `(long break)`
 
- - 14:30–14:55: **[Progress so far on the Guix Build Coordinator](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mkv)**
+ - 14:30–14:55: **[Progress so far on the Guix Build Coordinator](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mp4)**
  - 15:00–15:25: (BoF) **Peer-to-peer substitutes and sources**
- - 15:30–15:55: **[Guile Hacker Handbook](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.webm)**
+ - 15:30–15:55: **[Guile Hacker Handbook](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.mp4)**
 
  `(break)`
 
@@ -61,7 +61,8 @@ applies for all the channels of communication.**
 
 ##### GNU Guix in psychology research and teaching
 Presented by *Lars-Dominik
-Braun*. (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-gnu-guix-in-psychology.webm)**,
+Braun*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-gnu-guix-in-psychology.webm)**,
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-gnu-guix-in-psychology.mp4)**,
 [doi](http://dx.doi.org/10.23668/psycharchives.4353), [slide](http://dx.doi.org/10.23668/psycharchives.4354))
 
 The Leibniz Institute for Psychology supports psychologists in adopting open
@@ -79,7 +80,8 @@ web app deployment/proxying; as well as usability and how GNU Guix supports or
 provide reproducible environments.
 
 ##### Fixing the CI
-Presented by *Mathieu Othacehe*. (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.mp4)**)
+Presented by *Mathieu Othacehe*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.webm)**,
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.mp4)**)
 
 The session covers the following points:
 
@@ -89,7 +91,8 @@ The session covers the following points:
 
 
 ##### Nix and Guix: similarities and differences
-Presented by *Andrew Tropin*.  (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.mp4)**)
+Presented by *Andrew Tropin*.  (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.webm)**,
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.mp4)**)
 
 The session covers an high-level overview and comparison of Nix and GNU Guix
 package managers or NixOS and Guix System distributions. The comparison had
@@ -133,7 +136,8 @@ GNU [Glibc](https://sourceware.org/glibc/wiki/Release) or your-name-it.
 
 
 ##### Porting Guix to modern PowerPC
-Presented by *Tobias Platen*.  (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.mkv)**)
+Presented by *Tobias Platen*.  (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.webm)**,
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.mp4)**)
 
 The sessions covers how to port of Guix to modern 64-bit Little Endian, since
 that one is best supported by the Talos II and its graphics card, the AST2500.
@@ -143,7 +147,8 @@ support older PowerMacs including the G4 and G5.
 
 
 ##### Just build it with Guix
-Presented by *Efraim Flashner*.  (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.mp4)**)
+Presented by *Efraim Flashner*.  (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.webm)**,
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.mp4)**)
 
 The session covers how to use Guix as build plateform.  Creating [custom
 packages](https://guix.gnu.org/manual/devel/en/guix.html#Defining-Package-Variants)
@@ -164,7 +169,8 @@ package in one go.
 
 
 ##### Progress so far on the Guix Build Coordinator
-Presented by *Chris Baines*. (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mkv)**)
+Presented by *Chris Baines*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.webm)**,
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mp4)**)
 
 The session looks at the [Guix Build
 Coordinator](https://git.cbaines.net/guix/build-coordinator/), a tool for
@@ -193,7 +199,8 @@ substitutes distribution.
 
 
 ##### Guile Hacker Handbook
-Presented by *Jérémy Korwin-Zmijowski*. (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.webm)**)
+Presented by *Jérémy Korwin-Zmijowski*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.webm)**,
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.mp4)**)
 
 The sessions covers [Guile Hacker Handbook](https://jeko.frama.io/) (GHH).
 The purpose of the GHH is to show [Guile](https://www.gnu.org/software/guile/)
@@ -225,7 +232,8 @@ Guix.  The discussion is about:
 
 
 ##### Bootstrapping the Java Ecosystem
-Presented by *Julien Lepiller*. (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.mp4)**)
+Presented by *Julien Lepiller*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.webm)**,
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.mp4)**)
 
 The session covers the Maven bootstrap and the Maven Build System and how this
 Maven story may inspire directions to implement similar bootstrap stories for

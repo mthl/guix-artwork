@@ -7,10 +7,10 @@
 # * Feed se traduce como tablón [de anuncios] cuando es posible.
 msgid ""
 msgstr ""
-"Project-Id-Version: guix-website 20201005-2\n"
+"Project-Id-Version: guix-website 20201117\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2020-11-05 18:38+0100\n"
-"PO-Revision-Date: 2020-11-10 00:17+0100\n"
+"POT-Creation-Date: 2020-11-17 18:04+0100\n"
+"PO-Revision-Date: 2020-11-17 19:00+0100\n"
 "Last-Translator: Miguel Ángel Arruga Vivas <rosen644835@gmail.com>\n"
 "Language-Team: Spanish <es@tp.org.es>\n"
 "Language: es\n"
@@ -74,11 +74,10 @@ msgstr ""
 "transaccionales|Gestión de paquetes funcional|Gestor de paquetes funcional|"
 "Reproducibilidad"
 
-# FUZZY FUZZY FUZZY
 #: apps/base/templates/home.scm:31 apps/base/templates/components.scm:394
 msgctxt "website menu"
 msgid "Overview"
-msgstr "Página principal"
+msgstr "Vistazo"
 
 #: apps/base/templates/home.scm:41
 msgid "Summary"
@@ -278,13 +277,13 @@ msgstr "GNU Guix — Tablón de actividad"
 
 #: apps/base/templates/theme.scm:122
 msgid ""
-"Guix will hold its first online conference November 22nd. Propose a talk "
-"before November 6th. "
+"Online conference November 22nd. Watch the <1>pre-recorded talks</1>. Learn "
+"<2>more</2>!"
 msgstr ""
-"Guix acogerá su primera conferencia en línea el 22 de noviembre. Proponga "
-"una charla antes del 6 de noviembre. "
+"Conferencia en línea el 22 de noviembre. Véa las <1>sesiones grabadas</1>. "
+"<2>Más información</2>."
 
-#: apps/base/templates/theme.scm:132
+#: apps/base/templates/theme.scm:137
 msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
@@ -589,7 +588,7 @@ msgid ""
 "from the GNU Guix community via email.  You can post messages in English\n"
 "though we also accept other languages."
 msgstr ""
-"Suscribase a esta lista de correo para obtener ayuda de la comunidad\n"
+"Suscríbase a esta lista de correo para obtener ayuda de la comunidad\n"
 "de GNU Guix a través del correo electrónico. Puede publicar mensajes\n"
 "en español."
 
@@ -1938,12 +1937,12 @@ msgstr ""
 "Explicación sobre cómo instalar Guix en distribuciones que no ejecuten\n"
 "GNU Guix."
 
-#: apps/media/data.scm:35
+#: apps/media/data.scm:36
 msgctxt "video title"
 msgid "Everyday use of GNU Guix, Part One"
 msgstr "Uso diario de GNU Guix, primera parte"
 
-#: apps/media/data.scm:38
+#: apps/media/data.scm:39
 msgid ""
 "How to install packages and how to manage software package\n"
 "generations."
@@ -1951,51 +1950,60 @@ msgstr ""
 "Cómo instalar paquetes y cómo gestionar las generaciones de paquetes\n"
 "de software."
 
-#: apps/media/data.scm:44
+#: apps/media/data.scm:45
 msgctxt "video title"
 msgid "Everyday use of GNU Guix, Part Two"
 msgstr "Uso diario de GNU Guix, segunda parte"
 
-#: apps/media/data.scm:47
+#: apps/media/data.scm:48
 msgid "How to upgrade software and how to reclaim storage space."
 msgstr ""
 "Cómo actualizar el software y cómo recuperar espacio de almacenamiento."
 
-#: apps/media/data.scm:53
+#: apps/media/data.scm:55
+msgctxt "video title"
+msgid "Demonstration of the Guix System graphical installer"
+msgstr "Demostración de la instalación gráfica del sistema Guix"
+
+#: apps/media/data.scm:58
+msgid "Walks you through the graphical installer of GNU Guix System."
+msgstr "Recorrido completo de la instalación gráfica del sistema GNU Guix."
+
+#: apps/media/data.scm:65
 msgctxt "video title"
 msgid "Asking for help"
 msgstr "Pedir ayuda"
 
-#: apps/media/data.scm:56
+#: apps/media/data.scm:68
 msgid "How to get help from the Guix community."
 msgstr "Cómo pedir ayuda a la comunidad de Guix."
 
-#: apps/media/data.scm:62
+#: apps/media/data.scm:74
 msgctxt "video title"
 msgid "Packaging, Part One"
 msgstr "Empaquetado, primera parte"
 
-#: apps/media/data.scm:65
+#: apps/media/data.scm:77
 msgid "How to set up a development environment for GNU Guix."
 msgstr "Cómo configurar un entorno de desarrollo para GNU Guix."
 
-#: apps/media/data.scm:70
+#: apps/media/data.scm:82
 msgctxt "video title"
 msgid "Packaging, Part Two"
 msgstr "Empaquetado, segunda parte"
 
-#: apps/media/data.scm:73
+#: apps/media/data.scm:85
 msgid "How to create a package recipe for not yet packaged software."
 msgstr ""
 "Cómo crear una receta de paquet para un software que no ha sido empaquetado\n"
 "todavía."
 
-#: apps/media/data.scm:78
+#: apps/media/data.scm:90
 msgctxt "video title"
 msgid "Packaging, Part Three"
 msgstr "Empaquetado, tercera parte"
 
-#: apps/media/data.scm:81
+#: apps/media/data.scm:93
 msgid ""
 "How to submit a package for inclusion in the GNU Guix\n"
 "distribution."
@@ -2003,57 +2011,57 @@ msgstr ""
 "Cómo enviar un paquete para que se incluya en la distribución de\n"
 "GNU Guix."
 
-#: apps/media/data.scm:91
+#: apps/media/data.scm:103
 msgctxt "screenshot title"
 msgid "Graphical log-in"
 msgstr "Ingreso al sistema gráfico"
 
-#: apps/media/data.scm:95
+#: apps/media/data.scm:107
 msgid "Graphical log-in screen"
 msgstr "Pantalla de ingreso al sistema gráfico"
 
-#: apps/media/data.scm:98
+#: apps/media/data.scm:110
 msgctxt "screenshot title"
 msgid "GNOME"
 msgstr "GNOME"
 
-#: apps/media/data.scm:102
+#: apps/media/data.scm:114
 msgid "GNOME desktop environment"
 msgstr "Entorno de escritorio GNOME"
 
-#: apps/media/data.scm:105
+#: apps/media/data.scm:117
 msgctxt "screenshot title"
 msgid "Xfce"
 msgstr "Xfce"
 
-#: apps/media/data.scm:109
+#: apps/media/data.scm:121
 msgid "Xfce desktop environment"
 msgstr "Entorno de escritorio Xfce"
 
-#: apps/media/data.scm:112
+#: apps/media/data.scm:124
 msgctxt "screenshot title"
 msgid "Virtual machine"
 msgstr "Máquina virtual"
 
-#: apps/media/data.scm:116
+#: apps/media/data.scm:128
 msgid "Virtual machine started with 'guix system vm'"
 msgstr "Máquina virtual arrancada con 'guix system vm'"
 
-#: apps/media/data.scm:119
+#: apps/media/data.scm:131
 msgctxt "screenshot title"
 msgid "Sway"
 msgstr "Sway"
 
-#: apps/media/data.scm:123
+#: apps/media/data.scm:135
 msgid "Sway window manager running wayland"
 msgstr "El gestor de ventanas Sway ejecutándose sobre wayland"
 
-#: apps/media/data.scm:126
+#: apps/media/data.scm:138
 msgctxt "screenshot title"
 msgid "Enlightenment"
 msgstr "Enlightenment"
 
-#: apps/media/data.scm:130
+#: apps/media/data.scm:142
 msgid "Enlightenment, Inkscape, and Serbian text"
 msgstr "Enlightenment, Inkscape y texto en serbio"
 
@@ -2073,7 +2081,7 @@ msgstr "Capturas de pantalla"
 
 #: apps/media/templates/screenshots-overview.scm:18
 msgid "Overview of all screenshots."
-msgstr "Vista previa de todas las capturas de pantalla."
+msgstr "Vistazo de todas las capturas de pantalla."
 
 #: apps/media/templates/video.scm:22
 msgctxt "webpage title"
@@ -2224,3 +2232,10 @@ msgid ""
 msgstr ""
 "<1>Problemas de Lint</1><2><2.1/>. Véase la <2.2>definición del "
 "paquete</2.2> en el código fuente de Guix.</2>"
+
+#~ msgid ""
+#~ "Guix will hold its first online conference November 22nd. Propose a talk "
+#~ "before November 6th. "
+#~ msgstr ""
+#~ "Guix acogerá su primera conferencia en línea el 22 de noviembre. Proponga "
+#~ "una charla antes del 6 de noviembre. "

@@ -41,7 +41,7 @@ guile scripts/sexp-xgettext.scm -f po/POTFILES \
                                 --from-code=UTF-8 \
                                 --copyright-holder="the authors of the Guix Website" \
                                 --package-name="guix-website" \
-                                --package-version="20201005" \
+                                --package-version="20201117" \
                                 --msgid-bugs-address="bug-guix@gnu.org" \
                                 --keyword=G_ \
                                 --keyword=N_:1,2 \

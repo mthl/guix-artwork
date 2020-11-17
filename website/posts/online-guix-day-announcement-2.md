@@ -18,26 +18,26 @@ Live discussions will take place on Sunday, November 22nd, and the agenda is
 the following (UTC+1):
 
  - 10:00–10:25: **[GNU Guix in psychology research and teaching](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-gnu-guix-in-psychology.webm)**
- - 10:30-10:55: **[Fixing the CI](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.mp4)**
- - 11:00-11:25: **[Nix and Guix: similarities and differences](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.mp4)**
+ - 10:30–10:55: **[Fixing the CI](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.mp4)**
+ - 11:00–11:25: **[Nix and Guix: similarities and differences](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.mp4)**
 
  `(break)`
 
- - 12:00-12:25: (BoF) **From v1.2 to release process**
- - 12:30-12:55: **[Porting Guix to modern PowerPC](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.mkv)**
- - 13:00-13:25: **[Just build it with Guix](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.mp4)**
+ - 12:00–12:25: (BoF) **From v1.2 to release process**
+ - 12:30–12:55: **[Porting Guix to modern PowerPC](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.mkv)**
+ - 13:00–13:25: **[Just build it with Guix](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.mp4)**
 
  `(long break)`
 
- - 14:30-14:55: **[Progress so far on the Guix Build Coordinator](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mkv)**
- - 15:00-15:25: (BoF) **Peer-to-peer substitutes and sources**
- - 15:30-15:55: **[Guile Hacker Handbook](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.webm)**
+ - 14:30–14:55: **[Progress so far on the Guix Build Coordinator](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mkv)**
+ - 15:00–15:25: (BoF) **Peer-to-peer substitutes and sources**
+ - 15:30–15:55: **[Guile Hacker Handbook](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.webm)**
 
  `(break)`
 
- - 16:30-16:55: (BoF) **Rust and Cargo**
- - 17:00-17:25: **[Bootstrapping the Java Ecosystem](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.mp4)**
- - 17:30-xx:yy: (BoF) **The ways forward (roadmap and beyond)**
+ - 16:30–16:55: (BoF) **Rust and Cargo**
+ - 17:00–17:25: **[Bootstrapping the Java Ecosystem](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.mp4)**
+ - 17:30–xx:yy: (BoF) **The ways forward (roadmap and beyond)**
 
 Each session will be question/answer and discussion related to the topic via
 the BigBlueButton instance gracefully hosted by

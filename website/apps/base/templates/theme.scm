@@ -121,13 +121,13 @@
       (div (@ (id "confbar"))
            (p ,(G_ `("Online conference November 22nd. "
                      "Watch the "
-                     (a
-                      (@ (href "https://xana.lepiller.eu/guix-days-2020/"))
-                      "pre-recorded talks")
+                     ,(G_ `(a
+			    (@ (href "https://xana.lepiller.eu/guix-days-2020/"))
+			    "pre-recorded talks"))
                      ". Learn "
-                     (a
-                      (@ (href ,(guix-url "blog/2020/online-guix-day-announce-2/")))
-                      "more")
+                     ,(G_ `(a
+			    (@ (href ,(guix-url "blog/2020/online-guix-day-announce-2/")))
+			    "more"))
                      "!"))))
       ,(navbar #:active-item active-menu-item)
 

@@ -63,7 +63,8 @@ applies for all the channels of communication.**
 Presented by *Lars-Dominik
 Braun*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-gnu-guix-in-psychology.webm)**,
 **[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-gnu-guix-in-psychology.mp4)**,
-[doi](http://dx.doi.org/10.23668/psycharchives.4353), [slide](http://dx.doi.org/10.23668/psycharchives.4354))
+[doi](http://dx.doi.org/10.23668/psycharchives.4353), [slide](http://dx.doi.org/10.23668/psycharchives.4354),
+[ipfs](https://gateway.ipfs.io/ipfs/QmVqFw9xxoMAT4NGccrxDoDgrguBK3mPvjhwDhAkmnVLzh))
 
 The Leibniz Institute for Psychology supports psychologists in adopting open
 science practices by providing them with free infrastructure services. One of
@@ -81,7 +82,8 @@ provide reproducible environments.
 
 ##### Fixing the CI
 Presented by *Mathieu Othacehe*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.webm)**,
-**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.mp4)**)
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-mathieu-otacehe-fixing-the-ci.mp4)**,
+[ipfs](https://gateway.ipfs.io/ipfs/Qme9zQy6UrANh6uSE1zAKtKWBHUaLZYTJwFEiNN5eRB3uQ))
 
 The session covers the following points:
 
@@ -137,7 +139,8 @@ GNU [Glibc](https://sourceware.org/glibc/wiki/Release) or your-name-it.
 
 ##### Porting Guix to modern PowerPC
 Presented by *Tobias Platen*.  (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.webm)**,
-**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.mp4)**)
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-tobias-platen-guix-ppc.mp4)**,
+[ipfs](https://gateway.ipfs.io/ipfs/QmPxASuLDYVhqPDVPRvh6noBpkvn67FD3hvx29woYYY58s))
 
 The sessions covers how to port of Guix to modern 64-bit Little Endian, since
 that one is best supported by the Talos II and its graphics card, the AST2500.
@@ -148,7 +151,8 @@ support older PowerMacs including the G4 and G5.
 
 ##### Just build it with Guix
 Presented by *Efraim Flashner*.  (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.webm)**,
-**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.mp4)**)
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-efraim-flashner-build-it-with-guix.mp4)**,
+[ipfs](https://gateway.ipfs.io/ipfs/QmPsWu9QZec4SanvDKV2kghfUk2VLAXgay9EX3Vnt9SL1a))
 
 The session covers how to use Guix as build plateform.  Creating [custom
 packages](https://guix.gnu.org/manual/devel/en/guix.html#Defining-Package-Variants)
@@ -170,7 +174,8 @@ package in one go.
 
 ##### Progress so far on the Guix Build Coordinator
 Presented by *Chris Baines*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.webm)**,
-**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mp4)**)
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mp4)**,
+[ipfs](https://gateway.ipfs.io/ipfs/QmbyvyiKEP1d7GNrcmLLrwodBN6X9oiibN5CJG8KSSZVX1))
 
 The session looks at the [Guix Build
 Coordinator](https://git.cbaines.net/guix/build-coordinator/), a tool for
@@ -200,7 +205,8 @@ substitutes distribution.
 
 ##### Guile Hacker Handbook
 Presented by *Jérémy Korwin-Zmijowski*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.webm)**,
-**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.mp4)**)
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-jeremy-korwin-zmijowski-guile-hacker-handbook.mp4)**,
+[ipfs](https://gateway.ipfs.io/ipfs/QmWWubjA2JJR9t7HiAerEYGMf3cD3a8sQAgW8Ex9ZC1iZo))
 
 The sessions covers [Guile Hacker Handbook](https://jeko.frama.io/) (GHH).
 The purpose of the GHH is to show [Guile](https://www.gnu.org/software/guile/)
@@ -233,7 +239,8 @@ Guix.  The discussion is about:
 
 ##### Bootstrapping the Java Ecosystem
 Presented by *Julien Lepiller*. (**[video webm](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.webm)**,
-**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.mp4)**)
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.mp4)**,
+[ipfs](https://gateway.ipfs.io/ipfs/Qmao7SDaDEBUBXQM9S8YTRmVVVqQMC9RuGMdhEvkZCTNib))
 
 The session covers the Maven bootstrap and the Maven Build System and how this
 Maven story may inspire directions to implement similar bootstrap stories for

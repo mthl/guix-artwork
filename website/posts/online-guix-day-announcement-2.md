@@ -94,7 +94,8 @@ The session covers the following points:
 
 ##### Nix and Guix: similarities and differences
 Presented by *Andrew Tropin*.  (**[video](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.webm)**,
-**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.mp4)**)
+**[video mp4](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-andrew-tropin-nix-and-guix.mp4)**,
+[ipfs](https://gateway.ipfs.io/ipfs/QmdYjgKGXZxT5MXeLxi2dX6SSe2VJmResLUzY5qxumZtHr))
 
 The session covers an high-level overview and comparison of Nix and GNU Guix
 package managers or NixOS and Guix System distributions. The comparison had

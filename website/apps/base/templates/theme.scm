@@ -118,18 +118,21 @@
 	     scripts))
 
      (body
-      (div (@ (id "confbar"))
-           (p ,(G_ `("Online conference November 22nd. "
-                     "Watch the "
-                     ,(G_ `(a
-			    (@ (href "https://xana.lepiller.eu/guix-days-2020/"))
-			    "pre-recorded talks"))
-                     ". Learn "
-                     ,(G_ `(a
-			    (@ (href ,(guix-url "blog/2020/online-guix-day-announce-2/")))
-			    "more"))
-                     "!"))))
       ,(navbar #:active-item active-menu-item)
+
+      ;; NOTE: Comment this message out when it is not needed anymore.
+      (div
+       (@ (class "message-box msg-info"))
+       (p ,(G_ `("Online conference November 22nd. "
+                 "Watch the "
+                 ,(G_ `(a
+			(@ (href "https://xana.lepiller.eu/guix-days-2020/"))
+			"pre-recorded talks"))
+                 ". Learn "
+                 ,(G_ `(a
+			(@ (href ,(guix-url "blog/2020/online-guix-day-announce-2/")))
+			"more"))
+                 "!"))))
 
       ,(if (null? crumbs) "" (breadcrumbs crumbs))
 

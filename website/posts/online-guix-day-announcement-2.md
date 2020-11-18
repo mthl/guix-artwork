@@ -39,6 +39,10 @@ the following (UTC+1):
  - 17:00–17:25: **[Bootstrapping the Java Ecosystem](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-julien-lepiller-bootstrapping-maven-480.mp4)**
  - 17:30–xx:yy: (BoF) **The ways forward (roadmap and beyond)**
 
+Chinese users will find a mirror hosted at [https://guix.org.cn](https://guix.org.cn/guix-days-2020).
+You will also find alternative links below for different formats, and
+downloading through IPFS.
+
 Each session will be question/answer and discussion related to the topic via
 the BigBlueButton instance gracefully hosted by
 [Fosshost](https://fosshost.org/).  Warm thanks to them!

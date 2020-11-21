@@ -47,7 +47,7 @@ You will also find alternative links below for different formats, and
 downloading through IPFS.
 
 Each session will be question/answer and discussion related to the topic via
-the BigBlueButton instance gracefully hosted by
+the BigBlueButton instance generously hosted by
 [Fosshost](https://fosshost.org/).  Warm thanks to them!
 
 The slots are short so please watch the

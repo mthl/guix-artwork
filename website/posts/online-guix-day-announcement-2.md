@@ -14,6 +14,9 @@ schedule, read on!
 
 ![Guix Days logo](/static/blog/img/Guix-Days-online-2020.png)
 
+[Join us live](https://guixbbb.fosshost.org/b/zim-dmr-hp2-ibu) on the 22nd to
+participate in the various sessions!
+
 Live discussions will take place on Sunday, November 22nd, and the agenda is
 the following (UTC+1):
 

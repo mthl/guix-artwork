@@ -128,7 +128,11 @@
                  ,(G_ `(a
 			(@ (href "https://xana.lepiller.eu/guix-days-2020/"))
 			"pre-recorded talks"))
-                 ". Learn "
+                 "."
+                 ,(G_ `(a
+			(@ (href "https://guixbbb.fosshost.org/b/zim-dmr-hp2-ibu"))
+			"Join us"))
+                 "! Learn "
                  ,(G_ `(a
 			(@ (href ,(guix-url "blog/2020/online-guix-day-announce-2/")))
 			"more"))

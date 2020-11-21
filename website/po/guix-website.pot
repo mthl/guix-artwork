@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: guix-website 20201117\n"
+"Project-Id-Version: guix-website 20201121\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2020-11-17 18:04+0100\n"
+"POT-Creation-Date: 2020-11-21 22:43+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -188,11 +188,11 @@ msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
 msgstr ""
 
-#: apps/base/templates/theme.scm:122
-msgid "Online conference November 22nd. Watch the <1>pre-recorded talks</1>. Learn <2>more</2>!"
+#: apps/base/templates/theme.scm:126
+msgid "Online conference November 22nd. Watch the <1>pre-recorded talks</1>.<2>Join us</2>! Learn <3>more</3>!"
 msgstr ""
 
-#: apps/base/templates/theme.scm:137
+#: apps/base/templates/theme.scm:144
 msgid "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source code</3> under the <4>GNU AGPL</4>."
 msgstr ""
 

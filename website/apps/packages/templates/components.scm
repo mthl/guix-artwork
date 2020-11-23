@@ -16,6 +16,7 @@
   #:use-module (guix packages)
   #:use-module (guix gnu-maintenance)
   #:use-module (srfi srfi-1)
+  #:use-module (srfi srfi-26)
   #:use-module (texinfo)
   #:use-module (texinfo plain-text)
   #:export (detailed-package-preview
@@ -262,10 +263,8 @@
 	(package-id (string-append (package-name package)
 				   "-"
 				   (package-version package)))
-	(systems (lset-intersection
-                  string=?
-                  %hydra-supported-systems
-                  (package-transitive-supported-systems package))))
+	(systems (filter (cut supported-package? package <>)
+                     %hydra-supported-systems)))
     (if (null? systems)
         (C_ "systems" "None")
         ;; TODO: There's currently no way to refer to a job like

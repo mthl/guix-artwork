@@ -64,7 +64,7 @@
            (string-append path "/"))))))
 
 (define latest-guix-version
-  (make-parameter "1.1.0"))
+  (make-parameter "1.2.0"))
 
 (define (locale-display-name)
   "Return the display name of the current locale."

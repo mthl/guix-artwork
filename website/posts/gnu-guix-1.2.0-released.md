@@ -1,5 +1,5 @@
 title: GNU Guix 1.2.0 released
-date: 2020-11-23 15:30:00
+date: 2020-11-23 15:45:00
 author: Ludovic Courtès
 slug: gnu-guix-1.2.0-released
 tags: Releases, Security
@@ -129,7 +129,7 @@ to the transformation options available at the command
 line](https://guix.gnu.org/manual/en/html_node/Defining-Package-Variants.html),
 which is useful if you want to use such transformations in a manifest.
 
-The *reference manual* has been expounded: there’s a new [“Getting
+The *reference manual* has been expanded: there’s a new [“Getting
 Started”
 section](https://guix.gnu.org/manual/en/html_node/Getting-Started.html),
 the [“Programming Interface”
@@ -217,9 +217,9 @@ Enjoy!
 
 ### Credits
 
-> Ricardo Wurmus (bass, drums, vocals, lyrics) — Luis Felipe
-> (illustration) — Vagrant Cascadian (Debian packaging, lyrics) —
-> Festival (back vocals)
+> Ricardo Wurmus (grand stick, synthesizer, drums, vocals, lyrics) —
+> Luis Felipe (illustration) — Vagrant Cascadian (Debian packaging,
+> lyrics) — Festival (back vocals)
 
 #### About GNU Guix
 

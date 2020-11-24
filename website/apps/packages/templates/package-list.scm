@@ -31,6 +31,7 @@
 system|GNU Hurd|GNU Guix package manager|GNU Guile|Guile \
 Scheme|Transactional upgrades|Functional package \
 management|Reproducibility") #\|)
+     #:index? #false
      #:active-menu-item (C_ "website menu" "Packages")
      #:css
      (list (guix-url "static/base/css/page.css")

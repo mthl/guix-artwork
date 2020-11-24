@@ -67,7 +67,7 @@ I always try to keep the duration of my stay in the MIDI world at a
 minimum, because a composition workflow that is firmly rooted in MIDI
 tends to result in music that sounds sterile or robotic, an
 undesirable quality that can be hard to eradicate later.  So I put
-them aside and focus on another part of the song.  Mirroring the
+them aside and focused on another part of the song.  Mirroring the
 quasi-palindrome of the title, the song's structure would be A B C B
 A.  With the smooth chords of the B section locked down I walked up to
 the Grand Stick (I mounted it on a modified microphone stand for more
@@ -107,7 +107,7 @@ neighbors are asleep.  Oh, and I'm a lousy funk drummer.  Let's cheat!
 
 My drum machine of choice is
 [Hydrogen](https://guix.gnu.org/en/packages/hydrogen-1.0.1/).  It lets
-me create any numer of arbitrarily long patterns, combine them, and
+me create any number of arbitrarily long patterns, combine them, and
 --- that's crucially important --- sync up with other JACK
 applications such as Ardour.  I toggled a button in Ardour to let it
 take control of the JACK transport, meaning that when I start
@@ -202,7 +202,7 @@ At this point things were coming together nicely, but we only had
 lyrics (and handful of words, really) for the chorus.  Not enough for
 a song, but just a little too much for a laundry list.  So I turned to
 IRC again where our resident Debian ambassador and assuredly human
-person Vagrant Cascadian happend to volunteer a stroke of genius: what
+person Vagrant Cascadian happened to volunteer a stroke of genius: what
 if the lyrics were composed entirely of typos in package descriptions
 that had been fixed since the last release?  Vagrant carefully
 reordered the words to a poignant poem, bringing them alive as the

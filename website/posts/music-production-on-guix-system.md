@@ -4,9 +4,11 @@ author: Ricardo Wurmus
 tags: Music
 ---
 
-The recent release of Guix 1.2.0 was accompanied by a release song.
-Let me tell you how this happened and how you can use Guix System for
-your own music productions!
+The recent release of Guix 1.2.0 was accompanied by a [release
+song](https://guix.gnu.org/audio/ode-to-one-two-oh.ogg)
+([lyrics](https://guix.gnu.org/audio/ode-to-one-two-oh.txt)).  Let me
+tell you how this happened and how you can use Guix System for your
+own music productions!
 
 ![Collage of cables, a rack-mounted USB audio interface, a Chapman Stick, and a screenshot of Ardour](https://guix.gnu.org/static/blog/img/2020-music-banner.jpg)
 
@@ -257,7 +259,8 @@ compress the mix.
 ![Mixing tracks in Ardour](https://guix.gnu.org/static/blog/img/2020-music-ardour-mixer.png)
 
 I exported the final mix as a Vorbis OGG audio file and sent it off to
-Ludovic to have it included in the release announcement.
+Ludovic to have it included in the [release
+announcement](https://guix.gnu.org/en/blog/2020/gnu-guix-1.2.0-released/).
 
 ### Concluding Thoughts
 

@@ -219,7 +219,7 @@ to perfect.
 ### Lyrics and Vocals: Human vs Machine
 
 At this point things were coming together nicely, but we only had
-lyrics (and handful of words, really) for the chorus.  Not enough for
+lyrics (a handful of words, really) for the chorus.  Not enough for
 a song, but just a little too much for a laundry list.  So I turned to
 IRC again where our resident Debian ambassador and assuredly human
 person Vagrant Cascadian happened to volunteer a stroke of genius: what

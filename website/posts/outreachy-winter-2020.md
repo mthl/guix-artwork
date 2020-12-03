@@ -5,7 +5,7 @@ tags: Outreachy
 ---
 
 We are thrilled to announce that Magali L. Sacramento (IRC: `lemes`) will join Guix
-as an [Outreachy](https://www.outreachy.org) intern over the next few month.
+as an [Outreachy](https://www.outreachy.org) intern over the next few months.
 
 ![Outreachy logo](/static/blog/img/outreachy+guix.png)
 

@@ -8,4 +8,5 @@
 ;;; be used for mainland Chinese (not zh-Hans-CN).
 (("en_US" . "en")
  ("de_DE" . "de")
- ("es_ES" . "es"))
+ ("es_ES" . "es")
+ ("zh_CN" . "zh-cn"))

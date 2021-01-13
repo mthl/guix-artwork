@@ -9,6 +9,7 @@ apps/base/templates/help.scm
 # other files
 apps/base/templates/contact.scm
 apps/base/templates/contribute.scm
+apps/base/templates/cuirass.scm
 apps/base/templates/donate.scm
 apps/base/templates/graphics.scm
 apps/base/templates/irc.scm

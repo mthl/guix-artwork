@@ -217,11 +217,13 @@ Translation|I18N|L10N|Artwork") #\|)
             us keep the system up and running smoothly. "))
         ,(G_
           `(p
-            "You can also "
+            "You can contribute to our continous integration software: "
+            (a (@ (href ,(guix-url "cuirass/"))) "Cuirass")
+            ". You can also "
             ,(G_ `(a (@ (href ,(guix-url "donate/")))
                      "donate hardware or hosting"))
             " for our "
-            ,(G_ `(a (@ (href "https://ci.guix.gnu.org")) "build farm")) ".  "))
+            ,(G_ `(a (@ (href "https://ci.guix.gnu.org")) "build farm"))))
 	(p
 	 ,(link-more
            #:label (G_ "Contribute")

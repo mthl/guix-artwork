@@ -265,21 +265,29 @@ Translation|I18N|L10N|Artwork") #\|)
           `(p
             "You can help translate the "
             ,(G_
-              `(a (@ (href "https://translationproject.org/domain/guix.html"))
+              `(a (@ (href "https://translate.fedoraproject.org/projects/guix/guix"))
                   "software"))
             ", the "
             ,(G_
-              `(a (@ (href "https://translationproject.org/domain/guix-packages.html"))
+              `(a (@ (href "https://translate.fedoraproject.org/projects/guix/packages"))
                   "package descriptions"))
-            ", and the "
+            ", the "
             ,(G_
-              `(a (@ (href "https://translationproject.org/domain/guix-manual.html"))
+              `(a (@ (href "https://translate.fedoraproject.org/projects/guix/documentation-manual"))
                   "manual"))
-            " into your language.  See the "
+            ", the "
             ,(G_
-              `(a (@ (href "https://translationproject.org/html/translators.html"))
+              `(a (@ (href "https://translate.fedoraproject.org/projects/guix/documentation-cookbook"))
+                  "cookbook"))
+            ", and this "
+            ,(G_
+              `(a (@ (href "https://translate.fedoraproject.org/projects/guix/website"))
+                  "website"))
+            " into your language.  See your language's team at the "
+            ,(G_
+              `(a (@ (href "https://translationproject.org/team"))
                   "Translation Project"))
-            " for information on how you can help."))
+            " to have a look at the styleguides and the work of other translators"))
         ,(G_
           `(p
             ,(G_ `(a (@ (href ,(guix-url "packages"))) "Software packages"))
@@ -288,7 +296,7 @@ Translation|I18N|L10N|Artwork") #\|)
 	(p
 	 ,(link-more
            #:label (G_ "Start translating")
-	   #:url "https://translationproject.org/"))))
+	   #:url "https://translate.fedoraproject.org/projects/guix"))))
 
 
       ,(G_ `(h3 (@ (id "resources")) "Other resources for contributors"))

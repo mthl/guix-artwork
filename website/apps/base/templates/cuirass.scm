@@ -51,7 +51,7 @@ to monitor the build results."))
        (li
         ,(G_ "Provides a REST API."))
        (li
-        ,(G_ `"High level of concurrency using ")
+        ,(G_ "High level of concurrency using ")
         (a (@ (href "https://github.com/wingo/fibers"))
            "Guile-Fibers")
         ,(G_ " asynchronous library.")))

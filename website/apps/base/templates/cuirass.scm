@@ -50,11 +50,10 @@ to monitor the build results."))
         ,(G_ "Collect build logs and metrics."))
        (li
         ,(G_ "Provides a REST API."))
-       (li
-        ,(G_ "High level of concurrency using ")
-        (a (@ (href "https://github.com/wingo/fibers"))
-           "Guile-Fibers")
-        ,(G_ " asynchronous library.")))
+       ,(G_ `(li "High level of concurrency using "
+                 ,(G_ `(a (@ (href "https://github.com/wingo/fibers"))
+                          "Guile-Fibers"))
+                 " asynchronous library.")))
       ,(G_ `(h3 "Documentation"))
       ,(G_ `(p "Cuirass documentation is accessible "
                ,(G_ `(a (@ (href ,(manual-url "Continuous-Integration.html")))

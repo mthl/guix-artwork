@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210124\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-01-24 22:17+0100\n"
+"POT-Creation-Date: 2021-01-25 00:19+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -621,7 +621,7 @@ msgstr ""
 msgid "The artwork used in the different components of the project\n            is available in the <1>guix-artwork</1> repository. "
 msgstr ""
 
-#: apps/base/templates/contribute.scm:116 apps/base/templates/cuirass.scm:58
+#: apps/base/templates/contribute.scm:116 apps/base/templates/cuirass.scm:57
 msgid "Documentation"
 msgstr ""
 
@@ -775,23 +775,19 @@ msgstr ""
 msgid "Provides a REST API."
 msgstr ""
 
-#: apps/base/templates/cuirass.scm:54
-msgid "High level of concurrency using "
+#: apps/base/templates/cuirass.scm:53
+msgid "High level of concurrency using <1>Guile-Fibers</1> asynchronous library."
 msgstr ""
 
-#: apps/base/templates/cuirass.scm:57
-msgid " asynchronous library."
-msgstr ""
-
-#: apps/base/templates/cuirass.scm:59
+#: apps/base/templates/cuirass.scm:58
 msgid "Cuirass documentation is accessible <1>here</1>."
 msgstr ""
 
-#: apps/base/templates/cuirass.scm:63
+#: apps/base/templates/cuirass.scm:62
 msgid "Project repository"
 msgstr ""
 
-#: apps/base/templates/cuirass.scm:64
+#: apps/base/templates/cuirass.scm:63
 msgid "Cuirass source code is hosted at <1>git://git.sv.gnu.org/guix/guix-cuirass.git</1>."
 msgstr ""
 

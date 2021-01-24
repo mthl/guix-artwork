@@ -9,4 +9,5 @@
 (("en_US" . "en")
  ("de_DE" . "de")
  ("es_ES" . "es")
+ ("fr_FR" . "fr")
  ("zh_CN" . "zh-cn"))

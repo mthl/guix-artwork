@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2021 the authors of the Guix Website
+# Copyright (C) YEAR the authors of the Guix Website
 # This file is distributed under the same license as the guix-website package.
 # Julien Lepiller <julien@lepiller.eu>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20201121\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2020-11-21 22:43+0100\n"
-"PO-Revision-Date: 2021-01-24 20:22+0000\n"
+"POT-Creation-Date: 2021-01-25 00:19+0100\n"
+"PO-Revision-Date: 2021-01-25 00:42+0000\n"
 "Last-Translator: Julien Lepiller <julien@lepiller.eu>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/guix/website/fr/>\n"
 "Language: fr\n"
@@ -88,7 +88,7 @@ msgstr "<1>Fiable.</1> Guix <2>prend en charge<2.1>fr</2.1><2.2>Gestion-de-paque
 #. section names in the English (en) manual.
 #: apps/base/templates/home.scm:84
 msgid "<1>Hackable.</1> It provides <2>Guile Scheme</2> APIs, including high-level embedded domain-specific languages (EDSLs) to <3>define packages<3.1>en</3.1><3.2>Defining-Packages.html</3.2></3> and <4>whole-system configurations<4.1>en</4.1><4.2>System-Configuration.html</4.2></4>."
-msgstr "<1>Bidouillable.</1> Il fournit des API en <2>Guile Scheme</2>, en particulier des langages embarqués spécifiques au domaine (EDSL) pour <3>definir des paquets<3.1>fr</3.1><3.2>Definition-des-paquets.html</3.2></3> et <4>des configurations de systèmes complets<4.1>fr</4.1><4.2>Configuration-systeme.html</4.2></4>."
+msgstr "<1>Bidouillable.</1> Il fournit des API en <2>Guile Scheme</2>, en particulier des langages embarqués spécifiques au domaine (EDSL) pour <3>definir des paquets<3.1>fr</3.1><3.2>Definition-des-paquets.html</3.2></3> et <4>des configurations de systèmes complets<4.1>en</4.1><4.2>Configuration-systeme.html</4.2></4>."
 
 #: apps/base/templates/home.scm:106
 msgctxt "button"
@@ -175,7 +175,7 @@ msgctxt "button"
 msgid "TRY IT OUT!"
 msgstr "ESSAYEZ-LE !"
 
-#: apps/base/templates/home.scm:234 apps/blog/templates/post-list.scm:49
+#: apps/base/templates/home.scm:234 apps/blog/templates/post-list.scm:50
 msgid "Blog"
 msgstr "Blog"
 
@@ -211,10 +211,6 @@ msgstr "GNU Guix"
 msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
 msgstr "GNU Guix — flux d'activités"
-
-#: apps/base/templates/theme.scm:126
-msgid "Online conference November 22nd. Watch the <1>pre-recorded talks</1>.<2>Join us</2>! Learn <3>more</3>!"
-msgstr "Conférence en ligne le 22 novembre. Regardez les <1>présentations enregistrées</1>. <2>Rejoignez-nous</2> ! <3>Plus d'informations</3> !"
 
 #: apps/base/templates/theme.scm:144
 msgid "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source code</3> under the <4>GNU AGPL</4>."
@@ -273,18 +269,18 @@ msgstr "Aide"
 #: apps/packages/templates/detailed-package-list.scm:34
 #: apps/packages/templates/detailed-package-list.scm:43
 #: apps/packages/templates/index.scm:31 apps/packages/templates/index.scm:37
-#: apps/packages/templates/package-list.scm:34
-#: apps/packages/templates/package-list.scm:40
+#: apps/packages/templates/package-list.scm:35
+#: apps/packages/templates/package-list.scm:41
 #: apps/packages/templates/package.scm:36
 #: apps/packages/templates/package.scm:41
 msgctxt "website menu"
 msgid "Packages"
 msgstr "Paquets"
 
-#: apps/base/templates/components.scm:408 apps/blog/templates/post-list.scm:33
-#: apps/blog/templates/post-list.scm:39 apps/blog/templates/post.scm:29
-#: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:37
-#: apps/blog/templates/tag.scm:43
+#: apps/base/templates/components.scm:408 apps/blog/templates/post-list.scm:34
+#: apps/blog/templates/post-list.scm:40 apps/blog/templates/post.scm:29
+#: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:38
+#: apps/blog/templates/tag.scm:44
 msgctxt "website menu"
 msgid "Blog"
 msgstr "Blog"
@@ -394,7 +390,7 @@ msgid ""
 msgstr ""
 "GNU Guix fournit <1>des fonctionnalités de gestion des paquets innovantes<1.1>fr</1.1><1.2>Fonctionnalites.html</1.2></1> comme les mises à jours et les retours transactionnels,\n"
 "            les environnements de construction reproductibles, la gestion des paquets non provilégiée et\n"
-"            les profils par utilisateur.  Il utilise des mécanismes de bas niveau du gestionnaire de paquets <2>Nix</2>, mais les paquets sont <3>définis<3.1>fr</3.1><3.2>Definition-des-paquets.html</3.2></3> comme des modules <4>Guile</4> natifs, avec des extensions au langage <5>Scheme</5> — ce qui le rend élégamment bidouillable."
+"            les profils par utilisateur.  Il utilise des mécanismes de bas niveau du gestionnaire de paquets <2>Nix</2>, mais les paquets sont <3>définis<3.1>en</3.1><3.2>Definition-des-paquets.html</3.2></3> comme des modules <4>Guile</4> natifs, avec des extensions au langage <5>Scheme</5> — ce qui le rend élégamment bidouillable."
 
 #. TRANSLATORS: Using the Configuration System, Initial RAM Disk
 #. and Defining Services are section names in the English (en)
@@ -756,7 +752,7 @@ msgid "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU
 msgstr "GNU|Linux|Unix|Logiciel libre|Système d'exploitation|GNU Hurd|Gestionnaire de paquets GNU Guix|Volontariat|Bénévolat|Développement|Traduction|I18N|L10N|Art"
 
 #: apps/base/templates/contribute.scm:35 apps/base/templates/contribute.scm:110
-#: apps/base/templates/contribute.scm:227
+#: apps/base/templates/contribute.scm:229
 msgid "Contribute"
 msgstr "Contribuer"
 
@@ -832,7 +828,7 @@ msgstr ""
 "Les illustrations utilisées dans les différents composants du projet se trouvent\n"
 "dans le dépôt <1>guix-artwork</1>. "
 
-#: apps/base/templates/contribute.scm:116
+#: apps/base/templates/contribute.scm:116 apps/base/templates/cuirass.scm:57
 msgid "Documentation"
 msgstr "Documentation"
 
@@ -936,14 +932,14 @@ msgstr ""
 "à garder le système en route. "
 
 #: apps/base/templates/contribute.scm:218
-msgid "You can also <1>donate hardware or hosting</1> for our <2>build farm</2>.  "
-msgstr "Vous pouvez aussi <1>donner du matériel ou de l'hébergement</1> pour notre <2>ferme de construction</2>.  "
+msgid "You can contribute to our continous integration software: <1/>. You can also <2>donate hardware or hosting</2> for our <3>build farm</3>"
+msgstr "Vous pouvez contribuer à notre logiciel d'intégration continue : <1/>. Vous pouvez aussi <2>donner du matériel ou de l'hébergement</2> pour notre <3>ferme de construction</3>"
 
-#: apps/base/templates/contribute.scm:233
+#: apps/base/templates/contribute.scm:235
 msgid "Test and Bug Reports"
 msgstr "Tests et rapports de bogues"
 
-#: apps/base/templates/contribute.scm:234
+#: apps/base/templates/contribute.scm:236
 msgid ""
 "Install the software and send feedback to the community\n"
 "            about your experience. Help the project by reporting bugs. You can also get started by <1>picking an “easy” bug</1> to work on."
@@ -951,7 +947,7 @@ msgstr ""
 "Installez le logiciel et envoyez des retours à la communauté sur votre expérience.\n"
 "Aidez le projet en rapportant des bouges. Vous pouvez aussi commencer à contribuer en <1>choisissant un bogue « easy »</1> sur lequel travailler."
 
-#: apps/base/templates/contribute.scm:243
+#: apps/base/templates/contribute.scm:245
 msgid ""
 "Before reporting a bug, please check whether the bug is\n"
 "            already <1>in the bug database</1>. See <2>the developer information page</2> for more information on how to manipulate bug reports. "
@@ -959,19 +955,19 @@ msgstr ""
 "Avant de rapporter un bogue, vérifier s'il n'est pas déjà\n"
 "<1>dans la base de bogues</1>. Voir <2>la page d'information pour les développeurs</2> pour plus d'information sur la manipulation des rapports de bogue. "
 
-#: apps/base/templates/contribute.scm:255
+#: apps/base/templates/contribute.scm:257
 msgid "Report a bug"
 msgstr "Rapporter un bogue"
 
-#: apps/base/templates/contribute.scm:261
+#: apps/base/templates/contribute.scm:263
 msgid "Translation"
 msgstr "Traduction"
 
-#: apps/base/templates/contribute.scm:262
-msgid "You can help translate the <1>software</1>, the <2>package descriptions</2>, and the <3>manual</3> into your language.  See the <4>Translation Project</4> for information on how you can help."
-msgstr "Vous pouvez traduire le <1>logiciel</1>, les <2>descriptions des paquets</2> et le <3>manuel</3> dans votre langue. Voir le <4>projet de traduction</4> pour des information sur comment aider."
+#: apps/base/templates/contribute.scm:264
+msgid "You can help translate the <1>software</1>, the <2>package descriptions</2>, the <3>manual</3>, the <4>cookbook</4>, and this <5>website</5> into your language.  See your language's team at the <6>Translation Project</6> to have a look at the styleguides and the work of other translators"
+msgstr "Vous pouvez traduire le <1>logiciel</1>, les <2>descriptions des paquets</2>, le <3>manuel</3>, le <4>livre de recettes</4> et ce <5>site web</5> dans votre langue. Voir l'équipe de votre langue sure le <6>projet de traduction</6> pour voir les guides stylistiques et le travail d'autres traducteurs"
 
-#: apps/base/templates/contribute.scm:281
+#: apps/base/templates/contribute.scm:291
 msgid ""
 "<1>Software packages</1> provided by the system may have their own translation\n"
 "            tools.  Visit their websites and help translate. "
@@ -979,15 +975,15 @@ msgstr ""
 "<1>Les paquets logiciels</1> fournis par le système peuvent avoir leur propre outil de traduction.\n"
 "Visitez leur site web pour aider à les traduire. "
 
-#: apps/base/templates/contribute.scm:288
+#: apps/base/templates/contribute.scm:298
 msgid "Start translating"
 msgstr "Commencer à traduire"
 
-#: apps/base/templates/contribute.scm:292
+#: apps/base/templates/contribute.scm:302
 msgid "Other resources for contributors"
 msgstr "D'autres ressources pour les contributeurs"
 
-#: apps/base/templates/contribute.scm:293
+#: apps/base/templates/contribute.scm:303
 msgid ""
 "Documents, supporting material of previous talks, and\n"
 "          auxiliary information useful to hackers and maintainers is\n"
@@ -996,6 +992,78 @@ msgstr ""
 "Documentations, supports de conférences passées et informations\n"
 "supplémentaires utiles pour les bidouilleurs, bidouilleuses et mainteneurs\n"
 "sont disponibles sur <1/>."
+
+#: apps/base/templates/cuirass.scm:16
+msgctxt "webpage title"
+msgid "Cuirass"
+msgstr "Cuirass"
+
+#: apps/base/templates/cuirass.scm:18
+msgid "GNU Guix continuous integration software."
+msgstr "Logiciel d'intégration continue de GNU Guix."
+
+#. TRANSLATORS: |-separated list of webpage keywords
+#: apps/base/templates/cuirass.scm:21
+msgid "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Guix package manager|Cuirass|CI"
+msgstr "GNU|Linux|Unix|Logiciel libre|Système d'exploitation|Gestionnaire de paquets GNU Guix"
+
+#: apps/base/templates/cuirass.scm:31
+msgid ""
+"Cuirass is the GNU Guix continuous\n"
+"integration software. It's a general purpose build automation server written\n"
+"in GNU Guile that checks out sources from VCS repositories, execute build jobs\n"
+"and store build results in a database. Cuirass also provides a web interface\n"
+"to monitor the build results."
+msgstr ""
+"Cuirass est le logiciel d'intégration continue\n"
+"de GNU Guix. C'est un serveur d'automatisation de constructions générique écrit\n"
+"en GNU Guile qui récupère les sources de dépôts de contrôle de version, exécute des travaux de construction\n"
+"et stocke les résultats des constructions dans une base de données. Cuirass fournit aussi une interface web\n"
+"pour surveiller les résultats des constructions."
+
+#: apps/base/templates/cuirass.scm:37
+msgid "Cuirass is running on GNU Guix build farm at <1/>."
+msgstr "Cuirass fait tourner la ferme de construction de GNU Guix sur <1/>."
+
+#: apps/base/templates/cuirass.scm:41
+msgid "Features"
+msgstr "Fonctionnalités"
+
+#: apps/base/templates/cuirass.scm:44
+msgid "Poll sources from multiple Git repositories."
+msgstr "Récupère les sources de plusieurs dépôts Git."
+
+#: apps/base/templates/cuirass.scm:46
+msgid "Execute builds on local or remote Guix daemons."
+msgstr "Exécute des constructions sur des démons Guix locaux ou distants."
+
+#: apps/base/templates/cuirass.scm:48
+msgid "Store build products or artifacts."
+msgstr "Stocke les produits et les artéfacts de constructions."
+
+#: apps/base/templates/cuirass.scm:50
+msgid "Collect build logs and metrics."
+msgstr "Récupère les journaux des constructions et des mesures."
+
+#: apps/base/templates/cuirass.scm:52
+msgid "Provides a REST API."
+msgstr "Fournit une API REST."
+
+#: apps/base/templates/cuirass.scm:53
+msgid "High level of concurrency using <1>Guile-Fibers</1> asynchronous library."
+msgstr "A un fort taux de concurrence avec la bibliothèque asynchrone <1>Guile-Fibers</1>."
+
+#: apps/base/templates/cuirass.scm:58
+msgid "Cuirass documentation is accessible <1>here</1>."
+msgstr "La documentation de Cuirass se trouve <1>ici</1>."
+
+#: apps/base/templates/cuirass.scm:62
+msgid "Project repository"
+msgstr "Dépôt du projet"
+
+#: apps/base/templates/cuirass.scm:63
+msgid "Cuirass source code is hosted at <1>git://git.sv.gnu.org/guix/guix-cuirass.git</1>."
+msgstr "Le code source de Cuirass est hébergé sur <1>git://git.sv.gnu.org/guix/guix-cuirass.git</1>."
 
 #: apps/base/templates/donate.scm:17
 msgctxt "webpage title"
@@ -1305,7 +1373,7 @@ msgstr "Signature des versions publiées"
 
 #: apps/base/templates/security.scm:66
 msgid "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/>.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation.html</2.2></2> their downloads before extracting or running them."
-msgstr "Les versions publiées de Guix sont signées avec la clé OpenPGP ayant l'empreinte <1/>. Vous devriez <2>vérifier<2.1>fr</2.1><2.2>Installation-binaire.html</2.2></2> vos téléchargements avant de les extraire ou de les lancer."
+msgstr "Les versions publiées de Guix sont signées avec la clé OpenPGP ayant l'empreinte <1/>. Vous devriez <2>vérifier2.1>fr</2.1><2.2>Installation-binaire.html</2.2></2> vos téléchargements avant de les extraire ou de les lancer."
 
 #: apps/base/templates/security.scm:78
 msgid "Security updates"
@@ -1313,7 +1381,7 @@ msgstr "Mises à jour de sécurité"
 
 #: apps/base/templates/security.scm:79
 msgid "When security vulnerabilities are found in Guix or the packages provided by Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates.html</1.2></1> quickly and with minimal disruption for users.  When appropriate, a security advisory is published on the blog with the <2>Security Advisory tag</2> and on the <3><3.1>info-guix</3.1> mailing list</3>; <4/> may also display the advisory."
-msgstr "Lorsque des problèmes de sécurité sont découverts dans Guix ou les paquets fournis par Guix, nous fournirons des <1>mises à jour de sécurité<1.1>fr</1.1><1.2>Mises-a-jour-de-securite.html</1.2></1> rapidement et avec le moins possible de perturbation pour nos utilisateurs et utilisatrices. Lorsque cela est approprié, un avertissement de sécurité sera publié sur le blog avec le <2>tag Security Advisory</2> et sur la  <3>liste de diffusion <3.1>info-guix</3.1></3> ; <4/> peut aussi afficher l'avertissement."
+msgstr "Lorsque des problèmes de sécurité sont découverts dans Guix ou les paquets fournis par Guix, nous fournirons des <1>mises à jour de sécurité1.1>fr</1.1><1.2>Mises-a-jour-de-securite.html</1.2></1> rapidement et avec le moins possible de perturbation pour nos utilisateurs et utilisatrices. Lorsque cela est approprié, un avertissement de sécurité sera publié sur le blog avec le <2>tag Security Advisory</2> et sur la  <3>liste de diffusion <3.1>info-guix</3.1></3> ; <4/> peut aussi afficher l'avertissement."
 
 #: apps/base/templates/security.scm:94
 msgid "Guix uses a “rolling release” model.  All security bug-fixes are pushed directly to the master branch.  There is no “stable” branch that only receives security fixes."
@@ -1355,12 +1423,12 @@ msgctxt "feed author name"
 msgid "GNU Guix"
 msgstr "GNU Guix"
 
-#: apps/blog/templates/post-list.scm:23 apps/blog/templates/post-list.scm:40
-#: apps/blog/templates/tag.scm:25 apps/blog/templates/tag.scm:45
+#: apps/blog/templates/post-list.scm:23 apps/blog/templates/post-list.scm:41
+#: apps/blog/templates/tag.scm:25 apps/blog/templates/tag.scm:46
 #: apps/packages/templates/detailed-package-list.scm:24
 #: apps/packages/templates/detailed-package-list.scm:47
 #: apps/packages/templates/package-list.scm:24
-#: apps/packages/templates/package-list.scm:44
+#: apps/packages/templates/package-list.scm:45
 msgid "Page <1/>"
 msgstr "Page <1/>"
 
@@ -1382,7 +1450,7 @@ msgstr "Sujets liés :"
 msgid "Blog posts about <1/> on GNU Guix."
 msgstr "Billets de blog sur <1/> sur GNU Guix."
 
-#: apps/blog/templates/tag.scm:54
+#: apps/blog/templates/tag.scm:55
 msgid "Blog — "
 msgstr "Blog — "
 
@@ -1743,57 +1811,57 @@ msgctxt "webpage title"
 msgid "Videos"
 msgstr "Vidéos"
 
-#: apps/packages/templates/components.scm:59
+#: apps/packages/templates/components.scm:60
 #: apps/packages/templates/package.scm:56
 msgid "This is a GNU package.  "
 msgstr "C'est un paquet GNU.  "
 
-#: apps/packages/templates/components.scm:66
+#: apps/packages/templates/components.scm:67
 msgid "<1>License:</1> <2/>."
 msgstr "<1>Licence :</1> <2/>."
 
-#: apps/packages/templates/components.scm:70
+#: apps/packages/templates/components.scm:71
 msgid "<1>Website:</1> <2/>."
 msgstr "<1>Site web :</1> <2/>."
 
-#: apps/packages/templates/components.scm:74
+#: apps/packages/templates/components.scm:75
 msgid "<1>Package source:</1> <2/>."
 msgstr "<1>Sources du paquet :</1> <2/>."
 
-#: apps/packages/templates/components.scm:78
+#: apps/packages/templates/components.scm:79
 msgid "<1>Patches:</1> <2/>."
 msgstr "<1>Correctifs :</1> <2/>."
 
-#: apps/packages/templates/components.scm:82
+#: apps/packages/templates/components.scm:83
 msgid "<1>Lint issues:</1> <2/>."
 msgstr "<1>Problèmes de style :</1> <2/>."
 
-#: apps/packages/templates/components.scm:89
+#: apps/packages/templates/components.scm:90
 msgid "<1>Builds:</1> <2/>."
 msgstr "<1>Constructions :</1> <2/>."
 
-#: apps/packages/templates/components.scm:104
+#: apps/packages/templates/components.scm:105
 msgid " issue"
 msgid_plural " issues"
 msgstr[0] " problème"
 msgstr[1] " problèmes"
 
-#: apps/packages/templates/components.scm:115
-#: apps/packages/templates/components.scm:221
+#: apps/packages/templates/components.scm:116
+#: apps/packages/templates/components.scm:222
 msgid "Packages menu: "
 msgstr "Menu des paquets : "
 
-#: apps/packages/templates/components.scm:117
-#: apps/packages/templates/components.scm:223
+#: apps/packages/templates/components.scm:118
+#: apps/packages/templates/components.scm:224
 msgid "Browse alphabetically"
 msgstr "Voir par ordre alphabétique"
 
-#: apps/packages/templates/components.scm:204
+#: apps/packages/templates/components.scm:205
 msgctxt "patches"
 msgid "None"
 msgstr "Aucun"
 
-#: apps/packages/templates/components.scm:270
+#: apps/packages/templates/components.scm:269
 msgctxt "systems"
 msgid "None"
 msgstr "Aucun"
@@ -1819,7 +1887,7 @@ msgid "GNU Guix provides <1/> packages transparently <2>available as pre-built b
 msgstr "GNU Guix fournit <1/> paquets <2>disponibles en tant que binaires pré-construits</2> de manière transparente. Ces pages fournissent une liste complète des paquets. Notre <3>système d'intégration continue</3> montre leur statut de construction actuel (mis à jour le <4/>)."
 
 #: apps/packages/templates/detailed-package-list.scm:56
-#: apps/packages/templates/package-list.scm:53
+#: apps/packages/templates/package-list.scm:54
 msgid "Packages — "
 msgstr "Paquets — "
 
@@ -1846,3 +1914,6 @@ msgstr "<1>Constructions : </1>"
 #: apps/packages/templates/package.scm:77
 msgid "<1>Lint issues</1><2><2.1/>. See <2.2>package definition</2.2> in Guix source code.</2>"
 msgstr "<1>Problèmes de style</1><2><2.1/>. Voir <2.2>la définition du paquet</2.2> dans le code source de Guix.</2>"
+
+#~ msgid "Online conference November 22nd. Watch the <1>pre-recorded talks</1>.<2>Join us</2>! Learn <3>more</3>!"
+#~ msgstr "Conférence en ligne le 22 novembre. Regardez les <1>présentations enregistrées</1>. <2>Rejoignez-nous</2> ! <3>Plus d'informations</3> !"

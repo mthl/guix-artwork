@@ -24,9 +24,11 @@
 (define-module (apps packages utils)
   #:use-module (apps aux web)
   #:use-module (apps base utils)
+  #:use-module (apps i18n)
   #:use-module (apps packages data)
   #:use-module (apps packages types)
   #:use-module (guix packages)
+  #:use-module ((guix i18n) #:select (P_))
   #:use-module (guix utils)
   #:use-module (guix build utils)
   #:use-module (guix build download)
@@ -92,12 +94,12 @@
 (define (package-description-shtml package)
   "Return a SXML representation of PACKAGE description field with HTML
 vocabulary."
-  (and=> (package-description package) texinfo->shtml))
+  (and=> (and=> (package-description package) P_) texinfo->shtml))
 
 (define (package-synopsis-shtml package)
   "Return a SXML representation of PACKAGE synopsis field with HTML
 vocabulary."
-  (and=> (package-synopsis package)
+  (and=> (and=> (package-synopsis package) P_)
          (lambda (synopsis)
            ;; Strip the paragraph that 'texinfo->shtml' adds.
            (match (texinfo->shtml synopsis)

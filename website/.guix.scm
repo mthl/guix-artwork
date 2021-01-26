@@ -33,6 +33,7 @@
 (use-modules (guix) (gnu)
              (gnu packages guile)
              (gnu packages guile-xyz)
+             (gnu packages package-management)
              (guix modules)
              (guix git-download)
              (guix gexp)
@@ -145,7 +146,13 @@
                                "/bin/msgfmt"))
                     (lingua-file (string-append "po/" lingua ".po"))
                     (lang (car (string-split lingua #\_)))
-                    (lang-file (string-append "po/" lang ".po")))
+                    (lang-file (string-append "po/" lang ".po"))
+                    (packages-lingua-mo (string-append
+                                          #$guix "/share/locale/" lingua
+                                          "/LC_MESSAGES/guix-packages.mo"))
+                    (packages-lang-mo (string-append
+                                        #$guix "/share/locale/" lang
+                                        "/LC_MESSAGES/guix-packages.mo")))
                (define (create-mo filename)
                  (begin
                    (invoke msgfmt filename)
@@ -158,7 +165,17 @@
                  (create-mo lingua-file))
                 ((file-exists? lang-file)
                  (create-mo lang-file))
-                (else #t))))
+                (else #t))
+               (cond
+                 ((file-exists? packages-lingua-mo)
+                  (copy-file packages-lingua-mo
+                             (string-append lingua "/LC_MESSAGES/"
+                                            "guix-packages.mo")))
+                 ((file-exists? packages-lang-mo)
+                  (copy-file packages-lang-mo
+                             (string-append lingua "/LC_MESSAGES/"
+                                            "guix-packages.mo")))
+                 (else #t))))
            (list #$@%linguas))
 
           ;; So we can read/write UTF-8 files.

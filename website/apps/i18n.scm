@@ -20,6 +20,7 @@
   #:use-module (haunt asset)
   #:use-module (haunt page)
   #:use-module (haunt utils)
+  #:use-module ((guix i18n) #:select (%package-text-domain))
   #:use-module (ice-9 match)
   #:use-module (sexp-xgettext)
   #:use-module (srfi srfi-1)
@@ -41,6 +42,8 @@
 (bindtextdomain %gettext-domain (getcwd))
 (bind-textdomain-codeset %gettext-domain "UTF-8")
 (textdomain %gettext-domain)
+(bindtextdomain %package-text-domain (getcwd))
+(bind-textdomain-codeset %package-text-domain "UTF-8")
 
 ;; NOTE: The sgettext macros have no hygiene because they use
 ;; datum->syntax and do not preserve the semantics of anything looking

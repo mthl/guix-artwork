@@ -14,6 +14,7 @@
   #:use-module (apps packages utils)
   #:use-module (guix licenses)
   #:use-module (guix packages)
+  #:use-module ((guix i18n) #:select (P_))
   #:use-module (guix gnu-maintenance)
   #:use-module (srfi srfi-1)
   #:use-module (srfi srfi-26)
@@ -186,7 +187,8 @@
     (p
      (@ (class "item-summary"))
      ,(string-summarize
-       (stexi->plain-text (texi-fragment->stexi (package-description package)))
+       (stexi->plain-text
+         (texi-fragment->stexi (P_ (package-description package))))
        30)
      "…")))
 

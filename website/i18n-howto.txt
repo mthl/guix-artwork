@@ -70,11 +70,16 @@ msgfmt de.po
 cd ..
 mv po/messages.mo de/LC_MESSAGES/guix-website.mo
 
+To translate package synopsis and descriptions, you will need the guix-packages
+domain. On the Guix System, you can copy one from your installation:
+
+cp /run/current-system/profile/share/locale/de/LC_MESSAGES/guix-packages.mo de/LC_MESSAGES/
+
 To build all languages:
 
 guix build -f .guix.scm
 
-To test the de_DE translation, update its mo file as above, then:
+To test the de_DE translation, update its mo files as above, then:
 
 guix environment --ad-hoc haunt
 LC_ALL=de_DE.utf8 \

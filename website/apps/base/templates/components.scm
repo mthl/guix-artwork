@@ -430,21 +430,26 @@ manual.
       ;; Languages dropdown.
       ,(menu-dropdown #:label (locale-display-name) #:active-item active-item
         #:items
-        (map-in-order
-         (lambda (ietf-info)
-           (let ((lingua (car ietf-info))
-                 (code (cdr ietf-info)))
-             (setlocale LC_ALL (string-append lingua ".utf8"))
-             (let ((out (menu-item #:label (locale-display-name)
-                                   #:active-item active-item
-                                   #:url (guix-url (string-append code "/")
-                                                   #:localize #f))))
-               (setlocale LC_ALL "")
-               out)))
-         (sort (delete %current-lingua
-                       ietf-tags-file-contents
-                       (lambda (a b) (string=? a (car b))))
-               (lambda (a b) string<?))))))
+        (append
+          (map-in-order
+           (lambda (ietf-info)
+             (let ((lingua (car ietf-info))
+                   (code (cdr ietf-info)))
+               (setlocale LC_ALL (string-append lingua ".utf8"))
+               (let ((out (menu-item #:label (locale-display-name)
+                                     #:active-item active-item
+                                     #:url (guix-url (string-append code "/")
+                                                     #:localize #f))))
+                 (setlocale LC_ALL "")
+                 out)))
+           (sort (delete %current-lingua
+                         ietf-tags-file-contents
+                         (lambda (a b) (string=? a (car b))))
+                 (lambda (a b) string<?)))
+          (list
+            (menu-item #:label (G_ "Translate")
+                       #:active-item active-item
+                       #:url "https://translate.fedoraproject.org/projects/guix/website"))))))
 
 
     ;; Menu button.

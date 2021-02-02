@@ -1,6 +1,6 @@
 title: Meet Guix at FOSDEM
 slug: meet-guix-at-fosdem-2021
-date: 2021-02-01 14:30:00
+date: 2021-02-02 15:00:00
 author: Ludovic Courtès
 tags: FOSDEM, Guix Days, Talks, Community
 ---

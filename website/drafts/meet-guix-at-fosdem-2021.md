@@ -40,24 +40,18 @@ will be home to several Guix talks:
     GNU Guix*](https://fosdem.org/2021/schedule/event/gnuguix/) by
     Ludovic Courtès will present how Guix takes advantage of its
     declarative structure, showcasing concrete examples.
-  - [*Is GNU Guix a minimal distribution, and what might that even
-    mean?](https://fosdem.org/2021/schedule/event/minimalismguix/) by
+  - [_Is GNU Guix a minimal distribution, and what might that even
+    mean?_](https://fosdem.org/2021/schedule/event/minimalismguix/) by
     Christopher Baines will reflect on what minimalism means for
     distributions and how it might apply to Guix.
 
-Do not miss all the other fine talks [in this
+Do not miss all the other [exciting talks in this
 track](https://fosdem.org/2021/schedule/track/declarative_and_minimalistic_computing/),
-some of which by Guile and Guix hackers covering topics such as
-[WebAssembly
-compilation](https://fosdem.org/2021/schedule/event/webassembly/),
-[S-expression
-diffs](https://fosdem.org/2021/schedule/event/sexpressiondiff/), or
-[distributed computing with Spritely
-Goblins](https://fosdem.org/2021/schedule/event/spritelygoblins/)!
+some by Guile and Guix hackers!
 
 For the fourth time, we are also organizing a [FOSDEM fringe
 event](https://fosdem.org/2021/fringe/) on Monday, February 8th, a
-one-day Guix workshop where contributors and enthusiasts will meet,
+**one-day Guix workshop** where contributors and enthusiasts will meet,
 on-line.  Being an on-line event, we hope to attract people (maybe you?)
 who wouldn’t have come to the in-person meeting but will be happy to
 learn about what’s cooking in Guix and share their experience, needs,
@@ -70,8 +64,9 @@ sessions focused on specific hot topics about Guix, the Shepherd,
 continuous integration, and related tools and workflows.
 
 Attendance to the workshop is free and open to everyone, though you are
-invited to register (there are only a few seats left!).  Check out [the
-workshop’s wiki
+invited to register (there are only a few seats left!).  Join [our
+BigBlueButton instance](https://guixbbb.fosshost.org) on Monday 8th, and
+check out [the workshop’s wiki
 page](https://libreplanet.org/wiki/Group:Guix/FOSDEM2021) for practical
 info.  Hope to see you on-line!
 

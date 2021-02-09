@@ -60,7 +60,11 @@ system|GNU Hurd|GNU Guix package manager|Security updates") #\|)
             (li "D919 0965 CE03 199E AF28 B3BE 7CEF 2984 7562 C516")))
         (li "Ricardo Wurmus"
           (ul (@ (class "mono"))
-            (li "BCA6 89B6 3655 3801 C3C6 2150 197A 5888 235F ACAC"))))
+              (li "BCA6 89B6 3655 3801 C3C6 2150 197A 5888 235F ACAC")))
+        (li "Tobias Geerinckx-Rice"
+          (ul (@ (class "mono"))
+              (li (a (@ (href "https://www.tobias.gr/gpg/tobias.gr.gpg"))
+		     "F5BC 5534 C36F 0087 B39D  36EF 1C9D C4FE B9DB 7C4B")))))
 
       ,(G_ `(h3 "Release signatures"))
       ,(G_

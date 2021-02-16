@@ -55,9 +55,6 @@ system|GNU Hurd|GNU Guix package manager|Security updates") #\|)
         (li "Ludovic Courtès"
           (ul (@ (class "mono"))
             (li ,ludovics-key)))
-        (li "Mark H Weaver"
-          (ul (@ (class "mono"))
-            (li "D919 0965 CE03 199E AF28 B3BE 7CEF 2984 7562 C516")))
         (li "Tobias Geerinckx-Rice"
           (ul (@ (class "mono"))
               (li (a (@ (href "https://www.tobias.gr/gpg/tobias.gr.gpg"))

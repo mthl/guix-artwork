@@ -79,7 +79,7 @@ now looks like this (woohoo!):
                  bootstrap-mescc-tools, bootstrap-mes (~12 MiB)
                             bootstrap-guile (~48 MiB)
 ```
-[full graph](../../../static/blog/img/gcc-core-mesboot0-graph.svg)
+[full graph](/static/blog/img/gcc-core-mesboot0-graph.svg)
 
 We are excited that the [Nlnet Foundation](https://nlnet.nl) has
 [sponsored this work](https://nlnet.nl/project/GNUMes)!

@@ -63,7 +63,7 @@ package get built?  How does the first compiler get compiled?
         bootstrap-binutils, bootstrap-gcc, bootstrap-glibc (~130MB)
       bootstrap-bash, bootstrap-coreutils&co, bootstrap-guile (~120MB)
 ```
-[full graph](../../../static/blog/img/gcc-final-bag.svg)
+[full graph](/static/blog/img/gcc-final-bag.svg)
 
 The answer to this starts with _bootstrap binaries_.  The first
 package that gets built with these bootstrap binaries is `make`, next
@@ -114,7 +114,7 @@ dependency graph looks like this:
               bootstrap-mescc-tools, bootstrap-mes (~10MB)
       bootstrap-bash, bootstrap-coreutils&co, bootstrap-guile (~120MB)
 ```
-[full graph](../../../static/blog/img/gcc-final-bag-rbsb.svg)
+[full graph](/static/blog/img/gcc-final-bag-rbsb.svg)
 
 The new _Reduced Binary Seed_ bootstrap removes Binutils, GCC, and
 glibc and replaces them by GNU Mes and MesCC Tools.  This reduces

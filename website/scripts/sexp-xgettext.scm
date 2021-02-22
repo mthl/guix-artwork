@@ -441,7 +441,7 @@ nothing if LIST is no list but e.g. an empty 'program."
   (let ((po (make-po-entry
              (%ecomments-string)
              (current-ref)
-             #f ;TODO: Use scheme-format for format strings?
+             '("xml-text"); to enable xml checks on weblate
              #f ;no ctxt
              msgid
              #f)))
@@ -528,7 +528,7 @@ Otherwise return #f."
                    (let ((po (make-po-entry
                               (%ecomments-string)
                               (current-ref)
-                              #f ;TODO: Use scheme-format for format strings?
+                              '("xml-text"); to enable xml checks on weblate
                               (string-take val idx)
                               (string-drop val (1+ idx))
                               #f))) ;plural forms are unsupported here
@@ -547,7 +547,7 @@ Otherwise return #f."
                      (let ((po (make-po-entry
                                 (%ecomments-string)
                                 (current-ref)
-                                #f ;TODO: Use scheme-format for format strings?
+                                '("xml-text"); to enable xml checks on weblate
                                 (and c (token->string-symbol-or-keyw
                                         (nth-exp parse-tree c)))
                                 sg-id

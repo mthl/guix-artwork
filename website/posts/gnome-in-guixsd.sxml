@@ -9,7 +9,7 @@
       (p "It’s a feature that many users were waiting for: proper "
          (a (@ (href "https://www.gnome.org/")) "GNOME")
          " support in GuixSD.  Good news: the forthcoming Guix and GuixSD release will give you exactly that!  Don’t miss the obligatory "
-         (a (@ (href "https://www.gnu.org/software/guix/screenshots/0.9.1/gnome-totem-epiphany.png"))
+         (a (@ (href "/static/blog/img/gnome-totem-epiphany.png"))
             "screenshot")
          "!"
          (br))

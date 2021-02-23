@@ -23,8 +23,7 @@ system|GNU Hurd|GNU Guix package manager|GNU Guile|Guile \
 Scheme|Transactional upgrades|Functional package \
 management|Reproducibility") #\|)
    #:active-menu-item (C_ "website menu" "Media")
-   #:css (list (guix-url "static/base/css/index.css")
-               (guix-url "static/base/css/screenshots.css"))
+   #:css (list (guix-url "static/base/css/index.css"))
    #:content
    `(main
      (section

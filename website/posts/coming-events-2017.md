@@ -25,7 +25,7 @@ Guix will be present on a few venues in the coming weeks:
      [third Reproducible Build
      Summit](https://reproducible-builds.org/events/berlin2017/) in
      Berlin, Germany.  As in
-     [previous](/software/guix/news/reproducible-build-summit-2nd-edition.html)
+     [previous](/news/reproducible-build-summit-2nd-edition.html)
      [years](https://lists.gnu.org/archive/html/guix-devel/2015-12/msg00107.html),
      we expect it to be a good time to share tips & tricks as well as a
      longer-term vision with our fellow hackers!

@@ -7,7 +7,7 @@
     (content
       div
       (p "This year Guix was lucky to have "
-         (a (@ (href "/software/guix/news/gnu-guix-welcomes-three-students-for-gsoc.html"))
+         (a (@ (href "/news/gnu-guix-welcomes-three-students-for-gsoc.html"))
             "3 GSoC projects")
          ", and they have made rather good progress so far:"
          (br))

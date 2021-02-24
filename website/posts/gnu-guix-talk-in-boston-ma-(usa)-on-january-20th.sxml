@@ -17,7 +17,7 @@
      (p (em "He also demonstrates some interesting features of Guix such as transactional package management, unprivileged package management, bit-reproducible builds, and full system configuration management."))
      (p "The talk will take place in MIT building E-51, room 325.")
      (p "David is a GNU hacker who contributes to Guix and Guile; he implemented "
-	(a (@ (href "/software/guix/news/container-provisioning-with-guix.html"))
+	(a (@ (href "/news/container-provisioning-with-guix.html"))
 	   "container support")
 	" in Guix.  If you are in the Boston area, do not miss him!")
 

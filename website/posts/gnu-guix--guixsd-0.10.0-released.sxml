@@ -25,14 +25,14 @@
               (a (@ (href "https://www.gnu.org/software/guix/manual/en/html_node/Security-Updates.html"))
                  "security updates")
               " has been fixed to be generally applicable.  Read "
-              (a (@ (href "/software/guix/news/timely-delivery-of-security-updates.html"))
+              (a (@ (href "/news/timely-delivery-of-security-updates.html"))
                  "this post")
               " for more information on the challenges behind this.\n")
           (li (a (@ (href "https://www.gnu.org/software/guix/manual/en/html_node/Substitutes.html"))
                  "Substitutes")
               " are now fetched by default over HTTPS and from a faster mirror.\n")
           (li "A number of packages have been made "
-              (a (@ (href "/software/guix/news/reproducible-builds-a-means-to-an-end.html"))
+              (a (@ (href "/news/reproducible-builds-a-means-to-an-end.html"))
                  "bit-for-bit reproducible")
               ", including glibc, Perl, Emacs packages, and Python packages.  This work was simplified by "
               (a (@ (href "https://www.gnu.org/software/guix/manual/en/html_node/Invoking-guix-challenge.html"))
@@ -48,7 +48,7 @@
                  "other reproducible builds efforts")
               ".\n")
           (li "GNOME is "
-              (a (@ (href "/software/guix/news/gnome-in-guixsd.html"))
+              (a (@ (href "/news/gnome-in-guixsd.html"))
                  "now available")
               ", via the "
               (a (@ (href "https://www.gnu.org/software/guix/manual/en/html_node/Desktop-Services.html"))

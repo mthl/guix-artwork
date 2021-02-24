@@ -30,7 +30,7 @@
          " for details."
          (br))
       (p "Join us on-line in the next couple of days for a "
-         (a (@ (href "/software/guix/news/join-guix-for-an-on-line-hackathon-on-sep-28-29.html"))
+         (a (@ (href "/news/join-guix-for-an-on-line-hackathon-on-sep-28-29.html"))
             "hackathon")
          " to celebrate GNU's birthday!"
          (br)))))

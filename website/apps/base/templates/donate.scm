@@ -82,6 +82,9 @@ system|GNU Hurd|GNU Guix package manager|Donations") #\|)
          `(li "armv7 machines (such as the Novena) to more quickly test
                and provide binaries for the armhf-linux port;"))
        ,(G_
+         `(li "armv8 machines to more quickly test and provide binaries
+              for the aarch64-linux port;"))
+       ,(G_
          `(li "mips64el machines to strengthen this port.")))
 
       ,(G_

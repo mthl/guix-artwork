@@ -10,4 +10,4 @@
  ("de_DE" . "de")
  ("es_ES" . "es")
  ("fr_FR" . "fr")
- ("zh_CN" . "zh-cn"))
+ ("zh_CN" . "zh-CN"))

@@ -266,7 +266,7 @@
 				   "-"
 				   (package-version package)))
 	(systems (filter (cut supported-package? package <>)
-                     %hydra-supported-systems)))
+                         %cuirass-supported-systems)))
     (if (null? systems)
         (C_ "systems" "None")
         ;; TODO: There's currently no way to refer to a job like

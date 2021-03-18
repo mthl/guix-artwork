@@ -73,7 +73,7 @@ sudo systemctl restart guix-daemon.service
 
 # Conclusions
 
-One of the flagship features of GNU Guix is enable unprivileged package
+One of the flagship features of GNU Guix is to enable unprivileged package
 management, which includes building packages.  Building occurs in an [isolated
 build environment](https://guix.gnu.org/manual/en/html_node/Build-Environment-Setup.html).
 This environment is isolated from the rest of the system not only to control the

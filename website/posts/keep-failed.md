@@ -5,8 +5,8 @@ tags: Security Advisory
 ---
 
 A security vulnerability that can lead to local privilege escalation has been
-found in the
-[guix-daemon](https://guix.gnu.org/manual/en/html_node/Invoking-guix_002ddaemon.html).
+found in
+[`guix-daemon`](https://guix.gnu.org/manual/en/html_node/Invoking-guix_002ddaemon.html).
 It affects multi-user setups in which `guix-daemon` runs locally.
 
 It does _not_ affect multi-user setups where `guix-daemon` runs on a

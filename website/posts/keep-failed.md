@@ -13,10 +13,11 @@ It does _not_ affect multi-user setups where `guix-daemon` runs on a
 separate machine and is accessed over the network via
 `GUIX_DAEMON_SOCKET`, as is customary on [cluster
 setups](https://hpc.guix.info/blog/2017/11/installing-guix-on-a-cluster/).
-Machines where the Linux [protected
+Exploitation is more difficult, but not impossible, on machines where
+the Linux [protected
 hardlinks](https://sysctl-explorer.net/fs/protected_hardlinks/) feature
-is enabled, which is common, are also unaffected — this is the case when
-the contents of `/proc/sys/fs/protected_hardlinks` are `1`.
+is enabled, which is common — this is the case when the contents of
+`/proc/sys/fs/protected_hardlinks` are `1`.
 
 # Vulnerability
 

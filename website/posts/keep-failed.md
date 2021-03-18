@@ -1,5 +1,5 @@
 title: Risk of local privilege escalation via guix-daemon
-date: 2021-03-18 08:00
+date: 2021-03-18 13:00
 author: Ludovic Courtès and Leo Famulari
 tags: Security Advisory
 ---
@@ -9,12 +9,14 @@ found in the
 [guix-daemon](https://guix.gnu.org/manual/en/html_node/Invoking-guix_002ddaemon.html).
 It affects multi-user setups in which `guix-daemon` runs locally.
 
-It does not affect multi-user setups where `guix-daemon` runs on a separate
-machine and is accessed over the network via `GUIX_DAEMON_SOCKET`, as is
-customary on cluster setups.  Machines where the Linux [protected
-hardlinks](https://sysctl-explorer.net/fs/protected_hardlinks/) feature is
-enabled, which is common, are also unaffected — this is the case when the
-contents of `/proc/sys/fs/protected_hardlinks` are `1`.
+It does _not_ affect multi-user setups where `guix-daemon` runs on a
+separate machine and is accessed over the network via
+`GUIX_DAEMON_SOCKET`, as is customary on [cluster
+setups](https://hpc.guix.info/blog/2017/11/installing-guix-on-a-cluster/).
+Machines where the Linux [protected
+hardlinks](https://sysctl-explorer.net/fs/protected_hardlinks/) feature
+is enabled, which is common, are also unaffected — this is the case when
+the contents of `/proc/sys/fs/protected_hardlinks` are `1`.
 
 # Vulnerability
 
@@ -28,21 +30,22 @@ to the target file.
 
 # Fix
 
-This [bug](https://issues.guix.gnu.org/XXX) has been
-[fixed](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=XXX).
+This [bug](https://issues.guix.gnu.org/47229) has been
+[fixed](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=ec7fb669945bfb47c5e1fdf7de3a5d07f7002ccf).
+See below for upgrade instructions.
 
-The fix consists in adding a root-owned "wrapper" directory in which the build
+The fix consists in adding a root-owned “wrapper” directory in which the build
 directory itself is located.  If the user passed the `--keep-failed` option and
 the build fails, the `guix-daemon` first changes ownership of the build
 directory, and then, in two stages, moves the build directory into the location
 where users expect to find failed builds, roughly like this:
 
-1. chown -R USER /tmp/guix-build-foo.drv-0/top
-2. mv /tmp/guix-build-foo.drv-0{,.pivot}
-3. mv /tmp/guix-build-foo.drv-0.pivot/top /tmp/guix-build-foo.drv-0
+1. `chown -R USER /tmp/guix-build-foo.drv-0/top`
+2. `mv /tmp/guix-build-foo.drv-0{,.pivot}`
+3. `mv /tmp/guix-build-foo.drv-0.pivot/top /tmp/guix-build-foo.drv-0`
 
 In step #1, `/tmp/guix-build-foo.drv-0` remains root-owned, with permissions of
-`#o700`.  Thus, only root can change dir into it or into "top".  Likewise in
+`#o700`.  Thus, only root can change directory into it or into `top`.  Likewise in
 step #2.
 
 The build tree becomes accessible to the user once step #3 has succeeded, not
@@ -53,7 +56,7 @@ running.
 
 On multi-user systems, we recommend upgrading the `guix-daemon` now.
 
-To upgrade the daemon on Guix System, run:
+To upgrade the daemon on Guix System, run something like:
 
 ```
 guix pull
@@ -66,11 +69,11 @@ On other distros, use something like this:
 ```
 sudo --login guix pull
 sudo systemctl restart guix-daemon.service
-
 ```
+
 # Conclusions
 
-One of the flagship features of GNU Guix is enable unprivileged package
+One of the flagship features of GNU Guix is enable unprivileged package
 management, which includes building packages.  Building occurs in an [isolated
 build environment](https://guix.gnu.org/manual/en/html_node/Build-Environment-Setup.html).
 This environment is isolated from the rest of the system not only to control the
@@ -81,8 +84,9 @@ but also to protect the system from package build scripts.
 Despite our best efforts, there is always the possibility that we have
 overlooked something, as in this case.
 
-This issue is tracked as [bug#XXX](https://issues.guix.gnu.org/XXX); you can
-read the thread for more information.
+This issue is tracked as
+[bug #47229](https://issues.guix.gnu.org/47229); you can read the thread
+for more information.
 
 We are grateful to Nathan Nye of WhiteBeam Security for reporting this bug.
 

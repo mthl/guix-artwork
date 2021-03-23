@@ -56,7 +56,7 @@ to monitor the build results."))
                  " asynchronous library.")))
       ,(G_ `(h3 "Documentation"))
       ,(G_ `(p "Cuirass documentation is accessible "
-               ,(G_ `(a (@ (href ,(manual-url "Continuous-Integration.html")))
+               ,(G_ `(a (@ (href ,(guix-url "/cuirass/manual/")))
                         "here"))
                "."))
       ,(G_ `(h3 "Project repository"))

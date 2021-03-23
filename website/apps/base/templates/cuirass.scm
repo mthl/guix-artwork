@@ -56,9 +56,22 @@ to monitor the build results."))
                  " asynchronous library.")))
       ,(G_ `(h3 "Documentation"))
       ,(G_ `(p "Cuirass documentation is accessible "
-               ,(G_ `(a (@ (href ,(guix-url "/cuirass/manual/")))
+               ,(G_ `(a (@ (href ,(guix-url "cuirass/manual/"
+                                            #:localize #f)))
                         "here"))
                "."))
+      ,(G_ `(h3 "Releases"))
+      (ul
+       (li "2021-03-23 — 1.0.0 — "
+           (a (@ (href
+                  ,(guix-url "cuirass/releases/cuirass-1.0.0.tar.gz"
+                             #:localize #f)))
+              "cuirass-1.0.0.tar.gz")
+           " — "
+           (a (@ (href
+                  ,(guix-url "cuirass/releases/cuirass-1.0.0.tar.gz.sig"
+                             #:localize #f)))
+              ,(G_ "GPG signature"))))
       ,(G_ `(h3 "Project repository"))
       ,(G_ `(p "Cuirass source code is hosted at "
                ,(G_ `(a (@ (href "//git.savannah.gnu.org/cgit/guix/guix-cuirass.git"))

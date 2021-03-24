@@ -174,11 +174,12 @@ This remote build mode also unlocked new features such as:
 - The new "Workers status" and "Machine status" pages allowing to closely
   monitor remote machine activities.
 
-The workers status page accessible [here](http://ci.guix.gnu.org/workers).
+The workers status page is accessible [here](http://ci.guix.gnu.org/workers).
 
 ![Workers status page](/static/blog/img/cuirass-workers-status.png)
 
-The machine status page accessible [here](http://ci.guix.gnu.org/machine/hydra-guix-101).
+The machine status page is accessible
+[here](http://ci.guix.gnu.org/machine/hydra-guix-101).
 
 ![Machine status page](/static/blog/img/cuirass-machine-status.png)
 

@@ -216,7 +216,7 @@ get a better idea of its viability.
 
 For completeness, another option currently investigated by the Nix
 developers is that of “_content-addressed derivations_”.  While
-currently store file names contains a hash of the _inputs_ used to
+currently store file names contain a hash of the _inputs_ used to
 produce them, the idea of content-addressed derivations is to make it a
 content hash; that way, if an input change has no effect on the build
 result, the output is the same and nothing needs to be re-downloaded

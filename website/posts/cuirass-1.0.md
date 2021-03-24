@@ -130,7 +130,7 @@ some limitations.
 - Using a unique daemon means using unique build parameters such as build
   timeout and max-silent-time properties.  Some packages have different build
   properties and Cuirass cannot honor them.
-  
+
 - When relying heavily on offloading, the Guix daemon scales badly.  Builds
   that often take a longer time to complete, such as emulated builds can
   saturate the build queue.
@@ -166,7 +166,7 @@ This remote build mode also unlocked new features such as:
 
 - The live streaming of build logs from remote workers to Cuirass so that they
   can be browsed in real time through the web interface.
-  
+
 - The support for timeout and max-silent-time package properties.
 
 - The support for specification and package priorities.
@@ -213,8 +213,8 @@ build duration.
 Cuirass computes periodically various metrics such as:
 
 - Average evaluation duration per specification (seconds).
-- Difference between newly added derivations and built derivations per day. 
-- Average time required for an evaluation to start its builds. 
+- Difference between newly added derivations and built derivations per day.
+- Average time required for an evaluation to start its builds.
 - Evaluation completion speed.
 - Sum of currently pending builds.
 - Builds count per machine during the last day.

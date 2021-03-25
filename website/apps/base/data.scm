@@ -208,6 +208,17 @@ het Nederlands.")
     #:url "https://lists.gnu.org/mailman/listinfo/guix-sysadmin"
     #:log "")
 
+   (contact
+    #:name (G_ "Maintainers")
+    #:description
+    (G_
+     `(p
+       "Private alias to reach the "
+       ,(G_ `(a (@ (href ,(guix-url "about/"))) "maintainer collective"))
+       ".  This should generally not be used to discuss technical issues."))
+    #:url (guix-url "about/")
+    #:log "")
+
 
    ;; Non-Guix lists.
 

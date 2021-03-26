@@ -1,5 +1,5 @@
-title: Towards faster substitutes
-date: 2021-03-25 13:00
+title: Getting bytes to disk more quickly
+date: 2021-03-26 14:00
 author: Ludovic Courtès
 tags: Reproducible builds, Scheme API
 ---
@@ -14,16 +14,20 @@ Guix System for the first time.
 With that in mind, it should come as no surprise that Michael
 Stapelberg’s [excellent 2020 Arch Linux Conference
 talk](https://media.ccc.de/v/arch-conf-online-2020-6387-distri-researching-fast-linux-package-management)
-and the installation speed achieved with distri were a great motivation
+and the installation speed achieved by distri were a great motivation
 boost.  Michael proposes radical ideas to speed up package installation,
-such as downloading and mounting ready-to-use SquashFS images.  This
-cannot be transposed to Guix as-is, but it certainly got us thinking.
+such as downloading and mounting ready-to-use SquashFS images.  Not
+everything can be transposed to Guix as-is, but it certainly got us
+thinking.
 
-This article dives into improvements made over the last few months and
-that will be in the upcoming 1.2.1 release; they all contribute to
-making substitute download and installation “faster”.  This is an
-evolution of the existing mechanisms rather than a revolution, but one
-that users will surely welcome.
+This article dives into improvements made over the last few months that
+will be in the upcoming 1.2.1 release, and which are already [one `guix
+pull`
+away](https://guix.gnu.org/manual/en/html_node/Upgrading-Guix.html);
+they all contribute to making [substitute
+download](https://guix.gnu.org/manual/en/html_node/Substitutes.html) and
+installation “faster”.  This is an evolution of the existing mechanisms
+rather than a revolution, but one that users will surely welcome.
 
 # Reducing latency
 

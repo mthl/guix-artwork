@@ -4,19 +4,21 @@ author: Mathieu Othacehe
 tags: Cuirass, Releases, CI
 ---
 
-We are pleased to announce the release of Cuirass version 1.0, after almost
-five years of development and around 700 commits from 14 contributors.
+We are pleased to announce the release of
+[Cuirass](http://guix.gnu.org/cuirass/) version 1.0, after almost five years
+of development and around 700 commits from 14 contributors.
 
 Cuirass is the GNU Guix continuous integration software. It's a general
-purpose build automation server written in GNU Guile that checks out sources
-from VCS repositories, execute build jobs and store build results in a
+purpose build automation server written in [GNU
+Guile](https://www.gnu.org/software/guile/) that checks out sources from VCS
+repositories, execute build jobs and store build results in a
 database. Cuirass also provides a web interface to monitor the build results.
 
 Cuirass is running on the [GNU Guix build farm](https://ci.guix.gnu.org).
 
 Since January, the project is funded through the NGI0 PET Fund, a fund
-established by NLnet with financial support from the European Commission's
-Next Generation, as explained
+established by [NLnet](https://nlnet.nl/) with financial support from the
+European Commission's Next Generation, as explained
 [here](https://othacehe.org/gnu-guix-continuous-integration---nlnet-grant.html).
 
 Thanks to this support, we were able to speed up the developments and finally
@@ -115,10 +117,12 @@ three different ways:
 ### New build mode
 
 The traditional way of building things in Cuirass is to send batches of
-derivations that need to be built to the local Guix daemon.  The daemon can
-possibly offload those builds to other machines.  While it's probably the most
-sensible way to proceed, this solution doesn't scale well and suffers from
-some limitations.
+derivations that need to be built to the local [Guix
+daemon](https://guix.gnu.org/manual/devel/en/guix.html#Invoking-guix_002ddaemon).
+The daemon can possibly
+[offload](https://guix.gnu.org/manual/devel/en/guix.html#Daemon-Offload-Setup)
+those builds to other machines.  While it's probably the most sensible way to
+proceed, this solution doesn't scale well and suffers from some limitations.
 
 - There's no way to influence the scheduling decisions of the Guix daemon.
   It's quite delicate to prioritize builds or build machines from Cuirass.
@@ -128,7 +132,7 @@ some limitations.
   events.
 
 - Using a unique daemon means using unique build parameters such as build
-  timeout and max-silent-time properties.  Some packages have different build
+  `timeout` and `max-silent-time` properties.  Some packages have different build
   properties and Cuirass cannot honor them.
 
 - When relying heavily on offloading, the Guix daemon scales badly.  Builds
@@ -145,13 +149,14 @@ The build jobs are not submitted to the local Guix daemon.  Instead, a remote
 server dispatches build requests to the connect remote workers, according to
 the build priorities.
 
-The remote server and the connected workers communicate using ZMQ over
-TCP.  The workers are able to discover the remote server using Avahi.
+The remote server and the connected workers communicate using [ZeroMQ](https://zeromq.org/) over
+TCP.  The workers are able to discover the remote server using [Avahi](https://www.avahi.org/).
 
 The built items are exchanged as
 [substitutes](https://guix.gnu.org/manual/en/html_node/Substitutes.html) by
-spawning Guix publish servers both on the remote server and on each connected
-remote worker.
+spawning [Guix
+publish](https://guix.gnu.org/manual/devel/en/guix.html#Invoking-guix-publish)
+servers both on the remote server and on each connected remote worker.
 
 It seems more complex, and it is indeed more complex.  However, the
 performance gains are real.
@@ -167,7 +172,7 @@ This remote build mode also unlocked new features such as:
 - The live streaming of build logs from remote workers to Cuirass so that they
   can be browsed in real time through the web interface.
 
-- The support for timeout and max-silent-time package properties.
+- The support for `timeout` and `max-silent-time` package properties.
 
 - The support for specification and package priorities.
 

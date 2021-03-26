@@ -49,7 +49,7 @@ diagram, which gives an idea of all the time wasted creating these
 processes, waiting for them to initialize and connect to the substitute
 server, and so on:
 
-![Gantt diagram without substitute agent.](https://issues.guix.gnu.org/issue/45018/attachment/8/1)
+![Gantt diagram without substitute agent.](https://guix.gnu.org/static/blog/img/substitute-chart-one-process-per-substitute.png)
 
 Why was it done this way?  Because the daemon, written in C++ and
 inherited from Nix, would historically delegate substitution to helper
@@ -113,7 +113,7 @@ than that of lzip but in the same ballpark.  Guillaume Le Vaillant
 an insightful comparison of gzip, lzip, and zstd on a plot showing their
 decompression speed as a function of the compression ratio:
 
-![Decompression speed vs. compression ratio of gzip, lzip, and zstd.](https://lists.gnu.org/archive/html/guix-devel/2021-01/pngFOHKzO4aVW.png)
+![Decompression speed vs. compression ratio of gzip, lzip, and zstd.](https://guix.gnu.org/static/blog/img/decompression-speed-plot.png)
 
 There are several takeaways.  First, zstd decompression is always faster
 than the alternatives.  Second, zstd compresses better than gzip
@@ -183,7 +183,7 @@ substitute servers and adds them as the preferred download location.
 The Guix System installation image even allows you to enable it to speed
 up the installation process:
 
-![Enabling substitute server discovery when installing Guix System.](https://othacehe.org/files/substitute.png)
+![Enabling substitute server discovery when installing Guix System.](https://guix.gnu.org/static/blog/img/installer-substitute-discovery.png)
 
 Again, that only speeds things up if substitute servers use a
 compression method with fast decompression, and with either a cache or

@@ -149,6 +149,18 @@ i686-linux, and dedicated storage"))
                              (@ (href ,(guix-url "blog/2016/growing-our-build-farm/")))
                              ,content)))))
                    "Igalia"))))
+         ,(G_
+           `(tr
+             ,(G_ `(td "fosshost1.guix.gnu.org, fosshost2.guix.gnu.org"))
+             ,(G_ `(td "x86_64-linux, i686-linux"))
+             ,(G_ ((lambda (content)
+                     `(td
+                       (ul
+                        (li
+                         (a
+                          (@ (href "https://fosshost.org/"))
+                          ,content)))))
+                   "Fosshost"))))
          ,(G_ `(tr
                 ,(G_ `(td "guix-x15.sjd.se, guix-x15b.sjd.se"))
                 ,(G_ `(td "armhf-linux"))

@@ -1,5 +1,5 @@
 title: Cuirass 1.0 released
-date: 2021-03-29 13:00
+date: 2021-03-31 09:00
 author: Mathieu Othacehe
 tags: Cuirass, Releases, CI
 ---
@@ -258,9 +258,9 @@ months. This will hopefully help us to:
   all substitutable.
 
 This release is an important milestone as, combined with the recent substitute
-[improvements](https://guix.gnu.org/blog/2021/faster-substitutes), the whole
-substitute availability & download speed situation is now largely mitigated,
-at least on Intel architectures.
+[improvements](https://guix.gnu.org/en/blog/2021/getting-bytes-to-disk-more-quickly/),
+the whole substitute availability & download speed situation is now largely
+mitigated, at least on Intel architectures.
 
 Don't hesitate to run your own Cuirass server to build stuff ahead of the GNU
 Guix build farm, or to build your custom channels.  Also feel free to share

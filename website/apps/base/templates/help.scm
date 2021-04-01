@@ -118,6 +118,25 @@ system|GNU Hurd|GNU Guix package manager|Help resources") #\|)
 
        (div
 	(@ (class "summary-box"))
+	(img (@ (src ,(guix-url "static/base/img/wiki-icon.png"))
+		(alt "")))
+        ,(G_ `(h3 "Wiki"))
+        ,(G_
+          `(p
+            "The LibrePlanet Wiki provides a collaborative space for "
+            "people to share additional information about the Guix "
+            "project and its subprojects. It may contain help "
+            "information, feature proposals, and notes about "
+            (abbr (@ (title "Works in Progress")) "WIPs") " "
+            "(among other things)."))
+	(p
+	 ,(link-more
+           #:label (G_ "Browse the wiki")
+	   #:url "https://libreplanet.org/wiki/Group:Guix")))
+
+
+       (div
+	(@ (class "summary-box"))
 	(img (@ (src ,(guix-url "static/base/img/chat-icon.png"))
 		(alt "")))
         ,(G_ `(h3 "IRC Chat"))

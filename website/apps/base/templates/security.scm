@@ -58,7 +58,11 @@ system|GNU Hurd|GNU Guix package manager|Security updates") #\|)
         (li "Tobias Geerinckx-Rice"
           (ul (@ (class "mono"))
               (li (a (@ (href "https://www.tobias.gr/gpg/tobias.gr.gpg"))
-		     "F5BC 5534 C36F 0087 B39D  36EF 1C9D C4FE B9DB 7C4B")))))
+		     "F5BC 5534 C36F 0087 B39D  36EF 1C9D C4FE B9DB 7C4B"))))
+        (li  "Maxime Devos"
+          (ul (@ (class "mono"))
+              (li (a (@ (href "https://notabug.org/mdevos/things/raw/master/Maxime_Devos.pub"))
+                     "C1F3 3EE2 0C52 8FDB 7DD7  011F 49E3 EE22 1917 25EE")))))
 
       ,(G_ `(h3 "Release signatures"))
       ,(G_

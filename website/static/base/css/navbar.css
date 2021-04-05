@@ -163,8 +163,7 @@ label.menu-item {
 
     .dropdown:hover .submenu {
         min-width: 150px;
-        /* reset to initial values: */
-        width: auto;
+        width: max-content;
         height: auto;
         overflow: visible;
     }
@@ -174,8 +173,7 @@ label.menu-item {
        the browser does not support :focus-within. */
     .submenu:focus-within {
         min-width: 150px;
-        /* reset to initial values: */
-        width: auto;
+        width: max-content;
         height: auto;
         overflow: visible;
     }
@@ -205,7 +203,8 @@ label.menu-item {
 
     .hline {
         display: block;
-        width: 100%;
+        margin: auto;
+        width: 150px;
         height: 1px;
     }
 

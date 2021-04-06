@@ -11,4 +11,5 @@
  ("eo" . "eo")
  ("es_ES" . "es")
  ("fr_FR" . "fr")
+ ("ko_KR" . "ko")
  ("zh_CN" . "zh-CN"))

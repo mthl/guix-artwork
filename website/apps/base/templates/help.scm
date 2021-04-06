@@ -126,9 +126,8 @@ system|GNU Hurd|GNU Guix package manager|Help resources") #\|)
             "The LibrePlanet Wiki provides a collaborative space for "
             "people to share additional information about the Guix "
             "project and its subprojects. It may contain help "
-            "information, feature proposals, and notes about "
-            (abbr (@ (title "Works in Progress")) "WIPs") " "
-            "(among other things)."))
+            "information, feature proposals, and notes about work in "
+            "progress (among other things)."))
 	(p
 	 ,(link-more
            #:label (G_ "Browse the wiki")

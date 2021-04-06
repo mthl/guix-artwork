@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210406\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-04-06 13:16+0200\n"
+"POT-Creation-Date: 2021-04-06 16:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -654,45 +654,45 @@ msgstr ""
 
 #: apps/base/templates/help.scm:124
 #, xml-text
-msgid "The LibrePlanet Wiki provides a collaborative space for people to share additional information about the Guix project and its subprojects. It may contain help information, feature proposals, and notes about <1/> (among other things)."
+msgid "The LibrePlanet Wiki provides a collaborative space for people to share additional information about the Guix project and its subprojects. It may contain help information, feature proposals, and notes about work in progress (among other things)."
 msgstr ""
 
-#: apps/base/templates/help.scm:134
+#: apps/base/templates/help.scm:133
 #, xml-text
 msgid "Browse the wiki"
 msgstr ""
 
-#: apps/base/templates/help.scm:142
+#: apps/base/templates/help.scm:141
 #, xml-text
 msgid "IRC Chat"
 msgstr ""
 
-#: apps/base/templates/help.scm:143
+#: apps/base/templates/help.scm:142
 #, xml-text
 msgid "For real-time support from the community, you can connect\n            to the <1/> channel on irc.freenode.net. There\n            you can get help about anything related to GNU Guix."
 msgstr ""
 
-#: apps/base/templates/help.scm:148
+#: apps/base/templates/help.scm:147
 #, xml-text
 msgid "The <1/> channel is logged. Previous\n            conversations can be browsed online. See the <2>channel logs</2>. "
 msgstr ""
 
-#: apps/base/templates/help.scm:155
+#: apps/base/templates/help.scm:154
 #, xml-text
 msgid "Connect"
 msgstr ""
 
-#: apps/base/templates/help.scm:163
+#: apps/base/templates/help.scm:162
 #, xml-text
 msgid "Mailing lists"
 msgstr ""
 
-#: apps/base/templates/help.scm:164
+#: apps/base/templates/help.scm:163
 #, xml-text
 msgid "Email support from the community is also available through\n            several mailing list. The messages sent to the lists are\n            public and archived online."
 msgstr ""
 
-#: apps/base/templates/help.scm:172
+#: apps/base/templates/help.scm:171
 #, xml-text
 msgid "See all lists"
 msgstr ""

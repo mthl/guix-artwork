@@ -6,7 +6,7 @@ tags: Outreachy
 
 After three months of working on the implementation of the `guix git log`
 subcommand, as part of the [Outreachy](https://www.outreachy.org/) December
-cohort, here's a wrap-up of what's been accomplished so far.
+round, here's a wrap-up of what's been accomplished.
 
 #### Magali says
 
@@ -65,16 +65,16 @@ commit history from all Guix channels they have.
 #### Simon says
 
 It was my first experience mentoring for the Outreachy program and now I am
-glad to have done it.  I have learnt a lot on various topics.  I have already
-mentored time to time interns, though it was the first time full remote, not
-on the same timezone, and using code I am not expert.  Thanks to Gábor,
-Ludovic and Ricardo to push me to jump in this journey.
+glad I did it.  I have learnt a lot on various topics.  I had already
+mentored interns occasionally, though it was the first time fully remote, not
+on the same timezone, and with code on which I am not expert.  Thanks Gábor,
+Ludovic and Ricardo for pushing me to jump in this journey.
 
 Reading back the [initial
 proposal](https://lists.gnu.org/archive/html/guix-devel/2020-09/msg00108.html)
 coming from a 2019
 [question](https://lists.gnu.org/archive/html/help-guix/2019-06/msg00098.html),
-I am happy by the insofar Magali's internship.  It opens the road for
+I am happy by the insofar Magali's internship.  It paves the way for
 [future](https://lists.gnu.org/archive/html/guix-devel/2020-12/msg00141.html)
 [proposals](https://lists.gnu.org/archive/html/guix-devel/2020-12/msg00170.html)
 or the implementation of other `guix git` subcommands.

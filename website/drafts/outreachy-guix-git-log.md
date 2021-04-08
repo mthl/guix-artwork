@@ -88,8 +88,8 @@ or the implementation of other `guix git` subcommands.
 Guix is participating in the upcoming Outreachy round.  If you are
 [eligible](https://www.outreachy.org/docs/applicant/#eligibility),
 please [get in touch with us](https://guix.gnu.org/en/contact) and
-consider [applying by
-FIXME](https://www.outreachy.org/docs/applicant/#outreachy-schedule)!
+consider [applying by April
+30th](https://www.outreachy.org/docs/applicant/#outreachy-schedule)!
 
 In light of recent changes at the Free Software Foundation (FSF) and
 Outreachy’s subsequent [decision to refuse funds coming from the

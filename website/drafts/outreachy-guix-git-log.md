@@ -4,11 +4,15 @@ author: Magali Lemes, Simon Tournier
 tags: Outreachy
 ---
 
-After three months of working on the implementation of the `guix git log`
-subcommand, as part of the [Outreachy](https://www.outreachy.org/) December
-round, here's a wrap-up of what's been accomplished.
+Magali Lemes [joined Guix in
+December](https://guix.gnu.org/en/blog/2020/add-a-subcommand-showing-gnu-guix-history-of-all-packages/)
+for a three-month internship with
+[Outreachy](https://www.outreachy.org/).  Magali implemented a `guix git
+log` command to browse the history of packaging changes, with mentoring
+from Simon Tournier and Gábor Boskovits.  In this blog post, Magali and
+Simon wrap up on what's been accomplished.
 
-#### Magali says
+#### Magali
 
 The first tasks I had to do were pretty simple and were mainly meant to both get
 me acquainted with the source code and set the building blocks of the
@@ -62,7 +66,7 @@ limiting options, such as `guix git log --after=YYYY-MM-DD` and `guix git log
 Hopefully, soon users will be able to invoke `guix git log`, and  have the
 commit history from all Guix channels they have.
 
-#### Simon says
+#### Simon
 
 It was my first experience mentoring for the Outreachy program and now I am
 glad I did it.  I have learnt a lot on various topics.  I had already

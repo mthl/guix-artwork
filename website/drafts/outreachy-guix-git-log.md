@@ -1,6 +1,6 @@
 title: Outreachy 'guix git log' internship wrap-up
 date: 2021-04-10 12:00:00
-author: Magali Lemes, Simon Tournier
+author: Magali Lemes, Simon Tournier, Ludovic Courtès
 tags: Outreachy
 ---
 
@@ -82,6 +82,23 @@ I am happy by the insofar Magali's internship.  It paves the way for
 [future](https://lists.gnu.org/archive/html/guix-devel/2020-12/msg00141.html)
 [proposals](https://lists.gnu.org/archive/html/guix-devel/2020-12/msg00170.html)
 or the implementation of other `guix git` subcommands.
+
+# Next Outreachy round & acknowledgment
+
+Guix is participating in the upcoming Outreachy round.  If you are
+[eligible](https://www.outreachy.org/docs/applicant/#eligibility),
+please [get in touch with us](https://guix.gnu.org/en/contact) and
+consider [applying by
+FIXME](https://www.outreachy.org/docs/applicant/#outreachy-schedule)!
+
+In light of recent changes at the Free Software Foundation (FSF) and
+Outreachy’s subsequent [decision to refuse funds coming from the
+FSF](https://www.outreachy.org/blog/2021-03-23/fsf-participation-barred/),
+we are grateful to Software Freedom Conservancy (SFC) for their
+[decision to sponsor our upcoming
+internship](https://sfconservancy.org/blog/2021/mar/23/outreachy-fsf/).
+We are working on a longer-term solution so we can keep participating
+in Outreachy.  In the meantime, thanks a lot, Conservancy!
 
 #### About GNU Guix
 

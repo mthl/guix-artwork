@@ -405,7 +405,51 @@ manual.
                            (menu-item #:label "Latest"
                                       #:active-item active-item
                                       #:url (guix-url "download/latest/")))))
-      ,(C_ "website menu" (menu-item #:label "Help" #:active-item active-item #:url (guix-url "help/")))
+
+      ,(menu-dropdown
+        #:label (C_ "website menu" "Help")
+        #:active-item active-item
+        #:items
+        (list
+         (C_ "website menu"
+             (menu-item #:label "All"
+                        #:active-item active-item
+                        #:url (guix-url "help/")))
+         (C_ "website menu"
+             (menu-item #:label "GNU Guix Manual"
+                        #:active-item active-item
+                        #:url (guix-url "manual/")))
+         (C_ "website menu"
+             (menu-item #:label "Guix Reference Card"
+                        #:active-item active-item
+                        #:url (guix-url "guix-refcard.pdf")))
+         (C_ "website menu"
+             (menu-item #:label "Videos"
+                        #:active-item active-item
+                        #:url (guix-url "videos/")))
+         (C_ "website menu"
+             (menu-item #:label "Cookbook"
+                        #:active-item active-item
+                        #:url (guix-url "cookbook/")))
+         (C_ "website menu"
+             (menu-item #:label "GNU Manuals"
+                        #:active-item active-item
+                        #:url (gnu-url "manual/")))
+         (C_ "website menu"
+             (menu-item #:label "Wiki"
+                        #:active-item active-item
+                        #:url
+                        (identity "https://libreplanet.org/wiki/Group:Guix")))
+         (C_ "website menu"
+             (menu-item #:label "IRC Chat"
+                        #:active-item active-item
+                        #:url (guix-url "contact/irc/")))
+         (C_ "website menu"
+             (menu-item #:label "Mailing Lists"
+                        #:active-item active-item
+                        #:url (guix-url "contact/")))))
+
+
       ,(C_ "website menu" (menu-item #:label "Packages" #:active-item active-item #:url (guix-url "packages/")))
       ,(C_ "website menu" (menu-item #:label "Blog" #:active-item active-item #:url (guix-url "blog/")))
 

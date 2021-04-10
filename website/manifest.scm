@@ -58,7 +58,7 @@
          guix
          the-good-guile
          haunt-the-ghost)
-      
+
         ;; Other packages
         (map specification->package
              (list

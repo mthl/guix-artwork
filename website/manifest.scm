@@ -40,12 +40,13 @@
   (manifest-entry
     (name "locales")
     (version "0")
-    (item (computed-file "locales"
-                         (with-imported-modules '((guix build utils))
-                           #~(let ((out (string-append #$output "/lib/locale")))
-                               (use-modules (guix build utils))
-                               (mkdir-p out)
-                               (copy-recursively #$locales out)))))
+    (item
+     (computed-file "locales"
+                    (with-imported-modules '((guix build utils))
+                      #~(let ((out (string-append #$output "/lib/locale")))
+                          (use-modules (guix build utils))
+                          (mkdir-p out)
+                          (copy-recursively #$locales out)))))
     (search-paths
      (list (search-path-specification
             (variable "GUIX_LOCPATH")

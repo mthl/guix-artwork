@@ -31,7 +31,7 @@
   #:export (download-latest-t))
 
 (define ci-url "https://ci.guix.gnu.org")
-(define default-spec "guix-master")
+(define default-spec "images")
 (define default-system "x86_64-linux")
 
 (define-record-type <image>

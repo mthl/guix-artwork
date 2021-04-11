@@ -309,8 +309,9 @@ manual.
             (style ,(string-append "#" id ":checked ~ #submenu-" label-hash "
 {
     min-width: 150px;
-    /* reset to initial values: */
     width: max-content;
+
+    /* reset to initial values: */
     height: auto;
     overflow: visible;
 }"))

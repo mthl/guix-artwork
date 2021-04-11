@@ -310,7 +310,7 @@ manual.
 {
     min-width: 150px;
     /* reset to initial values: */
-    width: auto;
+    width: max-content;
     height: auto;
     overflow: visible;
 }"))

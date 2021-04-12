@@ -31,19 +31,37 @@
   #:export (download-latest-t))
 
 (define ci-url "https://ci.guix.gnu.org")
-(define default-spec "images")
+(define images-spec "images")
+(define tarball-spec "tarball")
 (define default-system "x86_64-linux")
 
 (define-record-type <image>
-  (make-image title description logo job labels systems type)
+  (make-image title description logo job spec labels systems type)
   image?
   (title       image-title)         ;string
   (description image-description)   ;string
   (logo        image-logo)          ;string
   (job         image-job)           ;string
+  (spec        image-spec)          ;string
   (labels      image-labels)        ;list of strings
   (systems     image-systems)       ;list of strings
   (type        image-type))         ;string
+
+(define* (build-query job system
+                      #:key
+                      (spec images-spec))
+  (format #f "query=spec:~a+status:success+system:~a+~a"
+          spec system job))
+
+(define (build-detail-url job spec system)
+  "Return the detail page for BUILD hosted on CI server at URL."
+  (format #f  "~a/search/latest?~a"
+          ci-url (build-query job system #:spec spec)))
+
+(define (build-product-download-url job spec system type)
+  "Return a download URL for BUILD-PRODUCT hosted on CI server at URL."
+  (format #f  "~a/search/latest/~a?~a"
+          ci-url type (build-query job system #:spec spec)))
 
 (define images
   (list (make-image
@@ -51,6 +69,7 @@
          (G_ "USB/DVD ISO installer of the standalone Guix System on Linux.")
          (guix-url "static/base/img/GuixSD-package.png")
          "image.iso"
+         images-spec
          (list default-system)
          (list default-system)
          "ISO-9660")
@@ -59,6 +78,7 @@
          (G_ "Virtual machine image of the standalone Guix System on GNU Hurd.")
          (guix-url "static/base/img/hurd.png")
          "hurd-barebones.qcow2"
+         images-spec
          (list "qcow2")
          (list default-system)
          "image")
@@ -68,28 +88,17 @@
        dependencies, to be installed on top of your Linux-based system.")
          (guix-url "static/base/img/Guix-package.png")
          "guix-binary.tar.xz"
+         tarball-spec
          (list default-system)
          (list default-system)
          "archive")))
-
-(define (build-query job system)
-  (format #f "query=spec:~a+status:success+system:~a+~a"
-          default-spec system job))
-
-(define (build-detail-url job system)
-  "Return the detail page for BUILD hosted on CI server at URL."
-  (format #f  "~a/search/latest?~a" ci-url (build-query job system)))
-
-(define (build-product-download-url job system type)
-  "Return a download URL for BUILD-PRODUCT hosted on CI server at URL."
-  (format #f  "~a/search/latest/~a?~a"
-          ci-url type (build-query job system)))
 
 (define (image-download image)
   "Return as an HTML table row, the representation of IMAGE."
   (let* ((title (image-title image))
          (description (image-description image))
          (job (image-job image))
+         (spec (image-spec image))
          (labels (image-labels image))
          (systems (image-systems image))
          (type (image-type image))
@@ -104,7 +113,8 @@
                `(a
                  (@ (class "download-btn")
                     (download "")
-                    (href ,(build-product-download-url job system type)))
+                    (href
+                     ,(build-product-download-url job spec system type)))
                  ,label
                  " ")) ; Force a space for readability in non-CSS browsers.
              systems labels)
@@ -114,9 +124,11 @@
                      `(a
                        (@ (class "detail-btn")
                           (download "")
-                          (href ,(build-detail-url job system)))
+                          (href
+                           ,(build-detail-url job spec system)))
                        ,label
-                       " ")) ; Force a space for readability in non-CSS browsers.
+                       " ")) ; Force a space for readability in non-CSS
+                             ; browsers.
                    systems labels))))))
 
 (define (download-latest-t)
@@ -135,8 +147,9 @@ Package manager") #\|)
    #:css (list
           (guix-url "static/base/css/page.css")
           (guix-url "static/base/css/download.css"))
-   #:crumbs (list (crumb (C_ "website menu" "Download") (guix-url "download/"))
-                  (crumb (C_ "website menu" "Latest") "./"))
+   #:crumbs
+   (list (crumb (C_ "website menu" "Download") (guix-url "download/"))
+         (crumb (C_ "website menu" "Latest") "./"))
    #:content
    `(main
      (section
@@ -148,7 +161,8 @@ Package manager") #\|)
         `(p
           (@ (class "centered-block limit-width"))
           "Download latest GNU Guix System images built by the "
-          ,(G_ (manual-href "Cuirass"  (G_ "en") (G_ "Continuous-Integration.html")))
+          ,(G_ (manual-href "Cuirass"  (G_ "en")
+                            (G_ "Continuous-Integration.html")))
           " continuous integration system at "
           (a (@ (href ,ci-url)) "ci.guix.gnu.org")
           ". These images are " ,(G_ `(b "development snapshots"))

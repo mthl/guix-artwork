@@ -1,7 +1,7 @@
 title: New Supported Platform: powerpc64le-linux
 date: 2021-04-12 00:00
 author: Chris Marusich and Léo Le Bouter
-tags: porting, powerpc64le, bootstrapping, cross-compilation, reproducibility
+tags: POWER9, Bootstrapping, Cross-compilation, Reproducible builds
 ---
 
 It is a pleasure to announce that support for powerpc64le-linux

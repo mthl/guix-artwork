@@ -9,7 +9,7 @@
     (content
      (p "The "
 	(a (@ (href "http://cufp.org/2016/"))
-	   "Commencial Users of Functional Programming 2016 Workshop")
+	   "Commercial Users of Functional Programming 2016 Workshop")
 	" concluded.  There is no video recording this time, but you can download the "
 	(a (@ (href "https://www.gnu.org/software/guix/guix-cufp-20160924.pdf")) "slides")
 	" from Ludovic Courtès' talk, \"Guix: Scheme as a uniform OS admin and deployment interface\"."))))

@@ -4,21 +4,31 @@ author: Christopher Baines
 tags: Guix Build Coordinator, Continuous integration, Quality Assurance
 ---
 
-Or to put it another way, how complicated can you make it?
-
-# Background
+Derivations are key to Guix, they're the low-level build instructions
+used for things like packages, disk images, and most things than end
+up in the store.
 
 Around a year ago, the established approach to build derivations
-across multiple machines was guix-daemon offloading. The Guix Build
-Coordinator project set out to provide an alternative approach though,
-aimed at addressing two specific use cases.
+across multiple machines was [guix-daemon
+offloading][offloading]. This offloading approach is mostly static in
+terms of the machines involved and used SSH to communicate and move
+things between machines.
 
-The first use case was building things for substitutes. At the time,
-the guix-daemon offloading approach used on ci.guix.gnu.org, the
-default source of substitutes for Guix users was not scaling
-particularly well and there was an opportunity to improve on this.
+[offloading]: https://guix.gnu.org/manual/en/html_node/Daemon-Offload-Setup.html
 
-The second use case was more aspirations, support various quality
+The [Guix Build Coordinator project][guix-build-coordinator] set out
+to provide an alternative approach, both to explore what's possible,
+but also as a usable tool to address two specific use cases.
+
+[guix-build-coordinator]: https://git.cbaines.net/guix/build-coordinator/about/
+
+The first use case was building things (mostly packages) for
+substitutes. At the time, the guix-daemon offloading approach used on
+ci.guix.gnu.org which is the default source of substitutes. This
+approach was not scaling particularly well so there was room for
+improvement.
+
+The second use case was more aspirational, support various quality
 assurance tasks, like building packages changed by patches, regularly
 testing fixed output derivations, or building the same derivations
 across different machines to test for hardware specific differences.
@@ -30,35 +40,32 @@ design of the Guix Build Coordinator.
 # Architecture
 
 Like offloading, the Guix Build Coordinator works in a centralised
-manor. There's one coordinator process which manages state, and agent
+manner. There's one coordinator process which manages state, and agent
 processes run on the machines that perform builds. The coordinator
 plans which builds to allocate to which agents, and agents ask the
 coordinator for builds, which they then attempt.
 
-Agents fetch derivations and build inputs using substitutes, and will
-report back to the coordinator if they're unable to setup for a
-build. If the setup failed because there are missing store items, the
-Guix Build Coordinator by default will check for builds for these
-store items, and if there are none, it'll submit a build.
+Once agents complete a build, they send the log file and any outputs
+back to the coordinator. This is shown in the diagram below. Note that
+the Guix Build Coordinator doesn't actually take care of building the
+individual derivations, that's still left to the guix-daemon's on the
+machines involved.
 
-The builds to perform are worked through methodically, every build has
-a priority, and the build allocation strategies take this in to
-account when planning what builds each agent should work on next. The
-allocation strategy is very configurable, and the Guix Build
-Coordinator comes with two currently.
+![Guix Build Coordinator sequence diagram](/static/blog/img/build-coordinator-architecture.svg)
 
-The basic allocation strategy is the default. It doesn't assume that a
-successful build has to exist for outputs to be available, which is
-appropriate if you're trying to build some derivations in conjunction
-with substitutes available from elsewhere. This allocation strategy is
-very suited to general use cases, including building things for
-quality assurance purposes.
+The builds to perform are worked through methodically, a build won't
+start unless all the inputs are available. This behaviour replicates
+what the guix-daemon does, but across all the machines involved.
 
-The other allocation strategy is the derivation ordered one. This
-allocation strategy assumes that the Guix Build Coordinator instance
-is building the entire graph, so it expects that substitutes will only
-be available if a successful build exists. This allocation strategy is
-particularly suited for building things for serving substitutes.
+If agents can't setup to perform a build, they report this back to the
+coordinator, which may then perform other builds to produce those
+required inputs.
+
+Currently HTTP is used when agents want to communicate to the
+coordinator, although additional approaches could be implemented in
+the future. Similarly, SQLite is used as the database, but from the
+start there has been a plan to support PostgreSQL, but that's not
+currently implemented.
 
 # Comparison to offloading
 
@@ -75,55 +82,91 @@ connection established while builds are progressing.
 With offloading, the guix-daemon reaches out to another machine,
 copies over all the inputs and the derivation, and then starts the
 build. Rather than doing this, the Guix Build Coordinator agent pulls
-in the inputs and derivation using substitutes. This removes the need
+in the inputs and derivation using substitutes.
+
+This pull approach has a few advantages, firstly it removes the need
 to keep a large store on the machine running the coordinator, and this
 large store requirement of using offloading became a problem in terms
-of scalability for the offloading approach.
+of scalability for the offloading approach. Another advantage is that
+it makes deploying agents easier, as they don't need to be reachable
+from the coordinator over the network, which can be an issue with NATs
+or virtual machines.
 
-Additionally, when offloading builds, the outputs would be copied back
-to the store on build success. Instead, the Guix Build Coordinator
-agent sends the outputs back as nar files. The coordinator would then
-process these nar files to make substitutes available. This helps
-distribute the work in generating the nar files, which can be quite
-expensive.
+When offloading builds, the outputs would be copied back to the store
+on build success. Instead, the Guix Build Coordinator agent sends the
+outputs back as nar files. The coordinator would then process these
+nar files to make substitutes available. This helps distribute the
+work in generating the nar files, which can be quite expensive.
 
 These differences may be subtle, but the architecture makes a big
-difference, it's much easier to store and serve nars at scale than it
-is to maintain a large store.
+difference, it's much easier to store and serve nars at scale if this
+doesn't require a large store managed by a single guix-daemon.
 
-One of the other innovations the Guix Build Coordinator brings is a
-high degree of customizability through hooks. There are bits of code
-(hooks) that run when certain events happen, like a build gets
-submitted, or a build finished successfully. It's these hooks that are
-responsible for doing things like processing nars to be served as
-substitutes, or submitting retries for a failed build.
+There's also quite a few things in common with the guix-daemon
+offloading approach. Builds are still methodically performed across
+multiple machines, and load is taken in to account when starting new
+builds.
+
+# Applications of the Guix Build Coordinator
+
+While I think the Guix Build Coordinator is a better choice than
+guix-daemon offloading in some circumstances, it doesn't currently
+replace it.
+
+At a high level, the Guix Build Coordinator is useful where there's a
+need to build derivations and do something with the outputs or build
+results, more than just having the outputs in the local store. This
+could be serving substitutes, or testing derivations for example.
+
+At small scales, the additional complexity of the coordinator is
+probably unnecessary, but when it's useful to use multiple machines,
+either because of the resources that provides, or because of a more
+diverse range of hardware, then it makes much more sense to use the
+Guix Build Coordinator to coordinate what's going on.
+
+# Looking forward
+
+The Guix Build Coordinator isn't just an alternative to guix-daemon
+offloading, it's more a general toolkit for coordinating the building
+of derivations.
+
+Much of the functionality in the Guix Build Coordinator happens in
+hooks. There are bits of code (hooks) that run when certain events
+happen, like a build gets submitted, or a build finished
+successfully. It's these hooks that are responsible for doing things
+like processing nars to be served as substitutes, or submitting
+retries for a failed build.
 
 This hook to automatically retry building particular derivations is
 particularly useful when trying to provide substitutes where you want
 to lessen the impact of random failures, or for quality assurance
 purposes, where you want more data to better identify problems.
 
-In general, this approach with the hooks means I've started thinking
-of the Guix Build Coordinator as an extensible toolkit for performing
-Guix builds.
+There are also more features such as build and agent tags and build
+priorities that can be really useful in some scenarios.
 
-# Looking forward
+Looking far in to the future, I hope that some of the things that
+worked or didn't work in the Guix Build Coordinator will inform what
+iterations of the guix-daemon might look like. Both in terms of it's
+interface, and what features it will support, like whether it supports
+working across multiple machines.
 
-My hope is that the Guix Build Coordinator will enable a better
-substitute experience for Guix users, as well as enabling a whole new
-range of quality assurance tasks. It's already possible to see some
-impact from the Guix Build Coordinator, but there's still much work to
-do!
+In the near future, my hope is that the Guix Build Coordinator will
+enable a better substitute experience for Guix users, as well as
+enabling a whole new range of quality assurance tasks. It's already
+possible to see some impact from the Guix Build Coordinator, but
+there's still much work to do!
 
 ## Additional reading
 
- - [Git repository](https://git.cbaines.net/guix/build-coordinator/)
+ - [Guix Build Coordinator Git repository](https://git.cbaines.net/guix/build-coordinator/)
  - [2020/04/17 - Initial announcement - Prototype tool for building derivations](https://lists.gnu.org/archive/html/guix-devel/2020-04/msg00323.html)
  - [2020/09/19 - \[PATCH 0/4\] Add package and services for the Guix Build Coordinator](https://issues.guix.gnu.org/43494)
  - [2020/11/17 - Thoughts on building things for substitutes and the Guix Build Coordinator](https://lists.gnu.org/archive/html/guix-devel/2020-11/msg00417.html)
  - [2020/11/22 - Guix Days 2020 - Progress so far on the Guix Build Coordinator](https://xana.lepiller.eu/guix-days-2020/guix-days-2020-christopher-baines-guix-build-coordinator.mp4)
  - [2021/02/09 - The Guix Build Coordinator in 2021](https://lists.gnu.org/archive/html/guix-devel/2021-02/msg00148.html)
  - [2021/02/14 - Getting the Guix Build Coordinator agent working on the Hurd](https://lists.gnu.org/archive/html/guix-devel/2021-02/msg00223.html)
+ - [2021/03/08 - Hurd substitute availability (27.5%) and next steps?](https://lists.gnu.org/archive/html/guix-devel/2021-03/msg00074.html)
 
 #### About GNU Guix
 

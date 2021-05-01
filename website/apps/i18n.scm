@@ -1,5 +1,6 @@
 ;;; GNU Guix web site
 ;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
+;;; Copyright © 2021 Ludovic Courtès <ludo@gnu.org>
 ;;;
 ;;; This file is part of the GNU Guix web site.
 ;;;
@@ -20,6 +21,9 @@
   #:use-module (haunt asset)
   #:use-module (haunt page)
   #:use-module (haunt utils)
+  #:autoload   (haunt artifact) (artifact?        ;Haunt >= 0.2.5
+                                 artifact-writer artifact-file-name
+                                 make-artifact)
   #:use-module ((guix i18n) #:select (%package-text-domain))
   #:use-module (ice-9 match)
   #:use-module (sexp-xgettext)
@@ -99,28 +103,30 @@ multiple values.  This procedure is used to retain only the first
 return value.  TODO: This should not be necessary."
   arg)
 
-(define <asset>
-  (@@ (haunt asset) <asset>))
-
-(define <page>
-  (@@ (haunt page) <page>))
-
 (define (builder->localized-builder builder)
   "Return a Haunt builder procedure generated from an existing BUILDER
 with translations for the current system locale coming from
 sexp-xgettext."
   (compose
    (lambda (pages-and-assets)
-     (map
-      (lambda (page-or-asset)
-        (match page-or-asset
-          (($ <page> file-name contents writer)
-           (let ((new-name (string-append (localized-root-path file-name)
-                                          file-name)))
-             (make-page new-name contents writer)))
-          (($ <asset> source target)
-           (let ((new-name (string-append (localized-root-path target) target)))
-             (make-asset source new-name)))))
+     (map (match-lambda
+            ((? page? page)                       ;Haunt < 0.2.5 (deprecated)
+             (let ((new-name (string-append
+                              (localized-root-path (page-file-name page))
+                              (page-file-name page))))
+               (make-page new-name (page-contents page)
+                          (page-writer page))))
+            ((? asset? asset)                     ;Haunt < 0.2.5 (deprecated)
+             (let ((new-name (string-append
+                              (localized-root-path (asset-target asset))
+                              (assert-target asset))))
+               (make-asset (asset-source asset) new-name)))
+            ((? artifact? artifact)               ;Haunt >= 0.2.5
+             (let ((new-name (string-append
+                              (localized-root-path (artifact-file-name artifact))
+                              (artifact-file-name artifact))))
+               (make-artifact new-name
+                              (artifact-writer artifact)))))
       pages-and-assets))
    (lambda (site posts)
      (first-value (builder site posts)))))

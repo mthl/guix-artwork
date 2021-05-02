@@ -119,7 +119,7 @@ sexp-xgettext."
             ((? asset? asset)                     ;Haunt < 0.2.5 (deprecated)
              (let ((new-name (string-append
                               (localized-root-path (asset-target asset))
-                              (assert-target asset))))
+                              (asset-target asset))))
                (make-asset (asset-source asset) new-name)))
             ((? artifact? artifact)               ;Haunt >= 0.2.5
              (let ((new-name (string-append

@@ -417,9 +417,13 @@ manual.
                         #:active-item active-item
                         #:url (guix-url "help/")))
          (C_ "website menu"
-             (menu-item #:label "GNU Guix Manual"
+             (menu-item #:label "GNU Guix Manual (stable)"
                         #:active-item active-item
                         #:url (guix-url "manual/")))
+         (C_ "website menu"
+             (menu-item #:label "GNU Guix Manual (latest)"
+                        #:active-item active-item
+                        #:url (guix-url "manual/devel/")))
          (C_ "website menu"
              (menu-item #:label "Guix Reference Card"
                         #:active-item active-item

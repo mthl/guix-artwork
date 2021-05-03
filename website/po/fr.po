@@ -1,13 +1,14 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR the authors of the Guix Website
 # This file is distributed under the same license as the guix-website package.
+# Julien Lepiller <fedora-account@lepiller.eu>, 2021.
 # Julien Lepiller <julien@lepiller.eu>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20201121\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-04-06 16:44+0200\n"
-"PO-Revision-Date: 2021-04-06 23:01+0000\n"
+"POT-Creation-Date: 2021-05-04 00:09+0200\n"
+"PO-Revision-Date: 2021-05-03 22:30+0000\n"
 "Last-Translator: Julien Lepiller <fedora-account@lepiller.eu>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/guix/"
 "website/fr/>\n"
@@ -16,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.5.3\n"
+"X-Generator: Weblate 4.6.1\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -74,7 +75,7 @@ msgstr ""
 "de paquets GNU Guix|GNU Guix|Guile Scheme|Mises à jours transactionnelles|"
 "gestion des paquets fonctionnelle|Reproductibilité"
 
-#: apps/base/templates/home.scm:31 apps/base/templates/components.scm:394
+#: apps/base/templates/home.scm:31 apps/base/templates/components.scm:395
 msgctxt "website menu"
 msgid "Overview"
 msgstr "Aperçu"
@@ -256,8 +257,8 @@ msgctxt "button"
 msgid "ALL CONTACT MEDIA"
 msgstr "TOUS LES MOYENS DE CONTACT"
 
-#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:418
-#: apps/base/templates/components.scm:421 apps/base/templates/about.scm:27
+#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:454
+#: apps/base/templates/components.scm:457 apps/base/templates/about.scm:27
 #: apps/base/templates/about.scm:30 apps/base/templates/contact.scm:26
 #: apps/base/templates/contribute.scm:26 apps/base/templates/graphics.scm:24
 #: apps/base/templates/security.scm:28
@@ -295,42 +296,89 @@ msgstr "Accueil"
 msgid "archive"
 msgstr "archive"
 
-#: apps/base/templates/components.scm:384
+#: apps/base/templates/components.scm:385
 msgctxt "website menu"
 msgid "Guix"
 msgstr "Guix"
 
-#: apps/base/templates/components.scm:388
+#: apps/base/templates/components.scm:389
 msgid "website menu:"
 msgstr "menu du site web :"
 
-#: apps/base/templates/components.scm:396
+#: apps/base/templates/components.scm:397
 #: apps/download/templates/download.scm:43
 #: apps/download/templates/download.scm:47
-#: apps/download/templates/download-latest.scm:134
-#: apps/download/templates/download-latest.scm:138
+#: apps/download/templates/download-latest.scm:146
+#: apps/download/templates/download-latest.scm:151
 msgctxt "website menu"
 msgid "Download"
 msgstr "Télécharger"
 
-#: apps/base/templates/components.scm:402
+#: apps/base/templates/components.scm:403
 msgctxt "website menu"
 msgid "Stable"
 msgstr "Stable"
 
-#: apps/base/templates/components.scm:405
-#: apps/download/templates/download-latest.scm:139
+#: apps/base/templates/components.scm:406
+#: apps/download/templates/download-latest.scm:152
 msgctxt "website menu"
 msgid "Latest"
 msgstr "Développement"
 
-#: apps/base/templates/components.scm:406 apps/base/templates/help.scm:26
+#: apps/base/templates/components.scm:409 apps/base/templates/help.scm:26
 #: apps/base/templates/help.scm:30
 msgctxt "website menu"
 msgid "Help"
 msgstr "Aide"
 
-#: apps/base/templates/components.scm:407
+#: apps/base/templates/components.scm:415
+msgctxt "website menu"
+msgid "All"
+msgstr "Tout voir"
+
+#: apps/base/templates/components.scm:418
+msgctxt "website menu"
+msgid "GNU Guix Manual"
+msgstr "Manuel de GNU Guix"
+
+#: apps/base/templates/components.scm:421
+msgctxt "website menu"
+msgid "Guix Reference Card"
+msgstr "Carte de référence de Guix"
+
+#: apps/base/templates/components.scm:424
+#: apps/base/templates/components.scm:449 apps/media/templates/video.scm:33
+#: apps/media/templates/video-list.scm:33
+msgctxt "website menu"
+msgid "Videos"
+msgstr "Vidéos"
+
+#: apps/base/templates/components.scm:427
+msgctxt "website menu"
+msgid "Cookbook"
+msgstr "Livre de recettes"
+
+#: apps/base/templates/components.scm:430
+msgctxt "website menu"
+msgid "GNU Manuals"
+msgstr "Manuels de GNU"
+
+#: apps/base/templates/components.scm:434
+msgctxt "website menu"
+msgid "Wiki"
+msgstr "Wiki"
+
+#: apps/base/templates/components.scm:437
+msgctxt "website menu"
+msgid "IRC Chat"
+msgstr "Salon IRC"
+
+#: apps/base/templates/components.scm:440
+msgctxt "website menu"
+msgid "Mailing Lists"
+msgstr "Listes de diffusion"
+
+#: apps/base/templates/components.scm:443
 #: apps/packages/templates/detailed-index.scm:31
 #: apps/packages/templates/detailed-index.scm:38
 #: apps/packages/templates/detailed-package-list.scm:34
@@ -344,7 +392,7 @@ msgctxt "website menu"
 msgid "Packages"
 msgstr "Paquets"
 
-#: apps/base/templates/components.scm:408 apps/blog/templates/post-list.scm:34
+#: apps/base/templates/components.scm:444 apps/blog/templates/post-list.scm:34
 #: apps/blog/templates/post-list.scm:40 apps/blog/templates/post.scm:29
 #: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:38
 #: apps/blog/templates/tag.scm:44
@@ -352,7 +400,7 @@ msgctxt "website menu"
 msgid "Blog"
 msgstr "Blog"
 
-#: apps/base/templates/components.scm:410
+#: apps/base/templates/components.scm:446
 #: apps/media/templates/screenshot.scm:28
 #: apps/media/templates/screenshots-overview.scm:25
 #: apps/media/templates/video.scm:29 apps/media/templates/video-list.scm:29
@@ -360,52 +408,46 @@ msgctxt "website menu"
 msgid "Media"
 msgstr "Média"
 
-#: apps/base/templates/components.scm:413 apps/media/templates/video.scm:33
-#: apps/media/templates/video-list.scm:33
-msgctxt "website menu"
-msgid "Videos"
-msgstr "Vidéos"
-
-#: apps/base/templates/components.scm:414
+#: apps/base/templates/components.scm:450
 msgctxt "website menu"
 msgid "Screenshots"
 msgstr "Captures d'écran"
 
-#: apps/base/templates/components.scm:416 apps/base/templates/donate.scm:26
+#: apps/base/templates/components.scm:452 apps/base/templates/donate.scm:26
 #: apps/base/templates/donate.scm:29
 msgctxt "website menu"
 msgid "Donate"
 msgstr "Donner"
 
-#: apps/base/templates/components.scm:423 apps/base/templates/contact.scm:31
+#: apps/base/templates/components.scm:459 apps/base/templates/contact.scm:31
 msgctxt "website menu"
 msgid "Contact"
 msgstr "contact"
 
-#: apps/base/templates/components.scm:424 apps/base/templates/contribute.scm:30
+#: apps/base/templates/components.scm:460 apps/base/templates/contribute.scm:30
 msgctxt "website menu"
 msgid "Contribute"
 msgstr "Contribuer"
 
-#: apps/base/templates/components.scm:425 apps/base/templates/security.scm:31
+#: apps/base/templates/components.scm:461 apps/base/templates/security.scm:31
 msgctxt "website menu"
 msgid "Security"
 msgstr "Sécurité"
 
-#: apps/base/templates/components.scm:426 apps/base/templates/graphics.scm:27
+#: apps/base/templates/components.scm:462 apps/base/templates/graphics.scm:27
 msgctxt "website menu"
 msgid "Graphics"
 msgstr "Graphiques"
 
-#: apps/base/templates/components.scm:448
+#: apps/base/templates/components.scm:484
 msgid "Translate"
 msgstr "Traduire"
 
-#: apps/base/templates/components.scm:468
+#: apps/base/templates/components.scm:504
 msgid " (Page <1/> of <2/>)"
 msgstr " (Page <1/> sur <2/>)"
 
-#: apps/base/templates/components.scm:492
+#: apps/base/templates/components.scm:528
 msgid "Page <1/> of <2/>. Go to another page: "
 msgstr "Page <1/> sur <2/>. Aller à une autre page : "
 
@@ -1896,7 +1938,7 @@ msgctxt "download page title"
 msgid "GNU Guix <1/> Binary"
 msgstr "Binaire de GNU Guix <1/>"
 
-#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:67
+#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:87
 msgid ""
 "Self-contained tarball providing binaries for Guix and its\n"
 "       dependencies, to be installed on top of your Linux-based system."
@@ -1926,7 +1968,7 @@ msgid "<1>en</1>Requirements.html"
 msgstr "<1>fr</1>Prerequis.html"
 
 #: apps/download/templates/components.scm:25
-#: apps/download/templates/download-latest.scm:102
+#: apps/download/templates/download-latest.scm:111
 msgid "Download options:"
 msgstr "Options de téléchargement :"
 
@@ -1955,7 +1997,7 @@ msgstr ""
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/download/templates/download.scm:40
-#: apps/download/templates/download-latest.scm:131
+#: apps/download/templates/download-latest.scm:143
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Installer|Source code|Package manager"
@@ -1997,39 +2039,39 @@ msgstr ""
 "ainsi que pour GNU Guix se trouvent sur les serveurs de GNU sur <1/>. Les "
 "anciennes versions se trouvent toujours sur <2/>."
 
-#: apps/download/templates/download-latest.scm:50
+#: apps/download/templates/download-latest.scm:68
 msgctxt "download page title"
 msgid "GNU Guix System on Linux"
 msgstr "Système GNU Guix sur Linux"
 
-#: apps/download/templates/download-latest.scm:51
+#: apps/download/templates/download-latest.scm:69
 msgid "USB/DVD ISO installer of the standalone Guix System on Linux."
 msgstr "Installateur ISO pour USB/DVD du système Guix indépendant sur Linux."
 
-#: apps/download/templates/download-latest.scm:58
+#: apps/download/templates/download-latest.scm:77
 msgctxt "download page title"
 msgid "GNU Guix System on GNU Hurd"
 msgstr "Système GNU Guix sur GNU Hurd"
 
-#: apps/download/templates/download-latest.scm:59
+#: apps/download/templates/download-latest.scm:78
 msgid "Virtual machine image of the standalone Guix System on GNU Hurd."
 msgstr "Image de machine virtuelle du système Guix indépendant sur GNU Hurd."
 
-#: apps/download/templates/download-latest.scm:66
+#: apps/download/templates/download-latest.scm:86
 msgctxt "download page title"
 msgid "GNU Guix binary"
 msgstr "Binaire de GNU Guix"
 
-#: apps/download/templates/download-latest.scm:111
+#: apps/download/templates/download-latest.scm:121
 msgid "Build details: "
 msgstr "Détails de la construction : "
 
-#: apps/download/templates/download-latest.scm:125
+#: apps/download/templates/download-latest.scm:137
 msgctxt "webpage title"
 msgid "Download latest"
 msgstr "Télécharger la dernière version de développement"
 
-#: apps/download/templates/download-latest.scm:127
+#: apps/download/templates/download-latest.scm:139
 msgid ""
 "Download latest GNU Guix System images built by the Cuirass continuous\n"
 "integration system."
@@ -2037,13 +2079,13 @@ msgstr ""
 "Téléchargez la dernière image du système GNU Guix construite par le système\n"
 "d'intégration continue Cuirass."
 
-#: apps/download/templates/download-latest.scm:144
+#: apps/download/templates/download-latest.scm:157
 msgid "Download latest images"
 msgstr "Télécharger les dernières images"
 
 #. TRANSLATORS: Continuous Integration is a section name
 #. in the English (en) manual.
-#: apps/download/templates/download-latest.scm:147
+#: apps/download/templates/download-latest.scm:160
 msgid ""
 "Download latest GNU Guix System images built by the "
 "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> continuous "

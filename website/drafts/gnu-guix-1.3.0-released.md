@@ -4,8 +4,7 @@ author: Ludovic Courtès
 slug: gnu-guix-1.3.0-released
 tags: Releases, Security
 ---
-FIXME: Use 1.3.0 test pilot.
-![Image of a flight of the Guix.](https://guix.gnu.org/static/blog/img/flight-of-the-guix.jpg)
+![Image of a Guix test pilot.](https://guix.gnu.org/static/blog/img/test-pilot.png)
 
 We are pleased to announce the release of GNU Guix version 1.3.0!
 

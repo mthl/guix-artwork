@@ -151,7 +151,34 @@ to one or several of them.
 
 ### Performance
 
-  - substitutes, discovery, ‘guix system init’
+One thing you will hopefully notice is that substitute installation
+(downloading pre-built binaries) became faster, [as we explained
+before](https://guix.gnu.org/en/blog/2021/getting-bytes-to-disk-more-quickly/).
+This is in part due to the opportunistic use of zstd compression, which
+has a high decompression throughput.  The daemon and [`guix
+publish`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-publish.html)
+support zstd as an additional compression method, next to gzip and lzip.
+
+Another change that can help fetch substitutes more quickly is _local
+substitute server discovery_.  The [new `--discover` option of
+`guix-daemon`](https://guix.gnu.org/manual/en/html_node/Invoking-guix_002ddaemon.html)
+instructs it to discover and use substitute servers on the local-area
+network (LAN) advertised with the mDNS/DNS-SD protocols, using Avahi.
+Similarly, `guix publish` has a [new `--advertise`
+option](https://guix.gnu.org/manual/en/html_node/Invoking-guix-publish.html)
+to advertise itself on the LAN.
+
+On Guix System, you can run `herd discover guix-daemon on` to turn
+discovery on temporarily, or you can [enable it in your system
+configuration](https://guix.gnu.org/manual/en/html_node/Base-Services.html#index-guix_002dconfiguration).
+Opportunistic use of neighboring substitute servers _is entirely safe_,
+[thanks to reproducible
+builds](https://guix.gnu.org/en/blog/2017/reproducible-builds-a-status-update/).
+
+In other news, [`guix system init` has been
+optimized](https://issues.guix.gnu.org/44760#4), which contributes to
+making Guix System installation faster.
+
   - channel-with-substitutes-available
 
 ### POWER9 support, packages, services, and more!

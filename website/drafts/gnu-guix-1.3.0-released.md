@@ -1,6 +1,6 @@
 title: GNU Guix 1.3.0 released
 date: 2021-05-11 14:00:00
-author: Ludovic Courtès
+author: Ludovic Courtès, Maxim Cournoyer
 slug: gnu-guix-1.3.0-released
 tags: Releases, Security
 ---
@@ -183,5 +183,73 @@ making Guix System installation faster.
 
 ### POWER9 support, packages, services, and more!
 
-  - POWER9
-  - bug fixes
+POWER9 support is now available as a technology preview, thanks to the
+tireless work of those who helped [porting Guix to that
+platform](https://guix.gnu.org/blog/2021/new-supported-platform-powerpc64le-linux/).
+There aren't many POWER9 binary substitutes available yet, due to the
+limited POWER9 capacity of our build farm, but if you are not afraid
+of building many packages from source, we'd be thrilled to hear back
+from your experience!
+
+The package collection has been augmented with approximately 2000 new
+packages, bringing its total count to 17670 packages; 3100 packages
+were also updated.
+
+The services catalog has also seen new additions such as
+[wireguard](https://guix.gnu.org/manual/en/html_node/VPN-Services.html#index-wireguard_002dservice_002dtype),
+[syncthing](https://guix.gnu.org/manual/en/html_node/Networking-Services.html#index-syncthing),
+[ipfs](https://guix.gnu.org/manual/en/html_node/Networking-Services.html#index-IPFS),
+and more!  You can search for services via the `guix system search`
+facility.
+
+The [`NEWS`
+file](https://git.savannah.gnu.org/cgit/guix.git/tree/NEWS?h=version-1.3.0&id=2b76179ecd951172288f5f6f78402d9304d2da41)
+lists additional noteworthy changes and bug fixes you may be
+interested in.
+
+### Try it!
+
+The [installation script](https://guix.gnu.org/install.sh) has been
+improved to allow for more automation. For example, if you are in a
+hurry, you could run it with:
+
+```
+# yes | ./install.sh
+```
+
+to proceed to install the Guix binary on your system without any
+prompt!
+
+You may also be interested in trying the [Guix System demonstration VM
+image](https://ftp.gnu.org/gnu/guix/guix-system-vm-image-1.3.0.x86_64-linux.qcow2)
+which now supports clipboard integration with the host and dynamic
+resizing thanks to the SPICE protocol, which we hope will improve the
+user experience.
+
+To review all the installation options at your disposal, consult [the
+download page](https://guix.gnu.org/en/download/) and don't hesitate
+to [get in touch with us](https://guix.gnu.org/en/contact/).
+
+Enjoy!
+
+### Credits
+
+> Luis Felipe (illustration)
+
+#### About GNU Guix
+
+[GNU Guix](https://guix.gnu.org) is a transactional package manager and
+an advanced distribution of the GNU system that [respects user
+freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).
+Guix can be used on top of any system running the Hurd or the Linux
+kernel, or it can be used as a standalone operating system distribution
+for i686, x86_64, ARMv7, AArch64 and POWER9 machines.
+
+In addition to standard package management features, Guix supports
+transactional upgrades and roll-backs, unprivileged package management,
+per-user profiles, and garbage collection.  When used as a standalone
+GNU/Linux distribution, Guix offers a declarative, stateless approach to
+operating system configuration management.  Guix is highly customizable
+and hackable through [Guile](https://www.gnu.org/software/guile)
+programming interfaces and extensions to the
+[Scheme](http://schemers.org) language.

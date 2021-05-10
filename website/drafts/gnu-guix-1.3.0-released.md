@@ -146,8 +146,40 @@ option](https://guix.gnu.org/manual/en/html_node/Package-Transformation-Options.
 which provides a way to build a bunch of packages with a patch applied
 to one or several of them.
 
-  - ‘guix system image’
-  - GUIX_EXTENSIONS_PATH for GWL
+Building on the [Guix System image
+API](https://othacehe.org/the-guix-system-image-api.html) introduced
+in v1.2.0, the `guix system vm-image` and `guix system disk-image` are
+superseded by a unified `guix system image` command.  For example,
+
+```
+$ guix system vm-image --save-provenance config.scm
+```
+becomes
+```
+$ guix system image -t qcow2 --save-provenance config.scm
+```
+while
+```
+$ guix system disk-image -t iso9660 gnu/system/install.scm
+```
+becomes
+```
+guix system image -t iso9660 gnu/system/install.scm
+```
+
+This brings performance benefits; while a virtual machine used to be
+involved in the production of the image artifacts, the low-level bits
+are now handled by the dedicated `genimage` tool.  Another benefit is
+that the `qcow2` format is now compressed, which removes the need to
+manually compress the images by post-processing them with `xz` or
+another compressor.  To learn more about the `guix system image`
+command, you can [refer to its
+documentation](https://guix.gnu.org/manual/en/html_node/Invoking-guix-system#index-Creating-system-images-in-various-formats).
+
+Last but not least, the introduction of the `GUIX_EXTENSIONS_PATH`
+Guix search path, should make it possible for Guix extensions such as
+the [Guix Workflow Language](https://guixwl.org/) to have their Guile
+modules automatically discovered, simplifying their deployments.
 
 ### Performance
 
@@ -179,7 +211,12 @@ In other news, [`guix system init` has been
 optimized](https://issues.guix.gnu.org/44760#4), which contributes to
 making Guix System installation faster.
 
-  - channel-with-substitutes-available
+On some machines with limited resources, building the Guix modules is
+an expensive operation.  A new procedure,
+`channel-with-substitutes-available` from the `(guix ci)` module, can
+now be used to pull Guix to the latest commit which has already been
+built by the build farm.  Refer to the documentation for [an
+example](https://guix.gnu.org/manual/en/html_node/Channels-with-Substitutes.html).
 
 ### POWER9 support, packages, services, and more!
 

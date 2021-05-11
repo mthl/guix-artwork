@@ -2,7 +2,7 @@ title: GNU Guix 1.3.0 released
 date: 2021-05-11 14:00:00
 author: Ludovic Courtès, Maxim Cournoyer
 slug: gnu-guix-1.3.0-released
-tags: Releases, Security
+tags: Releases
 ---
 ![Image of a Guix test pilot.](https://guix.gnu.org/static/blog/img/test-pilot.png)
 

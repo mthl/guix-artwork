@@ -259,6 +259,8 @@ The services catalog has also seen new additions such as
 [wireguard](https://guix.gnu.org/manual/en/html_node/VPN-Services.html#index-wireguard_002dservice_002dtype),
 [syncthing](https://guix.gnu.org/manual/en/html_node/Networking-Services.html#index-syncthing),
 [ipfs](https://guix.gnu.org/manual/en/html_node/Networking-Services.html#index-IPFS),
+[a simplified and more convenient service for
+Cuirass](https://guix.gnu.org/manual/en/html_node/Continuous-Integration.html),
 and more!  You can search for services via the `guix system search`
 facility.
 

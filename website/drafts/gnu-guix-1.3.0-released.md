@@ -237,7 +237,7 @@ example](https://guix.gnu.org/manual/en/html_node/Channels-with-Substitutes.html
 
 POWER9 support is now available as a technology preview, thanks to the
 tireless work of those who helped [porting Guix to that
-platform](https://guix.gnu.org/blog/2021/new-supported-platform-powerpc64le-linux/).
+platform](https://guix.gnu.org/en/blog/2021/new-supported-platform-powerpc64le-linux/).
 There aren't many POWER9 binary substitutes available yet, due to the
 limited POWER9 capacity of our build farm, but if you are not afraid
 of building many packages from source, we'd be thrilled to hear back
@@ -250,7 +250,10 @@ Linux-libre 5.9.3, LibreOffice 6.4.7.2, and Emacs 27.2, to name a few.
 Among the many packaging changes, one that stands out is the [new OCaml
 bootstrap](https://www.freelists.org/post/bootstrappable/Announcing-the-bootstrap-of-OCaml):
 the OCaml package is now built entirely from source _via_
-[camlboot](https://github.com/Ekdohibs/camlboot/).
+[camlboot](https://github.com/Ekdohibs/camlboot/).  Package updates also
+include
+[Cuirass 1.0](https://guix.gnu.org/en/blog/2021/cuirass-10-released/),
+the service that powers [our build farm](https://ci.guix.gnu.org/).
 
 The services catalog has also seen new additions such as
 [wireguard](https://guix.gnu.org/manual/en/html_node/VPN-Services.html#index-wireguard_002dservice_002dtype),

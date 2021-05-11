@@ -228,9 +228,14 @@ limited POWER9 capacity of our build farm, but if you are not afraid
 of building many packages from source, we'd be thrilled to hear back
 from your experience!
 
-The package collection has been augmented with approximately 2000 new
-packages, bringing its total count to 17670 packages; 3100 packages
-were also updated.
+2,000 packages were added, for a total of [more than 17K
+packages](https://guix.gnu.org/en/packages); 3,100 were updated.  The
+distribution comes with GNU libc 2.31, GCC 10.3, Xfce 4.16.0,
+Linux-libre 5.9.3, LibreOffice 6.4.7.2, and Emacs 27.2, to name a few.
+Among the many packaging changes, one that stands out is the [new OCaml
+bootstrap](https://www.freelists.org/post/bootstrappable/Announcing-the-bootstrap-of-OCaml):
+the OCaml package is now built entirely from source _via_
+[camlboot](https://github.com/Ekdohibs/camlboot/).
 
 The services catalog has also seen new additions such as
 [wireguard](https://guix.gnu.org/manual/en/html_node/VPN-Services.html#index-wireguard_002dservice_002dtype),

@@ -124,6 +124,21 @@ longer needs to be in `PATH`, with appropriate `GUILE_LOAD_PATH`
 settings, on target machines.  Instead, offloading now channels all its
 operations through `guix repl`.
 
+The Guix reference manual *is fully translated* into
+[French](https://guix.gnu.org/manual/fr/html_node/),
+[German](https://guix.gnu.org/manual/de/html_node/), and
+[Spanish](https://guix.gnu.org/manual/es/html_node/), with [preliminary
+translations](https://translate.fedoraproject.org/projects/guix/documentation-manual/)
+in [Russian](https://guix.gnu.org/manual/ru/html_node/),
+[Chinese](https://guix.gnu.org/manual/zh-cn/html_node/), and other
+languages.  Guix itself is fully translated in French, German, and
+Slovak, and partially translated in [almost twenty other
+languages](https://translate.fedoraproject.org/projects/guix/guix/).
+Translations are [now handled on
+Weblate](https://translate.fedoraproject.org/projects/guix/), and [you
+can
+help](https://guix.gnu.org/manual/devel/en/html_node/Translating-Guix.html)!
+
 ### Developer tools
 
 We have good news for packagers!  First, [`guix

@@ -25,8 +25,8 @@
     #:image (guix-url "static/base/img/GuixSD-package.png")
     #:base-url (string-append "https://ftp.gnu.org/gnu/guix/guix-system-install-"
 			      (latest-guix-version) ".")
-    #:variants (list (variant "x86_64" "x86_64-linux.iso.xz")
-		     (variant "i686" "i686-linux.iso.xz"))
+    #:variants (list (variant "x86_64" "x86_64-linux.iso")
+		     (variant "i686" "i686-linux.iso"))
     ;; TRANSLATORS: System installation is a section name in the
     ;; English (en) manual.
     #:manual (G_ (manual-url-with-language (G_ "en")
@@ -41,7 +41,7 @@
     #:image (guix-url "static/base/img/QEMU-package.png")
     #:base-url (string-append "https://ftp.gnu.org/gnu/guix/guix-system-vm-image-"
 			      (latest-guix-version) ".")
-    #:variants (list (variant "x86_64" "x86_64-linux.xz"))
+    #:variants (list (variant "x86_64" "x86_64-linux.qcow2"))
     ;; TRANSLATORS: Running Guix in a VM is a section name in the
     ;; English (en) manual.
     #:manual (G_ (manual-url-with-language (G_ "en")
@@ -61,7 +61,8 @@
     #:variants (list (variant "x86_64" "x86_64-linux.tar.xz")
 		     (variant "i686" "i686-linux.tar.xz")
 		     (variant "armhf" "armhf-linux.tar.xz")
-                     (variant "aarch64" "aarch64-linux.tar.xz"))
+                     (variant "aarch64" "aarch64-linux.tar.xz")
+                     (variant "powerpc64le" "powerpc64le-linux.tar.xz"))
     ;; TRANSLATORS: Binary Installation is a section name in the
     ;; English (en) manual.
     #:manual (G_ (manual-url-with-language (G_ "en")

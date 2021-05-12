@@ -155,7 +155,7 @@ SourceForge, and `generic-html` which, as the name implies, is a generic
 update that works by scanning package home pages.  This greatly improves
 `guix refresh` coverage.
 
-Packages and developers may also like the new [`--with-patch` package
+Packagers and developers may also like the new [`--with-patch` package
 transformation
 option](https://guix.gnu.org/manual/en/html_node/Package-Transformation-Options.html),
 which provides a way to build a bunch of packages with a patch applied

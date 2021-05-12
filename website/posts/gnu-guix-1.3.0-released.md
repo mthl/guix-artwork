@@ -246,7 +246,7 @@ from your experience!
 2,000 packages were added, for a total of [more than 17K
 packages](https://guix.gnu.org/en/packages); 3,100 were updated.  The
 distribution comes with GNU libc 2.31, GCC 10.3, Xfce 4.16.0,
-Linux-libre 5.9.3, LibreOffice 6.4.7.2, and Emacs 27.2, to name a few.
+Linux-libre 5.11.15, LibreOffice 6.4.7.2, and Emacs 27.2, to name a few.
 Among the many packaging changes, one that stands out is the [new OCaml
 bootstrap](https://www.freelists.org/post/bootstrappable/Announcing-the-bootstrap-of-OCaml):
 the OCaml package is now built entirely from source _via_

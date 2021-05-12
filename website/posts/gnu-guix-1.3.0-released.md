@@ -1,5 +1,5 @@
 title: GNU Guix 1.3.0 released
-date: 2021-05-11 14:00:00
+date: 2021-05-11 22:00:00
 author: Ludovic Courtès, Maxim Cournoyer
 slug: gnu-guix-1.3.0-released
 tags: Releases
@@ -192,8 +192,8 @@ command, you can [refer to its
 documentation](https://guix.gnu.org/manual/en/html_node/Invoking-guix-system#index-Creating-system-images-in-various-formats).
 
 Last but not least, the introduction of the `GUIX_EXTENSIONS_PATH`
-Guix search path, should make it possible for Guix extensions such as
-the [Guix Workflow Language](https://guixwl.org/) to have their Guile
+Guix search path should make it possible for Guix extensions, such as
+the [Guix Workflow Language](https://guixwl.org/), to have their Guile
 modules automatically discovered, simplifying their deployments.
 
 ### Performance
@@ -265,15 +265,15 @@ and more!  You can search for services via the `guix system search`
 facility.
 
 The [`NEWS`
-file](https://git.savannah.gnu.org/cgit/guix.git/tree/NEWS?h=version-1.3.0&id=2b76179ecd951172288f5f6f78402d9304d2da41)
+file](https://git.savannah.gnu.org/cgit/guix.git/tree/NEWS?h=version-1.3.0&id=a0178d34f582b50e9bdbb0403943129ae5b560ff)
 lists additional noteworthy changes and bug fixes you may be
 interested in.
 
 ### Try it!
 
 The [installation script](https://guix.gnu.org/install.sh) has been
-improved to allow for more automation. For example, if you are in a
-hurry, you could run it with:
+improved to allow for more automation.  For example, if you are in a
+hurry, you can run it with:
 
 ```
 # yes | ./install.sh

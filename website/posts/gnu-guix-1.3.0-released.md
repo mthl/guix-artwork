@@ -167,15 +167,15 @@ in v1.2.0, the `guix system vm-image` and `guix system disk-image` are
 superseded by a unified `guix system image` command.  For example,
 
 ```
-$ guix system vm-image --save-provenance config.scm
+guix system vm-image --save-provenance config.scm
 ```
 becomes
 ```
-$ guix system image -t qcow2 --save-provenance config.scm
+guix system image -t qcow2 --save-provenance config.scm
 ```
 while
 ```
-$ guix system disk-image -t iso9660 gnu/system/install.scm
+guix system disk-image -t iso9660 gnu/system/install.scm
 ```
 becomes
 ```

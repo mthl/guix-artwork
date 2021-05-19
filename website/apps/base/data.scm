@@ -25,9 +25,8 @@
     #:description
     (G_
      `(p
-       "Join the " (code "#guix") " channel on the Freenode IRC network to chat
-       with the community about GNU Guix or to get help in
-       real-time."))
+       "Join the " (code "#guix") " channel on the Libera Chat IRC network to
+chat with the community about GNU Guix or to get help in real-time."))
     #:url (guix-url "contact/irc/")
     #:log guix-irc-log-url)
 

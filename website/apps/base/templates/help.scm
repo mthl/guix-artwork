@@ -160,7 +160,7 @@ system|GNU Hurd|GNU Guix package manager|Help resources") #\|)
         ,(G_
           `(p
             "For real-time support from the community, you can connect
-            to the " (code "#guix") " channel on irc.freenode.net. There
+            to the " (code "#guix") " channel on irc.libera.chat. There
             you can get help about anything related to GNU Guix."))
         ,(G_
           `(p

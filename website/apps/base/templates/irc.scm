@@ -38,8 +38,8 @@ system|GNU Hurd|GNU Guix package manager|IRC|chat") #\|)
         `(p
           (@ (class "centered-block limit-width"))
           "Join the " (code "#guix") " channel on the "
-          ,(G_ `(a (@ (href "https://en.wikipedia.org/wiki/Freenode"))
-                   "Freenode IRC network"))
+          ,(G_ `(a (@ (href "https://libera.chat/"))
+                   "Libera Chat IRC network"))
           " to chat with the GNU Guix community or to get help
           in real-time. You can use the chat widget below, or just use
           the "
@@ -52,4 +52,4 @@ system|GNU Hurd|GNU Guix package manager|IRC|chat") #\|)
 
       (iframe
        (@ (class "chat-widget centered-block")
-	  (src "https://kiwiirc.com/client/irc.freenode.net/?nick=PotentialUser-?#guix")))))))
+	  (src "https://kiwiirc.com/client/irc.libera.chat/?nick=PotentialUser-?#guix")))))))

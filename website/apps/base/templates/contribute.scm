@@ -45,8 +45,8 @@ Translation|I18N|L10N|Artwork") #\|)
           " or in the "
           ,(G_
             `(a (@ (href ,(guix-url "contact/irc/"))) "#guix channel"))
-          " in IRC Freenode. Tell us how would you like to help, and we
-          will do our best to guide you. "))
+          " on the Libera Chat IRC network. Tell us how would you like to help,
+           and we will do our best to guide you. "))
 
       ,(G_
         `(p

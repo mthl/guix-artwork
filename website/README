@@ -32,17 +32,15 @@ commands:
 
 ** Build locally
 #+begin_example
-  GUIX_WEB_SITE_LOCAL=yes guix environment -C -m manifest.scm                            \
-                          -E GUIX_LOCPATH -E LANG --share=$HOME/.guix-profile/lib/locale \
-                          -E GUIX_WEB_SITE_LOCAL  --share=/tmp                           \
+  LANG=en_US.UTF-8 GUIX_WEB_SITE_LOCAL=yes guix environment -C -m manifest.scm \
+                          -E LANG -E GUIX_WEB_SITE_LOCAL  --share=/tmp         \
                           -- haunt build
 #+end_example
 
 ** Serve locally
 #+begin_example
-  guix environment -CN -m manifest.scm                                \
-       -E GUIX_LOCPATH -E LANG --share=$HOME/.guix-profile/lib/locale \
-       --share=/tmp                                                   \
+  LANG=en_US.UTF-8 guix environment -CN -m manifest.scm \
+       -E LANG --share=/tmp                             \
        -- haunt serve -w
 #+end_example
 

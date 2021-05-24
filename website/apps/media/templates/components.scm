@@ -14,7 +14,8 @@
   #:use-module (apps media types)
   #:use-module (apps media utils)
   #:use-module (srfi srfi-19)
-  #:export (screenshot->shtml
+  #:export (publication->shtml
+            screenshot->shtml
             screenshots-box
             video->shtml
             video-content
@@ -24,6 +25,31 @@
 ;;;
 ;;; Components.
 ;;;
+
+(define (publication->shtml publication)
+  "Return an SHTML representation of the given publication object.
+
+   PUBLICATION (<publication>)
+     A publication object as defined in (apps media types)."
+  (let ((date
+         (date->string (publication-date publication)
+                       (C_ "SRFI-19 date->string format" "~b ~d, ~Y"))))
+
+    `(a
+      (@ (class "publication-preview")
+         (href ,(publication-url publication)))
+
+      (h3
+       (@ (lang ,(publication-language publication))
+          (class "publication-title"))
+       ,(publication-title publication))
+
+      (p
+       (@ (class "publication-info"))
+       ;; TRANSLATORS: <1/> is a date, and <2/> a list of authors.
+       ,(G_ `("Published " ,date " by "
+              ,(publication-authors publication) ""))))))
+
 
 (define (screenshot->shtml shot)
   "Return an SHTML representation of the given screenshot object.

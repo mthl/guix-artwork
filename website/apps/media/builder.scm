@@ -6,11 +6,13 @@
 (define-module (apps media builder)
   #:use-module (apps aux system)
   #:use-module (apps media data)
+  #:use-module (apps media templates publication-list)
   #:use-module (apps media templates screenshot)
   #:use-module (apps media templates screenshots-overview)
   #:use-module (apps media templates video)
   #:use-module (apps media templates video-list)
   #:use-module (apps media types)
+  #:use-module (haunt artifact)
   #:use-module (haunt html)
   #:use-module (haunt page)
   #:use-module (haunt utils)
@@ -37,11 +39,13 @@
      A list of post objects that represent articles from the blog. See
      Haunt <post> objects for more information.
 
-   RETURN (list of <page>)
-     A list of page objects that represent the web resources of the
-     application. See Haunt <page> objects for more information."
+   RETURN (list of <artifact> and <page>)
+     A list of objects that represent the web resources of the
+     application. See Haunt <artifact> and <page> objects for more
+     information."
   (flatten
-   (list (screenshots-overview-builder)
+   (list (publication-list-builder)
+         (screenshots-overview-builder)
          (screenshots-builder)
          (videos-builder)
          (video-list-builder))))
@@ -50,6 +54,13 @@
 ;;;
 ;;; Helper builders.
 ;;;
+
+(define (publication-list-builder)
+  "Return a Haunt artifact representing the publications page."
+  (serialized-artifact (url-path-join "publications" "index.html")
+                       (publication-list-t publications)
+                       sxml->html))
+
 
 (define (screenshots-builder)
   "Return a list of Haunt pages representing screenshot pages."

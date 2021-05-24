@@ -9,6 +9,7 @@
   #:use-module (apps media types)
   #:use-module (srfi srfi-19)
   #:export (playlists
+            publications
             screenshots))
 
 
@@ -96,6 +97,30 @@ distribution."))
      #:url "https://guix.gnu.org/guix-videos/04-packaging-part-three.webm"
      #:poster (guix-url "static/videos/img/packaging-03.png")
      #:last-updated (string->date "2020-03-28T16:00:00" "~Y-~m-~dT~H:~M:~S")))))
+
+
+(define publications
+  (list
+   (publication
+    #:title "Functional Package Management with Guix"
+    #:url "https://arxiv.org/abs/1305.4584"
+    #:authors "Ludovic Courtès"
+    #:date (string->date "2013-05-20" "~Y-~m-~d"))
+   (publication
+    #:title "Reproducible and User-Controlled Software Environments in HPC with Guix"
+    #:url "https://hal.inria.fr/hal-01161771/en"
+    #:authors (G_ "Ludovic Courtès, Ricardo Wurmus")
+    #:date (string->date "2015-07-25" "~Y-~m-~d"))
+   (publication
+    #:title "Code Staging in GNU Guix"
+    #:url "https://arxiv.org/abs/1709.00833"
+    #:authors "Ludovic Courtès"
+    #:date (string->date "2017-09-04" "~Y-~m-~d"))
+   (publication
+    #:title "Guix: A most advanced operating system"
+    #:url "https://ambrevar.xyz/guix-advance/index.html"
+    #:authors "Pierre Neidhardt"
+    #:date (string->date "2019-01-14" "~Y-~m-~d"))))
 
 
 (define screenshots

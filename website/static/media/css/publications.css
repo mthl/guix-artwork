@@ -1,0 +1,35 @@
+.publication-list {
+    margin-top: 2em;
+}
+
+.publication-preview,
+.publication-preview:link,
+.publication-preview:visited {
+    display: block;
+    border-image: linear-gradient(to right, gray, transparent) 1;
+    border-style: none none solid none;
+    border-width: thin thick;
+    color: #4D4D4D;
+    padding: 20px 70px 20px 10px;
+    transition: border-width .2s cubic-bezier(.22,.61,.36,1);
+}
+
+.publication-preview:active,
+.publication-preview:focus,
+.publication-preview:hover {
+    background-color: gold;
+    background-image: url("/static/base/img/link-arrow-shaper.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+    border-image: linear-gradient(to right, #333, white, white) 1;
+    border-style: none none solid solid;
+}
+
+.publication-title {
+    margin: 0px;
+}
+
+.publication-info {
+    margin-bottom: 0px;
+}

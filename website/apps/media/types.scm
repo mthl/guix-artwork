@@ -5,7 +5,14 @@
 
 (define-module (apps media types)
   #:use-module (srfi srfi-9)
-  #:export (screenshot
+  #:export (publication
+            publication?
+            publication-authors
+            publication-date
+            publication-language
+            publication-title
+            publication-url
+            screenshot
             screenshot?
             screenshot-caption
             screenshot-image
@@ -31,6 +38,49 @@
 ;;;
 ;;; Data types.
 ;;;
+
+;;; Publication (record type)
+;;; -------------------------
+;;;
+;;; A publication object represents a written material that talks about
+;;; GNU Guix.
+;;;
+;;; Objects of this type can be created with the "publication" procedure
+;;; (see Helper procedures below).
+;;;
+;;; Fields:
+;;;
+;;; title (string)
+;;;   The title of the publication.
+;;;
+;;; url (string)
+;;;   A URL to the publication.
+;;;
+;;; authors (string)
+;;;   The names of the authors.
+;;;
+;;; date (date)
+;;;   The date of publication.
+;;;
+;;; language (string)
+;;;   IETF language tag corresponding to the language in which the
+;;;   publication is written.
+;;;
+(define-record-type <publication>
+  (make-publication title url authors date language)
+  publication?
+  (title publication-title)
+  (url publication-url)
+  (authors publication-authors)
+  (date publication-date)
+  (language publication-language))
+
+;;; Helper procedures.
+
+(define* (publication #:key title url authors date (language "en"))
+  "Return a <publication> object with the given attributes."
+  (make-publication title url authors date language))
+
 
 ;;; Screenshot (record type)
 ;;; ------------------------

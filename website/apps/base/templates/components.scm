@@ -461,8 +461,18 @@ manual.
       ,(menu-dropdown #:label (C_ "website menu" "Media") #:active-item active-item
         #:items
         (list
-         (C_ "website menu" (menu-item #:label "Videos" #:active-item active-item #:url (guix-url "videos/")))
-         (C_ "website menu" (menu-item #:label "Screenshots" #:active-item active-item #:url (guix-url "screenshots/")))))
+         (C_ "website menu"
+             (menu-item #:label "Videos"
+                        #:active-item active-item
+                        #:url (guix-url "videos/")))
+         (C_ "website menu"
+             (menu-item #:label "Screenshots"
+                        #:active-item active-item
+                        #:url (guix-url "screenshots/")))
+         (C_ "website menu"
+             (menu-item #:label "Publications"
+                        #:active-item active-item
+                        #:url (guix-url "publications/")))))
 
       ,(C_ "website menu" (menu-item #:label "Donate" #:active-item active-item #:url (guix-url "donate/")))
 

@@ -117,6 +117,12 @@ distribution."))
     #:authors "Ludovic Courtès"
     #:date (string->date "2017-09-04" "~Y-~m-~d"))
    (publication
+    #:title "Reproducible Genomics Analysis Pipelines with GNU Guix"
+    #:url "http://dx.doi.org/10.1093/gigascience/giy123"
+    #:authors "Ricardo Wurmus, Bora Uyar, Brendan Osberg, Vedran Franke, \
+Alexander Gosdschan, Katarzyna Wreczycka, Jonathan Ronen, Altuna Akalin"
+    #:date (string->date "2018-10-02" "~Y-~m-~d"))
+   (publication
     #:title "Guix: A most advanced operating system"
     #:url "https://ambrevar.xyz/guix-advance/index.html"
     #:authors "Pierre Neidhardt"

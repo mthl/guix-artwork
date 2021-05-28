@@ -117,6 +117,11 @@ distribution."))
     #:authors "Ludovic Courtès"
     #:date (string->date "2017-09-04" "~Y-~m-~d"))
    (publication
+    #:title "Scientific Data Analysis Pipelines and Reproducibility"
+    #:authors "Altuna Akalin"
+    #:url "https://towardsdatascience.com/scientific-data-analysis-pipelines-and-reproducibility-75ff9df5b4c5"
+    #:date (string->date "2018-10-01" "~Y-~m-~d"))
+   (publication
     #:title "Reproducible Genomics Analysis Pipelines with GNU Guix"
     #:url "http://dx.doi.org/10.1093/gigascience/giy123"
     #:authors "Ricardo Wurmus, Bora Uyar, Brendan Osberg, Vedran Franke, \
@@ -126,7 +131,14 @@ Alexander Gosdschan, Katarzyna Wreczycka, Jonathan Ronen, Altuna Akalin"
     #:title "Guix: A most advanced operating system"
     #:url "https://ambrevar.xyz/guix-advance/index.html"
     #:authors "Pierre Neidhardt"
-    #:date (string->date "2019-01-14" "~Y-~m-~d"))))
+    #:date (string->date "2019-01-14" "~Y-~m-~d"))
+   (publication
+    #:title "Scalable Workflows and Reproducible Data Analysis for Genomics"
+    #:url "https://link.springer.com/protocol/10.1007%2F978-1-4939-9074-0_24"
+    #:authors "Francesco Strozzi, Roel Janssen, Ricardo Wurmus, \
+Michael R. Crusoe, George Githinji, Paolo Di Tommaso, Dominique Belhachemi, \
+Steffen Möller, Geert Smant, Joep de Ligt, Pjotr Prins"
+    #:date (string->date "2019-07-06" "~Y-~m-~d"))))
 
 
 (define screenshots

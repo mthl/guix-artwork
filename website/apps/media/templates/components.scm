@@ -46,9 +46,11 @@
 
       (p
        (@ (class "publication-info"))
-       ;; TRANSLATORS: <1/> is a date, and <2/> a list of authors.
-       ,(G_ `("Published " ,date " by "
-              ,(publication-authors publication) ""))))))
+       ;; TRANSLATORS: <1/> is a publication type, <2/> is a date, and
+       ;; <3/> is a list of authors.
+       ,(G_
+         `("" ,(publication-type publication) ". Published " ,date
+           " by " ,(publication-authors publication) ". "))))))
 
 
 (define (screenshot->shtml shot)

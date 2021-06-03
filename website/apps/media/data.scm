@@ -145,7 +145,13 @@ Alexander Gosdschan, Katarzyna Wreczycka, Jonathan Ronen, Altuna Akalin"
 Michael R. Crusoe, George Githinji, Paolo Di Tommaso, Dominique Belhachemi, \
 Steffen Möller, Geert Smant, Joep de Ligt, Pjotr Prins"
     #:date (string->date "2019-07-06" "~Y-~m-~d")
-    #:type (C_ "publication type" "Book chapter"))))
+    #:type (C_ "publication type" "Book chapter"))
+   (publication
+    #:title "Staged Computation: The Technique You Didn’t Know You Were Using"
+    #:url "https://hal.archives-ouvertes.fr/hal-02877319/"
+    #:authors "Konrad Hinsen"
+    #:date (string->date "2020-06-22" "~Y-~m-~d")
+    #:type (C_ "publication type" "Journal article"))))
 
 
 (define screenshots

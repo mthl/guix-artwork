@@ -8,6 +8,7 @@
   #:export (publication
             publication?
             publication-authors
+            publication-scientific?
             publication-date
             publication-language
             publication-title
@@ -71,22 +72,27 @@
 ;;;   The kind of publication. See the list of publications in the
 ;;;   (apps media data) module for examples.
 ;;;
+;;; scientific? (boolean)
+;;;   Whether the publication is scientific or not.
+;;;
 ;;;
 (define-record-type <publication>
-  (make-publication title url authors date language type)
+  (make-publication title url authors date language type scientific?)
   publication?
   (title publication-title)
   (url publication-url)
   (authors publication-authors)
   (date publication-date)
   (language publication-language)
-  (type publication-type))
+  (type publication-type)
+  (scientific? publication-scientific?))
 
 ;;; Helper procedures.
 
-(define* (publication #:key title url authors date (language "en") type)
+(define* (publication #:key title url authors date (language "en") type
+                      (scientific? #true))
   "Return a <publication> object with the given attributes."
-  (make-publication title url authors date language type))
+  (make-publication title url authors date language type scientific?))
 
 
 ;;; Screenshot (record type)

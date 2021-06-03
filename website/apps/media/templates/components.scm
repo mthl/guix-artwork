@@ -42,6 +42,18 @@
       (h3
        (@ (lang ,(publication-language publication))
           (class "publication-title"))
+       ,(if (publication-scientific? publication)
+            `((img
+               (@ (class "scientific-mark")
+                  (src ,(guix-url "static/media/img/scientific-mark.svg"))
+                  ;; TRANSLATORS: This is a tag that indicates a
+                  ;; publication is scientific.
+                  (alt ,(G_ "[Scientific]"))
+                  ;; TRANSLATORS: This is a help text indicating a
+                  ;; publication is scientific.
+                  (title ,(G_ "Scientific"))))
+              " ")
+            "")
        ,(publication-title publication))
 
       (p

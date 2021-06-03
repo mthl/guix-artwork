@@ -137,7 +137,8 @@ Alexander Gosdschan, Katarzyna Wreczycka, Jonathan Ronen, Altuna Akalin"
     #:url "https://ambrevar.xyz/guix-advance/index.html"
     #:authors "Pierre Neidhardt"
     #:date (string->date "2019-01-14" "~Y-~m-~d")
-    #:type (C_ "publication type" "Article"))
+    #:type (C_ "publication type" "Article")
+    #:scientific? #false)
    (publication
     #:title "Scalable Workflows and Reproducible Data Analysis for Genomics"
     #:url "https://link.springer.com/protocol/10.1007%2F978-1-4939-9074-0_24"

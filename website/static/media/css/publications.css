@@ -33,3 +33,10 @@
 .publication-info {
     margin-bottom: 0px;
 }
+
+.scientific-mark {
+    display: inline-block;
+    cursor: help;
+    height: 28px;
+    width: 28px;
+}

@@ -159,7 +159,30 @@ First it defines the source code location of bbb-render as an
 Second, it defines `rendering-profile` as a
 [“profile”](https://guix.gnu.org/manual/en/html_node/Getting-Started.html#index-profile)
 containing all the packages needed to run bbb-render’s `make-xges.py`
-script.
+script.  The `specification->manifest` procedure creates a _manifest_
+from a set of packages specs, and likewise `specification->package`
+returns the package that matches a given spec.  You try these things at
+the [`guix
+repl`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-repl.html)
+prompt:
+
+```
+$ guix repl
+GNU Guile 3.0.7
+Copyright (C) 1995-2021 Free Software Foundation, Inc.
+
+Guile comes with ABSOLUTELY NO WARRANTY; for details type `,show w'.
+This program is free software, and you are welcome to redistribute it
+under certain conditions; type `,show c' for details.
+
+Enter `,help' for help.
+scheme@(guix-user)> ,use(guix profiles)
+scheme@(guix-user)> ,use(gnu)
+scheme@(guix-user)> (specification->package "guile@2.0")
+$1 = #<package guile@2.0.14 gnu/packages/guile.scm:139 7f416be776e0>
+scheme@(guix-user)> (specifications->manifest '("guile" "gstreamer" "python"))
+$2 = #<<manifest> entries: (#<<manifest-entry> name: "guile" version: "3.0.7" …> #<<manifest-entry> name: "gstreamer" version: "1.18.2" …> …)
+```
 
 Last, it defines `video-ges-project` as a function that takes the BBB
 raw data, a start and end time, and produces a `video.ges` file.  There

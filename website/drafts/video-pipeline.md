@@ -1,4 +1,4 @@
-title: Automated and reproducible video pipelines
+title: Reproducible data processing pipelines
 author: Ludovic Courtès
 tags: Scheme API, Reproducibility, Talks
 date: 2021-06-10 12:00:00
@@ -340,7 +340,12 @@ $ guix build -m render-videos.scm
 # Why all the fuss?
 
 OK, maybe you’re thinking “this is just another hackish script to fiddle
-with videos”, and that’s right!  But look, this one’s different: it’s
+with videos”, and that’s right!  It’s also worth mentioning another
+approach: [Racket’s video language](https://lang.video/), which is
+designed to manipulate video abstractions, similar to GES but with a
+sweet high-level functional interface.
+
+But look, this one’s different: it’s
 self-contained, it’s reproducible, and it has the right abstraction
 level.  Self-contained is a big thing; it means you can run it and it
 knows what software to deploy, what environment variables to set, and so
@@ -357,4 +362,17 @@ to work with and more maintainable.
 
 Hopefully that’ll inspire you to have a reproducible video pipeline for
 your next on-line event, or maybe that’ll inspire you to replace your
-old makefile and shelly habits!
+old makefile and shelly habits for data processing!
+
+High-performance computing (HPC) people might be wondering how to go
+from here and build “computing-resource-aware” or
+“storage-resource-aware” pipelines where each computing step could be
+submitted to the job scheduler of an HPC cluster and use distributed
+file systems for intermediate results rather than `/gnu/store`.  If
+you’re one of these folks, do take a look at how the [Guix Workflow
+Language](https://guixwl.org/) addresses these issues.
+
+# Acknowledgments
+
+Thanks to Konrad Hinsen for valuable feedback on an earlier draft.
+

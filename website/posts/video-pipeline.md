@@ -1,7 +1,7 @@
 title: Reproducible data processing pipelines
 author: Ludovic Courtès
 tags: Scheme API, Reproducibility, Talks
-date: 2021-06-10 12:00:00
+date: 2021-06-11 17:00:00
 ---
 
 Last week, [we at Guix-HPC](https://hpc.guix.info) published [videos of
@@ -209,7 +209,7 @@ are three key elements here:
      to the build result of this `computed-file`, the complete file name
      of `video.ges` under `/gnu/store`.
 
-Woow, that’s quite a lot already!  Of course, this real-world example is
+That’s quite a lot already!  Of course, this real-world example is
 more intimidating than the toy examples you’d find in the manual, but
 really, pretty much everything’s there.  Let’s see in more detail at
 what’s inside this gexp.
@@ -399,3 +399,21 @@ Language](https://guixwl.org/) addresses these issues.
 
 Thanks to Konrad Hinsen for valuable feedback on an earlier draft.
 
+
+#### About GNU Guix
+
+[GNU Guix](https://guix.gnu.org) is a transactional package manager and
+an advanced distribution of the GNU system that [respects user
+freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).
+Guix can be used on top of any system running the Hurd or the Linux
+kernel, or it can be used as a standalone operating system distribution
+for i686, x86_64, ARMv7, AArch64 and POWER9 machines.
+
+In addition to standard package management features, Guix supports
+transactional upgrades and roll-backs, unprivileged package management,
+per-user profiles, and garbage collection.  When used as a standalone
+GNU/Linux distribution, Guix offers a declarative, stateless approach to
+operating system configuration management.  Guix is highly customizable
+and hackable through [Guile](https://www.gnu.org/software/guile)
+programming interfaces and extensions to the
+[Scheme](http://schemers.org) language.

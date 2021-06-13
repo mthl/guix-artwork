@@ -161,7 +161,7 @@ Second, it defines `rendering-profile` as a
 containing all the packages needed to run bbb-render’s `make-xges.py`
 script.  The `specification->manifest` procedure creates a _manifest_
 from a set of packages specs, and likewise `specification->package`
-returns the package that matches a given spec.  You try these things at
+returns the package that matches a given spec.  You can try these things at
 the [`guix
 repl`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-repl.html)
 prompt:

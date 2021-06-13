@@ -62,6 +62,16 @@ to monitor the build results."))
                "."))
       ,(G_ `(h3 "Releases"))
       (ul
+       (li "2021-06-13 — 1.1.0 — "
+           (a (@ (href
+                  ,(guix-url "cuirass/releases/cuirass-1.1.0.tar.gz"
+                             #:localize #f)))
+              "cuirass-1.1.0.tar.gz")
+           " — "
+           (a (@ (href
+                  ,(guix-url "cuirass/releases/cuirass-1.1.0.tar.gz.sig"
+                             #:localize #f)))
+              ,(G_ "GPG signature")))
        (li "2021-03-29 — 1.0.0 — "
            (a (@ (href
                   ,(guix-url "cuirass/releases/cuirass-1.0.0.tar.gz"

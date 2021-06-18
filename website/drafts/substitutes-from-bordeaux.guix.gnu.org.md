@@ -4,7 +4,7 @@ tags: Substitutes, Build farm
 date: 2021-06-18 12:00:00
 ---
 
-There's been a number of different project operated sources of
+There have been a number of different project operated sources of
 substitutes, for the last couple of years the default source of
 substitutes has been [ci.guix.gnu.org][ci.guix.gnu.org] (with a few
 different URLs).
@@ -88,19 +88,25 @@ substitute server.
 # Using substitutes from bordeaux.guix.gnu.org
 
 If you're using Guix System, and haven't altered the default
-substitute configuration, updating guix (via guix pull), reconfiguring
-using the updated guix, and then restarting the guix-daemon should
-enable substitutes from bordeaux.guix.gnu.org.
+substitute configuration, updating guix (via `guix pull`),
+reconfiguring using the updated guix, and then restarting the
+guix-daemon should enable substitutes from
+[bordeaux.guix.gnu.org][bordeaux.guix.gnu.org].
 
 If the ACL is being managed manually, you might need to add the public
-key for bordeaux.guix.gnu.org manually as well.
+key for [bordeaux.guix.gnu.org][bordeaux.guix.gnu.org] manually as
+well.
 
 When using Guix on a foreign distribution with the default substitute
-configuration, you'll need to run guix pull as root, then restart the
-guix-daemon.  You'll then need to add the public key for
-bordeaux.guix.gnu.org to the ACL.
+configuration, you'll need to run `guix pull` as root, then restart
+the guix-daemon.  You'll then need to add the public key for
+[bordeaux.guix.gnu.org][bordeaux.guix.gnu.org] to the ACL.
 
-If you want to just use ci.guix.gnu.org, or bordeaux.guix.gnu.org for
-that matter, you'll need to adjust the substitute urls configuration
-for the guix-daemon to just refer to the substitute servers you want
-to use.
+```sh
+guix archive --authorize < /root/.config/guix/current/share/guix/bordeaux.guix.gnu.org.pub
+```
+
+If you want to just use [ci.guix.gnu.org][ci.guix.gnu.org], or
+[bordeaux.guix.gnu.org][bordeaux.guix.gnu.org] for that matter, you'll
+need to adjust the substitute urls configuration for the guix-daemon
+to just refer to the substitute servers you want to use.

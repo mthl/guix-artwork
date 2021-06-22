@@ -152,7 +152,7 @@ Translation|I18N|L10N|Artwork") #\|)
               (manual-href
                "in the manual"
                (G_ "en")
-               (G_ "Packaging-Guidelines.html")))
+               (G_ "Contributing.html")))
             ". "))
         ,(G_
           `(p

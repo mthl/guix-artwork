@@ -61,6 +61,29 @@ once the files have been checked into CVS.
 See https://savannah.gnu.org/cvs/?group=guix for information on how to
 access Savannah CVS.
 
+* Adding videos
+
+To add more videos to the list in https://guix.gnu.org/en/videos/, do
+the following:
+
+1. Add new video or playlist records to the =videos= list defined in the
+   =(apps media data)= module. Also add video tracks (subtitles and
+   captions) if available. The Video, Playlist and Track data types
+   are documented in the =(apps media types)= module.
+2. For every new video, add the following files to the
+   =website/static/media/videos/YYYY= directory, where =YYYY= is the
+   year of publication of the video:
+
+   1. A poster image of the video, =SLUG.webp=, where =SLUG= is the
+      slug of the video defined in step 1.
+   2. A 250x141 px miniature image based on the poster and called
+      =SLUG.mini.webp=.
+   3. Any subtitles and close caption files named using the format
+      =SLUG-KIND.LANG.vtt=, where =SLUG= is the slug of the video, and
+      =KIND= and =LANG= are the values of those attributes in the
+      track record(s) defined for the video in step 1.
+3. Run the website and check that the videos are displayed correctly.
+
 * Copying
 
 ** Guile code

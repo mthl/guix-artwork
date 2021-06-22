@@ -1,34 +1,67 @@
 /* Public domain 2019. All rights waived */
 
-.video-preview {
-    color: white;
+.playlist-preview:link,
+.playlist-preview:visited,
+.video-preview:link,
+.video-preview:visited {
+    border: none;
+    color: #E6E6E6;
+    display: inline-block;
+    margin: 25px 15px;
+    text-decoration: none;
+    vertical-align: top;
+    width: 250px;
+}
+
+.playlist-preview:active .poster-shadow,
+.playlist-preview:focus .poster-shadow,
+.playlist-preview:hover .poster-shadow,
+.video-preview:active .poster-shadow,
+.video-preview:hover .poster-shadow,
+.video-preview:focus .poster-shadow {
+    box-shadow: 0 0 8px black;
+}
+
+.poster-box {
+    position: relative;
+}
+
+.poster {
+    border-radius: 5px;
+    box-shadow: 0 0 4px gray;
+    width: 250px;
+    height: 141px;
+}
+
+.poster-shadow {
+    border-color: black;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: thin;
+    box-shadow: inset 0 0 8px black;
+    box-sizing: border-box;
     display: block;
-    padding: 10px 15px;
-    text-align: center;
+    width: 250px;
+    height: 141px;
+    position: absolute;
+    top: 0px;
 }
 
-.video-link:link,
-.video-link:visited {
-    display: block;
-    border-style: none;
-    color: white;
-    margin-top: 0.5em;
+.playing-icon,
+.playlist-icon {
+    cursor: help;
 }
 
-.video-link:active,
-.video-link:focus,
-.video-link:hover {
-    border-style: none;
-    color: #F4BB15;
+.playlist-title,
+.video-title {
+    padding: 4px;
+    text-align: left;
 }
 
-
-
-@media screen and (min-width: 1024px) {
-    .video-preview {
-        display: inline-block;
-        margin: 10px 0px 15px 0px;
-        vertical-align: top;
-        width: 270px;
-    }
+.playlist-info,
+.video-info {
+    color: #9E9E9E;
+    font-size: small;
+    padding: 2px 4px;
+    text-align: left;
 }

@@ -1,0 +1,33 @@
+.video-box {
+    background-color: #1A1A1A;
+    position: relative;
+}
+
+.video-box:hover h2 {
+    visibility: visible;
+}
+
+h2 {
+    position: absolute;
+    margin: 0em;
+    max-width: 100%;
+    padding: 1em;
+    text-shadow: 0 0 4px black;
+    visibility: hidden;
+}
+
+video {
+    all: initial;
+    all: unset;
+    height: auto;
+    max-width: 100%;
+}
+
+.video-description {
+    padding: 1em;
+}
+
+.video-date,
+.video-authors {
+    color: #9E9E9E;
+}

@@ -53,8 +53,8 @@ h3 {
 
 .discovery-box {
     background-color: #333;
-    background-image: url("../img/discovery-box-shadow-bg.png"),
-                      url("../img/discovery-box-bg.png");
+    background-image: url("../img/depression-shadow-top.png"),
+                      url("../img/noise-bg.png");
     background-repeat: repeat-x, repeat;
     color: #E6E6E6;
     padding: 40px 10px;

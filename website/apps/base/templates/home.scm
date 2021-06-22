@@ -9,6 +9,7 @@
   #:use-module (apps base utils)
   #:use-module (apps blog templates components)
   #:use-module (apps media templates components)
+  #:use-module (apps media types)
   #:use-module (apps i18n)
   #:export (home-t))
 
@@ -130,23 +131,32 @@ goods readily available for installing with the "
 
       ,(screenshots-box (context-datum context "screenshots"))
 
+      (div
+       (@ (class "fields-box"))
+
+       ,(button-big
+         #:label (C_ "button" "ALL PACKAGES")
+	 #:url (guix-url "packages/")
+	 #:light #true))
+
+      ,(horizontal-separator #:light #true)
+
       ,(G_ '(h3 "Instructional videos"))
 
       (div
-       ,@(map video-preview (context-datum context "videos")))
+       ,@(map
+          (lambda (item)
+            (cond ((video? item) (video-preview item))
+                  (else (playlist-preview item))))
+          (context-datum context "videos")))
 
       (div
        (@ (class "fields-box"))
 
        ,(button-big
-         #:label "VIDEOS"
+         #:label (C_ "button" "ALL VIDEOS")
          #:url (guix-url "videos/")
-         #:light #true)
-       " "
-       ,(button-big
-         #:label (C_ "button" "ALL PACKAGES")
-	 #:url (guix-url "packages/")
-	 #:light #true))
+         #:light #true))
 
       ,(horizontal-separator #:light #true)
 

@@ -110,7 +110,7 @@
 	  (cons "screenshots" screenshots)
 	  (cons "posts" (posts/latest posts 3))
           (cons "contact-media" (list-head contact-media 3))
-          (cons "videos" (take (flatten playlists) 3)))))
+          (cons "videos" (take (reverse videos) 4)))))
     (make-page "guix.html" (home-t context) sxml->html)))
 
 

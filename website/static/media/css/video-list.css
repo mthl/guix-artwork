@@ -1,0 +1,43 @@
+main {
+    background-color: #333;
+    background-image: url("/static/base/img/depression-shadow-top.png"),
+                      url("/static/base/img/noise-bg.png");
+    background-position: top, top;
+    background-repeat: repeat-x, repeat;
+}
+
+section {
+    padding: 50px 20px;
+}
+
+h2 {
+    font-size: 2.5em;
+    line-height: 1.2em;
+}
+
+.page-number-indicator {
+    font-size: 16px;
+}
+
+.button-little, .button-little:link, .button-little:visited {
+    border-color: #E6E6E6;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: thin;
+    color: #E6E6E6;
+    display: inline-block;
+    font-size: 0.8em;
+    margin: 5px;
+    padding: 5px 10px;
+    vertical-align: top;
+}
+
+.button-little-active:link,
+.button-little-active:visited,
+.button-little:active,
+.button-little:focus,
+.button-little:hover {
+    background-color: #FFCC00;
+    border-color: #E5A50A;
+    color: black;
+}

@@ -5,7 +5,13 @@
 
 (define-module (apps media types)
   #:use-module (srfi srfi-9)
-  #:export (publication
+  #:export (playlist
+            playlist?
+            playlist-authors
+            playlist-date
+            playlist-title
+            playlist-videos
+            publication
             publication?
             publication-authors
             publication-scientific?
@@ -29,17 +35,57 @@
             track-url
             video
             video?
+            video-authors
+            video-date
             video-description
-            video-last-updated
-            video-page-subpath
-            video-poster
+            video-slug
             video-title
+            video-tracks
             video-url))
 
 
 ;;;
 ;;; Data types.
 ;;;
+
+;;; Playlist (record type)
+;;; ----------------------
+;;;
+;;; A playlist object represents a series of related videos that talk
+;;; about GNU Guix.
+;;;
+;;; Create new objects of this type using the "playlist" constructor
+;;; procedure (see below). You can find examples of its usage in the
+;;; (apps media data) module.
+;;;
+;;; Fields:
+;;;
+;;; title (string)
+;;;   The title of the playlist.
+;;;
+;;; authors (string)
+;;;   The name(s) of the author(s) of the playlist.
+;;;
+;;; date (date)
+;;;   The date of publication.
+;;;
+;;; videos (list of <video>)
+;;;   See the Video data type in this same module.
+;;;
+(define-record-type <playlist>
+  (make-playlist title authors date videos)
+  playlist?
+  (title playlist-title)
+  (authors playlist-authors)
+  (date playlist-date)
+  (videos playlist-videos))
+
+;;; Constructor.
+
+(define* (playlist #:key title authors date videos)
+  "Return a <playlist> object with the given attributes."
+  (make-playlist title authors date videos))
+
 
 ;;; Publication (record type)
 ;;; -------------------------
@@ -138,33 +184,37 @@
   (make-screenshot title slug image preview caption))
 
 
-;;;
-;;; Data types.
-;;;
-
 ;;; Track (record type)
-;;; ---------------------
+;;; -------------------
 ;;;
 ;;; A track object represents subtitles, closed captions or similar
-;;; text tracks for HTML video.  Track objects are mapped to HTML
+;;; text tracks for HTML video. Track objects are mapped to HTML
 ;;; <track> elements.
 ;;;
-;;; Objects of this type can be created with the "track" procedure as
-;;; well (see Helper procedures below).
+;;; Create new objects of this type using the "track" constructor
+;;; procedure (see below). You can find examples of its usage in the
+;;; (apps media data) module.
 ;;;
 ;;; Fields:
 ;;;
 ;;; label (string)
-;;;   The title of the track.  For example: "English"
+;;;   The title of the track. For example: "English"
 ;;;
 ;;; kind (string)
-;;;   The kind of track as a string.  For example "subtitles" or "captions".
+;;;   The kind of track. It can be one of: "subtitles" or "captions".
 ;;;
 ;;; lang (string)
-;;;   A language code.
+;;;   IETF language code. For example: "en-CA", "es", "ja".
 ;;;
 ;;; url (string)
-;;;   A URL to the track file.
+;;;   Optional URL to the track file. If not provided, the track file is
+;;;   expected to be located at
+;;;
+;;;   /static/media/videos/YEAR/SLUG-KIND.LANG.vtt
+;;;
+;;;   Where YEAR is the year of publication of the video the track is
+;;;   related to, SLUG is the slug of the same video, and KIND and LANG
+;;;   are the values of those attributes in the track.
 ;;;
 (define-record-type <track>
   (make-track label kind lang url)
@@ -174,25 +224,22 @@
   (lang track-lang)
   (url track-url))
 
-;;; Helper procedures.
+;;; Constructor.
 
-(define* (track #:key (label "") (kind "") (lang "") (url ""))
+(define* (track #:key label kind lang (url ""))
   "Return a <track> object with the given attributes."
   (make-track label kind lang url))
 
 
-;;;
-;;; Data types.
-;;;
-
 ;;; Video (record type)
-;;; ---------------------
+;;; -------------------
 ;;;
 ;;; A video object represents something viewable in an HTML video
 ;;; element and accessible from the videos list on the website.
 ;;;
-;;; Objects of this type can be created with the "video" procedure as
-;;; well (see Helper procedures below).
+;;; Create new objects of this type using the "video" constructor
+;;; procedure (see below). You can find examples of its usage in the
+;;; (apps media data) module.
 ;;;
 ;;; Fields:
 ;;;
@@ -200,46 +247,48 @@
 ;;;   The full name of the video.  For example:
 ;;;   "Everyday use of GNU Guix, Part One".
 ;;;
-;;; description (SXML)
-;;;   A short description.  For example:
-;;; '(p "How to install packages and how to manage software package
-;;; generations.")
+;;; authors (string)
+;;;   The name(s) of the author(s) of the video.
+;;;
+;;; description (string)
+;;;   Optional description of the video. If not provided, it defaults
+;;;   to an empty string.
 ;;;
 ;;; url (string)
 ;;;   A URL to the video file.
 ;;;
-;;; page-subpath (string)
-;;;   The subpath to the webpage for this video.  It should correspond
-;;;   to the English video title converted to lower case with spaces
-;;;   replaced by hyphens.  For example:
-;;;   'everyday-use-of-gnu-guix,-part-one'.
+;;; slug (string)
+;;;   A unique subpath for the webpage of the video.  It should
+;;;   correspond to the English video title converted to lower case with
+;;;   spaces replaced by hyphens.  For example: 'installing-gnu-guix'.
 ;;;
-;;; poster (string)
-;;;   A URL to a representative preview image for the video.
+;;;   The slug must be unique among the slugs of the videos published in
+;;;   the same year. So, two videos titled 'Installing GNU Guix' and
+;;;   published in 2021 can't use the same slug.
 ;;;
-;;; tracks (list of <track> objects)
-;;;   A URL to the closed captions or subtitles track for the video.
-;;;   FIXME: This field is not used anywhere yet.
+;;; tracks (list of <track>)
+;;;   Optional list of subtitles and captions. See the Track data type
+;;;   in this same module.
 ;;;
-;;; last-updated (date)
-;;;   Optional SRFI-19 upload date of the video file's most recent
-;;;   version, or #f.  This should be specified for videos that
-;;;   possibly become outdated over time such as documentation videos.
+;;;   If not provided, it defaults to an empty list.
+;;;
+;;; date (date)
+;;;   SRFI-19 date of the time the video was published.
 ;;;
 (define-record-type <video>
-  (make-video title description url page-subpath poster tracks last-updated)
+  (make-video title authors description url slug tracks date)
   video?
   (title video-title)
+  (authors video-authors)
   (description video-description)
   (url video-url)
-  (page-subpath video-page-subpath)
-  (poster video-poster)
+  (slug video-slug)
   (tracks video-tracks)
-  (last-updated video-last-updated))
+  (date video-date))
 
-;;; Helper procedures.
+;;; Constructor.
 
-(define* (video #:key (title "") (description "") (url #f) (page-subpath #f)
-                (poster "") (tracks '()) (last-updated #f))
+(define* (video #:key title authors (description "") url slug
+                (tracks '()) date)
   "Return a <video> object with the given attributes."
-  (make-video title description url page-subpath poster tracks last-updated))
+  (make-video title authors description url slug tracks date))

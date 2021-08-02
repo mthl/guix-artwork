@@ -1,7 +1,7 @@
-title: Taming the stat storm with a loader cache
+title: Taming the ‘stat’ storm with a loader cache
 author: Ludovic Courtès
 tags: Scheme API, Performance
-date: 2021-08-02 14:00:00
+date: 2021-08-02 15:00:00
 ---
 
 It was one of these days where some of us on IRC were rehashing that old

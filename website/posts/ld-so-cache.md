@@ -132,9 +132,9 @@ For more information about these matters, see the file named COPYING.
 ```
 
 For this simple `emacs --version` command, the loader and `emacs` probed
-for more than 1,300 files, with the
+for more than 2,200 files, with the
 [`openat`](https://linux.die.net/man/2/openat) and
-[`stat`](https://linux.die.net/man/2/stat) system calls, and more of
+[`stat`](https://linux.die.net/man/2/stat) system calls, and most of
 these probes were unsuccessful (counted as “errors” here, meaning that
 the call returned an error).  The fraction of “erroneous” system calls
 is no less than 67% (2,227 over 3,325).  We can see the desperate search

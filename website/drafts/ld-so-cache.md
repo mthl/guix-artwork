@@ -211,6 +211,12 @@ tracker](https://issues.guix.gnu.org/44899); you can see [the glibc
 patch](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/packages/patches/glibc-dl-cache.patch?h=core-updates&id=0236013cd0fc86ff4a042885c735e3f36a7f5c25)
 and the new [`make-dynamic-linker-cache` build
 phase](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/build/gnu-build-system.scm?h=core-updates&id=0236013cd0fc86ff4a042885c735e3f36a7f5c25#n735).
+In short, the `make-dynamic-linker-cache` phase computes the set of
+direct and indirect dependencies of an ELF file using the
+[`file-needed/recursive`](https://git.savannah.gnu.org/cgit/guix.git/tree/guix/build/gremlin.scm?id=0236013cd0fc86ff4a042885c735e3f36a7f5c25#n265)
+procedure and derives from that the library search path, creates a
+temporary `ld.so.conf` file containing this search path for use by
+`ldconfig`, and finally runs `ldconfig` to actually build the cache.
 
 How does this play out in practice?  Let’s try an `emacs` build that
 uses this new loader cache:

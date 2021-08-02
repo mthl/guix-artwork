@@ -194,7 +194,7 @@ flexibility offered by Guix, where several variants or versions of the
 library can coexist on the system, used by different applications.
 That’s the reason why Guix and other non-FHS distros such as NixOS or
 GoboLinux typically [turn
-off](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/packages/base.scm#n716?id=a92dfbce30777de6ca05031e275410cf9f56c84c)
+off](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/packages/base.scm?id=a92dfbce30777de6ca05031e275410cf9f56c84c#n716)
 that feature altogether… and pay the cost of those `stat` storms.
 
 The insight we gained on that Tuesday evening IRC conversation is that

@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
+;;; Copyright © 2019, 2021 Florian Pelz <pelzflorian@pelzflorian.de>
 ;;;
 ;;; This file is part of the GNU Guix web site.
 ;;;
@@ -485,6 +485,12 @@ if no tokens or lists exist."
   "For a parse tree TOK, if it is a 'token parse tree, return its
 value as a string, symbol or #:-keyword, otherwise return #f."
   (match tok
+    ;; Workaround for bug in guile@3.0.7 <https://bugs.gnu.org/49910>.
+    ;; TODO: Remove this workaround when a new guile does not error out on
+    ;;  guile -c '(pk (with-input-from-string ",@" (lambda () (read))))'
+    (('token ",@")
+     (list 'unquote-splicing (with-input-from-string "" (lambda () (read)))))
+    ;; End of workaround.
     (('token (parts ...) . remaining)
      ;; This is a string with line breaks in it.
      (with-input-from-string

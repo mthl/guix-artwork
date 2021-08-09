@@ -1,7 +1,7 @@
 title: Getting bytes to disk more quickly
 date: 2021-03-26 14:00
 author: Ludovic Courtès
-tags: Reproducible builds, Scheme API
+tags: Reproducible builds, Scheme API, Performance
 ---
 
 Let’s face it: functional package managers like Guix provide unequaled

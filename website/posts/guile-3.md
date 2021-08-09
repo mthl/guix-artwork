@@ -1,7 +1,7 @@
 title: Guile 3 & Guix
 date: 2020-01-24 15:00
 author: Ludovic Courtès
-tags: Scheme API, Programming interfaces
+tags: Scheme API, Programming interfaces, Performance
 slug: guile-3-and-guix
 ---
 

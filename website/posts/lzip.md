@@ -1,7 +1,7 @@
 title: Substitutes are now available as lzip
 date: 2019-06-17 14:30
 author: Ludovic Courtès
-tags: Scheme API
+tags: Scheme API, Performance
 ---
 
 For a long time, our build farm at ci.guix.gnu.org has been delivering

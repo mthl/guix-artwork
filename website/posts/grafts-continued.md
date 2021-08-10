@@ -1,7 +1,7 @@
 title: Grafts, continued
 date: 2020-05-06 15:00
 author: Ludovic Courtès
-tags: Functional programming, Scheme API, Security
+tags: Functional programming, Scheme API, Security, Performance
 ---
 
 Guix includes a mechanism called _grafts_ that allows us to provide

@@ -124,7 +124,7 @@
 
  (test-equal
   "Return the URL path to the tag."
-  "blog/tags/scheme-api"
+  "blog/tags/scheme-api/"
   (tag-url-path "Scheme API")))
 
 

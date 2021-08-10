@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Copyright © 2016, 2017, 2020 Ludovic Courtès <ludo@gnu.org>
+;;; Copyright © 2016, 2017, 2020, 2021 Ludovic Courtès <ludo@gnu.org>
 ;;;
 ;;; This file is part of the GNU Guix web site.
 ;;;
@@ -93,7 +93,9 @@
 
    TAG (string)
      A tag as used by Haunt posts. For example: 'Scheme API'."
-  (url-path-join "blog" "tags" (slugify tag)))
+  ;; Note: End the path with a slash so 'localized-root-path' down the road
+  ;; prepends the language tag.
+  (url-path-join "blog" "tags" (slugify tag) ""))
 
 
 

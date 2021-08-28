@@ -91,7 +91,16 @@
          tarball-spec
          (list default-system)
          (list default-system)
-         "archive")))
+         "archive")
+       (make-image
+         (C_ "download page title" "GNU Guix System on Linux for Pinebook Pro")
+         (G_ "Guix System on Linux barebones bootable raw image for Pinebook Pro.")
+         (guix-url "static/base/img/pine.png")
+         "pinebook-pro-barebones-raw-image"
+         images-spec
+         (list "raw")
+         (list default-system)
+         "image")))
 
 (define (image-download image)
   "Return as an HTML table row, the representation of IMAGE."

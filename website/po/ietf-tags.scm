@@ -15,4 +15,5 @@
  ("ru_RU" . "ru")
  ("sk_SK" . "sk")
  ("tr_TR" . "tr")
- ("zh_CN" . "zh-CN"))
+ ("zh_CN" . "zh-CN")
+ ("zh_TW" . "zh-TW"))

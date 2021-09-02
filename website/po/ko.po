@@ -1,14 +1,15 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR the authors of the Guix Website
+# Copyright (C) 2021 the authors of the Guix Website (msgid) and the following authors (msgstr)
 # This file is distributed under the same license as the guix-website package.
 # la snesne <lasnesne@lagunposprasihopre.org>, 2021.
 # simmon <simmon@nplob.com>, 2021.
+# Julien Lepiller <fedora-account@lepiller.eu>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210222\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-04-06 16:44+0200\n"
-"PO-Revision-Date: 2021-04-10 10:53+0000\n"
+"POT-Creation-Date: 2021-08-28 19:01+0200\n"
+"PO-Revision-Date: 2021-08-31 06:25+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/guix/"
 "website/ko/>\n"
@@ -17,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.5.3\n"
+"X-Generator: Weblate 4.8\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -26,12 +27,12 @@ msgstr ""
 msgid "English"
 msgstr "한국어"
 
-#: apps/base/templates/home.scm:19
+#: apps/base/templates/home.scm:20
 msgctxt "webpage title"
 msgid "GNU's advanced distro and transactional package manager"
 msgstr "GNU의 첨단 배포판과 연결 꾸러미 관리자"
 
-#: apps/base/templates/home.scm:21
+#: apps/base/templates/home.scm:22
 msgid ""
 "Guix is an advanced distribution of the GNU operating system.\n"
 "   Guix is technology that respects the freedom of computer users.\n"
@@ -54,7 +55,7 @@ msgstr ""
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/home.scm:27 apps/base/templates/menu.scm:20
+#: apps/base/templates/home.scm:28 apps/base/templates/menu.scm:20
 #: apps/blog/templates/post-list.scm:29 apps/blog/templates/tag.scm:33
 #: apps/media/templates/screenshot.scm:24
 #: apps/media/templates/screenshots-overview.scm:21
@@ -68,32 +69,31 @@ msgid ""
 "Guix package manager|GNU Guile|Guile Scheme|Transactional upgrades|"
 "Functional package management|Reproducibility"
 msgstr ""
-"GNU|Linux|Unix|자유 소프트웨어|자유 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸"
-"러미(package) 관리자|GNU Guile|Guile Scheme| 연결 향상|함수형 꾸러미 관리|재"
-"현성"
+"GNU|Linux|Unix|자유 소프트웨어|Libre software|운영 체제|GNU Hurd|GNU Guix 꾸"
+"러미 관리자|GNU Guile|Guile Scheme|연결 업그레이드|함수형 꾸러미 관리|재현성"
 
-#: apps/base/templates/home.scm:31 apps/base/templates/components.scm:394
+#: apps/base/templates/home.scm:32 apps/base/templates/components.scm:395
 msgctxt "website menu"
 msgid "Overview"
 msgstr "개요"
 
-#: apps/base/templates/home.scm:41
+#: apps/base/templates/home.scm:42
 msgid "Summary"
 msgstr "요약"
 
-#: apps/base/templates/home.scm:43
+#: apps/base/templates/home.scm:44
 msgid ""
 "<1>Liberating.</1> Guix is an advanced distribution of the <2>GNU operating "
 "system</2> developed by the <3>GNU Project</3>—which respects the <4>freedom "
 "of computer users</4>. "
 msgstr ""
-"<1>자유.</1> Guix는 <3>GNU 프로젝트</3>를 중심으로 개발된 <4>컴퓨터 사용자의 자유를 존중</4>하는 <2>GNU "
-"운영 체제의 </2>첨단 배포판입니다. "
+"<1>자유.</1> Guix는 <3>GNU 프로젝트</3>를 중심으로 개발된 <4>컴퓨터 사용자의 "
+"자유를 존중</4>하는 <2>GNU 운영 체제의 </2>첨단 배포판입니다. "
 
 #. TRANSLATORS: Package Management, Features and Using the
 #. Configuration System are section names in the English (en)
 #. manual.
-#: apps/base/templates/home.scm:64
+#: apps/base/templates/home.scm:65
 msgid ""
 "<1>Dependable.</1> Guix <2>supports<2.1>en</2.1><2.2>Package-Management."
 "html</2.2></2> transactional upgrades and roll-backs, unprivileged package "
@@ -102,150 +102,155 @@ msgid ""
 "configuration<4.1>en</4.1><4.2>Using-the-Configuration-System.html</4.2></4> "
 "for transparent and reproducible operating systems."
 msgstr ""
-"<1>Dependable.</1> Guix <2>supports<2.1>en</2.1><2.2>Package-Management."
-"html</2.2></2> transactional upgrades and roll-backs, unprivileged package "
-"management, <3>and more<3.1>en</3.1><3.2>Features.html</3.2></3>. When used "
-"as a standalone distribution, Guix supports <4>declarative system "
-"configuration<4.1>en</4.1><4.2>Using-the-Configuration-System.html</4.2></4> "
-"for transparent and reproducible operating systems."
+"<1>신뢰성.</1> Guix는 연결 업그레이드·롤백·권한 없는 꾸러미 관리를 <2>지원"
+"<2.1>en</2.1><2.2>Package-Management.html</2.2></2>하며 <3>그 뿐만이 아닙니"
+"다.<3.1>en</3.1><3.2>Features.html</3.2></3>. Guix를 배포판으로써 사용할 때, "
+"Guix는 투명하고 재현 가능한 운영 체제를 위한 <4>선언적 시스템 구성"
+"<4.1>en</4.1><4.2>Using-the-Configuration-System.html</4.2></4>을 지원합니다."
 
 #. TRANSLATORS: Defining Packages and System Configuration are
 #. section names in the English (en) manual.
-#: apps/base/templates/home.scm:84
+#: apps/base/templates/home.scm:85
 msgid ""
 "<1>Hackable.</1> It provides <2>Guile Scheme</2> APIs, including high-level "
 "embedded domain-specific languages (EDSLs) to <3>define "
 "packages<3.1>en</3.1><3.2>Defining-Packages.html</3.2></3> and <4>whole-"
 "system configurations<4.1>en</4.1><4.2>System-Configuration.html</4.2></4>."
 msgstr ""
-"<1>해킹 할 수 있는.</1> 이는 고 수준 임베디드 도메인 지정 언어(EDSLs)를 <3>정의 꾸러미<3.1>ko</3.1><3.2"
-">Defining-Packages.html</3.2></3>와 <4>전체 시스템 구성<4.1>ko</4.1><4.2>System-"
-"Configuration.html</4.2></4>에 포함하여, <2>Guile 계획</2> APIs를 제공합니다."
+"<1>해킹.</1> <3>꾸러미를 정의<3.1>en</3.1><3.2>Defining-Packages."
+"html</3.2></3>하고 <4>전체 시스템을 설정<4.1>en</4.1><4.2>System-"
+"Configuration.html</4.2></4>할 수 있도록 고수준 임베디드 도메인 특화 언어"
+"(EDSLs)를 포함한 <2>Guile Scheme</2> API를 제공합니다."
 
-#: apps/base/templates/home.scm:106
+#: apps/base/templates/home.scm:107
 msgctxt "button"
 msgid "DOWNLOAD v<1/>"
 msgstr "내려받기 v<1/>"
 
-#: apps/base/templates/home.scm:111
+#: apps/base/templates/home.scm:112
 msgctxt "button"
 msgid "CONTRIBUTE"
 msgstr "기여"
 
-#: apps/base/templates/home.scm:118
+#: apps/base/templates/home.scm:119
 msgid "Discover Guix"
 msgstr "Guix 알아보기"
 
-#: apps/base/templates/home.scm:120
+#: apps/base/templates/home.scm:121
 msgid ""
 "Guix comes with thousands of packages which include applications, system "
 "tools, documentation, fonts, and other digital goods readily available for "
 "installing with the <1>GNU Guix</1> package manager."
 msgstr ""
-"Guix는 응용프로그램, 시스템 독, 문서, 폰트, <1>GNU Guix</1>꾸러미 관리자와 함"
-"께 쉽게 설치 할 수 있는 다른 디지털 물품과 같은 수 천가지 꾸러미를 가지고 있"
-"습니다."
+"Guix에는 <1>GNU Guix</1>꾸러미 관리자와 함께 쉽게 설치 할 수 있는 응용 프로그"
+"램, 시스템 도구, 문서, 글꼴 등의 수 많은 꾸러미가 포함되어 있습니다."
 
-#: apps/base/templates/home.scm:132
-msgid "Instructional videos"
-msgstr "교육용 비디오"
-
-#: apps/base/templates/home.scm:146
+#: apps/base/templates/home.scm:137
 msgctxt "button"
 msgid "ALL PACKAGES"
 msgstr "모든 꾸러미"
 
-#: apps/base/templates/home.scm:153
-msgid "GNU Guix in your field"
-msgstr "당신의 분야에서 GNU Guix"
+#: apps/base/templates/home.scm:143
+msgid "Instructional videos"
+msgstr "교육용 비디오"
 
-#: apps/base/templates/home.scm:155
+#: apps/base/templates/home.scm:156
+msgctxt "button"
+msgid "ALL VIDEOS"
+msgstr "모든 비디오"
+
+#: apps/base/templates/home.scm:163
+msgid "GNU Guix in your field"
+msgstr "당신의 분야에서의 GNU Guix"
+
+#: apps/base/templates/home.scm:165
 msgid ""
 "Read some stories about how people are using GNU Guix in\n"
 "their daily lives."
 msgstr ""
-"그 들의 매일의 삶에서 사람들이 GnU Guix를 사용하는 방법에\n"
-"대한 몇몇 이야기를 읽습니다."
+"사람들이 일상 생활에서 GNU Guix를 어떻게 사용하는 지에\n"
+"대한 이야기를 읽어보세요."
 
-#: apps/base/templates/home.scm:166
+#: apps/base/templates/home.scm:176
 msgctxt "button"
 msgid "SOFTWARE DEVELOPMENT"
 msgstr "소프트웨어 개발"
 
-#: apps/base/templates/home.scm:171
+#: apps/base/templates/home.scm:181
 msgctxt "button"
 msgid "BIOINFORMATICS"
 msgstr "생물 정보학"
 
-#: apps/base/templates/home.scm:176
+#: apps/base/templates/home.scm:186
 msgctxt "button"
 msgid "HIGH PERFORMANCE COMPUTING"
-msgstr "고 성능 연산"
+msgstr "고성능 컴퓨팅"
 
-#: apps/base/templates/home.scm:181
+#: apps/base/templates/home.scm:191
 msgctxt "button"
 msgid "RESEARCH"
 msgstr "연구"
 
-#: apps/base/templates/home.scm:186
+#: apps/base/templates/home.scm:196
 msgctxt "button"
 msgid "ALL FIELDS..."
 msgstr "모든 분야..."
 
-#: apps/base/templates/home.scm:193
+#: apps/base/templates/home.scm:203
 msgid "GNU Guix in other GNU/Linux distros"
-msgstr "다른 GNU/리눅스 배포판에서 GNU Guix"
+msgstr "다른 GNU/Linux 배포판에서 GNU Guix 사용하기"
 
-#: apps/base/templates/home.scm:204
+#: apps/base/templates/home.scm:214
 msgid ""
 "Video: <1>Demo of Guix in another GNU/Linux distribution<1.1/>https://audio-"
 "video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm</1> (1 minute, 30 "
 "seconds)."
 msgstr ""
-"비디오: <1>Demo of Guix in another GNU/Linux distribution<1.1/>https://audio-"
-"video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm</1> (1 minute, 30 "
-"seconds)."
+"비디오: <1>다른 GNU/Linux 배포판에서의 Guix 시연<1.1/>https://audio-video."
+"gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm</1> (1분 30초)."
 
-#: apps/base/templates/home.scm:215
+#: apps/base/templates/home.scm:225
 msgid ""
 "If you don't use GNU Guix as a standalone GNU/Linux distribution, you still "
 "can use it as a package manager on top of any GNU/Linux distribution. This "
 "way, you can benefit from all its conveniences."
 msgstr ""
-"만약 당신이 단일 GNU/리눅스 배포판으로써 GNU Guix를 사용하지 않아도, 여전히 GNU/리눅스 배포판의 위에 꾸러미 관리자로 사용 "
-"할 수 있습니다. 이 방식은 모든 이 편리함을 가질 수 있습니다."
+"GNU/Linux 꾸러미으로써 GNU Guix를 사용하지 않아도, 다른 GNU/Linux 꾸러미에서"
+"도 꾸러미 관리자로써 사용함으로써 여전히 모든 편리함을 누릴 수 있습니다."
 
-#: apps/base/templates/home.scm:220
+#: apps/base/templates/home.scm:230
 msgid ""
 "Guix won't interfere with the package manager that comes with your "
 "distribution. They can live together."
-msgstr "Guix는 당신의 배포판과 함께 하는 꾸러미 관리자에 있는 연결 장치가 아닙니다. 그 것들은 함께 존재 할 수 있습니다."
+msgstr ""
+"Guix는 당신의 배포판과 동봉된 꾸러미 관리자를 방해하지 않습니다. 따라서 함께 "
+"사용하실 수 있습니다."
 
-#: apps/base/templates/home.scm:227
+#: apps/base/templates/home.scm:237
 msgctxt "button"
 msgid "TRY IT OUT!"
 msgstr "시도해보기!"
 
-#: apps/base/templates/home.scm:234 apps/blog/templates/post-list.scm:50
+#: apps/base/templates/home.scm:244 apps/blog/templates/post-list.scm:50
 msgid "Blog"
 msgstr "블로그"
 
-#: apps/base/templates/home.scm:241
+#: apps/base/templates/home.scm:251
 msgctxt "button"
 msgid "ALL POSTS"
 msgstr "모든 게시물"
 
-#: apps/base/templates/home.scm:247 apps/base/templates/contact.scm:36
+#: apps/base/templates/home.scm:257 apps/base/templates/contact.scm:36
 msgid "Contact"
 msgstr "연락처"
 
-#: apps/base/templates/home.scm:254
+#: apps/base/templates/home.scm:264
 msgctxt "button"
 msgid "ALL CONTACT MEDIA"
 msgstr "모든 연락 미디어"
 
-#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:418
-#: apps/base/templates/components.scm:421 apps/base/templates/about.scm:27
+#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:464
+#: apps/base/templates/components.scm:467 apps/base/templates/about.scm:27
 #: apps/base/templates/about.scm:30 apps/base/templates/contact.scm:26
 #: apps/base/templates/contribute.scm:26 apps/base/templates/graphics.scm:24
 #: apps/base/templates/security.scm:28
@@ -261,15 +266,15 @@ msgstr "GNU Guix"
 #: apps/base/templates/theme.scm:109
 msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
-msgstr "GNU Guix - 활동 공급"
+msgstr "GNU Guix - 활동 피드"
 
 #: apps/base/templates/theme.scm:144
 msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
 msgstr ""
-"Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
-"code</3> under the <4>GNU AGPL</4>."
+"사람들의 <1>♥</1>으로 만들어졌으며, <2>GNU Guile</2>로 구동됩니다. <3>소스 코"
+"드</3>는 <4>GNU AGPL</4>을 따릅니다."
 
 #: apps/base/templates/components.scm:49
 msgid "Your location:"
@@ -283,42 +288,95 @@ msgstr "홈"
 msgid "archive"
 msgstr "보관소"
 
-#: apps/base/templates/components.scm:384
+#: apps/base/templates/components.scm:385
 msgctxt "website menu"
 msgid "Guix"
 msgstr "Guix"
 
-#: apps/base/templates/components.scm:388
+#: apps/base/templates/components.scm:389
 msgid "website menu:"
 msgstr "웹사이트 메뉴:"
 
-#: apps/base/templates/components.scm:396
+#: apps/base/templates/components.scm:397
 #: apps/download/templates/download.scm:43
 #: apps/download/templates/download.scm:47
-#: apps/download/templates/download-latest.scm:134
-#: apps/download/templates/download-latest.scm:138
+#: apps/download/templates/download-latest.scm:155
+#: apps/download/templates/download-latest.scm:160
 msgctxt "website menu"
 msgid "Download"
 msgstr "내려받기"
 
-#: apps/base/templates/components.scm:402
+#: apps/base/templates/components.scm:403
 msgctxt "website menu"
 msgid "Stable"
 msgstr "안정적"
 
-#: apps/base/templates/components.scm:405
-#: apps/download/templates/download-latest.scm:139
+#: apps/base/templates/components.scm:406
+#: apps/download/templates/download-latest.scm:161
 msgctxt "website menu"
 msgid "Latest"
 msgstr "최신"
 
-#: apps/base/templates/components.scm:406 apps/base/templates/help.scm:26
-#: apps/base/templates/help.scm:30
+#: apps/base/templates/components.scm:409 apps/base/templates/help.scm:27
+#: apps/base/templates/help.scm:31
 msgctxt "website menu"
 msgid "Help"
 msgstr "도움말"
 
-#: apps/base/templates/components.scm:407
+#: apps/base/templates/components.scm:415
+msgctxt "website menu"
+msgid "All"
+msgstr "모두"
+
+#: apps/base/templates/components.scm:418
+msgctxt "website menu"
+msgid "GNU Guix Manual (stable)"
+msgstr "GNU Guix 매뉴얼 (안정적)"
+
+#: apps/base/templates/components.scm:421
+msgctxt "website menu"
+msgid "GNU Guix Manual (latest)"
+msgstr "GNU Guix 매뉴얼 (최신)"
+
+#: apps/base/templates/components.scm:424
+msgctxt "website menu"
+msgid "Guix Reference Card"
+msgstr "Guix 참조 카드"
+
+#: apps/base/templates/components.scm:427
+#: apps/base/templates/components.scm:454 apps/media/templates/video.scm:46
+#: apps/media/templates/video.scm:50 apps/media/templates/video-list.scm:34
+#: apps/media/templates/video-list.scm:38
+msgctxt "website menu"
+msgid "Videos"
+msgstr "비디오"
+
+#: apps/base/templates/components.scm:430
+msgctxt "website menu"
+msgid "Cookbook"
+msgstr "쿡북"
+
+#: apps/base/templates/components.scm:433
+msgctxt "website menu"
+msgid "GNU Manuals"
+msgstr "GNU 매뉴얼"
+
+#: apps/base/templates/components.scm:437
+msgctxt "website menu"
+msgid "Wiki"
+msgstr "위키"
+
+#: apps/base/templates/components.scm:440
+msgctxt "website menu"
+msgid "IRC Chat"
+msgstr "IRC 챗"
+
+#: apps/base/templates/components.scm:443
+msgctxt "website menu"
+msgid "Mailing Lists"
+msgstr "전자우편 목록"
+
+#: apps/base/templates/components.scm:446
 #: apps/packages/templates/detailed-index.scm:31
 #: apps/packages/templates/detailed-index.scm:38
 #: apps/packages/templates/detailed-package-list.scm:34
@@ -332,7 +390,7 @@ msgctxt "website menu"
 msgid "Packages"
 msgstr "꾸러미"
 
-#: apps/base/templates/components.scm:408 apps/blog/templates/post-list.scm:34
+#: apps/base/templates/components.scm:447 apps/blog/templates/post-list.scm:34
 #: apps/blog/templates/post-list.scm:40 apps/blog/templates/post.scm:29
 #: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:38
 #: apps/blog/templates/tag.scm:44
@@ -340,62 +398,60 @@ msgctxt "website menu"
 msgid "Blog"
 msgstr "블로그"
 
-#: apps/base/templates/components.scm:410
+#: apps/base/templates/components.scm:449
 #: apps/media/templates/screenshot.scm:28
 #: apps/media/templates/screenshots-overview.scm:25
-#: apps/media/templates/video.scm:29 apps/media/templates/video-list.scm:29
 msgctxt "website menu"
 msgid "Media"
 msgstr "미디어"
 
-#: apps/base/templates/components.scm:413 apps/media/templates/video.scm:33
-#: apps/media/templates/video-list.scm:33
-msgctxt "website menu"
-msgid "Videos"
-msgstr "비디오"
-
-#: apps/base/templates/components.scm:414
+#: apps/base/templates/components.scm:457
 msgctxt "website menu"
 msgid "Screenshots"
-msgstr "순간찍기"
+msgstr "스크린샷"
 
-#: apps/base/templates/components.scm:416 apps/base/templates/donate.scm:26
+#: apps/base/templates/components.scm:460
+msgctxt "website menu"
+msgid "Publications"
+msgstr "간행물"
+
+#: apps/base/templates/components.scm:462 apps/base/templates/donate.scm:26
 #: apps/base/templates/donate.scm:29
 msgctxt "website menu"
 msgid "Donate"
 msgstr "기부"
 
-#: apps/base/templates/components.scm:423 apps/base/templates/contact.scm:31
+#: apps/base/templates/components.scm:469 apps/base/templates/contact.scm:31
 msgctxt "website menu"
 msgid "Contact"
 msgstr "연락처"
 
-#: apps/base/templates/components.scm:424 apps/base/templates/contribute.scm:30
+#: apps/base/templates/components.scm:470 apps/base/templates/contribute.scm:30
 msgctxt "website menu"
 msgid "Contribute"
-msgstr "공헌"
+msgstr "기여"
 
-#: apps/base/templates/components.scm:425 apps/base/templates/security.scm:31
+#: apps/base/templates/components.scm:471 apps/base/templates/security.scm:31
 msgctxt "website menu"
 msgid "Security"
 msgstr "보안"
 
-#: apps/base/templates/components.scm:426 apps/base/templates/graphics.scm:27
+#: apps/base/templates/components.scm:472 apps/base/templates/graphics.scm:27
 msgctxt "website menu"
 msgid "Graphics"
 msgstr "그래픽"
 
-#: apps/base/templates/components.scm:448
+#: apps/base/templates/components.scm:494
 msgid "Translate"
 msgstr "번역"
 
-#: apps/base/templates/components.scm:468
+#: apps/base/templates/components.scm:514
 msgid " (Page <1/> of <2/>)"
-msgstr " (<1/> 의 <2/>쪽)"
+msgstr " (<2/>쪽 중 <1/>쪽)"
 
-#: apps/base/templates/components.scm:492
+#: apps/base/templates/components.scm:538
 msgid "Page <1/> of <2/>. Go to another page: "
-msgstr "쪽 <1/> 의 <2/>. 다른 쪽으로 갑니다: "
+msgstr "<2/>쪽 중 <1/>쪽. 다른 쪽으로 갑니다: "
 
 #: apps/base/templates/about.scm:17
 msgctxt "webpage title"
@@ -419,7 +475,9 @@ msgstr ""
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager"
-msgstr "GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자"
+msgstr ""
+"GNU|리눅스|유닉스|자유 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자"
 
 #: apps/base/templates/about.scm:35
 msgid "About the Project"
@@ -431,9 +489,9 @@ msgid ""
 "project developed by volunteers around the world under the\n"
 "            umbrella of the <3>GNU Project</3>. "
 msgstr ""
-"<1>GNU Guix</1> 꾸러미와 시스템 관리자는 <3>GNU Project</3>의 우산 아래에서 "
-"전세계의 자원 봉사자에 의해\n"
-"개발된 <2>free software</2>입니다. "
+"<1>GNU Guix</1>꾸러미와 시스템 관리자 <3>GNU 프로젝트</3>의 우산 아래에서 전 "
+"세계의 자원 봉사자에 의해\n"
+" 개발된 <2>자유 소프트웨어</2>입니다. "
 
 #: apps/base/templates/about.scm:46
 msgid ""
@@ -443,9 +501,10 @@ msgid ""
 "            to respecting and enhancing <4>the freedom of its users</4>.  As "
 "such, it adheres to the <5>GNU Free System Distribution Guidelines</5>."
 msgstr ""
-"Guix 시스템은 <1>GNU 운영체제</>의 진보된 배포판입니다. 이는 <2>리눅스-리브레</2>커널에 사용되고, <3>허드</3> "
-"지원을 위해 동작중입니다. GNU 배포판으로써, 이는\n"
-"<4>사용자의 자유</4>를 존중하고 향상 시킬 것입니다. 그러므로, 이는 <5>GNU 자유 시스템 배포판 안내</5>를 준수합니다."
+"Guix 시스템은 <1>GNU 운영체제</1>의 진보된 배포판입니다. <2>Linux-libre</2> "
+"커널을 사용하며, <3>Hurd</3>에 대한 지원은 진행 중입니다. GNU 배포판으로써,\n"
+"Guix는 <4>사용자의 자유</4>를 존중하고 향상 시키는 데 주력할 것입니다. 이에 "
+"따라 <5>GNU 자유 시스템 배포판 안내</5>를 준수합니다."
 
 #. TRANSLATORS: Features and Defining Packages are section names
 #. in the English (en) manual.
@@ -461,14 +520,14 @@ msgid ""
 "<4>Guile</4> modules, using extensions to the <5>Scheme</5> language—which "
 "makes it nicely hackable."
 msgstr ""
-"GNU Guix provides <1>state-of-the-art package management "
-"features<1.1>en</1.1><1.2>Features.html</1.2></1> such as transactional "
-"upgrades and roll-backs, reproducible\n"
-" build environments, unprivileged package management, and\n"
-" per-user profiles.  It uses low-level mechanisms from the <2>Nix</2> "
-"package manager, but packages are <3>defined<3.1>en</3.1><3.2>Defining-"
-"Packages.html</3.2></3> as native <4>Guile</4> modules, using extensions to "
-"the <5>Scheme</5> language—which makes it nicely hackable."
+"GNU Guix는 연결 업그레이드, 롤백, 재현 가능한 빌드 환경, 권한 없는 꾸러미 관"
+"리, 사용자별 프로필과 같은\n"
+"<1>최신 꾸러미 관리 기능<1.1>en</1.1><1.2>Features.html</1.2></1>을 제공합니"
+"다.\n"
+"이러한 기능들은 <2>Nix</2> 꾸러미 매니저에서 쓰이는 저수준 원리를 이용합니"
+"다. 그렇지만 꾸러미들은 <5>Scheme</5> 언어에서 확장된 네이티브 <4>Guile</4> "
+"모듈로 <3>정의<3.1>en</3.1><3.2>Defining-Packages.html</3.2></3>되어 있어서, "
+"사용자가 해킹하기 좋습니다."
 
 #. TRANSLATORS: Using the Configuration System, Initial RAM Disk
 #. and Defining Services are section names in the English (en)
@@ -483,13 +542,14 @@ msgid ""
 "<3>initialization system</3>, and to the <4>system "
 "services<4.1>en</4.1><4.2>Defining-Services.html</4.2></4>."
 msgstr ""
-"Guix는 추가적인 지원 상태가 없는,\n"
-"재생산 할 수 있는 <1>운영 체제 구성<1.1>ko</1.1><1.2>Using-the-Configuration-System."
-"html</1.2></1>에 의해 앞으로 나갈 수 있습니다. 이 시간에는 <2>초기 램 디스크<2.1>ko</2.1><2.2"
-">Initial-RAM-Disk.html</2.2></2>에서 <3>초기 시스템에서</3>으로, 그리고 <4>시스템 서비스<4."
-"1>ko</4.1><4.2>Defining-Services.html</4.2></4>의 계획에서 전체 시스템을 해킹 할 수 있습니다."
+"Guix는 여기서 한 발짝 나아가 재현 가능한\n"
+" 무상태성 <1>운영 체제 구성<1.1>en</1.1><1.2>Using-the-Configuration-System."
+"html</1.2></1>을 지원합니다. 이 때 <2>초기 램 디스크"
+"<2.1>en</2.1><2.2>Initial-RAM-Disk.html</2.2></2>에서부터, <3>초기화 시스템"
+"</3>, 그리고 <4>시스템 서비스<4.1>en</4.1><4.2>Defining-Services."
+"html</4.2></4>까지 Scheme으로 시스템 전체를 해킹할 수 있습니다."
 
-#: apps/base/templates/about.scm:106 apps/base/data.scm:212
+#: apps/base/templates/about.scm:106 apps/base/data.scm:211
 msgid "Maintainers"
 msgstr "관리자"
 
@@ -501,13 +561,14 @@ msgid ""
 "using the <2/> private alias."
 msgstr ""
 "Guix는 현재 Ludovic Courtès, Marius Bakke, Maxim Cournoyer, Tobias Geerinckx-"
-"Rice와 Mathieu Othacehe에\n"
-"의해서 관리됩니다. 연락을 위한 <1>mailing lists</1>을 사용해주세요. 예민한 부분을 위하여, <2/> 사적인 별칭을 "
-"사용하여 이들에게 연락 할 수 있습니다."
+"Rice,\n"
+"Mathieu Othacehe에 의해서 관리됩니다. 연락을 하시려면 <1>메일링 리스트</1>를 "
+"사용해주세요. 민감한 문제가 있다면 <2/> 비공개 별칭을 사용하여 연락할 수 있습"
+"니다."
 
 #: apps/base/templates/about.scm:117
 msgid "Licensing"
-msgstr "저작권이 있는"
+msgstr "라이선스"
 
 #: apps/base/templates/about.scm:119
 msgid ""
@@ -517,10 +578,10 @@ msgid ""
 "          version 3 of the License, or (at your option) any later\n"
 "          version. "
 msgstr ""
-"Guix는 무료 소프트웨어입니다; 당신은 무료 소프트웨어 재단에 의해\n"
-" 공표된 것과 같은 <1>GNU 일반 공공 저작권</1>의 형태 아래에서 이를 배포 하고 수정 할 수 있습니다; 또한\n"
-" 저작권의 상태 번호 3, 또는 (당신의 선택에서) 어떤 추후\n"
-" 상태번호. "
+"Guix는 자유 소프트웨어입니다. 자유 소프트웨어 재단에 의해\n"
+" 공표된 <1>GNU 일반 공중 사용 허가서</1>의 버전 3, 또는\n"
+" (선택에 따라) 그 이후의 버전의 조건 아래에서, 이를\n"
+" 배포하고 수정할 수 있습니다. "
 
 #: apps/base/data.scm:24
 msgid "IRC Channel"
@@ -528,75 +589,75 @@ msgstr "IRC 채널"
 
 #: apps/base/data.scm:26
 msgid ""
-"Join the <1/> channel on the Freenode IRC network to chat\n"
-"       with the community about GNU Guix or to get help in\n"
-"       real-time."
+"Join the <1/> channel on the Libera Chat IRC network to\n"
+"chat with the community about GNU Guix or to get help in real-time."
 msgstr ""
-"GNU Guix 또는 실시간에 도움을 얻는 것에 대하여\n"
-"단체와 함께 대화를 프리노드 IRC 네트워크에 있는\n"
-"<1/> 채널에 참여합니다."
+"리베라 대화 IRC 네트워크에 있는 <1/> 채널에 참여하여\n"
+"GNU Guix에 대한 케뮤니티와 함께 대화를 나누거나 실시간으로 도움을 얻으세요."
 
-#: apps/base/data.scm:35
+#: apps/base/data.scm:34
 msgid "Info Mailing List"
-msgstr "정보 전자우편 목록"
+msgstr "소식 메일링 리스트"
 
-#: apps/base/data.scm:37
+#: apps/base/data.scm:36
 msgid ""
 "Subscribe to the <1/> low-traffic mailing\n"
 "list to receive important announcements sent by the project maintainers (in\n"
 "English)."
 msgstr ""
-"프로젝트 관리자(영어)에 의해 발송된\n"
-"중요한 공지사항을 수신하려면 적은 체증(traffic)을 갖는\n"
-"전자우편 목록을 구독합니다."
+"낮은 체증을 갖는 메일링 리스트를 구독하여\n"
+"프로젝트 관리자가 보낸 중요한\n"
+"공지사항을 (영어로) 받으세요."
 
-#: apps/base/data.scm:46
+#: apps/base/data.scm:45
 msgid "Help Mailing List"
-msgstr "도움말 전자우편 목록"
+msgstr "도움 메일링 리스트"
 
-#: apps/base/data.scm:51
+#: apps/base/data.scm:50
 msgid ""
 "Subscribe to the Help mailing list to get support\n"
 "from the GNU Guix community via email.  You can post messages in English\n"
 "though we also accept other languages."
 msgstr ""
-"전자우편을 통해 GNU Guix 단체에서 지원을\n"
-"얻는데 도움 주는 전자우편 목록을 구독합니다. 우리는 또한 다른 언어를 받아들이지만\n"
-"당신은 영어로 메시지를 전달 할 수 있습니다."
+"도움 메일링 리스트를 구독하여\n"
+"GNU Guix 공동체로부터 이메일로 도움을 받으세요. 다른 언어로도 메일을 받지만\n"
+"가능한 한 영어로 보내주세요."
 
-#: apps/base/data.scm:55
+#: apps/base/data.scm:54
 msgctxt "unique lingua code like en or zh-cn"
 msgid "en"
 msgstr "ko"
 
-#: apps/base/data.scm:119
+#: apps/base/data.scm:118
 msgid "Bug Reporting"
-msgstr "결점 보고하기"
+msgstr "버그 보고"
 
-#: apps/base/data.scm:121
+#: apps/base/data.scm:120
 msgid ""
 "If you found a bug in Guix, check whether the bug is\n"
 "       already in the <1>bug database</1>. If it is not, please <2>report it."
 "</2>"
 msgstr ""
-"Guix에서 결점을 찾았다면, 결점이 <1>결점 자료저장소</1>에\n"
-"이미 있는지 점검합니다. 만약 그렇지 않다면, <2>이를 보고합니다.</2>를 해주세요"
+"Guix의 결점을 찾았다면, 결점이 이미 <1>결점 데이타베이스</1>에\n"
+" 있는지 확인해주세요. 없는 경우, 부디 <2>보고</2>해주세요"
 
-#: apps/base/data.scm:133
+#: apps/base/data.scm:132
 msgid "Development Mailing List"
-msgstr "개발 전자우편 목록"
+msgstr "개발 메일링 리스트"
 
-#: apps/base/data.scm:135
+#: apps/base/data.scm:134
 msgid ""
 "Discussion about the development of GNU Guix. <1> Until July 2013</1>, the "
 "bug-Guix mailing list filled that role. "
-msgstr "GNU Guix의 개발에 대한 토의. <1>2013년 7월 까지</1>, 결점-Guix 전자우편 목록이 그 역할을 채웠습니다. "
+msgstr ""
+"GNU Guix의 개발에 대해 논의하세요. <1>2013년 7월까지</1>는 버그 메일링 리스트"
+"가 이 역할을 맡았습니다. "
 
-#: apps/base/data.scm:145
+#: apps/base/data.scm:144
 msgid "Patches Mailing List"
-msgstr "붙임 전자우편 목록"
+msgstr "패치 메일링 리스트"
 
-#: apps/base/data.scm:147
+#: apps/base/data.scm:146
 msgid ""
 "Submission of patches.  Every message sent to this mailing list\n"
 "       leads to a new entry in our <1>patch tracking tool</1>.  See <2>this "
@@ -605,249 +666,278 @@ msgid ""
 "information on how to submit a patch.  <4>Until February 2017</4>, the guix-"
 "devel mailing list filled that role."
 msgstr ""
-"패치의 하위 임무. 모든 메시지는 우리의 <1>패치 추적하는 도구</1>에서\n"
-"새로운 항목으로 이끄는 이 전자우편 목록에 전송됩니다. 이를 사용하는 방법에서 보다 상세한 정보를 위하여 <2>이 부분</2>을 "
-"참고하세요; 패치를 제출 하는 방법에서 보다 상세한 정보를 위하여 <3>설명서 <3.1>ko</3.1><3.2>Submitting-"
-"Patches.html</3.2></3>를 참고하세요.<4>2017년 2월 까지</4>, guix-devel 전자우편 목록은 그 역할을 "
-"채웠습니다."
+"패치를 제출하세요. 메일링 리스트에 전송된 모든 메일은\n"
+"<1>패치 추적 도구</1>에 새 항목으로 추가됩니다. 사용법을 더 자세히 아시려면 "
+"<2>이 페이지</2>를 참고하세요. 패치를 제출 하는 방법에 대한 자세한 정보는 <3>"
+"설명서<3.1>en</3.1><3.2>Submitting-Patches.html</3.2></3>를 참고하세요. "
+"<4>2017년 2월까지는</4> 개발 메일링 리스트가 이 역할을 맡았습니다."
 
-#: apps/base/data.scm:166
+#: apps/base/data.scm:165
 msgid "Science Mailing List"
-msgstr "과학 전자우편 목록"
+msgstr "과학 메일링 리스트"
 
-#: apps/base/data.scm:168
+#: apps/base/data.scm:167
 msgid ""
 "Discussions about using GNU Guix for scientific purposes: reproducible "
 "research, high-performance computing (HPC), and more."
-msgstr "과학적 목적을 위해 GNU Guix를 사용에 대해 토의: 재현 가능한 연구, 고성능 연산(HPC), 그리고 더 이상."
+msgstr ""
+"GNU Guix를 재현 가능한 연구, 고성능 컴퓨팅(HPC) 등의 과학적 목적으로 사용하"
+"는 법에 대해 토의해보세요."
 
-#: apps/base/data.scm:176
+#: apps/base/data.scm:175
 msgid "Commits Mailing List"
-msgstr "전자우편 목록을 만들다"
+msgstr "커밋 메일링 리스트"
 
-#: apps/base/data.scm:178
+#: apps/base/data.scm:177
 msgid "Notifications of commits made to the <1>Git repositories</1>."
-msgstr "<1>깃(git) 저장소</1>에서 만들어진 실행의 알림."
+msgstr "<1>Git 저장소</1>에서 이루어진 커밋의 알림을 받으세요."
 
-#: apps/base/data.scm:187
+#: apps/base/data.scm:186
 msgid "Security Mailing List"
-msgstr "보안 전자우편 목록"
+msgstr "보안 메일링 리스트"
 
-#: apps/base/data.scm:189
+#: apps/base/data.scm:188
 msgid ""
 "This is a private mailing list that anyone can post to to <1>report security "
 "issues</1> in Guix itself or in the <2>packages</2> it provides.  Posting "
 "here allows Guix developers to address\n"
 "       the problem before it is widely publicized."
 msgstr ""
-"누구나 Guix 자체 또는 <2>꾸러미</2>가 제공되는 <1>보안 사건에 보고</1>에서 게시 할 수 있는 사적인 전자우편 목록을 "
-"제공합니다. 이 곳에 게시는\n"
-" 이를 공공화 하기 전에 Guix 개발자들이 문제를 해결 할 수 있도록 합니다."
+"Guix나 Guix가 제공하는<2>꾸러미</2>가 일으키는 <1>보안 문제를 보고</1>할 수 "
+"있는 비공개 메일링 리스트입니다. 이 곳에 게시하시면\n"
+" 문제가 널리 알려지기 전에 Guix 개발자들이 해결할 수 있습니다."
 
-#: apps/base/data.scm:201
+#: apps/base/data.scm:200
 msgid "Sysadmin Mailing List"
-msgstr "시스템관리 전자우편 목록"
+msgstr "시스템 관리자 메일링 리스트"
 
-#: apps/base/data.scm:203
+#: apps/base/data.scm:202
 msgid "Private mailing list for the <1>build farm</1> system administration."
-msgstr "<1>팜 구성</1> 시스템 관리를 위한 개인적인 전자우편 주소 목록."
+msgstr "<1>빌드 팜</1> 시스템 관리자의 비공개 메일링 리스트입니다."
 
-#: apps/base/data.scm:214
+#: apps/base/data.scm:213
 msgid ""
 "Private alias to reach the <1>maintainer collective</1>.  This should "
 "generally not be used to discuss technical issues."
-msgstr "<1>관리자 집단</>에 도달하기 위한 비공개 별칭. 이는 일반적으로 기술적인 문제를 토의하는데 사용 될 수 없습니다."
+msgstr ""
+"<1>메인테이너들</1>에 연락하기 위한 사적 별칭입니다. 보통, 기술적인 문제를 논"
+"의하는데 사용해서는 안 됩니다."
 
-#: apps/base/data.scm:226
+#: apps/base/data.scm:225
 msgid "GNU System Discuss Mailing List"
-msgstr "GNU 시스템 토의 전자우편 목록"
+msgstr "GNU 시스템 논의용 메일링 리스트"
 
-#: apps/base/data.scm:228
+#: apps/base/data.scm:227
 msgid "Discussion about the development of the broader GNU system."
-msgstr "광범위한 GNU 시스템의 개발에 대한 토의."
+msgstr "광범위한 GNU 시스템의 개발에 대해 논의해보세요."
 
-#: apps/base/data.scm:233
+#: apps/base/data.scm:232
 msgid "GNU/Linux-libre Mailing List"
-msgstr "GNU/리눅스-리브레 전자우편 목록"
+msgstr "GNU/Linux-libre 전자우편 목록"
 
-#: apps/base/data.scm:235
+#: apps/base/data.scm:234
 msgid "Workgroup for fully free GNU/Linux distributions."
-msgstr "완전한 자유 GNU/리눅스 배포판을 위한 작업그룹."
+msgstr "완전한 자유 GNU/Linux 배포판을 위한 작업 그룹."
 
-#: apps/base/data.scm:240
+#: apps/base/data.scm:239
 msgid "GNU Info Mailing List"
-msgstr "GNU 정보 전자우편 목록"
+msgstr "GNU 소식 메일링 리스트"
 
-#: apps/base/data.scm:242
+#: apps/base/data.scm:241
 msgid "GNU software announcements."
-msgstr "GNU 소프트웨어 선언문."
+msgstr "GNU 소프트웨어 소식."
 
-#: apps/base/templates/help.scm:17
+#: apps/base/templates/help.scm:18
 msgctxt "webpage title"
 msgid "Help"
 msgstr "도움말"
 
-#: apps/base/templates/help.scm:19
+#: apps/base/templates/help.scm:20
 msgid ""
 "A list of resources about how to use GNU Guix, plus\n"
 "   information about getting help from the community of users and\n"
 "   developers."
 msgstr ""
-"GNU Guix, 단체 사용자와 개발자에서 도움을\n"
-" 얻는 것에 대한 정보를 추가하여, 사용하는 방법에\n"
-" 대한 모든 자원."
+"GNU Guix를 사용하는 방법에 더해,\n"
+" 이용자와 개발자 공동체에서 도움을 얻는 법을 다루는\n"
+" 자료의 목록입니다."
 
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/help.scm:24
+#: apps/base/templates/help.scm:25
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Help resources"
-msgstr "GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|도움 자원"
+msgstr ""
+"GNU|리눅스|유닉스|자유 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|도움 자료"
 
-#: apps/base/templates/help.scm:35
+#: apps/base/templates/help.scm:36
 msgid "Help"
 msgstr "도움말"
 
-#: apps/base/templates/help.scm:46
-msgid "GNU Guix Manual"
-msgstr "GNU Guix 설명서"
-
 #: apps/base/templates/help.scm:47
+msgid "GNU Guix Manual <1/>"
+msgstr "GNU Guix 매뉴얼 <1/>"
+
+#: apps/base/templates/help.scm:48
 msgid ""
 "Documentation for GNU Guix is available\n"
 "            online.  You may also find more information about Guix by "
 "running <1>info guix</1>."
 msgstr ""
-"GNU Guix를 위한 문서가 온라인에서 가용합니다.\n"
-"동작 할 때에 Guix에 대해 보다 많은 정보를 찾을 수도 있습니다<1>guix 정보</1>."
+"GNU Guix에 대한 문서를 온라인으로 읽으실 수 있습니다.\n"
+" <1>info guix</1>를 실행하시면 Guix에 대한 보다 많은 정보를 찾으실 수 있습니"
+"다."
 
-#: apps/base/templates/help.scm:53
-msgid "Read Guix manual"
-msgstr "Guix 설명서를 읽으세요"
+#: apps/base/templates/help.scm:54
+msgid "Read stable manual"
+msgstr "안정된 매뉴얼 읽기"
 
-#: apps/base/templates/help.scm:64
+#: apps/base/templates/help.scm:65
 msgid "Get Guix reference card"
 msgstr "Guix 참조 카드 얻기"
 
-#: apps/base/templates/help.scm:72
+#: apps/base/templates/help.scm:74
+msgid "GNU Guix Manual (Latest)"
+msgstr "GNU Guix 매뉴얼 (최신)"
+
+#: apps/base/templates/help.scm:75
+msgid ""
+"This version of the manual is updated frequently to\n"
+"            include the latest changes from Guix's source files. It is\n"
+"            more up-to-date than the manual for the stable release of\n"
+"            Guix."
+msgstr ""
+"이 버전의 매뉴얼은 Guix 소스 파일에서\n"
+" 최신 변경에 포함되도록 자주 최신화 됩니다. Guix의\n"
+" 안정적인 배포판을 위한 매뉴얼 보다 더\n"
+" 최신입니다."
+
+#: apps/base/templates/help.scm:82
+msgid "Read latest manual"
+msgstr "최신 매뉴얼 읽기"
+
+#: apps/base/templates/help.scm:90 apps/media/templates/video.scm:40
+#: apps/media/templates/video-list.scm:44
 msgid "Videos"
 msgstr "비디오"
 
-#: apps/base/templates/help.scm:73
+#: apps/base/templates/help.scm:91
 msgid ""
 "The collection of videos includes instructional material\n"
 "            to help you get started with every day use of GNU Guix as\n"
 "            well as other topics that present advanced features of the\n"
 "            system."
 msgstr ""
-"비디오의 수집은 GNU Guix의 매일 사용과 함께\n"
-" 시작되는 데 도움을 줄 수 있는 교육자료뿐만\n"
-" 아니라 진보된 시스템 기능을 제공하는 다른\n"
-" 주제까지 포함합니다."
+"일상 생활에서 Guix를 사용하기 시작할 수\n"
+" 있도록 돕기 위한 자료 뿐 아니라\n"
+" 고급 기능을 다루는\n"
+" 자료도 포함된 교육용 영상 모음입니다."
 
-#: apps/base/templates/help.scm:81
+#: apps/base/templates/help.scm:99
 msgid "Browse all videos"
 msgstr "모든 비디오 찾아보기"
 
-#: apps/base/templates/help.scm:89
+#: apps/base/templates/help.scm:107
 msgid "Cookbook"
-msgstr "쿡북"
+msgstr "상세설명서"
 
-#: apps/base/templates/help.scm:90
+#: apps/base/templates/help.scm:108
 msgid ""
 "Tutorials, how-to guides and examples contributed by the\n"
 "            Guix community which show you how to use the system and its\n"
 "            collection of packages to achieve common and not-so-common\n"
 "            goals users may have."
 msgstr ""
-"Guix 단체에 의해 기여하는 안내와 예제 방법은\n"
-" 꾸러미에 공통을 달성하고 사용자가 갖는 공통\n"
-" 목적이 아닌 시스템과 이 모음의 사용 방법을\n"
-" 보여줍니다."
+"사용자들이 생각하고 있을 법한 목적을\n"
+" Guix의 시스템과 꾸러미들을 이용해\n"
+" 이룰 수 있도록 Guix 공동체가 기여한\n"
+" 사용지침, 안내서, 예시들입니다."
 
-#: apps/base/templates/help.scm:98
+#: apps/base/templates/help.scm:116
 msgid "Browse the recipes"
 msgstr "비법 찾아보기"
 
-#: apps/base/templates/help.scm:106
+#: apps/base/templates/help.scm:124
 msgid "GNU Manuals"
 msgstr "GNU 설명서"
 
-#: apps/base/templates/help.scm:107
+#: apps/base/templates/help.scm:125
 msgid ""
 "Guix is a distribution of the <1>GNU operating system</1>.  Documentation "
 "for GNU packages is\n"
 "            available online in various formats. "
 msgstr ""
 "Guix는 <1>GNU 운영 체제</1>의 배포판입니다. GNU 꾸러미를 위한 문서는\n"
-"다양한 형태로 온라인에서 이용 가능합니다. "
+"다양한 형식으로 온라인으로 제공됩니다. "
 
-#: apps/base/templates/help.scm:115
+#: apps/base/templates/help.scm:133
 msgid "Browse GNU manuals"
 msgstr "GNU 설명서 찾아보기"
 
-#: apps/base/templates/help.scm:123
+#: apps/base/templates/help.scm:141
 msgid "Wiki"
 msgstr "위키"
 
-#: apps/base/templates/help.scm:124
+#: apps/base/templates/help.scm:142
 msgid ""
 "The LibrePlanet Wiki provides a collaborative space for people to share "
 "additional information about the Guix project and its subprojects. It may "
 "contain help information, feature proposals, and notes about work in "
 "progress (among other things)."
 msgstr ""
-"리브레플래닛 위키는 Guix 프로젝트와 이 하위프로젝트에 대하여 추가적인 정보를 공유하는 사람들을 위하여 협력 공간을 제공합니다. 이는 "
-"도움 정보, 기능제안, 그리고 진행하는 작업에 대한 기록(다른 것들 사이)을 포함 할 수 있습니다."
+"LibrePlanet 위키는 사람들이 도움 정보, 기능 제안, 그리고 진행 중인 작업에 대"
+"한 참고 사항과 같은, Guix와 Guix의 하위 프로젝트에 대한 추가적인 정보를 나눌 "
+"수 있는 공간을 제공합니다."
 
-#: apps/base/templates/help.scm:133
+#: apps/base/templates/help.scm:151
 msgid "Browse the wiki"
 msgstr "위키 찾아보기"
 
-#: apps/base/templates/help.scm:141
+#: apps/base/templates/help.scm:159
 msgid "IRC Chat"
 msgstr "IRC 대화"
 
-#: apps/base/templates/help.scm:142
+#: apps/base/templates/help.scm:160
 msgid ""
 "For real-time support from the community, you can connect\n"
-"            to the <1/> channel on irc.freenode.net. There\n"
+"            to the <1/> channel on irc.libera.chat. There\n"
 "            you can get help about anything related to GNU Guix."
 msgstr ""
-"단체에서 실시간 지원을 위하여, 당신은 irc.freenode.net에\n"
-" <1/>채널에 연결 할 수 있습니다. GNU Guix에 연관된 어떤\n"
-" 것에 대해서 도움을 얻을 수 있습니다."
+"커뮤니티에서 실시간 지원을 위해, libera.chat에 있는 <1/> 채널에\n"
+"접속 할 수 있습니다. GNU Guix와 연관된 어떤 것에 대한 도움을\n"
+"얻을 수 있습니다."
 
-#: apps/base/templates/help.scm:147
+#: apps/base/templates/help.scm:165
 msgid ""
 "The <1/> channel is logged. Previous\n"
 "            conversations can be browsed online. See the <2>channel "
 "logs</2>. "
 msgstr ""
-"<1?>채널이 기록되었습니다.\n"
-" 앞선 대화는 온라인으로 검색될 수 있습니다.<2>채널 기록<2/>를 참조하세요. "
+"<1?>채널에서 이루어진 대화는 기록됩니다.\n"
+" 앞선 대화는 <2>채널 기록 웹사이트<2/>에서 찾아보실 수 있습니다. "
 
-#: apps/base/templates/help.scm:154
+#: apps/base/templates/help.scm:172
 msgid "Connect"
 msgstr "연결"
 
-#: apps/base/templates/help.scm:162
+#: apps/base/templates/help.scm:180
 msgid "Mailing lists"
 msgstr "전자우편 목록"
 
-#: apps/base/templates/help.scm:163
+#: apps/base/templates/help.scm:181
 msgid ""
 "Email support from the community is also available through\n"
 "            several mailing list. The messages sent to the lists are\n"
 "            public and archived online."
 msgstr ""
-"단체에서 전자우편 지원은 또한 여러 전자우편 목록을 통해\n"
-" 사용 할 수 있습니다. 목록에 전송된 메시지는\n"
-" 공개되며 온라인으로 저장됩니다."
+"여러 메일링 리스트로부터 공동체의\n"
+" 지원을 받을 수 있습니다. 메일링 리스트에 전송된 메시지는\n"
+" 공개되며 온라인에 저장됩니다."
 
-#: apps/base/templates/help.scm:171
+#: apps/base/templates/help.scm:189
 msgid "See all lists"
-msgstr "모든 항목을 참고합니다"
+msgstr "모든 메일링 리스트 보기"
 
 #: apps/base/templates/contact.scm:17 apps/base/templates/irc.scm:18
 #: apps/base/templates/irc.scm:29
@@ -869,8 +959,8 @@ msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Community|Mailing lists|IRC channels|Bug reports|Help"
 msgstr ""
-"GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|단체|전자우편 목록|"
-"IRC 채널|결점 보고|도움"
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|커뮤니티|전자우편 목록|IRC 채널|결점 보고|도움"
 
 #: apps/base/templates/contribute.scm:17
 msgctxt "webpage title"
@@ -882,8 +972,8 @@ msgid ""
 "Check all the ways you can contribute to make GNU Guix\n"
 "   better, and join the world-wide community of volunteers."
 msgstr ""
-"당신이 GNU Guix를 보다 좋게 기여 할 수 있는 방법을\n"
-" 점검하고, 전세계 지원자 단체에 참여하세요."
+"GNU Guix의 개선에 기여할 수 있는 방법들을 확인해보세요.\n"
+"그리고 전 세계의 지원자들로 이루어진 공동체의 일원이 되세요."
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/contribute.scm:23
@@ -891,8 +981,8 @@ msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Volunteer|Development|Translation|I18N|L10N|Artwork"
 msgstr ""
-"GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|지원자|개발|번역|"
-"l18N/ko|L10N/ko|삽화"
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|지원자|개발|번역|l18N|L10N/ko|삽화"
 
 #: apps/base/templates/contribute.scm:35 apps/base/templates/contribute.scm:110
 #: apps/base/templates/contribute.scm:229
@@ -904,14 +994,15 @@ msgid ""
 "GNU Guix is a large project developed\n"
 "           mostly by volunteers from all around the world. You are welcome\n"
 "           to join us in the <1>development mailing list</1> or in the "
-"<2>#guix channel</2> in IRC Freenode. Tell us how would you like to help, "
-"and we\n"
-"          will do our best to guide you. "
+"<2>#guix channel</2> on the Libera Chat IRC network. Tell us how would you "
+"like to help,\n"
+"           and we will do our best to guide you. "
 msgstr ""
-"GNU Guix는 대부분 전 세계에 지원자에 의해 개발되는\n"
-" 큰 프로젝트입니다. 당신은 IRC프리노드에서 <1>개발자 전자우편 목록</1>또는\n"
-" <2>#guix 채널</2>에서 참여를 환영합니다. 당신이 도울 수 있는 것에 대해 우리에게 말해주세요, 그리고 우리는 최선을 다해서\n"
-" 당신을 안내해줄 것입니다. "
+"GNU Guix는 전 세계 지원자에 의해 대부분 개발되는\n"
+" 큰 프로젝트입니다. 리베라 대화 IRC 네트워크에서 <1>개발 전자우편 목록</1> 또"
+"는 <2>#guix 채널</2>에서 우리와 함께하는 것을 환영합니다.\n"
+" 어떻게 돕고 싶은지 우리에게 알려주면,\n"
+" 우리는 최선을 다해 당신을 안내해드리겠습니다. "
 
 #: apps/base/templates/contribute.scm:51
 msgid ""
@@ -923,10 +1014,11 @@ msgid ""
 "           from <1>https://contributor-covenant.org/</1>.  You can find the "
 "full pledge in the <2>CODE-OF-CONDUCT</2> file."
 msgstr ""
-"우리는 따뜻하게, 우정어린, 그리고 괴롭힘 없는 환경을 제공하며,\n"
-" 그러므로 어떤 누구도 자신의 능력에 알맞게 기여 할 수 있습니다. 이를 위해\n"
-" 우리 프로젝트는 <1>https://contributor-covenant.org/</1>에서 적용된 것과\n"
-" 같은 “기여자 계약”을 사용합니다. 당신은 <2>CODE-OF-CONDUCT</2>파일에서 모든 서약을 찾을 수 있습니다."
+"우리는 누구나 능력을 최대한 발휘해 기여할 수 있도록\n"
+"따뜻하고, 친절하고, 괴롭힘 없는 공간을 제공하고 싶습니다. 이를 위해\n"
+" 우리 프로젝트는 <1>https://contributor-covenant.org/</1>를 차용한\n"
+" “기여자 계약”을 사용합니다. <2>CODE-OF-CONDUCT</2> 파일에서 모든 규칙을 찾"
+"아 볼 수 있습니다."
 
 #: apps/base/templates/contribute.scm:72
 msgid "Project Management"
@@ -947,13 +1039,13 @@ msgid ""
 "            including software, web site, documentation, and artwork, are\n"
 "            available in <1>Git repositories</1> at Savannah. "
 msgstr ""
-"프로젝트, 소프트웨어 포함, 웹사이트, 문서,\n"
-" 그리고 삽화의 모든 구성을 위한 원천 파일은,\n"
-" 사바나 <1>깃 저장소</>에서 이용 할 수 있습니다. "
+"소프트웨어, 웹사이트, 문서,\n"
+" 아트워크와 같은 프로젝트 구성 요소들의 소스 코드는\n"
+" Savannah의 <1>Git 저장소</>에서 이용하실 수 있습니다. "
 
 #: apps/base/templates/contribute.scm:89
 msgid "Access Savannah"
-msgstr "사바나 접근"
+msgstr "Savannah 방문"
 
 #: apps/base/templates/contribute.scm:94
 msgid "Art"
@@ -965,17 +1057,17 @@ msgid ""
 "            improve user interfaces, and create multimedia material for\n"
 "            documentation, presentations, and promotional items. "
 msgstr ""
-"우리는 항상 우리의 디자인을 돕는 예술가와 사용자 연결 장치를\n"
-" 향상 시키며, 문서, 발표와 증진 방법을 위한 멀티미디어 자료를\n"
-" 생산하는 것을 기대합니다. "
+"우리는 사용자 인터페이스를 디자인하거나 개선하고,\n"
+" 문서나 프레젠테이션, 홍보를 위한 멀티미디어 자료를 만들 수 있는\n"
+" 예술가를 항상 구하고 있습니다. "
 
 #: apps/base/templates/contribute.scm:100
 msgid ""
 "The artwork used in the different components of the project\n"
 "            is available in the <1>guix-artwork</1> repository. "
 msgstr ""
-"프로젝트의 다른 구성에서 사용되는 삽화는\n"
-" <1>guix-artwork</1> 저장소에서 사용 할 수 있습니다. "
+"프로젝트의 다른 구성 요소에서 사용되는 아트워크는\n"
+" <1>guix-artwork</1> 저장소에서 사용할 수 있습니다. "
 
 #: apps/base/templates/contribute.scm:116 apps/base/templates/cuirass.scm:57
 msgid "Documentation"
@@ -989,20 +1081,22 @@ msgid ""
 "            manuals, tutorials, and blog entries will also help users and\n"
 "            developers discover what we do. "
 msgstr ""
-"당신은 시스템과 웹사이트에서 이미 사용 할 수 있는 <1>프로젝트 문서</1>을 읽을 수 있으며, 우리가\n"
-" 어떤 오류 또는 빠진 것을 확인하는데 도움을 줄 수 있습니다.새로운\n"
-" 설명서, 지도, 그리고 블로그 항목을 생성하는 것은 사용자와\n"
-" 개발자가 우리가 하는 것을 도울 수 있습니다. "
+"시스템이나 웹사이트에서 <1>프로젝트 문서</1>를 읽고 오류와 누락을 확인하여\n"
+" 도움을 줄 수 있습니다. 새로운 설명서, 튜토리얼,\n"
+" 블로그 항목을 생성하여 개발자와 사용자가\n"
+" 우리가 무얼하는 지 이해할 수 있도록 도울 수도 있습니다. "
 
 #: apps/base/templates/contribute.scm:125
 msgid ""
 "Helping improve the documentation of the <1>packaged software</1> is another "
 "way to contribute. "
-msgstr "<1>꾸러미화된 소프트웨어</1>의 문서 향상에 도움을 주는 것은 공헌하는 다른 방식입니다. "
+msgstr ""
+"<1>꾸러미화된 소프트웨어</1>의 문서 개선에 도움을 주는 것은 기여의 또 다른 방"
+"식입니다. "
 
 #: apps/base/templates/contribute.scm:132
 msgid "Start writing"
-msgstr "쓰기 시작"
+msgstr "쓰기 시작하기"
 
 #: apps/base/templates/contribute.scm:138
 #: apps/packages/templates/detailed-index.scm:43
@@ -1017,29 +1111,30 @@ msgid ""
 "            favorite tools with the Guix package manager, and be\n"
 "            productive using the system. "
 msgstr ""
-"수 백가지 소프트웨어, 문서 및 평가는 Guix 꾸러미 관리자와 함께\n"
-" 자신이 선호하는 도구에서 설치하는 사용자를 위해 보다 편리하게\n"
-" 만들도록 포장되어야 할 필요가 있습니다, 그리고\n"
-" 시스템 사용에 생산적이어야 합니다. "
+"사람들이 쉽게 좋아하는 소프트웨어를\n"
+" Guix 꾸러미 관리자로 설치하고, 시스템을 생산적으로\n"
+" 사용할 수 있으려면 많은 소프트웨어, 문서, 자산들을\n"
+" 꾸러미로 만들어야 합니다. "
 
 #. TRANSLATORS: Packaging Guidelines is a section name in the
 #. English (en) manual.
 #: apps/base/templates/contribute.scm:147
 msgid ""
 "Information on how to add packages to the distribution can\n"
-"            be found <1>in the manual<1.1>en</1.1><1.2>Packaging-Guidelines."
+"            be found <1>in the manual<1.1>en</1.1><1.2>Contributing."
 "html</1.2></1>. "
 msgstr ""
 "배포판에서 꾸러미를 추가하는 방법에 대한 정보는\n"
-"<1>설명서 내에서<1.1>ko</1.1><1.2>Packaging-Guidelines.html</1.2></1>에서 찾을 수 있습니다. "
+" <1>설명서 내에서<1.1>en</1.1><1.2>Contributing.html</1.2></1>에서 찾을 수 있"
+"습니다. "
 
 #: apps/base/templates/contribute.scm:157
 msgid ""
 "Check out the <1>package database</1> for a list of available packages, and "
 "the <2>patch-tracking database</2> for a list of pending submissions."
 msgstr ""
-"가용한 꾸러미 목록을 위하여 <1>꾸러미 자료저장소</1>, 그리고 중단된 하위 임무의 목록을 위하여 <2>패치-추적 자료 저장소</2> "
-"점검합니다."
+"가용한 꾸러미 목록은 <1>꾸러미 자료저장소</1>를, 그리고 중단된 하위 임무의 목"
+"록은 <2>패치-추적 자료 저장소</2>를 확인하세요."
 
 #: apps/base/templates/contribute.scm:168
 msgid "Send a new package"
@@ -1055,8 +1150,9 @@ msgid ""
 "as the main programming and extension language for the\n"
 "            components of the system. "
 msgstr ""
-"원천 코드는 <1>주요 깃(git) 저장소</1>입니다. 우리는 시스템 구성을 위한 주요 프로그래밍과 확장 언어로서\n"
-"<2>GNU Guile</2>을 사용합니다. "
+"소스 코드는 <1>주 Git 저장소</1>에 있습니다. 우리는 시스템 구성을 위한 주요 "
+"프로그래밍 언어로써\n"
+" <2>GNU Guile</2>을 사용합니다. "
 
 #. TRANSLATORS: Contributing is a section name in the English
 #. (en) manual.
@@ -1069,11 +1165,11 @@ msgid ""
 "            setup, as well as the coding and cooperation conventions used\n"
 "            in the project. "
 msgstr ""
-"당신은 이를 <1>Guile 설명서</1> 또는 다른 <2>계획에 대한 안내 자료</2>를 검색하여 찾을 수 있습니다. 또한, 개발 설정 "
-"뿐만 아니라 프로젝트에서 사용된 코딩 및 협력 협약으로 보다 상세한 정보를 위해 설명서 <3>기여하기 <3.1>ko</3.1><3."
-"2>Contributing.html</3.2></3>\n"
-" 부분을 읽어야\n"
-" 합니다. "
+"<1>Guile 설명서</1>나 <2>Scheme 입문용 자료</2>를 찾아보시면 도움이 될 겁니"
+"다. 또한, 코딩 컨벤션, 협업 관례, 개발 환경 설정에 대해 자세히 알기 위해 설명"
+"서의 <3>기여하기<3.1>en</3.1><3.2>Contributing.html</3.2></3>\n"
+" 부분을 꼭\n"
+" 읽어주세요. "
 
 #: apps/base/templates/contribute.scm:205
 msgid "Send a patch"
@@ -1090,22 +1186,23 @@ msgid ""
 "            and users to be able to download and install packages. Help\n"
 "            us keep the system up and running smoothly. "
 msgstr ""
-"우리 시스템 인프라스트럭처는 프로젝트에서 소통과 협력하는 모든 기여자를\n"
-" 위해 사용 할 수 있으며,\n"
-" 그리고 사용자는 내려받기 할 수 있으며 꾸러미를 설치 할 수 있습니다.우리의\n"
-" 시스템 향상과 부드러운 동작을 도울 수 있습니다. "
+"우리 시스템 인프라는 기여자들이 소통하고 협업할 수\n"
+" 있게 하며, 사용자가 꾸러미를 내려받고 설치할 수\n"
+" 있게 합니다. 인프라를 유지하고 원활하게\n"
+" 운영할 수 있도록 도와주세요. "
 
 #: apps/base/templates/contribute.scm:218
 msgid ""
 "You can contribute to our continous integration software: <1/>. You can also "
 "<2>donate hardware or hosting</2> for our <3>build farm</3>"
 msgstr ""
-"당신은 우리의 연속적인 통합 소프트웨어에 공헌 할 수 있습니다: <1/>. 당신은 또한 <3>팜 구성</3>을 위하여 <2>하드웨어 기부 "
-"또는 호스팅</2>를 할 수 있습니다"
+"우리의 지속적 통합(continous integration) 소프트웨어인 <1/>에 기여하실 수 있"
+"습니다. 또한 <3>빌드 팜</3>을 위해 <2>하드웨어를 기부하거나 호스팅</2>하실 "
+"수 있습니다"
 
 #: apps/base/templates/contribute.scm:235
 msgid "Test and Bug Reports"
-msgstr "시험과 결점 보고"
+msgstr "테스트와 버그 보고"
 
 #: apps/base/templates/contribute.scm:236
 msgid ""
@@ -1113,9 +1210,9 @@ msgid ""
 "            about your experience. Help the project by reporting bugs. You "
 "can also get started by <1>picking an “easy” bug</1> to work on."
 msgstr ""
-"소프트웨어를 설치하고 당신의 경험에 대해서 단체에\n"
-" 응답을 전달해주세요. 결점을 보고하는 것은 프로젝트를 돕습니다. 당신은 또한 작업하는 <1>”쉬운”결점 선택하기</1>해서 시작 할 수 "
-"있습니다."
+"소프트웨어를 설치하고 겪은 경험을 공동체에\n"
+" 피드백해주세요. 버그를 보고해 프로젝트를 도우세요. 아니면 <1>”easy”(쉬운) 버"
+"그를 선택 </1>해서 작업을 시작하실 수도 있습니다."
 
 #: apps/base/templates/contribute.scm:245
 msgid ""
@@ -1123,8 +1220,9 @@ msgid ""
 "            already <1>in the bug database</1>. See <2>the developer "
 "information page</2> for more information on how to manipulate bug reports. "
 msgstr ""
-"결점을 보고하기 전에, 결점이 이미 <1> 결점 자료저장소에</1> 있는지 여부를\n"
-" 점검하기 바랍니다. 결점 보고를 잘 다루는 방법에 대한 보다 자세한 정보를 위하여 <2>개발자 정보 부분</2>를 참고하세요. "
+"버그를 보고하기 전에, 버그가 이미 <1> 버그 데이터베이스에</1> 있는지\n"
+" 확인해주세요. 버그 보고서를 다루는 법을 알고 싶으시면 <2>개발자 정보 페이지"
+"</2>를 참고하세요. "
 
 #: apps/base/templates/contribute.scm:257
 msgid "Report a bug"
@@ -1141,9 +1239,10 @@ msgid ""
 "language.  See your language's team at the <6>Translation Project</6> to "
 "have a look at the styleguides and the work of other translators"
 msgstr ""
-"당신은 당신의 언어로서 <1>소프트웨어</1>, <2>꾸러미 설명</2>, <3>설명서</3> <4>상세 설명서</4>, 그리고 이 "
-"<5>웹사이트</5>을 번역하는데 도움을 줄 수 있습니다. 형태안내와 다른 번역자의 작업을 찾을 수 있는 <6>번역 프로젝트</6>에서 "
-"자신의 번역 팀을 찾을 수 있습니다"
+"당신의 언어로 <1>소프트웨어</1>, <2>꾸러미 설명</2>, <3>설명서</3> <4> 쿡북"
+"</4>, <5>웹사이트</5>를 번역하는데 도움을 줄 수 있습니다. <6>Translation "
+"Project</6>에서 해당 언어 번역 팀을 찾은 후, 스타일 가이드와 다른 번역자의 작"
+"업을 확인하세요"
 
 #: apps/base/templates/contribute.scm:291
 msgid ""
@@ -1151,16 +1250,16 @@ msgid ""
 "translation\n"
 "            tools.  Visit their websites and help translate. "
 msgstr ""
-"시스템에서 제공되는 <1>소프트웨어 꾸러미는</1> 그 들 자신의 번역 도구를\n"
-"갖습니다. 이들 웹사이트를 방문하고 번역을 도와줍니다. "
+"시스템에서 제공되는 <1>소프트웨어 꾸러미</1>는 자체적인 번역 방식을 가지고\n"
+" 있을 수도 있습니다. 웹사이트를 방문하여 번역을 도와주세요. "
 
 #: apps/base/templates/contribute.scm:298
 msgid "Start translating"
-msgstr "번역하기 시작"
+msgstr "번역 시작하기"
 
 #: apps/base/templates/contribute.scm:302
 msgid "Other resources for contributors"
-msgstr "공헌자를 위한 다른 자원"
+msgstr "기여자를 위한 다른 자료"
 
 #: apps/base/templates/contribute.scm:303
 msgid ""
@@ -1168,18 +1267,18 @@ msgid ""
 "          auxiliary information useful to hackers and maintainers is\n"
 "          available at <1/>."
 msgstr ""
-"문서, 앞선 대화의 지원 자료, 그리고\n"
-" 해커와 관리자에 필요한 부수적인 정보는\n"
-" <1/>에서 사용 할 수 있습니다."
+"문서, 앞선 대화에서 나온 보조 자료, 그리고\n"
+" 해커와 메인테이너에게 유용한 부수적인 정보를\n"
+" <1/>에서 이용할 수 있습니다."
 
 #: apps/base/templates/cuirass.scm:16
 msgctxt "webpage title"
 msgid "Cuirass"
-msgstr "동체 갑옷(Cuirass)"
+msgstr "Cuirass"
 
 #: apps/base/templates/cuirass.scm:18
 msgid "GNU Guix continuous integration software."
-msgstr "GNU Guix 연속적인 통합 소프트웨어."
+msgstr "GNU Guix 지속적 통합 소프트웨어."
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/cuirass.scm:21
@@ -1187,7 +1286,8 @@ msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Guix "
 "package manager|Cuirass|CI"
 msgstr ""
-"GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|Cuirass|CI"
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|Cuirass|CI"
 
 #: apps/base/templates/cuirass.scm:31
 msgid ""
@@ -1200,15 +1300,15 @@ msgid ""
 "interface\n"
 "to monitor the build results."
 msgstr ""
-"Cuirass는 GNU Guix 연속적인 통합\n"
-"소프트웨어입니다.VCS 저장소에서 원천을 확인하는, 구성 작업을 실행하고\n"
-"자료저장소에서 구성 결과를 저장하는 것에 GNU Guile에서 쓰여진 일반 목적\n"
-"구성 자동 서버입니다. Cuirass는 또한 구성 결과를 관리하는데에\n"
-"웝 연결장치를 제공합니다."
+"Cuirass는 GNU Guix의 지속적 통합\n"
+"소프트웨어입니다. VCS 저장소의 소스 코드를 꺼내 빌드 작업을 실행하고,\n"
+"그 결과를 데이터베이스에 저장하는, GNU Guile로 쓰여진 범용 빌드 자동화\n"
+"서버입니다. Cuirass는 또한 빌드 결과를 모니터링할 수\n"
+"있도록 웹 인터페이스를 제공합니다."
 
 #: apps/base/templates/cuirass.scm:37
 msgid "Cuirass is running on GNU Guix build farm at <1/>."
-msgstr "Cuirass는 <1/>에 GNU GUIX 구성 팜에서 동작중입니다."
+msgstr "Cuirass는 <1/>에 있는 GNU Guix 빌드 팜에서 실행되고 있습니다."
 
 #: apps/base/templates/cuirass.scm:41
 msgid "Features"
@@ -1216,19 +1316,19 @@ msgstr "기능"
 
 #: apps/base/templates/cuirass.scm:44
 msgid "Poll sources from multiple Git repositories."
-msgstr "다양한 저장소에서 원천을 등록합니다."
+msgstr "다양한 Git 저장소에서 소스를 가져올 수 있습니다."
 
 #: apps/base/templates/cuirass.scm:46
 msgid "Execute builds on local or remote Guix daemons."
-msgstr "로컬 또는 원결 Guix 데몬에 구성을 실행합니다."
+msgstr "로컬 또는 원격 Guix 데몬에서 빌드를 실행합니다."
 
 #: apps/base/templates/cuirass.scm:48
 msgid "Store build products or artifacts."
-msgstr "구성 제품 및 인위 결과를 저장합니다."
+msgstr "빌드 결과물 또는 아티팩트를 저장합니다."
 
 #: apps/base/templates/cuirass.scm:50
 msgid "Collect build logs and metrics."
-msgstr "구성 기록과 측정 항목을 수집합니다."
+msgstr "빌드 로그와 매트릭스를 수집합니다."
 
 #: apps/base/templates/cuirass.scm:52
 msgid "Provides a REST API."
@@ -1237,30 +1337,33 @@ msgstr "REST API를 제공합니다."
 #: apps/base/templates/cuirass.scm:53
 msgid ""
 "High level of concurrency using <1>Guile-Fibers</1> asynchronous library."
-msgstr "<1> Guile-광</1> 비동기 라이브러리를 사용하는 높은 수준의 동시성."
+msgstr ""
+"<1>Guile-Fibers</1> 비동기 라이브러리를 사용해 높은 수준의 동시성을 제공합니"
+"다."
 
 #: apps/base/templates/cuirass.scm:58
 msgid "Cuirass documentation is accessible <1>here</1>."
-msgstr "Cuirass 문서는 접근 할 수 있습니다 <1>here</1>."
+msgstr "<1>여기서</1> Cuirass의 문서를 이용하실 수 있습니다."
 
 #: apps/base/templates/cuirass.scm:63
 msgid "Releases"
-msgstr "출시"
+msgstr "릴리즈"
 
-#: apps/base/templates/cuirass.scm:74
+#: apps/base/templates/cuirass.scm:74 apps/base/templates/cuirass.scm:84
 msgid "GPG signature"
 msgstr "GPG 서명"
 
-#: apps/base/templates/cuirass.scm:75
+#: apps/base/templates/cuirass.scm:85
 msgid "Project repository"
 msgstr "프로젝트 저장소"
 
-#: apps/base/templates/cuirass.scm:76
+#: apps/base/templates/cuirass.scm:86
 msgid ""
 "Cuirass source code is hosted at <1>git://git.sv.gnu.org/guix/guix-cuirass."
 "git</1>."
 msgstr ""
-"Cuirass 원천 코드는 <1>git://git.sv.gnu.org/guix/guix-cuirass.git</1>에서 주최가 됩니다."
+"Cuirass의 소스 코드는 <1>git://git.sv.gnu.org/guix/guix-cuirass.git</1>에서 "
+"호스팅됩니다."
 
 #: apps/base/templates/donate.scm:17
 msgctxt "webpage title"
@@ -1273,16 +1376,18 @@ msgid ""
 "   hosting for machines (they should be usable with exclusively\n"
 "   free software)."
 msgstr ""
-"우리는 하드웨어 기부와 장비를 위한 선택적인\n"
-" 호스팅을 기대합니다 (이 것들은 배타적으로\n"
-" 무료 소프트웨어와 함께 사용 할 수 있어야 합니다)."
+"우리는 하드웨어 기부와 더불어 선택적으로 호스팅을\n"
+" 받고 있습니다. (자유 소프트웨어만으로\n"
+" 사용할 수 있어야 합니다)."
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/donate.scm:24
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Donations"
-msgstr "GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|도움 자원|기부"
+msgstr ""
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|도움 자원|기부"
 
 #: apps/base/templates/donate.scm:34
 msgid "Donate"
@@ -1294,8 +1399,9 @@ msgid ""
 "distribution grows (see the <2>package list</2>), so do the computing and "
 "storage needs."
 msgstr ""
-"Guix의 <1>구성 팜</1>는 기부된 하드웨어와 호스팅서 동작합니다. (<2>꾸러미 항목</2> 참고) 배포가 증가함에 따라서, "
-"그래서 컴퓨팅과 저장소 소요도 함께 증가합니다."
+"Guix의 <1>빌드 팜</1>은 기부된 하드웨어와 호스팅에서 운영됩니다. 배포해야 할 "
+"것들이 증가 할수록 (<2>꾸러미 목록</2> 참고), 필요한 컴퓨팅과 저장소 소요도 "
+"함께 증가합니다."
 
 #: apps/base/templates/donate.scm:47
 msgid ""
@@ -1305,9 +1411,10 @@ msgid ""
 "consider helping out by making a donation on this\n"
 "          FSF-hosted page:"
 msgstr ""
-"2015년에 돌아가서 우리는 <2>무료 소프트웨어 재단(FSF)에서 후원과 함께</2>, 우리의 팜을 구성을 강화하기에 <1>모금 활동을 "
-"운영</1>했습니다. Guix 프로젝트는 항상 앞으로 이 임무를 위하여 경제적인 지원을 사용 할 수 있습니다. 이 FSF 호스팅된 "
-"부분에서 기부를 하여 도움을 주는 것을\n"
+"2015년에 우리는 <2>자유 소프트웨어 재단(FSF)의 도움으로</2>, 빌드 팜을 강화하"
+"기 위한 <1>모금 운동을</1> 벌였습니다. Guix 프로젝트가 더 나아가기 위해서는 "
+"항상 경제적 지원이 필요합니다. 다음의 FSF가 호스팅하는 페이지에서 후원을 하"
+"여 도움을 주는 것을\n"
 " 고려해주세요:"
 
 #: apps/base/templates/donate.scm:63
@@ -1325,37 +1432,37 @@ msgid ""
 "           hosting for the following kinds of machines (they should be\n"
 "           usable with exclusively free software): "
 msgstr ""
-"우리는 하드웨어 기부와 장비를 위한 선택적인 호스팅을\n"
-" 기대합니다 (이 것들은 배타적으로 무료 소프트웨어와 함께\n"
-" 사용 할 수 있어야 합니다): "
+"우리는 하드웨어 기부와 더불어 선택적으로 호스팅을\n"
+" 받고 있습니다. (자유 소프트웨어만으로\n"
+" 사용할 수 있어야 합니다).: "
 
 #: apps/base/templates/donate.scm:78
 msgid ""
 "x86_64 machines, with on the order of 1 TiB of storage\n"
 "               and 4 GiB of RAM;"
 msgstr ""
-"X86_64 장비, 1 TiB 저장소와\n"
-"4GiB 램과 함께;"
+"1 TiB 저장 용량과\n"
+" 4GiB 램 정도 사양의 X86_64 장치;"
 
 #: apps/base/templates/donate.scm:81
 msgid ""
 "armv7 machines (such as the Novena) to more quickly test\n"
 "               and provide binaries for the armhf-linux port;"
 msgstr ""
-"armv7 장비를(Novena와 같은) 보다 빨리 시험하는 것과\n"
-" armhf-linux 포트를 위하여 이진수를 제공합니다;"
+"armv7 장비를(Novena와 같은) 사용하여\n"
+" armhf-linux 포트에 대한 바이너리를 더 빠르게 시험하고 제공합니다;"
 
 #: apps/base/templates/donate.scm:84
 msgid ""
 "armv8 machines to more quickly test and provide binaries\n"
 "              for the aarch64-linux port;"
 msgstr ""
-"armv8 장비를 보다 빨리 시험하는 것과\n"
-"aarcg64-linux 포트를 위하여 이진수를 제공합니다;"
+"armv8 머신을 사용하여 armhf-linux 포트에 대한 바이너리를\n"
+" 더 빠르게 시험하고 제공합니다;"
 
 #: apps/base/templates/donate.scm:87
 msgid "mips64el machines to strengthen this port."
-msgstr "이 포트를 강화하는 mips64el 장비."
+msgstr "더 나은 포팅을 위한 mips64el 장치."
 
 #: apps/base/templates/donate.scm:90
 msgid ""
@@ -1363,12 +1470,12 @@ msgid ""
 "<2/> private alias to\n"
 "           discuss any opportunities. "
 msgstr ""
-"<1>일반적인 채널</1> 또는 어떤 기회에 토의 할 때에 <2/> 비공 별명 사용을 통해서\n"
-" 우리에게 연락해 주기 바랍니다. "
+"기회가 되신다면 <1>일반적인 채널</1>이나 <2/> 비공개 별칭을 통해서\n"
+" 상담해 주시기 바랍니다. "
 
 #: apps/base/templates/donate.scm:98
 msgid "Thanks to the donors!"
-msgstr "기부자에게 감사함을 전합니다!"
+msgstr "기부해주셔서 감사합니다!"
 
 #: apps/base/templates/donate.scm:103
 msgid ""
@@ -1376,12 +1483,12 @@ msgid ""
 "           make the <1>build farm</1> for the Guix System Distribution a "
 "reality."
 msgstr ""
-"아래 테이블은 Guix 시스템 배포 실현을 위하여 <1>팜 구성</1>을\n"
-"만드는데 하드웨어와 호스팅 기부를 요약합니다."
+"아래 표는 Guix 시스템 배포를 위한 <1>빌드 팜</1>을\n"
+" 만든 하드웨어와 호스팅 기부의 요약입니다."
 
 #: apps/base/templates/donate.scm:113
 msgid "<1>machine</1><2>system</2><3>donors</3>"
-msgstr "<1>장비</1><2>시스템</2><3>기부자</3>"
+msgstr "<1>장치</1><2>시스템</2><3>기부자</3>"
 
 #: apps/base/templates/donate.scm:118
 msgid ""
@@ -1390,30 +1497,32 @@ msgid ""
 "i686-linux, and dedicated storage</2><3><3.1>Max Delbrück Center for "
 "Molecular Medicine</3.1> (hardware and hosting)</3>"
 msgstr ""
-"<1>berlin.guixsd.org</1><2>는 x86_64-linux and i686-linux, 그리고 전용 저장소\n"
-"</2><3><3.1>Max Delbrück Center for Molecular Medicine</3.1> (하드웨어와 호스팅)</"
-"3>을 위한 25개 구성 노드와 함께 팜을 구성하였습니다"
+"<1>berlin.guixsd.org</1><2>x86_64-linux, i686-linux, 전용 스토리지로\n"
+"구성된 25개의 빌드 노드로 이루어진 빌드 팜</2><3><3.1>Max Delbrück Center "
+"for Molecular Medicine</3.1> (하드웨어와 호스팅)</3>"
 
 #: apps/base/templates/donate.scm:130
 msgid ""
 "<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM "
 "Holdings</3.1></3>"
 msgstr ""
-"<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>암(ARM) 지주"
-"</3.1></3>"
+"<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM "
+"Holdings</3.1></3>"
 
 #: apps/base/templates/donate.scm:140
 msgid ""
 "<1>bayfront.guixsd.org</1><2>new build farm front-end (WIP)</2><3>Igalia</3>"
-msgstr "<1>bayfront.guixsd.org</1><2>새로운 구성 팜 프론트-엔드(WIP)</2><3>Igalia</3>"
+msgstr ""
+"<1>bayfront.guixsd.org</1><2>새로운 빌드 팜 프론트-엔드 "
+"(WIP)</2><3>Igalia</3>"
 
 #: apps/base/templates/donate.scm:152
 msgid ""
 "<1>fosshost1.guix.gnu.org, fosshost2.guix.gnu.org</1><2>x86_64-linux, i686-"
 "linux</2><3>Fosshost</3>"
 msgstr ""
-"<1>fosshost1.guix.gnu.org, fosshost2.guix.gnu.org</1><2>x86_64-linux, "
-"i686-linux</2><3>Fosshost</3>"
+"<1>fosshost1.guix.gnu.org, fosshost2.guix.gnu.org</1><2>x86_64-linux, i686-"
+"linux</2><3>Fosshost</3>"
 
 #: apps/base/templates/donate.scm:164
 msgid ""
@@ -1428,16 +1537,16 @@ msgid ""
 "<1>hydra-slave1</1><2>armhf-linux</2><3><3.1>Steve Sprang "
 "(hardware)</3.1><3.2>Mark H Weaver (hosting)</3.2></3>"
 msgstr ""
-"<1>hydra-slave1</1><2>armhf-linux</2><3><3.1>Steve Sprang (하드웨어)</"
-"3.1><3.2>Mark H Weaver (호스팅)</3.2></3>"
+"<1>hydra-slave1</1><2>armhf-linux</2><3><3.1>Steve Sprang (하드웨"
+"어)</3.1><3.2>Mark H Weaver (호스팅)</3.2></3>"
 
 #: apps/base/templates/donate.scm:184
 msgid ""
 "<1>hydra-slave2</1><2>armhf-linux</2><3><3.1><3.1.1>Harmon "
 "Instruments</3.1.1> (hardware)</3.1><3.2>Mark H Weaver (hosting)</3.2></3>"
 msgstr ""
-"<1>hydra-slave2</1><2>armhf-linux</2><3><3.1><3.1.1>Harmon Instruments</"
-"3.1.1> (하드웨어)</3.1><3.2>Mark H Weaver (호스팅)</3.2></3>"
+"<1>hydra-slave2</1><2>armhf-linux</2><3><3.1><3.1.1>Harmon "
+"Instruments</3.1.1> (하드웨어)</3.1><3.2>Mark H Weaver (호스팅)</3.2></3>"
 
 #: apps/base/templates/donate.scm:197
 msgid ""
@@ -1462,9 +1571,10 @@ msgid ""
 "<2>GNU España</2>, <3>FSF France</3>, <4>Free Secure Network Systems "
 "Group</4> at the <5>Technische Universität München</5>."
 msgstr ""
-"다른 협회와 개인이 과거에 하드웨어와 호스팅에 도움을 주었습니다. 우리는\n"
-"그들에게 감사를 전합니다: <1>무료 소프트웨어 재단</1>, <2>GNU 스페인</2>, <3>FSF 프랑스</3>,<5>뮌헨 "
-"공과대학교</5>에서 <4>무료 보안 네트워크 시스템 그룹</4>."
+"다른 커뮤니티와 개인이 과거에 하드웨어와 호스팅에 도움을 주었습니다. 우리는\n"
+"그들에게 감사를 전합니다: <1>자유 소프트웨어 재단</1>, <2>GNU 스페인</2>, "
+"<3>FSF 프랑스</3>,<5>뮌헨 공과대학교</5>에서 <4>무료 보안 네트워크 시스템 그"
+"룹</4>."
 
 #: apps/base/templates/graphics.scm:16
 msgctxt "webpage title"
@@ -1476,8 +1586,8 @@ msgid ""
 "Information about images used for the graphical identity\n"
 "   of GNU Guix and Guix System (formerly “GuixSD”)."
 msgstr ""
-"이미지에 대한 정보는 GNU Guix와 Guix 시스템\n"
-"(공식적으로 \"GuixSD)의 그래픽 식별을 위해 사용되곤 합니다."
+"GNU Guix와 Guix 시스템 (이전에는 \"GuixSD\")을 나타내는\n"
+" 이미지에 관한 정보."
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/graphics.scm:22
@@ -1485,7 +1595,8 @@ msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Donations|Branding|Logo"
 msgstr ""
-"GNU|리눅스|유닉스x|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|기부|융합|로고"
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|기부|융합|로고"
 
 #: apps/base/templates/graphics.scm:32
 msgid "Graphics"
@@ -1496,12 +1607,12 @@ msgid ""
 "For questions regarding the graphics listed in this page,\n"
 "          please contact <1>help-guix@gnu.org</1>."
 msgstr ""
-"이 부분에서 열거된 그래픽에 대한 질문을 위해,\n"
-"<1>help-guix@gnu.org</1>와 연락하기 바랍니다."
+"이 페이지에 열거된 그래픽에 관련된 질문은,\n"
+"<1>help-guix@gnu.org</1>에 연락하기 바랍니다."
 
 #: apps/base/templates/graphics.scm:44
 msgid "GNU Guix logotype"
-msgstr "GNU Guix 기록 유형"
+msgstr "GNU Guix 로고타입"
 
 #: apps/base/templates/graphics.scm:45
 msgid ""
@@ -1509,9 +1620,9 @@ msgid ""
 "          Distribution” or GuixSD, had its own logo, which is now\n"
 "          deprecated."
 msgstr ""
-"단독 Guix, “Guix 시스템 배포판” 또는 GuixSD와\n"
-" 같이 앞서 알려진, 자체 로고와 같은 것들은\n"
-" 지금은 사용되지 않습니다."
+"앞서 “Guix 시스템 배포판” 또는 GuixSD로\n"
+" 알려진, 독립적인 Guix는 지금은 사용되지 않는\n"
+" 자체적인 로고를 가지고 있었습니다."
 
 #: apps/base/templates/graphics.scm:51
 msgid ""
@@ -1520,10 +1631,10 @@ msgid ""
 "          (a.k.a. sirgazil).  They are available under the following\n"
 "          terms:"
 msgstr ""
-"GNU Guix와 GuixSD 로고유형은\n"
-"uis Felipe López Acevedo (a.k.a. sirgazil) 에\n"
-"의해 디자인 되었습니다.\n"
-"이 것들은 다음 항목에서 사용 할 수 있습니다:"
+"GNU Guix와 GuixSD 로고타입은\n"
+" Luis Felipe López Acevedo (a.k.a. sirgazil)에\n"
+" 의해 디자인 되었으며,\n"
+" 다음 조건과 함께 사용 할 수 있습니다:"
 
 #: apps/base/templates/graphics.scm:65
 msgid ""
@@ -1534,10 +1645,11 @@ msgid ""
 "          by Nikita Karetnikov in 2013 and <2>superseded</2> by the golden "
 "GNU in 2016."
 msgstr ""
-"이들 로고유형을 위한 원천 파일(SVG), 그들 변형, 그리고\n"
-" GNU Guix 프로젝트의 다른 구성에서 사용되는 다른 삽화는\n"
-" <1>guix-artwork</1> 저장소, 2013년에서 Nikita Karetnikov에 의해 설계된\n"
-" 앞서 GNU Guix 로고유형을 포함하고 2016년에 골든 GNU에서 <2>대체됨</2>에서 이용 할 수 있습니다."
+"로고를 위한 소스 파일(SVG), 그 변형,\n"
+" GNU Guix 프로젝트의 다른 구성 요소에서 사용되는 다른 아트워크,\n"
+" 2013년에 Nikita Karetnikov에 의해 디자인된 GNU Guix 로고와 2016년에 골든 GNU"
+"에서 나온 <2>대체 로고</2>를\n"
+" <1>guix-artwork</1> 저장소에서 이용할 수 있습니다."
 
 #: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
 msgctxt "webpage title"
@@ -1546,14 +1658,16 @@ msgstr "IRC"
 
 #: apps/base/templates/irc.scm:20
 msgid "Internet relay chat."
-msgstr "인터넷 연결 대화."
+msgstr "인터넷 릴레이 챗."
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/irc.scm:23
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|IRC|chat"
-msgstr "GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|IRC|대화"
+msgstr ""
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|IRC|대화"
 
 #: apps/base/templates/irc.scm:35
 msgid "IRC"
@@ -1561,17 +1675,18 @@ msgstr "IRC"
 
 #: apps/base/templates/irc.scm:37
 msgid ""
-"Join the <1/> channel on the <2>Freenode IRC network</2> to chat with the "
+"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
 "GNU Guix community or to get help\n"
 "          in real-time. You can use the chat widget below, or just use\n"
 "          the <3>IRC client</3> of your preference. Note that the "
 "conversations that happen\n"
 "          on the <4/> channel are logged (<5>browse the log</5>)."
 msgstr ""
-"GNU Guix 단체 또는 실시간에서 도움을 얻기와 함께 대화에 <2>프리노드 IRC 네트워크</2>에서\n"
-" <1/>채널을 참여하세요. 당신은 아래 대화 위젯을 사용 할 수 있으며, 또는\n"
-" 당신의 설정<3>IRC 클라이언트</3>만 사용 할 수 있습니다. <4/> 채널에서 발생된\n"
-" 대화는 (<5>기록에서 검색</5>)에서 기록된다는 것을 나타냅니다."
+"GNU Guix 공동체와 대화화거나 실시간으로 도움을 얻으려면<2>리베라 대화 네트워"
+"크</2>에\n"
+" 있는 <1/>채널에 참여하세요. 아래 대화 위젯을 사용하거나,\n"
+" 취향에 맞는 <3>IRC 클라이언트</3>를 사용하세요. <4/> 채널에서 이루어진\n"
+" 대화는 기록됩니다 (<5>기록 둘러보기</5>)."
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -1598,7 +1713,7 @@ msgid ""
 "   for your GNU Guix installation, and instructions on how\n"
 "   to report security issues."
 msgstr ""
-"당신의 GNU Guix 설치를 위한 보안 최신화에\n"
+"설치된 GNU Guix의 보안 업데이트를 받는 법에\n"
 " 대한 중요한 정보, 그리고 보안 문제를\n"
 " 보고하는 방법에 대한 안내."
 
@@ -1607,7 +1722,9 @@ msgstr ""
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Security updates"
-msgstr "GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|보안 최신화"
+msgstr ""
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|보안 최신화"
 
 #: apps/base/templates/security.scm:36
 msgid "Security"
@@ -1615,7 +1732,7 @@ msgstr "보안"
 
 #: apps/base/templates/security.scm:38
 msgid "How to report security issues"
-msgstr "보안 사건 보고 방법"
+msgstr "보안 문제 보고 방법"
 
 #: apps/base/templates/security.scm:39
 msgid ""
@@ -1624,9 +1741,10 @@ msgid ""
 "<1/>.  This list is monitored by a\n"
 "           small team of Guix developers."
 msgstr ""
-"Guix 자체 또는 이 제공의 꾸러미에서 예민한 보안 사건을 보고\n"
-" 하는데에, 당신은 비공개 전자우편 목록 <1/>으로 작성 할 수 있습니다. 이\n"
-" 항목은 Guix 개발자의 작은 팀에 의해 관리됩니다."
+"Guix 또는 Guix가 제공하는 패키지에서 발생하는\n"
+" 예민한 보안 문제를 보고하려면, 비공개 메일링 리스트인 <1/>에 이메일을 보낼 "
+"수 있습니다.\n"
+" 이 메일링 리스트는 Guix 개발자로 이루어진 작은 팀에 의해 관리됩니다."
 
 #: apps/base/templates/security.scm:46
 msgid ""
@@ -1635,7 +1753,8 @@ msgid ""
 "their\n"
 "           respective OpenPGP key:"
 msgstr ""
-"만약 당신이 OpenPGP 암호화 전자우편을 사용하여 당신의 보고를 전송하고자 한다면,\n"
+"만약 당신이 OpenPGP 암호화 전자우편을 사용하여 당신의 보고를 전송하고자 한다"
+"면,\n"
 " 그들 각자의 OpenPGP 키를 사용하여 다음 Guix 개발자 중에 한 명에게\n"
 " 이를 전송해주기 바랍니다:"
 
@@ -1649,8 +1768,9 @@ msgid ""
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
 "html</2.2></2> their downloads before extracting or running them."
 msgstr ""
-"Guix 출시는 지문과 함께 OpenPGP 키를 사용하여 서명됩니다. 사용자는 압축을 풀기 또는 이를 동작 하기 전에 <2>검증<2."
-"1>ko</2.1><2.2>Binary-Installation.html</2.2></2>이들을 내려받기 하여야 합니다."
+"Guix 출시는 지문과 함께 OpenPGP 키를 사용하여 서명됩니다. 사용자는 압축을 풀"
+"기 또는 이를 동작 하기 전에 <2>검증<2.1>en</2.1><2.2>Binary-Installation."
+"html</2.2></2>을 내려받기 하여야 합니다."
 
 #: apps/base/templates/security.scm:80
 msgid "Security updates"
@@ -1665,10 +1785,11 @@ msgid ""
 "<2>Security Advisory tag</2> and on the <3><3.1>info-guix</3.1> mailing "
 "list</3>; <4/> may also display the advisory."
 msgstr ""
-"보안 취약점이 Guix 또는 Guix에 의해 제공된 꾸러미에서 찾았을 때에, 우리는 사용자를 위해 <1>보안 최신화<1.1>ko</1."
-"1><1.2>Security-Updates.html</1.2></1>를 빠르게 그리고 최소한의 중단을 제공합니다. 적당 할 때에, 보안 "
-"권고<2>보안 권고 태그</2>와 <3><3.1>info-guix</3.1> 전자우편 목록</3>에서 함께 블로그에 게시됩니다 ;"
-"<4?>는 또한 권고를 표시 할 수도 있습니다."
+"보안 취약점이 Guix 또는 Guix에 의해 제공된 꾸러미에서 찾았을 때에, 우리는 사"
+"용자를 위해 <1>보안 최신화<1.1>en</1.1><1.2>Security-Updates.html</1.2></1>"
+"를 빠르게 그리고 최소한의 중단을 제공합니다. 적당 할 때에, 보안 권고<2>보안 "
+"권고 태그</2>와 <3><3.1>info-guix</3.1> 전자우편 목록</3>에서 함께 블로그에 "
+"게시됩니다 ;<4/>는 또한 권고를 표시 할 수도 있습니다."
 
 #: apps/base/templates/security.scm:96
 msgid ""
@@ -1676,13 +1797,14 @@ msgid ""
 "directly to the master branch.  There is no “stable” branch that only "
 "receives security fixes."
 msgstr ""
-"Guix는 “자연스런 배포” 형식을 사용합니다. 모든 보안 결점-수정은 곧바로 최고 부분에 전달 됩니다. 보안 수정 사항만 수신 받는 것 "
-"같은 “안정적”인 부분은 없습니다."
+"Guix는 “롤링 릴리즈” 모델을 사용합니다. 모든 보안 버그 수정들은 곧바로 마스"
+"터 브랜치에 적용됩니다. 보안 버그 수정만이 적용되는 소위 “안정판\"은 따로 존"
+"재하지 않습니다."
 
 #: apps/blog/templates/components.scm:33 apps/blog/templates/post.scm:46
 msgctxt "SRFI-19 date->string format"
 msgid "~B ~e, ~Y"
-msgstr "~B ~e, ~Y"
+msgstr "~Y-~m-~e"
 
 #: apps/blog/templates/components.scm:37
 msgctxt "blog post summary ellipsis"
@@ -1695,11 +1817,11 @@ msgstr "블로그 메뉴: "
 
 #: apps/blog/templates/components.scm:53
 msgid "Get topic updates"
-msgstr "주제 최신화 가져오기"
+msgstr "주제 업데이트 가져오기"
 
 #: apps/blog/templates/components.scm:54
 msgid "Get blog updates"
-msgstr "블로그 최신화 얻기"
+msgstr "블로그 업데이트 가져오기"
 
 #: apps/blog/templates/components.scm:66
 msgctxt "button"
@@ -1708,7 +1830,7 @@ msgstr "아톰 피드"
 
 #: apps/blog/templates/components.scm:68
 msgid "Posts by topic"
-msgstr "주제별로 게시하다"
+msgstr "주제별 게시물"
 
 #: apps/blog/templates/feed.scm:32
 msgctxt "feed author name"
@@ -1728,11 +1850,11 @@ msgstr "<1/>쪽"
 #: apps/blog/templates/tag.scm:26
 msgctxt "webpage title"
 msgid "Blog"
-msgstr "블르그"
+msgstr "블로그"
 
 #: apps/blog/templates/post-list.scm:26 apps/blog/templates/post.scm:27
 msgid "Blog posts about GNU Guix."
-msgstr "GNU Guix에 대하여 블로그 게시하다."
+msgstr "GNU Guix에 관한 블로그 게시물."
 
 #: apps/blog/templates/post.scm:53
 msgid "Related topics:"
@@ -1759,7 +1881,7 @@ msgstr "단독 Guix 시스템의 USB/DVD ISO 설치자."
 #. English (en) manual.
 #: apps/download/data.scm:31
 msgid "<1>en</1>System-Installation.html"
-msgstr "<1>ko</1>System-Installation.html"
+msgstr "<1>en</1>System-Installation.html"
 
 #: apps/download/data.scm:35
 msgctxt "download page title"
@@ -1779,39 +1901,39 @@ msgstr "<1>en</1>Running-Guix-in-a-VM.html"
 #: apps/download/data.scm:49
 msgctxt "download page title"
 msgid "GNU Guix <1/> Binary"
-msgstr "GNU Guix <1/> 이진법"
+msgstr "GNU Guix <1/> 바이너리"
 
-#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:67
+#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:87
 msgid ""
 "Self-contained tarball providing binaries for Guix and its\n"
 "       dependencies, to be installed on top of your Linux-based system."
 msgstr ""
-"당신의 리눅스 기반 시스템의 상단에 설치되어지는 Guix와 이\n"
-" 의존성을 위하여 이진수를 제공하는 자기가 포함된 tarball."
+"당신의 Linux 기반 시스템의 상단에 설치되어지는 Guix와 이\n"
+" 의존성을 위하여 바이너리를 제공하는 스스로 포함된 tarball."
 
 #. TRANSLATORS: Binary Installation is a section name in the
 #. English (en) manual.
-#: apps/download/data.scm:64
+#: apps/download/data.scm:65
 msgid "<1>en</1>Binary-Installation.html"
 msgstr "<1>en</1>Binary-Installation.html"
 
-#: apps/download/data.scm:68
+#: apps/download/data.scm:69
 msgctxt "download page title"
 msgid "GNU Guix <1/> Source"
-msgstr "GNU Guix <1/> 원천"
+msgstr "GNU Guix <1/> 소스"
 
-#: apps/download/data.scm:69
+#: apps/download/data.scm:70
 msgid "Source code distribution."
-msgstr "원천 코드 배포."
+msgstr "소스 코드 배포."
 
 #. TRANSLATORS: Requirements is a section name in the English (en)
 #. manual.
-#: apps/download/data.scm:76
+#: apps/download/data.scm:77
 msgid "<1>en</1>Requirements.html"
-msgstr "<1>ko</1>Requirements.html"
+msgstr "<1>en</1>Requirements.html"
 
 #: apps/download/templates/components.scm:25
-#: apps/download/templates/download-latest.scm:102
+#: apps/download/templates/download-latest.scm:120
 msgid "Download options:"
 msgstr "내려받기 선택:"
 
@@ -1833,19 +1955,19 @@ msgid ""
 "Installers and source files for GNU Guix.  GNU Guix can be\n"
 "   installed on different GNU/Linux distributions."
 msgstr ""
-"GNU Guix를 위한 설치자와 원천. GNU Guix는\n"
-"다른 GNU/리눅스 배포판에서 설치 될 수 있습니다."
+"GNU Guix의 설치기와 소스 파일입니다. 다른 GNU/Linux\n"
+" 배포판에서 GNU Guix를 설치할 수 있습니다."
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/download/templates/download.scm:40
-#: apps/download/templates/download-latest.scm:131
+#: apps/download/templates/download-latest.scm:152
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Installer|Source code|Package manager"
 msgstr ""
-"GNU|리눅스|유닉스|자유 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|설치자|원천 코드|꾸러미 "
-"관리자"
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|설치자|소스 코드|꾸러미 관리자"
 
 #: apps/download/templates/download.scm:52
 msgid "Download"
@@ -1862,10 +1984,11 @@ msgid ""
 "          can be installed as an additional package manager on top of an\n"
 "          installed Linux-based system."
 msgstr ""
-"상태 번호<1/>로써, Guix 시스템 단독은 686, x86_64, ARMv7, or AArch64 장비에서 <2.1>ko</2.1><2"
-".2>System-Installation.html</2.2></2>에 설치 될 수 있습니다. 이는 <3>리눅스-리브레</3> 커널과 "
-"<4>GNU 쉐퍼드</4> 초기 시스템을 사용합니다. 상대적으로, GNU Guix는\n"
-" 설치된 리눅시 기반 시스템의 상단에서 추가적인 꾸러미\n"
+"버전<1/>로써, Guix 시스템 단독은 686, x86_64, ARMv7, or AArch64 장비에서 "
+"<2.1>en</2.1><2.2>System-Installation.html</2.2></2>에 설치 될 수 있습니다. "
+"이는 <3>리눅스-Libre</3> 커널과 <4>GNU 쉐퍼드</4> 초기 시스템을 사용합니다. "
+"상대적으로, GNU Guix는\n"
+" 설치된 Linux 기반 시스템의 상단에서 추가적인 꾸러미\n"
 " 관리자로서 설치될 수 있습니다."
 
 #: apps/download/templates/download.scm:74
@@ -1874,211 +1997,227 @@ msgid ""
 "          image as well as GNU Guix can be found on the GNU servers at <1/"
 ">.  Older releases can still be found on <2/>."
 msgstr ""
-"Guix 시스템 배포판 ISO 이미지뿐만 아니라 GNU Guix를 위한 원천 코드와\n"
-"이진수는 <1/>에서 GNU 서버에서 찾을 수 있습니다. 이전 배포판은 <2/>에서 아직 찾을 수 있습니다."
+"Guix 시스템 배포판 ISO 이미지 뿐만 아니라 GNU Guix를 위한 소스 코드와 바이너"
+"리는\n"
+"<1/>에 있는 GNU 서버에서 찾을 수 있습니다. 이전 배포판은 <2/>에서 아직 찾을 "
+"수 있습니다."
 
-#: apps/download/templates/download-latest.scm:50
+#: apps/download/templates/download-latest.scm:68
 msgctxt "download page title"
 msgid "GNU Guix System on Linux"
-msgstr "리눅스에서 GNU Guix 시스템"
+msgstr "Linux에서 GNU Guix 시스템"
 
-#: apps/download/templates/download-latest.scm:51
+#: apps/download/templates/download-latest.scm:69
 msgid "USB/DVD ISO installer of the standalone Guix System on Linux."
-msgstr "리눅스에서 단독 Guix 시스템의 USB/DVD ISO 설치자."
+msgstr "Linux에서 단독 Guix 시스템의 USB/DVD ISO 설치자."
 
-#: apps/download/templates/download-latest.scm:58
+#: apps/download/templates/download-latest.scm:77
 msgctxt "download page title"
 msgid "GNU Guix System on GNU Hurd"
 msgstr "GNU Hurd에서 GNU Guix 시스템"
 
-#: apps/download/templates/download-latest.scm:59
+#: apps/download/templates/download-latest.scm:78
 msgid "Virtual machine image of the standalone Guix System on GNU Hurd."
-msgstr "GNU Hurd에서 단독 Guix 시스템의 가상 장비 이미지."
+msgstr "GNU Hurd 기반 Guix 시스템의 가상 머신 이미지."
 
-#: apps/download/templates/download-latest.scm:66
+#: apps/download/templates/download-latest.scm:86
 msgctxt "download page title"
 msgid "GNU Guix binary"
-msgstr "GNU Guix 이진수"
+msgstr "GNU Guix 바이너리"
 
-#: apps/download/templates/download-latest.scm:111
+#: apps/download/templates/download-latest.scm:96
+msgctxt "download page title"
+msgid "GNU Guix System on Linux for Pinebook Pro"
+msgstr "Pinebook Pro를 위한 리눅스용 GNU Guix 시스템"
+
+#: apps/download/templates/download-latest.scm:97
+msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
+msgstr "Pinebook Pro를 위한 리눅스 베어본 부팅 raw 이미지용 Guix 시스템."
+
+#: apps/download/templates/download-latest.scm:130
 msgid "Build details: "
 msgstr "상세한 구성: "
 
-#: apps/download/templates/download-latest.scm:125
+#: apps/download/templates/download-latest.scm:146
 msgctxt "webpage title"
 msgid "Download latest"
-msgstr "최신화된 내려받기"
+msgstr "최신판 내려받기"
 
-#: apps/download/templates/download-latest.scm:127
+#: apps/download/templates/download-latest.scm:148
 msgid ""
 "Download latest GNU Guix System images built by the Cuirass continuous\n"
 "integration system."
 msgstr ""
-"Cuirass 연속적인 통합 시스템에 의하여 구성된\n"
+"Cuirass 지속적 통합 시스템으로 생성된\n"
 "최신 GNU Guix 시스템 이미지를 내려받습니다."
 
-#: apps/download/templates/download-latest.scm:144
+#: apps/download/templates/download-latest.scm:166
 msgid "Download latest images"
 msgstr "최신 이미지를 내려받기"
 
 #. TRANSLATORS: Continuous Integration is a section name
 #. in the English (en) manual.
-#: apps/download/templates/download-latest.scm:147
+#: apps/download/templates/download-latest.scm:169
 msgid ""
 "Download latest GNU Guix System images built by the "
 "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> continuous "
 "integration system at <2/>. These images are <3>development snapshots</3>, "
 "you might prefer to use stable images that can be found <4>here.</4>"
 msgstr ""
-"<2/>에서 연속된 통합 시스템 <1>Cuirass<1.1>ko</1.1><1.2>Continuous-Integration.html</1."
-"2></1>에서 구성된 최신 GNU Guix 시스템 이미지를 내려받습니다. 이 이미지는 <4> 여기.</4>에서 찾을 수 있는 안정적인 "
-"이미지 사용을 언급 할 것과 같이 <3>개발 순간찍기</3>입니다"
+"<2/>에서 연속된 통합 시스템 <1>Cuirass<1.1>en</1.1><1.2>Continuous-"
+"Integration.html</1.2></1>에서 구성된 최신 GNU Guix 시스템 이미지를 내려받습"
+"니다. 이 이미지는 <4> 여기</4>에서 찾을 수 있는 안정적인 이미지 사용을 언급 "
+"할 것과 같이 <3>개발 순간찍기</3>입니다"
 
-#: apps/media/data.scm:25
-msgctxt "video title"
-msgid "Installation from Script"
-msgstr "스크립트에서 설치"
+#: apps/media/data.scm:27 apps/media/data.scm:33 apps/media/data.scm:39
+msgctxt "publication type"
+msgid "Conference paper"
+msgstr "학술발표대회논문"
 
-#: apps/media/data.scm:28
-msgid ""
-"Explains how to install Guix on distributions not running\n"
-"GNU Guix."
-msgstr ""
-"GNU Guix를 동작하지 않는 배포판에서 Guix를 설치하는\n"
-"방법을 설명합니다."
+#: apps/media/data.scm:31
+msgid "Ludovic Courtès, Ricardo Wurmus"
+msgstr "Ludovic Courtès, Ricardo Wurmus"
 
-#: apps/media/data.scm:36
-msgctxt "video title"
-msgid "Everyday use of GNU Guix, Part One"
-msgstr "GNU Guix를 매일 사용, 부분 하나"
+#: apps/media/data.scm:45 apps/media/data.scm:58
+msgctxt "publication type"
+msgid "Article"
+msgstr "기사"
 
-#: apps/media/data.scm:39
-msgid ""
-"How to install packages and how to manage software package\n"
-"generations."
-msgstr ""
-"꾸러미를 설치하는 방법과 소프트웨어 꾸러미를 생산을\n"
-"관리하는 방법."
+#: apps/media/data.scm:52 apps/media/data.scm:73
+msgctxt "publication type"
+msgid "Journal article"
+msgstr "저널 기사"
 
-#: apps/media/data.scm:45
-msgctxt "video title"
-msgid "Everyday use of GNU Guix, Part Two"
-msgstr "GNU Guix를 매일 사용, 부분 둘"
+#: apps/media/data.scm:67
+msgctxt "publication type"
+msgid "Book chapter"
+msgstr "책 장"
 
-#: apps/media/data.scm:48
-msgid "How to upgrade software and how to reclaim storage space."
-msgstr "소프트웨어 향상하는 방법과 저장공간을 재지정하는 방법."
-
-#: apps/media/data.scm:55
-msgctxt "video title"
-msgid "Demonstration of the Guix System graphical installer"
-msgstr "Guix 시스템 그래픽 설치자를 위한 시현"
-
-#: apps/media/data.scm:58
-msgid "Walks you through the graphical installer of GNU Guix System."
-msgstr "Gnu Guix 시스템의 그래픽 설치자를 통해서 당신과 나갑니다."
-
-#: apps/media/data.scm:65
-msgctxt "video title"
-msgid "Asking for help"
-msgstr "도움을 위한 질문"
-
-#: apps/media/data.scm:68
-msgid "How to get help from the Guix community."
-msgstr "Guix 단체에서 도움을 얻는 방법."
-
-#: apps/media/data.scm:74
-msgctxt "video title"
-msgid "Packaging, Part One"
-msgstr "꾸러미 포장, 부분1"
-
-#: apps/media/data.scm:77
-msgid "How to set up a development environment for GNU Guix."
-msgstr "GNU Guix를 위한 개발 환경을 구성하는 방법."
-
-#: apps/media/data.scm:82
-msgctxt "video title"
-msgid "Packaging, Part Two"
-msgstr "꾸러미 포장, 부분2"
-
-#: apps/media/data.scm:85
-msgid "How to create a package recipe for not yet packaged software."
-msgstr "꾸러미로 포장되지 않은 소프트웨어를 위한 꾸러미 비법을 생성하는 방법."
-
-#: apps/media/data.scm:90
-msgctxt "video title"
-msgid "Packaging, Part Three"
-msgstr "꾸러미 포장, 부분3"
-
-#: apps/media/data.scm:93
-msgid ""
-"How to submit a package for inclusion in the GNU Guix\n"
-"distribution."
-msgstr ""
-"GNU Guix 배포판에서 포함을 위한 꾸러미\n"
-"제출 방법."
-
-#: apps/media/data.scm:103
+#: apps/media/data.scm:79
 msgctxt "screenshot title"
 msgid "Graphical log-in"
 msgstr "그래픽 로그인"
 
-#: apps/media/data.scm:107
+#: apps/media/data.scm:83
 msgid "Graphical log-in screen"
 msgstr "그래픽 로그인 화면"
 
-#: apps/media/data.scm:110
+#: apps/media/data.scm:86
 msgctxt "screenshot title"
 msgid "GNOME"
 msgstr "그놈"
 
-#: apps/media/data.scm:114
+#: apps/media/data.scm:90
 msgid "GNOME desktop environment"
 msgstr "그놈 데스크탑 환경"
 
-#: apps/media/data.scm:117
+#: apps/media/data.scm:93
 msgctxt "screenshot title"
 msgid "Xfce"
 msgstr "Xfce"
 
-#: apps/media/data.scm:121
+#: apps/media/data.scm:97
 msgid "Xfce desktop environment"
 msgstr "Xfce 데스크탑 환경"
 
-#: apps/media/data.scm:124
+#: apps/media/data.scm:100
 msgctxt "screenshot title"
 msgid "Virtual machine"
 msgstr "가상 장비"
 
-#: apps/media/data.scm:128
+#: apps/media/data.scm:104
 msgid "Virtual machine started with 'guix system vm'"
 msgstr "'guix 시스템 vm'와 함께 시작되는 가상 장비"
 
-#: apps/media/data.scm:131
+#: apps/media/data.scm:107
 msgctxt "screenshot title"
 msgid "Sway"
-msgstr "스와(Sway)"
+msgstr "Sway"
 
-#: apps/media/data.scm:135
+#: apps/media/data.scm:111
 msgid "Sway window manager running wayland"
 msgstr "wayland와 동작하는 Sway 창 관리자"
 
-#: apps/media/data.scm:138
+#: apps/media/data.scm:114
 msgctxt "screenshot title"
 msgid "Enlightenment"
 msgstr "인라이트먼트(Enlightenment)"
 
-#: apps/media/data.scm:142
+#: apps/media/data.scm:118
 msgid "Enlightenment, Inkscape, and Serbian text"
 msgstr "인라이트먼트, 잉크스페이스, 그리고 세르비아어 문서"
 
-#: apps/media/templates/components.scm:70
-msgid "Download video: "
-msgstr "비디오 내려받기: "
+#: apps/media/data.scm:124
+msgctxt "video title"
+msgid "SeaGL: Everyday use of Guix"
+msgstr "SeaGL: 일상 생활에서 Guix 사용"
 
-#: apps/media/templates/components.scm:101
-msgid "Last updated: <1/>"
-msgstr "최종 최신화: <1/>"
+#: apps/media/data.scm:132
+msgctxt "video title"
+msgid "Bitcoin Build System Security"
+msgstr "비트코인 빌드 시스템 보안"
+
+#: apps/media/data.scm:139
+msgctxt "video title"
+msgid "Reproducible System Administration with GNU Guix"
+msgstr "GNU Guix로 재현 할 수 있는 시스템 관리"
+
+#: apps/media/data.scm:146
+msgctxt "video title"
+msgid "Beyond containers: Reproducible software environments with GNU Guix"
+msgstr "컨테이너 넘어서: GNU Guix에 재현 가능한 소프트웨어 환경"
+
+#: apps/media/templates/components.scm:37
+#: apps/media/templates/components.scm:85
+#: apps/media/templates/components.scm:158 apps/media/templates/video.scm:32
+msgctxt "SRFI-19 date->string format"
+msgid "~b ~d, ~Y"
+msgstr "~b ~d, ~Y"
+
+#: apps/media/templates/components.scm:65
+msgid "Playlist: "
+msgstr "재생목록: "
+
+#: apps/media/templates/components.scm:66
+msgid "Playlist"
+msgstr "재생목록"
+
+#. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
+#. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
+#: apps/media/templates/components.scm:73
+#: apps/media/templates/components.scm:203
+msgid "Published <1/> by <2/>"
+msgstr "<2 />에 의해 <1 /> 게시 됨"
+
+#. TRANSLATORS: This is a tag that indicates a
+#. publication is scientific.
+#: apps/media/templates/components.scm:100
+msgid "[Scientific]"
+msgstr "[과학적인]"
+
+#. TRANSLATORS: This is a help text indicating a
+#. publication is scientific.
+#: apps/media/templates/components.scm:103
+msgid "Scientific"
+msgstr "과학적인"
+
+#. TRANSLATORS: <1/> is a publication type, <2/> is a date, and
+#. <3/> is a list of authors.
+#: apps/media/templates/components.scm:112
+msgid "<1/>. Published <2/> by <3/>. "
+msgstr "<1/>. <3/>에 의해 <2/> 발행했습니다. "
+
+#. TRANSLATORS: Alternative text indicating that
+#. a video is playing.
+#: apps/media/templates/components.scm:190
+msgid "Playing: "
+msgstr "놀이: "
+
+#. TRANSLATORS: Tool tip indicating that a video
+#. is playing.
+#: apps/media/templates/components.scm:194
+msgid "Playing"
+msgstr "놀이"
 
 #: apps/media/templates/screenshot.scm:20
 #: apps/media/templates/screenshots-overview.scm:17
@@ -2090,38 +2229,49 @@ msgstr "순간찍기"
 msgid "Overview of all screenshots."
 msgstr "모든 스크린샷의 개요."
 
-#: apps/media/templates/video.scm:22
-msgctxt "webpage title"
-msgid "Video"
-msgstr "비디오"
-
-#: apps/media/templates/video.scm:24 apps/media/templates/video-list.scm:24
-msgid "Video about GNU Guix."
-msgstr "GNU Guix에 대한 비디오."
-
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/media/templates/video.scm:27 apps/media/templates/video-list.scm:27
+#: apps/media/templates/video.scm:44 apps/media/templates/video-list.scm:32
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Help resources|Videos"
 msgstr ""
-"GNU|리눅스|유닉스|무료 소프트웨어|리브레 소프트웨어|운영 체제|GNU Hurd|GNU Guix 꾸러미 관리자|도움 자원|비디오"
+"GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
+"Guix 꾸러미 관리자|도움 자원|비디오"
 
-#: apps/media/templates/video.scm:45
-msgctxt "button"
-msgid "← Previous"
-msgstr "← 이전"
+#: apps/media/templates/video.scm:74
+msgid "It seems your browser can't read this video."
+msgstr "당신의 브라우저는 이 비디오를 읽을 수 없는 것으로 보입니다."
 
-#: apps/media/templates/video.scm:50
-msgctxt "button"
-msgid "Next →"
-msgstr "다음 →"
+#: apps/media/templates/video.scm:76
+msgid "Download video"
+msgstr "비디오 내려받기"
 
-#: apps/media/templates/video-list.scm:22
+#. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
+#: apps/media/templates/video.scm:87
+msgid "Published <1/> by <2/>. "
+msgstr "<2 />에 의해 <1 />이 발행되었습니다. "
+
+#: apps/media/templates/video-list.scm:27
 msgctxt "webpage title"
 msgid "Videos"
 msgstr "비디오"
+
+#: apps/media/templates/video-list.scm:29
+msgid "Videos about GNU Guix."
+msgstr "GNU Guix에 대한 비디오."
+
+#: apps/media/templates/video-list.scm:47
+msgid ""
+"The following is a list of videos introducing GNU Guix and its many features "
+"as well as showing how it is used in different fields. These videos come "
+"from different sources; some come from the project itself, some from the "
+"community of users, and some from independent reviewers and organizations."
+msgstr ""
+"다음은 GNU Guix와 다양한 기능을 소개하고 다양한 분야에서 이를 어떻게 사용되는"
+"지를 보여주는 동영상 목록입니다. 이 비디오는 다른 출처(원천)에서 왔습니다; 일"
+"부는 프로젝트 자체에서, 일부는 사용자 커뮤니티에서, 그리도 일부는 독립 검토자"
+"와 및 조직에서 제공된 것입니다."
 
 #: apps/packages/templates/components.scm:61
 #: apps/packages/templates/package.scm:56
@@ -2138,7 +2288,7 @@ msgstr "<1>웹사이트:</1> <2/>."
 
 #: apps/packages/templates/components.scm:76
 msgid "<1>Package source:</1> <2/>."
-msgstr "<1>꾸러미 원천:</1> <2/>."
+msgstr "<1>꾸러미 소스:</1> <2/>."
 
 #: apps/packages/templates/components.scm:80
 msgid "<1>Patches:</1> <2/>."
@@ -2190,7 +2340,7 @@ msgstr "꾸러미"
 #: apps/packages/templates/detailed-package-list.scm:27
 #: apps/packages/templates/index.scm:24
 msgid "List of packages available through GNU Guix."
-msgstr "GNU Guix를 통해 사용 가능한 꾸러미 목록."
+msgstr "GNU Guix에서 이용 가능한 패키지 목록."
 
 #: apps/packages/templates/detailed-index.scm:45
 #: apps/packages/templates/index.scm:44
@@ -2200,13 +2350,14 @@ msgid ""
 "<3>continuous integration system</3> shows their current build status "
 "(updated <4/>)."
 msgstr ""
-"GNU Guix는 <2>미리 구성된 이진수처럼 사용 할 수 있도록</2> <1/> 꾸러미를 투명하게 제공합니다. 이 부분은 완전한 꾸러미 "
-"목록에서 제공합니다. 우리의 <3>연속적인 통합시스템</3>은 그 들이 현재 구성된 상태(최신화된 <4/>)를 보여줍니다."
+"GNU Guix는 <1/> 개의 패키지의 <2> 미리 생성된 투명한 바이너리</2>들을 제공합"
+"니다. 이 페이지는 전체 패키지의 목록을 제공합니다. 우리의 <3>지속적 통합 시스"
+"템</3>은 패키지들의 (<4/>에 갱신된) 빌드 현황을 보여줍니다."
 
 #: apps/packages/templates/detailed-package-list.scm:56
 #: apps/packages/templates/package-list.scm:54
 msgid "Packages — "
-msgstr "꾸러미 — "
+msgstr "꾸러미— "
 
 #: apps/packages/templates/package.scm:62
 msgid "<1>Website: </1>"
@@ -2218,7 +2369,7 @@ msgstr "<1>저작권: </1>"
 
 #: apps/packages/templates/package.scm:67
 msgid "<1>Package source: </1>"
-msgstr "<1>꾸러미 원천: </1>"
+msgstr "<1>꾸러미 소스: </1>"
 
 #: apps/packages/templates/package.scm:69
 msgid "<1>Patches: </1>"
@@ -2235,3 +2386,83 @@ msgid ""
 msgstr ""
 "<1>Lint issues</1><2><2.1/>. See <2.2>꾸러미 정의</2.2> in Guix source code."
 "</2>"
+
+#~ msgctxt "video title"
+#~ msgid "Installation from Script"
+#~ msgstr "스크립트에서 설치"
+
+#~ msgid ""
+#~ "Explains how to install Guix on distributions not running\n"
+#~ "GNU Guix."
+#~ msgstr ""
+#~ "GNU Guix를 동작하지 않는 배포판에서 Guix를 설치하는\n"
+#~ "방법을 설명합니다."
+
+#~ msgid ""
+#~ "How to install packages and how to manage software package\n"
+#~ "generations."
+#~ msgstr ""
+#~ "꾸러미를 설치하는 방법과 소프트웨어 꾸러미 생산을\n"
+#~ "관리하는 방법."
+
+#~ msgctxt "video title"
+#~ msgid "Everyday use of GNU Guix, Part Two"
+#~ msgstr "일상 생활에서 GNU Guix 사용하기, 2부"
+
+#~ msgid "How to upgrade software and how to reclaim storage space."
+#~ msgstr "소프트웨어 향상하는 방법과 저장공간을 재지정하는 방법."
+
+#~ msgctxt "video title"
+#~ msgid "Demonstration of the Guix System graphical installer"
+#~ msgstr "Guix 시스템 그래픽 설치자를 위한 시현"
+
+#~ msgid "Walks you through the graphical installer of GNU Guix System."
+#~ msgstr "Gnu Guix 시스템의 그래픽 설치자를 통해서 당신과 나갑니다."
+
+#~ msgctxt "video title"
+#~ msgid "Asking for help"
+#~ msgstr "도움을 위한 질문"
+
+#~ msgid "How to get help from the Guix community."
+#~ msgstr "Guix 커뮤니티에서 도움을 얻는 방법."
+
+#~ msgctxt "video title"
+#~ msgid "Packaging, Part One"
+#~ msgstr "꾸러미 포장, 부분1"
+
+#~ msgid "How to set up a development environment for GNU Guix."
+#~ msgstr "GNU Guix를 위한 개발 환경을 구성하는 방법."
+
+#~ msgctxt "video title"
+#~ msgid "Packaging, Part Two"
+#~ msgstr "꾸러미 포장, 부분2"
+
+#~ msgid "How to create a package recipe for not yet packaged software."
+#~ msgstr ""
+#~ "꾸러미로 포장되지 않은 소프트웨어를 위한 꾸러미 비법을 생성하는 방법."
+
+#~ msgctxt "video title"
+#~ msgid "Packaging, Part Three"
+#~ msgstr "꾸러미 포장, 부분3"
+
+#~ msgid ""
+#~ "How to submit a package for inclusion in the GNU Guix\n"
+#~ "distribution."
+#~ msgstr ""
+#~ "GNU Guix 배포판에서 포함을 위한 꾸러미\n"
+#~ "제출 방법."
+
+#~ msgid "Last updated: <1/>"
+#~ msgstr "최종 최신화: <1/>"
+
+#~ msgctxt "webpage title"
+#~ msgid "Video"
+#~ msgstr "비디오"
+
+#~ msgctxt "button"
+#~ msgid "← Previous"
+#~ msgstr "← 이전"
+
+#~ msgctxt "button"
+#~ msgid "Next →"
+#~ msgstr "다음 →"

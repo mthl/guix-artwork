@@ -1,40 +1,50 @@
 # Chinese (simplified) translation for guix-website package.
-# Copyright (C) 2020 the authors of the Guix Website
+# Copyright (C) 2020 the authors of the Guix Website (msgid) and the following authors (msgstr)
 # This file is distributed under the same license as the guix-website package.
 # Peng Mei Yu <pengmeiyu@riseup.net>, 2020.
-#
+# Yuqi Feng <jiderlesi@outlook.de>, 2021.
+# Charles Lee <lchopn@gmail.com>, 2021.
+# Liu Tao <lyuutau@outlook.com>, 2021.
+# Whired Planck <fungdaat31@outlook.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20201121\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2020-11-21 22:43+0100\n"
-"PO-Revision-Date: 2020-12-25 18:23+0800\n"
-"Last-Translator: Peng Mei Yu <pengmeiyu@riseup.net>\n"
-"Language-Team: Chinese (simplified) <i18n-zh@googlegroups.com>\n"
+"POT-Creation-Date: 2021-08-28 19:01+0200\n"
+"PO-Revision-Date: 2021-05-31 13:03+0000\n"
+"Last-Translator: Whired Planck <fungdaat31@outlook.com>\n"
+"Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
+"projects/guix/website/zh_CN/>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 4.6.2\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
 #. translations for the same language.
 #: apps/base/utils.scm:74
 msgid "English"
-msgstr "中文"
+msgstr "简体中文"
 
-#: apps/base/templates/home.scm:19
+#: apps/base/templates/home.scm:20
 msgctxt "webpage title"
 msgid "GNU's advanced distro and transactional package manager"
-msgstr "GNU的高级发行版和事务性包管理器"
+msgstr "GNU 的高级发行版和事务性包管理器"
 
-#: apps/base/templates/home.scm:21
+#: apps/base/templates/home.scm:22
 msgid ""
 "Guix is an advanced distribution of the GNU operating system.\n"
 "   Guix is technology that respects the freedom of computer users.\n"
 "   You are free to run the system for any purpose, study how it\n"
 "   works, improve it, and share it with the whole world."
-msgstr "Guix是GNU操作系统的一个高级发行版。Guix尊重计算机用户的自由。你可以自由地为任何目的运行这个系统，研究它怎样工作，改进它，并和全世界分享。"
+msgstr ""
+"Guix 是 GNU 操作系统的一个高级发行版。\n"
+" Guix 尊重计算机用户的自由。\n"
+" 您可以为任何目的自由地运行这个系统，研究它\n"
+" 怎样工作、改进它，并和全世界分享。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
@@ -47,7 +57,7 @@ msgstr "Guix是GNU操作系统的一个高级发行版。Guix尊重计算机用�
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/home.scm:27 apps/base/templates/menu.scm:20
+#: apps/base/templates/home.scm:28 apps/base/templates/menu.scm:20
 #: apps/blog/templates/post-list.scm:29 apps/blog/templates/tag.scm:33
 #: apps/media/templates/screenshot.scm:24
 #: apps/media/templates/screenshots-overview.scm:21
@@ -60,28 +70,32 @@ msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|GNU Guile|Guile Scheme|Transactional upgrades|"
 "Functional package management|Reproducibility"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|GNU Guile|Guile Scheme|事务性升级|函数式包管理|可再现性"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器 | GNU Guile | Guile Scheme | 事务性升级 | 函数式包管理 | 可再现性"
 
-#: apps/base/templates/home.scm:31 apps/base/templates/components.scm:394
+#: apps/base/templates/home.scm:32 apps/base/templates/components.scm:395
 msgctxt "website menu"
 msgid "Overview"
-msgstr "简介"
+msgstr "概览"
 
-#: apps/base/templates/home.scm:41
+#: apps/base/templates/home.scm:42
 msgid "Summary"
 msgstr "概要"
 
-#: apps/base/templates/home.scm:43
+#: apps/base/templates/home.scm:44
 msgid ""
 "<1>Liberating.</1> Guix is an advanced distribution of the <2>GNU operating "
 "system</2> developed by the <3>GNU Project</3>—which respects the <4>freedom "
 "of computer users</4>. "
-msgstr "<1>自由。</1>Guix是<3>GNU项目</3>开发的<2>GNU操作系统</2>发行版，它尊重<4>计算机用户的自由</4>。"
+msgstr ""
+"<1>自由。</1>Guix 是 <3>GNU 项目</3>开发的 <2>GNU 操作系统</2>发行版，它尊重"
+"<4>计算机用户的自由</4>。 "
 
 #. TRANSLATORS: Package Management, Features and Using the
 #. Configuration System are section names in the English (en)
 #. manual.
-#: apps/base/templates/home.scm:64
+#: apps/base/templates/home.scm:65
 msgid ""
 "<1>Dependable.</1> Guix <2>supports<2.1>en</2.1><2.2>Package-Management."
 "html</2.2></2> transactional upgrades and roll-backs, unprivileged package "
@@ -89,132 +103,157 @@ msgid ""
 "as a standalone distribution, Guix supports <4>declarative system "
 "configuration<4.1>en</4.1><4.2>Using-the-Configuration-System.html</4.2></4> "
 "for transparent and reproducible operating systems."
-msgstr "<1>可靠。</1>Guix<2>支持<2.1>zh-cn</2.1><2.2>Ruan-Jian-Bao-Guan-Li-.html</2.2></2>事务性的升级和回滚操作、无特权的包管理、<3>等功能<3.1>zh-cn</3.1><3.2>Gong-Neng-.html</3.2></3>。作为独立的发行版时，Guix支持通过<4>声明系统的配置<4.1>zh-cn</4.1><4.2>Shi-Yong-Pei-Zhi-Xi-Tong-.html</4.2></4>来得到透明的和可复现的操作系统。"
+msgstr ""
+"<1>可靠。</1>Guix<2> 支持<2.1>zh-cn</2.1><2.2>Ruan-Jian-Bao-Guan-Li-."
+"html</2.2></2>事务性的升级和回滚操作、无特权的包管理、<3> 等功能<3.1>zh-"
+"cn</3.1><3.2>Gong-Neng-.html</3.2></3>。作为独立发行版时，Guix 支持通过<4>声"
+"明系统的配置<4.1>zh-cn</4.1><4.2>Shi-Yong-Pei-Zhi-Xi-Tong-.html</4.2></4>来得"
+"到透明的和可复现的操作系统。"
 
 #. TRANSLATORS: Defining Packages and System Configuration are
 #. section names in the English (en) manual.
-#: apps/base/templates/home.scm:84
+#: apps/base/templates/home.scm:85
 msgid ""
 "<1>Hackable.</1> It provides <2>Guile Scheme</2> APIs, including high-level "
 "embedded domain-specific languages (EDSLs) to <3>define "
 "packages<3.1>en</3.1><3.2>Defining-Packages.html</3.2></3> and <4>whole-"
 "system configurations<4.1>en</4.1><4.2>System-Configuration.html</4.2></4>."
-msgstr "<1>可折腾。</1>Guix提供<2>Guile Scheme</2>编程接口，以及高级嵌入式领域特定语言（EDSL）。你可以<3>定义软件包<3.1>zh-cn</3.1><3.2>Ding-Yi-Ruan-Jian-Bao-.html</3.2></3>和<4>整个操作系统的配置<4.1>zh-cn</4.1><4.2>Xi-Tong-Pei-Zhi-.html</4.2></4>。"
+msgstr ""
+"<1>可折腾。</1>Guix 提供 <2>Guile Scheme</2> 编程接口，以及高级嵌入式领域特定"
+"语言（EDSL），透过此您可以<3>定义软件包<3.1>zh-cn</3.1><3.2>Ding-Yi-Ruan-"
+"Jian-Bao-.html</3.2></3>和<4>整个操作系统的配置<4.1>zh-cn</4.1><4.2>Xi-Tong-"
+"Pei-Zhi-.html</4.2></4>。"
 
-#: apps/base/templates/home.scm:106
+#: apps/base/templates/home.scm:107
 msgctxt "button"
 msgid "DOWNLOAD v<1/>"
-msgstr "下载 v<1/>"
+msgstr "下载 <1/> 版本"
 
-#: apps/base/templates/home.scm:111
+#: apps/base/templates/home.scm:112
 msgctxt "button"
 msgid "CONTRIBUTE"
 msgstr "贡献"
 
-#: apps/base/templates/home.scm:118
+#: apps/base/templates/home.scm:119
 msgid "Discover Guix"
-msgstr "探索Guix"
+msgstr "发现 Guix"
 
-#: apps/base/templates/home.scm:120
+#: apps/base/templates/home.scm:121
 msgid ""
 "Guix comes with thousands of packages which include applications, system "
 "tools, documentation, fonts, and other digital goods readily available for "
 "installing with the <1>GNU Guix</1> package manager."
-msgstr "Guix附带了数千个软件包，包括应用程序、系统工具、文档、字体等。你可以随时通过<1>GNU Guix</1>包管理器安装它们。"
+msgstr ""
+"Guix 附带了数千个软件包，包括应用程序、系统工具、文档、字体和其他数字产品，您"
+"可以随时通过 <1>GNU Guix</1> 包管理器安装它们。"
 
-#: apps/base/templates/home.scm:132
+#: apps/base/templates/home.scm:137
+msgctxt "button"
+msgid "ALL PACKAGES"
+msgstr "所有软件包"
+
+#: apps/base/templates/home.scm:143
 msgid "Instructional videos"
 msgstr "指导视频"
 
-#: apps/base/templates/home.scm:146
+#: apps/base/templates/home.scm:156
+#, fuzzy
+#| msgctxt "button"
+#| msgid "ALL POSTS"
 msgctxt "button"
-msgid "ALL PACKAGES"
-msgstr "全部的包"
+msgid "ALL VIDEOS"
+msgstr "所有博客文章"
 
-#: apps/base/templates/home.scm:153
+#: apps/base/templates/home.scm:163
 msgid "GNU Guix in your field"
-msgstr "GNU Guix在你的领域里的应用"
+msgstr "GNU Guix 在您的领域中的应用"
 
-#: apps/base/templates/home.scm:155
+#: apps/base/templates/home.scm:165
 msgid ""
 "Read some stories about how people are using GNU Guix in\n"
 "their daily lives."
-msgstr "阅读大家在各自日常生活中使用GNU Guix的故事。"
+msgstr ""
+"看看大家在各自日常生活中\n"
+"如何使用 GNU Guix 的故事。"
 
-#: apps/base/templates/home.scm:166
+#: apps/base/templates/home.scm:176
 msgctxt "button"
 msgid "SOFTWARE DEVELOPMENT"
 msgstr "软件开发"
 
-#: apps/base/templates/home.scm:171
+#: apps/base/templates/home.scm:181
 msgctxt "button"
 msgid "BIOINFORMATICS"
 msgstr "生物信息学"
 
-#: apps/base/templates/home.scm:176
+#: apps/base/templates/home.scm:186
 msgctxt "button"
 msgid "HIGH PERFORMANCE COMPUTING"
 msgstr "高性能计算"
 
-#: apps/base/templates/home.scm:181
+#: apps/base/templates/home.scm:191
 msgctxt "button"
 msgid "RESEARCH"
 msgstr "科研"
 
-#: apps/base/templates/home.scm:186
+#: apps/base/templates/home.scm:196
 msgctxt "button"
 msgid "ALL FIELDS..."
-msgstr "其它领域……"
+msgstr "其它领域…"
 
-#: apps/base/templates/home.scm:193
+#: apps/base/templates/home.scm:203
 msgid "GNU Guix in other GNU/Linux distros"
-msgstr "在其它GNU/Linux发行版里使用GNU Guix"
+msgstr "在其它 GNU/Linux 发行中使用 GNU Guix"
 
-#: apps/base/templates/home.scm:204
+#: apps/base/templates/home.scm:214
 msgid ""
 "Video: <1>Demo of Guix in another GNU/Linux distribution<1.1/>https://audio-"
 "video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm</1> (1 minute, 30 "
 "seconds)."
-msgstr "视频：<1>演示在其它GNU/Linux发行版里使用Guix<1.1/>https://audio-video.gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm</1>（1分30秒）。"
+msgstr ""
+"视频：<1>在其它 GNU/Linux 发行版里使用 Guix 的演示<1.1/>https://audio-video."
+"gnu.org/video/misc/2016-07__GNU_Guix_Demo_2.webm</1>（1 分 30 秒）。"
 
-#: apps/base/templates/home.scm:215
+#: apps/base/templates/home.scm:225
 msgid ""
 "If you don't use GNU Guix as a standalone GNU/Linux distribution, you still "
 "can use it as a package manager on top of any GNU/Linux distribution. This "
 "way, you can benefit from all its conveniences."
-msgstr "如果你不想把GNU Guix作为独立的GNU/Linux发行版使用，你仍然可以把它当作其它任意GNU/Linux发行版之上的包管理器。这样，你仍可以享受它的全部便利。"
+msgstr ""
+"如果不想把 GNU Guix 作为独立的 GNU/Linux 发行版使用，您仍然可以把它当作其它任"
+"意 GNU/Linux 发行版之上的包管理器。这样，您仍可以享受它的全部便利。"
 
-#: apps/base/templates/home.scm:220
+#: apps/base/templates/home.scm:230
 msgid ""
 "Guix won't interfere with the package manager that comes with your "
 "distribution. They can live together."
-msgstr "Guix不会和你的发行版自带的包管理器冲突，它们可以共存。"
+msgstr "Guix 不会和其他发行版自带的包管理器冲突，它们可以共存。"
 
-#: apps/base/templates/home.scm:227
+#: apps/base/templates/home.scm:237
 msgctxt "button"
 msgid "TRY IT OUT!"
-msgstr "试试！"
+msgstr "不妨一试！"
 
-#: apps/base/templates/home.scm:234 apps/blog/templates/post-list.scm:49
+#: apps/base/templates/home.scm:244 apps/blog/templates/post-list.scm:50
 msgid "Blog"
 msgstr "博客"
 
-#: apps/base/templates/home.scm:241
+#: apps/base/templates/home.scm:251
 msgctxt "button"
 msgid "ALL POSTS"
-msgstr "全部博客"
+msgstr "所有博客文章"
 
-#: apps/base/templates/home.scm:247 apps/base/templates/contact.scm:36
+#: apps/base/templates/home.scm:257 apps/base/templates/contact.scm:36
 msgid "Contact"
 msgstr "联系"
 
-#: apps/base/templates/home.scm:254
+#: apps/base/templates/home.scm:264
 msgctxt "button"
 msgid "ALL CONTACT MEDIA"
-msgstr "全部联系方式"
+msgstr "所有联系方式"
 
-#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:418
-#: apps/base/templates/components.scm:421 apps/base/templates/about.scm:27
+#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:464
+#: apps/base/templates/components.scm:467 apps/base/templates/about.scm:27
 #: apps/base/templates/about.scm:30 apps/base/templates/contact.scm:26
 #: apps/base/templates/contribute.scm:26 apps/base/templates/graphics.scm:24
 #: apps/base/templates/security.scm:28
@@ -230,23 +269,19 @@ msgstr "GNU Guix"
 #: apps/base/templates/theme.scm:109
 msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
-msgstr "GNU Guix — 消息流"
-
-#: apps/base/templates/theme.scm:126
-msgid ""
-"Online conference November 22nd. Watch the <1>pre-recorded talks</1>.<2>Join "
-"us</2>! Learn <3>more</3>!"
-msgstr "11月22日在线会议。观看<1>提前发布的演讲</1>。<2>加入我们！</2>！了解<3>更多</3>！"
+msgstr "GNU Guix — 活动信息"
 
 #: apps/base/templates/theme.scm:144
 msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
-msgstr "人类用<1>♥</1>制作，<2>GNU Guile</2>驱动。<3>源代码</3>以<4>GNU AGPL</4>许可证发布。"
+msgstr ""
+"来自人类，用 <1>♥</1 > 制作。由 <2>GNU Guile</2> 驱动。<3>源代码</3>以 "
+"<4>GNU AGPL</4> 许可证发布。"
 
 #: apps/base/templates/components.scm:49
 msgid "Your location:"
-msgstr "你的位置："
+msgstr "您的位置："
 
 #: apps/base/templates/components.scm:51
 msgid "Home"
@@ -254,117 +289,172 @@ msgstr "首页"
 
 #: apps/base/templates/components.scm:155
 msgid "archive"
-msgstr "档案"
+msgstr "归档"
 
-#: apps/base/templates/components.scm:384
+#: apps/base/templates/components.scm:385
 msgctxt "website menu"
 msgid "Guix"
 msgstr "Guix"
 
-#: apps/base/templates/components.scm:388
+#: apps/base/templates/components.scm:389
 msgid "website menu:"
 msgstr "网站菜单："
 
-#: apps/base/templates/components.scm:396
+#: apps/base/templates/components.scm:397
 #: apps/download/templates/download.scm:43
 #: apps/download/templates/download.scm:47
-#: apps/download/templates/download-latest.scm:134
-#: apps/download/templates/download-latest.scm:138
+#: apps/download/templates/download-latest.scm:155
+#: apps/download/templates/download-latest.scm:160
 msgctxt "website menu"
 msgid "Download"
 msgstr "下载"
 
-#: apps/base/templates/components.scm:402
+#: apps/base/templates/components.scm:403
 msgctxt "website menu"
 msgid "Stable"
 msgstr "稳定版"
 
-#: apps/base/templates/components.scm:405
-#: apps/download/templates/download-latest.scm:139
+#: apps/base/templates/components.scm:406
+#: apps/download/templates/download-latest.scm:161
 msgctxt "website menu"
 msgid "Latest"
 msgstr "最新版"
 
-#: apps/base/templates/components.scm:406 apps/base/templates/help.scm:26
-#: apps/base/templates/help.scm:30
+#: apps/base/templates/components.scm:409 apps/base/templates/help.scm:27
+#: apps/base/templates/help.scm:31
 msgctxt "website menu"
 msgid "Help"
 msgstr "帮助"
 
-#: apps/base/templates/components.scm:407
+#: apps/base/templates/components.scm:415
+msgctxt "website menu"
+msgid "All"
+msgstr "所有"
+
+#: apps/base/templates/components.scm:418
+msgctxt "website menu"
+msgid "GNU Guix Manual (stable)"
+msgstr "GNU Guix 用户手册（稳定版）"
+
+#: apps/base/templates/components.scm:421
+msgctxt "website menu"
+msgid "GNU Guix Manual (latest)"
+msgstr "GNU Guix 用户手册（最新版）"
+
+#: apps/base/templates/components.scm:424
+msgctxt "website menu"
+msgid "Guix Reference Card"
+msgstr "Guix 参考卡"
+
+#: apps/base/templates/components.scm:427
+#: apps/base/templates/components.scm:454 apps/media/templates/video.scm:46
+#: apps/media/templates/video.scm:50 apps/media/templates/video-list.scm:34
+#: apps/media/templates/video-list.scm:38
+msgctxt "website menu"
+msgid "Videos"
+msgstr "视频"
+
+#: apps/base/templates/components.scm:430
+msgctxt "website menu"
+msgid "Cookbook"
+msgstr "食谱"
+
+#: apps/base/templates/components.scm:433
+msgctxt "website menu"
+msgid "GNU Manuals"
+msgstr "GNU 用户手册"
+
+#: apps/base/templates/components.scm:437
+msgctxt "website menu"
+msgid "Wiki"
+msgstr "Wiki"
+
+#: apps/base/templates/components.scm:440
+msgctxt "website menu"
+msgid "IRC Chat"
+msgstr "IRC 聊天"
+
+#: apps/base/templates/components.scm:443
+msgctxt "website menu"
+msgid "Mailing Lists"
+msgstr "邮件列表"
+
+#: apps/base/templates/components.scm:446
 #: apps/packages/templates/detailed-index.scm:31
 #: apps/packages/templates/detailed-index.scm:38
 #: apps/packages/templates/detailed-package-list.scm:34
 #: apps/packages/templates/detailed-package-list.scm:43
 #: apps/packages/templates/index.scm:31 apps/packages/templates/index.scm:37
-#: apps/packages/templates/package-list.scm:34
-#: apps/packages/templates/package-list.scm:40
+#: apps/packages/templates/package-list.scm:35
+#: apps/packages/templates/package-list.scm:41
 #: apps/packages/templates/package.scm:36
 #: apps/packages/templates/package.scm:41
 msgctxt "website menu"
 msgid "Packages"
 msgstr "软件包"
 
-#: apps/base/templates/components.scm:408 apps/blog/templates/post-list.scm:33
-#: apps/blog/templates/post-list.scm:39 apps/blog/templates/post.scm:29
-#: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:37
-#: apps/blog/templates/tag.scm:43
+#: apps/base/templates/components.scm:447 apps/blog/templates/post-list.scm:34
+#: apps/blog/templates/post-list.scm:40 apps/blog/templates/post.scm:29
+#: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:38
+#: apps/blog/templates/tag.scm:44
 msgctxt "website menu"
 msgid "Blog"
 msgstr "博客"
 
-#: apps/base/templates/components.scm:410
+#: apps/base/templates/components.scm:449
 #: apps/media/templates/screenshot.scm:28
 #: apps/media/templates/screenshots-overview.scm:25
-#: apps/media/templates/video.scm:29 apps/media/templates/video-list.scm:29
 msgctxt "website menu"
 msgid "Media"
 msgstr "媒体"
 
-#: apps/base/templates/components.scm:413 apps/media/templates/video.scm:33
-#: apps/media/templates/video-list.scm:33
-msgctxt "website menu"
-msgid "Videos"
-msgstr "视频"
-
-#: apps/base/templates/components.scm:414
+#: apps/base/templates/components.scm:457
 msgctxt "website menu"
 msgid "Screenshots"
 msgstr "截图"
 
-#: apps/base/templates/components.scm:416 apps/base/templates/donate.scm:26
+#: apps/base/templates/components.scm:460
+msgctxt "website menu"
+msgid "Publications"
+msgstr "著作"
+
+#: apps/base/templates/components.scm:462 apps/base/templates/donate.scm:26
 #: apps/base/templates/donate.scm:29
 msgctxt "website menu"
 msgid "Donate"
 msgstr "捐赠"
 
-#: apps/base/templates/components.scm:423 apps/base/templates/contact.scm:31
+#: apps/base/templates/components.scm:469 apps/base/templates/contact.scm:31
 msgctxt "website menu"
 msgid "Contact"
 msgstr "联系"
 
-#: apps/base/templates/components.scm:424 apps/base/templates/contribute.scm:30
+#: apps/base/templates/components.scm:470 apps/base/templates/contribute.scm:30
 msgctxt "website menu"
 msgid "Contribute"
 msgstr "贡献"
 
-#: apps/base/templates/components.scm:425 apps/base/templates/security.scm:31
+#: apps/base/templates/components.scm:471 apps/base/templates/security.scm:31
 msgctxt "website menu"
 msgid "Security"
 msgstr "安全"
 
-#: apps/base/templates/components.scm:426 apps/base/templates/graphics.scm:27
+#: apps/base/templates/components.scm:472 apps/base/templates/graphics.scm:27
 msgctxt "website menu"
 msgid "Graphics"
 msgstr "图片"
 
-#: apps/base/templates/components.scm:463
-msgid " (Page <1/> of <2/>)"
-msgstr "（第<1/>页，共<2/>页）"
+#: apps/base/templates/components.scm:494
+msgid "Translate"
+msgstr "翻译"
 
-#: apps/base/templates/components.scm:487
+#: apps/base/templates/components.scm:514
+msgid " (Page <1/> of <2/>)"
+msgstr " （第 <1/> 页，共 <2/> 页）"
+
+#: apps/base/templates/components.scm:538
 msgid "Page <1/> of <2/>. Go to another page: "
-msgstr "第<1/>页，共<2/>页。其它页："
+msgstr "第 <1/> 页，共 <2/> 页。转到其它页： "
 
 #: apps/base/templates/about.scm:17
 msgctxt "webpage title"
@@ -377,14 +467,20 @@ msgid ""
 "    Guix is technology that respects the freedom of computer users.\n"
 "    You are free to run the system for any purpose, study how it\n"
 "    works, improve it, and share it with the whole world."
-msgstr "Guix是GNU操作系统的一个高级发行版。Guix尊重计算机用户的自由。你可以自由地为任何目的运行这个系统，研究它怎样工作，改进它，并和全世界分享。"
+msgstr ""
+"Guix 是 GNU 操作系统的一个高级发行版。\n"
+" Guix 尊重计算机用户的自由。\n"
+" 您可以自由地为任何目的运行这个系统，研究它怎样工作，\n"
+" 改进它，并和全世界分享。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/about.scm:25
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器"
 
 #: apps/base/templates/about.scm:35
 msgid "About the Project"
@@ -395,7 +491,9 @@ msgid ""
 "The <1>GNU Guix</1> package and system manager is a <2>free software</2> "
 "project developed by volunteers around the world under the\n"
 "            umbrella of the <3>GNU Project</3>. "
-msgstr "<1>GNU Guix</1>是全世界志愿者共同开发的<2>自由软件</2>，它是<3>GNU项目</3>的一部分。"
+msgstr ""
+"<1>GNU Guix</1> 软件包和系统管理器是全世界志愿者共同开发的<2>自由软件</2>，\n"
+" 它是 <3>GNU 项目</3>的一部分。 "
 
 #: apps/base/templates/about.scm:46
 msgid ""
@@ -404,7 +502,11 @@ msgid ""
 "being worked on.  As a GNU distribution, it is committed\n"
 "            to respecting and enhancing <4>the freedom of its users</4>.  As "
 "such, it adheres to the <5>GNU Free System Distribution Guidelines</5>."
-msgstr "Guix系统是<1>GNU操作系统</1>的一个高级发行版。它使用<2>Linux-libre</2>内核，对<3>Hurd内核</3>的支持也在开发中。作为一个GNU发行版，它致力于尊重和保护<4>用户的自由</4>。因此，它遵守<5>GNU自由操作系统发行版准则</5>."
+msgstr ""
+"Guix 系统是 <1>GNU 操作系统</1>的一个高级发行版。 它使用 <2>Linux-libre</2> "
+"内核，对 <3>Hurd 内核</3>的支持也在开发中。\n"
+"作为一个 GNU 发行版，它致力于尊重和保护<4>用户的自由</4>。 因此，它遵守 "
+"<5>GNU 自由操作系统发行版准则</5>。"
 
 #. TRANSLATORS: Features and Defining Packages are section names
 #. in the English (en) manual.
@@ -419,7 +521,14 @@ msgid ""
 "<3>defined<3.1>en</3.1><3.2>Defining-Packages.html</3.2></3> as native "
 "<4>Guile</4> modules, using extensions to the <5>Scheme</5> language—which "
 "makes it nicely hackable."
-msgstr "GNU Guix提供<1>最先进的软件包管理功能<1.1>zh-cn</1.1><1.2>Gong-Neng-.html</1.2></1>，例如事务性的升级和回滚、可再现的构建环境、无特权的包管理和每个用户独立的档案。它使用了<2>Nix</2>包管理器的底层机制，但软件包是用扩展的<5>Scheme</5>语言和原生的<4>Guile</4>模块<3>定义<3.1>zh-cn</3.1><3.2>Ding-Yi-Ruan-Jian-Bao-.html</3.2></3>的，因此提供了充足的折腾空间。"
+msgstr ""
+"GNU Guix 提供<1>最先进的软件包管理功能<1.1>zh-cn</1.1><1.2>Gong-Neng-."
+"html</1.2></1>，例如事务性的升级和回滚、可再现的\n"
+" 构建环境、无特权的包管理和\n"
+" 每个用户独立的配置文件。 它使用了 <2>Nix</2> 包管理器的底层机制，但软件包是"
+"用扩展的 <5>Scheme</5> 语言和原生的 <4>Guile</4> 模块<3>定义<3.1>zh-"
+"cn</3.1><3.2>Ding-Yi-Ruan-Jian-Bao-.html</3.2></3>的，因此提供了充足的折腾空"
+"间。"
 
 #. TRANSLATORS: Using the Configuration System, Initial RAM Disk
 #. and Defining Services are section names in the English (en)
@@ -433,9 +542,14 @@ msgid ""
 "<2>initial RAM disk<2.1>en</2.1><2.2>Initial-RAM-Disk.html</2.2></2> to the "
 "<3>initialization system</3>, and to the <4>system "
 "services<4.1>en</4.1><4.2>Defining-Services.html</4.2></4>."
-msgstr "在此之上，Guix还支持无状态的、可再现的<1>操作系统配置<1.1>zh-cn</1.1><1.2>Shi-Yong-Pei-Zhi-Xi-Tong-.html</1.2></1>。整个系统，从<2>initrd<2.1>en</2.1><2.2>Initial-RAM-Disk.html</2.2></2>到<3>系统初始化</3>，再到<4>系统服务<4.1>zh-cn</4.1><4.2>Ding-Yi-Fu-Wu-.html</4.2></4>，都可以用Scheme定制。"
+msgstr ""
+"在此之上，Guix 还支持无状态的、\n"
+" 可再现的<1>操作系统配置<1.1>zh-cn</1.1><1.2>Shi-Yong-Pei-Zhi-Xi-Tong-."
+"html</1.2></1>。整个系统，从 <2>initrd<2.1>en</2.1><2.2>Initial-RAM-Disk."
+"html</2.2></2> 到<3>系统初始化</3>，再到<4>系统服务<4.1>zh-cn</4.1><4.2>Ding-"
+"Yi-Fu-Wu-.html</4.2></4>，都可以用 Scheme 定制。"
 
-#: apps/base/templates/about.scm:106
+#: apps/base/templates/about.scm:106 apps/base/data.scm:211
 msgid "Maintainers"
 msgstr "维护者"
 
@@ -445,7 +559,10 @@ msgid ""
 "Cournoyer, Tobias Geerinckx-Rice and Mathieu Othacehe.  Please use the "
 "<1>mailing lists</1> for contact.  For sensitive issues, you can reach them "
 "using the <2/> private alias."
-msgstr "Guix现在由Ludovic Courtès、Marius Bakke、Maxim Cournoyer、Tobias Geerinckx-Rice及Mathieu Othacehe等人维护。请用<1>邮件列表</1>联系我们。对于敏感的事情，请用私密的地址：<2/>"
+msgstr ""
+"Guix 现由 Ludovic Courtès、Marius Bakke、Maxim Cournoyer、Tobias Geerinckx-"
+"Rice 及 Mathieu Othacehe 等人维护。\n"
+"请用<1>邮件列表</1>联系我们。 对于敏感问题，可以使用私密地址 <2/> 联系我们。"
 
 #: apps/base/templates/about.scm:117
 msgid "Licensing"
@@ -458,72 +575,85 @@ msgid ""
 "published by the Free Software Foundation; either\n"
 "          version 3 of the License, or (at your option) any later\n"
 "          version. "
-msgstr "Guix是自由软件，你可以在遵守自由软件基金会发布的<1>GNU GPL</1>v3或更高版本协议的前提下修改并分发它。"
+msgstr ""
+"Guix 是自由软件，您可以在遵守自由软件基金会发布的\n"
+" <1>GNU 通用公共许可证书（GPL）</1> 版本 3 \n"
+" 或更高版本条款的前提下修改并分发它。 "
 
 #: apps/base/data.scm:24
 msgid "IRC Channel"
-msgstr "IRC频道"
+msgstr "IRC 频道"
 
 #: apps/base/data.scm:26
 msgid ""
-"Join the <1/> channel on the Freenode IRC network to chat\n"
-"       with the community about GNU Guix or to get help in\n"
-"       real-time."
-msgstr "加入Freenode IRC的 <1/> 频道，和社区交流GNU Guix或者寻求帮助。"
+"Join the <1/> channel on the Libera Chat IRC network to\n"
+"chat with the community about GNU Guix or to get help in real-time."
+msgstr ""
+"加入 Libera Chat IRC 网络上的<1/>频道，\n"
+" 和社区交流 GNU Guix 或实时寻求帮助。"
 
-#: apps/base/data.scm:35
+#: apps/base/data.scm:34
 msgid "Info Mailing List"
 msgstr "「公告」邮件列表"
 
-#: apps/base/data.scm:37
+#: apps/base/data.scm:36
 msgid ""
 "Subscribe to the <1/> low-traffic mailing\n"
 "list to receive important announcements sent by the project maintainers (in\n"
 "English)."
-msgstr "订阅「<1/>」邮件列表，接收管理员发布的重要公告（英文版的）。消息量不大。"
+msgstr ""
+"订阅 <1/> 低消息量邮件列表，\n"
+"接收管理员发布的重要公告（英文版）。"
 
-#: apps/base/data.scm:46
+#: apps/base/data.scm:45
 msgid "Help Mailing List"
 msgstr "「帮助」邮件列表"
 
-#: apps/base/data.scm:51
+#: apps/base/data.scm:50
 msgid ""
 "Subscribe to the Help mailing list to get support\n"
 "from the GNU Guix community via email.  You can post messages in English\n"
 "though we also accept other languages."
-msgstr "订阅「帮助」邮件列表，接收GNU Guix社区的帮助邮件。尽管我们接受任何语言的邮件，但是请尽量使用英文发邮件。"
+msgstr ""
+"订阅「帮助」邮件列表，\n"
+"可以通过邮件从 GNU Guix 社区获取支持。 尽管我们接受其他语言，\n"
+"但是请尽量使用英文发邮件。"
 
-#: apps/base/data.scm:55
+#: apps/base/data.scm:54
 msgctxt "unique lingua code like en or zh-cn"
 msgid "en"
 msgstr "zh-cn"
 
-#: apps/base/data.scm:119
+#: apps/base/data.scm:118
 msgid "Bug Reporting"
-msgstr "报Bug"
+msgstr "Bug 报告"
 
-#: apps/base/data.scm:121
+#: apps/base/data.scm:120
 msgid ""
 "If you found a bug in Guix, check whether the bug is\n"
 "       already in the <1>bug database</1>. If it is not, please <2>report it."
 "</2>"
-msgstr "如果你在Guix里发现了bug，先检查这个bug是否已经在<1>bug数据库</1>里了，如果不在，请<2>报修</2>。"
+msgstr ""
+"如果您在 Guix 里发现了 Bug，请先检查\n"
+" 这个 Bug 是否已经在 <1>Bug 数据库</1>里了。如果不在，请<2>报修</2>。"
 
-#: apps/base/data.scm:133
+#: apps/base/data.scm:132
 msgid "Development Mailing List"
 msgstr "「开发」邮件列表"
 
-#: apps/base/data.scm:135
+#: apps/base/data.scm:134
 msgid ""
 "Discussion about the development of GNU Guix. <1> Until July 2013</1>, the "
 "bug-Guix mailing list filled that role. "
-msgstr "GNU Guix开发相关的交流。<1>2013年7月</1>之前用的是「bug-guix」邮件列表。"
+msgstr ""
+"GNU Guix 开发相关的交流。在 <1>2013 年 7 月</1>之前，我们使用「bug-Guix」邮件"
+"列表来交流。 "
 
-#: apps/base/data.scm:145
+#: apps/base/data.scm:144
 msgid "Patches Mailing List"
 msgstr "「补丁」邮件列表"
 
-#: apps/base/data.scm:147
+#: apps/base/data.scm:146
 msgid ""
 "Submission of patches.  Every message sent to this mailing list\n"
 "       leads to a new entry in our <1>patch tracking tool</1>.  See <2>this "
@@ -531,193 +661,268 @@ msgid ""
 "manual<3.1>en</3.1><3.2>Submitting-Patches.html</3.2></3> for more "
 "information on how to submit a patch.  <4>Until February 2017</4>, the guix-"
 "devel mailing list filled that role."
-msgstr "用于提交补丁。每个发送到这个列表的邮件都会在<1>补丁跟踪工具</1>中自动创建对应的条目。<2>这个页面</2>有相关工具详细的使用方法。<3>用户手册<3.1>zh-cn</3.1><3.2>Ti-Jiao-Bu-Ding-.html</3.2></3>里有怎样提交补丁的介绍。<4>在2017年2月之前</4>用的是「guix-devel」邮件列表。"
+msgstr ""
+"用于提交补丁。每个发送到这个列表的邮件都会在\n"
+"<1>补丁跟踪工具</1>中自动创建对应的条目。 <2>这个页面</2>有相关工具详细的使用"
+"方法。<3>用户手册<3.1>zh-cn</3.1><3.2>Ti-Jiao-Bu-Ding-.html</3.2></3>里有怎样"
+"提交补丁的介绍。<4>在 2017 年 2 月之前</4>我们使用「guix-devel」邮件列表充当"
+"这个角色。"
 
-#: apps/base/data.scm:166
+#: apps/base/data.scm:165
 msgid "Science Mailing List"
 msgstr "「Science」邮件列表"
 
-#: apps/base/data.scm:168
+#: apps/base/data.scm:167
 msgid ""
 "Discussions about using GNU Guix for scientific purposes: reproducible "
 "research, high-performance computing (HPC), and more."
-msgstr "讨论GNU Guix在科学领域的应用：可再现的研究，高性能计算，等。"
+msgstr ""
+"应用讨论 GNU Guix 在科学领域的应用：可再现的研究、高性能计算（HPC）等。"
 
-#: apps/base/data.scm:176
+#: apps/base/data.scm:175
 msgid "Commits Mailing List"
 msgstr "「Commits」邮件列表"
 
-#: apps/base/data.scm:178
+#: apps/base/data.scm:177
 msgid "Notifications of commits made to the <1>Git repositories</1>."
-msgstr "<1>Git仓库</1>的变更通知。"
+msgstr "<1>Git 仓库</1>的提交通知。"
 
-#: apps/base/data.scm:187
+#: apps/base/data.scm:186
 msgid "Security Mailing List"
 msgstr "「安全」邮件列表"
 
-#: apps/base/data.scm:189
+#: apps/base/data.scm:188
 msgid ""
 "This is a private mailing list that anyone can post to to <1>report security "
 "issues</1> in Guix itself or in the <2>packages</2> it provides.  Posting "
 "here allows Guix developers to address\n"
 "       the problem before it is widely publicized."
-msgstr "这是个私密的邮件列表，任何人都可以用它<1>报告</1>Guix和它提供的<2>软件包</2>里的安全问题。在这里提交信息可以让Guix开发者在问题公开之前先解决问题。"
+msgstr ""
+"这是个私密的邮件列表，任何人都可以用它<1>报告</1> Guix 和它提供的<2>软件包"
+"</2>中的安全问题。\n"
+" 在这里提交信息可以让 Guix 开发者在问题公开之前先解决问题。"
 
-#: apps/base/data.scm:201
+#: apps/base/data.scm:200
 msgid "Sysadmin Mailing List"
 msgstr "「系统管理员」邮件列表"
 
-#: apps/base/data.scm:203
+#: apps/base/data.scm:202
 msgid "Private mailing list for the <1>build farm</1> system administration."
 msgstr "<1>构建机器集群</1>系统管理员的私密邮件列表。"
 
-#: apps/base/data.scm:215
+#: apps/base/data.scm:213
+msgid ""
+"Private alias to reach the <1>maintainer collective</1>.  This should "
+"generally not be used to discuss technical issues."
+msgstr ""
+"与<1>维护者团队</1>取得联系的私密地址。此地址一般不会用于讨论技术问题。"
+
+#: apps/base/data.scm:225
 msgid "GNU System Discuss Mailing List"
 msgstr "「GNU系统交流」邮件列表"
 
-#: apps/base/data.scm:217
+#: apps/base/data.scm:227
 msgid "Discussion about the development of the broader GNU system."
-msgstr "交流GNU操作系统相关的开发工作。"
+msgstr "用于交流 GNU 操作系统相关的开发工作。"
 
-#: apps/base/data.scm:222
+#: apps/base/data.scm:232
 msgid "GNU/Linux-libre Mailing List"
 msgstr "「GNU/Linux-libre」邮件列表"
 
-#: apps/base/data.scm:224
+#: apps/base/data.scm:234
 msgid "Workgroup for fully free GNU/Linux distributions."
-msgstr "讨论完全自由的GNU/Linux发行版。"
+msgstr "完全自由 GNU/Linux 发行版工作组。"
 
-#: apps/base/data.scm:229
+#: apps/base/data.scm:239
 msgid "GNU Info Mailing List"
 msgstr "「GNU公告」邮件列表"
 
-#: apps/base/data.scm:231
+#: apps/base/data.scm:241
 msgid "GNU software announcements."
-msgstr "GNU软件公告。"
+msgstr "GNU 软件公告。"
 
-#: apps/base/templates/help.scm:17
+#: apps/base/templates/help.scm:18
 msgctxt "webpage title"
 msgid "Help"
 msgstr "帮助"
 
-#: apps/base/templates/help.scm:19
+#: apps/base/templates/help.scm:20
 msgid ""
 "A list of resources about how to use GNU Guix, plus\n"
 "   information about getting help from the community of users and\n"
 "   developers."
-msgstr "关于怎么使用GNU Guix及怎么从用户和开发者社区寻求帮助的资料。"
+msgstr ""
+"关于如何使用 GNU Guix 的资源列表，\n"
+" 以及有关从用户和开发人员社区获取帮助的信息。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/help.scm:24
+#: apps/base/templates/help.scm:25
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Help resources"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|帮助资源"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器 | 帮助资源"
 
-#: apps/base/templates/help.scm:35
+#: apps/base/templates/help.scm:36
 msgid "Help"
 msgstr "帮助"
 
-#: apps/base/templates/help.scm:46
-msgid "GNU Guix Manual"
-msgstr "GNU Guix用户手册"
-
 #: apps/base/templates/help.scm:47
+msgid "GNU Guix Manual <1/>"
+msgstr "GNU Guix 用户手册 <1/>"
+
+#: apps/base/templates/help.scm:48
 msgid ""
 "Documentation for GNU Guix is available\n"
 "            online.  You may also find more information about Guix by "
 "running <1>info guix</1>."
-msgstr "GNU Guix在线文档。你也可以通过运行<1>info guix</1>来获取更多关于Guix的信息。"
+msgstr ""
+"GNU Guix 文档可在线上查阅。\n"
+"您也可以通过运行 <1>info guix</1> 来查找更多关于 Guix 的信息。"
 
-#: apps/base/templates/help.scm:53
-msgid "Read Guix manual"
-msgstr "阅读Guix用户手册"
+#: apps/base/templates/help.scm:54
+msgid "Read stable manual"
+msgstr "阅读稳定版用户手册"
 
-#: apps/base/templates/help.scm:64
+#: apps/base/templates/help.scm:65
 msgid "Get Guix reference card"
-msgstr "获取Guix参考卡片"
+msgstr "获取 Guix 参考卡片"
 
-#: apps/base/templates/help.scm:72
+#: apps/base/templates/help.scm:74
+msgid "GNU Guix Manual (Latest)"
+msgstr "GNU Guix 用户手册（最新版）"
+
+#: apps/base/templates/help.scm:75
+msgid ""
+"This version of the manual is updated frequently to\n"
+"            include the latest changes from Guix's source files. It is\n"
+"            more up-to-date than the manual for the stable release of\n"
+"            Guix."
+msgstr ""
+"此版本的用户手册会频繁更新\n"
+" 以囊括来自 Guix 源文件的最新变化。\n"
+" 它会比 Guix 稳定发行版的手册更新。"
+
+#: apps/base/templates/help.scm:82
+msgid "Read latest manual"
+msgstr "阅读最新版用户手册"
+
+#: apps/base/templates/help.scm:90 apps/media/templates/video.scm:40
+#: apps/media/templates/video-list.scm:44
 msgid "Videos"
 msgstr "视频"
 
-#: apps/base/templates/help.scm:73
+#: apps/base/templates/help.scm:91
 msgid ""
 "The collection of videos includes instructional material\n"
 "            to help you get started with every day use of GNU Guix as\n"
 "            well as other topics that present advanced features of the\n"
 "            system."
-msgstr "视频合集里有上手指导资料，及高级功能的讲解。"
+msgstr ""
+"视频合集里涵盖了帮助您每一天使用 GNU Guix 的指导材料，\n"
+"以及讲解系统的高级功能的其他主题。"
 
-#: apps/base/templates/help.scm:81
+#: apps/base/templates/help.scm:99
 msgid "Browse all videos"
 msgstr "浏览全部视频"
 
-#: apps/base/templates/help.scm:89
+#: apps/base/templates/help.scm:107
 msgid "Cookbook"
 msgstr "食谱"
 
-#: apps/base/templates/help.scm:90
+#: apps/base/templates/help.scm:108
 msgid ""
 "Tutorials, how-to guides and examples contributed by the\n"
 "            Guix community which show you how to use the system and its\n"
 "            collection of packages to achieve common and not-so-common\n"
 "            goals users may have."
-msgstr "教程、指南和Guix社区提供的一些使用Guix操作系统和软件包来实现常见的和不常见目的的例子。"
+msgstr ""
+"Guix 社区贡献的教程、How-to 指南和示例，\n"
+" 展示了如何使用 Guix 操作系统和软件包\n"
+" 来实现用户常见和不常见目的。"
 
-#: apps/base/templates/help.scm:98
+#: apps/base/templates/help.scm:116
 msgid "Browse the recipes"
 msgstr "浏览配方"
 
-#: apps/base/templates/help.scm:106
+#: apps/base/templates/help.scm:124
 msgid "GNU Manuals"
-msgstr "GNU用户手册"
+msgstr "GNU 用户手册"
 
-#: apps/base/templates/help.scm:107
+#: apps/base/templates/help.scm:125
 msgid ""
 "Guix is a distribution of the <1>GNU operating system</1>.  Documentation "
 "for GNU packages is\n"
 "            available online in various formats. "
-msgstr "Guix是一个<1>GNU操作系统</1>发行版。GNU软件提供各种格式的文档。 "
+msgstr ""
+"Guix 是一个 <1>GNU 操作系统</1>发行版。\n"
+"可在线上浏览 GNU 软件包的各式文档。 "
 
-#: apps/base/templates/help.scm:115
+#: apps/base/templates/help.scm:133
 msgid "Browse GNU manuals"
-msgstr "浏览GNU用户手册"
+msgstr "浏览 GNU 用户手册"
 
-#: apps/base/templates/help.scm:123
+#: apps/base/templates/help.scm:141
+msgid "Wiki"
+msgstr "Wiki"
+
+#: apps/base/templates/help.scm:142
+msgid ""
+"The LibrePlanet Wiki provides a collaborative space for people to share "
+"additional information about the Guix project and its subprojects. It may "
+"contain help information, feature proposals, and notes about work in "
+"progress (among other things)."
+msgstr ""
+"LibrePlanet Wiki 为人们提供了一个合作的空间以分享关于 Guix 项目及其子项目的附"
+"加信息。其可能包括帮助信息，功能提案，以及正在进行中工作（以及其他事项）的说"
+"明。"
+
+#: apps/base/templates/help.scm:151
+msgid "Browse the wiki"
+msgstr "浏览 Wiki"
+
+#: apps/base/templates/help.scm:159
 msgid "IRC Chat"
-msgstr "IRC聊天"
+msgstr "IRC 聊天"
 
-#: apps/base/templates/help.scm:124
+#: apps/base/templates/help.scm:160
 msgid ""
 "For real-time support from the community, you can connect\n"
-"            to the <1/> channel on irc.freenode.net. There\n"
+"            to the <1/> channel on irc.libera.chat. There\n"
 "            you can get help about anything related to GNU Guix."
-msgstr "你可以连接 irc.freenode.net 的 <1/> 频道，从社区获取实时帮助。你可以在那里寻求任何关于GNU Guix的帮助。"
+msgstr ""
+"您可以连接 irc.libera.chat 的<1/>频道，\n"
+"从社区获取实时支持。在那里\n"
+"您可以获得任何关于 GNU Guix 的帮助。"
 
-#: apps/base/templates/help.scm:129
+#: apps/base/templates/help.scm:165
 msgid ""
 "The <1/> channel is logged. Previous\n"
 "            conversations can be browsed online. See the <2>channel "
 "logs</2>. "
-msgstr "<1/> 频道是有日志的。旧的聊天记录在<2>频道日志</2>。"
+msgstr ""
+"<1/> 频道有日志记录。以前的聊天记录可在线上\n"
+"浏览。参阅<2>频道日志</2>。 "
 
-#: apps/base/templates/help.scm:136
+#: apps/base/templates/help.scm:172
 msgid "Connect"
 msgstr "连接"
 
-#: apps/base/templates/help.scm:144
+#: apps/base/templates/help.scm:180
 msgid "Mailing lists"
 msgstr "邮件列表"
 
-#: apps/base/templates/help.scm:145
+#: apps/base/templates/help.scm:181
 msgid ""
 "Email support from the community is also available through\n"
 "            several mailing list. The messages sent to the lists are\n"
 "            public and archived online."
-msgstr "你可以从社区的几个邮件列表寻求邮件支持。发送到邮件列表的消息都是公开的，并且有在线档案。"
+msgstr ""
+"您可以从社区的多个邮件列表寻求邮件支持。\n"
+"发送到邮件列表的消息都是公开的，并且有在线归档。"
 
-#: apps/base/templates/help.scm:153
+#: apps/base/templates/help.scm:189
 msgid "See all lists"
 msgstr "浏览全部邮件列表"
 
@@ -731,14 +936,18 @@ msgstr "联系"
 msgid ""
 "A list of channels to communicate with GNU Guix users\n"
 "   and developers about anything you want."
-msgstr "与GNU Guix用户和开发者交流任意话题的渠道。"
+msgstr ""
+"与 GNU Guix 用户和开发者\n"
+" 交流任意话题的渠道列表。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/contact.scm:23
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Community|Mailing lists|IRC channels|Bug reports|Help"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|社区|邮件列表|IRC频道|故障报修|帮助"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器 | 社区 | 邮件列表 | IRC 频道 | 故障报修 | 帮助"
 
 #: apps/base/templates/contribute.scm:17
 msgctxt "webpage title"
@@ -749,17 +958,21 @@ msgstr "贡献"
 msgid ""
 "Check all the ways you can contribute to make GNU Guix\n"
 "   better, and join the world-wide community of volunteers."
-msgstr "了解帮助GNU Guix项目发展的方式，加入全球的志愿者社区。"
+msgstr ""
+"了解帮助 GNU Guix 项目更好发展的各种方式，\n"
+"加入全球志愿者社区。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/contribute.scm:23
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Volunteer|Development|Translation|I18N|L10N|Artwork"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|志愿者|开发|翻译|国际化|本地化|插图"
+msgstr ""
+"GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|志愿者|开"
+"发|翻译|国际化|本地化|插图"
 
 #: apps/base/templates/contribute.scm:35 apps/base/templates/contribute.scm:110
-#: apps/base/templates/contribute.scm:227
+#: apps/base/templates/contribute.scm:229
 msgid "Contribute"
 msgstr "贡献"
 
@@ -768,10 +981,14 @@ msgid ""
 "GNU Guix is a large project developed\n"
 "           mostly by volunteers from all around the world. You are welcome\n"
 "           to join us in the <1>development mailing list</1> or in the "
-"<2>#guix channel</2> in IRC Freenode. Tell us how would you like to help, "
-"and we\n"
-"          will do our best to guide you. "
-msgstr "GNU Guix是一个由世界各地志愿者共同开发的庞大项目。欢迎通过<1>开发邮件列表</1>或Freenode上的<2>#guix频道</2>加入我们。告诉我们你想提供哪些帮助，我们将尽全力指导你。"
+"<2>#guix channel</2> on the Libera Chat IRC network. Tell us how would you "
+"like to help,\n"
+"           and we will do our best to guide you. "
+msgstr ""
+"GNU Guix 是一个由世界各地志愿者共同开发的庞大项目。\n"
+"欢迎通过<1>开发邮件列表</1>或 Libera Chat IRC 网络上\n"
+"的<2>#guix 频道</2>加入我们。告诉我们您想提供哪些帮助，\n"
+"我们将尽全力为您指引。 "
 
 #: apps/base/templates/contribute.scm:51
 msgid ""
@@ -782,7 +999,12 @@ msgid ""
 "adapted\n"
 "           from <1>https://contributor-covenant.org/</1>.  You can find the "
 "full pledge in the <2>CODE-OF-CONDUCT</2> file."
-msgstr "我们希望提供一个温暖、友好、没有骚扰的环境，这样任何人都可以尽自己的能力贡献力量。为此，我们的项目订立了参与者契约。契约是在 <1>https://contributor-covenant.org/</1> 的基础上改编的。你可以从这里获取契约全文：《<2>行为准则</2>》。"
+msgstr ""
+"我们希望提供一个温馨、友好且没有骚扰的环境，这样任何人都可以尽己所能做出贡"
+"献。\n"
+"为此，我们的项目使用了「贡献者契约」，改编自 <1>https://contributor-covenant."
+"org/</1>。\n"
+"您可以从《<2>行为准则</2>》中找到契约全文。"
 
 #: apps/base/templates/contribute.scm:72
 msgid "Project Management"
@@ -793,37 +1015,43 @@ msgid ""
 "We use <1>Savannah</1> as the central point for development, maintenance "
 "and\n"
 "            distribution of the Guix System Distribution and GNU Guix."
-msgstr "我们用<1>Savannah</1>管理GNU Guix项目的开发和代码分发。"
+msgstr ""
+"我们使用 <1>Savannah（萨凡纳）</1> 管理\n"
+" Guix 系统发行版和 GNU Guix 项目的开发、维护及代码分发。"
 
 #: apps/base/templates/contribute.scm:79
 msgid ""
 "The source files for all the components of the project,\n"
 "            including software, web site, documentation, and artwork, are\n"
 "            available in <1>Git repositories</1> at Savannah. "
-msgstr "项目中所有组件（包括软件、网站、文档、插图）的源代码，都可以在Savannah的<1>Git仓库</1>里找到。"
+msgstr ""
+"项目中所有组件，包括软件、网站、文档、插图的源代码，\n"
+"都可以在 Savannah 的 <1>Git 仓库</1> 里找到。 "
 
 #: apps/base/templates/contribute.scm:89
 msgid "Access Savannah"
-msgstr "访问Savannah"
+msgstr "访问 Savannah"
 
 #: apps/base/templates/contribute.scm:94
 msgid "Art"
-msgstr "艺术"
+msgstr "美术"
 
 #: apps/base/templates/contribute.scm:95
 msgid ""
 "We are always looking for artists to help us design and\n"
 "            improve user interfaces, and create multimedia material for\n"
 "            documentation, presentations, and promotional items. "
-msgstr "我们需要设计师为我们设计和改进用户界面，并为文档、演讲稿、推广活动设计多媒体素材。"
+msgstr ""
+"我们正寻找设计师为我们设计和改进用户界面，\n"
+"并为文档、演讲稿、推广活动设计多媒体素材。 "
 
 #: apps/base/templates/contribute.scm:100
 msgid ""
 "The artwork used in the different components of the project\n"
 "            is available in the <1>guix-artwork</1> repository. "
-msgstr "这个项目用到的艺术素材在<1>guix-artwork</1>仓库里。"
+msgstr "这个项目用到的艺术素材可在 <1>guix-artwork</1> 仓库中找到。 "
 
-#: apps/base/templates/contribute.scm:116
+#: apps/base/templates/contribute.scm:116 apps/base/templates/cuirass.scm:57
 msgid "Documentation"
 msgstr "文档"
 
@@ -834,13 +1062,16 @@ msgid ""
 "            help us identify any errors or omissions. Creating new\n"
 "            manuals, tutorials, and blog entries will also help users and\n"
 "            developers discover what we do. "
-msgstr "你可以阅读系统里和网站上的<1>项目文档</1>，帮助我们发现错误或遗漏。或者编写新的用户手册、教程、博客，帮助用户和开发者更好地了解我们。"
+msgstr ""
+"您可以阅读系统里和网站上的<1>项目文档</1>，\n"
+" 帮助我们发现错误或遗漏。或者编写新的用户手册、教程、博客，\n"
+" 帮助用户和开发者更好地了解我们。 "
 
 #: apps/base/templates/contribute.scm:125
 msgid ""
 "Helping improve the documentation of the <1>packaged software</1> is another "
 "way to contribute. "
-msgstr "你也可以帮助改进<1>软件包</1>的简介信息。"
+msgstr "帮助改进<1>软件包</1>的文档信息也是一种贡献的方式。 "
 
 #: apps/base/templates/contribute.scm:132
 msgid "Start writing"
@@ -858,22 +1089,33 @@ msgid ""
 "            packaged to make it easier for users to install their\n"
 "            favorite tools with the Guix package manager, and be\n"
 "            productive using the system. "
-msgstr "为了提供用户喜爱的软件包，辅助用户高效地工作，我们还需要给很多软件、文档、资源打包。"
+msgstr ""
+"为了让用户能够更容易地用 Guix 包管理器安装喜爱的软件包，\n"
+" 辅助他们高效地工作，我们还需要给很多软件、文档、资源打包。 "
 
 #. TRANSLATORS: Packaging Guidelines is a section name in the
 #. English (en) manual.
 #: apps/base/templates/contribute.scm:147
+#, fuzzy
+#| msgid ""
+#| "Information on how to add packages to the distribution can\n"
+#| "            be found <1>in the manual<1.1>en</1.1><1.2>Packaging-"
+#| "Guidelines.html</1.2></1>. "
 msgid ""
 "Information on how to add packages to the distribution can\n"
-"            be found <1>in the manual<1.1>en</1.1><1.2>Packaging-Guidelines."
+"            be found <1>in the manual<1.1>en</1.1><1.2>Contributing."
 "html</1.2></1>. "
-msgstr "<1>用户手册<1.1>zh-cn</1.1><1.2>Da-Bao-Zhi-Dao-.html</1.2></1>里有打包教程。"
+msgstr ""
+"关于为发行版打包的信息可以在\n"
+" <1>用户手册<1.1>zh-cn</1.1><1.2>Da-Bao-Zhi-Dao-.html</1.2></1>中找到。 "
 
 #: apps/base/templates/contribute.scm:157
 msgid ""
 "Check out the <1>package database</1> for a list of available packages, and "
 "the <2>patch-tracking database</2> for a list of pending submissions."
-msgstr "你可以通过<1>软件包数据库</1>查看已有的软件包，通过<2>补丁跟踪数据库</2>查看待处理的新软件包。"
+msgstr ""
+"您可以通过<1>软件包数据库</1>查看已有的软件包，通过<2>补丁跟踪数据库</2>查看"
+"待处理的新软件包。"
 
 #: apps/base/templates/contribute.scm:168
 msgid "Send a new package"
@@ -888,7 +1130,9 @@ msgid ""
 "Source code is in the <1>main Git repository</1>.  We use <2>GNU Guile</2> "
 "as the main programming and extension language for the\n"
 "            components of the system. "
-msgstr "源代码在<1>主Git仓库</1>里。<2>GNU Guile</2>是我们为操作系统编程的主要语言。"
+msgstr ""
+"源代码位于<1>主 Git 仓库</1>中。我们使用 <2>GNU Guile</2> 作为\n"
+"系统组件的主要编程和扩展语言。 "
 
 #. TRANSLATORS: Contributing is a section name in the English
 #. (en) manual.
@@ -900,7 +1144,11 @@ msgid ""
 "manual for more details on the development\n"
 "            setup, as well as the coding and cooperation conventions used\n"
 "            in the project. "
-msgstr "阅读<1>Guile用户手册</1>或其它<2>介绍Scheme的资料</2>对你会有很大帮助。而且一定不要忘了阅读用户手册里的<3>贡献<3.1>zh-cn</3.1><3.2>Gong-Xian-.html</3.2></3>章节，了解怎样搭建开发环境，及项目里的编程规范和协作惯例。"
+msgstr ""
+"浏览 <1>Guile 用户手册</1>或其它<2>介绍 Scheme 的材料</2>将大有帮助。\n"
+"而且一定要阅读用户手册里的<3>贡献<3.1>zh-cn</3.1><3.2>Gong-Xian-."
+"html</3.2></3>章节，\n"
+"详细了解怎样配置开发环境，以及项目里的编程规范和协作惯例。 "
 
 #: apps/base/templates/contribute.scm:205
 msgid "Send a patch"
@@ -916,67 +1164,176 @@ msgid ""
 "            contributors to communicate and collaborate in the project,\n"
 "            and users to be able to download and install packages. Help\n"
 "            us keep the system up and running smoothly. "
-msgstr "我们的基础设施为项目开发者提供沟通和协作的平台，为用户提供下载软件包的服务。你可以帮助我们维持这些设施稳定地运行。"
+msgstr ""
+"我们的基础设施为项目开发者提供沟通和协作的平台，\n"
+" 为用户提供下载软件包服务。\n"
+" 您可以帮助我们维持这些设施运行更顺畅。 "
 
 #: apps/base/templates/contribute.scm:218
 msgid ""
-"You can also <1>donate hardware or hosting</1> for our <2>build farm</2>.  "
-msgstr "你也可以为我们的<2>构建集群</2><1>捐赠硬件或提供托管服务</1>。"
+"You can contribute to our continous integration software: <1/>. You can also "
+"<2>donate hardware or hosting</2> for our <3>build farm</3>"
+msgstr ""
+"您可以为我们的持续集成软件做出贡献：<1/>。您也可以<2>捐赠硬件或提供托管服务"
+"</2>给我们的<3>构建集群</3>"
 
-#: apps/base/templates/contribute.scm:233
+#: apps/base/templates/contribute.scm:235
 msgid "Test and Bug Reports"
-msgstr "测试和报Bug"
+msgstr "测试和报告 Bug"
 
-#: apps/base/templates/contribute.scm:234
+#: apps/base/templates/contribute.scm:236
 msgid ""
 "Install the software and send feedback to the community\n"
 "            about your experience. Help the project by reporting bugs. You "
 "can also get started by <1>picking an “easy” bug</1> to work on."
-msgstr "安装软件，并向社区反馈你的使用体验，为项目报bug。你也可以尝试修复<1>简单的bug</1>。"
+msgstr ""
+"安装软件，并向社区反馈使用体验。通过报告 Bug 帮助项目。\n"
+" 您也可以着手来修复<1>简单的 Bug</1>。"
 
-#: apps/base/templates/contribute.scm:243
+#: apps/base/templates/contribute.scm:245
 msgid ""
 "Before reporting a bug, please check whether the bug is\n"
 "            already <1>in the bug database</1>. See <2>the developer "
 "information page</2> for more information on how to manipulate bug reports. "
-msgstr "报bug之前，请先检查这个bug是否已经被<1>bug数据库</1>收录了。<2>开发者信息页</2>有关于操作bug的指令。"
+msgstr ""
+"报告 Bug 之前，请先检查这个 Bug 是否已被 <1>Bug 数据库</1>收录。\n"
+"参阅<2>开发者信息页</2>获取更多关于操作 Bug 报告的信息。 "
 
-#: apps/base/templates/contribute.scm:255
+#: apps/base/templates/contribute.scm:257
 msgid "Report a bug"
-msgstr "报bug"
+msgstr "报告 Bug"
 
-#: apps/base/templates/contribute.scm:261
+#: apps/base/templates/contribute.scm:263
 msgid "Translation"
 msgstr "翻译"
 
-#: apps/base/templates/contribute.scm:262
+#: apps/base/templates/contribute.scm:264
 msgid ""
 "You can help translate the <1>software</1>, the <2>package descriptions</2>, "
-"and the <3>manual</3> into your language.  See the <4>Translation "
-"Project</4> for information on how you can help."
-msgstr "你可以帮助翻译<1>软件</1>、<2>软件包简介</2>、<3>用户手册</3>。到<4>Translation Project</4>查看关于翻译的信息。"
+"the <3>manual</3>, the <4>cookbook</4>, and this <5>website</5> into your "
+"language.  See your language's team at the <6>Translation Project</6> to "
+"have a look at the styleguides and the work of other translators"
+msgstr ""
+"您可以帮助翻译<1>软件</1>、<2>软件包描述</2>、<3>用户手册</3>、 <4>食谱</4>以"
+"及本<5>网站</5>到您的语言。请在 <4>Translation Project</4> 查看您的语言团队，"
+"浏览风格指导以及其他译者的工作"
 
-#: apps/base/templates/contribute.scm:281
+#: apps/base/templates/contribute.scm:291
 msgid ""
 "<1>Software packages</1> provided by the system may have their own "
 "translation\n"
 "            tools.  Visit their websites and help translate. "
-msgstr "系统里提供的一些<1>软件包</1>可能有它们自己的翻译方式，请到它们自己的网站上查看相关信息。"
+msgstr ""
+"系统里提供的一些<1>软件包</1>可能有它们自己的翻译工具。\n"
+"请访问它们的项目网站并帮助翻译。 "
 
-#: apps/base/templates/contribute.scm:288
+#: apps/base/templates/contribute.scm:298
 msgid "Start translating"
 msgstr "开始翻译"
 
-#: apps/base/templates/contribute.scm:292
+#: apps/base/templates/contribute.scm:302
 msgid "Other resources for contributors"
-msgstr "其它资料"
+msgstr "为贡献者准备的其他资源"
 
-#: apps/base/templates/contribute.scm:293
+#: apps/base/templates/contribute.scm:303
 msgid ""
 "Documents, supporting material of previous talks, and\n"
 "          auxiliary information useful to hackers and maintainers is\n"
 "          available at <1/>."
-msgstr "文档、以前的演讲资料，及对开发者和管理员有用的辅助信息：<1/>。"
+msgstr ""
+"文档、早前会谈的支持材料，\n"
+" 以及对开发者和管理员有用的辅助信息可在 <1/> 查阅。"
+
+#: apps/base/templates/cuirass.scm:16
+msgctxt "webpage title"
+msgid "Cuirass"
+msgstr "Cuirass（胸甲）"
+
+#: apps/base/templates/cuirass.scm:18
+msgid "GNU Guix continuous integration software."
+msgstr "GNU Guix 持续集成软件。"
+
+#. TRANSLATORS: |-separated list of webpage keywords
+#: apps/base/templates/cuirass.scm:21
+msgid ""
+"GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Guix "
+"package manager|Cuirass|CI"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包管理器 | "
+"Cuirass | CI"
+
+#: apps/base/templates/cuirass.scm:31
+msgid ""
+"Cuirass is the GNU Guix continuous\n"
+"integration software. It's a general purpose build automation server "
+"written\n"
+"in GNU Guile that checks out sources from VCS repositories, execute build "
+"jobs\n"
+"and store build results in a database. Cuirass also provides a web "
+"interface\n"
+"to monitor the build results."
+msgstr ""
+"Cuirass（胸甲）是 GNU Guix 的持续集成软件。\n"
+"它是一个由 GNU Guile 所编写通用自动化构建服务器，\n"
+"可以从 VCS 仓库检出源代码执行构建任务，并将构建结果\n"
+"保存于数据库中。Cuirass 也提供了 Web 界面\n"
+"以监控构建结果。"
+
+#: apps/base/templates/cuirass.scm:37
+msgid "Cuirass is running on GNU Guix build farm at <1/>."
+msgstr "Cuirass 运营在 GNU Guix 构建集群（Build Farm）中：<1/>。"
+
+#: apps/base/templates/cuirass.scm:41
+msgid "Features"
+msgstr "功能"
+
+#: apps/base/templates/cuirass.scm:44
+msgid "Poll sources from multiple Git repositories."
+msgstr "从多个 Git 仓库拉取源代码。"
+
+#: apps/base/templates/cuirass.scm:46
+msgid "Execute builds on local or remote Guix daemons."
+msgstr "在本地或远程 Guix 守护进程上执行构建。"
+
+#: apps/base/templates/cuirass.scm:48
+msgid "Store build products or artifacts."
+msgstr "存储构建产品和附品。"
+
+#: apps/base/templates/cuirass.scm:50
+msgid "Collect build logs and metrics."
+msgstr "收集构建日志和指标。"
+
+#: apps/base/templates/cuirass.scm:52
+msgid "Provides a REST API."
+msgstr "提供 REST API。"
+
+#: apps/base/templates/cuirass.scm:53
+msgid ""
+"High level of concurrency using <1>Guile-Fibers</1> asynchronous library."
+msgstr "使用 <1>Guile-Fibers</1> 异步库实现的高并发。"
+
+#: apps/base/templates/cuirass.scm:58
+msgid "Cuirass documentation is accessible <1>here</1>."
+msgstr "Cuirass 的文档可参见<1>这里</1>。"
+
+#: apps/base/templates/cuirass.scm:63
+msgid "Releases"
+msgstr "发行"
+
+#: apps/base/templates/cuirass.scm:74 apps/base/templates/cuirass.scm:84
+msgid "GPG signature"
+msgstr "GPG 签名"
+
+#: apps/base/templates/cuirass.scm:85
+msgid "Project repository"
+msgstr "项目仓库"
+
+#: apps/base/templates/cuirass.scm:86
+msgid ""
+"Cuirass source code is hosted at <1>git://git.sv.gnu.org/guix/guix-cuirass."
+"git</1>."
+msgstr ""
+"Cuirass 的源代码托管于<1>git://git.sv.gnu.org/guix/guix-cuirass.git</1>。"
 
 #: apps/base/templates/donate.scm:17
 msgctxt "webpage title"
@@ -988,14 +1345,18 @@ msgid ""
 "We are looking for donations of hardware and optionally\n"
 "   hosting for machines (they should be usable with exclusively\n"
 "   free software)."
-msgstr "我们接受捐赠硬件和机器托管服务（必须可以在纯自由软件环境使用）。"
+msgstr ""
+"我们接受捐赠硬件和机器托管服务\n"
+" （它们应该能在纯自由软件环境使用）。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/donate.scm:24
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Donations"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|捐赠"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器 | 捐赠"
 
 #: apps/base/templates/donate.scm:34
 msgid "Donate"
@@ -1006,7 +1367,9 @@ msgid ""
 "The <1>build farm</1> of Guix runs on donated hardware and hosting. As the "
 "distribution grows (see the <2>package list</2>), so do the computing and "
 "storage needs."
-msgstr "Guix的<1>构建集群</1>运行在捐赠的硬件和托管服务上。随着发行版的成长（见<2>软件包列表</2>），计算和存储需求也在增长。"
+msgstr ""
+"Guix 的<1>构建集群（Build Farm）</1>运营在捐赠的硬件和托管服务上。随着发行版"
+"的发展（参见<2>软件包列表</2>），计算和存储需求也在增长。"
 
 #: apps/base/templates/donate.scm:47
 msgid ""
@@ -1015,7 +1378,11 @@ msgid ""
 "project can always use financial support to further its mission.  Please "
 "consider helping out by making a donation on this\n"
 "          FSF-hosted page:"
-msgstr "在2015年，为了升级构建集群，<2>在自由软件基金会（FSF）的帮助下</2>，我们<1>开展了一次筹款活动</1>。资金支持对Guix项目完成自身的使命很重要。请考虑在这个FSF托管的页面上提供捐赠："
+msgstr ""
+"在 2015 年，为了升级构建集群，<2>在自由软件基金会（FSF）的帮助下</2>，我们<1>"
+"开展了一次筹款活动</1>。\n"
+"资金支持对 Guix 项目完成自身的使命很重要。请考虑在这个由 FSF 托管的页面上提供"
+"捐赠："
 
 #: apps/base/templates/donate.scm:63
 msgctxt "button"
@@ -1031,141 +1398,192 @@ msgid ""
 "We are also looking for donations of hardware and optionally\n"
 "           hosting for the following kinds of machines (they should be\n"
 "           usable with exclusively free software): "
-msgstr "我们也在寻求下列硬件和相关的托管服务（必须可以在纯自由软件环境使用）："
+msgstr ""
+"我们也在寻求符合下列种类机器的硬件或托管服务\n"
+" （它们应要能在纯自由软件环境使用）： "
 
 #: apps/base/templates/donate.scm:78
 msgid ""
 "x86_64 machines, with on the order of 1 TiB of storage\n"
 "               and 4 GiB of RAM;"
-msgstr "x86_64机器，有约1 TiB硬盘和4 GiB内存；"
+msgstr "x86_64 机器，有约 1 TiB 硬盘和 4 GiB 内存；"
 
 #: apps/base/templates/donate.scm:81
 msgid ""
 "armv7 machines (such as the Novena) to more quickly test\n"
 "               and provide binaries for the armhf-linux port;"
-msgstr "armv7机器（例如Novena），为armhf-linux平台提供更快的测试和构建服务；"
+msgstr ""
+"armv7 机器（例如 Novena），为 armhf-linux\n"
+" 平台提供更快的测试和二进制构建服务；"
 
 #: apps/base/templates/donate.scm:84
-msgid "mips64el machines to strengthen this port."
-msgstr "mips64el机器，为了改进这个平台的适配。"
+msgid ""
+"armv8 machines to more quickly test and provide binaries\n"
+"              for the aarch64-linux port;"
+msgstr ""
+"armv8 机器，为 aarch64-linux 平台提供更快的\n"
+" 测试和二进制构建服务；"
 
 #: apps/base/templates/donate.scm:87
+msgid "mips64el machines to strengthen this port."
+msgstr "mips64el 机器，用于增强对此平台的适配。"
+
+#: apps/base/templates/donate.scm:90
 msgid ""
 "Please get in touch with us through the <1>usual channels</1> or using the "
 "<2/> private alias to\n"
 "           discuss any opportunities. "
-msgstr "请通过<1>平常的渠道</1>联系我们，或用这个私密地址讨论任何可能的方案： <2/> 。"
+msgstr ""
+"请通过<1>常规渠道</1>联系我们，\n"
+"或用 <2/> 私密地址讨论可能方案。 "
 
-#: apps/base/templates/donate.scm:95
+#: apps/base/templates/donate.scm:98
 msgid "Thanks to the donors!"
 msgstr "感谢所有的捐赠者！"
 
-#: apps/base/templates/donate.scm:100
+#: apps/base/templates/donate.scm:103
 msgid ""
 "The table below summarizes hardware and hosting donations that\n"
 "           make the <1>build farm</1> for the Guix System Distribution a "
 "reality."
-msgstr "下面的表格列出了捐赠的硬件和托管服务，它们共同组成了Guix系统发行版自己的<1>构建集群</1>。"
+msgstr ""
+"下面的表格列出了捐赠的硬件和托管服务，\n"
+" 它们共同使得 Guix 系统发行版拥有自己的<1>构建集群</1>成为现实。"
 
-#: apps/base/templates/donate.scm:110
+#: apps/base/templates/donate.scm:113
 msgid "<1>machine</1><2>system</2><3>donors</3>"
 msgstr "<1>机器</1><2>系统</2><3>捐赠者</3>"
 
-#: apps/base/templates/donate.scm:115
+#: apps/base/templates/donate.scm:118
 msgid ""
 "<1>berlin.guixsd.org</1><2>build farm with 25 build nodes for x86_64-linux "
 "and\n"
 "i686-linux, and dedicated storage</2><3><3.1>Max Delbrück Center for "
 "Molecular Medicine</3.1> (hardware and hosting)</3>"
-msgstr "<1>berlin.guixsd.org</1><2>构建集群，有25个x86_64-linux和i686-linux构建节点，并且有专用存储设施</2><3><3.1>Max Delbrück分子医学中心</3.1>（硬件和托管）</3>"
+msgstr ""
+"<1>berlin.guixsd.org</1><2>有 25 个 x86_64-linux 和 i686-linux 构建节点，\n"
+"并有专用存储设施的构建集群</2><3><3.1>Max Delbrück 分子医学中心</3.1>（硬件和"
+"托管）</3>"
 
-#: apps/base/templates/donate.scm:127
+#: apps/base/templates/donate.scm:130
 msgid ""
 "<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM "
 "Holdings</3.1></3>"
-msgstr "<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM公司</3.1></3>"
+msgstr ""
+"<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM 公司托管"
+"</3.1></3>"
 
-#: apps/base/templates/donate.scm:137
+#: apps/base/templates/donate.scm:140
 msgid ""
 "<1>bayfront.guixsd.org</1><2>new build farm front-end (WIP)</2><3>Igalia</3>"
-msgstr "<1>bayfront.guixsd.org</1><2>新构建集群的前端（正在建设中）</2><3>Igalia</3>"
+msgstr ""
+"<1>bayfront.guixsd.org</1><2>新构建集群的前端（正在建设中）</2><3>Igalia</3>"
 
-#: apps/base/templates/donate.scm:149
+#: apps/base/templates/donate.scm:152
+msgid ""
+"<1>fosshost1.guix.gnu.org, fosshost2.guix.gnu.org</1><2>x86_64-linux, i686-"
+"linux</2><3>Fosshost</3>"
+msgstr ""
+"<1>fosshost1.guix.gnu.org，fosshost2.guix.gnu.org</1><2>x86_64-linux、i686-"
+"linux</2><3>Fosshost</3>"
+
+#: apps/base/templates/donate.scm:164
 msgid ""
 "<1>guix-x15.sjd.se, guix-x15b.sjd.se</1><2>armhf-linux</2><3>Simon "
 "Josefsson</3>"
-msgstr "<1>guix-x15.sjd.se, guix-x15b.sjd.se</1><2>armhf-linux</2><3>Simon Josefsson</3>"
+msgstr ""
+"<1>guix-x15.sjd.se，guix-x15b.sjd.se</1><2>armhf-linux</2><3>Simon "
+"Josefsson</3>"
 
-#: apps/base/templates/donate.scm:159
+#: apps/base/templates/donate.scm:174
 msgid ""
 "<1>hydra-slave1</1><2>armhf-linux</2><3><3.1>Steve Sprang "
 "(hardware)</3.1><3.2>Mark H Weaver (hosting)</3.2></3>"
-msgstr "<1>hydra-slave1</1><2>armhf-linux</2><3><3.1>Steve Sprang（硬件）</3.1><3.2>Mark H Weaver（托管）</3.2></3>"
+msgstr ""
+"<1>hydra-slave1</1><2>armhf-linux</2><3><3.1>Steve Sprang（硬件）"
+"</3.1><3.2>Mark H Weaver（托管）</3.2></3>"
 
-#: apps/base/templates/donate.scm:169
+#: apps/base/templates/donate.scm:184
 msgid ""
 "<1>hydra-slave2</1><2>armhf-linux</2><3><3.1><3.1.1>Harmon "
 "Instruments</3.1.1> (hardware)</3.1><3.2>Mark H Weaver (hosting)</3.2></3>"
-msgstr "<1>hydra-slave2</1><2>armhf-linux</2><3><3.1><3.1.1>Harmon Instruments</3.1.1>（硬件）</3.1><3.2>Mark H Weaver（托管）</3.2></3>"
+msgstr ""
+"<1>hydra-slave2</1><2>armhf-linux</2><3><3.1><3.1.1>Harmon "
+"Instruments</3.1.1>（硬件）</3.1><3.2>Mark H Weaver（托管）</3.2></3>"
 
-#: apps/base/templates/donate.scm:182
+#: apps/base/templates/donate.scm:197
 msgid ""
 "<1>hydra-slave3</1><2>armhf-linux</2><3><3.1><3.1.1>Kosagi (Sutajio Ko-Usagi "
 "Pte Ltd)</3.1.1> (hardware)</3.1><3.2>Mark H Weaver (hosting)</3.2></3>"
-msgstr "<1>hydra-slave3</1><2>armhf-linux</2><3><3.1><3.1.1>Kosagi (Sutajio Ko-Usagi Pte Ltd)</3.1.1>（硬件）</3.1><3.2>Mark H Weaver（托管）</3.2></3>"
+msgstr ""
+"<1>hydra-slave3</1><2>armhf-linux</2><3><3.1><3.1.1>Kosagi（Sutajio Ko-Usagi "
+"Pte Ltd）</3.1.1>（硬件）</3.1><3.2>Mark H Weaver（托管）</3.2></3>"
 
-#: apps/base/templates/donate.scm:195
+#: apps/base/templates/donate.scm:210
 msgid ""
 "<1>redhill</1><2>armhf-linux</2><3><3.1><3.1.1>Kosagi (Sutajio Ko-Usagi Pte "
 "Ltd)</3.1.1> (hardware)</3.1><3.2>Andreas Enge (hosting)</3.2></3>"
-msgstr "<1>redhill</1><2>armhf-linux</2><3><3.1><3.1.1>Kosagi (Sutajio Ko-Usagi Pte Ltd)</3.1.1>（硬件）</3.1><3.2>Andreas Enge（托管）</3.2></3>"
+msgstr ""
+"<1>redhill</1><2>armhf-linux</2><3><3.1><3.1.1>Kosagi（Sutajio Ko-Usagi Pte "
+"Ltd）</3.1.1>（硬件）</3.1><3.2>Andreas Enge（托管）</3.2></3>"
 
-#: apps/base/templates/donate.scm:209
+#: apps/base/templates/donate.scm:224
 msgid ""
 "Other organizations and individuals helped Guix with hardware and\n"
 "hosting in the past and we thank them: <1>Free Software Foundation</1>, "
 "<2>GNU España</2>, <3>FSF France</3>, <4>Free Secure Network Systems "
 "Group</4> at the <5>Technische Universität München</5>."
-msgstr "感谢其他在过去曾经为Guix提供过硬件和托管服务的组织和个人：<1>自由软件基金会</1>，<2>西班牙GNU</2>，<3>法国自由软件基金会</3>，<5>慕尼黑工业大学</5>的<4>自由安全网络系统小组</4>。"
+msgstr ""
+"感谢其他在过去为 Guix 提供过硬件和托管服务的组织和个人：\n"
+"<1>自由软件基金会</1>，<2>GNU 西班牙 </2>，<3>法国自由软件基金会</3>，<5>慕尼"
+"黑工业大学</5>的<4>自由安全网络系统小组</4>。"
 
 #: apps/base/templates/graphics.scm:16
 msgctxt "webpage title"
 msgid "Graphics"
-msgstr "图片"
+msgstr "图像"
 
 #: apps/base/templates/graphics.scm:18
 msgid ""
 "Information about images used for the graphical identity\n"
 "   of GNU Guix and Guix System (formerly “GuixSD”)."
-msgstr "关于 GNU Guix 和 Guix 系统（以前叫“GuixSD”）使用的图片。"
+msgstr ""
+"关于 GNU Guix 和 Guix 系统（曾用名 “GuixSD”）\n"
+" 图形标识所用图像的信息。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/graphics.scm:22
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Donations|Branding|Logo"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|捐赠|品牌|图标"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器| 捐赠 | 品牌 | 图标"
 
 #: apps/base/templates/graphics.scm:32
 msgid "Graphics"
-msgstr "图片"
+msgstr "图像"
 
 #: apps/base/templates/graphics.scm:34
 msgid ""
 "For questions regarding the graphics listed in this page,\n"
 "          please contact <1>help-guix@gnu.org</1>."
-msgstr "关于这个页面列举的图片的问题，请联系<1>help-guix@gnu.org</1>。"
+msgstr ""
+"有关这个页面列举的图像的问题，\n"
+" 请联系 <1>help-guix@gnu.org</1>。"
 
 #: apps/base/templates/graphics.scm:44
 msgid "GNU Guix logotype"
-msgstr "GNU Guix图标"
+msgstr "GNU Guix 图标"
 
 #: apps/base/templates/graphics.scm:45
 msgid ""
 "The standalone Guix, formerly known as the “Guix System\n"
 "          Distribution” or GuixSD, had its own logo, which is now\n"
 "          deprecated."
-msgstr "Guix操作系统（以前也叫“Guix系统发行版”或 GuixSD）曾经有自己的图标，但是现在已经弃用了。"
+msgstr ""
+"Guix 操作系统（以前也叫“Guix 系统发行版”或 GuixSD）\n"
+" 曾经有自己的徽标，现已弃用。"
 
 #: apps/base/templates/graphics.scm:51
 msgid ""
@@ -1173,7 +1591,10 @@ msgid ""
 "          logotypes were designed by Luis Felipe López Acevedo\n"
 "          (a.k.a. sirgazil).  They are available under the following\n"
 "          terms:"
-msgstr "GNU Guix和GuixSD的图标是由Luis Felipe López Acevedo（即sirgazil）设计的。它们以如下条款授权发布："
+msgstr ""
+"GNU Guix 和 GuixSD 的图标是由 Luis Felipe López Acevedo（即 sirgazil）设计"
+"的。\n"
+" 它们以如下条款授权发布："
 
 #: apps/base/templates/graphics.scm:65
 msgid ""
@@ -1183,7 +1604,11 @@ msgid ""
 "including the previous GNU Guix logotype designed\n"
 "          by Nikita Karetnikov in 2013 and <2>superseded</2> by the golden "
 "GNU in 2016."
-msgstr "这些图标、它们衍生的图标、其它GNU Guix项目使用的图片，及Nikita Karetnikov在2013年为GNU Guix设计的图标的源文件（SVG）都保存在<1>guix-artwork</1>仓库里。"
+msgstr ""
+"这些图标和其衍生图标、其它 GNU Guix 项目分部使用的插图的\n"
+" 源文件（SVG）都保存在<1>guix-artwork</1>仓库里，\n"
+" 里面还包含了 Nikita Karetnikov 在 2013 年为 GNU Guix 设计的图标，\n"
+" 在 2016 年其被金色 GNU 取代。"
 
 #: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
 msgctxt "webpage title"
@@ -1192,14 +1617,16 @@ msgstr "IRC"
 
 #: apps/base/templates/irc.scm:20
 msgid "Internet relay chat."
-msgstr "IRC"
+msgstr "互联网中继聊天。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/irc.scm:23
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|IRC|chat"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|IRC|聊天"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器| IRC | 聊天"
 
 #: apps/base/templates/irc.scm:35
 msgid "IRC"
@@ -1207,13 +1634,18 @@ msgstr "IRC"
 
 #: apps/base/templates/irc.scm:37
 msgid ""
-"Join the <1/> channel on the <2>Freenode IRC network</2> to chat with the "
+"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
 "GNU Guix community or to get help\n"
 "          in real-time. You can use the chat widget below, or just use\n"
 "          the <3>IRC client</3> of your preference. Note that the "
 "conversations that happen\n"
 "          on the <4/> channel are logged (<5>browse the log</5>)."
-msgstr "加入<2>Freenode IRC</2>上的 <1/> 频道，和GNU Guix社区交流或者获取实时帮助。你可以用下面这个聊天小组件，也可以用你喜欢的<3>IRC客户端</3>。注意<4/>频道里的交流是会被存档的（<5>浏览档案</5>）。"
+msgstr ""
+"加入 <2>Libera Chat IRC 网络</2>上的 <1/> 频道，和 GNU Guix 社区交流或者获取"
+"实时帮助。\n"
+" 您可以使用下方的聊天小组件，或者就用喜欢的 <3>IRC 客户端</3>。请注意我们会记"
+"录\n"
+" <4/> 频道里的交流过程（<5>浏览日志</5>）。"
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -1222,7 +1654,7 @@ msgstr "菜单"
 
 #: apps/base/templates/menu.scm:17
 msgid "Website menu."
-msgstr "网站菜单"
+msgstr "网站菜单。"
 
 #: apps/base/templates/menu.scm:24
 msgctxt "website menu"
@@ -1239,14 +1671,18 @@ msgid ""
 "Important information about getting security updates\n"
 "   for your GNU Guix installation, and instructions on how\n"
 "   to report security issues."
-msgstr "关于怎么为GNU Guix获取安全更新和怎么报告安全问题的重要信息。"
+msgstr ""
+"有关如何为 GNU Guix 获取安全更新的重要信息，\n"
+" 以及如何报告安全问题的指引。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/security.scm:26
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Security updates"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|安全更新"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器 | 安全更新"
 
 #: apps/base/templates/security.scm:36
 msgid "Security"
@@ -1254,7 +1690,7 @@ msgstr "安全"
 
 #: apps/base/templates/security.scm:38
 msgid "How to report security issues"
-msgstr "怎么报告安全问题"
+msgstr "如何报告安全问题"
 
 #: apps/base/templates/security.scm:39
 msgid ""
@@ -1262,7 +1698,10 @@ msgid ""
 "           packages it provides, you can write to the private mailing list "
 "<1/>.  This list is monitored by a\n"
 "           small team of Guix developers."
-msgstr "如果想报告Guix自身或它提供的软件包的安全问题，你可以发邮件到这个私密邮件列表<1/>。这个邮件列表只有一小部分Guix开发者才能看到。"
+msgstr ""
+"如果想报告 Guix 自身或提供的软件包的安全问题，\n"
+" 您可以发邮件到这个私密邮件列表 <1/>。\n"
+" 这个邮件列表只由一小部分 Guix 开发者监管。"
 
 #: apps/base/templates/security.scm:46
 msgid ""
@@ -1270,24 +1709,29 @@ msgid ""
 "           please send it to one of the following Guix developers using "
 "their\n"
 "           respective OpenPGP key:"
-msgstr "如果你想使用OpenPGP加密邮件，请用下面这些Guix开发者的OpenPGP公钥加密并发送给对应的人："
+msgstr ""
+"如果想使用 OpenPGP 加密报告邮件，\n"
+" 请使用下列 Guix 开发者的 OpenPGP 公钥加密并发送给相应的人："
 
-#: apps/base/templates/security.scm:65
+#: apps/base/templates/security.scm:67
 msgid "Release signatures"
 msgstr "发布签名"
 
-#: apps/base/templates/security.scm:66
+#: apps/base/templates/security.scm:68
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
 "html</2.2></2> their downloads before extracting or running them."
-msgstr "Guix发布的版本使用这个OpenPGP私钥签名：<1/>。用户应该在解压和运行之前<2>验证<2.1>zh-cn</2.1><2.2>Er-Jin-Zhi-WenJian-An-Zhuang-.html</2.2></2>压缩包的签名。"
+msgstr ""
+"Guix发布的版本使用这个OpenPGP私钥签名：<1/>。用户应该在解压和运行之前<2>验证"
+"<2.1>zh-cn</2.1><2.2>Er-Jin-Zhi-WenJian-An-Zhuang-.html</2.2></2>压缩包的签"
+"名。"
 
-#: apps/base/templates/security.scm:78
+#: apps/base/templates/security.scm:80
 msgid "Security updates"
 msgstr "安全更新"
 
-#: apps/base/templates/security.scm:79
+#: apps/base/templates/security.scm:81
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1295,14 +1739,20 @@ msgid ""
 "appropriate, a security advisory is published on the blog with the "
 "<2>Security Advisory tag</2> and on the <3><3.1>info-guix</3.1> mailing "
 "list</3>; <4/> may also display the advisory."
-msgstr "当在Guix或它提供的软件包里发现安全问题时，我们会及时提供<1>安全更新<1.1>zh-cn</1.1><1.2>An-Quan-Geng-Xin-.html</1.2></1>，并最小化对用户的影响。合适时，还会在博客和<3><3.1>info-guix</3.1>邮件列表</3>上发布安全公告，并打上<2>安全公告标签</2>。<4/>也会展示相关公告。"
+msgstr ""
+"当在Guix或它提供的软件包里发现安全问题时，我们会及时提供<1>安全更新<1.1>zh-"
+"cn</1.1><1.2>An-Quan-Geng-Xin-.html</1.2></1>，并最小化对用户的影响。合适时，"
+"还会在博客和<3><3.1>info-guix</3.1>邮件列表</3>上发布安全公告，并打上<2>安全"
+"公告标签</2>。<4/>也会展示相关公告。"
 
-#: apps/base/templates/security.scm:94
+#: apps/base/templates/security.scm:96
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
 "receives security fixes."
-msgstr "Guix使用“滚动发行”模式。所有的安全更新都直接推到主分支上。我们没有只接受安全更新的“稳定”分支。"
+msgstr ""
+"Guix使用“滚动发行”模式。所有的安全更新都直接推到主分支上。我们没有只接受安全"
+"更新的“稳定”分支。"
 
 #: apps/blog/templates/components.scm:33 apps/blog/templates/post.scm:46
 msgctxt "SRFI-19 date->string format"
@@ -1316,7 +1766,7 @@ msgstr "…"
 
 #: apps/blog/templates/components.scm:48
 msgid "Blog menu: "
-msgstr "博客菜单："
+msgstr "博客菜单： "
 
 #: apps/blog/templates/components.scm:53
 msgid "Get topic updates"
@@ -1329,7 +1779,7 @@ msgstr "获取博客更新"
 #: apps/blog/templates/components.scm:66
 msgctxt "button"
 msgid "Atom feed"
-msgstr "Atom订阅"
+msgstr "Atom 订阅"
 
 #: apps/blog/templates/components.scm:68
 msgid "Posts by topic"
@@ -1340,12 +1790,12 @@ msgctxt "feed author name"
 msgid "GNU Guix"
 msgstr "GNU Guix"
 
-#: apps/blog/templates/post-list.scm:23 apps/blog/templates/post-list.scm:40
-#: apps/blog/templates/tag.scm:25 apps/blog/templates/tag.scm:45
+#: apps/blog/templates/post-list.scm:23 apps/blog/templates/post-list.scm:41
+#: apps/blog/templates/tag.scm:25 apps/blog/templates/tag.scm:46
 #: apps/packages/templates/detailed-package-list.scm:24
 #: apps/packages/templates/detailed-package-list.scm:47
 #: apps/packages/templates/package-list.scm:24
-#: apps/packages/templates/package-list.scm:44
+#: apps/packages/templates/package-list.scm:45
 msgid "Page <1/>"
 msgstr "第<1/>页"
 
@@ -1357,7 +1807,7 @@ msgstr "博客"
 
 #: apps/blog/templates/post-list.scm:26 apps/blog/templates/post.scm:27
 msgid "Blog posts about GNU Guix."
-msgstr "关于GNU Guix的博客"
+msgstr "关于 GNU Guix 的博客文章。"
 
 #: apps/blog/templates/post.scm:53
 msgid "Related topics:"
@@ -1367,7 +1817,7 @@ msgstr "相关话题："
 msgid "Blog posts about <1/> on GNU Guix."
 msgstr "关于<1/>话题的GNU Guix博客。"
 
-#: apps/blog/templates/tag.scm:54
+#: apps/blog/templates/tag.scm:55
 msgid "Blog — "
 msgstr "博客 - "
 
@@ -1393,7 +1843,7 @@ msgstr "GNU Guix <1/> QEMU镜像"
 
 #: apps/download/data.scm:38
 msgid "QCOW2 virtual machine (VM) image."
-msgstr "QCOW2虚拟机镜像。"
+msgstr "QCOW2 虚拟机镜像。"
 
 #. TRANSLATORS: Running Guix in a VM is a section name in the
 #. English (en) manual.
@@ -1404,43 +1854,45 @@ msgstr "<1>zh-cn</1>Zai-Xu-Ni-Ji-Li-Yun-Xing-Guix.html"
 #: apps/download/data.scm:49
 msgctxt "download page title"
 msgid "GNU Guix <1/> Binary"
-msgstr "GNU Guix <1/>二进制文件"
+msgstr "GNU Guix <1/> 二进制文件"
 
-#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:67
+#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:87
 msgid ""
 "Self-contained tarball providing binaries for Guix and its\n"
 "       dependencies, to be installed on top of your Linux-based system."
-msgstr "包括Guix和相关依赖的二进制文件压缩包。可以安装在你的Linux系统上。"
+msgstr ""
+"自包含的 tarball 压缩包提供 Guix 和其依赖的二进制文件，\n"
+" 可安装在基于 Linux 的系统之上。"
 
 #. TRANSLATORS: Binary Installation is a section name in the
 #. English (en) manual.
-#: apps/download/data.scm:64
+#: apps/download/data.scm:65
 msgid "<1>en</1>Binary-Installation.html"
 msgstr "<1>zh-cn</1>Er-Jin-Zhi-WenJian-An-Zhuang-.html"
 
-#: apps/download/data.scm:68
+#: apps/download/data.scm:69
 msgctxt "download page title"
 msgid "GNU Guix <1/> Source"
 msgstr "GNU Guix <1/>源代码"
 
-#: apps/download/data.scm:69
+#: apps/download/data.scm:70
 msgid "Source code distribution."
 msgstr "发布的源代码。"
 
 #. TRANSLATORS: Requirements is a section name in the English (en)
 #. manual.
-#: apps/download/data.scm:76
+#: apps/download/data.scm:77
 msgid "<1>en</1>Requirements.html"
 msgstr "<1>zh-cn</1>Xu-Qiu-.html"
 
 #: apps/download/templates/components.scm:25
-#: apps/download/templates/download-latest.scm:102
+#: apps/download/templates/download-latest.scm:120
 msgid "Download options:"
 msgstr "下载选项："
 
 #: apps/download/templates/components.scm:38
 msgid "Signatures: "
-msgstr "签名："
+msgstr "签名： "
 
 #: apps/download/templates/components.scm:50
 msgid "<1>Installation instructions</1>."
@@ -1455,16 +1907,20 @@ msgstr "下载"
 msgid ""
 "Installers and source files for GNU Guix.  GNU Guix can be\n"
 "   installed on different GNU/Linux distributions."
-msgstr "GNU Guix的安装包和源代码。GNU Guix可以安装在不同的GNU/Linux发行版上。"
+msgstr ""
+"GNU Guix 的安装包和源代码。GNU Guix 可以安装在\n"
+" 各种不同的 GNU/Linux 发行版上。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/download/templates/download.scm:40
-#: apps/download/templates/download-latest.scm:131
+#: apps/download/templates/download-latest.scm:152
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Installer|Source code|Package manager"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|安装包|源代码|包管理器"
+msgstr ""
+"GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|安装包|源"
+"代码|包管理器"
 
 #: apps/download/templates/download.scm:52
 msgid "Download"
@@ -1480,206 +1936,248 @@ msgid ""
 "and the <4>GNU Shepherd</4> init system. Alternately, GNU Guix\n"
 "          can be installed as an additional package manager on top of an\n"
 "          installed Linux-based system."
-msgstr "<1/>版的Guix系统<2>可以安装<2.1>zh-cn</2.1><2.2>Xi-Tong-An-Zhuang-.html</2.2></2>在i686、x86_64、ARMv7或AArch64机器上。它使用<3>Linux-Libre</3>内核和<4>GNU Shepherd</4> init系统。此外，GNU Guix可以作为额外的包管理器安装在以Linux为内核的系统上。"
+msgstr ""
+"截至 <1/> 版本，独立的 Guix 系统<2>可以安装<2.1>zh-cn</2.1><2.2>Xi-Tong-An-"
+"Zhuang-.html</2.2></2>\n"
+" 在 i686、x86_64、ARMv7 或 AArch64 架构的机器上。\n"
+" 它使用 <3>Linux-Libre</3> 内核和 <4>GNU Shepherd</4> init 系统。此外，\n"
+" GNU Guix 可以作为额外的包管理器安装在 Linux 内核的系统上。"
 
 #: apps/download/templates/download.scm:74
 msgid ""
 "Source code and binaries for the Guix System distribution ISO\n"
 "          image as well as GNU Guix can be found on the GNU servers at <1/"
 ">.  Older releases can still be found on <2/>."
-msgstr "Guix系统发行版ISO镜像的源代码和二进制文件可以从GNU服务器下载：<1/>。更老的版本在：<2/>。"
+msgstr ""
+"Guix 系统发行版的 ISO 映像和 GNU Guix 的源代码和二进制文件可以从 GNU 服务器下"
+"载：<1/>。\n"
+" 更早的版本可在 <2/> 上找到。"
 
-#: apps/download/templates/download-latest.scm:50
+#: apps/download/templates/download-latest.scm:68
 msgctxt "download page title"
 msgid "GNU Guix System on Linux"
-msgstr "以Linux为内核的GNU Guix系统"
+msgstr "以 Linux 为内核的 GNU Guix 系统"
 
-#: apps/download/templates/download-latest.scm:51
+#: apps/download/templates/download-latest.scm:69
 msgid "USB/DVD ISO installer of the standalone Guix System on Linux."
-msgstr "Guix/Linux系统的USB/DVD ISO安装包。"
+msgstr "Linux 内核的独立 Guix 系统的 USB/DVD ISO 安装包。"
 
-#: apps/download/templates/download-latest.scm:58
+#: apps/download/templates/download-latest.scm:77
 msgctxt "download page title"
 msgid "GNU Guix System on GNU Hurd"
-msgstr "以GNU Hurd为内核的GNU Guix系统"
+msgstr "以 GNU Hurd 为内核的 GNU Guix 系统"
 
-#: apps/download/templates/download-latest.scm:59
+#: apps/download/templates/download-latest.scm:78
 msgid "Virtual machine image of the standalone Guix System on GNU Hurd."
-msgstr "Guix/Hurd系统的虚拟机镜像。"
+msgstr "GNU Hurd 内核的独立 Guix 系统的虚拟机映像。"
 
-#: apps/download/templates/download-latest.scm:66
+#: apps/download/templates/download-latest.scm:86
 msgctxt "download page title"
 msgid "GNU Guix binary"
-msgstr "GNU Guix二进制文件"
+msgstr "GNU Guix 二进制文件"
 
-#: apps/download/templates/download-latest.scm:111
+#: apps/download/templates/download-latest.scm:96
+#, fuzzy
+#| msgctxt "download page title"
+#| msgid "GNU Guix System on Linux"
+msgctxt "download page title"
+msgid "GNU Guix System on Linux for Pinebook Pro"
+msgstr "以 Linux 为内核的 GNU Guix 系统"
+
+#: apps/download/templates/download-latest.scm:97
+msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
+msgstr ""
+
+#: apps/download/templates/download-latest.scm:130
 msgid "Build details: "
-msgstr "构建详情："
+msgstr "构建详情： "
 
-#: apps/download/templates/download-latest.scm:125
+#: apps/download/templates/download-latest.scm:146
 msgctxt "webpage title"
 msgid "Download latest"
 msgstr "下载最新版"
 
-#: apps/download/templates/download-latest.scm:127
+#: apps/download/templates/download-latest.scm:148
 msgid ""
 "Download latest GNU Guix System images built by the Cuirass continuous\n"
 "integration system."
-msgstr "下载Cuirass持续集成系统构建的最新版GNU Guix系统镜像。"
+msgstr ""
+"下载由 Cuirass 持续集成系统构建的\n"
+"最新版 GNU Guix 系统映像。"
 
-#: apps/download/templates/download-latest.scm:144
+#: apps/download/templates/download-latest.scm:166
 msgid "Download latest images"
-msgstr "下载最新版镜像"
+msgstr "下载最新版映像"
 
 #. TRANSLATORS: Continuous Integration is a section name
 #. in the English (en) manual.
-#: apps/download/templates/download-latest.scm:147
+#: apps/download/templates/download-latest.scm:169
 msgid ""
 "Download latest GNU Guix System images built by the "
 "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> continuous "
 "integration system at <2/>. These images are <3>development snapshots</3>, "
 "you might prefer to use stable images that can be found <4>here.</4>"
-msgstr "下载<2/>上的<1>Cuirass<1.1>zh-cn</1.1><1.2>Chi-Xu-Ji-Cheng-.html</1.2></1>持续集成系统构建的最新版GNU Guix系统镜像。这些镜像是<3>开发快照</3>，你可能希望使用<4>这里的</4>稳定版镜像。"
+msgstr ""
+"下载 <2/> 上的 <1>Cuirass<1.1>zh-cn</1.1><1.2>Chi-Xu-Ji-Cheng-."
+"html</1.2></1> 持续集成系统构建的最新版 GNU Guix 系统映像。这些映像是<3>开发"
+"快照</3>，您可能希望使用<4>这里的</4>稳定版镜像。"
 
-#: apps/media/data.scm:25
-msgctxt "video title"
-msgid "Installation from Script"
-msgstr "用脚本安装"
+#: apps/media/data.scm:27 apps/media/data.scm:33 apps/media/data.scm:39
+msgctxt "publication type"
+msgid "Conference paper"
+msgstr ""
 
-#: apps/media/data.scm:28
-msgid ""
-"Explains how to install Guix on distributions not running\n"
-"GNU Guix."
-msgstr "介绍怎么在非GNU Guix系统发行版上安装Guix。"
+#: apps/media/data.scm:31
+msgid "Ludovic Courtès, Ricardo Wurmus"
+msgstr "Ludovic Courtès、Ricardo Wurmus"
 
-#: apps/media/data.scm:36
-msgctxt "video title"
-msgid "Everyday use of GNU Guix, Part One"
-msgstr "在日常中使用GNU Guix，第一篇"
+#: apps/media/data.scm:45 apps/media/data.scm:58
+msgctxt "publication type"
+msgid "Article"
+msgstr ""
 
-#: apps/media/data.scm:39
-msgid ""
-"How to install packages and how to manage software package\n"
-"generations."
-msgstr "怎么安装软件包和怎么管理软件包历史。"
+#: apps/media/data.scm:52 apps/media/data.scm:73
+msgctxt "publication type"
+msgid "Journal article"
+msgstr ""
 
-#: apps/media/data.scm:45
-msgctxt "video title"
-msgid "Everyday use of GNU Guix, Part Two"
-msgstr "在日常中使用GNU Guix，第二篇"
+#: apps/media/data.scm:67
+msgctxt "publication type"
+msgid "Book chapter"
+msgstr ""
 
-#: apps/media/data.scm:48
-msgid "How to upgrade software and how to reclaim storage space."
-msgstr "怎么升级软件和怎么回收存储空间。"
-
-#: apps/media/data.scm:55
-msgctxt "video title"
-msgid "Demonstration of the Guix System graphical installer"
-msgstr "演示Guix系统的图形安装界面"
-
-#: apps/media/data.scm:58
-msgid "Walks you through the graphical installer of GNU Guix System."
-msgstr "带你浏览Guix系统的图形安装界面。"
-
-#: apps/media/data.scm:65
-msgctxt "video title"
-msgid "Asking for help"
-msgstr "寻求帮助"
-
-#: apps/media/data.scm:68
-msgid "How to get help from the Guix community."
-msgstr "怎么从Guix社区寻求帮助。"
-
-#: apps/media/data.scm:74
-msgctxt "video title"
-msgid "Packaging, Part One"
-msgstr "打包，第一篇"
-
-#: apps/media/data.scm:77
-msgid "How to set up a development environment for GNU Guix."
-msgstr "怎么为GNU Guix设置开发环境。"
-
-#: apps/media/data.scm:82
-msgctxt "video title"
-msgid "Packaging, Part Two"
-msgstr "打包，第二篇"
-
-#: apps/media/data.scm:85
-msgid "How to create a package recipe for not yet packaged software."
-msgstr "怎么为还没打包的软件创建软件包。"
-
-#: apps/media/data.scm:90
-msgctxt "video title"
-msgid "Packaging, Part Three"
-msgstr "打包，第三篇"
-
-#: apps/media/data.scm:93
-msgid ""
-"How to submit a package for inclusion in the GNU Guix\n"
-"distribution."
-msgstr "怎么让软件包进入GNU Guix发行版。"
-
-#: apps/media/data.scm:103
+#: apps/media/data.scm:79
 msgctxt "screenshot title"
 msgid "Graphical log-in"
 msgstr "图形登录"
 
-#: apps/media/data.scm:107
+#: apps/media/data.scm:83
 msgid "Graphical log-in screen"
 msgstr "图形登录界面"
 
-#: apps/media/data.scm:110
+#: apps/media/data.scm:86
 msgctxt "screenshot title"
 msgid "GNOME"
 msgstr "GNOME"
 
-#: apps/media/data.scm:114
+#: apps/media/data.scm:90
 msgid "GNOME desktop environment"
-msgstr "GNOME桌面环境"
+msgstr "GNOME 桌面环境"
 
-#: apps/media/data.scm:117
+#: apps/media/data.scm:93
 msgctxt "screenshot title"
 msgid "Xfce"
 msgstr "Xfce"
 
-#: apps/media/data.scm:121
+#: apps/media/data.scm:97
 msgid "Xfce desktop environment"
-msgstr "Xfce桌面环境"
+msgstr "Xfce 桌面环境"
 
-#: apps/media/data.scm:124
+#: apps/media/data.scm:100
 msgctxt "screenshot title"
 msgid "Virtual machine"
 msgstr "虚拟机"
 
-#: apps/media/data.scm:128
+#: apps/media/data.scm:104
 msgid "Virtual machine started with 'guix system vm'"
-msgstr "用“guix system vm”启动虚拟机"
+msgstr "以“guix system vm”启动的虚拟机"
 
-#: apps/media/data.scm:131
+#: apps/media/data.scm:107
 msgctxt "screenshot title"
 msgid "Sway"
 msgstr "Sway"
 
-#: apps/media/data.scm:135
+#: apps/media/data.scm:111
 msgid "Sway window manager running wayland"
-msgstr "运行Wayland的Sway窗口管理器"
+msgstr "运行在 Wayland 上的 Sway 窗口管理器"
 
-#: apps/media/data.scm:138
+#: apps/media/data.scm:114
 msgctxt "screenshot title"
 msgid "Enlightenment"
 msgstr "Enlightenment"
 
-#: apps/media/data.scm:142
+#: apps/media/data.scm:118
 msgid "Enlightenment, Inkscape, and Serbian text"
-msgstr "Enlightenment、Inkscape和Serbian text"
+msgstr "Enlightenment、Inkscape 和 Serbian text"
 
-#: apps/media/templates/components.scm:70
-msgid "Download video: "
-msgstr "下载视频："
+#: apps/media/data.scm:124
+#, fuzzy
+#| msgctxt "video title"
+#| msgid "Everyday use of GNU Guix, Part One"
+msgctxt "video title"
+msgid "SeaGL: Everyday use of Guix"
+msgstr "日常使用 GNU Guix（第一篇）"
 
-#: apps/media/templates/components.scm:101
-msgid "Last updated: <1/>"
-msgstr "最后更新时间：<1/>"
+#: apps/media/data.scm:132
+msgctxt "video title"
+msgid "Bitcoin Build System Security"
+msgstr ""
+
+#: apps/media/data.scm:139
+#, fuzzy
+#| msgid "System Administration"
+msgctxt "video title"
+msgid "Reproducible System Administration with GNU Guix"
+msgstr "系统管理"
+
+#: apps/media/data.scm:146
+msgctxt "video title"
+msgid "Beyond containers: Reproducible software environments with GNU Guix"
+msgstr ""
+
+#: apps/media/templates/components.scm:37
+#: apps/media/templates/components.scm:85
+#: apps/media/templates/components.scm:158 apps/media/templates/video.scm:32
+msgctxt "SRFI-19 date->string format"
+msgid "~b ~d, ~Y"
+msgstr "~Y ~b ~d"
+
+#: apps/media/templates/components.scm:65
+msgid "Playlist: "
+msgstr ""
+
+#: apps/media/templates/components.scm:66
+msgid "Playlist"
+msgstr ""
+
+#. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
+#. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
+#: apps/media/templates/components.scm:73
+#: apps/media/templates/components.scm:203
+msgid "Published <1/> by <2/>"
+msgstr "<1/> 出版，由 <2/> 著"
+
+#. TRANSLATORS: This is a tag that indicates a
+#. publication is scientific.
+#: apps/media/templates/components.scm:100
+msgid "[Scientific]"
+msgstr ""
+
+#. TRANSLATORS: This is a help text indicating a
+#. publication is scientific.
+#: apps/media/templates/components.scm:103
+msgid "Scientific"
+msgstr ""
+
+#. TRANSLATORS: <1/> is a publication type, <2/> is a date, and
+#. <3/> is a list of authors.
+#: apps/media/templates/components.scm:112
+#, fuzzy
+#| msgid "Published <1/> by <2/>"
+msgid "<1/>. Published <2/> by <3/>. "
+msgstr "<1/> 出版，由 <2/> 著"
+
+#. TRANSLATORS: Alternative text indicating that
+#. a video is playing.
+#: apps/media/templates/components.scm:190
+msgid "Playing: "
+msgstr ""
+
+#. TRANSLATORS: Tool tip indicating that a video
+#. is playing.
+#: apps/media/templates/components.scm:194
+msgid "Playing"
+msgstr ""
 
 #: apps/media/templates/screenshot.scm:20
 #: apps/media/templates/screenshots-overview.scm:17
@@ -1689,91 +2187,104 @@ msgstr "截图"
 
 #: apps/media/templates/screenshots-overview.scm:18
 msgid "Overview of all screenshots."
-msgstr "浏览全部截图"
-
-#: apps/media/templates/video.scm:22
-msgctxt "webpage title"
-msgid "Video"
-msgstr "视频"
-
-#: apps/media/templates/video.scm:24 apps/media/templates/video-list.scm:24
-msgid "Video about GNU Guix."
-msgstr "关于GNU Guix的视频。"
+msgstr "浏览全部截图。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/media/templates/video.scm:27 apps/media/templates/video-list.scm:27
+#: apps/media/templates/video.scm:44 apps/media/templates/video-list.scm:32
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Help resources|Videos"
-msgstr "GNU|Linux|Unix|自由软件|自由软件|操作系统|GNU Hurd|GNU Guix包管理器|帮助资源|视频"
+msgstr ""
+"GNU | Linux | Unix | 自由软件 | 自由软件 | 操作系统 | GNU Hurd | GNU Guix 包"
+"管理器 | 帮助资源 | 视频"
 
-#: apps/media/templates/video.scm:45
-msgctxt "button"
-msgid "← Previous"
-msgstr "← 向前"
+#: apps/media/templates/video.scm:74
+msgid "It seems your browser can't read this video."
+msgstr ""
 
-#: apps/media/templates/video.scm:50
-msgctxt "button"
-msgid "Next →"
-msgstr "向后 →"
+#: apps/media/templates/video.scm:76
+#, fuzzy
+#| msgid "Download video: "
+msgid "Download video"
+msgstr "下载视频： "
 
-#: apps/media/templates/video-list.scm:22
+#. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
+#: apps/media/templates/video.scm:87
+#, fuzzy
+#| msgid "Published <1/> by <2/>"
+msgid "Published <1/> by <2/>. "
+msgstr "<1/> 出版，由 <2/> 著"
+
+#: apps/media/templates/video-list.scm:27
 msgctxt "webpage title"
 msgid "Videos"
 msgstr "视频"
 
-#: apps/packages/templates/components.scm:59
+#: apps/media/templates/video-list.scm:29
+#, fuzzy
+#| msgid "Video about GNU Guix."
+msgid "Videos about GNU Guix."
+msgstr "关于 GNU Guix 的视频。"
+
+#: apps/media/templates/video-list.scm:47
+msgid ""
+"The following is a list of videos introducing GNU Guix and its many features "
+"as well as showing how it is used in different fields. These videos come "
+"from different sources; some come from the project itself, some from the "
+"community of users, and some from independent reviewers and organizations."
+msgstr ""
+
+#: apps/packages/templates/components.scm:61
 #: apps/packages/templates/package.scm:56
 msgid "This is a GNU package.  "
-msgstr "这是一个GNU软件包。"
+msgstr "这是一个 GNU 软件包。  "
 
-#: apps/packages/templates/components.scm:66
+#: apps/packages/templates/components.scm:68
 msgid "<1>License:</1> <2/>."
 msgstr "<1>许可证：</1> <2/>。"
 
-#: apps/packages/templates/components.scm:70
+#: apps/packages/templates/components.scm:72
 msgid "<1>Website:</1> <2/>."
 msgstr "<1>网站：</1> <2/>。"
 
-#: apps/packages/templates/components.scm:74
+#: apps/packages/templates/components.scm:76
 msgid "<1>Package source:</1> <2/>."
-msgstr "<1>包的源代码：</1> <2/>。"
+msgstr "<1>软件包源代码：</1> <2/>。"
 
-#: apps/packages/templates/components.scm:78
+#: apps/packages/templates/components.scm:80
 msgid "<1>Patches:</1> <2/>."
 msgstr "<1>补丁：</1> <2/>。"
 
-#: apps/packages/templates/components.scm:82
+#: apps/packages/templates/components.scm:84
 msgid "<1>Lint issues:</1> <2/>."
 msgstr "<1>检查出的问题：</1> <2/>。"
 
-#: apps/packages/templates/components.scm:89
+#: apps/packages/templates/components.scm:91
 msgid "<1>Builds:</1> <2/>."
 msgstr "<1>构建：</1> <2/>。"
 
-#: apps/packages/templates/components.scm:104
+#: apps/packages/templates/components.scm:106
 msgid " issue"
 msgid_plural " issues"
-msgstr[0] "问题"
-msgstr[1] "问题"
-
-#: apps/packages/templates/components.scm:115
-#: apps/packages/templates/components.scm:221
-msgid "Packages menu: "
-msgstr "软件包菜单："
+msgstr[0] " 问题"
 
 #: apps/packages/templates/components.scm:117
-#: apps/packages/templates/components.scm:223
-msgid "Browse alphabetically"
-msgstr "按字典序浏览"
+#: apps/packages/templates/components.scm:224
+msgid "Packages menu: "
+msgstr "软件包菜单： "
 
-#: apps/packages/templates/components.scm:204
+#: apps/packages/templates/components.scm:119
+#: apps/packages/templates/components.scm:226
+msgid "Browse alphabetically"
+msgstr "按字母顺序浏览"
+
+#: apps/packages/templates/components.scm:207
 msgctxt "patches"
 msgid "None"
 msgstr "无"
 
-#: apps/packages/templates/components.scm:270
+#: apps/packages/templates/components.scm:271
 msgctxt "systems"
 msgid "None"
 msgstr "无"
@@ -1791,7 +2302,7 @@ msgstr "软件包"
 #: apps/packages/templates/detailed-package-list.scm:27
 #: apps/packages/templates/index.scm:24
 msgid "List of packages available through GNU Guix."
-msgstr "GNU Guix提供的软件包列表。"
+msgstr "GNU Guix 提供的软件包列表。"
 
 #: apps/packages/templates/detailed-index.scm:45
 #: apps/packages/templates/index.scm:44
@@ -1800,10 +2311,13 @@ msgid ""
 "binaries</2>. These pages provide a complete list of the packages.  Our "
 "<3>continuous integration system</3> shows their current build status "
 "(updated <4/>)."
-msgstr "GNU Guix提供<1/>个软件包，这些软件包可以通过<2>预编译的二进制文件</2>下载。下面这些页面列举了全部的软件包。通过我们的<3>持续集成系统</3>可以查看软件包现在的构建状态。（更新时间：<4/>）"
+msgstr ""
+"GNU Guix 提供 <1/> 个软件包，这些软件包可以通过下载<2>预编译二进制文件</2>获"
+"得。下面这些页面列举了全部的软件包。我们的<3>持续集成系统</3>可以查看软件包当"
+"前构建状态（更新时间：<4/>）。"
 
 #: apps/packages/templates/detailed-package-list.scm:56
-#: apps/packages/templates/package-list.scm:53
+#: apps/packages/templates/package-list.scm:54
 msgid "Packages — "
 msgstr "软件包 - "
 
@@ -1817,7 +2331,7 @@ msgstr "<1>许可证：</1>"
 
 #: apps/packages/templates/package.scm:67
 msgid "<1>Package source: </1>"
-msgstr "<1>包的源代码：</1>"
+msgstr "<1>软件包源代码：</1>"
 
 #: apps/packages/templates/package.scm:69
 msgid "<1>Patches: </1>"
@@ -1831,4 +2345,88 @@ msgstr "<1>构建：</1>"
 msgid ""
 "<1>Lint issues</1><2><2.1/>. See <2.2>package definition</2.2> in Guix "
 "source code.</2>"
-msgstr "<1>检查出的问题：</1><2><2.1/>。见Guix源代码里<2.2>包的定义</2.2></2>。"
+msgstr ""
+"<1>检查出的问题：</1><2><2.1/>。参见 Guix 源代码里的<2.2>软件包定义</2.2>。"
+"</2>"
+
+#~ msgctxt "video title"
+#~ msgid "Installation from Script"
+#~ msgstr "从脚本安装"
+
+#~ msgid ""
+#~ "Explains how to install Guix on distributions not running\n"
+#~ "GNU Guix."
+#~ msgstr "解读如何在非 GNU Guix 系统发行版上安装 Guix。"
+
+#~ msgid ""
+#~ "How to install packages and how to manage software package\n"
+#~ "generations."
+#~ msgstr "如何安装软件包和管理软件包迭代历史。"
+
+#~ msgctxt "video title"
+#~ msgid "Everyday use of GNU Guix, Part Two"
+#~ msgstr "日常使用 GNU Guix（第二篇）"
+
+#~ msgid "How to upgrade software and how to reclaim storage space."
+#~ msgstr "如何升级软件和回收存储空间。"
+
+#~ msgctxt "video title"
+#~ msgid "Demonstration of the Guix System graphical installer"
+#~ msgstr "Guix 系统的图形安装界面演示"
+
+#~ msgid "Walks you through the graphical installer of GNU Guix System."
+#~ msgstr "带您浏览 Guix 系统的图形安装界面。"
+
+#~ msgctxt "video title"
+#~ msgid "Asking for help"
+#~ msgstr "寻求帮助"
+
+#~ msgid "How to get help from the Guix community."
+#~ msgstr "如何从 Guix 社区获取帮助。"
+
+#~ msgctxt "video title"
+#~ msgid "Packaging, Part One"
+#~ msgstr "打包（第一篇）"
+
+#~ msgid "How to set up a development environment for GNU Guix."
+#~ msgstr "如何为 GNU Guix 配置开发环境。"
+
+#~ msgctxt "video title"
+#~ msgid "Packaging, Part Two"
+#~ msgstr "打包（第二篇）"
+
+#~ msgid "How to create a package recipe for not yet packaged software."
+#~ msgstr "如何为还没打包的软件创建软件包。"
+
+#~ msgctxt "video title"
+#~ msgid "Packaging, Part Three"
+#~ msgstr "打包（第三篇）"
+
+#~ msgid ""
+#~ "How to submit a package for inclusion in the GNU Guix\n"
+#~ "distribution."
+#~ msgstr ""
+#~ "如何向 GNU Guix 发行版\n"
+#~ "提交软件包。"
+
+#~ msgid "Last updated: <1/>"
+#~ msgstr "最后更新时间：<1/>"
+
+#~ msgctxt "webpage title"
+#~ msgid "Video"
+#~ msgstr "视频"
+
+#~ msgctxt "button"
+#~ msgid "← Previous"
+#~ msgstr "← 向前"
+
+#~ msgctxt "button"
+#~ msgid "Next →"
+#~ msgstr "向后 →"
+
+#~ msgid ""
+#~ "Online conference November 22nd. Watch the <1>pre-recorded talks</1>."
+#~ "<2>Join us</2>! Learn <3>more</3>!"
+#~ msgstr ""
+#~ "11月22日在线会议。观看<1>提前发布的演讲</1>。<2>加入我们！</2>！了解<3>更"
+#~ "多</3>！"

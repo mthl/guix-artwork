@@ -55,10 +55,6 @@ system|GNU Hurd|GNU Guix package manager|Security updates") #\|)
         (li "Ludovic Courtès"
           (ul (@ (class "mono"))
             (li ,ludovics-key)))
-        (li  "Maxime Devos"
-          (ul (@ (class "mono"))
-              (li (a (@ (href "https://notabug.org/maximed/things/raw/master/Maxime_Devos.pub"))
-                     "C1F3 3EE2 0C52 8FDB 7DD7  011F 49E3 EE22 1917 25EE"))))
         (li "Tobias Geerinckx-Rice"
           (ul (@ (class "mono"))
               (li (a (@ (href "https://www.tobias.gr/gpg/tobias.gr.gpg"))

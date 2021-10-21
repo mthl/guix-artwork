@@ -50,7 +50,8 @@
                    (string<? (package-name p1)
                              (package-name p2))))))
       (cond ((null? packages) '())
-            ((getenv "GUIX_WEB_SITE_LOCAL") (list-head packages 300))
+            ((string=? "yes" (getenv "GUIX_WEB_SITE_LOCAL"))
+             (list-head packages 300))
             (else packages)))))
 
 (define (all-packages)

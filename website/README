@@ -37,6 +37,14 @@ commands:
                           -- haunt build
 #+end_example
 
+Any other value than =GUIX_WEB_SITE_LOCAL=yes= will build the full website
+considering all the packages and not a small subset.  Note that the final
+website is built using the following command:
+
+#+begin_example
+  guix build -f .guix.scm
+#+end_example
+
 ** Serve locally
 #+begin_example
   LANG=en_US.UTF-8 guix environment -CN -m manifest.scm \

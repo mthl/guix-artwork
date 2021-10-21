@@ -2,7 +2,7 @@
 ;;; Copyright © 2017 Ludovic Courtès <ludo@gnu.org>
 ;;; Copyright © 2019 Ricardo Wurmus <rekado@elephly.net>
 ;;; Copyright © 2019 Nicolò Balzarotti <nicolo@nixo.xyz>
-;;; Copyright © 2020 Simon Tournier <zimon.toutoune@gmail.com>
+;;; Copyright © 2020, 2021 Simon Tournier <zimon.toutoune@gmail.com>
 ;;;
 ;;; Initially written by sirgazil
 ;;; who waives all copyright interest on this file.
@@ -49,11 +49,14 @@
   #:use-module ((guix base64) #:select (base64-encode))
   #:use-module ((guix describe) #:select (current-profile))
   #:use-module ((guix config) #:select (%guix-version))
+  #:use-module (guix gexp)
   #:use-module (json)
   #:use-module (ice-9 match)
   #:use-module ((web uri) #:select (string->uri uri->string))
   #:export (builder))
 
+;;; Required by 'origin->json' for 'computed-origin-method' corner cases
+(define gexp-references (@@ (guix gexp) gexp-references))
 
 ;;;
 ;;; Application builder.
@@ -98,7 +101,7 @@
   (define method
     (origin-method origin))
 
-  (define uri                                     ;represented as string
+  (define uri
     (origin-uri origin))
 
   (define (resolve urls)
@@ -106,53 +109,70 @@
          (append-map (cut maybe-expand-mirrors <> %mirrors)
                      (map string->uri urls))))
 
-  `((type . ,(cond ((or (eq? url-fetch method)
-                        (eq? url-fetch/tarbomb method)
-                        (eq? url-fetch/zipbomb method)) 'url)
-                   ((eq? git-fetch method) 'git)
-                   ((or (eq? svn-fetch method)
-                        (eq? svn-multi-fetch method)) 'svn)
-                   ((eq? hg-fetch method) 'hg)
-                   (else                   #nil)))
-    ,@(cond ((or (eq? url-fetch method)
-                 (eq? url-fetch/tarbomb method)
-                 (eq? url-fetch/zipbomb method))
-             `(("urls" . ,(list->vector
-                           (resolve
-                            (match uri
-                              ((? string? url) (list url))
-                              ((urls ...) urls)))))))
-            ((eq? git-fetch method)
-             `(("git_url" . ,(git-reference-url uri))))
-            ((eq? svn-fetch method)
-             `(("svn_url" . ,(svn-reference-url uri))))
-            ((eq? svn-multi-fetch method)
-             `(("svn_url" . ,(svn-multi-reference-url uri))))
-            ((eq? hg-fetch method)
-             `(("hg_url" . ,(hg-reference-url uri))))
-            (else '()))
-    ,@(if (or (eq? url-fetch method)
-              (eq? url-fetch/tarbomb method)
-              (eq? url-fetch/zipbomb method))
-          (let* ((content-hash (origin-hash origin))
-                 (hash-value (content-hash-value content-hash))
-                 (hash-algorithm (content-hash-algorithm content-hash))
-                 (algorithm-string (symbol->string hash-algorithm)))
-            `(("integrity" . ,(string-append algorithm-string "-"
-                                             (base64-encode hash-value)))))
-          '())
-    ,@(if (eq? method git-fetch)
-          `(("git_ref" . ,(git-reference-commit uri)))
-          '())
-    ,@(if (eq? method svn-fetch)
-          `(("svn_revision" . ,(svn-reference-revision uri)))
-          '())
-    ,@(if (eq? method svn-multi-fetch)
-          `(("svn_revision" . ,(svn-multi-reference-revision uri)))
-          '())
-    ,@(if (eq? method hg-fetch)
-          `(("hg_changeset" . ,(hg-reference-changeset uri)))
-          '())))
+  (if (eq? method (@@ (guix packages) computed-origin-method))
+      ;; Packages in gnu/packages/gnuzilla.scm and gnu/packages/linux.scm
+      ;; represent their 'uri' as 'promise'.
+      (match uri
+        ((? promise? promise)
+         (match (force promise)
+           ((? gexp? g)
+            (append-map origin->json
+                        (filter-map (match-lambda
+                                      ((? gexp-input? thing)
+                                       (match (gexp-input-thing thing)
+                                         ((? origin? o) o)
+                                         (_ #f)))
+                                      (_ #f))
+                                    (gexp-references g))))
+           (_ `((type . #nil))))))
+      ;;Regular packages represent 'uri' as string.
+      `(((type . ,(cond ((or (eq? url-fetch method)
+                              (eq? url-fetch/tarbomb method)
+                              (eq? url-fetch/zipbomb method)) 'url)
+                         ((eq? git-fetch method) 'git)
+                         ((or (eq? svn-fetch method)
+                              (eq? svn-multi-fetch method)) 'svn)
+                         ((eq? hg-fetch method) 'hg)
+                         (else                   #nil)))
+          ,@(cond ((or (eq? url-fetch method)
+                       (eq? url-fetch/tarbomb method)
+                       (eq? url-fetch/zipbomb method))
+                   `(("urls" . ,(list->vector
+                                 (resolve
+                                  (match uri
+                                    ((? string? url) (list url))
+                                    ((urls ...) urls)))))))
+                  ((eq? git-fetch method)
+                   `(("git_url" . ,(git-reference-url uri))))
+                  ((eq? svn-fetch method)
+                   `(("svn_url" . ,(svn-reference-url uri))))
+                  ((eq? svn-multi-fetch method)
+                   `(("svn_url" . ,(svn-multi-reference-url uri))))
+                  ((eq? hg-fetch method)
+                   `(("hg_url" . ,(hg-reference-url uri))))
+                  (else '()))
+          ,@(if (or (eq? url-fetch method)
+                    (eq? url-fetch/tarbomb method)
+                    (eq? url-fetch/zipbomb method))
+                (let* ((content-hash (origin-hash origin))
+                       (hash-value (content-hash-value content-hash))
+                       (hash-algorithm (content-hash-algorithm content-hash))
+                       (algorithm-string (symbol->string hash-algorithm)))
+                  `(("integrity" . ,(string-append algorithm-string "-"
+                                                   (base64-encode hash-value)))))
+                '())
+          ,@(if (eq? method git-fetch)
+                `(("git_ref" . ,(git-reference-commit uri)))
+                '())
+          ,@(if (eq? method svn-fetch)
+                `(("svn_revision" . ,(svn-reference-revision uri)))
+                '())
+          ,@(if (eq? method svn-multi-fetch)
+                `(("svn_revision" . ,(svn-multi-reference-revision uri)))
+                '())
+          ,@(if (eq? method hg-fetch)
+                `(("hg_changeset" . ,(hg-reference-changeset uri)))
+                '())))))
 
 (define (packages-json-builder)
   "Return a JSON page listing all packages."
@@ -167,7 +187,8 @@
       ,@(if cpe-name `(("cpe_name" . ,cpe-name)) '())
       ,@(if cpe-version `(("cpe_version" . ,cpe-version)) '())
       ,@(if (origin? (package-source package))
-            `(("source" . ,(origin->json (package-source package))))
+            `(("source" . ,(list->vector
+                            (origin->json (package-source package)))))
             '())
       ("synopsis" . ,(package-synopsis package))
       ,@(if (package-home-page package)
@@ -195,11 +216,11 @@
   (define (package->json package)
     `(,@(if (origin? (package-source package))
             (origin->json (package-source package))
-            `(("type" . "no-origin")
-              ("name" . ,(package-name package))))))
+            `(((type . "no-origin")
+                ("name" . ,(package-name package)))))))
 
   (make-page "sources.json"
-             `(("sources" . ,(list->vector (map package->json (all-packages))))
+             `(("sources" . ,(list->vector (append-map package->json (all-packages))))
                ("version" . "1")
                ("revision" .
                 ,(match (current-profile)

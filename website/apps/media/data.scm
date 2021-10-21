@@ -115,7 +115,7 @@ Steffen Möller, Geert Smant, Joep de Ligt, Pjotr Prins"
     #:slug "enlightenment"
     #:image (guix-url "static/media/img/enlightenment-inkscape.png")
     #:preview (guix-url "static/media/img/enlightenment-inkscape.mini.png")
-    #:caption (G_ "Enlightenment, Inkscape, and Serbian text"))))
+    #:caption (G_ "Enlightenment, Inkscape, and Cyrillic text"))))
 
 
 (define videos

@@ -111,6 +111,7 @@
           (setvbuf (current-output-port) 'line)
           (setvbuf (current-error-port) 'line)
 
+          (setenv "GUIX_WEB_SITE_LOCAL" "no")
           (copy-recursively #$source ".")
 
           ;; Set 'GUILE_LOAD_PATH' so that Haunt find the Guix modules and

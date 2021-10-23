@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20201005-2\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-08-28 19:01+0200\n"
-"PO-Revision-Date: 2021-08-16 12:19+0000\n"
+"POT-Creation-Date: 2021-10-21 15:18Z\n"
+"PO-Revision-Date: 2021-10-23 06:05+0000\n"
 "Last-Translator: Florian Pelz <pelzflorian@pelzflorian.de>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/guix/"
 "website/de/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.8\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -1799,11 +1799,11 @@ msgstr ""
 "Mail zu übermitteln, senden Sie diese bitte einem der folgenden Guix-"
 "Entwickler unter Nutzung des entsprechenden OpenPGP-Schlüssels:"
 
-#: apps/base/templates/security.scm:67
+#: apps/base/templates/security.scm:63
 msgid "Release signatures"
 msgstr "Signaturen der Veröffentlichungen"
 
-#: apps/base/templates/security.scm:68
+#: apps/base/templates/security.scm:64
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
@@ -1814,11 +1814,11 @@ msgstr ""
 "<2>verifizieren<2.1>de</2.1><2.2>Aus-Binardatei-installieren.html</2.2></2>, "
 "bevor sie diese entpacken oder ausführen."
 
-#: apps/base/templates/security.scm:80
+#: apps/base/templates/security.scm:76
 msgid "Security updates"
 msgstr "Sicherheitsaktualisierungen"
 
-#: apps/base/templates/security.scm:81
+#: apps/base/templates/security.scm:77
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1836,7 +1836,7 @@ msgstr ""
 "eine Nachricht an die <3>Mailing-Liste <3.1>info-guix</3.1></3> versendet. "
 "Der Hinweis kann auch mit <4/> angezeigt werden."
 
-#: apps/base/templates/security.scm:96
+#: apps/base/templates/security.scm:92
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -2073,16 +2073,14 @@ msgid "GNU Guix binary"
 msgstr "Binärdatei von GNU Guix"
 
 #: apps/download/templates/download-latest.scm:96
-#, fuzzy
-#| msgctxt "download page title"
-#| msgid "GNU Guix System on Linux"
 msgctxt "download page title"
 msgid "GNU Guix System on Linux for Pinebook Pro"
-msgstr "GNU Guix System mit Linux"
+msgstr "GNU Guix System mit Linux für Pinebook Pro"
 
 #: apps/download/templates/download-latest.scm:97
 msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
 msgstr ""
+"Guix System mit Linux, minimales bootfähiges rohes Abbild für Pinebook Pro."
 
 #: apps/download/templates/download-latest.scm:130
 msgid "Build details: "
@@ -2197,8 +2195,8 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-msgid "Enlightenment, Inkscape, and Serbian text"
-msgstr "Enlightenment, Inkscape und serbische Schrift"
+msgid "Enlightenment, Inkscape, and Cyrillic text"
+msgstr "Enlightenment, Inkscape und kyrillische Schrift"
 
 #: apps/media/data.scm:124
 msgctxt "video title"
@@ -2211,11 +2209,9 @@ msgid "Bitcoin Build System Security"
 msgstr "Bitcoins Erstellungssystem absichern"
 
 #: apps/media/data.scm:139
-#, fuzzy
-#| msgid "System Administration"
 msgctxt "video title"
 msgid "Reproducible System Administration with GNU Guix"
-msgstr "Systemadministration"
+msgstr "Reproduzierbare Systemadministration mit GNU Guix"
 
 #: apps/media/data.scm:146
 msgctxt "video title"

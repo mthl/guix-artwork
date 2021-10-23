@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210527\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-08-28 19:01+0200\n"
-"PO-Revision-Date: 2021-06-09 13:04+0000\n"
+"POT-Creation-Date: 2021-10-21 15:18Z\n"
+"PO-Revision-Date: 2021-10-23 14:54+0000\n"
 "Last-Translator: Whired Planck <fungdaat31@outlook.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
 "projects/guix/website/zh_Hant/>\n"
@@ -16,14 +16,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 4.8\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
 #. translations for the same language.
 #: apps/base/utils.scm:74
 msgid "English"
-msgstr "簡體中文"
+msgstr "繁體中文"
 
 #: apps/base/templates/home.scm:20
 msgctxt "webpage title"
@@ -153,12 +153,9 @@ msgid "Instructional videos"
 msgstr "指導影片"
 
 #: apps/base/templates/home.scm:156
-#, fuzzy
-#| msgctxt "button"
-#| msgid "ALL POSTS"
 msgctxt "button"
 msgid "ALL VIDEOS"
-msgstr "所有部落格文章"
+msgstr "所有影片"
 
 #: apps/base/templates/home.scm:163
 msgid "GNU Guix in your field"
@@ -272,7 +269,7 @@ msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
 msgstr ""
-"來自人類，用 <1>♥</1 > 製作。由 <2>GNU Guile</2> 驅動。<3>原始碼</3>以 "
+"來自人類，用 <1>♥</1> 製作。由 <2>GNU Guile</2> 驅動。<3>原始碼</3>以 "
 "<4>GNU AGPL</4> 許可證釋出。"
 
 #: apps/base/templates/components.scm:49
@@ -1092,18 +1089,13 @@ msgstr ""
 #. TRANSLATORS: Packaging Guidelines is a section name in the
 #. English (en) manual.
 #: apps/base/templates/contribute.scm:147
-#, fuzzy
-#| msgid ""
-#| "Information on how to add packages to the distribution can\n"
-#| "            be found <1>in the manual<1.1>en</1.1><1.2>Packaging-"
-#| "Guidelines.html</1.2></1>. "
 msgid ""
 "Information on how to add packages to the distribution can\n"
 "            be found <1>in the manual<1.1>en</1.1><1.2>Contributing."
 "html</1.2></1>. "
 msgstr ""
 "關於為發行版打包的資訊可以在\n"
-" <1>使用者手冊<1.1>zh-cn</1.1><1.2>Da-Bao-Zhi-Dao-.html</1.2></1>中找到。 "
+" <1>使用者手冊<1.1>zh-cn</1.1><1.2>Gong-Xian-.html</1.2></1>中找到。 "
 
 #: apps/base/templates/contribute.scm:157
 msgid ""
@@ -1709,11 +1701,11 @@ msgstr ""
 "如果想使用 OpenPGP 加密報告郵件，\n"
 " 請使用下列 Guix 開發者的 OpenPGP 公鑰加密併發送給相應的人："
 
-#: apps/base/templates/security.scm:67
+#: apps/base/templates/security.scm:63
 msgid "Release signatures"
 msgstr "釋出簽名"
 
-#: apps/base/templates/security.scm:68
+#: apps/base/templates/security.scm:64
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
@@ -1723,11 +1715,11 @@ msgstr ""
 "證<2.1>zh-cn</2.1><2.2>Er-Jin-Zhi-WenJian-An-Zhuang-.html</2.2></2>壓縮包的籤"
 "名。"
 
-#: apps/base/templates/security.scm:80
+#: apps/base/templates/security.scm:76
 msgid "Security updates"
 msgstr "安全更新"
 
-#: apps/base/templates/security.scm:81
+#: apps/base/templates/security.scm:77
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1741,7 +1733,7 @@ msgstr ""
 "時，還會在部落格和<3><3.1>info-guix</3.1>郵件列表</3>上釋出安全公告，並打上"
 "<2>安全公告標籤</2>。<4/>也會展示相關公告。"
 
-#: apps/base/templates/security.scm:96
+#: apps/base/templates/security.scm:92
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -1973,16 +1965,13 @@ msgid "GNU Guix binary"
 msgstr "GNU Guix 二進位制檔案"
 
 #: apps/download/templates/download-latest.scm:96
-#, fuzzy
-#| msgctxt "download page title"
-#| msgid "GNU Guix System on Linux"
 msgctxt "download page title"
 msgid "GNU Guix System on Linux for Pinebook Pro"
-msgstr "以 Linux 為核心的 GNU Guix 系統"
+msgstr "適用於 Pinebook Pro 的 Linux 上的 GNU Guix 系統"
 
 #: apps/download/templates/download-latest.scm:97
 msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
-msgstr ""
+msgstr "適用於 Pinebook Pro 的 Linux 核心 Guix 系統可引導基礎映像。"
 
 #: apps/download/templates/download-latest.scm:130
 msgid "Build details: "
@@ -2021,7 +2010,7 @@ msgstr ""
 #: apps/media/data.scm:27 apps/media/data.scm:33 apps/media/data.scm:39
 msgctxt "publication type"
 msgid "Conference paper"
-msgstr ""
+msgstr "會議文章"
 
 #: apps/media/data.scm:31
 msgid "Ludovic Courtès, Ricardo Wurmus"
@@ -2030,17 +2019,17 @@ msgstr "Ludovic Courtès、Ricardo Wurmus"
 #: apps/media/data.scm:45 apps/media/data.scm:58
 msgctxt "publication type"
 msgid "Article"
-msgstr ""
+msgstr "文章"
 
 #: apps/media/data.scm:52 apps/media/data.scm:73
 msgctxt "publication type"
 msgid "Journal article"
-msgstr ""
+msgstr "雜誌文章"
 
 #: apps/media/data.scm:67
 msgctxt "publication type"
 msgid "Book chapter"
-msgstr ""
+msgstr "書本章節"
 
 #: apps/media/data.scm:79
 msgctxt "screenshot title"
@@ -2093,16 +2082,13 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-msgid "Enlightenment, Inkscape, and Serbian text"
-msgstr "Enlightenment、Inkscape 和 Serbian text"
+msgid "Enlightenment, Inkscape, and Cyrillic text"
+msgstr "Enlightenment、Inkscape 和 Cyrillic text"
 
 #: apps/media/data.scm:124
-#, fuzzy
-#| msgctxt "video title"
-#| msgid "Everyday use of GNU Guix, Part One"
 msgctxt "video title"
 msgid "SeaGL: Everyday use of Guix"
-msgstr "日常使用 GNU Guix（第一篇）"
+msgstr "SeaGL：日常使用 Guix"
 
 #: apps/media/data.scm:132
 msgctxt "video title"

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20201117\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-08-28 19:01+0200\n"
+"POT-Creation-Date: 2021-10-21 15:18Z\n"
 "PO-Revision-Date: 2021-04-23 13:02+0000\n"
 "Last-Translator: Emilio Herrera <ehespinosa57@gmail.com>\n"
 "Language-Team: Spanish <https://translate.fedoraproject.org/projects/guix/"
@@ -1876,11 +1876,11 @@ msgstr ""
 "desarrollan\n"
 "           Guix usando su clave OpenPGP  respectivamente:"
 
-#: apps/base/templates/security.scm:67
+#: apps/base/templates/security.scm:63
 msgid "Release signatures"
 msgstr "Firmas de las publicaciones"
 
-#: apps/base/templates/security.scm:68
+#: apps/base/templates/security.scm:64
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
@@ -1890,11 +1890,11 @@ msgstr ""
 "digital es <1/>.  Se deben <2>verificar<2.1>es</2.1><2.2>Instalacion-binaria."
 "html</2.2></2> las descargas antes de su extracción o ejecución."
 
-#: apps/base/templates/security.scm:80
+#: apps/base/templates/security.scm:76
 msgid "Security updates"
 msgstr "Actualizaciones de seguridad"
 
-#: apps/base/templates/security.scm:81
+#: apps/base/templates/security.scm:77
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1913,7 +1913,7 @@ msgstr ""
 
 # FUZZY FUZZY
 # TODO: Rolling release
-#: apps/base/templates/security.scm:96
+#: apps/base/templates/security.scm:92
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -2277,7 +2277,9 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-msgid "Enlightenment, Inkscape, and Serbian text"
+#, fuzzy
+#| msgid "Enlightenment, Inkscape, and Serbian text"
+msgid "Enlightenment, Inkscape, and Cyrillic text"
 msgstr "Enlightenment, Inkscape y texto en serbio"
 
 #: apps/media/data.scm:124

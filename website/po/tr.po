@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210124\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-08-28 19:01+0200\n"
+"POT-Creation-Date: 2021-10-21 15:18Z\n"
 "PO-Revision-Date: 2021-09-06 17:04+0000\n"
 "Last-Translator: Muha Aliss <muhaaliss@gmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/guix/"
@@ -1777,11 +1777,11 @@ msgstr ""
 " lütfen ilgili OpenPGP anahtarını kullanarak aşağıdaki\n"
 " Guix geliştiricilerinden birine gönderin:"
 
-#: apps/base/templates/security.scm:67
+#: apps/base/templates/security.scm:63
 msgid "Release signatures"
 msgstr "Sürüm imzaları"
 
-#: apps/base/templates/security.scm:68
+#: apps/base/templates/security.scm:64
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
@@ -1791,11 +1791,11 @@ msgstr ""
 "Kullanıcılar indirmeden veya çalıştırmadan önce indirmelerini "
 "<2>doğrulamalıdır<2.1>en</2.1><2.2>Binary-Installation.html</2.2></2>."
 
-#: apps/base/templates/security.scm:80
+#: apps/base/templates/security.scm:76
 msgid "Security updates"
 msgstr "Güvenlik güncellemeleri"
 
-#: apps/base/templates/security.scm:81
+#: apps/base/templates/security.scm:77
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1811,7 +1811,7 @@ msgstr ""
 "<3><3.1>info-guix</3.1> posta listesinde bir güvenlik danışma belgesi "
 "yayınlanır; </4> komutu danışma belgesini de görüntüleyebilir."
 
-#: apps/base/templates/security.scm:96
+#: apps/base/templates/security.scm:92
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -2164,7 +2164,9 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-msgid "Enlightenment, Inkscape, and Serbian text"
+#, fuzzy
+#| msgid "Enlightenment, Inkscape, and Serbian text"
+msgid "Enlightenment, Inkscape, and Cyrillic text"
 msgstr "Enlightenment, Inkscape ve Sırpça metin"
 
 #: apps/media/data.scm:124

@@ -10,8 +10,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20201121\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-08-28 19:01+0200\n"
-"PO-Revision-Date: 2021-05-31 13:03+0000\n"
+"POT-Creation-Date: 2021-10-21 15:18Z\n"
+"PO-Revision-Date: 2021-10-23 14:54+0000\n"
 "Last-Translator: Whired Planck <fungdaat31@outlook.com>\n"
 "Language-Team: Chinese (Simplified) <https://translate.fedoraproject.org/"
 "projects/guix/website/zh_CN/>\n"
@@ -20,7 +20,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.6.2\n"
+"X-Generator: Weblate 4.8\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -104,11 +104,10 @@ msgid ""
 "configuration<4.1>en</4.1><4.2>Using-the-Configuration-System.html</4.2></4> "
 "for transparent and reproducible operating systems."
 msgstr ""
-"<1>可靠。</1>Guix<2> 支持<2.1>zh-cn</2.1><2.2>Ruan-Jian-Bao-Guan-Li-."
-"html</2.2></2>事务性的升级和回滚操作、无特权的包管理、<3> 等功能<3.1>zh-"
-"cn</3.1><3.2>Gong-Neng-.html</3.2></3>。作为独立发行版时，Guix 支持通过<4>声"
-"明系统的配置<4.1>zh-cn</4.1><4.2>Shi-Yong-Pei-Zhi-Xi-Tong-.html</4.2></4>来得"
-"到透明的和可复现的操作系统。"
+"<1>可靠。</1>Guix<2> 支持<2.1>zh-cn</2.1><2.2>Ruan-Jian-Bao-Guan-Li-.html</2."
+"2></2>事务性的升级和回滚操作、无特权包管理<3>等功能<3.1>zh-cn</3.1><3.2>Gong-Neng-.html</3."
+"2></3>。作为独立发行版时，Guix 支持通过<4>声明系统的配置<4.1>zh-cn</4.1><4.2>Shi-Yong-Pei-Zhi-Xi-"
+"Tong-.html</4.2></4>来得到透明的和可复现的操作系统。"
 
 #. TRANSLATORS: Defining Packages and System Configuration are
 #. section names in the English (en) manual.
@@ -119,10 +118,10 @@ msgid ""
 "packages<3.1>en</3.1><3.2>Defining-Packages.html</3.2></3> and <4>whole-"
 "system configurations<4.1>en</4.1><4.2>System-Configuration.html</4.2></4>."
 msgstr ""
-"<1>可折腾。</1>Guix 提供 <2>Guile Scheme</2> 编程接口，以及高级嵌入式领域特定"
-"语言（EDSL），透过此您可以<3>定义软件包<3.1>zh-cn</3.1><3.2>Ding-Yi-Ruan-"
-"Jian-Bao-.html</3.2></3>和<4>整个操作系统的配置<4.1>zh-cn</4.1><4.2>Xi-Tong-"
-"Pei-Zhi-.html</4.2></4>。"
+"<1>可扩展。</1>Guix 提供 <2>Guile Scheme</2> "
+"编程接口，以及高级嵌入式领域特定语言（EDSL），透过此您可以<3>定义软件包<3.1>zh-cn</3.1><3.2>Ding-Yi-Ruan-"
+"Jian-Bao-.html</3.2></3>和<4>整个操作系统的配置<4.1>zh-cn</4.1><4.2>Xi-Tong-Pei-Zhi-."
+"html</4.2></4>。"
 
 #: apps/base/templates/home.scm:107
 msgctxt "button"
@@ -157,12 +156,9 @@ msgid "Instructional videos"
 msgstr "指导视频"
 
 #: apps/base/templates/home.scm:156
-#, fuzzy
-#| msgctxt "button"
-#| msgid "ALL POSTS"
 msgctxt "button"
 msgid "ALL VIDEOS"
-msgstr "所有博客文章"
+msgstr "所有视频"
 
 #: apps/base/templates/home.scm:163
 msgid "GNU Guix in your field"
@@ -276,8 +272,7 @@ msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
 msgstr ""
-"来自人类，用 <1>♥</1 > 制作。由 <2>GNU Guile</2> 驱动。<3>源代码</3>以 "
-"<4>GNU AGPL</4> 许可证发布。"
+"来自人类，用 <1>♥</1> 制作。由 <2>GNU Guile</2> 驱动。<3>源代码</3>以 <4>GNU AGPL</4> 许可证发布。"
 
 #: apps/base/templates/components.scm:49
 msgid "Your location:"
@@ -1096,18 +1091,13 @@ msgstr ""
 #. TRANSLATORS: Packaging Guidelines is a section name in the
 #. English (en) manual.
 #: apps/base/templates/contribute.scm:147
-#, fuzzy
-#| msgid ""
-#| "Information on how to add packages to the distribution can\n"
-#| "            be found <1>in the manual<1.1>en</1.1><1.2>Packaging-"
-#| "Guidelines.html</1.2></1>. "
 msgid ""
 "Information on how to add packages to the distribution can\n"
 "            be found <1>in the manual<1.1>en</1.1><1.2>Contributing."
 "html</1.2></1>. "
 msgstr ""
-"关于为发行版打包的信息可以在\n"
-" <1>用户手册<1.1>zh-cn</1.1><1.2>Da-Bao-Zhi-Dao-.html</1.2></1>中找到。 "
+"为发行版打包的相关信息可以在\n"
+" <1>用户手册<1.1>zh-cn</1.1><1.2>Gong-Xian-.html</1.2></1>中找到。 "
 
 #: apps/base/templates/contribute.scm:157
 msgid ""
@@ -1713,11 +1703,11 @@ msgstr ""
 "如果想使用 OpenPGP 加密报告邮件，\n"
 " 请使用下列 Guix 开发者的 OpenPGP 公钥加密并发送给相应的人："
 
-#: apps/base/templates/security.scm:67
+#: apps/base/templates/security.scm:63
 msgid "Release signatures"
 msgstr "发布签名"
 
-#: apps/base/templates/security.scm:68
+#: apps/base/templates/security.scm:64
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
@@ -1727,11 +1717,11 @@ msgstr ""
 "<2.1>zh-cn</2.1><2.2>Er-Jin-Zhi-WenJian-An-Zhuang-.html</2.2></2>压缩包的签"
 "名。"
 
-#: apps/base/templates/security.scm:80
+#: apps/base/templates/security.scm:76
 msgid "Security updates"
 msgstr "安全更新"
 
-#: apps/base/templates/security.scm:81
+#: apps/base/templates/security.scm:77
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1745,7 +1735,7 @@ msgstr ""
 "还会在博客和<3><3.1>info-guix</3.1>邮件列表</3>上发布安全公告，并打上<2>安全"
 "公告标签</2>。<4/>也会展示相关公告。"
 
-#: apps/base/templates/security.scm:96
+#: apps/base/templates/security.scm:92
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -1977,16 +1967,13 @@ msgid "GNU Guix binary"
 msgstr "GNU Guix 二进制文件"
 
 #: apps/download/templates/download-latest.scm:96
-#, fuzzy
-#| msgctxt "download page title"
-#| msgid "GNU Guix System on Linux"
 msgctxt "download page title"
 msgid "GNU Guix System on Linux for Pinebook Pro"
-msgstr "以 Linux 为内核的 GNU Guix 系统"
+msgstr "适用于 Pinebook Pro 的以 Linux 为内核的 GNU Guix 系统"
 
 #: apps/download/templates/download-latest.scm:97
 msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
-msgstr ""
+msgstr "适用于 Pinebook Pro 的 Linux 上的 Guix 系统的可启动基础镜像。"
 
 #: apps/download/templates/download-latest.scm:130
 msgid "Build details: "
@@ -2025,7 +2012,7 @@ msgstr ""
 #: apps/media/data.scm:27 apps/media/data.scm:33 apps/media/data.scm:39
 msgctxt "publication type"
 msgid "Conference paper"
-msgstr ""
+msgstr "会议文章"
 
 #: apps/media/data.scm:31
 msgid "Ludovic Courtès, Ricardo Wurmus"
@@ -2034,17 +2021,17 @@ msgstr "Ludovic Courtès、Ricardo Wurmus"
 #: apps/media/data.scm:45 apps/media/data.scm:58
 msgctxt "publication type"
 msgid "Article"
-msgstr ""
+msgstr "文章"
 
 #: apps/media/data.scm:52 apps/media/data.scm:73
 msgctxt "publication type"
 msgid "Journal article"
-msgstr ""
+msgstr "期刊文章"
 
 #: apps/media/data.scm:67
 msgctxt "publication type"
 msgid "Book chapter"
-msgstr ""
+msgstr "书籍章节"
 
 #: apps/media/data.scm:79
 msgctxt "screenshot title"
@@ -2097,33 +2084,28 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-msgid "Enlightenment, Inkscape, and Serbian text"
-msgstr "Enlightenment、Inkscape 和 Serbian text"
+msgid "Enlightenment, Inkscape, and Cyrillic text"
+msgstr "Enlightenment、Inkscape 和 Cyrillic text"
 
 #: apps/media/data.scm:124
-#, fuzzy
-#| msgctxt "video title"
-#| msgid "Everyday use of GNU Guix, Part One"
 msgctxt "video title"
 msgid "SeaGL: Everyday use of Guix"
-msgstr "日常使用 GNU Guix（第一篇）"
+msgstr "SeaGL: 日常使用 Guix"
 
 #: apps/media/data.scm:132
 msgctxt "video title"
 msgid "Bitcoin Build System Security"
-msgstr ""
+msgstr "比特币构建系统安全"
 
 #: apps/media/data.scm:139
-#, fuzzy
-#| msgid "System Administration"
 msgctxt "video title"
 msgid "Reproducible System Administration with GNU Guix"
-msgstr "系统管理"
+msgstr "使用 GNU Guix 进行可复现的系统管理"
 
 #: apps/media/data.scm:146
 msgctxt "video title"
 msgid "Beyond containers: Reproducible software environments with GNU Guix"
-msgstr ""
+msgstr "超越容器：利用 GNU Guix 打造可复现的软件环境"
 
 #: apps/media/templates/components.scm:37
 #: apps/media/templates/components.scm:85
@@ -2134,11 +2116,11 @@ msgstr "~Y ~b ~d"
 
 #: apps/media/templates/components.scm:65
 msgid "Playlist: "
-msgstr ""
+msgstr "播放列表： "
 
 #: apps/media/templates/components.scm:66
 msgid "Playlist"
-msgstr ""
+msgstr "播放列表"
 
 #. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
 #. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
@@ -2151,33 +2133,31 @@ msgstr "<1/> 出版，由 <2/> 著"
 #. publication is scientific.
 #: apps/media/templates/components.scm:100
 msgid "[Scientific]"
-msgstr ""
+msgstr "[科学]"
 
 #. TRANSLATORS: This is a help text indicating a
 #. publication is scientific.
 #: apps/media/templates/components.scm:103
 msgid "Scientific"
-msgstr ""
+msgstr "科学"
 
 #. TRANSLATORS: <1/> is a publication type, <2/> is a date, and
 #. <3/> is a list of authors.
 #: apps/media/templates/components.scm:112
-#, fuzzy
-#| msgid "Published <1/> by <2/>"
 msgid "<1/>. Published <2/> by <3/>. "
-msgstr "<1/> 出版，由 <2/> 著"
+msgstr "<1/>，发布于 <2/> ，作者 <3/>。 "
 
 #. TRANSLATORS: Alternative text indicating that
 #. a video is playing.
 #: apps/media/templates/components.scm:190
 msgid "Playing: "
-msgstr ""
+msgstr "正在播放： "
 
 #. TRANSLATORS: Tool tip indicating that a video
 #. is playing.
 #: apps/media/templates/components.scm:194
 msgid "Playing"
-msgstr ""
+msgstr "正在播放"
 
 #: apps/media/templates/screenshot.scm:20
 #: apps/media/templates/screenshots-overview.scm:17
@@ -2201,20 +2181,16 @@ msgstr ""
 
 #: apps/media/templates/video.scm:74
 msgid "It seems your browser can't read this video."
-msgstr ""
+msgstr "看起来您的浏览器不能读取此视频。"
 
 #: apps/media/templates/video.scm:76
-#, fuzzy
-#| msgid "Download video: "
 msgid "Download video"
-msgstr "下载视频： "
+msgstr "下载视频"
 
 #. TRANSLATORS: <1/> is a date, <2/> is a list of authors.
 #: apps/media/templates/video.scm:87
-#, fuzzy
-#| msgid "Published <1/> by <2/>"
 msgid "Published <1/> by <2/>. "
-msgstr "<1/> 出版，由 <2/> 著"
+msgstr "发布于 <1/> ，作者 <2/>。 "
 
 #: apps/media/templates/video-list.scm:27
 msgctxt "webpage title"
@@ -2222,8 +2198,6 @@ msgid "Videos"
 msgstr "视频"
 
 #: apps/media/templates/video-list.scm:29
-#, fuzzy
-#| msgid "Video about GNU Guix."
 msgid "Videos about GNU Guix."
 msgstr "关于 GNU Guix 的视频。"
 
@@ -2234,6 +2208,9 @@ msgid ""
 "from different sources; some come from the project itself, some from the "
 "community of users, and some from independent reviewers and organizations."
 msgstr ""
+"下列视频介绍了 GNU Guix 以及其众多功能并将之用于不同的领域。这些视频有不同的"
+"来源，一些来自项目本身，另一些来自社区的用户，还有一些来自独立的评测者和组"
+"织。"
 
 #: apps/packages/templates/components.scm:61
 #: apps/packages/templates/package.scm:56

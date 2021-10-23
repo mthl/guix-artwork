@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210222\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-08-28 19:01+0200\n"
-"PO-Revision-Date: 2021-08-31 06:25+0000\n"
+"POT-Creation-Date: 2021-10-21 15:18Z\n"
+"PO-Revision-Date: 2021-10-23 06:05+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/guix/"
 "website/ko/>\n"
@@ -1758,11 +1758,11 @@ msgstr ""
 " 그들 각자의 OpenPGP 키를 사용하여 다음 Guix 개발자 중에 한 명에게\n"
 " 이를 전송해주기 바랍니다:"
 
-#: apps/base/templates/security.scm:67
+#: apps/base/templates/security.scm:63
 msgid "Release signatures"
 msgstr "출시 서명"
 
-#: apps/base/templates/security.scm:68
+#: apps/base/templates/security.scm:64
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
@@ -1772,11 +1772,11 @@ msgstr ""
 "기 또는 이를 동작 하기 전에 <2>검증<2.1>en</2.1><2.2>Binary-Installation."
 "html</2.2></2>을 내려받기 하여야 합니다."
 
-#: apps/base/templates/security.scm:80
+#: apps/base/templates/security.scm:76
 msgid "Security updates"
 msgstr "보안 최신화"
 
-#: apps/base/templates/security.scm:81
+#: apps/base/templates/security.scm:77
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1791,7 +1791,7 @@ msgstr ""
 "권고 태그</2>와 <3><3.1>info-guix</3.1> 전자우편 목록</3>에서 함께 블로그에 "
 "게시됩니다 ;<4/>는 또한 권고를 표시 할 수도 있습니다."
 
-#: apps/base/templates/security.scm:96
+#: apps/base/templates/security.scm:92
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -2144,8 +2144,8 @@ msgid "Enlightenment"
 msgstr "인라이트먼트(Enlightenment)"
 
 #: apps/media/data.scm:118
-msgid "Enlightenment, Inkscape, and Serbian text"
-msgstr "인라이트먼트, 잉크스페이스, 그리고 세르비아어 문서"
+msgid "Enlightenment, Inkscape, and Cyrillic text"
+msgstr "인라이트먼트, 잉크스페이스, 그리고 키릴 문서"
 
 #: apps/media/data.scm:124
 msgctxt "video title"

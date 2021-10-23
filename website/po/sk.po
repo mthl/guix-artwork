@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210222\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-08-28 19:01+0200\n"
+"POT-Creation-Date: 2021-10-21 15:18Z\n"
 "PO-Revision-Date: 2021-08-10 14:04+0000\n"
 "Last-Translator: Marek Felšöci <marek@felsoci.sk>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/guix/"
@@ -1800,11 +1800,11 @@ msgstr ""
 "použitím\n"
 "           jeho OpenPGP kľúča:"
 
-#: apps/base/templates/security.scm:67
+#: apps/base/templates/security.scm:63
 msgid "Release signatures"
 msgstr "Podpisovanie vydaní"
 
-#: apps/base/templates/security.scm:68
+#: apps/base/templates/security.scm:64
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
@@ -1815,11 +1815,11 @@ msgstr ""
 "Installation.html</2.2></2> stiahnutých súborov pred rozbalením alebo "
 "spustením."
 
-#: apps/base/templates/security.scm:80
+#: apps/base/templates/security.scm:76
 msgid "Security updates"
 msgstr "Bezpečnostné aktualizácie"
 
-#: apps/base/templates/security.scm:81
+#: apps/base/templates/security.scm:77
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1836,7 +1836,7 @@ msgstr ""
 "konferencii <3><3.1>info-guix</3.1></3>; <4/> tiež môže zobrazovať "
 "bezpečnostné upozornenia."
 
-#: apps/base/templates/security.scm:96
+#: apps/base/templates/security.scm:92
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -2193,7 +2193,9 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-msgid "Enlightenment, Inkscape, and Serbian text"
+#, fuzzy
+#| msgid "Enlightenment, Inkscape, and Serbian text"
+msgid "Enlightenment, Inkscape, and Cyrillic text"
 msgstr "Enlightenment, Inkscape a ukážka textu v srbčine"
 
 #: apps/media/data.scm:124

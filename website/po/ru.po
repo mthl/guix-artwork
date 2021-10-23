@@ -4,13 +4,14 @@
 # Arisetta <arisuchr@riseup.net>, 2021.
 # Iosilevitch Mihail <yosik@cock.li>, 2021.
 # Mikhail Kirillov <w96k@riseup.net>, 2021.
+# Igor Gorbounov <igor.gorbounov@gmail.com>, 2021.
 msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210222\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-08-28 19:01+0200\n"
-"PO-Revision-Date: 2021-04-07 15:02+0000\n"
-"Last-Translator: Mikhail Kirillov <w96k@riseup.net>\n"
+"POT-Creation-Date: 2021-10-21 15:18Z\n"
+"PO-Revision-Date: 2021-10-11 19:05+0000\n"
+"Last-Translator: Igor Gorbounov <igor.gorbounov@gmail.com>\n"
 "Language-Team: Russian <https://translate.fedoraproject.org/projects/guix/"
 "website/ru/>\n"
 "Language: ru\n"
@@ -19,7 +20,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
 "%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 4.5.3\n"
+"X-Generator: Weblate 4.8\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -162,12 +163,9 @@ msgid "Instructional videos"
 msgstr "Видео-инструкции"
 
 #: apps/base/templates/home.scm:156
-#, fuzzy
-#| msgctxt "button"
-#| msgid "ALL POSTS"
 msgctxt "button"
 msgid "ALL VIDEOS"
-msgstr "ВСЕ СТАТЬИ"
+msgstr "ВСЕ ВИДЕО"
 
 #: apps/base/templates/home.scm:163
 msgid "GNU Guix in your field"
@@ -339,25 +337,22 @@ msgstr "Помощь"
 #: apps/base/templates/components.scm:415
 msgctxt "website menu"
 msgid "All"
-msgstr ""
+msgstr "Всё"
 
 #: apps/base/templates/components.scm:418
-#, fuzzy
 msgctxt "website menu"
 msgid "GNU Guix Manual (stable)"
-msgstr "Мануал GNU Guix"
+msgstr "Руководство по GNU Guix (стабильная версия)"
 
 #: apps/base/templates/components.scm:421
-#, fuzzy
 msgctxt "website menu"
 msgid "GNU Guix Manual (latest)"
-msgstr "Мануал GNU Guix"
+msgstr "Руководство по GNU Guix (последняя версия)"
 
 #: apps/base/templates/components.scm:424
-#, fuzzy
 msgctxt "website menu"
 msgid "Guix Reference Card"
-msgstr "Получить шпаргалку по Guix"
+msgstr "Справочная карта по Guix"
 
 #: apps/base/templates/components.scm:427
 #: apps/base/templates/components.scm:454 apps/media/templates/video.scm:46
@@ -370,27 +365,24 @@ msgstr "Видео"
 #: apps/base/templates/components.scm:430
 msgctxt "website menu"
 msgid "Cookbook"
-msgstr ""
+msgstr "Справочник"
 
 #: apps/base/templates/components.scm:433
-#, fuzzy
 msgctxt "website menu"
 msgid "GNU Manuals"
-msgstr "Мануалы GNU"
+msgstr "Руководства по GNU"
 
 #: apps/base/templates/components.scm:437
 msgctxt "website menu"
 msgid "Wiki"
-msgstr ""
+msgstr "Вики"
 
 #: apps/base/templates/components.scm:440
-#, fuzzy
 msgctxt "website menu"
 msgid "IRC Chat"
 msgstr "Чат IRC"
 
 #: apps/base/templates/components.scm:443
-#, fuzzy
 msgctxt "website menu"
 msgid "Mailing Lists"
 msgstr "Cписки рассылки"
@@ -430,11 +422,9 @@ msgid "Screenshots"
 msgstr "Скриншоты"
 
 #: apps/base/templates/components.scm:460
-#, fuzzy
-#| msgid "Your location:"
 msgctxt "website menu"
 msgid "Publications"
-msgstr "Ваше местоположение:"
+msgstr "Публикации:"
 
 #: apps/base/templates/components.scm:462 apps/base/templates/donate.scm:26
 #: apps/base/templates/donate.scm:29
@@ -613,18 +603,13 @@ msgid "IRC Channel"
 msgstr "Канал IRC"
 
 #: apps/base/data.scm:26
-#, fuzzy
-#| msgid ""
-#| "Join the <1/> channel on the Freenode IRC network to chat\n"
-#| "       with the community about GNU Guix or to get help in\n"
-#| "       real-time."
 msgid ""
 "Join the <1/> channel on the Libera Chat IRC network to\n"
 "chat with the community about GNU Guix or to get help in real-time."
 msgstr ""
-"Присоединяйтесь <1/> к каналу в IRC-сети Freenode, чтобы общаться\n"
-" с сообществом о GNU Guix или, чтобы получать помощь в\n"
-" реальном времени."
+"Присоединяйтесь к <1/> каналу в IRC-сети Libera Chat, чтобы\n"
+"общаться с сообществом о GNU Guix или для получения помощи в\n"
+"реальном времени."
 
 #: apps/base/data.scm:34
 msgid "Info Mailing List"
@@ -719,7 +704,7 @@ msgstr ""
 
 #: apps/base/data.scm:175
 msgid "Commits Mailing List"
-msgstr ""
+msgstr "Список рассылки с уведомлениями о коммитах"
 
 #: apps/base/data.scm:177
 msgid "Notifications of commits made to the <1>Git repositories</1>."
@@ -1637,22 +1622,22 @@ msgid ""
 "           respective OpenPGP key:"
 msgstr ""
 
-#: apps/base/templates/security.scm:67
+#: apps/base/templates/security.scm:63
 msgid "Release signatures"
 msgstr ""
 
-#: apps/base/templates/security.scm:68
+#: apps/base/templates/security.scm:64
 msgid ""
 "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
 ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
 "html</2.2></2> their downloads before extracting or running them."
 msgstr ""
 
-#: apps/base/templates/security.scm:80
+#: apps/base/templates/security.scm:76
 msgid "Security updates"
 msgstr "Обновления безопасности"
 
-#: apps/base/templates/security.scm:81
+#: apps/base/templates/security.scm:77
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1662,7 +1647,7 @@ msgid ""
 "list</3>; <4/> may also display the advisory."
 msgstr ""
 
-#: apps/base/templates/security.scm:96
+#: apps/base/templates/security.scm:92
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -1990,7 +1975,7 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-msgid "Enlightenment, Inkscape, and Serbian text"
+msgid "Enlightenment, Inkscape, and Cyrillic text"
 msgstr ""
 
 #: apps/media/data.scm:124

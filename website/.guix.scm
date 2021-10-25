@@ -51,6 +51,12 @@
               #:recursive? #t
               #:select? (git-predicate this-directory)))
 
+(define po-directory
+  (local-file (string-append this-directory "/po")
+              "guix-web-site-po-files"
+              #:recursive? #t
+              #:select? (git-predicate this-directory)))
+
 (define root-path
   (getenv "GUIX_WEB_SITE_ROOT_PATH"))
 
@@ -93,6 +99,59 @@
     (inputs
      `(("guile" ,(inferior-package "guile"))
        ,@(package-inputs haunt)))))
+
+(define (lingua-mo-files lingua)
+  "Return a directory containing .mo files for LINGUA."
+  (define build
+    (with-imported-modules '((guix build utils))
+      #~(begin
+          (use-modules (guix build utils))
+
+          (define lingua
+            #$lingua)
+
+          (define msgfmt
+            #+(file-append
+               (specification->package "gettext-minimal")
+               "/bin/msgfmt"))
+
+          (define (create-mo filename)
+            (invoke msgfmt filename
+                    "-o"
+                    (string-append #$output "/" lingua "/LC_MESSAGES/"
+                                   "guix-website.mo")))
+
+          (let* ((lingua-file (string-append #$po-directory "/"
+                                             lingua ".po"))
+                 (lang (car (string-split lingua #\_)))
+                 (lang-file (string-append #$po-directory "/"
+                                           lang ".po"))
+                 (packages-lingua-mo (string-append
+                                      #$guix "/share/locale/" lingua
+                                      "/LC_MESSAGES/guix-packages.mo"))
+                 (packages-lang-mo (string-append
+                                    #$guix "/share/locale/" lang
+                                    "/LC_MESSAGES/guix-packages.mo")))
+
+            (mkdir-p (string-append #$output "/" lingua "/LC_MESSAGES"))
+            (cond ((file-exists? lingua-file)
+                   (create-mo lingua-file))
+                  ((file-exists? lang-file)
+                   (create-mo lang-file)))
+
+            (cond
+             ((file-exists? packages-lingua-mo)
+              (copy-file packages-lingua-mo
+                         (string-append #$output "/" lingua "/LC_MESSAGES/"
+                                        "guix-packages.mo")))
+             ((file-exists? packages-lang-mo)
+              (copy-file packages-lang-mo
+                         (string-append #$output "/" lingua "/LC_MESSAGES/"
+                                        "guix-packages.mo"))))))))
+
+  (computed-file (string-append "guix-web-site-" lingua "-messages")
+                 build
+                 #:options '(#:env-vars (("COLUMNS" . "200")))))
 
 (define build
   ;; We need Guile-JSON for 'packages-json-builder'.
@@ -138,46 +197,6 @@
           (for-each make-file-writable
                     (find-files "." ".*" #:directories? #t))
 
-          ;; For translations, create MO files from PO files.
-          (for-each
-           (lambda (lingua)
-             (let* ((msgfmt #+(file-append
-                               (specification->package "gettext-minimal")
-                               "/bin/msgfmt"))
-                    (lingua-file (string-append "po/" lingua ".po"))
-                    (lang (car (string-split lingua #\_)))
-                    (lang-file (string-append "po/" lang ".po"))
-                    (packages-lingua-mo (string-append
-                                          #$guix "/share/locale/" lingua
-                                          "/LC_MESSAGES/guix-packages.mo"))
-                    (packages-lang-mo (string-append
-                                        #$guix "/share/locale/" lang
-                                        "/LC_MESSAGES/guix-packages.mo")))
-               (define (create-mo filename)
-                 (begin
-                   (invoke msgfmt filename)
-                   (mkdir-p (string-append lingua "/LC_MESSAGES"))
-                   (rename-file "messages.mo"
-                                (string-append lingua "/LC_MESSAGES/"
-                                               "guix-website.mo"))))
-               (cond
-                ((file-exists? lingua-file)
-                 (create-mo lingua-file))
-                ((file-exists? lang-file)
-                 (create-mo lang-file))
-                (else #t))
-               (cond
-                 ((file-exists? packages-lingua-mo)
-                  (copy-file packages-lingua-mo
-                             (string-append lingua "/LC_MESSAGES/"
-                                            "guix-packages.mo")))
-                 ((file-exists? packages-lang-mo)
-                  (copy-file packages-lang-mo
-                             (string-append lingua "/LC_MESSAGES/"
-                                            "guix-packages.mo")))
-                 (else #t))))
-           (list #$@%linguas))
-
           ;; So we can read/write UTF-8 files.
           (setenv "GUIX_LOCPATH"
                   #+(file-append (specification->package "glibc-locales")
@@ -192,23 +211,28 @@
 
           ;; Build the website for each translation.
           (for-each
-           (lambda (lingua)
-             (begin
-               (setenv "LC_ALL" (string-append lingua ".utf8"))
-               (format #t "Running 'haunt build' for lingua ~a...~%" lingua)
-               (invoke #+(file-append haunt-with-latest-guile
-                                      "/bin/haunt")
-                       "build")
-               (mkdir-p #$output)
-               (copy-recursively "/tmp/gnu.org/software/guix" #$output
-                                 #:log (%make-void-port "w"))
-               (let ((tag (assoc-ref
-                           (call-with-input-file "po/ietf-tags.scm"
-                             (lambda (port) (read port)))
-                           lingua)))
-                 (symlink "guix.html"
-                          (string-append #$output "/" tag "/index.html")))))
-           (list #$@%linguas))))))
+           (lambda (lingua mo-directory)
+             ;; (apps i18n) call 'bindtextdomain' on $PWD so provide .mo
+             ;; files right here.
+             (symlink (string-append mo-directory "/" lingua)
+                      lingua)
+
+             (setenv "LC_ALL" (string-append lingua ".utf8"))
+             (format #t "Running 'haunt build' for lingua ~a...~%" lingua)
+             (invoke #+(file-append haunt-with-latest-guile
+                                    "/bin/haunt")
+                     "build")
+             (mkdir-p #$output)
+             (copy-recursively "/tmp/gnu.org/software/guix" #$output
+                               #:log (%make-void-port "w"))
+             (let ((tag (assoc-ref
+                         (call-with-input-file "po/ietf-tags.scm"
+                           (lambda (port) (read port)))
+                         lingua)))
+               (symlink "guix.html"
+                        (string-append #$output "/" tag "/index.html"))))
+           (list #$@%linguas)
+           '#$(map lingua-mo-files %linguas))))))
 
 (computed-file "guix-web-site" build
                #:guile (specification->package "guile")

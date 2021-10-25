@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Copyright © 2017, 2019, 2020 Ludovic Courtès <ludo@gnu.org>
+;;; Copyright © 2017, 2019, 2020, 2021 Ludovic Courtès <ludo@gnu.org>
 ;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
 ;;;
 ;;; This file is part of the GNU Guix web site.
@@ -135,9 +135,8 @@
             (close-pipe pipe))
 
           ;; Make the copy writable so Haunt can overwrite duplicate assets.
-          (invoke #+(file-append (specification->package "coreutils")
-                                 "/bin/chmod")
-                  "--recursive" "u+w" ".")
+          (for-each make-file-writable
+                    (find-files "." ".*" #:directories? #t))
 
           ;; For translations, create MO files from PO files.
           (for-each

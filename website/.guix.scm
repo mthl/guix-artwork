@@ -153,90 +153,94 @@
                  build
                  #:options '(#:env-vars (("COLUMNS" . "200")))))
 
-(define build
-  ;; We need Guile-JSON for 'packages-json-builder'.
-  (with-extensions (append (package+propagated-inputs
-                            (specification->package "guile-json"))
+(define (lingua-web-site lingua)
+  "Return the web site built for LINGUA."
+  (define build
+    ;; We need Guile-JSON for 'packages-json-builder'.
+    (with-extensions (append (package+propagated-inputs
+                              (specification->package "guile-json"))
 
-                           (package+propagated-inputs
-                            (specification->package "guile-syntax-highlight")))
-    (with-imported-modules (source-module-closure
-                            '((guix build utils)))
-      #~(begin
-          (use-modules (guix build utils)
-                       (ice-9 popen)
-                       (ice-9 match))
+                             (package+propagated-inputs
+                              (specification->package "guile-syntax-highlight")))
+      (with-imported-modules (source-module-closure
+                              '((guix build utils)))
+        #~(begin
+            (use-modules (guix build utils)
+                         (ice-9 popen)
+                         (ice-9 match))
 
-          (setvbuf (current-output-port) 'line)
-          (setvbuf (current-error-port) 'line)
+            (define lingua #$lingua)
 
-          (setenv "GUIX_WEB_SITE_LOCAL" "no")
-          (copy-recursively #$source ".")
+            (setvbuf (current-output-port) 'line)
+            (setvbuf (current-error-port) 'line)
 
-          ;; Set 'GUILE_LOAD_PATH' so that Haunt find the Guix modules and
-          ;; its dependencies.  To find out the load path of Guix and its
-          ;; dependencies, fetch its value over 'guix repl'.
-          (let ((pipe (open-pipe* OPEN_BOTH
-                                  #+(file-append latest-guix "/bin/guix")
-                                  "repl" "-t" "machine")))
-            (pk 'repl-version (read pipe))
-            (write '(list %load-path %load-compiled-path) pipe)
-            (force-output pipe)
-            (match (read pipe)
-              (('values ('value ((load-path ...) (compiled-path ...))))
-               (setenv "GUILE_LOAD_PATH" (string-join
-                                          (append load-path %load-path)
-                                          ":"))
-               (setenv "GUILE_LOAD_COMPILED_PATH"
-                       (string-join (append compiled-path
-                                            %load-compiled-path)
-                                    ":"))))
-            (close-pipe pipe))
+            (setenv "GUIX_WEB_SITE_LOCAL" "no")
+            (copy-recursively #$source ".")
 
-          ;; Make the copy writable so Haunt can overwrite duplicate assets.
-          (for-each make-file-writable
-                    (find-files "." ".*" #:directories? #t))
+            ;; Set 'GUILE_LOAD_PATH' so that Haunt find the Guix modules and
+            ;; its dependencies.  To find out the load path of Guix and its
+            ;; dependencies, fetch its value over 'guix repl'.
+            (let ((pipe (open-pipe* OPEN_BOTH
+                                    #+(file-append latest-guix "/bin/guix")
+                                    "repl" "-t" "machine")))
+              (pk 'repl-version (read pipe))
+              (write '(list %load-path %load-compiled-path) pipe)
+              (force-output pipe)
+              (match (read pipe)
+                (('values ('value ((load-path ...) (compiled-path ...))))
+                 (setenv "GUILE_LOAD_PATH" (string-join
+                                            (append load-path %load-path)
+                                            ":"))
+                 (setenv "GUILE_LOAD_COMPILED_PATH"
+                         (string-join (append compiled-path
+                                              %load-compiled-path)
+                                      ":"))))
+              (close-pipe pipe))
 
-          ;; So we can read/write UTF-8 files.
-          (setenv "GUIX_LOCPATH"
-                  #+(file-append (specification->package "glibc-locales")
-                                 "/lib/locale"))
+            ;; Make the copy writable so Haunt can overwrite duplicate assets.
+            (for-each make-file-writable
+                      (find-files "." ".*" #:directories? #t))
 
-          ;; Use a sane default.
-          (setenv "XDG_CACHE_HOME" "/tmp/.cache")
+            ;; So we can read/write UTF-8 files.
+            (setenv "GUIX_LOCPATH"
+                    #+(file-append (specification->package "glibc-locales")
+                                   "/lib/locale"))
 
-          ;; Use GUIX_WEB_SITE_ROOT_PATH from the environment in which
-          ;; this script was run.
-          (setenv "GUIX_WEB_SITE_ROOT_PATH" #$root-path)
+            ;; Use a sane default.
+            (setenv "XDG_CACHE_HOME" "/tmp/.cache")
 
-          ;; Build the website for each translation.
-          (for-each
-           (lambda (lingua mo-directory)
-             ;; (apps i18n) call 'bindtextdomain' on $PWD so provide .mo
-             ;; files right here.
-             (symlink (string-append mo-directory "/" lingua)
-                      lingua)
+            ;; Use GUIX_WEB_SITE_ROOT_PATH from the environment in which
+            ;; this script was run.
+            (setenv "GUIX_WEB_SITE_ROOT_PATH" #$root-path)
 
-             (setenv "LC_ALL" (string-append lingua ".utf8"))
-             (format #t "Running 'haunt build' for lingua ~a...~%" lingua)
-             (invoke #+(file-append haunt-with-latest-guile
-                                    "/bin/haunt")
-                     "build")
-             (mkdir-p #$output)
-             (copy-recursively "/tmp/gnu.org/software/guix" #$output
-                               #:log (%make-void-port "w"))
-             (let ((tag (assoc-ref
-                         (call-with-input-file "po/ietf-tags.scm"
-                           (lambda (port) (read port)))
-                         lingua)))
-               (symlink "guix.html"
-                        (string-append #$output "/" tag "/index.html"))))
-           (list #$@%linguas)
-           '#$(map lingua-mo-files %linguas))))))
+            ;; Build the website for LINGUA.  (apps i18n) calls
+            ;; 'bindtextdomain' on $PWD so provide .mo files right here.
+            (symlink (string-append #$(lingua-mo-files lingua) "/" lingua)
+                     lingua)
 
-(computed-file "guix-web-site" build
-               #:guile (specification->package "guile")
-               #:options '(#:effective-version "3.0"))
+            (setenv "LC_ALL" (string-append lingua ".utf8"))
+            (format #t "Running 'haunt build' for lingua ~a...~%" lingua)
+            (invoke #+(file-append haunt-with-latest-guile
+                                   "/bin/haunt")
+                    "build")
+            (mkdir-p #$output)
+            (copy-recursively "/tmp/gnu.org/software/guix" #$output
+                              #:log (%make-void-port "w"))
+            (let ((tag (assoc-ref
+                        (call-with-input-file "po/ietf-tags.scm"
+                          (lambda (port) (read port)))
+                        lingua)))
+              (symlink "guix.html"
+                       (string-append #$output "/" tag "/index.html")))))))
+
+  (computed-file (string-append "guix-web-site-" lingua)
+                 build
+                 #:guile (specification->package "guile")
+                 #:options '(#:effective-version "3.0")))
+
+(directory-union "guix-web-site"
+                 (map lingua-web-site %linguas)
+                 #:copy? #t)
 
 ;; Local Variables:
 ;; eval: (put 'let-package 'scheme-indent-function 1)

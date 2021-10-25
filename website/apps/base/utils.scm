@@ -1,5 +1,5 @@
 ;;; GNU Guix web site
-;;; Copyright © 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020 Ludovic Courtès <ludo@gnu.org>
+;;; Copyright © 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021 Ludovic Courtès <ludo@gnu.org>
 ;;; Copyright © 2015 Mathieu Lirzin <mthl@openmailbox.org>
 ;;; Copyright © 2013 Alex Sassmannshausen <alex.sassmannshausen@gmail.com>
 ;;; Copyright © 2017 Eric Bavier <bavier@member.fsf.org>
@@ -51,9 +51,9 @@
 
 (define guix-root-url-path
   ;; Path to GNU Guix site at guix.gnu.org.
-  (let ((path (cond
+  (let ((path (match (getenv "GUIX_WEB_SITE_LOCAL")
                ;; If we are trying out the website locally, use "/" as the root.
-               ((getenv "GUIX_WEB_SITE_LOCAL") "/")
+               ("yes" "/")
                (else (or (getenv "GUIX_WEB_SITE_ROOT_PATH") "/")))))
     (make-parameter
      path

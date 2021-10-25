@@ -236,6 +236,7 @@
   (computed-file (string-append "guix-web-site-" lingua)
                  build
                  #:guile (specification->package "guile")
+                 #:local-build? #f          ;this is costly, allow offloading
                  #:options '(#:effective-version "3.0")))
 
 (directory-union "guix-web-site"

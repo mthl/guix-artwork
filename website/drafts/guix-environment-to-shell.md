@@ -16,7 +16,7 @@ the name we unimaginatively ended up with—has just landed after [a
 three-week review period](https://issues.guix.gnu.org/50960), itself a
 followup to discussions and hesitations on the best course of action.
 
-This post introduces `guix shell`, how it differs form `guix
+This post introduces `guix shell`, how it differs from `guix
 environment`, the choices we made, and why we hope you will like it.
 
 # The story of `guix environment`
@@ -107,8 +107,9 @@ You can add Git and GDB on top of it like so:
 guix shell -D inkscape git gdb
 ```
 
-It’s more concise and more natural than with `guix environment`.  As can
-be seen [in the
+(Note that `-D` only applies to the immediately following package,
+`inkscape` in this case.)  It’s more concise and more natural than with
+`guix environment`.  As can be seen [in the
 manual](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-shell.html),
 all the other options supported by `guix environment` remain available
 in `guix shell`.

@@ -1,12 +1,12 @@
 title: From ‘guix environment’ to ‘guix shell’
 author: Ludovic Courtès
-tags: Performance
-date: 2021-10-26 14:00:00
+tags: Software development, User interfaces, Performance
+date: 2021-10-26 15:00:00
 ---
 
 There are times when what looked like the right design choice some years
 back comes out as an odd choice as time passes.  The beloved [`guix
-environment`](https://guix.gnu.org/manual/en/html_node/Invoking-guix-environment.html)
+environment`](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-environment.html)
 tool is having that fate.  Its command-line interface has become
 non-intuitive and annoying for the most common use cases.  Since it
 could not be changed without breaking compatibility in fundamental ways,
@@ -136,7 +136,7 @@ guix shell -D -f guix.scm
 ```
 
 Since all Guix commands accept a
-[“manifest”](https://guix.gnu.org/manual/en/html_node/Invoking-guix-package.html#index-manifest)
+[“manifest”](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-package.html#index-manifest)
 with `-m`, another option is to provide a `manifest.scm` file and to
 run:
 

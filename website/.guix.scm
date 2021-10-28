@@ -215,8 +215,12 @@
 
             ;; Build the website for LINGUA.  (apps i18n) calls
             ;; 'bindtextdomain' on $PWD so provide .mo files right here.
-            (symlink (string-append #$(lingua-mo-files lingua) "/" lingua)
-                     lingua)
+            (for-each
+             (lambda (lingua mo-directory)
+               (symlink (string-append mo-directory "/" lingua)
+                        lingua))
+             (list #$@%linguas)
+             '#$(map lingua-mo-files %linguas))
 
             (setenv "LC_ALL" (string-append lingua ".utf8"))
             (format #t "Running 'haunt build' for lingua ~a...~%" lingua)

@@ -1,4 +1,4 @@
-title: Risk of local privilege escalation via guix-daemon
+title: Risk of local privilege escalation via guix-daemon (CVE-2021-27851)
 date: 2021-03-18 13:00
 author: Ludovic Courtès and Leo Famulari
 tags: Security Advisory
@@ -28,6 +28,8 @@ build directory.  If the user passed the `--keep-failed` option and the build
 eventually fails, the daemon changes ownership of the whole build tree,
 including the hardlink, to the user.  At that point, the user has write access
 to the target file.
+
+This is [CVE-2021-27851](https://www.cve.org/CVERecord?id=CVE-2021-27851).
 
 # Fix
 

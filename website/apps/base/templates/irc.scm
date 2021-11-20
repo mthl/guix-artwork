@@ -44,7 +44,7 @@ system|GNU Hurd|GNU Guix package manager|IRC|chat") #\|)
           ,(G_ `(a (@ (href "https://en.wikipedia.org/wiki/Comparison_of_Internet_Relay_Chat_clients"))
                    "other clients"))
           " to join the " (code "#guix") " channel on the "
-          ,(G_ `(a (@ (href "https://libera.chat/"))
+          ,(G_ `(a (@ (href "https://libera.chat/guides/connect"))
                    "Libera Chat IRC network."))))
       ,(G_
         `(p

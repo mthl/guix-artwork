@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210222\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-10-21 15:18Z\n"
-"PO-Revision-Date: 2021-10-23 06:05+0000\n"
+"POT-Creation-Date: 2021-11-21 15:18Z\n"
+"PO-Revision-Date: 2021-11-27 15:16+0000\n"
 "Last-Translator: simmon <simmon@nplob.com>\n"
 "Language-Team: Korean <https://translate.fedoraproject.org/projects/guix/"
 "website/ko/>\n"
@@ -18,7 +18,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.9.1\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -940,7 +940,7 @@ msgid "See all lists"
 msgstr "모든 메일링 리스트 보기"
 
 #: apps/base/templates/contact.scm:17 apps/base/templates/irc.scm:18
-#: apps/base/templates/irc.scm:29
+#: apps/base/templates/irc.scm:27
 msgctxt "webpage title"
 msgid "Contact"
 msgstr "연락처"
@@ -1497,9 +1497,9 @@ msgid ""
 "i686-linux, and dedicated storage</2><3><3.1>Max Delbrück Center for "
 "Molecular Medicine</3.1> (hardware and hosting)</3>"
 msgstr ""
-"<1>berlin.guixsd.org</1><2>x86_64-linux, i686-linux, 전용 스토리지로\n"
-"구성된 25개의 빌드 노드로 이루어진 빌드 팜</2><3><3.1>Max Delbrück Center "
-"for Molecular Medicine</3.1> (하드웨어와 호스팅)</3>"
+"<1>berlin.guixsd.org</1><2>x86_64-linux, i686-linux, 전용 저장공간으로LinuxLinux\n"
+"구성된 25개의 빌드 노드로 이루어진 빌드 팜</2><3><3.1>Max Delbrück Center for Molecular "
+"Medicine</3.1> (하드웨어와 호스팅)</3>"
 
 #: apps/base/templates/donate.scm:130
 msgid ""
@@ -1651,7 +1651,7 @@ msgstr ""
 "에서 나온 <2>대체 로고</2>를\n"
 " <1>guix-artwork</1> 저장소에서 이용할 수 있습니다."
 
-#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
+#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:28
 msgctxt "webpage title"
 msgid "IRC"
 msgstr "IRC"
@@ -1669,24 +1669,23 @@ msgstr ""
 "GNU|리눅스|유닉스|자유 소프트웨어|Libre 소프트웨어|운영 체제|GNU Hurd|GNU "
 "Guix 꾸러미 관리자|IRC|대화"
 
-#: apps/base/templates/irc.scm:35
-msgid "IRC"
-msgstr "IRC"
+#: apps/base/templates/irc.scm:33
+msgid "Chat on IRC"
+msgstr "IRC에서 채팅"
 
-#: apps/base/templates/irc.scm:37
+#: apps/base/templates/irc.scm:35
 msgid ""
-"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
-"GNU Guix community or to get help\n"
-"          in real-time. You can use the chat widget below, or just use\n"
-"          the <3>IRC client</3> of your preference. Note that the "
-"conversations that happen\n"
-"          on the <4/> channel are logged (<5>browse the log</5>)."
+"Chat with the GNU Guix community or get help\n"
+"          in real time. Join us from an <1>IRC client in your Web "
+"browser</1>, or use one of many <2>other clients</2> to join the <3/> "
+"channel on the <4>Libera Chat IRC network.</4>"
 msgstr ""
-"GNU Guix 공동체와 대화화거나 실시간으로 도움을 얻으려면<2>리베라 대화 네트워"
-"크</2>에\n"
-" 있는 <1/>채널에 참여하세요. 아래 대화 위젯을 사용하거나,\n"
-" 취향에 맞는 <3>IRC 클라이언트</3>를 사용하세요. <4/> 채널에서 이루어진\n"
-" 대화는 기록됩니다 (<5>기록 둘러보기</5>)."
+
+#: apps/base/templates/irc.scm:49
+msgid ""
+" Note that the conversations that happen\n"
+"          on the <1/> channel are logged (<2>browse the log</2>)."
+msgstr ""
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -1741,10 +1740,10 @@ msgid ""
 "<1/>.  This list is monitored by a\n"
 "           small team of Guix developers."
 msgstr ""
-"Guix 또는 Guix가 제공하는 패키지에서 발생하는\n"
-" 예민한 보안 문제를 보고하려면, 비공개 메일링 리스트인 <1/>에 이메일을 보낼 "
-"수 있습니다.\n"
-" 이 메일링 리스트는 Guix 개발자로 이루어진 작은 팀에 의해 관리됩니다."
+"Guix 또는 Guix가 제공하는 꾸러미에서 발생하는\n"
+" 예민한 보안 문제를 보고하려면, 비공개 전자우편 목록인 <1/>에 전자우편을 보"
+"낼 수 있습니다.\n"
+" 이 목록은 Guix 개발자로 이루어진 작은 팀에 의해 관리됩니다."
 
 #: apps/base/templates/security.scm:46
 msgid ""
@@ -2032,7 +2031,7 @@ msgstr "Pinebook Pro를 위한 리눅스용 GNU Guix 시스템"
 
 #: apps/download/templates/download-latest.scm:97
 msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
-msgstr "Pinebook Pro를 위한 리눅스 베어본 부팅 raw 이미지용 Guix 시스템."
+msgstr "Pinebook Pro를 위한 리눅스 베어본 부팅용 단순 이미지 Guix 시스템."
 
 #: apps/download/templates/download-latest.scm:130
 msgid "Build details: "
@@ -2340,7 +2339,7 @@ msgstr "꾸러미"
 #: apps/packages/templates/detailed-package-list.scm:27
 #: apps/packages/templates/index.scm:24
 msgid "List of packages available through GNU Guix."
-msgstr "GNU Guix에서 이용 가능한 패키지 목록."
+msgstr "GNU Guix에서 이용 가능한 꾸러미 목록."
 
 #: apps/packages/templates/detailed-index.scm:45
 #: apps/packages/templates/index.scm:44
@@ -2350,9 +2349,9 @@ msgid ""
 "<3>continuous integration system</3> shows their current build status "
 "(updated <4/>)."
 msgstr ""
-"GNU Guix는 <1/> 개의 패키지의 <2> 미리 생성된 투명한 바이너리</2>들을 제공합"
-"니다. 이 페이지는 전체 패키지의 목록을 제공합니다. 우리의 <3>지속적 통합 시스"
-"템</3>은 패키지들의 (<4/>에 갱신된) 빌드 현황을 보여줍니다."
+"GNU Guix는 <1/> 개의 꾸러미의 <2> 미리 생성된 투명한 바이너리</2>들을 제공합"
+"니다. 이들 부분은 전체 꾸러미의 목록을 제공합니다.  우리의 <3>지속적 통합 시"
+"스템</3>은 이들 현재의 빌드 현황(<4/>에 갱신된)을 보여줍니다."
 
 #: apps/packages/templates/detailed-package-list.scm:56
 #: apps/packages/templates/package-list.scm:54
@@ -2386,6 +2385,23 @@ msgid ""
 msgstr ""
 "<1>Lint issues</1><2><2.1/>. See <2.2>꾸러미 정의</2.2> in Guix source code."
 "</2>"
+
+#~ msgid "IRC"
+#~ msgstr "IRC"
+
+#~ msgid ""
+#~ "Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with "
+#~ "the GNU Guix community or to get help\n"
+#~ "          in real-time. You can use the chat widget below, or just use\n"
+#~ "          the <3>IRC client</3> of your preference. Note that the "
+#~ "conversations that happen\n"
+#~ "          on the <4/> channel are logged (<5>browse the log</5>)."
+#~ msgstr ""
+#~ "GNU Guix 공동체와 대화화거나 실시간으로 도움을 얻으려면<2>리베라 대화 네트"
+#~ "워크</2>에\n"
+#~ " 있는 <1/>채널에 참여하세요. 아래 대화 위젯을 사용하거나,\n"
+#~ " 취향에 맞는 <3>IRC 클라이언트</3>를 사용하세요. <4/> 채널에서 이루어진\n"
+#~ " 대화는 기록됩니다 (<5>기록 둘러보기</5>)."
 
 #~ msgctxt "video title"
 #~ msgid "Installation from Script"

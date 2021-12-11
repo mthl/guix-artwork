@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210222\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-10-21 15:18Z\n"
-"PO-Revision-Date: 2021-08-31 06:25+0000\n"
+"POT-Creation-Date: 2021-11-21 15:18Z\n"
+"PO-Revision-Date: 2021-12-09 09:19+0000\n"
 "Last-Translator: Julien Lepiller <fedora-account@lepiller.eu>\n"
 "Language-Team: Esperanto <https://translate.fedoraproject.org/projects/guix/"
 "website/eo/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.9.1\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -958,7 +958,7 @@ msgid "See all lists"
 msgstr "Vidi ĉiujn listojn"
 
 #: apps/base/templates/contact.scm:17 apps/base/templates/irc.scm:18
-#: apps/base/templates/irc.scm:29
+#: apps/base/templates/irc.scm:27
 msgctxt "webpage title"
 msgid "Contact"
 msgstr "Kontakto"
@@ -1684,7 +1684,7 @@ msgstr ""
 "          de Nikita Karetnikov en 2013 kaj <2>anstataŭita</2> de la ora GNU "
 "en 2016."
 
-#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
+#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:28
 msgctxt "webpage title"
 msgid "IRC"
 msgstr "IRC"
@@ -1702,27 +1702,29 @@ msgstr ""
 "GNU|Linux|Linukso|Unix|Unikso|Libera programaro|Operaciumo|Mastruma sistemo|"
 "Mastrumilo|GNU Hurd|Pakadministrilo GNU Guix|IRC|Babilejo"
 
-#: apps/base/templates/irc.scm:35
-msgid "IRC"
-msgstr "IRC"
+#: apps/base/templates/irc.scm:33
+msgid "Chat on IRC"
+msgstr "Babili ĉe IRC"
 
-#: apps/base/templates/irc.scm:37
+#: apps/base/templates/irc.scm:35
 msgid ""
-"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
-"GNU Guix community or to get help\n"
-"          in real-time. You can use the chat widget below, or just use\n"
-"          the <3>IRC client</3> of your preference. Note that the "
-"conversations that happen\n"
-"          on the <4/> channel are logged (<5>browse the log</5>)."
+"Chat with the GNU Guix community or get help\n"
+"          in real time. Join us from an <1>IRC client in your Web "
+"browser</1>, or use one of many <2>other clients</2> to join the <3/> "
+"channel on the <4>Libera Chat IRC network.</4>"
 msgstr ""
-"Aliĝu al la kanalo <1/> en la <2>reto Libera Chat IRC</2> por retbabili kun "
-"la komunumo de GNU Guix aŭ por realtempe peti\n"
-"          helpon. Vi povas uzi la babilejan fenestraĵon ĉi-suban, aŭ simple "
-"uzi\n"
-"          la <3>klienton IRC</3>, kiun vi preferas. Notu, ke la konversacioj "
-"okazantaj\n"
-"          en la kanalo <4/> estas protokolataj (<5>foliumi la "
-"protokolojn</5>)."
+"Retbabilu kun la kumunumo pri GNU Guix aŭ por realtempe peti helpon.\n"
+"Aliĝu nin per <1>kliento en vian TTT-legilon</1> aŭ uzante unu el multa da "
+"<2>aliaj klientoj</2> por aliĝi la <3/> kanalo en la <4>Libera Chat IRC "
+"reto</4>."
+
+#: apps/base/templates/irc.scm:49
+msgid ""
+" Note that the conversations that happen\n"
+"          on the <1/> channel are logged (<2>browse the log</2>)."
+msgstr ""
+" Rimarku ke ni protokolas la babilojn en la <1/> kanalon\n"
+"(<2>vidi la protokolon</2>)."
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -2186,10 +2188,8 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-#, fuzzy
-#| msgid "Enlightenment, Inkscape, and Serbian text"
 msgid "Enlightenment, Inkscape, and Cyrillic text"
-msgstr "Enlightenment, Inkscape, kaj serba teksto"
+msgstr "Enlightenment, Inkscape, kaj cirila teksto"
 
 #: apps/media/data.scm:124
 msgctxt "video title"
@@ -2432,6 +2432,26 @@ msgid ""
 msgstr ""
 "<1>Stilaj problemoj</1><2><2.1/>. Vidu la <2.2>pakdifinon</2.2> en la "
 "fontkodo de Guix.</2>"
+
+#~ msgid "IRC"
+#~ msgstr "IRC"
+
+#~ msgid ""
+#~ "Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with "
+#~ "the GNU Guix community or to get help\n"
+#~ "          in real-time. You can use the chat widget below, or just use\n"
+#~ "          the <3>IRC client</3> of your preference. Note that the "
+#~ "conversations that happen\n"
+#~ "          on the <4/> channel are logged (<5>browse the log</5>)."
+#~ msgstr ""
+#~ "Aliĝu al la kanalo <1/> en la <2>reto Libera Chat IRC</2> por retbabili "
+#~ "kun la komunumo de GNU Guix aŭ por realtempe peti\n"
+#~ "          helpon. Vi povas uzi la babilejan fenestraĵon ĉi-suban, aŭ "
+#~ "simple uzi\n"
+#~ "          la <3>klienton IRC</3>, kiun vi preferas. Notu, ke la "
+#~ "konversacioj okazantaj\n"
+#~ "          en la kanalo <4/> estas protokolataj (<5>foliumi la "
+#~ "protokolojn</5>)."
 
 #~ msgctxt "video title"
 #~ msgid "Installation from Script"

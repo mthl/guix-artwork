@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210222\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-10-21 15:18Z\n"
-"PO-Revision-Date: 2021-08-10 14:04+0000\n"
+"POT-Creation-Date: 2021-11-21 15:18Z\n"
+"PO-Revision-Date: 2021-11-08 14:46+0000\n"
 "Last-Translator: Marek Felšöci <marek@felsoci.sk>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/guix/"
 "website/sk/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.7.2\n"
+"X-Generator: Weblate 4.8\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -958,7 +958,7 @@ msgid "See all lists"
 msgstr "Zobraziť všetky konferencie"
 
 #: apps/base/templates/contact.scm:17 apps/base/templates/irc.scm:18
-#: apps/base/templates/irc.scm:29
+#: apps/base/templates/irc.scm:27
 msgctxt "webpage title"
 msgid "Contact"
 msgstr "Kontakt"
@@ -1690,14 +1690,14 @@ msgstr ""
 "          Nikitom Karetnikovom v roku 2013 a <2>nahradeného</2> zlatým GNU v "
 "roku 2016."
 
-#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
+#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:28
 msgctxt "webpage title"
 msgid "IRC"
 msgstr "IRC"
 
 #: apps/base/templates/irc.scm:20
 msgid "Internet relay chat."
-msgstr "Internet relay chat."
+msgstr "Internet Relay Chat."
 
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/base/templates/irc.scm:23
@@ -1708,26 +1708,23 @@ msgstr ""
 "GNU|Linux|Unix|Slobodný softvér|Operačný systém|GNU Hurd|Správca balíkov GNU "
 "Guix|IRC|rozhovory"
 
-#: apps/base/templates/irc.scm:35
-msgid "IRC"
-msgstr "IRC"
-
-#: apps/base/templates/irc.scm:37
-msgid ""
-"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
-"GNU Guix community or to get help\n"
-"          in real-time. You can use the chat widget below, or just use\n"
-"          the <3>IRC client</3> of your preference. Note that the "
-"conversations that happen\n"
-"          on the <4/> channel are logged (<5>browse the log</5>)."
+#: apps/base/templates/irc.scm:33
+msgid "Chat on IRC"
 msgstr ""
-"Pripojte sa ku kanálu <1/> v <2>sieti IRC Libera Chat</2> a zhovárajte sa so "
-"spoločenstvom GNU Guix alebo získajte pomoc\n"
-"          v reálnom čase. Môžete použiť okno výmeny správ nižšie alebo vášho "
-"obľúbeného\n"
-"          <3>IRC klienta</3>. Vezmite na vedomie, že rozhovory, ktoré sa "
-"odohrávajú\n"
-"          v kanáli <4/> sú zaznamenávané (<5>prezrieť si záznam</5>)."
+
+#: apps/base/templates/irc.scm:35
+msgid ""
+"Chat with the GNU Guix community or get help\n"
+"          in real time. Join us from an <1>IRC client in your Web "
+"browser</1>, or use one of many <2>other clients</2> to join the <3/> "
+"channel on the <4>Libera Chat IRC network.</4>"
+msgstr ""
+
+#: apps/base/templates/irc.scm:49
+msgid ""
+" Note that the conversations that happen\n"
+"          on the <1/> channel are logged (<2>browse the log</2>)."
+msgstr ""
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -2072,16 +2069,13 @@ msgid "GNU Guix binary"
 msgstr "Binárne súbory GNU Guix"
 
 #: apps/download/templates/download-latest.scm:96
-#, fuzzy
-#| msgctxt "download page title"
-#| msgid "GNU Guix System on Linux"
 msgctxt "download page title"
 msgid "GNU Guix System on Linux for Pinebook Pro"
-msgstr "Systém GNU Guix na Linuxe"
+msgstr "Systém GNU Guix na Linuxe pre Pinebook Pro"
 
 #: apps/download/templates/download-latest.scm:97
 msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
-msgstr ""
+msgstr "Malý spustiteľný obraz systému Guix na Linuxe pre Pinebook Pro."
 
 #: apps/download/templates/download-latest.scm:130
 msgid "Build details: "
@@ -2193,10 +2187,8 @@ msgid "Enlightenment"
 msgstr "Enlightenment"
 
 #: apps/media/data.scm:118
-#, fuzzy
-#| msgid "Enlightenment, Inkscape, and Serbian text"
 msgid "Enlightenment, Inkscape, and Cyrillic text"
-msgstr "Enlightenment, Inkscape a ukážka textu v srbčine"
+msgstr "Enlightenment, Inkscape a použitie cyriliky"
 
 #: apps/media/data.scm:124
 msgctxt "video title"
@@ -2440,6 +2432,25 @@ msgid ""
 msgstr ""
 "<1>Chyby v skladbe</1><2><2.1/>. Viď <2.2>zadávanie balíkov</2.2> v "
 "zdrojovom kóde Guixu.</2>"
+
+#~ msgid "IRC"
+#~ msgstr "IRC"
+
+#~ msgid ""
+#~ "Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with "
+#~ "the GNU Guix community or to get help\n"
+#~ "          in real-time. You can use the chat widget below, or just use\n"
+#~ "          the <3>IRC client</3> of your preference. Note that the "
+#~ "conversations that happen\n"
+#~ "          on the <4/> channel are logged (<5>browse the log</5>)."
+#~ msgstr ""
+#~ "Pripojte sa ku kanálu <1/> v <2>sieti IRC Libera Chat</2> a zhovárajte sa "
+#~ "so spoločenstvom GNU Guix alebo získajte pomoc\n"
+#~ "          v reálnom čase. Môžete použiť okno výmeny správ nižšie alebo "
+#~ "vášho obľúbeného\n"
+#~ "          <3>IRC klienta</3>. Vezmite na vedomie, že rozhovory, ktoré sa "
+#~ "odohrávajú\n"
+#~ "          v kanáli <4/> sú zaznamenávané (<5>prezrieť si záznam</5>)."
 
 #~ msgctxt "video title"
 #~ msgid "Installation from Script"

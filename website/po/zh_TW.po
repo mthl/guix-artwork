@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210527\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-10-21 15:18Z\n"
-"PO-Revision-Date: 2021-10-23 14:54+0000\n"
+"POT-Creation-Date: 2021-11-21 15:18Z\n"
+"PO-Revision-Date: 2021-10-24 19:05+0000\n"
 "Last-Translator: Whired Planck <fungdaat31@outlook.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
 "projects/guix/website/zh_Hant/>\n"
@@ -269,7 +269,7 @@ msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
 msgstr ""
-"來自人類，用 <1>♥</1> 製作。由 <2>GNU Guile</2> 驅動。<3>原始碼</3>以 "
+"來自人類，用 <1>♥</1 > 製作。由 <2>GNU Guile</2> 驅動。<3>原始碼</3>以 "
 "<4>GNU AGPL</4> 許可證釋出。"
 
 #: apps/base/templates/components.scm:49
@@ -920,7 +920,7 @@ msgid "See all lists"
 msgstr "瀏覽全部郵件列表"
 
 #: apps/base/templates/contact.scm:17 apps/base/templates/irc.scm:18
-#: apps/base/templates/irc.scm:29
+#: apps/base/templates/irc.scm:27
 msgctxt "webpage title"
 msgid "Contact"
 msgstr "聯絡"
@@ -1598,7 +1598,7 @@ msgstr ""
 " 裡面還包含了 Nikita Karetnikov 在 2013 年為 GNU Guix 設計的圖示，\n"
 " 在 2016 年其被金色 GNU 取代。"
 
-#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
+#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:28
 msgctxt "webpage title"
 msgid "IRC"
 msgstr "IRC"
@@ -1616,24 +1616,23 @@ msgstr ""
 "GNU | Linux | Unix | 自由軟體 | 自由軟體 | 作業系統 | GNU Hurd | GNU Guix 包"
 "管理器| IRC | 聊天"
 
-#: apps/base/templates/irc.scm:35
-msgid "IRC"
-msgstr "IRC"
-
-#: apps/base/templates/irc.scm:37
-msgid ""
-"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
-"GNU Guix community or to get help\n"
-"          in real-time. You can use the chat widget below, or just use\n"
-"          the <3>IRC client</3> of your preference. Note that the "
-"conversations that happen\n"
-"          on the <4/> channel are logged (<5>browse the log</5>)."
+#: apps/base/templates/irc.scm:33
+msgid "Chat on IRC"
 msgstr ""
-"加入 <2>Libera Chat IRC 網路</2>上的 <1/> 頻道，和 GNU Guix 社群交流或者獲取"
-"實時幫助。\n"
-" 您可以使用下方的聊天小元件，或者就用喜歡的 <3>IRC 客戶端</3>。請注意我們會記"
-"錄\n"
-" <4/> 頻道里的交流過程（<5>瀏覽日誌</5>）。"
+
+#: apps/base/templates/irc.scm:35
+msgid ""
+"Chat with the GNU Guix community or get help\n"
+"          in real time. Join us from an <1>IRC client in your Web "
+"browser</1>, or use one of many <2>other clients</2> to join the <3/> "
+"channel on the <4>Libera Chat IRC network.</4>"
+msgstr ""
+
+#: apps/base/templates/irc.scm:49
+msgid ""
+" Note that the conversations that happen\n"
+"          on the <1/> channel are logged (<2>browse the log</2>)."
+msgstr ""
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -2093,7 +2092,7 @@ msgstr "SeaGL：日常使用 Guix"
 #: apps/media/data.scm:132
 msgctxt "video title"
 msgid "Bitcoin Build System Security"
-msgstr ""
+msgstr "比特币 构建系统 安全"
 
 #: apps/media/data.scm:139
 #, fuzzy
@@ -2330,6 +2329,23 @@ msgid ""
 msgstr ""
 "<1>檢查出的問題：</1><2><2.1/>。參見 Guix 原始碼裡的<2.2>軟體包定義</2.2>。"
 "</2>"
+
+#~ msgid "IRC"
+#~ msgstr "IRC"
+
+#~ msgid ""
+#~ "Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with "
+#~ "the GNU Guix community or to get help\n"
+#~ "          in real-time. You can use the chat widget below, or just use\n"
+#~ "          the <3>IRC client</3> of your preference. Note that the "
+#~ "conversations that happen\n"
+#~ "          on the <4/> channel are logged (<5>browse the log</5>)."
+#~ msgstr ""
+#~ "加入 <2>Libera Chat IRC 網路</2>上的 <1/> 頻道，和 GNU Guix 社群交流或者獲"
+#~ "取實時幫助。\n"
+#~ " 您可以使用下方的聊天小元件，或者就用喜歡的 <3>IRC 客戶端</3>。請注意我們"
+#~ "會記錄\n"
+#~ " <4/> 頻道里的交流過程（<5>瀏覽日誌</5>）。"
 
 #~ msgctxt "video title"
 #~ msgid "Installation from Script"

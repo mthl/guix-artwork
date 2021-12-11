@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210124\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-10-21 15:18Z\n"
+"POT-Creation-Date: 2021-11-21 15:18Z\n"
 "PO-Revision-Date: 2021-09-06 17:04+0000\n"
 "Last-Translator: Muha Aliss <muhaaliss@gmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/guix/"
@@ -968,7 +968,7 @@ msgid "See all lists"
 msgstr "Tüm listeleri gör"
 
 #: apps/base/templates/contact.scm:17 apps/base/templates/irc.scm:18
-#: apps/base/templates/irc.scm:29
+#: apps/base/templates/irc.scm:27
 msgctxt "webpage title"
 msgid "Contact"
 msgstr "İletişim"
@@ -1663,7 +1663,7 @@ msgid ""
 "GNU in 2016."
 msgstr ""
 
-#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
+#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:28
 msgctxt "webpage title"
 msgid "IRC"
 msgstr "IRC"
@@ -1681,33 +1681,23 @@ msgstr ""
 "GNU|Linux|Unix|Özgür yazılım|Libre yazılım|İşletim sistemi|GNU Hurd|GNU Guix "
 "paket yöneticisi|IRC|sohbet"
 
-#: apps/base/templates/irc.scm:35
-msgid "IRC"
-msgstr "IRC"
-
-#: apps/base/templates/irc.scm:37
-#, fuzzy
-#| msgid ""
-#| "Join the <1/> channel on the <2>Freenode IRC network</2> to chat with the "
-#| "GNU Guix community or to get help\n"
-#| "          in real-time. You can use the chat widget below, or just use\n"
-#| "          the <3>IRC client</3> of your preference. Note that the "
-#| "conversations that happen\n"
-#| "          on the <4/> channel are logged (<5>browse the log</5>)."
-msgid ""
-"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
-"GNU Guix community or to get help\n"
-"          in real-time. You can use the chat widget below, or just use\n"
-"          the <3>IRC client</3> of your preference. Note that the "
-"conversations that happen\n"
-"          on the <4/> channel are logged (<5>browse the log</5>)."
+#: apps/base/templates/irc.scm:33
+msgid "Chat on IRC"
 msgstr ""
-"GNU Guix topluluğu ile sohbet etmek veya gerçek zamanlı yardım almak için\n"
-" <2>Freenode IRC ağındaki</2> </1> kanalına katılın.\n"
-" Aşağıdaki sohbet widget'ını kullanabilir veya sadece tercih ettiğiniz "
-"<3>IRC istemcisini</3> kullanabilirsiniz.\n"
-" </4> kanalında gerçekleşen konuşmaların günlüğe kaydedildiğini unutmayın "
-"(<5>günlüğe göz at</5>)."
+
+#: apps/base/templates/irc.scm:35
+msgid ""
+"Chat with the GNU Guix community or get help\n"
+"          in real time. Join us from an <1>IRC client in your Web "
+"browser</1>, or use one of many <2>other clients</2> to join the <3/> "
+"channel on the <4>Libera Chat IRC network.</4>"
+msgstr ""
+
+#: apps/base/templates/irc.scm:49
+msgid ""
+" Note that the conversations that happen\n"
+"          on the <1/> channel are logged (<2>browse the log</2>)."
+msgstr ""
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -2415,6 +2405,33 @@ msgid ""
 "<1>Lint issues</1><2><2.1/>. See <2.2>package definition</2.2> in Guix "
 "source code.</2>"
 msgstr ""
+
+#~ msgid "IRC"
+#~ msgstr "IRC"
+
+#, fuzzy
+#~| msgid ""
+#~| "Join the <1/> channel on the <2>Freenode IRC network</2> to chat with "
+#~| "the GNU Guix community or to get help\n"
+#~| "          in real-time. You can use the chat widget below, or just use\n"
+#~| "          the <3>IRC client</3> of your preference. Note that the "
+#~| "conversations that happen\n"
+#~| "          on the <4/> channel are logged (<5>browse the log</5>)."
+#~ msgid ""
+#~ "Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with "
+#~ "the GNU Guix community or to get help\n"
+#~ "          in real-time. You can use the chat widget below, or just use\n"
+#~ "          the <3>IRC client</3> of your preference. Note that the "
+#~ "conversations that happen\n"
+#~ "          on the <4/> channel are logged (<5>browse the log</5>)."
+#~ msgstr ""
+#~ "GNU Guix topluluğu ile sohbet etmek veya gerçek zamanlı yardım almak "
+#~ "için\n"
+#~ " <2>Freenode IRC ağındaki</2> </1> kanalına katılın.\n"
+#~ " Aşağıdaki sohbet widget'ını kullanabilir veya sadece tercih ettiğiniz "
+#~ "<3>IRC istemcisini</3> kullanabilirsiniz.\n"
+#~ " </4> kanalında gerçekleşen konuşmaların günlüğe kaydedildiğini unutmayın "
+#~ "(<5>günlüğe göz at</5>)."
 
 #~ msgctxt "video title"
 #~ msgid "Installation from Script"

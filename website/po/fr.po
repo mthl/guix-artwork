@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20201121\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-10-21 15:18Z\n"
-"PO-Revision-Date: 2021-10-23 14:57+0000\n"
+"POT-Creation-Date: 2021-11-21 15:18Z\n"
+"PO-Revision-Date: 2021-11-24 20:11+0000\n"
 "Last-Translator: Julien Lepiller <fedora-account@lepiller.eu>\n"
 "Language-Team: French <https://translate.fedoraproject.org/projects/guix/"
 "website/fr/>\n"
@@ -17,7 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.9\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -973,7 +973,7 @@ msgid "See all lists"
 msgstr "Voir toutes les listes"
 
 #: apps/base/templates/contact.scm:17 apps/base/templates/irc.scm:18
-#: apps/base/templates/irc.scm:29
+#: apps/base/templates/irc.scm:27
 msgctxt "webpage title"
 msgid "Contact"
 msgstr "contact"
@@ -1713,7 +1713,7 @@ msgstr ""
 "Guix précédent conçu\n"
 "par Nikita Karetnikov en 2013 et <2>remplacé</2> par le GNU doré en 2016."
 
-#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
+#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:28
 msgctxt "webpage title"
 msgid "IRC"
 msgstr "IRC"
@@ -1731,26 +1731,29 @@ msgstr ""
 "GNU|Linux|Unix|Logiciel libre|Système d'exploitation|GNU Hurd|Gestionnaire "
 "de paquets GNU Guix|IRC|discussion"
 
-#: apps/base/templates/irc.scm:35
-msgid "IRC"
-msgstr "IRC"
+#: apps/base/templates/irc.scm:33
+msgid "Chat on IRC"
+msgstr "Discuter sur IRC"
 
-#: apps/base/templates/irc.scm:37
+#: apps/base/templates/irc.scm:35
 msgid ""
-"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
-"GNU Guix community or to get help\n"
-"          in real-time. You can use the chat widget below, or just use\n"
-"          the <3>IRC client</3> of your preference. Note that the "
-"conversations that happen\n"
-"          on the <4/> channel are logged (<5>browse the log</5>)."
+"Chat with the GNU Guix community or get help\n"
+"          in real time. Join us from an <1>IRC client in your Web "
+"browser</1>, or use one of many <2>other clients</2> to join the <3/> "
+"channel on the <4>Libera Chat IRC network.</4>"
 msgstr ""
-"Rejoignez le canal <1/> sur le <2>réseau IRC Libera Chat</2> pour discuter "
-"avec la communauté GNU Guix ou recevoir de l'aide\n"
-"en temps réel. Vous pouvez utiliser la fenêtre de discussion plus bas, ou "
-"simplement utiliser\n"
-"le <3>client IRC</3> de votre choix. Remarquez que les conversations qui ont "
-"lieu\n"
-"sur le canal <4/> sont enregistrées (<5>voir les enregistrements</5>)."
+"Discutez avec la communauté GNU Guix ou recevez de l'aide\n"
+"en temps réel. Rejoignez-nous à partir d'un <1>client IRC sur votre "
+"navigateur Web</1> ou en utilisant l'un des nombreux <2>autres clients</2> "
+"pour rejoindre le canal <3/> sur <4>le réseau IRC Libera Chat</4>."
+
+#: apps/base/templates/irc.scm:49
+msgid ""
+" Note that the conversations that happen\n"
+"          on the <1/> channel are logged (<2>browse the log</2>)."
+msgstr ""
+" Remarquez que les discussions sur le canal <1/>\n"
+"sont archivées (<2>voir les archives</2>)."
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -2465,6 +2468,25 @@ msgid ""
 msgstr ""
 "<1>Problèmes de style</1><2><2.1/>. Voir <2.2>la définition du paquet</2.2> "
 "dans le code source de Guix.</2>"
+
+#~ msgid "IRC"
+#~ msgstr "IRC"
+
+#~ msgid ""
+#~ "Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with "
+#~ "the GNU Guix community or to get help\n"
+#~ "          in real-time. You can use the chat widget below, or just use\n"
+#~ "          the <3>IRC client</3> of your preference. Note that the "
+#~ "conversations that happen\n"
+#~ "          on the <4/> channel are logged (<5>browse the log</5>)."
+#~ msgstr ""
+#~ "Rejoignez le canal <1/> sur le <2>réseau IRC Libera Chat</2> pour "
+#~ "discuter avec la communauté GNU Guix ou recevoir de l'aide\n"
+#~ "en temps réel. Vous pouvez utiliser la fenêtre de discussion plus bas, ou "
+#~ "simplement utiliser\n"
+#~ "le <3>client IRC</3> de votre choix. Remarquez que les conversations qui "
+#~ "ont lieu\n"
+#~ "sur le canal <4/> sont enregistrées (<5>voir les enregistrements</5>)."
 
 #~ msgctxt "video title"
 #~ msgid "Installation from Script"

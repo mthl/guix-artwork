@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20201005-2\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-10-21 15:18Z\n"
-"PO-Revision-Date: 2021-10-23 06:05+0000\n"
+"POT-Creation-Date: 2021-11-21 15:18Z\n"
+"PO-Revision-Date: 2021-11-24 20:11+0000\n"
 "Last-Translator: Florian Pelz <pelzflorian@pelzflorian.de>\n"
 "Language-Team: German <https://translate.fedoraproject.org/projects/guix/"
 "website/de/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.9\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -968,7 +968,7 @@ msgid "See all lists"
 msgstr "Alle Listen sehen"
 
 #: apps/base/templates/contact.scm:17 apps/base/templates/irc.scm:18
-#: apps/base/templates/irc.scm:29
+#: apps/base/templates/irc.scm:27
 msgctxt "webpage title"
 msgid "Contact"
 msgstr "Kontakt"
@@ -1693,7 +1693,7 @@ msgstr ""
 "Nikita Karetnikov 2013 gestaltet wurde und 2016 durch das goldene GNU "
 "<2>ersetzt wurde</2>."
 
-#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:30
+#: apps/base/templates/irc.scm:17 apps/base/templates/irc.scm:28
 msgctxt "webpage title"
 msgid "IRC"
 msgstr "IRC"
@@ -1711,24 +1711,29 @@ msgstr ""
 "GNU|Linux|Unix|Freie Software|Libre-Software|Betriebssystem|GNU Hurd|GNU-"
 "Guix-Paketverwaltung|IRC|Chat"
 
-#: apps/base/templates/irc.scm:35
-msgid "IRC"
-msgstr "IRC"
+#: apps/base/templates/irc.scm:33
+msgid "Chat on IRC"
+msgstr "Chat über IRC"
 
-#: apps/base/templates/irc.scm:37
+#: apps/base/templates/irc.scm:35
 msgid ""
-"Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with the "
-"GNU Guix community or to get help\n"
-"          in real-time. You can use the chat widget below, or just use\n"
-"          the <3>IRC client</3> of your preference. Note that the "
-"conversations that happen\n"
-"          on the <4/> channel are logged (<5>browse the log</5>)."
+"Chat with the GNU Guix community or get help\n"
+"          in real time. Join us from an <1>IRC client in your Web "
+"browser</1>, or use one of many <2>other clients</2> to join the <3/> "
+"channel on the <4>Libera Chat IRC network.</4>"
 msgstr ""
-"Kommen Sie auf den <1/>-Kanal auf dem <2>IRC-Netzwerk Libera Chat</2>, um "
-"mit der GNU-Guix-Gemeinde live zu chatten. Sie können das Chatfeld unten "
-"benutzen oder einfach Ihren bevorzugten <3>IRC-Client</3> dorthin verbinden. "
-"Beachten Sie, dass Kommunikation auf dem <4/>-Kanal protokolliert wird "
-"(<5>lesen Sie das Protokoll</5>)."
+"Chatten Sie live mit der GNU-Guix-Gemeinde, um in Echtzeit Hilfe zu "
+"bekommen. Treten Sie mit einem <1>IRC-Client im Webbrowser</1> bei oder "
+"benutzen Sie einen der vielen <2>anderen Clients</2>, um sich mit dem <3/>-"
+"Kanal auf dem <4>IRC-Netzwerk Libera Chat</4> zu verbinden."
+
+#: apps/base/templates/irc.scm:49
+msgid ""
+" Note that the conversations that happen\n"
+"          on the <1/> channel are logged (<2>browse the log</2>)."
+msgstr ""
+" Beachten Sie, dass Kommunikation auf dem <1/>-Kanal protokolliert wird ("
+"<2>lesen Sie das Protokoll</2>)."
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -2440,6 +2445,23 @@ msgid ""
 msgstr ""
 "<1>Automatisch erkannte Paketfehler</1><2><2.1/>. Siehe die "
 "<2.2>Paketdefinition</2.2> im Quellcode von Guix.</2>"
+
+#~ msgid "IRC"
+#~ msgstr "IRC"
+
+#~ msgid ""
+#~ "Join the <1/> channel on the <2>Libera Chat IRC network</2> to chat with "
+#~ "the GNU Guix community or to get help\n"
+#~ "          in real-time. You can use the chat widget below, or just use\n"
+#~ "          the <3>IRC client</3> of your preference. Note that the "
+#~ "conversations that happen\n"
+#~ "          on the <4/> channel are logged (<5>browse the log</5>)."
+#~ msgstr ""
+#~ "Kommen Sie auf den <1/>-Kanal auf dem <2>IRC-Netzwerk Libera Chat</2>, um "
+#~ "mit der GNU-Guix-Gemeinde live zu chatten. Sie können das Chatfeld unten "
+#~ "benutzen oder einfach Ihren bevorzugten <3>IRC-Client</3> dorthin "
+#~ "verbinden. Beachten Sie, dass Kommunikation auf dem <4/>-Kanal "
+#~ "protokolliert wird (<5>lesen Sie das Protokoll</5>)."
 
 #~ msgctxt "video title"
 #~ msgid "Installation from Script"

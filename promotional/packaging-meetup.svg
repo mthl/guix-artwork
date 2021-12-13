@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="600"
+   height="260"
+   id="svg2"
+   version="1.1"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="packaging-meetup.svg"
+   inkscape:export-filename="packaging-meetup.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
+  <title
+     id="title9199">GNU Guix Packaging Meetup</title>
+  <defs
+     id="defs4">
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient123228">
+      <stop
+         style="stop-color:#ffcc00;stop-opacity:1;"
+         offset="0"
+         id="stop123224" />
+      <stop
+         style="stop-color:#ffcc00;stop-opacity:0;"
+         offset="1"
+         id="stop123226" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient4781"
+       inkscape:swatch="solid">
+      <stop
+         id="stop4779"
+         offset="0"
+         style="stop-color:#ffe6d5;stop-opacity:1;" />
+    </linearGradient>
+    <radialGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient123228"
+       id="radialGradient123230"
+       cx="225.73796"
+       cy="1225.7031"
+       fx="225.73796"
+       fy="1225.7031"
+       r="124.32788"
+       gradientTransform="matrix(1.3333112,0,0,0.86922804,-75.240998,127.34832)"
+       gradientUnits="userSpaceOnUse" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="123"
+     inkscape:cy="130.5"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1920"
+     inkscape:window-height="1016"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:showpageshadow="false"
+     inkscape:snap-global="false"
+     inkscape:snap-nodes="true"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-paths="true"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:document-rotation="0"
+     inkscape:snap-grids="false"
+     inkscape:snap-to-guides="true"
+     inkscape:bbox-nodes="true"
+     inkscape:pagecheckerboard="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:snap-center="false"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:snap-intersection-paths="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid3245"
+       empspacing="1"
+       visible="true"
+       enabled="true"
+       snapvisiblegridlinesonly="true"
+       spacingx="100"
+       spacingy="100"
+       originx="244.9919"
+       originy="-129.88514" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:title>GNU Guix Packaging Meetup</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(204.9919,-1042.2473)">
+    <rect
+       style="fill:#4d1230;fill-opacity:1;stroke-width:9.99997;stroke-dasharray:240, 240;stroke-dashoffset:90.9997;stroke-opacity:0.0084849"
+       id="rect96186"
+       width="600"
+       height="260"
+       x="-204.9919"
+       y="1042.2473" />
+    <ellipse
+       style="opacity:0.1;fill:url(#radialGradient123230);fill-opacity:1;stroke:none;stroke-width:2.00001;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:9.1;stroke-opacity:1"
+       id="path120156"
+       cx="225.73796"
+       cy="1192.7638"
+       rx="165.76776"
+       ry="108.06927" />
+    <g
+       transform="translate(-1160.0177,610.69615)"
+       inkscape:label="referencia"
+       id="layer2-3" />
+    <g
+       inkscape:label="Layer 1"
+       id="g3194"
+       transform="translate(-381.66039,1217.4341)" />
+    <g
+       id="layer2"
+       inkscape:label="referencia"
+       transform="translate(-577.51401,231.92014)"
+       sodipodi:insensitive="true" />
+    <g
+       transform="translate(200.84331,838.65809)"
+       id="g3194-5"
+       inkscape:label="Layer 1" />
+    <g
+       inkscape:label="Layer 1"
+       id="g7737"
+       transform="translate(415.21682,1076.3667)" />
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif"
+       x="-206.56221"
+       y="1329.298"
+       id="text8209"><tspan
+         sodipodi:role="line"
+         id="tspan8207"
+         x="-206.56221"
+         y="1329.298">Font: sans-serif</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:38.5739px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffcc00;fill-opacity:1;stroke-width:0.999999"
+       x="-166.59741"
+       y="1181.9307"
+       id="text104293"><tspan
+         sodipodi:role="line"
+         id="tspan104291"
+         x="-166.59741"
+         y="1181.9307"
+         style="stroke-width:0.999999">PACKAGING</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:46.6921px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.999996"
+       x="-165.39397"
+       y="1120.9786"
+       id="text104297"
+       transform="scale(0.9999263,1.0000737)"><tspan
+         sodipodi:role="line"
+         id="tspan104295"
+         x="-165.39397"
+         y="1120.9786"
+         style="fill:#ffffff;stroke-width:0.999996">GNU Guix</tspan></text>
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:9.99998;stroke-dasharray:240, 240;stroke-dashoffset:91.0002;stroke-opacity:0.0084849"
+       id="rect104299"
+       width="246.20958"
+       height="2.4962523"
+       x="-163.05646"
+       y="1141.9712" />
+    <rect
+       style="fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:9.99998;stroke-dasharray:240, 240;stroke-dashoffset:91.0002;stroke-opacity:0.0084849"
+       id="rect104301"
+       width="246.20958"
+       height="2.4962523"
+       x="-163.05646"
+       y="1191.896" />
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:55.3519px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#ffffff;stroke-width:0.999996"
+       x="-168.41216"
+       y="1255.0927"
+       id="text104305"
+       transform="scale(0.99831894,1.0016839)"><tspan
+         sodipodi:role="line"
+         id="tspan104303"
+         x="-168.41216"
+         y="1255.0927"
+         style="fill:#ffffff;stroke-width:0.999996">MEETUP</tspan></text>
+    <path
+       style="fill:#4d1230;fill-opacity:1;stroke:#ffcc00;stroke-width:2.00001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 246.4591,1277.2619 -97.55113,-55.9496 97.55113,-56.1341 97.55121,56.1341 z"
+       id="path96763" />
+    <path
+       style="fill:#240917;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 246.4591,1185.9519 -61.45018,35.3604 61.45018,35.3606 z"
+       id="path96172"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ffcc00;stroke-width:2.00001;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 246.4591,1185.9519 -61.45018,35.3604 61.45018,35.3606 61.4502,-35.3606 z"
+       id="path96180" />
+    <g
+       id="g104801"
+       transform="matrix(0.82117073,0,0,0.82163013,54.793857,483.25055)"
+       style="stroke-width:1.21743">
+      <path
+         style="fill:#4d1230;fill-opacity:1;stroke:none;stroke-width:1.21743px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 233.40487,873.5977 -70.57775,-40.6142 v -81.4724 l 70.57775,-40.748 70.5778,40.6141 v 81.6063 z"
+         id="path104532" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path104534"
+         d="m 233.40487,873.7316 v -81.4725 l 70.5778,-40.748 v 81.4724 z"
+         style="fill:#240917;fill-opacity:1;stroke:none;stroke-width:1.21743px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         style="fill:none;stroke:#ffcc00;stroke-width:2.43487;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 233.40487,710.7631 70.5778,40.748 v 81.4724 l -70.5778,40.7481 -70.57775,-40.7481 v -81.4724 z"
+         id="path104538" />
+      <path
+         style="fill:none;stroke:#ffcc00;stroke-width:2.43487;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 233.40487,873.5977 v -81.4725 l 70.5778,-40.748"
+         id="path104540" />
+      <path
+         style="fill:none;stroke:#ffcc00;stroke-width:2.43487;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         d="m 233.40487,792.2591 -70.57775,-40.748"
+         id="path104542" />
+      <path
+         id="path104546"
+         style="opacity:1;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:2.43487;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:9.1;stroke-opacity:1"
+         d="m 175.75356,786.3464 c 0.62476,1.7286 1.33327,3.2718 2.12082,4.6184 0.78778,1.3241 1.66876,2.4762 2.65297,3.4592 0.59287,0.5921 1.23977,1.1266 1.9285,1.6228 0.0412,0.1204 -2.63353,-7.6944 -2.59239,-7.5743 -0.42463,-0.4207 -0.83039,-0.8606 -1.19345,-1.341 -0.60102,-0.8052 -1.14795,-1.7258 -1.64133,-2.7636 -0.51043,-1.0706 -1.00892,-2.3396 -1.49642,-3.8281 -3.1087,-0.8028 -0.34735,4.2547 0.2213,5.8066 z m 5.91983,3.612 c 2.06283,3.2209 4.07939,6.4053 4.97139,8.7599 2.17933,3.4503 4.20985,15.1951 6.28867,24.654 1.19158,-1.9509 2.38349,-3.9103 3.5698,-5.8697 0.0765,0.3318 -3.97561,-17.2008 -3.89913,-16.869 0,0 -0.0253,-0.1291 -0.0763,-0.3425 -0.28559,-1.1942 -1.48071,-5.2723 -4.90553,-7.3214 v -0.01 c -0.48942,-0.2937 -1.02511,-0.5438 -1.60972,-0.7403 -0.25499,-0.085 -0.41884,-0.1488 -0.57695,-0.2082 -0.15024,-0.056 -0.2958,-0.1153 -0.36621,-0.1423 h -0.008 c -0.55488,-0.2316 -1.18396,-0.5488 -1.88634,-0.9562 -0.54074,-0.3139 -1.03496,-0.6327 -1.5017,-0.9564 z m 39.4339,16.869 c -0.50049,0.9241 -1.00982,1.617 -1.52804,2.097 -0.50095,0.4672 -1.05516,0.7537 -1.65977,0.8643 -0.36473,0.06 -0.76864,0.034 -1.19345,-0.034 -0.88421,1.5219 -1.77137,3.043 -2.65826,4.5604 0.68705,0.2985 1.33254,0.5102 1.92586,0.6032 0.98579,0.1542 1.87319,0.026 2.6688,-0.3872 0.7956,-0.4354 1.51274,-1.161 2.15242,-2.1656 1.46233,-2.5587 2.35054,-3.3557 0.29244,-5.5378 z m -14.29769,-2.1998 c -1.80344,-0.01 -2.55146,1.6618 -2.77418,2.3051 -0.0531,0.1535 -0.0791,0.253 -0.0791,0.253 -1.87357,5.6847 -3.90157,11.7761 -5.79599,17.4144 l -0.003,0.013 -0.006,-0.016 c 0,0 -0.0395,-0.1632 -0.0395,-0.1634 -1.1782,1.9029 -2.36181,3.8068 -3.54609,5.7012 0.0137,0.049 0.0285,0.1043 0.0421,0.1528 h 0.003 c 0.0415,0.024 6.95318,4.0356 6.99473,4.0598 2.79201,-6.3286 5.48787,-21.037 8.283,-22.2012 0.91231,-1.3148 2.94709,-2.1614 5.02672,-2.9956 -0.46604,-0.2161 -0.95641,-0.4667 -1.49641,-0.7771 -0.70052,-0.4027 -1.33378,-0.8139 -1.88635,-1.2225 h -0.008 c -0.0702,-0.048 -0.21401,-0.1618 -0.36357,-0.2792 -0.15742,-0.1232 -0.32054,-0.2475 -0.57433,-0.4558 -0.58171,-0.4778 -1.11316,-0.8461 -1.6018,-1.1144 l -0.003,-0.01 c -0.85382,-0.4745 -1.57287,-0.6641 -2.17351,-0.6666 z"
+         sodipodi:nodetypes="ccsccccccccccccccccccsccccccccccssccccccccccccccccccs" />
+      <path
+         id="path104548"
+         style="opacity:0.8;fill:#ffcc00;fill-opacity:1;stroke:none;stroke-width:2.43487;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:9.1;stroke-opacity:1"
+         inkscape:transform-center-x="-38.885355"
+         inkscape:transform-center-y="-1.5051114"
+         d="m 273.54476,791.713 c -1.49415,-0.077 -3.39565,0.5455 -5.70664,1.8724 h -0.002 c -1.17459,0.6747 -2.39368,1.5421 -3.65548,2.6001 -1.26273,1.0589 -2.65565,2.375 -4.18317,3.9513 -0.004,-1.3113 0.0278,9.1286 0.0234,7.8173 1.28774,-1.8359 2.52544,-3.3689 3.71293,-4.6002 1.18739,-1.2478 2.29189,-2.1659 3.31717,-2.7554 1.08847,-0.6259 1.93736,-0.7829 2.54905,-0.4703 0.61154,0.2962 0.9222,1.0235 0.92983,2.181 0.004,0.7607 -0.16225,1.6192 -0.50002,2.5767 -0.32508,0.9502 -0.84764,2.0625 -1.56603,3.3385 -0.005,0.01 -1.20312,2.1296 -1.20857,2.1383 -1.33683,2.395 -2.2134,4.2435 -2.62778,5.5428 -0.41443,1.2827 -0.61824,2.6013 -0.61279,3.9555 0,0.051 0.007,1.1639 0.007,1.215 4.7165,-2.7221 2.1753,-1.2569 6.8918,-3.9789 -10e-6,0.042 -0.009,-1.1544 -0.009,-1.1128 -0.004,-0.7416 0.12412,-1.4935 0.38725,-2.2576 0.26304,-0.7806 0.82348,-1.9303 1.68093,-3.4512 0.007,-0.011 1.20415,-2.1041 1.21069,-2.115 1.18399,-2.1563 2.01741,-4.0111 2.50223,-5.5662 0.48473,-1.5717 0.71792,-3.1663 0.7043,-4.7832 -0.0265,-3.1504 -0.85536,-5.0786 -2.48522,-5.7875 -0.40757,-0.1814 -0.86146,-0.2848 -1.35964,-0.3106 z m -2.60863,29.0417 c -4.54972,2.6281 -2.35058,1.3572 -6.9003,3.9853 0.004,0.6942 0.0403,8.1019 0.0447,8.7961 0.39798,-0.2302 6.52147,-3.7742 6.91945,-4.0044 0.009,1.2565 -0.0726,-10.0335 -0.0638,-8.777 z"
+         sodipodi:nodetypes="sccscccscccscccccccsccscsccccc" />
+    </g>
+    <g
+       transform="translate(-1160.5357,212.102)"
+       inkscape:label="referencia"
+       id="layer2-3-9" />
+    <g
+       inkscape:label="Layer 1"
+       id="g3194-2"
+       transform="translate(-382.1784,818.83995)" />
+    <g
+       id="layer2-4"
+       inkscape:label="referencia"
+       transform="translate(-578.03202,-166.67401)"
+       sodipodi:insensitive="true" />
+    <g
+       transform="translate(200.3253,440.06394)"
+       id="g3194-5-6"
+       inkscape:label="Layer 1" />
+    <g
+       inkscape:label="Layer 1"
+       id="g7737-8"
+       transform="translate(414.69881,677.77255)" />
+  </g>
+</svg>

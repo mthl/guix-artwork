@@ -76,7 +76,7 @@ dependencies like so:
 ```scheme
 (inputs `(("gawk" ,gawk)
           ("gettext" ,gnu-gettext)
-		  ("pkg-config" ,pkg-config)))
+          ("pkg-config" ,pkg-config)))
 ```
 
 Quite a bit of boilerplate.  Unless you’re into Lisp, this probably
@@ -166,8 +166,8 @@ idiom](https://guix.gnu.org/manual/devel/en/html_node/Defining-Package-Variants.
 (define hello-variant
   (package
     (inherit hello)
-	(name "hello-variant")
-	(inputs `(("gawk" ,gawk-4.0)))))
+    (name "hello-variant")
+    (inputs `(("gawk" ,gawk-4.0)))))
 ```
 
 Here the intent is to create a package that depends on a different
@@ -191,13 +191,13 @@ field:
 ```scheme
 (define hello
   (package
-	(name "hello")
-	;; …
-	(arguments
-	 (list #:configure-flags
-		   #~(list (string-append "--with-gawk="
+    (name "hello")
+    ;; …
+    (arguments
+     (list #:configure-flags
+           #~(list (string-append "--with-gawk="
                                   #$(this-package-input "gawk")))))
-	(inputs `(("gawk" ,gawk)))))
+    (inputs `(("gawk" ,gawk)))))
 ```
 
 With this in place, we can take advantage of gexps in package
@@ -222,7 +222,7 @@ Input labels are pervasive; they’re visible in three contexts:
      phases](https://guix.gnu.org/manual/devel/en/html_node/Build-Phases.html);
   3. in the Scheme programming interface since `package-inputs` and
      related functions are expected to return a list of labeled inputs.
-	 
+
 We’re brave but not completely crazy, so we chose to focus on #1 for
 now—it’s also the most visible of all three—, with an plan to
 incrementally address #2, leaving #3 for later.
@@ -241,9 +241,9 @@ our example above can now be written like this:
 ```scheme
 (define hello
   (package
-	(name "hello")
-	;; …
-	(inputs (list gawk))))
+    (name "hello")
+    ;; …
+    (inputs (list gawk))))
 ```
 
 Much nicer, no?  The effect is even more pleasant for packages with a

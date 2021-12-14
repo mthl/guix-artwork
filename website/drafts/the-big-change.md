@@ -299,7 +299,7 @@ with additional dependencies goes like this:
 The variant defined above adds two inputs to those of `hello`.  We
 introduced a macro, `modify-inputs`, which allows packagers to express
 that in a higher-level (and less cryptic) fashion, in a way that does
-not refer to input labels.  Using this other linguistic device (ah ha!),
+not refer to input labels.  Using this other linguistic device (ha ha!),
 the snippet above becomes:
 
 ```scheme
@@ -468,14 +468,14 @@ like this:
 -     `(("ansible" ,ansible)
 -       ("encfs" ,encfs)
 -       ("fuse" ,fuse)
--       ("util-linux" ,util-linux)  ;; for umount
+-       ("util-linux" ,util-linux)  ;for umount
 -       ("findutils" ,findutils)
 -       ("gnupg" ,gnupg)
 -       ("which" ,which)))
 +     (list ansible
 +           encfs
 +           fuse
-+           util-linux ;; for umount
++           util-linux ;for umount
 +           findutils
 +           gnupg
 +           which))

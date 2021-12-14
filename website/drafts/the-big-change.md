@@ -5,7 +5,7 @@ tags: Scheme API
 ---
 
 Making cross-cutting changes over a large code base is difficult, but
-it's occasionally necessary if are to keep the code base tidy and
+it's occasionally necessary if we are to keep the code base tidy and
 malleable.  With almost 800K source lines of code, Guix can reasonably
 be called a large code base.  One might argue that almost 80% of this
 code is [package
@@ -26,7 +26,7 @@ that made this big change possible.
 
 # Packages and inputs
 
-Packaging in Guix are
+Packages in Guix are
 [defined](https://guix.gnu.org/manual/devel/en/html_node/Defining-Packages.html)
 using a _domain-specific language_ embedded in the Scheme programming
 language—an EDSL, for the programming language geeks among us.  This is
@@ -110,7 +110,7 @@ referring to the special `%build-inputs` variable, which happens to
 contain an [association
 list](https://www.gnu.org/software/guile/manual/html_node/Association-Lists.html)
 that maps input labels to file names.  The `"gawk"` label in `inputs` is
-here to allow build-side code to allow build-side code to get at an
+here to allow build-side code to get at an
 input’s file name.
 
 Still here?  The paragraphs above are a demonstration of the shortcoming
@@ -201,7 +201,7 @@ field:
 ```
 
 With this in place, we can take advantage of gexps in package
-definitions will still supporting the common idiom to define package
+definitions while still supporting the common idiom to define package
 variants, wheee!
 
 That was a long digression from our input label theme but, as you can

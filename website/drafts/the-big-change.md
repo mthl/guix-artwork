@@ -1,5 +1,5 @@
 title: The Big Change
-date: 2021-12-15 14:00
+date: 2021-12-15 15:00
 author: Ludovic Courtès
 tags: Scheme API
 ---
@@ -297,10 +297,11 @@ with additional dependencies goes like this:
 ```
 
 The variant defined above adds two inputs to those of `hello`.  We
-introduced a macro, `modify-inputs`, which allows packagers to express
-that in a higher-level (and less cryptic) fashion, in a way that does
-not refer to input labels.  Using this other linguistic device (ha ha!),
-the snippet above becomes:
+introduced a macro,
+[`modify-inputs`](https://guix.gnu.org/manual/devel/en/html_node/Defining-Package-Variants.html#index-modify_002dinputs),
+which allows packagers to express that in a higher-level (and less
+cryptic) fashion, in a way that does not refer to input labels.  Using
+this other linguistic device (ha ha!), the snippet above becomes:
 
 ```scheme
 (define hello-with-additional-dependencies
@@ -321,9 +322,10 @@ whatnot when willing to replace or remove inputs, like so:
 ```
 
 On the build side—context #2 above—, we also provide new procedures that
-allow packagers to avoid relying on input labels: `search-input-file`
-and `search-input-directory`.  Instead of having build phases that run
-code like:
+allow packagers to avoid relying on input labels: [`search-input-file`
+and
+`search-input-directory`](https://guix.gnu.org/manual/devel/en/html_node/Build-Utilities.html#index-search_002dinput_002dfile).
+Instead of having build phases that run code like:
 
 ```scheme
 (lambda* (#:key inputs #:allow-other-keys)
@@ -382,7 +384,7 @@ From a checkout, one can run:
 ./pre-inst-env guix style
 ```
 
-… and whenever it can be done safely, package inputs in _every_ package
+Whenever it can be done safely, package inputs in _every_ package
 definition are rewritten to the new style: removing input labels, and
 using `modify-inputs` where appropriate.  If you maintain your own
 channel, you can also run it for your packages:
@@ -392,7 +394,8 @@ guix style -L /path/to/channel my-package1 my-package2 …
 ```
 
 We recommend waiting until the next Guix release is out though, which
-could be a month from now.
+could be a month from now, so that your channel remains usable by those
+who pinned an older revision of the `guix` channel.
 
 We ran `guix style` a couple of days ago on the whole repository,
 leading to [the biggest
@@ -554,3 +557,21 @@ times](https://guix.gnu.org/en/blog/2021/taming-the-stat-storm-with-a-loader-cac
 This paves the way for the upcoming release, most likely labeled “1.4”,
 unless a closer review of the changes that have landed lead us to think
 “2.0” would be more appropriate…  Stay tuned!
+
+#### About GNU Guix
+
+[GNU Guix](https://guix.gnu.org) is a transactional package manager and
+an advanced distribution of the GNU system that [respects user
+freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).
+Guix can be used on top of any system running the Hurd or the Linux
+kernel, or it can be used as a standalone operating system distribution
+for i686, x86_64, ARMv7, AArch64 and POWER9 machines.
+
+In addition to standard package management features, Guix supports
+transactional upgrades and roll-backs, unprivileged package management,
+per-user profiles, and garbage collection.  When used as a standalone
+GNU/Linux distribution, Guix offers a declarative, stateless approach to
+operating system configuration management.  Guix is highly customizable
+and hackable through [Guile](https://www.gnu.org/software/guile)
+programming interfaces and extensions to the
+[Scheme](http://schemers.org) language.

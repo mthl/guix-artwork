@@ -89,9 +89,9 @@ lists](https://www.gnu.org/software/guile/manual/html_node/Expression-Syntax.htm
 Lispers couldn’t live without quasiquote, it’s wonderful.  Still,
 exposing newcomers to this syntax has always been uncomfortable; in
 tutorials you’d end up saying “yeah don’t worry, just write it this
-way”.  Our goal though is to empower users by giving up abstractions
+way”.  Our goal though is to empower users by giving them abstractions
 they can comprehend, hopefully providing a smooth path towards
-programming [without
+[programming without
 noticing](https://www.gnu.org/software/guile/manual/html_node/The-Emacs-Thesis.html).
 This seemingly opaque backquote-string-unquote construct works against
 that goal.

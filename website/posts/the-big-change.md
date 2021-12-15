@@ -357,7 +357,7 @@ incorrect file name.
 
 That was a deep dive into packaging!  If you’re already packaging
 software for Guix, you hopefully see how to do things “the new way”.
-Either way, it’s interesting to see how the wide-ranging implications of
+Either way, it’s interesting to see the wide-ranging implications of
 what initially looks like a simple change.  Things get complex when you
 have to consider all the idioms that 20,000 packages make use of.
 
@@ -527,7 +527,7 @@ for instance, with the approach taken by Nix, where the language
 implementation lives separately from the package collection.
 
 Another one is that a strong, consistent community leads to consistent
-changes−[not surprisingly in
+changes—[not surprisingly in
 fact](https://en.wikipedia.org/wiki/Conway%27s_law).  It’s a pleasure to
 see that we, collectively, can undertake such overarching changes and
 all look in the same direction.
@@ -555,7 +555,7 @@ things—from GNOME 41, to GCC 10 by default, to hardened Python packages
 and [improved executable startup
 times](https://guix.gnu.org/en/blog/2021/taming-the-stat-storm-with-a-loader-cache/).
 This paves the way for the upcoming release, most likely labeled “1.4”,
-unless a closer review of the changes that have landed lead us to think
+unless a closer review of the changes that have landed leads us to think
 “2.0” would be more appropriate…  Stay tuned!
 
 #### About GNU Guix

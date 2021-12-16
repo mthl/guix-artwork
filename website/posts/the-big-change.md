@@ -455,8 +455,8 @@ application.  First, Scheme’s standard
 [`read`](https://www.gnu.org/software/guile/manual/html_node/Scheme-Read.html)
 procedure, which reads an sexp (or an abstract syntax tree if you will)
 from a byte stream and returns it, does not preserve comments.
-Obviously we’d rather not throw comments, so we came up with our own
-`read` variant that preserves comments.  Similarly, we have a custom
+Obviously we’d rather not throw away comments, so we came up with our
+own `read` variant that preserves comments.  Similarly, we have a custom
 pretty printer that can write comments, allowing it to achieve changes
 like this:
 

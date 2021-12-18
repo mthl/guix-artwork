@@ -450,7 +450,7 @@ as opposed to rewriting complete package definitions.  Lisps are famous
 for being [homoiconic](https://en.wikipedia.org/wiki/Homoiconicity),
 which comes in handy in such a situation.
 
-But the tools are our disposal are not capable enough for this
+But the tools at our disposal are not capable enough for this
 application.  First, Scheme’s standard
 [`read`](https://www.gnu.org/software/guile/manual/html_node/Scheme-Read.html)
 procedure, which reads an sexp (or an abstract syntax tree if you will)

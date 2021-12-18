@@ -1,5 +1,6 @@
 ;;; GNU Guix web site
 ;;; Copyright © 2019 Florian Pelz <pelzflorian@pelzflorian.de>
+;;; Copyright © 2021 Simon Tournier <zimon.toutoune@gmail.com>
 ;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 
@@ -399,7 +400,7 @@ manual.
                       #:items
                       (list
                        (C_ "website menu"
-                           (menu-item #:label "Stable"
+                           (menu-item #:label "Standard"
                                       #:active-item active-item
                                       #:url (guix-url "download/")))
                        (C_ "website menu"
@@ -416,10 +417,11 @@ manual.
              (menu-item #:label "All"
                         #:active-item active-item
                         #:url (guix-url "help/")))
-         (C_ "website menu"
-             (menu-item #:label "GNU Guix Manual (stable)"
-                        #:active-item active-item
-                        #:url (guix-url "manual/")))
+         (menu-item #:label (C_ "website menu"
+                                (string-append "GNU Guix Manual "
+                                               (latest-guix-version) ""))
+                    #:active-item active-item
+                    #:url (guix-url "manual/"))
          (C_ "website menu"
              (menu-item #:label "GNU Guix Manual (latest)"
                         #:active-item active-item

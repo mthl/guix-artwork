@@ -1,4 +1,5 @@
 ;;; GNU Guix web site
+;;; Copyright © 2021 Simon Tournier <zimon.toutoune@gmail.com>
 ;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 ;;;
@@ -145,8 +146,8 @@
   (theme
    #:title (C_ "webpage title" '("Download latest"))
    #:description
-   (G_ "Download latest GNU Guix System images built by the Cuirass continuous
-integration system.")
+   (G_ "Download latest development GNU Guix System images built
+by the Cuirass continuous integration system.")
    #:keywords
    (string-split ;TRANSLATORS: |-separated list of webpage keywords
     (G_ "GNU|Linux|Unix|Free software|Libre software|Operating \
@@ -163,7 +164,7 @@ Package manager") #\|)
    `(main
      (section
       (@ (class "page"))
-      ,(G_ `(h2 "Download latest images"))
+      ,(G_ `(h2 "Download latest development images"))
       ;; TRANSLATORS: Continuous Integration is a section name
       ;; in the English (en) manual.
       ,(G_
@@ -175,7 +176,8 @@ Package manager") #\|)
           " continuous integration system at "
           (a (@ (href ,ci-url)) "ci.guix.gnu.org")
           ". These images are " ,(G_ `(b "development snapshots"))
-          ", you might prefer to use stable images that can be found "
+          ", you might prefer to use well-tested released images
+that can be found "
           ,(G_ `(a (@ (href ,(guix-url "download/"))) "here."))))
       (div
        (@ (class "centered-block limit-width"))

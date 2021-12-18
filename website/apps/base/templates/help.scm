@@ -1,5 +1,6 @@
 ;;; GNU Guix web site
 ;;; Public domain 2021 Luis Felipe López Acevedo
+;;; Copyright © 2021 Simon Tournier <zimon.toutoune@gmail.com>
 ;;; Initially written by sirgazil who waives all
 ;;; copyright interest on this file.
 
@@ -51,7 +52,8 @@ system|GNU Hurd|GNU Guix package manager|Help resources") #\|)
             online.  You may also find more information about Guix by running "
             ,(G_ `(code "info guix")) "."))
         (p
-         ,(link-more #:label (G_ "Read stable manual")
+         ,(link-more #:label (G_ (string-append "Read manual "
+                                                (latest-guix-version) ""))
                      #:url (guix-url "manual/en" #:localize #f)))
         (p
          (a (@ (href ,(guix-url "manual/de" #:localize #f))) "Deutsch") " | "
@@ -76,8 +78,7 @@ system|GNU Hurd|GNU Guix package manager|Help resources") #\|)
           `(p
             "This version of the manual is updated frequently to
             include the latest changes from Guix's source files. It is
-            more up-to-date than the manual for the stable release of
-            Guix."))
+            more up-to-date than the manual for the release of Guix."))
         (p
          ,(link-more #:label (G_ "Read latest manual")
                      #:url (guix-url "manual/devel/" #:localize #f))))

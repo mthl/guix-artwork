@@ -225,9 +225,8 @@ i686-linux, and dedicated storage"))
         `(p "Other organizations and individuals helped Guix with hardware and
 hosting in the past and we thank them: "
             ,(G_ `(a (@ (href "https://www.fsf.org")) "Free Software Foundation")) ", "
-            ,(G_ `(a (@ (href "https://es.gnu.org")) "GNU España")) ", "
+            "GNU España, "
             ,(G_ `(a (@ (href "https://fsffrance.org/index.en.html")) "FSF France")) ", "
-            ,(G_ `(a (@ (href "https://gnunet.org/fsnsg")) "Free Secure Network Systems Group"))
-            " at the "
+            "and the Free Secure Network Systems Group at the "
             ,(G_ `(a (@ (href "https://www.tum.de/")) "Technische Universität München"))
             "."))))))

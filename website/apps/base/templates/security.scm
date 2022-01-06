@@ -13,6 +13,9 @@
 (define ludovics-key
   "3CE4 6455 8A84 FDC6 9DB4 0CFB 090B 1199 3D9A EBB5")
 
+(define maxims-key
+  "27D5 86A4 F890 0854 329F F09F 1260 E464 82E6 3562")
+
 (define (security-t)
   "Return the Security page in SHTML."
   (theme
@@ -61,12 +64,14 @@ system|GNU Hurd|GNU Guix package manager|Security updates") #\|)
 		     "F5BC 5534 C36F 0087 B39D  36EF 1C9D C4FE B9DB 7C4B")))))
 
       ,(G_ `(h3 "Release signatures"))
+      ,(G_ `(p "Releases of Guix are signed using one of "
+               "the following OpenPGP keys:"))
+      (ul (li (tt ,maxims-key)
+              (ul ,(G_ `(li "Maxim Cournoyer (from version 1.3.0)"))))
+          (li (tt ,ludovics-key)
+              (ul ,(G_ `(li "Ludovic Courtès (until version 1.2.0)")))))
       ,(G_
         `(p
-          "Releases of Guix are signed using the OpenPGP "
-          "key with the fingerprint "
-          (span (@ (class "mono")) ,ludovics-key)
-          ".  "
           "Users should "
           ,(G_ (manual-href "verify"
                             (G_ "en")

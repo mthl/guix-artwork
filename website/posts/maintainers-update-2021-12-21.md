@@ -5,9 +5,10 @@ tags: Community
 ---
 
 For some time already, Ludovic and Marius have voiced their desire to
-step down from the Guix maintainers collective.  An email announcing
-the news and calling for new maintainers was sent more than 4 months
-ago [0].  We're very happy to announce that Efraim Flashner has
+step down from the Guix maintainers collective.  An
+[email](https://mail.gnu.org/archive/html/guix-devel/2021-08/msg00009.html)
+announcing the news and calling for new maintainers was sent more than
+4 months ago.  We're very happy to announce that Efraim Flashner has
 responded to the call and accepted to join the Guix maintainers
 collective!  Efraim has been with Guix for a long time -- [the first
 recorded Git history of their activity goes back to

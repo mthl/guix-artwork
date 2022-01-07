@@ -21,7 +21,7 @@ person you'd like to hang out with at FOSDEM :-).
 
 We're sad to see Ludovic and Marius step down from their current
 duties, but we take comfort knowing they will remain among us for the
-good hacks and occasional guidance.  Loosing them as co-maintainer
+good hacks and occasional guidance.  Losing them as co-maintainers
 will be a difficult test for the remaining Guix co-maintainers.
 Ludovic's wit, relentless energy, tactful communication and wise
 planning have been invaluable to the Guix project throughout the
@@ -30,7 +30,7 @@ on their desire to guard Guix against the [Founder's
 syndrome](https://en.wikipedia.org/wiki/Founder's_syndrome), which is
 something we can only applaud.  Marius has served as co-maintainer
 since October 2019.  Their calm, composed attitude has helped us
-navigating through at times difficult situations, and their technical
+navigate through at times difficult situations, and their technical
 wizardry has brought us the likes of
 [ungoogled-chromium](https://git.savannah.gnu.org/cgit/guix.git/commit/?id=f1e9de4d3aefae420db633a56ba9cd93f7750df3)
 and a [Ganeti

@@ -107,12 +107,11 @@ system|GNU Hurd|GNU Guix package manager") #\|)
 
       ,(G_
         `(p
-          "Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim
-Cournoyer, Tobias Geerinckx-Rice and Mathieu Othacehe.  Please use the "
+          "Guix is currently maintained by Efraim Flashner, Mathieu Othacehe, "
+          "Maxim Cournoyer and Tobias Geerinckx-Rice.  Please use the "
           ,(G_ `(a (@ (href ,(guix-url "contact/"))) "mailing lists"))
           " for contact.  For sensitive issues, you can reach them "
           "using the " (code "guix-maintainers@gnu.org") " private alias."))
-
 
       ,(G_ `(h3 (@ (id "license")) "Licensing"))
 

@@ -116,7 +116,7 @@ system|GNU Hurd|GNU Guix package manager|Donations") #\|)
 	(tbody
 
          ,(G_ `(tr
-                ,(G_ `(td "berlin.guixsd.org"))
+                ,(G_ `(td "berlin.guix.gnu.org"))
                 ,(G_ `(td "build farm with 25 build nodes for x86_64-linux and
 i686-linux, and dedicated storage"))
                 ,(G_ ((lambda content
@@ -128,7 +128,7 @@ i686-linux, and dedicated storage"))
                               "Max Delbrück Center for Molecular Medicine"))
                       " (hardware and hosting)"))))
          ,(G_ `(tr
-                ,(G_ `(td "overdrive1.guixsd.org"))
+                ,(G_ `(td "overdrive1"))
                 ,(G_ `(td "aarch64-linux"))
                 ,(G_ ((lambda content
                         `(td
@@ -139,7 +139,7 @@ i686-linux, and dedicated storage"))
                               "ARM Holdings") " (hardware)")))))
          ,(G_
            `(tr
-             ,(G_ `(td "bayfront.guixsd.org"))
+             ,(G_ `(td "bayfront"))
              ,(G_ `(td "new build farm front-end (WIP)"))
              ,(G_ ((lambda (content)
                         `(td

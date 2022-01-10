@@ -2,24 +2,24 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="114.80407mm"
    height="48.904305mm"
    viewBox="0 0 114.80407 48.904305"
    version="1.1"
    id="svg4715"
-   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
-   sodipodi:docname="Guix-Days-2020.svg"
-   inkscape:export-filename="/home/ludo/src/guix-artwork/logo/Guix-Days-2019.png"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="Guix-Days-Initial.svg"
+   inkscape:export-filename="Guix-Days-2022.png"
    inkscape:export-xdpi="169.83781"
-   inkscape:export-ydpi="169.83781">
+   inkscape:export-ydpi="169.83781"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs4709">
     <linearGradient
@@ -43,16 +43,6 @@
          offset="1"
          id="stop4706-8" />
     </linearGradient>
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient4702-3"
-       id="linearGradient3843"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.79908279,0,0,0.79908279,434.7713,434.75738)"
-       x1="113.5146"
-       y1="1004.8033"
-       x2="78.000107"
-       y2="922.07178" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4696-5"
@@ -84,35 +74,6 @@
        y1="63.65625"
        x2="177.04297"
        y2="69.791016" />
-    <filter
-       style="color-interpolation-filters:sRGB"
-       inkscape:label="Invert"
-       id="filter866">
-      <feColorMatrix
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 2 0 "
-         result="fbSourceGraphic"
-         id="feColorMatrix864" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix868" />
-      <feColorMatrix
-         id="feColorMatrix870"
-         values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 -0.21 -0.72 -0.07 2 0 "
-         result="fbSourceGraphic"
-         in="fbSourceGraphic" />
-      <feColorMatrix
-         result="fbSourceGraphicAlpha"
-         in="fbSourceGraphic"
-         values="0 0 0 -1 0 0 0 0 -1 0 0 0 0 -1 0 0 0 0 1 0"
-         id="feColorMatrix872" />
-      <feColorMatrix
-         id="feColorMatrix874"
-         values="0 0 1 0 0 0 1 0 0 0 1 0 0 0 0 -0.21 -0.72 -0.07 2 0 "
-         result="color2"
-         in="fbSourceGraphic" />
-    </filter>
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4702-3"
@@ -129,24 +90,27 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="1"
      inkscape:pageshadow="2"
      inkscape:zoom="2.0175952"
-     inkscape:cx="227.24099"
-     inkscape:cy="46.915154"
+     inkscape:cx="210.15117"
+     inkscape:cy="105.07559"
      inkscape:document-units="mm"
-     inkscape:current-layer="g862"
+     inkscape:current-layer="g3829"
      showgrid="false"
      fit-margin-top="3"
      fit-margin-left="3"
      fit-margin-right="3"
      fit-margin-bottom="3"
-     inkscape:window-width="2558"
-     inkscape:window-height="1438"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
      inkscape:window-x="0"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
-     showguides="false" />
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     showguides="false"
+     inkscape:pagecheckerboard="0"
+     inkscape:showpageshadow="false"
+     inkscape:snap-page="true" />
   <metadata
      id="metadata4712">
     <rdf:RDF>
@@ -155,7 +119,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -225,49 +188,36 @@
            style="font-style:normal;font-weight:bold;font-size:144px;line-height:125%;font-family:Sans;-inkscape-font-specification:'Sans Bold';letter-spacing:0px;word-spacing:0px;fill:#333333;fill-opacity:1;stroke:none"
            d="m 667.1005,1220.7867 -11.87587,-16.0794 h 11.14098 l 6.73161,9.7593 6.81981,-9.7593 H 691.058 l -11.87586,16.0206 12.46377,16.9026 h -11.14096 l -7.40773,-10.4061 -7.31953,10.4061 h -11.14097 l 12.46378,-16.8438" />
       </g>
-      <g
-         id="g862"
-         transform="matrix(-0.4402091,0,0,-0.71775662,892.0121,2200.7737)"
-         style="filter:url(#filter866)">
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.18471527px;line-height:44.47560883px;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1.77902436px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           x="-755.63574"
-           y="-1706.7384"
-           id="text878"
-           transform="scale(-1.2769065,-0.78314269)"
-           inkscape:export-xdpi="257.04001"
-           inkscape:export-ydpi="257.04001"><tspan
-             sodipodi:role="line"
-             x="-755.63574"
-             y="-1672.2372"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.18471527px;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;stroke-width:1.77902436px"
-             id="tspan886" /><tspan
-             sodipodi:role="line"
-             x="-755.63574"
-             y="-1627.7616"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.18471527px;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#787d8c;fill-opacity:1;stroke-width:1.77902436px"
-             id="tspan4560">30–31 JANUARY 2020</tspan><tspan
-             sodipodi:role="line"
-             x="-755.63574"
-             y="-1583.286"
-             style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:52.18471527px;font-family:'League Gothic';-inkscape-font-specification:'League Gothic, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;fill:#787d8c;fill-opacity:1;stroke-width:1.77902436px"
-             id="tspan850">BRUSSELS</tspan></text>
-        <text
-           xml:space="preserve"
-           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:111.48552704px;line-height:44.47560883px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#ec7528;fill-opacity:1;stroke:none;stroke-width:1.77902436px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-           x="-360.42416"
-           y="-1701.6453"
-           id="text4564"
-           transform="scale(-1.2769065,-0.78314269)"
-           inkscape:export-xdpi="257.04001"
-           inkscape:export-ydpi="257.04001"><tspan
-             sodipodi:role="line"
-             id="tspan4562"
-             x="-360.42416"
-             y="-1701.6453"
-             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:111.48552704px;font-family:'Bitstream Vera Sans';-inkscape-font-specification:'Bitstream Vera Sans, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-feature-settings:normal;text-align:start;letter-spacing:-8.00560961px;writing-mode:lr-tb;text-anchor:start;fill:#ec7528;fill-opacity:1;stroke-width:1.77902436px">Days</tspan></text>
-      </g>
+      <text
+         xml:space="preserve"
+         style="font-weight:bold;font-size:59.9958px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#2875ec;fill-opacity:1;stroke-width:0.999999;letter-spacing:-1.19000001px"
+         x="720.61127"
+         y="1191.2325"
+         id="text5418"
+         transform="scale(0.95737544,1.0445223)"><tspan
+           sodipodi:role="line"
+           id="tspan5416"
+           x="720.61127"
+           y="1191.2325"
+           style="fill:#2875ec;fill-opacity:1;stroke-width:0.999999">Days</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-size:25.3985px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#8c7d78;fill-opacity:1;stroke-width:1"
+         x="433.31946"
+         y="1383.9254"
+         id="text26822"
+         transform="scale(1.07994,0.92597738)"><tspan
+           sodipodi:role="line"
+           id="tspan26820"
+           x="433.31946"
+           y="1383.9254"
+           style="fill:#8c7d78;fill-opacity:1;stroke-width:1"
+           dy="0 0 0 0 0">19-20 FEBRUARY 2022</tspan><tspan
+           sodipodi:role="line"
+           x="433.31946"
+           y="1415.6736"
+           id="tspan26824"
+           style="fill:#8c7d78;fill-opacity:1;stroke-width:1">ONLINE!</tspan></text>
     </g>
   </g>
 </svg>

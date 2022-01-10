@@ -120,7 +120,14 @@
      (body
       ,(navbar #:active-item active-menu-item)
 
-      ;; NOTE: Comment this message out when it is not needed anymore.
+      ;; NOTE: Comment these messages out when they are not needed anymore.
+      (div
+       (@ (class "message-box msg-info"))
+       (p ,(G_ `("Online conference February 19-20. "
+                 ,(G_ `(a
+                        (@ (href "/blog/2022/online-guix-days-2022-announcement-1/"))
+                        "Learn more"))
+                 "!"))))
       ;(div
       ; (@ (class "message-box msg-info"))
       ; (p ,(G_ `("Online conference November 22nd. "

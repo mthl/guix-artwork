@@ -57,7 +57,7 @@ last discussion may be longer depending on what you have to share.
 
 The main channel for the day will be the video chat and questions will be asked
 via the chat hosted there or––because we love it––via `#guix` on
-[`irc.freenode.net`](https://guix.gnu.org/en/contact/irc/) then the floor
+[`libera.chat`](https://guix.gnu.org/en/contact/irc/) then the floor
 might be shared, opening more mics.  The discussions will not be recorded
 because we would like to keep them informal––where people are less impressed to
 share their point of views.

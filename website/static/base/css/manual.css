@@ -264,6 +264,7 @@ label.navbar-menu-item {
     .navbar-submenu .navbar-menu-item:link,
     .navbar-submenu .navbar-menu-item:visited {
 	font-size: 0.9em;
+	color: white;
     }
 
     .navbar-submenu .navbar-menu-item:active,
@@ -273,6 +274,7 @@ label.navbar-menu-item {
     .navbar-submenu .navbar-menu-item-active:visited {
 	background-color: #414141;
 	background-image: none;
+	color: #F4BB15;
     }
 
     .navbar-menu-btn:link {

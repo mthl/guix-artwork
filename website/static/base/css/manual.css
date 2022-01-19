@@ -298,3 +298,19 @@ label[for=all-dropdowns-hidden] {
 #visible-dropdown:checked ~ label[for=visible-dropdown] {
     display: none;
 }
+
+/* Fonts.  */
+
+@font-face {
+    font-family: 'Fira Sans';
+    src: url('../fonts/FiraSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* In title and node titles, use Fira Sans as it is more pleasant and
+   more compact than Helvetica.  */
+.settitle, .top, .chapter, .section, .subsection, .subsubsection {
+    font-family: Fira Sans, sans;
+    font-weight: bold;
+}

@@ -21,6 +21,28 @@
     margin: 0px;
 }
 
+.branding {
+    position: relative;
+    overflow: hidden;
+}
+
+.branding:link,
+.branding:visited {
+    background-image: url("../img/Guix-logo.png");
+    background-position: bottom;
+    background-repeat: no-repeat;
+    border-style: none;
+    display: inline-block;
+    height: 55px;
+    width: 170px;
+}
+
+.branding:active,
+.branding:focus,
+.branding:hover {
+    background-position: top;
+}
+
 /* Note: Compared to navbar.css, changed 'menu' to 'navbar-menu' to
    avoid clash with the "menu" class used in the Texinfo-generated
    HTML.  */

@@ -316,3 +316,11 @@ label[for=all-dropdowns-hidden] {
     font-family: Fira Sans, sans;
     font-weight: bold;
 }
+
+/* Texinfo footnotes are in a "footnote" <div> but each of them is
+   wrapped in <h5> (go figure).  Have them use a regular font instead
+   of bold.  */
+.footnote > h5 {
+    font-weight: normal;
+    font-size: 0.9em;
+}

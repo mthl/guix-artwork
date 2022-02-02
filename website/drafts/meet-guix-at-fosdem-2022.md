@@ -27,7 +27,7 @@ computing](https://fosdem.org/2022/schedule/track/declarative_and_minimalistic_c
 
   - [“_A year of RISC-V adventures: embracing chaos in your software
     journey_”](https://fosdem.org/2022/schedule/event/riscvadventures/)
-    will be Ekaitz Zarraga’s account of the heroic work porting
+    will be Ekaitz Zarraga’s account of the work porting
     GNU Guile, stage0, and GNU Mes to RISC-V, which will be instrumental
     in improving the RISC-V port of Guix.
   - With [_“Declare All Your Needs — Managing computing environment

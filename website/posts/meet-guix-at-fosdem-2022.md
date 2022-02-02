@@ -12,8 +12,8 @@ able carry enthusiasm to the homes of the thousands of attendees.
 
 This year’s a bit special: we’re celebrating 10 years of Guix, including
 [8 years sharing our excitement at
-FOSDEM](https://guix.gnu.org/en/blog/tags/fosdem/)!  This year again
-there will be again several talks about Guix and related projects.
+FOSDEM](https://guix.gnu.org/en/blog/tags/fosdem/)!  This edition will
+also bring you several talks about Guix and related projects.
 
   - Sunday morning, in the [distributions
     track](https://fosdem.org/2022/schedule/track/distributions/),

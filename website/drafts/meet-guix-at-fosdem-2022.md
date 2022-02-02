@@ -8,9 +8,12 @@ tags: FOSDEM, Guix Days, Talks, Community
 As usual, GNU Guix will be present at [FOSDEM](https://fosdem.org/2022/)
 this week-end, February 5th and 6th.  Due to the pandemic, FOSDEM takes
 place on-line for the second year, but we’re confident the wires will be
-able carry enthusiasm to the homes of the thousands of attendees.  We’re
-happy to say that there will be several talks about Guix and related
-projects!
+able carry enthusiasm to the homes of the thousands of attendees.
+
+This year’s a bit special: we’re celebrating 10 years of Guix, including
+[8 years sharing our excitement at
+FOSDEM](https://guix.gnu.org/en/blog/tags/fosdem/)!  This year again
+there will be again several talks about Guix and related projects.
 
   - Sunday morning, in the [distributions
     track](https://fosdem.org/2022/schedule/track/distributions/),

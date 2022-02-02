@@ -48,7 +48,7 @@ computing](https://fosdem.org/2022/schedule/track/declarative_and_minimalistic_c
     workflow language using
     Lisp_”](https://fosdem.org/2022/schedule/event/commonworkflowlang/)
     will be Arun Isaac presenting [the all new
-    ccwl](https://fosdem.org/2022/schedule/event/commonworkflowlang/), a
+    ccwl](https://hpc.guix.info/blog/2022/01/ccwl-for-concise-and-painless-cwl-workflows/), a
     Guile domain-specific language (DSL) to define scientific workflows.
 
 But let’s be clear: there are other [exciting talks in this

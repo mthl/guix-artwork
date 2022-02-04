@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210527\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-11-21 15:18Z\n"
+"POT-Creation-Date: 2022-01-13 15:18Z\n"
 "PO-Revision-Date: 2021-10-24 19:05+0000\n"
 "Last-Translator: Whired Planck <fungdaat31@outlook.com>\n"
 "Language-Team: Chinese (Traditional) <https://translate.fedoraproject.org/"
@@ -70,7 +70,7 @@ msgstr ""
 "GNU | Linux | Unix | 自由軟體 | 自由軟體 | 作業系統 | GNU Hurd | GNU Guix 包"
 "管理器 | GNU Guile | Guile Scheme | 事務性升級 | 函式式包管理 | 可再現性"
 
-#: apps/base/templates/home.scm:32 apps/base/templates/components.scm:395
+#: apps/base/templates/home.scm:32 apps/base/templates/components.scm:396
 msgctxt "website menu"
 msgid "Overview"
 msgstr "概覽"
@@ -245,11 +245,11 @@ msgctxt "button"
 msgid "ALL CONTACT MEDIA"
 msgstr "所有聯絡方式"
 
-#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:464
-#: apps/base/templates/components.scm:467 apps/base/templates/about.scm:27
+#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:466
+#: apps/base/templates/components.scm:469 apps/base/templates/about.scm:27
 #: apps/base/templates/about.scm:30 apps/base/templates/contact.scm:26
 #: apps/base/templates/contribute.scm:26 apps/base/templates/graphics.scm:24
-#: apps/base/templates/security.scm:28
+#: apps/base/templates/security.scm:31
 msgctxt "website menu"
 msgid "About"
 msgstr "關於"
@@ -264,7 +264,11 @@ msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
 msgstr "GNU Guix — 活動資訊"
 
-#: apps/base/templates/theme.scm:144
+#: apps/base/templates/theme.scm:126
+msgid "Online conference February 19-20. <1>Learn more</1>!"
+msgstr ""
+
+#: apps/base/templates/theme.scm:151
 msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
@@ -272,107 +276,109 @@ msgstr ""
 "來自人類，用 <1>♥</1 > 製作。由 <2>GNU Guile</2> 驅動。<3>原始碼</3>以 "
 "<4>GNU AGPL</4> 許可證釋出。"
 
-#: apps/base/templates/components.scm:49
+#: apps/base/templates/components.scm:50
 msgid "Your location:"
 msgstr "您的位置："
 
-#: apps/base/templates/components.scm:51
+#: apps/base/templates/components.scm:52
 msgid "Home"
 msgstr "首頁"
 
-#: apps/base/templates/components.scm:155
+#: apps/base/templates/components.scm:156
 msgid "archive"
 msgstr "歸檔"
 
-#: apps/base/templates/components.scm:385
+#: apps/base/templates/components.scm:386
 msgctxt "website menu"
 msgid "Guix"
 msgstr "Guix"
 
-#: apps/base/templates/components.scm:389
+#: apps/base/templates/components.scm:390
 msgid "website menu:"
 msgstr "網站選單："
 
-#: apps/base/templates/components.scm:397
+#: apps/base/templates/components.scm:398
 #: apps/download/templates/download.scm:43
 #: apps/download/templates/download.scm:47
-#: apps/download/templates/download-latest.scm:155
-#: apps/download/templates/download-latest.scm:160
+#: apps/download/templates/download-latest.scm:156
+#: apps/download/templates/download-latest.scm:161
 msgctxt "website menu"
 msgid "Download"
 msgstr "下載"
 
-#: apps/base/templates/components.scm:403
+#: apps/base/templates/components.scm:404
 msgctxt "website menu"
-msgid "Stable"
-msgstr "穩定版"
+msgid "Standard"
+msgstr ""
 
-#: apps/base/templates/components.scm:406
-#: apps/download/templates/download-latest.scm:161
+#: apps/base/templates/components.scm:407
+#: apps/download/templates/download-latest.scm:162
 msgctxt "website menu"
 msgid "Latest"
 msgstr "最新版"
 
-#: apps/base/templates/components.scm:409 apps/base/templates/help.scm:27
-#: apps/base/templates/help.scm:31
+#: apps/base/templates/components.scm:410 apps/base/templates/help.scm:28
+#: apps/base/templates/help.scm:32
 msgctxt "website menu"
 msgid "Help"
 msgstr "幫助"
 
-#: apps/base/templates/components.scm:415
+#: apps/base/templates/components.scm:416
 msgctxt "website menu"
 msgid "All"
 msgstr "所有"
 
 #: apps/base/templates/components.scm:418
+#, fuzzy
+#| msgid "GNU Guix Manual <1/>"
 msgctxt "website menu"
-msgid "GNU Guix Manual (stable)"
-msgstr "GNU Guix 使用者手冊（穩定版）"
+msgid "GNU Guix Manual <1/>"
+msgstr "GNU Guix 使用者手冊 <1/>"
 
-#: apps/base/templates/components.scm:421
+#: apps/base/templates/components.scm:423
 msgctxt "website menu"
 msgid "GNU Guix Manual (latest)"
 msgstr "GNU Guix 使用者手冊（最新版）"
 
-#: apps/base/templates/components.scm:424
+#: apps/base/templates/components.scm:426
 msgctxt "website menu"
 msgid "Guix Reference Card"
 msgstr "Guix 參考卡"
 
-#: apps/base/templates/components.scm:427
-#: apps/base/templates/components.scm:454 apps/media/templates/video.scm:46
+#: apps/base/templates/components.scm:429
+#: apps/base/templates/components.scm:456 apps/media/templates/video.scm:46
 #: apps/media/templates/video.scm:50 apps/media/templates/video-list.scm:34
 #: apps/media/templates/video-list.scm:38
 msgctxt "website menu"
 msgid "Videos"
 msgstr "影片"
 
-#: apps/base/templates/components.scm:430
+#: apps/base/templates/components.scm:432
 msgctxt "website menu"
 msgid "Cookbook"
 msgstr "食譜"
 
-#: apps/base/templates/components.scm:433
+#: apps/base/templates/components.scm:435
 msgctxt "website menu"
 msgid "GNU Manuals"
 msgstr "GNU 使用者手冊"
 
-#: apps/base/templates/components.scm:437
+#: apps/base/templates/components.scm:439
 msgctxt "website menu"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: apps/base/templates/components.scm:440
+#: apps/base/templates/components.scm:442
 msgctxt "website menu"
 msgid "IRC Chat"
 msgstr "IRC 聊天"
 
-#: apps/base/templates/components.scm:443
+#: apps/base/templates/components.scm:445
 msgctxt "website menu"
 msgid "Mailing Lists"
 msgstr "郵件列表"
 
-#: apps/base/templates/components.scm:446
+#: apps/base/templates/components.scm:448
 #: apps/packages/templates/detailed-index.scm:31
 #: apps/packages/templates/detailed-index.scm:38
 #: apps/packages/templates/detailed-package-list.scm:34
@@ -386,7 +392,7 @@ msgctxt "website menu"
 msgid "Packages"
 msgstr "軟體包"
 
-#: apps/base/templates/components.scm:447 apps/blog/templates/post-list.scm:34
+#: apps/base/templates/components.scm:449 apps/blog/templates/post-list.scm:34
 #: apps/blog/templates/post-list.scm:40 apps/blog/templates/post.scm:29
 #: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:38
 #: apps/blog/templates/tag.scm:44
@@ -394,58 +400,58 @@ msgctxt "website menu"
 msgid "Blog"
 msgstr "部落格"
 
-#: apps/base/templates/components.scm:449
+#: apps/base/templates/components.scm:451
 #: apps/media/templates/screenshot.scm:28
 #: apps/media/templates/screenshots-overview.scm:25
 msgctxt "website menu"
 msgid "Media"
 msgstr "媒體"
 
-#: apps/base/templates/components.scm:457
+#: apps/base/templates/components.scm:459
 msgctxt "website menu"
 msgid "Screenshots"
 msgstr "截圖"
 
-#: apps/base/templates/components.scm:460
+#: apps/base/templates/components.scm:462
 msgctxt "website menu"
 msgid "Publications"
 msgstr "著作"
 
-#: apps/base/templates/components.scm:462 apps/base/templates/donate.scm:26
+#: apps/base/templates/components.scm:464 apps/base/templates/donate.scm:26
 #: apps/base/templates/donate.scm:29
 msgctxt "website menu"
 msgid "Donate"
 msgstr "捐贈"
 
-#: apps/base/templates/components.scm:469 apps/base/templates/contact.scm:31
+#: apps/base/templates/components.scm:471 apps/base/templates/contact.scm:31
 msgctxt "website menu"
 msgid "Contact"
 msgstr "聯絡"
 
-#: apps/base/templates/components.scm:470 apps/base/templates/contribute.scm:30
+#: apps/base/templates/components.scm:472 apps/base/templates/contribute.scm:30
 msgctxt "website menu"
 msgid "Contribute"
 msgstr "貢獻"
 
-#: apps/base/templates/components.scm:471 apps/base/templates/security.scm:31
+#: apps/base/templates/components.scm:473 apps/base/templates/security.scm:34
 msgctxt "website menu"
 msgid "Security"
 msgstr "安全"
 
-#: apps/base/templates/components.scm:472 apps/base/templates/graphics.scm:27
+#: apps/base/templates/components.scm:474 apps/base/templates/graphics.scm:27
 msgctxt "website menu"
 msgid "Graphics"
 msgstr "圖片"
 
-#: apps/base/templates/components.scm:494
+#: apps/base/templates/components.scm:496
 msgid "Translate"
 msgstr "翻譯"
 
-#: apps/base/templates/components.scm:514
+#: apps/base/templates/components.scm:516
 msgid " (Page <1/> of <2/>)"
 msgstr " （第 <1/> 頁，共 <2/> 頁）"
 
-#: apps/base/templates/components.scm:538
+#: apps/base/templates/components.scm:540
 msgid "Page <1/> of <2/>. Go to another page: "
 msgstr "第 <1/> 頁，共 <2/> 頁。轉到其它頁： "
 
@@ -547,21 +553,27 @@ msgid "Maintainers"
 msgstr "維護者"
 
 #: apps/base/templates/about.scm:108
+#, fuzzy
+#| msgid ""
+#| "Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim\n"
+#| "Cournoyer, Tobias Geerinckx-Rice and Mathieu Othacehe.  Please use the "
+#| "<1>mailing lists</1> for contact.  For sensitive issues, you can reach "
+#| "them using the <2/> private alias."
 msgid ""
-"Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim\n"
-"Cournoyer, Tobias Geerinckx-Rice and Mathieu Othacehe.  Please use the "
-"<1>mailing lists</1> for contact.  For sensitive issues, you can reach them "
-"using the <2/> private alias."
+"Guix is currently maintained by Efraim Flashner, Mathieu Othacehe, Maxim "
+"Cournoyer and Tobias Geerinckx-Rice.  Please use the <1>mailing lists</1> "
+"for contact.  For sensitive issues, you can reach them using the <2/> "
+"private alias."
 msgstr ""
 "Guix 現由 Ludovic Courtès、Marius Bakke、Maxim Cournoyer、Tobias Geerinckx-"
 "Rice 及 Mathieu Othacehe 等人維護。\n"
 "請用<1>郵件列表</1>聯絡我們。 對於敏感問題，可以使用私密地址 <2/> 聯絡我們。"
 
-#: apps/base/templates/about.scm:117
+#: apps/base/templates/about.scm:116
 msgid "Licensing"
 msgstr "許可證"
 
-#: apps/base/templates/about.scm:119
+#: apps/base/templates/about.scm:118
 msgid ""
 "Guix is free software; you can redistribute it and/or modify\n"
 "          it under the terms of the <1>GNU General Public License</1> as "
@@ -734,12 +746,12 @@ msgstr "「GNU公告」郵件列表"
 msgid "GNU software announcements."
 msgstr "GNU 軟體公告。"
 
-#: apps/base/templates/help.scm:18
+#: apps/base/templates/help.scm:19
 msgctxt "webpage title"
 msgid "Help"
 msgstr "幫助"
 
-#: apps/base/templates/help.scm:20
+#: apps/base/templates/help.scm:21
 msgid ""
 "A list of resources about how to use GNU Guix, plus\n"
 "   information about getting help from the community of users and\n"
@@ -749,7 +761,7 @@ msgstr ""
 " 以及有關從使用者和開發人員社群獲取幫助的資訊。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/help.scm:25
+#: apps/base/templates/help.scm:26
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Help resources"
@@ -757,15 +769,15 @@ msgstr ""
 "GNU | Linux | Unix | 自由軟體 | 自由軟體 | 作業系統 | GNU Hurd | GNU Guix 包"
 "管理器 | 幫助資源"
 
-#: apps/base/templates/help.scm:36
+#: apps/base/templates/help.scm:37
 msgid "Help"
 msgstr "幫助"
 
-#: apps/base/templates/help.scm:47
+#: apps/base/templates/help.scm:48
 msgid "GNU Guix Manual <1/>"
 msgstr "GNU Guix 使用者手冊 <1/>"
 
-#: apps/base/templates/help.scm:48
+#: apps/base/templates/help.scm:49
 msgid ""
 "Documentation for GNU Guix is available\n"
 "            online.  You may also find more information about Guix by "
@@ -774,39 +786,46 @@ msgstr ""
 "GNU Guix 文件可在線上查閱。\n"
 "您也可以透過執行 <1>info guix</1> 來查詢更多關於 Guix 的資訊。"
 
-#: apps/base/templates/help.scm:54
-msgid "Read stable manual"
+#: apps/base/templates/help.scm:55
+#, fuzzy
+#| msgid "Read stable manual"
+msgid "Read manual <1/>"
 msgstr "閱讀穩定版使用者手冊"
 
-#: apps/base/templates/help.scm:65
+#: apps/base/templates/help.scm:67
 msgid "Get Guix reference card"
 msgstr "獲取 Guix 參考卡片"
 
-#: apps/base/templates/help.scm:74
+#: apps/base/templates/help.scm:76
 msgid "GNU Guix Manual (Latest)"
 msgstr "GNU Guix 使用者手冊（最新版）"
 
-#: apps/base/templates/help.scm:75
+#: apps/base/templates/help.scm:77
+#, fuzzy
+#| msgid ""
+#| "This version of the manual is updated frequently to\n"
+#| "            include the latest changes from Guix's source files. It is\n"
+#| "            more up-to-date than the manual for the stable release of\n"
+#| "            Guix."
 msgid ""
 "This version of the manual is updated frequently to\n"
 "            include the latest changes from Guix's source files. It is\n"
-"            more up-to-date than the manual for the stable release of\n"
-"            Guix."
+"            more up-to-date than the manual for the release of Guix."
 msgstr ""
 "此版本的使用者手冊會頻繁更新\n"
 " 以囊括來自 Guix 原始檔的最新變化。\n"
 " 它會比 Guix 穩定發行版的手冊更新。"
 
-#: apps/base/templates/help.scm:82
+#: apps/base/templates/help.scm:83
 msgid "Read latest manual"
 msgstr "閱讀最新版使用者手冊"
 
-#: apps/base/templates/help.scm:90 apps/media/templates/video.scm:40
+#: apps/base/templates/help.scm:91 apps/media/templates/video.scm:40
 #: apps/media/templates/video-list.scm:44
 msgid "Videos"
 msgstr "影片"
 
-#: apps/base/templates/help.scm:91
+#: apps/base/templates/help.scm:92
 msgid ""
 "The collection of videos includes instructional material\n"
 "            to help you get started with every day use of GNU Guix as\n"
@@ -816,15 +835,15 @@ msgstr ""
 "影片合集裡涵蓋了幫助您每一天使用 GNU Guix 的指導材料，\n"
 "以及講解系統的高階功能的其他主題。"
 
-#: apps/base/templates/help.scm:99
+#: apps/base/templates/help.scm:100
 msgid "Browse all videos"
 msgstr "瀏覽全部影片"
 
-#: apps/base/templates/help.scm:107
+#: apps/base/templates/help.scm:108
 msgid "Cookbook"
 msgstr "食譜"
 
-#: apps/base/templates/help.scm:108
+#: apps/base/templates/help.scm:109
 msgid ""
 "Tutorials, how-to guides and examples contributed by the\n"
 "            Guix community which show you how to use the system and its\n"
@@ -835,15 +854,15 @@ msgstr ""
 " 展示瞭如何使用 Guix 作業系統和軟體包\n"
 " 來實現使用者常見和不常見目的。"
 
-#: apps/base/templates/help.scm:116
+#: apps/base/templates/help.scm:117
 msgid "Browse the recipes"
 msgstr "瀏覽配方"
 
-#: apps/base/templates/help.scm:124
+#: apps/base/templates/help.scm:125
 msgid "GNU Manuals"
 msgstr "GNU 使用者手冊"
 
-#: apps/base/templates/help.scm:125
+#: apps/base/templates/help.scm:126
 msgid ""
 "Guix is a distribution of the <1>GNU operating system</1>.  Documentation "
 "for GNU packages is\n"
@@ -852,15 +871,15 @@ msgstr ""
 "Guix 是一個 <1>GNU 作業系統</1>發行版。\n"
 "可在線上瀏覽 GNU 軟體包的各式文件。 "
 
-#: apps/base/templates/help.scm:133
+#: apps/base/templates/help.scm:134
 msgid "Browse GNU manuals"
 msgstr "瀏覽 GNU 使用者手冊"
 
-#: apps/base/templates/help.scm:141
+#: apps/base/templates/help.scm:142
 msgid "Wiki"
 msgstr "Wiki"
 
-#: apps/base/templates/help.scm:142
+#: apps/base/templates/help.scm:143
 msgid ""
 "The LibrePlanet Wiki provides a collaborative space for people to share "
 "additional information about the Guix project and its subprojects. It may "
@@ -871,15 +890,15 @@ msgstr ""
 "加資訊。其可能包括幫助資訊，功能提案，以及正在進行中工作（以及其他事項）的說"
 "明。"
 
-#: apps/base/templates/help.scm:151
+#: apps/base/templates/help.scm:152
 msgid "Browse the wiki"
 msgstr "瀏覽 Wiki"
 
-#: apps/base/templates/help.scm:159
+#: apps/base/templates/help.scm:160
 msgid "IRC Chat"
 msgstr "IRC 聊天"
 
-#: apps/base/templates/help.scm:160
+#: apps/base/templates/help.scm:161
 msgid ""
 "For real-time support from the community, you can connect\n"
 "            to the <1/> channel on irc.libera.chat. There\n"
@@ -889,7 +908,7 @@ msgstr ""
 "從社群獲取實時支援。在那裡\n"
 "您可以獲得任何關於 GNU Guix 的幫助。"
 
-#: apps/base/templates/help.scm:165
+#: apps/base/templates/help.scm:166
 msgid ""
 "The <1/> channel is logged. Previous\n"
 "            conversations can be browsed online. See the <2>channel "
@@ -898,15 +917,15 @@ msgstr ""
 "<1/> 頻道有日誌記錄。以前的聊天記錄可在線上\n"
 "瀏覽。參閱<2>頻道日誌</2>。 "
 
-#: apps/base/templates/help.scm:172
+#: apps/base/templates/help.scm:173
 msgid "Connect"
 msgstr "連線"
 
-#: apps/base/templates/help.scm:180
+#: apps/base/templates/help.scm:181
 msgid "Mailing lists"
 msgstr "郵件列表"
 
-#: apps/base/templates/help.scm:181
+#: apps/base/templates/help.scm:182
 msgid ""
 "Email support from the community is also available through\n"
 "            several mailing list. The messages sent to the lists are\n"
@@ -915,7 +934,7 @@ msgstr ""
 "您可以從社群的多個郵件列表尋求郵件支援。\n"
 "傳送到郵件列表的訊息都是公開的，並且有線上歸檔。"
 
-#: apps/base/templates/help.scm:189
+#: apps/base/templates/help.scm:190
 msgid "See all lists"
 msgstr "瀏覽全部郵件列表"
 
@@ -1443,8 +1462,14 @@ msgid "<1>machine</1><2>system</2><3>donors</3>"
 msgstr "<1>機器</1><2>系統</2><3>捐贈者</3>"
 
 #: apps/base/templates/donate.scm:118
+#, fuzzy
+#| msgid ""
+#| "<1>berlin.guixsd.org</1><2>build farm with 25 build nodes for x86_64-"
+#| "linux and\n"
+#| "i686-linux, and dedicated storage</2><3><3.1>Max Delbrück Center for "
+#| "Molecular Medicine</3.1> (hardware and hosting)</3>"
 msgid ""
-"<1>berlin.guixsd.org</1><2>build farm with 25 build nodes for x86_64-linux "
+"<1>berlin.guix.gnu.org</1><2>build farm with 25 build nodes for x86_64-linux "
 "and\n"
 "i686-linux, and dedicated storage</2><3><3.1>Max Delbrück Center for "
 "Molecular Medicine</3.1> (hardware and hosting)</3>"
@@ -1454,16 +1479,21 @@ msgstr ""
 "託管）</3>"
 
 #: apps/base/templates/donate.scm:130
-msgid ""
-"<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM "
-"Holdings</3.1></3>"
+#, fuzzy
+#| msgid ""
+#| "<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM "
+#| "Holdings</3.1></3>"
+msgid "<1>overdrive1</1><2>aarch64-linux</2><3><3.1>ARM Holdings</3.1></3>"
 msgstr ""
 "<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM 公司託管"
 "</3.1></3>"
 
 #: apps/base/templates/donate.scm:140
-msgid ""
-"<1>bayfront.guixsd.org</1><2>new build farm front-end (WIP)</2><3>Igalia</3>"
+#, fuzzy
+#| msgid ""
+#| "<1>bayfront.guixsd.org</1><2>new build farm front-end "
+#| "(WIP)</2><3>Igalia</3>"
+msgid "<1>bayfront</1><2>new build farm front-end (WIP)</2><3>Igalia</3>"
 msgstr ""
 "<1>bayfront.guixsd.org</1><2>新構建叢集的前端（正在建設中）</2><3>Igalia</3>"
 
@@ -1516,11 +1546,17 @@ msgstr ""
 "Ltd）</3.1.1>（硬體）</3.1><3.2>Andreas Enge（託管）</3.2></3>"
 
 #: apps/base/templates/donate.scm:224
+#, fuzzy
+#| msgid ""
+#| "Other organizations and individuals helped Guix with hardware and\n"
+#| "hosting in the past and we thank them: <1>Free Software Foundation</1>, "
+#| "<2>GNU España</2>, <3>FSF France</3>, <4>Free Secure Network Systems "
+#| "Group</4> at the <5>Technische Universität München</5>."
 msgid ""
 "Other organizations and individuals helped Guix with hardware and\n"
-"hosting in the past and we thank them: <1>Free Software Foundation</1>, "
-"<2>GNU España</2>, <3>FSF France</3>, <4>Free Secure Network Systems "
-"Group</4> at the <5>Technische Universität München</5>."
+"hosting in the past and we thank them: <1>Free Software Foundation</1>, GNU "
+"España, <2>FSF France</2>, and the Free Secure Network Systems Group at the "
+"<3>Technische Universität München</3>."
 msgstr ""
 "感謝其他在過去為 Guix 提供過硬體和託管服務的組織和個人：\n"
 "<1>自由軟體基金會</1>，<2>GNU 西班牙 </2>，<3>法國自由軟體基金會</3>，<5>慕尼"
@@ -1648,12 +1684,12 @@ msgctxt "website menu"
 msgid "Menu"
 msgstr "選單"
 
-#: apps/base/templates/security.scm:19
+#: apps/base/templates/security.scm:22
 msgctxt "webpage title"
 msgid "Security"
 msgstr "安全"
 
-#: apps/base/templates/security.scm:21
+#: apps/base/templates/security.scm:24
 msgid ""
 "Important information about getting security updates\n"
 "   for your GNU Guix installation, and instructions on how\n"
@@ -1663,7 +1699,7 @@ msgstr ""
 " 以及如何報告安全問題的指引。"
 
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/security.scm:26
+#: apps/base/templates/security.scm:29
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Security updates"
@@ -1671,15 +1707,15 @@ msgstr ""
 "GNU | Linux | Unix | 自由軟體 | 自由軟體 | 作業系統 | GNU Hurd | GNU Guix 包"
 "管理器 | 安全更新"
 
-#: apps/base/templates/security.scm:36
+#: apps/base/templates/security.scm:39
 msgid "Security"
 msgstr "安全"
 
-#: apps/base/templates/security.scm:38
+#: apps/base/templates/security.scm:41
 msgid "How to report security issues"
 msgstr "如何報告安全問題"
 
-#: apps/base/templates/security.scm:39
+#: apps/base/templates/security.scm:42
 msgid ""
 "To report sensitive security issues in Guix itself or the\n"
 "           packages it provides, you can write to the private mailing list "
@@ -1690,7 +1726,7 @@ msgstr ""
 " 您可以發郵件到這個私密郵件列表 <1/>。\n"
 " 這個郵件列表只由一小部分 Guix 開發者監管。"
 
-#: apps/base/templates/security.scm:46
+#: apps/base/templates/security.scm:49
 msgid ""
 "If you prefer to send your report using OpenPGP encrypted email,\n"
 "           please send it to one of the following Guix developers using "
@@ -1700,25 +1736,43 @@ msgstr ""
 "如果想使用 OpenPGP 加密報告郵件，\n"
 " 請使用下列 Guix 開發者的 OpenPGP 公鑰加密併發送給相應的人："
 
-#: apps/base/templates/security.scm:63
+#: apps/base/templates/security.scm:66
 msgid "Release signatures"
 msgstr "釋出簽名"
 
-#: apps/base/templates/security.scm:64
+#: apps/base/templates/security.scm:67
+msgid "Releases of Guix are signed using one of the following OpenPGP keys:"
+msgstr ""
+
+#: apps/base/templates/security.scm:70
+msgid "Maxim Cournoyer (from version 1.3.0)"
+msgstr ""
+
+#: apps/base/templates/security.scm:72
+#, fuzzy
+#| msgid "Ludovic Courtès, Ricardo Wurmus"
+msgid "Ludovic Courtès (until version 1.2.0)"
+msgstr "Ludovic Courtès、Ricardo Wurmus"
+
+#: apps/base/templates/security.scm:73
+#, fuzzy
+#| msgid ""
+#| "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
+#| ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
+#| "html</2.2></2> their downloads before extracting or running them."
 msgid ""
-"Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
-">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
-"html</2.2></2> their downloads before extracting or running them."
+"Users should <1>verify<1.1>en</1.1><1.2>Binary-Installation.html</1.2></1> "
+"their downloads before extracting or running them."
 msgstr ""
 "Guix釋出的版本使用這個OpenPGP私鑰簽名：<1/>。使用者應該在解壓和執行之前<2>驗"
 "證<2.1>zh-cn</2.1><2.2>Er-Jin-Zhi-WenJian-An-Zhuang-.html</2.2></2>壓縮包的籤"
 "名。"
 
-#: apps/base/templates/security.scm:76
+#: apps/base/templates/security.scm:81
 msgid "Security updates"
 msgstr "安全更新"
 
-#: apps/base/templates/security.scm:77
+#: apps/base/templates/security.scm:82
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1732,7 +1786,7 @@ msgstr ""
 "時，還會在部落格和<3><3.1>info-guix</3.1>郵件列表</3>上釋出安全公告，並打上"
 "<2>安全公告標籤</2>。<4/>也會展示相關公告。"
 
-#: apps/base/templates/security.scm:92
+#: apps/base/templates/security.scm:97
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -1843,7 +1897,7 @@ msgctxt "download page title"
 msgid "GNU Guix <1/> Binary"
 msgstr "GNU Guix <1/> 二進位制檔案"
 
-#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:87
+#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:88
 msgid ""
 "Self-contained tarball providing binaries for Guix and its\n"
 "       dependencies, to be installed on top of your Linux-based system."
@@ -1873,7 +1927,7 @@ msgid "<1>en</1>Requirements.html"
 msgstr "<1>zh-cn</1>Xu-Qiu-.html"
 
 #: apps/download/templates/components.scm:25
-#: apps/download/templates/download-latest.scm:120
+#: apps/download/templates/download-latest.scm:121
 msgid "Download options:"
 msgstr "下載選項："
 
@@ -1901,7 +1955,7 @@ msgstr ""
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/download/templates/download.scm:40
-#: apps/download/templates/download-latest.scm:152
+#: apps/download/templates/download-latest.scm:153
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Installer|Source code|Package manager"
@@ -1940,67 +1994,81 @@ msgstr ""
 "下載：<1/>。\n"
 " 更早的版本可在 <2/> 上找到。"
 
-#: apps/download/templates/download-latest.scm:68
+#: apps/download/templates/download-latest.scm:69
 msgctxt "download page title"
 msgid "GNU Guix System on Linux"
 msgstr "以 Linux 為核心的 GNU Guix 系統"
 
-#: apps/download/templates/download-latest.scm:69
+#: apps/download/templates/download-latest.scm:70
 msgid "USB/DVD ISO installer of the standalone Guix System on Linux."
 msgstr "Linux 核心的獨立 Guix 系統的 USB/DVD ISO 安裝包。"
 
-#: apps/download/templates/download-latest.scm:77
+#: apps/download/templates/download-latest.scm:78
 msgctxt "download page title"
 msgid "GNU Guix System on GNU Hurd"
 msgstr "以 GNU Hurd 為核心的 GNU Guix 系統"
 
-#: apps/download/templates/download-latest.scm:78
+#: apps/download/templates/download-latest.scm:79
 msgid "Virtual machine image of the standalone Guix System on GNU Hurd."
 msgstr "GNU Hurd 核心的獨立 Guix 系統的虛擬機器映像。"
 
-#: apps/download/templates/download-latest.scm:86
+#: apps/download/templates/download-latest.scm:87
 msgctxt "download page title"
 msgid "GNU Guix binary"
 msgstr "GNU Guix 二進位制檔案"
 
-#: apps/download/templates/download-latest.scm:96
+#: apps/download/templates/download-latest.scm:97
 msgctxt "download page title"
 msgid "GNU Guix System on Linux for Pinebook Pro"
 msgstr "適用於 Pinebook Pro 的 Linux 上的 GNU Guix 系統"
 
-#: apps/download/templates/download-latest.scm:97
+#: apps/download/templates/download-latest.scm:98
 msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
 msgstr "適用於 Pinebook Pro 的 Linux 核心 Guix 系統可引導基礎映像。"
 
-#: apps/download/templates/download-latest.scm:130
+#: apps/download/templates/download-latest.scm:131
 msgid "Build details: "
 msgstr "構建詳情： "
 
-#: apps/download/templates/download-latest.scm:146
+#: apps/download/templates/download-latest.scm:147
 msgctxt "webpage title"
 msgid "Download latest"
 msgstr "下載最新版"
 
-#: apps/download/templates/download-latest.scm:148
+#: apps/download/templates/download-latest.scm:149
+#, fuzzy
+#| msgid ""
+#| "Download latest GNU Guix System images built by the Cuirass continuous\n"
+#| "integration system."
 msgid ""
-"Download latest GNU Guix System images built by the Cuirass continuous\n"
-"integration system."
+"Download latest development GNU Guix System images built\n"
+"by the Cuirass continuous integration system."
 msgstr ""
 "下載由 Cuirass 持續整合系統構建的\n"
 "最新版 GNU Guix 系統映像。"
 
-#: apps/download/templates/download-latest.scm:166
-msgid "Download latest images"
+#: apps/download/templates/download-latest.scm:167
+#, fuzzy
+#| msgid "Download latest images"
+msgid "Download latest development images"
 msgstr "下載最新版映像"
 
 #. TRANSLATORS: Continuous Integration is a section name
 #. in the English (en) manual.
-#: apps/download/templates/download-latest.scm:169
+#: apps/download/templates/download-latest.scm:170
+#, fuzzy
+#| msgid ""
+#| "Download latest GNU Guix System images built by the "
+#| "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> "
+#| "continuous integration system at <2/>. These images are <3>development "
+#| "snapshots</3>, you might prefer to use stable images that can be found "
+#| "<4>here.</4>"
 msgid ""
 "Download latest GNU Guix System images built by the "
 "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> continuous "
 "integration system at <2/>. These images are <3>development snapshots</3>, "
-"you might prefer to use stable images that can be found <4>here.</4>"
+"you might prefer to use well-tested released images\n"
+"that can be found <4>here.</4>"
 msgstr ""
 "下載 <2/> 上的 <1>Cuirass<1.1>zh-cn</1.1><1.2>Chi-Xu-Ji-Cheng-."
 "html</1.2></1> 持續整合系統構建的最新版 GNU Guix 系統映像。這些映像是<3>開發"
@@ -2329,6 +2397,14 @@ msgid ""
 msgstr ""
 "<1>檢查出的問題：</1><2><2.1/>。參見 Guix 原始碼裡的<2.2>軟體包定義</2.2>。"
 "</2>"
+
+#~ msgctxt "website menu"
+#~ msgid "Stable"
+#~ msgstr "穩定版"
+
+#~ msgctxt "website menu"
+#~ msgid "GNU Guix Manual (stable)"
+#~ msgstr "GNU Guix 使用者手冊（穩定版）"
 
 #~ msgid "IRC"
 #~ msgstr "IRC"

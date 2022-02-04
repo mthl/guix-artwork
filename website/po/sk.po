@@ -1,13 +1,13 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2021 the authors of the Guix Website (msgid) and the following authors (msgstr)
 # This file is distributed under the same license as the guix-website package.
-# Marek Felšöci <marek@felsoci.sk>, 2021.
+# Marek Felšöci <marek@felsoci.sk>, 2021, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210222\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-11-21 15:18Z\n"
-"PO-Revision-Date: 2021-11-08 14:46+0000\n"
+"POT-Creation-Date: 2022-01-13 15:18Z\n"
+"PO-Revision-Date: 2022-01-19 22:16+0000\n"
 "Last-Translator: Marek Felšöci <marek@felsoci.sk>\n"
 "Language-Team: Slovak <https://translate.fedoraproject.org/projects/guix/"
 "website/sk/>\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=(n==1) ? 0 : (n>=2 && n<=4) ? 1 : 2;\n"
-"X-Generator: Weblate 4.8\n"
+"X-Generator: Weblate 4.10.1\n"
 
 #. TRANSLATORS: The locale’s display name; please include a country
 #. code like in English (US) *only* if there are multiple
@@ -71,7 +71,7 @@ msgstr ""
 "Guix|GNU Guile|Guile Scheme|Transakčné aktualizácie|Funkcionálna správa "
 "balíkov|Opakovateľnosť"
 
-#: apps/base/templates/home.scm:32 apps/base/templates/components.scm:395
+#: apps/base/templates/home.scm:32 apps/base/templates/components.scm:396
 msgctxt "website menu"
 msgid "Overview"
 msgstr "Prehľad"
@@ -255,11 +255,11 @@ msgctxt "button"
 msgid "ALL CONTACT MEDIA"
 msgstr "VŠETKY KONTAKTNÉ ÚDAJE"
 
-#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:464
-#: apps/base/templates/components.scm:467 apps/base/templates/about.scm:27
+#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:466
+#: apps/base/templates/components.scm:469 apps/base/templates/about.scm:27
 #: apps/base/templates/about.scm:30 apps/base/templates/contact.scm:26
 #: apps/base/templates/contribute.scm:26 apps/base/templates/graphics.scm:24
-#: apps/base/templates/security.scm:28
+#: apps/base/templates/security.scm:31
 msgctxt "website menu"
 msgid "About"
 msgstr "O systéme Guix"
@@ -274,7 +274,11 @@ msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
 msgstr "GNU Guix — prehľad činností"
 
-#: apps/base/templates/theme.scm:144
+#: apps/base/templates/theme.scm:126
+msgid "Online conference February 19-20. <1>Learn more</1>!"
+msgstr "Online konferencia 19. a 20. februára. <1>Viac podrobností</1>!"
+
+#: apps/base/templates/theme.scm:151
 msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
@@ -282,107 +286,107 @@ msgstr ""
 "Vytvorené ľuďmi s <1>♥</1> a poháňané <2>GNU Guile</2>.  <3>Zdrojový kód</3> "
 "podlieha licencii <4>GNU AGPL</4>."
 
-#: apps/base/templates/components.scm:49
+#: apps/base/templates/components.scm:50
 msgid "Your location:"
 msgstr "Vaše umiestnenie:"
 
-#: apps/base/templates/components.scm:51
+#: apps/base/templates/components.scm:52
 msgid "Home"
 msgstr "Domov"
 
-#: apps/base/templates/components.scm:155
+#: apps/base/templates/components.scm:156
 msgid "archive"
 msgstr "archív"
 
-#: apps/base/templates/components.scm:385
+#: apps/base/templates/components.scm:386
 msgctxt "website menu"
 msgid "Guix"
 msgstr "Guix"
 
-#: apps/base/templates/components.scm:389
+#: apps/base/templates/components.scm:390
 msgid "website menu:"
 msgstr "ponuka stránky:"
 
-#: apps/base/templates/components.scm:397
+#: apps/base/templates/components.scm:398
 #: apps/download/templates/download.scm:43
 #: apps/download/templates/download.scm:47
-#: apps/download/templates/download-latest.scm:155
-#: apps/download/templates/download-latest.scm:160
+#: apps/download/templates/download-latest.scm:156
+#: apps/download/templates/download-latest.scm:161
 msgctxt "website menu"
 msgid "Download"
 msgstr "Stiahnuť"
 
-#: apps/base/templates/components.scm:403
+#: apps/base/templates/components.scm:404
 msgctxt "website menu"
-msgid "Stable"
+msgid "Standard"
 msgstr "Stabilné vydanie"
 
-#: apps/base/templates/components.scm:406
-#: apps/download/templates/download-latest.scm:161
+#: apps/base/templates/components.scm:407
+#: apps/download/templates/download-latest.scm:162
 msgctxt "website menu"
 msgid "Latest"
 msgstr "Najnovšie vydanie"
 
-#: apps/base/templates/components.scm:409 apps/base/templates/help.scm:27
-#: apps/base/templates/help.scm:31
+#: apps/base/templates/components.scm:410 apps/base/templates/help.scm:28
+#: apps/base/templates/help.scm:32
 msgctxt "website menu"
 msgid "Help"
 msgstr "Pomoc"
 
-#: apps/base/templates/components.scm:415
+#: apps/base/templates/components.scm:416
 msgctxt "website menu"
 msgid "All"
 msgstr "Všetko"
 
 #: apps/base/templates/components.scm:418
 msgctxt "website menu"
-msgid "GNU Guix Manual (stable)"
-msgstr "Príručka GNU Guix (stabilné vydanie)"
+msgid "GNU Guix Manual <1/>"
+msgstr "Príručka GNU Guix </1>"
 
-#: apps/base/templates/components.scm:421
+#: apps/base/templates/components.scm:423
 msgctxt "website menu"
 msgid "GNU Guix Manual (latest)"
 msgstr "Príručka GNU Guix (najnovšie vydanie)"
 
-#: apps/base/templates/components.scm:424
+#: apps/base/templates/components.scm:426
 msgctxt "website menu"
 msgid "Guix Reference Card"
 msgstr "Ťahák na systém Guix"
 
-#: apps/base/templates/components.scm:427
-#: apps/base/templates/components.scm:454 apps/media/templates/video.scm:46
+#: apps/base/templates/components.scm:429
+#: apps/base/templates/components.scm:456 apps/media/templates/video.scm:46
 #: apps/media/templates/video.scm:50 apps/media/templates/video-list.scm:34
 #: apps/media/templates/video-list.scm:38
 msgctxt "website menu"
 msgid "Videos"
 msgstr "Videá"
 
-#: apps/base/templates/components.scm:430
+#: apps/base/templates/components.scm:432
 msgctxt "website menu"
 msgid "Cookbook"
 msgstr "Receptár"
 
-#: apps/base/templates/components.scm:433
+#: apps/base/templates/components.scm:435
 msgctxt "website menu"
 msgid "GNU Manuals"
 msgstr "GNU príručky"
 
-#: apps/base/templates/components.scm:437
+#: apps/base/templates/components.scm:439
 msgctxt "website menu"
 msgid "Wiki"
 msgstr "Wiki"
 
-#: apps/base/templates/components.scm:440
+#: apps/base/templates/components.scm:442
 msgctxt "website menu"
 msgid "IRC Chat"
 msgstr "Miestnosť IRC"
 
-#: apps/base/templates/components.scm:443
+#: apps/base/templates/components.scm:445
 msgctxt "website menu"
 msgid "Mailing Lists"
 msgstr "Elektronické konferencie"
 
-#: apps/base/templates/components.scm:446
+#: apps/base/templates/components.scm:448
 #: apps/packages/templates/detailed-index.scm:31
 #: apps/packages/templates/detailed-index.scm:38
 #: apps/packages/templates/detailed-package-list.scm:34
@@ -396,7 +400,7 @@ msgctxt "website menu"
 msgid "Packages"
 msgstr "Balíky"
 
-#: apps/base/templates/components.scm:447 apps/blog/templates/post-list.scm:34
+#: apps/base/templates/components.scm:449 apps/blog/templates/post-list.scm:34
 #: apps/blog/templates/post-list.scm:40 apps/blog/templates/post.scm:29
 #: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:38
 #: apps/blog/templates/tag.scm:44
@@ -404,58 +408,58 @@ msgctxt "website menu"
 msgid "Blog"
 msgstr "Blog"
 
-#: apps/base/templates/components.scm:449
+#: apps/base/templates/components.scm:451
 #: apps/media/templates/screenshot.scm:28
 #: apps/media/templates/screenshots-overview.scm:25
 msgctxt "website menu"
 msgid "Media"
 msgstr "Médiá"
 
-#: apps/base/templates/components.scm:457
+#: apps/base/templates/components.scm:459
 msgctxt "website menu"
 msgid "Screenshots"
 msgstr "Snímky obrazovky"
 
-#: apps/base/templates/components.scm:460
+#: apps/base/templates/components.scm:462
 msgctxt "website menu"
 msgid "Publications"
 msgstr "Články"
 
-#: apps/base/templates/components.scm:462 apps/base/templates/donate.scm:26
+#: apps/base/templates/components.scm:464 apps/base/templates/donate.scm:26
 #: apps/base/templates/donate.scm:29
 msgctxt "website menu"
 msgid "Donate"
 msgstr "Prispieť"
 
-#: apps/base/templates/components.scm:469 apps/base/templates/contact.scm:31
+#: apps/base/templates/components.scm:471 apps/base/templates/contact.scm:31
 msgctxt "website menu"
 msgid "Contact"
 msgstr "Kontakt"
 
-#: apps/base/templates/components.scm:470 apps/base/templates/contribute.scm:30
+#: apps/base/templates/components.scm:472 apps/base/templates/contribute.scm:30
 msgctxt "website menu"
 msgid "Contribute"
 msgstr "Zapojiť sa"
 
-#: apps/base/templates/components.scm:471 apps/base/templates/security.scm:31
+#: apps/base/templates/components.scm:473 apps/base/templates/security.scm:34
 msgctxt "website menu"
 msgid "Security"
 msgstr "Bezpečnosť"
 
-#: apps/base/templates/components.scm:472 apps/base/templates/graphics.scm:27
+#: apps/base/templates/components.scm:474 apps/base/templates/graphics.scm:27
 msgctxt "website menu"
 msgid "Graphics"
 msgstr "Grafika"
 
-#: apps/base/templates/components.scm:494
+#: apps/base/templates/components.scm:496
 msgid "Translate"
 msgstr "Prekladať"
 
-#: apps/base/templates/components.scm:514
+#: apps/base/templates/components.scm:516
 msgid " (Page <1/> of <2/>)"
 msgstr " (Strana <1/> z <2/>)"
 
-#: apps/base/templates/components.scm:538
+#: apps/base/templates/components.scm:540
 msgid "Page <1/> of <2/>. Go to another page: "
 msgstr "Strana <1/> z <2/>. Prejsť na inú stranu: "
 
@@ -564,21 +568,21 @@ msgstr "Správcovia"
 
 #: apps/base/templates/about.scm:108
 msgid ""
-"Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim\n"
-"Cournoyer, Tobias Geerinckx-Rice and Mathieu Othacehe.  Please use the "
-"<1>mailing lists</1> for contact.  For sensitive issues, you can reach them "
-"using the <2/> private alias."
+"Guix is currently maintained by Efraim Flashner, Mathieu Othacehe, Maxim "
+"Cournoyer and Tobias Geerinckx-Rice.  Please use the <1>mailing lists</1> "
+"for contact.  For sensitive issues, you can reach them using the <2/> "
+"private alias."
 msgstr ""
-"Guix v súčasnosti spravujú Ludovic Courtès, Marius Bakke, Maxim\n"
-"Cournoyer, Tobias Geerinckx-Rice a Mathieu Othacehe.  Pre spojenie s nimi "
-"použite <1>elektronické konferencie</1>. S citlivými záležitosťami sa na "
-"nich môžete obrátiť prostredníctvom súkromnej adresy <2/>."
+"Guix v súčasnosti spravujú Efraim Flashner, Mathieu Othacehe, Maxim "
+"Cournoyer a Tobias Geerinckx-Rice.  Pre spojenie s nimi použite "
+"<1>elektronické konferencie</1>. S citlivými záležitosťami sa na nich môžete "
+"obrátiť prostredníctvom súkromnej adresy<2/>."
 
-#: apps/base/templates/about.scm:117
+#: apps/base/templates/about.scm:116
 msgid "Licensing"
 msgstr "Licencia"
 
-#: apps/base/templates/about.scm:119
+#: apps/base/templates/about.scm:118
 msgid ""
 "Guix is free software; you can redistribute it and/or modify\n"
 "          it under the terms of the <1>GNU General Public License</1> as "
@@ -763,12 +767,12 @@ msgstr "Informačná elektronická konferencia o GNU"
 msgid "GNU software announcements."
 msgstr "Oznámenia o softvéri GNU."
 
-#: apps/base/templates/help.scm:18
+#: apps/base/templates/help.scm:19
 msgctxt "webpage title"
 msgid "Help"
 msgstr "Pomoc"
 
-#: apps/base/templates/help.scm:20
+#: apps/base/templates/help.scm:21
 msgid ""
 "A list of resources about how to use GNU Guix, plus\n"
 "   information about getting help from the community of users and\n"
@@ -779,7 +783,7 @@ msgstr ""
 "   vývojárov."
 
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/help.scm:25
+#: apps/base/templates/help.scm:26
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Help resources"
@@ -787,15 +791,15 @@ msgstr ""
 "GNU|Linux|Unix|Slobodný softvér|Operačný systém|GNU Hurd|Správca balíkov GNU "
 "Guix|Pomoc"
 
-#: apps/base/templates/help.scm:36
+#: apps/base/templates/help.scm:37
 msgid "Help"
 msgstr "Pomoc"
 
-#: apps/base/templates/help.scm:47
+#: apps/base/templates/help.scm:48
 msgid "GNU Guix Manual <1/>"
 msgstr "Príručka GNU Guix </1>"
 
-#: apps/base/templates/help.scm:48
+#: apps/base/templates/help.scm:49
 msgid ""
 "Documentation for GNU Guix is available\n"
 "            online.  You may also find more information about Guix by "
@@ -805,40 +809,38 @@ msgstr ""
 "            online.  Viac podrobností o systéme Guix môžete tiež získať "
 "spustením <1>info guix</1>."
 
-#: apps/base/templates/help.scm:54
-msgid "Read stable manual"
-msgstr "Prečítať si príručku pre stabilné vydanie"
+#: apps/base/templates/help.scm:55
+msgid "Read manual <1/>"
+msgstr "Prečítať si príručku <1/>"
 
-#: apps/base/templates/help.scm:65
+#: apps/base/templates/help.scm:67
 msgid "Get Guix reference card"
 msgstr "Získať ťahák pre systém Guix"
 
-#: apps/base/templates/help.scm:74
+#: apps/base/templates/help.scm:76
 msgid "GNU Guix Manual (Latest)"
 msgstr "Príručka GNU Guix (najnovšie vydanie)"
 
-#: apps/base/templates/help.scm:75
+#: apps/base/templates/help.scm:77
 msgid ""
 "This version of the manual is updated frequently to\n"
 "            include the latest changes from Guix's source files. It is\n"
-"            more up-to-date than the manual for the stable release of\n"
-"            Guix."
+"            more up-to-date than the manual for the release of Guix."
 msgstr ""
 "Táto verzia príručky je pravidelne aktualizovaná aby\n"
 "            zahŕňala najnovšie zmeny v zdrojových súboroch Guixu. Je\n"
-"            aktuálnejšia než príručka pre stabilné vydanie\n"
-"            Guixu."
+"            aktuálnejšia než príručka pre súčasné vydanie Guixu."
 
-#: apps/base/templates/help.scm:82
+#: apps/base/templates/help.scm:83
 msgid "Read latest manual"
 msgstr "Prečítať si príručku pre najnovšie vydanie"
 
-#: apps/base/templates/help.scm:90 apps/media/templates/video.scm:40
+#: apps/base/templates/help.scm:91 apps/media/templates/video.scm:40
 #: apps/media/templates/video-list.scm:44
 msgid "Videos"
 msgstr "Videá"
 
-#: apps/base/templates/help.scm:91
+#: apps/base/templates/help.scm:92
 msgid ""
 "The collection of videos includes instructional material\n"
 "            to help you get started with every day use of GNU Guix as\n"
@@ -850,15 +852,15 @@ msgstr ""
 "            ako aj oboznámiť sa s pokročilými možnosťami\n"
 "            systému."
 
-#: apps/base/templates/help.scm:99
+#: apps/base/templates/help.scm:100
 msgid "Browse all videos"
 msgstr "Prezrieť si všetky videá"
 
-#: apps/base/templates/help.scm:107
+#: apps/base/templates/help.scm:108
 msgid "Cookbook"
 msgstr "Receptár"
 
-#: apps/base/templates/help.scm:108
+#: apps/base/templates/help.scm:109
 msgid ""
 "Tutorials, how-to guides and examples contributed by the\n"
 "            Guix community which show you how to use the system and its\n"
@@ -871,15 +873,15 @@ msgstr ""
 "            a jeho zbierky balíkov aby ste mohli dosiahnuť vaše\n"
 "            (menej) každodenné ciele."
 
-#: apps/base/templates/help.scm:116
+#: apps/base/templates/help.scm:117
 msgid "Browse the recipes"
 msgstr "Prezrieť si recepty"
 
-#: apps/base/templates/help.scm:124
+#: apps/base/templates/help.scm:125
 msgid "GNU Manuals"
 msgstr "GNU príručky"
 
-#: apps/base/templates/help.scm:125
+#: apps/base/templates/help.scm:126
 msgid ""
 "Guix is a distribution of the <1>GNU operating system</1>.  Documentation "
 "for GNU packages is\n"
@@ -889,15 +891,15 @@ msgstr ""
 "sú\n"
 "            dostupné online v rôznych formátoch. "
 
-#: apps/base/templates/help.scm:133
+#: apps/base/templates/help.scm:134
 msgid "Browse GNU manuals"
 msgstr "Prezrieť si GNU príručky"
 
-#: apps/base/templates/help.scm:141
+#: apps/base/templates/help.scm:142
 msgid "Wiki"
 msgstr "Wiki"
 
-#: apps/base/templates/help.scm:142
+#: apps/base/templates/help.scm:143
 msgid ""
 "The LibrePlanet Wiki provides a collaborative space for people to share "
 "additional information about the Guix project and its subprojects. It may "
@@ -908,15 +910,15 @@ msgstr ""
 "poznatkov o projekte Guix a jeho podprojektoch. Medzi iným môže obsahovať "
 "pomocné informácie, návrhy funkcií a poznámky o prebiehajúcom vývoji."
 
-#: apps/base/templates/help.scm:151
+#: apps/base/templates/help.scm:152
 msgid "Browse the wiki"
 msgstr "Prezrieť si wiki"
 
-#: apps/base/templates/help.scm:159
+#: apps/base/templates/help.scm:160
 msgid "IRC Chat"
 msgstr "Miestnosť IRC"
 
-#: apps/base/templates/help.scm:160
+#: apps/base/templates/help.scm:161
 msgid ""
 "For real-time support from the community, you can connect\n"
 "            to the <1/> channel on irc.libera.chat. There\n"
@@ -926,7 +928,7 @@ msgstr ""
 "            ku kanálu <1/> na irc.libera.chat. Tam môžete\n"
 "            získať pomoc so všetkým čo sa týka GNU Guix."
 
-#: apps/base/templates/help.scm:165
+#: apps/base/templates/help.scm:166
 msgid ""
 "The <1/> channel is logged. Previous\n"
 "            conversations can be browsed online. See the <2>channel "
@@ -935,15 +937,15 @@ msgstr ""
 "Kanál <1/> je zaznamenávaný. Predošlé rozhovory\n"
 "            si môžete prečítať online. Pozrite si <2>záznamy kanála</2>. "
 
-#: apps/base/templates/help.scm:172
+#: apps/base/templates/help.scm:173
 msgid "Connect"
 msgstr "Pripojiť sa"
 
-#: apps/base/templates/help.scm:180
+#: apps/base/templates/help.scm:181
 msgid "Mailing lists"
 msgstr "Elektronické konferencie"
 
-#: apps/base/templates/help.scm:181
+#: apps/base/templates/help.scm:182
 msgid ""
 "Email support from the community is also available through\n"
 "            several mailing list. The messages sent to the lists are\n"
@@ -953,7 +955,7 @@ msgstr ""
 "            viacerých elektronických konferencií. Správy odoslané\n"
 "            do týchto konferencií sú verejné a archivované online."
 
-#: apps/base/templates/help.scm:189
+#: apps/base/templates/help.scm:190
 msgid "See all lists"
 msgstr "Zobraziť všetky konferencie"
 
@@ -1526,29 +1528,24 @@ msgstr "<1>počítač</1><2>systém</2><3>prispievateľ</3>"
 
 #: apps/base/templates/donate.scm:118
 msgid ""
-"<1>berlin.guixsd.org</1><2>build farm with 25 build nodes for x86_64-linux "
+"<1>berlin.guix.gnu.org</1><2>build farm with 25 build nodes for x86_64-linux "
 "and\n"
 "i686-linux, and dedicated storage</2><3><3.1>Max Delbrück Center for "
 "Molecular Medicine</3.1> (hardware and hosting)</3>"
 msgstr ""
-"<1>berlin.guixsd.org</1><2>zostavovacia farma s 25 uzlami pre x86_64-linux "
+"<1>berlin.guix.gnu.org</1><2>zostavovacia farma s 25 uzlami pre x86_64-linux "
 "a\n"
 "i686-linux a s vlastným úložiskom</2><3><3.1>Max Delbrück Center for "
 "Molecular Medicine</3.1> (technické vybavenie a hosting)</3>"
 
 #: apps/base/templates/donate.scm:130
-msgid ""
-"<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM "
-"Holdings</3.1></3>"
-msgstr ""
-"<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM "
-"Holdings</3.1></3>"
+msgid "<1>overdrive1</1><2>aarch64-linux</2><3><3.1>ARM Holdings</3.1></3>"
+msgstr "<1>overdrive1</1><2>aarch64-linux</2><3><3.1>ARM Holdings</3.1></3>"
 
 #: apps/base/templates/donate.scm:140
-msgid ""
-"<1>bayfront.guixsd.org</1><2>new build farm front-end (WIP)</2><3>Igalia</3>"
+msgid "<1>bayfront</1><2>new build farm front-end (WIP)</2><3>Igalia</3>"
 msgstr ""
-"<1>bayfront.guixsd.org</1><2>nové rozhranie zostavovacej farmy "
+"<1>bayfront</1><2>nové rozhranie zostavovacej farmy "
 "(rozpracované)</2><3>Igalia</3>"
 
 #: apps/base/templates/donate.scm:152
@@ -1604,14 +1601,14 @@ msgstr ""
 #: apps/base/templates/donate.scm:224
 msgid ""
 "Other organizations and individuals helped Guix with hardware and\n"
-"hosting in the past and we thank them: <1>Free Software Foundation</1>, "
-"<2>GNU España</2>, <3>FSF France</3>, <4>Free Secure Network Systems "
-"Group</4> at the <5>Technische Universität München</5>."
+"hosting in the past and we thank them: <1>Free Software Foundation</1>, GNU "
+"España, <2>FSF France</2>, and the Free Secure Network Systems Group at the "
+"<3>Technische Universität München</3>."
 msgstr ""
 "Ďakujeme aj ostatným, ktorí v minulosti pomohli projektu Guix technickým\n"
-"vybavením aj hostingom: <1>Free Software Foundation</1>, <2>GNU España</2>, "
-"<3>FSF France</3>, <4>Free Secure Network Systems Group</4> na <5>Technische "
-"Universität München</5>."
+"vybavením aj hostingom: <1>Free Software Foundation</1>, GNU España, <2>FSF "
+"France</2> a Free Secure Network Systems Group na <3>Technische Universität "
+"München</3>."
 
 #: apps/base/templates/graphics.scm:16
 msgctxt "webpage title"
@@ -1710,7 +1707,7 @@ msgstr ""
 
 #: apps/base/templates/irc.scm:33
 msgid "Chat on IRC"
-msgstr ""
+msgstr "Zhovárať sa cez IRC"
 
 #: apps/base/templates/irc.scm:35
 msgid ""
@@ -1719,12 +1716,18 @@ msgid ""
 "browser</1>, or use one of many <2>other clients</2> to join the <3/> "
 "channel on the <4>Libera Chat IRC network.</4>"
 msgstr ""
+"Zhovárať sa so spoločenstvom GNU Guix alebo získať pomoc\n"
+"          v reálnom čase. Spojte sa s nami cez <1>IRC klienta vo vašom "
+"prehliadači</1>, alebo použite jedného z mnohých <2>iných klientov</2> pre "
+"pripojenie sa ku <3/> kanálu na IRC sieti <4>Libera Chat.</4>"
 
 #: apps/base/templates/irc.scm:49
 msgid ""
 " Note that the conversations that happen\n"
 "          on the <1/> channel are logged (<2>browse the log</2>)."
 msgstr ""
+" Vedzte, že rozhovory uskutočnené\n"
+"          na <1/> kanáli sa zaznamenávajú (<2>prehliadať záznam</2>)."
 
 #: apps/base/templates/menu.scm:16
 msgctxt "webpage title"
@@ -1740,12 +1743,12 @@ msgctxt "website menu"
 msgid "Menu"
 msgstr "Ponuka"
 
-#: apps/base/templates/security.scm:19
+#: apps/base/templates/security.scm:22
 msgctxt "webpage title"
 msgid "Security"
 msgstr "Bezpečnosť"
 
-#: apps/base/templates/security.scm:21
+#: apps/base/templates/security.scm:24
 msgid ""
 "Important information about getting security updates\n"
 "   for your GNU Guix installation, and instructions on how\n"
@@ -1756,7 +1759,7 @@ msgstr ""
 "   ohlasovať bezpečnostné nedostatky."
 
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/security.scm:26
+#: apps/base/templates/security.scm:29
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Security updates"
@@ -1764,15 +1767,15 @@ msgstr ""
 "GNU|Linux|Unix|Slobodný softvér|Operačný systém|GNU Hurd|Správca balíkov GNU "
 "Guix|Bezpečnostné aktualizácie"
 
-#: apps/base/templates/security.scm:36
+#: apps/base/templates/security.scm:39
 msgid "Security"
 msgstr "Bezpečnosť"
 
-#: apps/base/templates/security.scm:38
+#: apps/base/templates/security.scm:41
 msgid "How to report security issues"
 msgstr "Ako ohlasovať bezpečnostné nedostatky"
 
-#: apps/base/templates/security.scm:39
+#: apps/base/templates/security.scm:42
 msgid ""
 "To report sensitive security issues in Guix itself or the\n"
 "           packages it provides, you can write to the private mailing list "
@@ -1784,7 +1787,7 @@ msgstr ""
 "elektronickej konferencie <1/>.  Túto konferenciu\n"
 "           sleduje malá skupina vývojárov systému Guix."
 
-#: apps/base/templates/security.scm:46
+#: apps/base/templates/security.scm:49
 msgid ""
 "If you prefer to send your report using OpenPGP encrypted email,\n"
 "           please send it to one of the following Guix developers using "
@@ -1797,26 +1800,35 @@ msgstr ""
 "použitím\n"
 "           jeho OpenPGP kľúča:"
 
-#: apps/base/templates/security.scm:63
+#: apps/base/templates/security.scm:66
 msgid "Release signatures"
 msgstr "Podpisovanie vydaní"
 
-#: apps/base/templates/security.scm:64
-msgid ""
-"Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
-">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
-"html</2.2></2> their downloads before extracting or running them."
-msgstr ""
-"Vydania systému Guix sa podpisujú OpenPGP kľúčmi s odtlačkom <1/>.  "
-"Používatelia by si mali <2>overiť pravosť<2.1>en</2.1><2.2>Binary-"
-"Installation.html</2.2></2> stiahnutých súborov pred rozbalením alebo "
-"spustením."
+#: apps/base/templates/security.scm:67
+msgid "Releases of Guix are signed using one of the following OpenPGP keys:"
+msgstr "Vydania Guixu sú podpísané jedným z nasledovných OpenPGP kľúčov:"
 
-#: apps/base/templates/security.scm:76
+#: apps/base/templates/security.scm:70
+msgid "Maxim Cournoyer (from version 1.3.0)"
+msgstr "Maxim Cournoyer (počnúc verziou 1.3.0)"
+
+#: apps/base/templates/security.scm:72
+msgid "Ludovic Courtès (until version 1.2.0)"
+msgstr "Ludovic Courtès (až po verziu 1.2.0)"
+
+#: apps/base/templates/security.scm:73
+msgid ""
+"Users should <1>verify<1.1>en</1.1><1.2>Binary-Installation.html</1.2></1> "
+"their downloads before extracting or running them."
+msgstr ""
+"Používatelia by si mali pred rozbaľovaním čí spúšťaním stiahnutých súborov "
+"<1>overiť ich pravosť<1.1>en</1.1><1.2>Binary-Installation.html</1.2></1>."
+
+#: apps/base/templates/security.scm:81
 msgid "Security updates"
 msgstr "Bezpečnostné aktualizácie"
 
-#: apps/base/templates/security.scm:77
+#: apps/base/templates/security.scm:82
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1833,7 +1845,7 @@ msgstr ""
 "konferencii <3><3.1>info-guix</3.1></3>; <4/> tiež môže zobrazovať "
 "bezpečnostné upozornenia."
 
-#: apps/base/templates/security.scm:92
+#: apps/base/templates/security.scm:97
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -1945,7 +1957,7 @@ msgctxt "download page title"
 msgid "GNU Guix <1/> Binary"
 msgstr "Binárne súbory GNU Guix <1/>"
 
-#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:87
+#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:88
 msgid ""
 "Self-contained tarball providing binaries for Guix and its\n"
 "       dependencies, to be installed on top of your Linux-based system."
@@ -1975,7 +1987,7 @@ msgid "<1>en</1>Requirements.html"
 msgstr "<1>en</1>Requirements.html"
 
 #: apps/download/templates/components.scm:25
-#: apps/download/templates/download-latest.scm:120
+#: apps/download/templates/download-latest.scm:121
 msgid "Download options:"
 msgstr "Možnosti stiahnutia:"
 
@@ -2004,7 +2016,7 @@ msgstr ""
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/download/templates/download.scm:40
-#: apps/download/templates/download-latest.scm:152
+#: apps/download/templates/download-latest.scm:153
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Installer|Source code|Package manager"
@@ -2045,72 +2057,74 @@ msgstr ""
 "          ako aj GNU Guix nájdete na serveroch GNU <1/>.  Staršie vydania sú "
 "stále dostupné na <2/>."
 
-#: apps/download/templates/download-latest.scm:68
+#: apps/download/templates/download-latest.scm:69
 msgctxt "download page title"
 msgid "GNU Guix System on Linux"
 msgstr "Systém GNU Guix na Linuxe"
 
-#: apps/download/templates/download-latest.scm:69
+#: apps/download/templates/download-latest.scm:70
 msgid "USB/DVD ISO installer of the standalone Guix System on Linux."
 msgstr "USB/DVD ISO inštalačný obraz samostatného systému Guix na Linuxe."
 
-#: apps/download/templates/download-latest.scm:77
+#: apps/download/templates/download-latest.scm:78
 msgctxt "download page title"
 msgid "GNU Guix System on GNU Hurd"
 msgstr "Systém GNU Guix na GNU Hurd"
 
-#: apps/download/templates/download-latest.scm:78
+#: apps/download/templates/download-latest.scm:79
 msgid "Virtual machine image of the standalone Guix System on GNU Hurd."
 msgstr "Obraz virtuálneho stroja samostatného systému Guix na GNU Hurd."
 
-#: apps/download/templates/download-latest.scm:86
+#: apps/download/templates/download-latest.scm:87
 msgctxt "download page title"
 msgid "GNU Guix binary"
 msgstr "Binárne súbory GNU Guix"
 
-#: apps/download/templates/download-latest.scm:96
+#: apps/download/templates/download-latest.scm:97
 msgctxt "download page title"
 msgid "GNU Guix System on Linux for Pinebook Pro"
 msgstr "Systém GNU Guix na Linuxe pre Pinebook Pro"
 
-#: apps/download/templates/download-latest.scm:97
+#: apps/download/templates/download-latest.scm:98
 msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
 msgstr "Malý spustiteľný obraz systému Guix na Linuxe pre Pinebook Pro."
 
-#: apps/download/templates/download-latest.scm:130
+#: apps/download/templates/download-latest.scm:131
 msgid "Build details: "
 msgstr "Podrobnosti o zostavení: "
 
-#: apps/download/templates/download-latest.scm:146
+#: apps/download/templates/download-latest.scm:147
 msgctxt "webpage title"
 msgid "Download latest"
 msgstr "Stiahnuť najnovšie vydanie"
 
-#: apps/download/templates/download-latest.scm:148
+#: apps/download/templates/download-latest.scm:149
 msgid ""
-"Download latest GNU Guix System images built by the Cuirass continuous\n"
-"integration system."
+"Download latest development GNU Guix System images built\n"
+"by the Cuirass continuous integration system."
 msgstr ""
-"Stiahnuť najnovšie obrazy systému GNU Guix zostavené systémom priebežnej\n"
-"integrácie Cuirass."
+"Stiahnuť najnovšie vývojové obrazy systému GNU Guix zostavené\n"
+"systémom priebežnej integrácie Cuirass."
 
-#: apps/download/templates/download-latest.scm:166
-msgid "Download latest images"
-msgstr "Stiahnuť najnovšie obrazy"
+#: apps/download/templates/download-latest.scm:167
+msgid "Download latest development images"
+msgstr "Stiahnuť najnovšie vývojové obrazy"
 
 #. TRANSLATORS: Continuous Integration is a section name
 #. in the English (en) manual.
-#: apps/download/templates/download-latest.scm:169
+#: apps/download/templates/download-latest.scm:170
 msgid ""
 "Download latest GNU Guix System images built by the "
 "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> continuous "
 "integration system at <2/>. These images are <3>development snapshots</3>, "
-"you might prefer to use stable images that can be found <4>here.</4>"
+"you might prefer to use well-tested released images\n"
+"that can be found <4>here.</4>"
 msgstr ""
 "Stiahnuť najnovšie obrazy systému GNU Guix zostavené systémom priebežnej "
 "integrácie <1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> "
 "na <2/>. Toto sú <3>vývojové obrazy</3>. Možno by ste namiesto toho mali "
-"použiť stabilné obrazy dostupné <4>tu.</4>"
+"použiť dobre otestované vydané obrazy\n"
+"dostupné <4>tu.</4>"
 
 #: apps/media/data.scm:27 apps/media/data.scm:33 apps/media/data.scm:39
 msgctxt "publication type"
@@ -2432,6 +2446,14 @@ msgid ""
 msgstr ""
 "<1>Chyby v skladbe</1><2><2.1/>. Viď <2.2>zadávanie balíkov</2.2> v "
 "zdrojovom kóde Guixu.</2>"
+
+#~ msgctxt "website menu"
+#~ msgid "Stable"
+#~ msgstr "Stabilné vydanie"
+
+#~ msgctxt "website menu"
+#~ msgid "GNU Guix Manual (stable)"
+#~ msgstr "Príručka GNU Guix (stabilné vydanie)"
 
 #~ msgid "IRC"
 #~ msgstr "IRC"

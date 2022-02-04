@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: guix-website 20210124\n"
 "Report-Msgid-Bugs-To: bug-guix@gnu.org\n"
-"POT-Creation-Date: 2021-11-21 15:18Z\n"
+"POT-Creation-Date: 2022-01-13 15:18Z\n"
 "PO-Revision-Date: 2021-09-06 17:04+0000\n"
 "Last-Translator: Muha Aliss <muhaaliss@gmail.com>\n"
 "Language-Team: Turkish <https://translate.fedoraproject.org/projects/guix/"
@@ -73,7 +73,7 @@ msgstr ""
 "paket yöneticisi|GNU Guile|Guile Scheme|Etkileşimsel yükseltme|İşlevsel "
 "paket yönetimi|Yeniden üretilebilirlik"
 
-#: apps/base/templates/home.scm:32 apps/base/templates/components.scm:395
+#: apps/base/templates/home.scm:32 apps/base/templates/components.scm:396
 msgctxt "website menu"
 msgid "Overview"
 msgstr "Genel Bakış"
@@ -260,11 +260,11 @@ msgctxt "button"
 msgid "ALL CONTACT MEDIA"
 msgstr "TÜM İLETİŞİM ORTAMI"
 
-#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:464
-#: apps/base/templates/components.scm:467 apps/base/templates/about.scm:27
+#: apps/base/templates/theme.scm:19 apps/base/templates/components.scm:466
+#: apps/base/templates/components.scm:469 apps/base/templates/about.scm:27
 #: apps/base/templates/about.scm:30 apps/base/templates/contact.scm:26
 #: apps/base/templates/contribute.scm:26 apps/base/templates/graphics.scm:24
-#: apps/base/templates/security.scm:28
+#: apps/base/templates/security.scm:31
 msgctxt "website menu"
 msgid "About"
 msgstr "Hakkında"
@@ -279,7 +279,11 @@ msgctxt "webpage title"
 msgid "GNU Guix — Activity Feed"
 msgstr "GNU Guix - Etkinlik Akışı"
 
-#: apps/base/templates/theme.scm:144
+#: apps/base/templates/theme.scm:126
+msgid "Online conference February 19-20. <1>Learn more</1>!"
+msgstr ""
+
+#: apps/base/templates/theme.scm:151
 msgid ""
 "Made with <1>♥</1> by humans and powered by <2>GNU Guile</2>.  <3>Source "
 "code</3> under the <4>GNU AGPL</4>."
@@ -288,107 +292,109 @@ msgstr ""
 "desteklenmektedir. <3>Kaynak kodu</3> <4>GNU AGPL</4> altında "
 "lisanslanmıştır."
 
-#: apps/base/templates/components.scm:49
+#: apps/base/templates/components.scm:50
 msgid "Your location:"
 msgstr "Konumunuz:"
 
-#: apps/base/templates/components.scm:51
+#: apps/base/templates/components.scm:52
 msgid "Home"
 msgstr "Ana sayfa"
 
-#: apps/base/templates/components.scm:155
+#: apps/base/templates/components.scm:156
 msgid "archive"
 msgstr "arşiv"
 
-#: apps/base/templates/components.scm:385
+#: apps/base/templates/components.scm:386
 msgctxt "website menu"
 msgid "Guix"
 msgstr "Guix"
 
-#: apps/base/templates/components.scm:389
+#: apps/base/templates/components.scm:390
 msgid "website menu:"
 msgstr "Web site menüsü:"
 
-#: apps/base/templates/components.scm:397
+#: apps/base/templates/components.scm:398
 #: apps/download/templates/download.scm:43
 #: apps/download/templates/download.scm:47
-#: apps/download/templates/download-latest.scm:155
-#: apps/download/templates/download-latest.scm:160
+#: apps/download/templates/download-latest.scm:156
+#: apps/download/templates/download-latest.scm:161
 msgctxt "website menu"
 msgid "Download"
 msgstr "İndir"
 
-#: apps/base/templates/components.scm:403
+#: apps/base/templates/components.scm:404
 msgctxt "website menu"
-msgid "Stable"
-msgstr "Kararlı"
+msgid "Standard"
+msgstr ""
 
-#: apps/base/templates/components.scm:406
-#: apps/download/templates/download-latest.scm:161
+#: apps/base/templates/components.scm:407
+#: apps/download/templates/download-latest.scm:162
 msgctxt "website menu"
 msgid "Latest"
 msgstr "Güncel"
 
-#: apps/base/templates/components.scm:409 apps/base/templates/help.scm:27
-#: apps/base/templates/help.scm:31
+#: apps/base/templates/components.scm:410 apps/base/templates/help.scm:28
+#: apps/base/templates/help.scm:32
 msgctxt "website menu"
 msgid "Help"
 msgstr "Yardım"
 
-#: apps/base/templates/components.scm:415
+#: apps/base/templates/components.scm:416
 msgctxt "website menu"
 msgid "All"
 msgstr "Tümü"
 
 #: apps/base/templates/components.scm:418
+#, fuzzy
+#| msgid "GNU Guix Manual <1/>"
 msgctxt "website menu"
-msgid "GNU Guix Manual (stable)"
-msgstr "GNU Guix Kılavuzu (kararlı)"
+msgid "GNU Guix Manual <1/>"
+msgstr "GNU Guix Kılavuzu <1/>"
 
-#: apps/base/templates/components.scm:421
+#: apps/base/templates/components.scm:423
 msgctxt "website menu"
 msgid "GNU Guix Manual (latest)"
 msgstr "GNU Guix Kılavuzu (güncel)"
 
-#: apps/base/templates/components.scm:424
+#: apps/base/templates/components.scm:426
 msgctxt "website menu"
 msgid "Guix Reference Card"
 msgstr "Guix Referans Kataloğu"
 
-#: apps/base/templates/components.scm:427
-#: apps/base/templates/components.scm:454 apps/media/templates/video.scm:46
+#: apps/base/templates/components.scm:429
+#: apps/base/templates/components.scm:456 apps/media/templates/video.scm:46
 #: apps/media/templates/video.scm:50 apps/media/templates/video-list.scm:34
 #: apps/media/templates/video-list.scm:38
 msgctxt "website menu"
 msgid "Videos"
 msgstr "Videolar"
 
-#: apps/base/templates/components.scm:430
+#: apps/base/templates/components.scm:432
 msgctxt "website menu"
 msgid "Cookbook"
 msgstr "Tarif kitabı"
 
-#: apps/base/templates/components.scm:433
+#: apps/base/templates/components.scm:435
 msgctxt "website menu"
 msgid "GNU Manuals"
 msgstr "GNU Kılavuzları"
 
-#: apps/base/templates/components.scm:437
+#: apps/base/templates/components.scm:439
 msgctxt "website menu"
 msgid "Wiki"
 msgstr "Viki"
 
-#: apps/base/templates/components.scm:440
+#: apps/base/templates/components.scm:442
 msgctxt "website menu"
 msgid "IRC Chat"
 msgstr "IRC Sohbet"
 
-#: apps/base/templates/components.scm:443
+#: apps/base/templates/components.scm:445
 msgctxt "website menu"
 msgid "Mailing Lists"
 msgstr "Posta Listesi"
 
-#: apps/base/templates/components.scm:446
+#: apps/base/templates/components.scm:448
 #: apps/packages/templates/detailed-index.scm:31
 #: apps/packages/templates/detailed-index.scm:38
 #: apps/packages/templates/detailed-package-list.scm:34
@@ -402,7 +408,7 @@ msgctxt "website menu"
 msgid "Packages"
 msgstr "Paketler"
 
-#: apps/base/templates/components.scm:447 apps/blog/templates/post-list.scm:34
+#: apps/base/templates/components.scm:449 apps/blog/templates/post-list.scm:34
 #: apps/blog/templates/post-list.scm:40 apps/blog/templates/post.scm:29
 #: apps/blog/templates/post.scm:35 apps/blog/templates/tag.scm:38
 #: apps/blog/templates/tag.scm:44
@@ -410,60 +416,60 @@ msgctxt "website menu"
 msgid "Blog"
 msgstr "Blog"
 
-#: apps/base/templates/components.scm:449
+#: apps/base/templates/components.scm:451
 #: apps/media/templates/screenshot.scm:28
 #: apps/media/templates/screenshots-overview.scm:25
 msgctxt "website menu"
 msgid "Media"
 msgstr "Medya"
 
-#: apps/base/templates/components.scm:457
+#: apps/base/templates/components.scm:459
 msgctxt "website menu"
 msgid "Screenshots"
 msgstr "Ekran görüntüleri"
 
-#: apps/base/templates/components.scm:460
+#: apps/base/templates/components.scm:462
 #, fuzzy
 #| msgid "Your location:"
 msgctxt "website menu"
 msgid "Publications"
 msgstr "Konumunuz:"
 
-#: apps/base/templates/components.scm:462 apps/base/templates/donate.scm:26
+#: apps/base/templates/components.scm:464 apps/base/templates/donate.scm:26
 #: apps/base/templates/donate.scm:29
 msgctxt "website menu"
 msgid "Donate"
 msgstr "Bağış"
 
-#: apps/base/templates/components.scm:469 apps/base/templates/contact.scm:31
+#: apps/base/templates/components.scm:471 apps/base/templates/contact.scm:31
 msgctxt "website menu"
 msgid "Contact"
 msgstr "İletişim"
 
-#: apps/base/templates/components.scm:470 apps/base/templates/contribute.scm:30
+#: apps/base/templates/components.scm:472 apps/base/templates/contribute.scm:30
 msgctxt "website menu"
 msgid "Contribute"
 msgstr "Katkı"
 
-#: apps/base/templates/components.scm:471 apps/base/templates/security.scm:31
+#: apps/base/templates/components.scm:473 apps/base/templates/security.scm:34
 msgctxt "website menu"
 msgid "Security"
 msgstr "Güvenlik"
 
-#: apps/base/templates/components.scm:472 apps/base/templates/graphics.scm:27
+#: apps/base/templates/components.scm:474 apps/base/templates/graphics.scm:27
 msgctxt "website menu"
 msgid "Graphics"
 msgstr "Görseller"
 
-#: apps/base/templates/components.scm:494
+#: apps/base/templates/components.scm:496
 msgid "Translate"
 msgstr "Çevir"
 
-#: apps/base/templates/components.scm:514
+#: apps/base/templates/components.scm:516
 msgid " (Page <1/> of <2/>)"
 msgstr " (Sayfa <1/> <2/>)"
 
-#: apps/base/templates/components.scm:538
+#: apps/base/templates/components.scm:540
 msgid "Page <1/> of <2/>. Go to another page: "
 msgstr "Sayfa <1/> <2/>. Başka bir sayfaya git: "
 
@@ -565,22 +571,28 @@ msgid "Maintainers"
 msgstr "Bakımcılar"
 
 #: apps/base/templates/about.scm:108
+#, fuzzy
+#| msgid ""
+#| "Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim\n"
+#| "Cournoyer, Tobias Geerinckx-Rice and Mathieu Othacehe.  Please use the "
+#| "<1>mailing lists</1> for contact.  For sensitive issues, you can reach "
+#| "them using the <2/> private alias."
 msgid ""
-"Guix is currently maintained by Ludovic Courtès, Marius Bakke, Maxim\n"
-"Cournoyer, Tobias Geerinckx-Rice and Mathieu Othacehe.  Please use the "
-"<1>mailing lists</1> for contact.  For sensitive issues, you can reach them "
-"using the <2/> private alias."
+"Guix is currently maintained by Efraim Flashner, Mathieu Othacehe, Maxim "
+"Cournoyer and Tobias Geerinckx-Rice.  Please use the <1>mailing lists</1> "
+"for contact.  For sensitive issues, you can reach them using the <2/> "
+"private alias."
 msgstr ""
 "Guix şu anda Ludovic Courtès, Marius Bakke, Maxim\n"
 "Cournoyer, Tobias Geerinckx-Rice ve Mathieu Othacehe tarafından "
 "yönetilmektedir. İletişim için lütfen <1>posta listelerini</1> kullanın. "
 "Hassas konular için </2> özel takma adını kullanarak onlara ulaşabilirsiniz."
 
-#: apps/base/templates/about.scm:117
+#: apps/base/templates/about.scm:116
 msgid "Licensing"
 msgstr "Lisanslama"
 
-#: apps/base/templates/about.scm:119
+#: apps/base/templates/about.scm:118
 msgid ""
 "Guix is free software; you can redistribute it and/or modify\n"
 "          it under the terms of the <1>GNU General Public License</1> as "
@@ -767,12 +779,12 @@ msgstr "GNU Bilgilendirme Posta Listesi"
 msgid "GNU software announcements."
 msgstr "GNU yazılım duyuruları."
 
-#: apps/base/templates/help.scm:18
+#: apps/base/templates/help.scm:19
 msgctxt "webpage title"
 msgid "Help"
 msgstr "Yardım"
 
-#: apps/base/templates/help.scm:20
+#: apps/base/templates/help.scm:21
 msgid ""
 "A list of resources about how to use GNU Guix, plus\n"
 "   information about getting help from the community of users and\n"
@@ -783,7 +795,7 @@ msgstr ""
 " yardım alma hakkında bilgi."
 
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/help.scm:25
+#: apps/base/templates/help.scm:26
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Help resources"
@@ -791,15 +803,15 @@ msgstr ""
 "GNU|Linux|Unix|Özgür yazılım|Libre yazılım|İşletim sistemi|GNU Hurd|GNU Guix "
 "paket yönetici|Yardım kaynakları"
 
-#: apps/base/templates/help.scm:36
+#: apps/base/templates/help.scm:37
 msgid "Help"
 msgstr "Yardım"
 
-#: apps/base/templates/help.scm:47
+#: apps/base/templates/help.scm:48
 msgid "GNU Guix Manual <1/>"
 msgstr "GNU Guix Kılavuzu <1/>"
 
-#: apps/base/templates/help.scm:48
+#: apps/base/templates/help.scm:49
 msgid ""
 "Documentation for GNU Guix is available\n"
 "            online.  You may also find more information about Guix by "
@@ -809,40 +821,47 @@ msgstr ""
 "Ayrıca <1>info Guix</1> komutunu çalıştırarak Guix hakkında daha fazla bilgi "
 "edinebilirsiniz."
 
-#: apps/base/templates/help.scm:54
-msgid "Read stable manual"
+#: apps/base/templates/help.scm:55
+#, fuzzy
+#| msgid "Read stable manual"
+msgid "Read manual <1/>"
 msgstr "Kararlı kılavuzu oku"
 
-#: apps/base/templates/help.scm:65
+#: apps/base/templates/help.scm:67
 msgid "Get Guix reference card"
 msgstr "Guix referans kataloğu edin"
 
-#: apps/base/templates/help.scm:74
+#: apps/base/templates/help.scm:76
 msgid "GNU Guix Manual (Latest)"
 msgstr "GNU Guix Kılavuzu (Güncel)"
 
-#: apps/base/templates/help.scm:75
+#: apps/base/templates/help.scm:77
+#, fuzzy
+#| msgid ""
+#| "This version of the manual is updated frequently to\n"
+#| "            include the latest changes from Guix's source files. It is\n"
+#| "            more up-to-date than the manual for the stable release of\n"
+#| "            Guix."
 msgid ""
 "This version of the manual is updated frequently to\n"
 "            include the latest changes from Guix's source files. It is\n"
-"            more up-to-date than the manual for the stable release of\n"
-"            Guix."
+"            more up-to-date than the manual for the release of Guix."
 msgstr ""
 "Kılavuzun bu sürümü, \n"
 "Guix'in kaynak dosyalarındaki en son değişiklikleri \n"
 "eklemek için sık sık güncellenir. \n"
 "Guix'in kararlı sürüm kalvuzundan daha günceldir."
 
-#: apps/base/templates/help.scm:82
+#: apps/base/templates/help.scm:83
 msgid "Read latest manual"
 msgstr "Güncel kılavuzu oku"
 
-#: apps/base/templates/help.scm:90 apps/media/templates/video.scm:40
+#: apps/base/templates/help.scm:91 apps/media/templates/video.scm:40
 #: apps/media/templates/video-list.scm:44
 msgid "Videos"
 msgstr "Videolar"
 
-#: apps/base/templates/help.scm:91
+#: apps/base/templates/help.scm:92
 msgid ""
 "The collection of videos includes instructional material\n"
 "            to help you get started with every day use of GNU Guix as\n"
@@ -854,15 +873,15 @@ msgstr ""
 "eğitici materyallerin yanı sıra sistemin gelişmiş özelliklerini \n"
 "sunan diğer konuları içerir."
 
-#: apps/base/templates/help.scm:99
+#: apps/base/templates/help.scm:100
 msgid "Browse all videos"
 msgstr "Tüm videolara göz at"
 
-#: apps/base/templates/help.scm:107
+#: apps/base/templates/help.scm:108
 msgid "Cookbook"
 msgstr "Tarif kitabı"
 
-#: apps/base/templates/help.scm:108
+#: apps/base/templates/help.scm:109
 msgid ""
 "Tutorials, how-to guides and examples contributed by the\n"
 "            Guix community which show you how to use the system and its\n"
@@ -875,15 +894,15 @@ msgstr ""
 " Guix topluluğu tarafından hazırlanan öğreticiler,\n"
 " nasıl yapılır kılavuzları ve örnekler."
 
-#: apps/base/templates/help.scm:116
+#: apps/base/templates/help.scm:117
 msgid "Browse the recipes"
 msgstr "Tariflere göz at"
 
-#: apps/base/templates/help.scm:124
+#: apps/base/templates/help.scm:125
 msgid "GNU Manuals"
 msgstr "GNU Kılavuzları"
 
-#: apps/base/templates/help.scm:125
+#: apps/base/templates/help.scm:126
 msgid ""
 "Guix is a distribution of the <1>GNU operating system</1>.  Documentation "
 "for GNU packages is\n"
@@ -892,15 +911,15 @@ msgstr ""
 "Guix, bir <1>GNU işletim sistemi</1> dağıtımıdır. \n"
 "GNU paketleri için belgeler çeşitli formatlarda çevrimiçi olarak mevcuttur. "
 
-#: apps/base/templates/help.scm:133
+#: apps/base/templates/help.scm:134
 msgid "Browse GNU manuals"
 msgstr "GNU kılavuzlarına göz at"
 
-#: apps/base/templates/help.scm:141
+#: apps/base/templates/help.scm:142
 msgid "Wiki"
 msgstr "Viki"
 
-#: apps/base/templates/help.scm:142
+#: apps/base/templates/help.scm:143
 msgid ""
 "The LibrePlanet Wiki provides a collaborative space for people to share "
 "additional information about the Guix project and its subprojects. It may "
@@ -912,15 +931,15 @@ msgstr ""
 "ve devam eden çalışmalarla ilgili notları (diğer şeylerin yanı sıra) "
 "içerebilir."
 
-#: apps/base/templates/help.scm:151
+#: apps/base/templates/help.scm:152
 msgid "Browse the wiki"
 msgstr "Viki'ye göz at"
 
-#: apps/base/templates/help.scm:159
+#: apps/base/templates/help.scm:160
 msgid "IRC Chat"
 msgstr "IRC Sohbet"
 
-#: apps/base/templates/help.scm:160
+#: apps/base/templates/help.scm:161
 #, fuzzy
 #| msgid ""
 #| "For real-time support from the community, you can connect\n"
@@ -935,7 +954,7 @@ msgstr ""
 " irc.freenode.net'deki <1/> kanalına bağlanabilirsiniz.\n"
 " Orada GNU Guix ile ilgili herhangi bir konuda yardım alabilirsiniz."
 
-#: apps/base/templates/help.scm:165
+#: apps/base/templates/help.scm:166
 msgid ""
 "The <1/> channel is logged. Previous\n"
 "            conversations can be browsed online. See the <2>channel "
@@ -945,15 +964,15 @@ msgstr ""
 "Önceki konuşmalara çevrim içi olarak göz atılabilir. <2>Kanal "
 "günlüklerine</2> bakın. "
 
-#: apps/base/templates/help.scm:172
+#: apps/base/templates/help.scm:173
 msgid "Connect"
 msgstr "Bağlan"
 
-#: apps/base/templates/help.scm:180
+#: apps/base/templates/help.scm:181
 msgid "Mailing lists"
 msgstr "Posta listeleri"
 
-#: apps/base/templates/help.scm:181
+#: apps/base/templates/help.scm:182
 msgid ""
 "Email support from the community is also available through\n"
 "            several mailing list. The messages sent to the lists are\n"
@@ -963,7 +982,7 @@ msgstr ""
 " Listelere gönderilen mesajlar herkese açıktır ve\n"
 " çevrim içi olarak arşivlenir."
 
-#: apps/base/templates/help.scm:189
+#: apps/base/templates/help.scm:190
 msgid "See all lists"
 msgstr "Tüm listeleri gör"
 
@@ -1527,21 +1546,18 @@ msgstr "<1>makine</1><2>sistem</2><3>bağışçı</3>"
 
 #: apps/base/templates/donate.scm:118
 msgid ""
-"<1>berlin.guixsd.org</1><2>build farm with 25 build nodes for x86_64-linux "
+"<1>berlin.guix.gnu.org</1><2>build farm with 25 build nodes for x86_64-linux "
 "and\n"
 "i686-linux, and dedicated storage</2><3><3.1>Max Delbrück Center for "
 "Molecular Medicine</3.1> (hardware and hosting)</3>"
 msgstr ""
 
 #: apps/base/templates/donate.scm:130
-msgid ""
-"<1>overdrive1.guixsd.org</1><2>aarch64-linux</2><3><3.1>ARM "
-"Holdings</3.1></3>"
+msgid "<1>overdrive1</1><2>aarch64-linux</2><3><3.1>ARM Holdings</3.1></3>"
 msgstr ""
 
 #: apps/base/templates/donate.scm:140
-msgid ""
-"<1>bayfront.guixsd.org</1><2>new build farm front-end (WIP)</2><3>Igalia</3>"
+msgid "<1>bayfront</1><2>new build farm front-end (WIP)</2><3>Igalia</3>"
 msgstr ""
 
 #: apps/base/templates/donate.scm:152
@@ -1581,11 +1597,17 @@ msgid ""
 msgstr ""
 
 #: apps/base/templates/donate.scm:224
+#, fuzzy
+#| msgid ""
+#| "Other organizations and individuals helped Guix with hardware and\n"
+#| "hosting in the past and we thank them: <1>Free Software Foundation</1>, "
+#| "<2>GNU España</2>, <3>FSF France</3>, <4>Free Secure Network Systems "
+#| "Group</4> at the <5>Technische Universität München</5>."
 msgid ""
 "Other organizations and individuals helped Guix with hardware and\n"
-"hosting in the past and we thank them: <1>Free Software Foundation</1>, "
-"<2>GNU España</2>, <3>FSF France</3>, <4>Free Secure Network Systems "
-"Group</4> at the <5>Technische Universität München</5>."
+"hosting in the past and we thank them: <1>Free Software Foundation</1>, GNU "
+"España, <2>FSF France</2>, and the Free Secure Network Systems Group at the "
+"<3>Technische Universität München</3>."
 msgstr ""
 "Diğer kuruluşlar ve kişiler geçmişte Guix'e donanım ve barındırma konusunda "
 "yardım ettiler ve onlara teşekkür ediyoruz:\n"
@@ -1713,12 +1735,12 @@ msgctxt "website menu"
 msgid "Menu"
 msgstr "Menü"
 
-#: apps/base/templates/security.scm:19
+#: apps/base/templates/security.scm:22
 msgctxt "webpage title"
 msgid "Security"
 msgstr "Güvenlik"
 
-#: apps/base/templates/security.scm:21
+#: apps/base/templates/security.scm:24
 msgid ""
 "Important information about getting security updates\n"
 "   for your GNU Guix installation, and instructions on how\n"
@@ -1726,7 +1748,7 @@ msgid ""
 msgstr ""
 
 #. TRANSLATORS: |-separated list of webpage keywords
-#: apps/base/templates/security.scm:26
+#: apps/base/templates/security.scm:29
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Security updates"
@@ -1734,15 +1756,15 @@ msgstr ""
 "GNU|Linux|Unix|Özgür yazılım|Libre yazılım|İşletim sistemi|GNU Hurd|GNU Guix "
 "paket yönetici|Güvenlik güncellemeleri"
 
-#: apps/base/templates/security.scm:36
+#: apps/base/templates/security.scm:39
 msgid "Security"
 msgstr "Güvenlik"
 
-#: apps/base/templates/security.scm:38
+#: apps/base/templates/security.scm:41
 msgid "How to report security issues"
 msgstr "Güvenlik sorunları nasıl bildirilir"
 
-#: apps/base/templates/security.scm:39
+#: apps/base/templates/security.scm:42
 msgid ""
 "To report sensitive security issues in Guix itself or the\n"
 "           packages it provides, you can write to the private mailing list "
@@ -1755,7 +1777,7 @@ msgstr ""
 " Bu liste, Guix geliştiricilerinden oluşan küçük bir ekip tarafından "
 "izlenmektedir."
 
-#: apps/base/templates/security.scm:46
+#: apps/base/templates/security.scm:49
 msgid ""
 "If you prefer to send your report using OpenPGP encrypted email,\n"
 "           please send it to one of the following Guix developers using "
@@ -1767,25 +1789,41 @@ msgstr ""
 " lütfen ilgili OpenPGP anahtarını kullanarak aşağıdaki\n"
 " Guix geliştiricilerinden birine gönderin:"
 
-#: apps/base/templates/security.scm:63
+#: apps/base/templates/security.scm:66
 msgid "Release signatures"
 msgstr "Sürüm imzaları"
 
-#: apps/base/templates/security.scm:64
+#: apps/base/templates/security.scm:67
+msgid "Releases of Guix are signed using one of the following OpenPGP keys:"
+msgstr ""
+
+#: apps/base/templates/security.scm:70
+msgid "Maxim Cournoyer (from version 1.3.0)"
+msgstr ""
+
+#: apps/base/templates/security.scm:72
+msgid "Ludovic Courtès (until version 1.2.0)"
+msgstr ""
+
+#: apps/base/templates/security.scm:73
+#, fuzzy
+#| msgid ""
+#| "Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
+#| ">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
+#| "html</2.2></2> their downloads before extracting or running them."
 msgid ""
-"Releases of Guix are signed using the OpenPGP key with the fingerprint <1/"
-">.  Users should <2>verify<2.1>en</2.1><2.2>Binary-Installation."
-"html</2.2></2> their downloads before extracting or running them."
+"Users should <1>verify<1.1>en</1.1><1.2>Binary-Installation.html</1.2></1> "
+"their downloads before extracting or running them."
 msgstr ""
 "Guix sürümleri, </1> parmak izi ile OpenPGP anahtarı kullanılarak imzalanır. "
 "Kullanıcılar indirmeden veya çalıştırmadan önce indirmelerini "
 "<2>doğrulamalıdır<2.1>en</2.1><2.2>Binary-Installation.html</2.2></2>."
 
-#: apps/base/templates/security.scm:76
+#: apps/base/templates/security.scm:81
 msgid "Security updates"
 msgstr "Güvenlik güncellemeleri"
 
-#: apps/base/templates/security.scm:77
+#: apps/base/templates/security.scm:82
 msgid ""
 "When security vulnerabilities are found in Guix or the packages provided by "
 "Guix, we will provide <1>security updates<1.1>en</1.1><1.2>Security-Updates."
@@ -1801,7 +1839,7 @@ msgstr ""
 "<3><3.1>info-guix</3.1> posta listesinde bir güvenlik danışma belgesi "
 "yayınlanır; </4> komutu danışma belgesini de görüntüleyebilir."
 
-#: apps/base/templates/security.scm:92
+#: apps/base/templates/security.scm:97
 msgid ""
 "Guix uses a “rolling release” model.  All security bug-fixes are pushed "
 "directly to the master branch.  There is no “stable” branch that only "
@@ -1913,7 +1951,7 @@ msgctxt "download page title"
 msgid "GNU Guix <1/> Binary"
 msgstr "GNU Guix <1/> İkili"
 
-#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:87
+#: apps/download/data.scm:51 apps/download/templates/download-latest.scm:88
 msgid ""
 "Self-contained tarball providing binaries for Guix and its\n"
 "       dependencies, to be installed on top of your Linux-based system."
@@ -1943,7 +1981,7 @@ msgid "<1>en</1>Requirements.html"
 msgstr ""
 
 #: apps/download/templates/components.scm:25
-#: apps/download/templates/download-latest.scm:120
+#: apps/download/templates/download-latest.scm:121
 msgid "Download options:"
 msgstr "İndirme seçenekleri:"
 
@@ -1969,7 +2007,7 @@ msgstr ""
 #. TRANSLATORS: |-separated list of webpage keywords
 #. TRANSLATORS: |-separated list of webpage keywords
 #: apps/download/templates/download.scm:40
-#: apps/download/templates/download-latest.scm:152
+#: apps/download/templates/download-latest.scm:153
 msgid ""
 "GNU|Linux|Unix|Free software|Libre software|Operating system|GNU Hurd|GNU "
 "Guix package manager|Installer|Source code|Package manager"
@@ -2009,30 +2047,30 @@ msgstr ""
 "dosyalar <1/> adresindeki GNU sunucularında bulunabilir.\n"
 " Eski sürümler hala <2/> adresinde."
 
-#: apps/download/templates/download-latest.scm:68
+#: apps/download/templates/download-latest.scm:69
 msgctxt "download page title"
 msgid "GNU Guix System on Linux"
 msgstr "Linux içeren GNU Guix Sistem"
 
-#: apps/download/templates/download-latest.scm:69
+#: apps/download/templates/download-latest.scm:70
 msgid "USB/DVD ISO installer of the standalone Guix System on Linux."
 msgstr "Linux içeren bağımsız Guix Sistem USB/DVD ISO yükleyicisi."
 
-#: apps/download/templates/download-latest.scm:77
+#: apps/download/templates/download-latest.scm:78
 msgctxt "download page title"
 msgid "GNU Guix System on GNU Hurd"
 msgstr "GNU Hurd içeren GNU Guix Sistem"
 
-#: apps/download/templates/download-latest.scm:78
+#: apps/download/templates/download-latest.scm:79
 msgid "Virtual machine image of the standalone Guix System on GNU Hurd."
 msgstr "GNU Hurd içeren bağımsız Guix Sistem sanal makine imajı."
 
-#: apps/download/templates/download-latest.scm:86
+#: apps/download/templates/download-latest.scm:87
 msgctxt "download page title"
 msgid "GNU Guix binary"
 msgstr "GNU Guix ikili dosyası"
 
-#: apps/download/templates/download-latest.scm:96
+#: apps/download/templates/download-latest.scm:97
 #, fuzzy
 #| msgctxt "download page title"
 #| msgid "GNU Guix System on Linux"
@@ -2040,39 +2078,53 @@ msgctxt "download page title"
 msgid "GNU Guix System on Linux for Pinebook Pro"
 msgstr "Linux içeren GNU Guix Sistem"
 
-#: apps/download/templates/download-latest.scm:97
+#: apps/download/templates/download-latest.scm:98
 msgid "Guix System on Linux barebones bootable raw image for Pinebook Pro."
 msgstr ""
 
-#: apps/download/templates/download-latest.scm:130
+#: apps/download/templates/download-latest.scm:131
 msgid "Build details: "
 msgstr "Derleme detayları: "
 
-#: apps/download/templates/download-latest.scm:146
+#: apps/download/templates/download-latest.scm:147
 msgctxt "webpage title"
 msgid "Download latest"
 msgstr "Günceli indir"
 
-#: apps/download/templates/download-latest.scm:148
+#: apps/download/templates/download-latest.scm:149
+#, fuzzy
+#| msgid ""
+#| "Download latest GNU Guix System images built by the Cuirass continuous\n"
+#| "integration system."
 msgid ""
-"Download latest GNU Guix System images built by the Cuirass continuous\n"
-"integration system."
+"Download latest development GNU Guix System images built\n"
+"by the Cuirass continuous integration system."
 msgstr ""
 "Cuirass sürekli entegrasyon sistemi tarafından oluşturulan\n"
 " güncel GNU Guix Sistem imajlarını indir."
 
-#: apps/download/templates/download-latest.scm:166
-msgid "Download latest images"
+#: apps/download/templates/download-latest.scm:167
+#, fuzzy
+#| msgid "Download latest images"
+msgid "Download latest development images"
 msgstr "Güncel imaj indirme"
 
 #. TRANSLATORS: Continuous Integration is a section name
 #. in the English (en) manual.
-#: apps/download/templates/download-latest.scm:169
+#: apps/download/templates/download-latest.scm:170
+#, fuzzy
+#| msgid ""
+#| "Download latest GNU Guix System images built by the "
+#| "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> "
+#| "continuous integration system at <2/>. These images are <3>development "
+#| "snapshots</3>, you might prefer to use stable images that can be found "
+#| "<4>here.</4>"
 msgid ""
 "Download latest GNU Guix System images built by the "
 "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> continuous "
 "integration system at <2/>. These images are <3>development snapshots</3>, "
-"you might prefer to use stable images that can be found <4>here.</4>"
+"you might prefer to use well-tested released images\n"
+"that can be found <4>here.</4>"
 msgstr ""
 "<1>Cuirass<1.1>en</1.1><1.2>Continuous-Integration.html</1.2></1> sürekli "
 "entegrasyon sistemi tarafından oluşturulan en son GNU Guix Sistem imajlarını "
@@ -2405,6 +2457,14 @@ msgid ""
 "<1>Lint issues</1><2><2.1/>. See <2.2>package definition</2.2> in Guix "
 "source code.</2>"
 msgstr ""
+
+#~ msgctxt "website menu"
+#~ msgid "Stable"
+#~ msgstr "Kararlı"
+
+#~ msgctxt "website menu"
+#~ msgid "GNU Guix Manual (stable)"
+#~ msgstr "GNU Guix Kılavuzu (kararlı)"
 
 #~ msgid "IRC"
 #~ msgstr "IRC"

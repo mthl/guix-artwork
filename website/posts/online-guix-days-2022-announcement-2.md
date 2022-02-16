@@ -30,7 +30,7 @@ the following (UTC+1, Paris time). Schedule is subject to change:
 
  - 13:00–13:35: **Spontaneous topics**
  - 13:40–14:15: **[A Deep Dive into the Guile Documentation & Makeover Proposal]()**
- - 14:20–14:55: (BoF) **Community**
+ - 14:20–14:55: (BoF) **WhereisEveryone, Guix 'R Us, Online Meetups**
 
  `(break)`
 
@@ -131,8 +131,16 @@ Guile Documentation while respecting these historical threads, at the same time
 rendering it more approachable for new users while not forsaking the deep
 nuggets of wisdom that lie therein?
 
-##### Community
+##### WhereisEveryone, Guix 'R Us, Online Meetups
 Chaired by *jgart*.
+
+In this session I'll give an introduction and short tour of the WhereisEveryone
+community and associated Guix 'R Us channel.  the session will cover how people
+can get involved with the project as well as how we see ourselves fitting
+into the scheme of contributing to GNU Guix upstream through regular
+online collaboration and organized meetups.  The session is open to prospective
+as well as experienced Guix contributors alike.  An open discussion will follow
+to discuss the strategies presented and how we might improve and extend them.
 
 ##### My experiences as a newcomer to Guix
 Presented by *John Kehayias*.

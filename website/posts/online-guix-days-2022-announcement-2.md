@@ -14,8 +14,8 @@ Want to know the schedule, read on!
 
 ![Guix Days logo](/static/blog/img/Guix-Days-online-2022.png)
 
-[Join us live]() (TBA) on the 19 and 20 to
-participate in the various sessions!
+[Join us live](https://meet.univ-grenoble-alpes.fr/b/pie-uia-2a2-wzl)
+on the 19 and 20 to participate in the various sessions!
 
 Live discussions will take place on Saturday and Sunday, and the agenda is
 the following (UTC+1, Paris time). Schedule is subject to change:

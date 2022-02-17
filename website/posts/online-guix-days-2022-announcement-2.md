@@ -29,7 +29,7 @@ the following (UTC+1, Paris time). Schedule is subject to change:
  `(break)`
 
  - 13:00–13:35: **Spontaneous topics**
- - 13:40–14:15: **[A Deep Dive into the Guile Documentation & Makeover Proposal]()**
+ - 13:40–14:15: **[A Deep Dive into the Guile Documentation & Makeover Proposal](https://xana.lepiller.eu/guix-days-2022/guix-days-2022-documentation.mp4)**
  - 14:20–14:55: (BoF) **WhereisEveryone, Guix 'R Us, Online Meetups**
 
  `(break)`

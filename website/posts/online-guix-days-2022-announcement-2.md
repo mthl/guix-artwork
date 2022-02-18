@@ -30,11 +30,11 @@ the following (UTC+1, Paris time). Schedule is subject to change:
 
  - 13:00–13:35: **Spontaneous topics**
  - 13:40–14:15: **[A Deep Dive into the Guile Documentation & Makeover Proposal](https://xana.lepiller.eu/guix-days-2022/guix-days-2022-documentation.mp4)**
- - 14:20–14:55: (BoF) **WhereisEveryone, Guix 'R Us, Online Meetups**
+ - 14:20–14:55: **Spontaneous topics**
 
  `(break)`
 
- - 16:00–16:35: **Spontaneous topics**
+ - 16:00–16:35: (BoF) **WhereisEveryone, Guix 'R Us, Online Meetups**
  - 16:40–17:15: **[My experiences as a newcomer to Guix](https://xana.lepiller.eu/guix-days-2022/guix-days-2022-experience-newcomer.mp4)**
  - 17:20–17:55: **[How GNU Guix saved me when my laptop caught water,  how it didn't, and where it couldn't](https://xana.lepiller.eu/guix-days-2022/guix-days-2022-how-gnu-guix-saved-me.mkv)**
 

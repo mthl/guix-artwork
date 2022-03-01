@@ -128,22 +128,22 @@
       ;                  (@ (href "/blog/2022/online-guix-days-2022-announcement-1/"))
       ;                  "Learn more"))
       ;           "!"))))
-      (div
-       (@ (class "message-box msg-info"))
-       (p ,(G_ `("Online conference February 19-20. "
-                 "Watch the "
-                 ,(G_ `(a
-	    	(@ (href "https://xana.lepiller.eu/guix-days-2022/"))
-	    	"pre-recorded talks"))
-                 "."
-                 ,(G_ `(a
-	    	(@ (href "https://meet.univ-grenoble-alpes.fr/b/pie-uia-2a2-wzl"))
-	    	"Join us"))
-                 "! Learn "
-                 ,(G_ `(a
-	    	(@ (href ,(guix-url "blog/2022/online-guix-days-2022-announcement-2/")))
-	    	"more"))
-                 "!"))))
+      ;(div
+      ; (@ (class "message-box msg-info"))
+      ; (p ,(G_ `("Online conference February 19-20. "
+      ;           "Watch the "
+      ;           ,(G_ `(a
+      ;      (@ (href "https://xana.lepiller.eu/guix-days-2022/"))
+      ;      "pre-recorded talks"))
+      ;           "."
+      ;           ,(G_ `(a
+      ;      (@ (href "https://meet.univ-grenoble-alpes.fr/b/pie-uia-2a2-wzl"))
+      ;      "Join us"))
+      ;           "! Learn "
+      ;           ,(G_ `(a
+      ;      (@ (href ,(guix-url "blog/2022/online-guix-days-2022-announcement-2/")))
+      ;      "more"))
+      ;           "!"))))
 
       ,(if (null? crumbs) "" (breadcrumbs crumbs))
 

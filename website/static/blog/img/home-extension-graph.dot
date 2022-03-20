@@ -1,0 +1,43 @@
+digraph "Guix service" {
+  "140222976182944" [label = "home", shape = box, fontname = sans];
+  "140222976182912" -> "140222976182944" [color = red];
+  "140222976183104" -> "140222976182944" [color = cyan3];
+  "140222976183136" -> "140222976182944" [color = darkgoldenrod];
+  "140222976183168" -> "140222976182944" [color = darkviolet];
+  "140223216368000" -> "140222976182944" [color = darkseagreen];
+  "140222976180704" -> "140222976182944" [color = darkgoldenrod];
+  "140222976182912" [label = "home-profile", shape = box, fontname = sans];
+  "140222976183040" -> "140222976182912" [color = darkgoldenrod];
+  "140222879378240" -> "140222976182912" [color = darkgoldenrod];
+  "140222976180640" -> "140222976182912" [color = magenta];
+  "140222976180576" -> "140222976182912" [color = cyan3];
+  "140222976183040" [label = "home-fontconfig", shape = box, fontname = sans];
+  "140222879378240" [label = "home-bash", shape = box, fontname = sans];
+  "140222976180640" [label = "home-mcron", shape = box, fontname = sans];
+  "140223216369280" -> "140222976180640" [color = blue];
+  "140223216369280" [label = "idutils", shape = box, fontname = sans];
+  "140222976180576" [label = "home-shepherd", shape = box, fontname = sans];
+  "140222879378176" -> "140222976180576" [color = blue];
+  "140222976180640" -> "140222976180576" [color = magenta];
+  "140222879378176" [label = "home-redshift", shape = box, fontname = sans];
+  "140222976183104" [label = "home-environment-variables", shape = box, fontname = sans];
+  "140222976183008" -> "140222976183104" [color = dimgrey];
+  "140222976183008" [label = "home-xdg-base-directories", shape = box, fontname = sans];
+  "140222976183136" [label = "home-activation", shape = box, fontname = sans];
+  "140222976183008" -> "140222976183136" [color = dimgrey];
+  "140222976183072" -> "140222976183136" [color = blue];
+  "140222976180576" -> "140222976183136" [color = cyan3];
+  "140222976180512" -> "140222976183136" [color = darkgoldenrod];
+  "140222976183072" [label = "home-symlink-manager", shape = box, fontname = sans];
+  "140222976180512" [label = "home-run-on-change", shape = box, fontname = sans];
+  "140222976183040" -> "140222976180512" [color = darkgoldenrod];
+  "140222976183168" [label = "home-run-on-first-login", shape = box, fontname = sans];
+  "140222976180576" -> "140222976183168" [color = cyan3];
+  "140223216368000" [label = "home-provenance", shape = box, fontname = sans];
+  "140222976180704" [label = "home-files", shape = box, fontname = sans];
+  "140222976182976" -> "140222976180704" [color = darkviolet];
+  "140222976183040" -> "140222976180704" [color = darkgoldenrod];
+  "140222879378240" -> "140222976180704" [color = darkgoldenrod];
+  "140222976182976" [label = "home-shell-profile", shape = box, fontname = sans];
+
+}

@@ -35,6 +35,26 @@ channels|Bug reports|Help") #\|)
       (@ (class "page centered-block limit-width"))
       ,(G_ `(h2 "Contact"))
 
+      ,(G_
+        `(p
+          "We want to provide a warm, friendly, and harassment-free environment,
+           so that anyone can contribute to the best of their abilities.  To
+           this end our project uses a “Contributor Covenant”, which was adapted
+           from "
+          ,(G_ ((lambda (url)
+                  `(a (@ (href ,url)) ,url))
+                "https://contributor-covenant.org/"))
+          ".  You can find the full pledge in the "
+          ,(G_
+            `(a (@ (href "//git.savannah.gnu.org/cgit/guix.git/tree/CODE-OF-CONDUCT")
+                   (class "mono"))
+                "CODE-OF-CONDUCT"))
+          " file."))
+
+      ,(G_
+        `(p "Participation to the project communication channels listed below
+            is subject to this code of conduct."))
+
       ,@(map
 	 contact->shtml
 	 (context-datum context "contact-media"))))))

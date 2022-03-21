@@ -46,11 +46,11 @@ management|Reproducibility") #\|)
             (@ (class "limit-width centered-block"))
             "GNU Guix provides " ,(number* total) " packages transparently "
             ,(G_
-              `(a (@ (href "https://ci.guix.gnu.org/jobset/guix-master"))
+              `(a (@ (href "https://ci.guix.gnu.org/jobset/master"))
                   "available as pre-built binaries"))
             ". These pages provide a complete list of the packages.  Our "
             ,(G_
-              `(a (@ (href "https://ci.guix.gnu.org/jobset/guix-master"))
+              `(a (@ (href "https://ci.guix.gnu.org/jobset/master"))
                   "continuous integration system"))
             " shows their current build status "
             "(updated " ,(date->string (current-date)

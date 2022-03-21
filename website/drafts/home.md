@@ -19,10 +19,10 @@ System](https://guix.gnu.org/manual/devel/en/html_node/Using-the-Configuration-S
 to home directories.  With Guix System, users and administrators provide
 a configuration file that defines the operating system configuration;
 with Guix Home, users provide a configuration file that defines the
-configuration of their work environment in their home directory.  That
-configuration is meant to *stand alone*, to describe all the relevant
-aspects of your work environment.  But what exactly goes in a _home
-environment_?
+configuration of their work environment in their home directory—their
+_home environment_.  That configuration is meant to *stand alone*, to
+describe all the relevant aspects of your work environment.  But what
+exactly goes in a home environment?
 
 # “Dot files” don’t live in a vacuum
 
@@ -269,7 +269,11 @@ Mon Mar 21 12:15:00 2022 +0000
 If you already use Guix System, all the above certainly looks familiar:
 Guix Home builds upon the [service
 framework](https://guix.gnu.org/manual/devel/en/html_node/Defining-Services.html)
-that powers Guix System.  That framework lets us define relations among
+that powers Guix System; Home services are defined in the [`(gnu home
+services …)` module
+tree](https://git.savannah.gnu.org/cgit/guix.git/tree/gnu/home/services).
+
+That framework lets us define relations among
 “services”, in a broad sense, and how services _extend_ each other—in
 the example above, `redshift` and `mcron` both extend `shepherd` by
 giving it a daemon to take care of.  We can see those relations at play
@@ -300,10 +304,10 @@ types and their extension operation form a
 # What’s next?
 
 Let’s be clear: Guix Home is pretty new and chances are that `guix home
-search` won’t give you the service you’re looking for.  There’s also a
-bunch of open questions left, such as how to reuse services initially
-defined for Guix System in cases where they could be equally useful in
-Guix
+search`—the command to search for services by keyword—won’t give you the
+service you’re looking for.  There’s also a bunch of open questions
+left, such as how to reuse services initially defined for Guix System in
+cases where they could be equally useful in Guix
 Home—[Syncthing](https://guix.gnu.org/manual/devel/en/html_node/Networking-Services.html#index-syncthing_002dservice_002dtype),
 for example.
 

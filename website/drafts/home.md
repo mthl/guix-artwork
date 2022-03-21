@@ -320,3 +320,21 @@ Consider
 With a new release and ten-year anniversary coming up, we’re happy to
 celebrate with a new tool extending the reach of declarative and
 reproducible deployment!
+
+#### About GNU Guix
+
+[GNU Guix](https://guix.gnu.org) is a transactional package manager and
+an advanced distribution of the GNU system that [respects user
+freedom](https://www.gnu.org/distros/free-system-distribution-guidelines.html).
+Guix can be used on top of any system running the Hurd or the Linux
+kernel, or it can be used as a standalone operating system distribution
+for i686, x86_64, ARMv7, AArch64 and POWER9 machines.
+
+In addition to standard package management features, Guix supports
+transactional upgrades and roll-backs, unprivileged package management,
+per-user profiles, and garbage collection.  When used as a standalone
+GNU/Linux distribution, Guix offers a declarative, stateless approach to
+operating system configuration management.  Guix is highly customizable
+and hackable through [Guile](https://www.gnu.org/software/guile)
+programming interfaces and extensions to the
+[Scheme](http://schemers.org) language.

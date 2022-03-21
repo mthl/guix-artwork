@@ -260,10 +260,10 @@ can inspect *via* `herd`:
 ```
 $ herd schedule mcron | head -5
 Sun Mar 20 19:15:00 2022 +0000
-/gnu/store/2d026nan309qkci968k8gpa8fcv9q4mv-idutils-4.6/bin/mkid -m $HOME/.id-lang.map -o $HOME/.idutils/doc $HOME/doc/ $HOME/.erc
+/gnu/store/2d026nan309qkci968k8gpa8fcv9q4mv-idutils-4.6/bin/mkid -o $HOME/.idutils/src $HOME/src
 
 Mon Mar 21 12:15:00 2022 +0000
-/gnu/store/2d026nan309qkci968k8gpa8fcv9q4mv-idutils-4.6/bin/mkid -m $HOME/.id-lang.map -o $HOME/.idutils/doc $HOME/doc/ $HOME/.erc
+/gnu/store/2d026nan309qkci968k8gpa8fcv9q4mv-idutils-4.6/bin/mkid -o $HOME/.idutils/src $HOME/src
 ```
 
 # Services, composed

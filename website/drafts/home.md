@@ -30,8 +30,8 @@ Among seasoned Unix-style users, we often equate “home environment” with
 “dot files”—configuration files in our home directory, from `~/.bashrc`
 and `~/.ssh/config` to `~/.emacs` and everything under `~/.config`.
 These files are precious and many store them under version control, to
-keep track of changes made to your configuration.  That’s a good idea,
-but is that all it takes to describe your home environment?  To roll
+keep track of changes made to their configuration.  That’s a good idea,
+but is that all it takes to describe the home environment?  To roll
 back to a previous version?
 
 Of course not.  Dot files don’t exist in a vacuum; at the very least,
@@ -39,10 +39,10 @@ your home environment is not just a set of dot files, but also a set of
 installed packages.  They work together: if you upgrade a package, the
 corresponding dot file might need to be adjusted; if a package is
 missing, its dot file is not of any use.  Sometimes a home environment
-contains additional things: daemons (program that run in the
+contains additional things: daemons (programs that run in the
 background), or periodically executed jobs.
 
-Guix Home thus goes beyond dot files: it lets you declare and
+Guix Home goes beyond dot files: it lets you declare and
 instantiate all these aspects that make up your home environment.
 
 # Genesis
@@ -61,7 +61,7 @@ could already declare a package set in a
 [manifest](https://guix.gnu.org/manual/devel/en/html_node/Invoking-guix-package.html#index-profile-manifest)
 or even a [complete operating
 system](https://guix.gnu.org/manual/devel/en/html_node/Using-the-Configuration-System.html).
-It had been floating in the air, in Nix land with [Home
+It had been floating around, in Nix land with [Home
 Manager](https://github.com/nix-community/home-manager) and in Guix land
 with the now-defunct [Guix Home
 Manager](https://framagit.org/tyreunom/guix-home-manager/) by Julien
@@ -191,14 +191,16 @@ Generation 1    Mar 07 2022 15:46:20   (current)
 
 `guix home describe` shows provenance tracking we know and love from
 Guix System: all the info we need to redeploy the same home environment
-elsewhere, or at a different point in time.
+elsewhere, or at a different point in time.  It’s also information `guix
+home reconfigure` relies on to make sure you never accidentally
+_downgrade_ you home environment to an older Guix revision.
 
 # Going further
 
 Alright, at this point, you might be thinking that it’s a lot of fuss
-but the only benefit over dot files under version control is that `guix
-home` also takes care of installing packages.  Guix Home really shines
-once you use higher-level services, and when you start composing
+but the “only” benefit over dot files under version control is that
+`guix home` also takes care of installing packages.  Guix Home really
+shines once you use higher-level services, and when you start composing
 services together.
 
 To the example above, in the `services` field, we can add a service
@@ -313,12 +315,12 @@ for example.
 
 But while it’s still a “technology preview”, it’s already a tool that
 tinkerers can play with and benefit from.  Patches adding new services
-have already been proposed; maybe you favorite service is next?
+have already been proposed; maybe your favorite service is next?
 Consider
 [contributing](https://guix.gnu.org/manual/devel/en/html_node/Contributing.html).
 
 With a new release and ten-year anniversary coming up, we’re happy to
-celebrate with a new tool extending the reach of declarative and
+celebrate with a tool that extends the reach of declarative and
 reproducible deployment!
 
 #### About GNU Guix

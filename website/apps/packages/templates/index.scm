@@ -46,7 +46,7 @@ management|Reproducibility") #\|)
             (@ (class "limit-width centered-block"))
             "GNU Guix provides " ,(number* total) " packages transparently "
             ,(G_
-              `(a (@ (href "https://ci.guix.gnu.org/jobset/master"))
+              `(a (@ (href "https://www.gnu.org/software/guix/manual/en/html_node/Substitutes.html"))
                   "available as pre-built binaries"))
             ". These pages provide a complete list of the packages.  Our "
             ,(G_

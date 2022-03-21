@@ -313,6 +313,6 @@ have already been proposed; maybe you favorite service is next?
 Consider
 [contributing](https://guix.gnu.org/manual/devel/en/html_node/Contributing.html).
 
-With a new release coming up and its ten-year birthday, we’re happy to
+With a new release and ten-year anniversary coming up, we’re happy to
 celebrate with a new tool extending the reach of declarative and
 reproducible deployment!

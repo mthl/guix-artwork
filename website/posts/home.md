@@ -87,7 +87,7 @@ generate an initial config for you:
 guix home import ~/src/guix-config
 ```
 
-This will create the `~/src/config` directory and populate it with a
+This will create the `~/src/guix-config` directory and populate it with a
 bunch of files among which `home-configuration.scm` along these lines:
 
 ```scheme

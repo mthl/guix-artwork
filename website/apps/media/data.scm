@@ -70,6 +70,12 @@ Steffen Möller, Geert Smant, Joep de Ligt, Pjotr Prins"
     #:url "https://hal.archives-ouvertes.fr/hal-02877319/"
     #:authors "Konrad Hinsen"
     #:date (string->date "2020-06-22" "~Y-~m-~d")
+    #:type (C_ "publication type" "Journal article"))
+   (publication
+    #:title "Debootstrapping without Archeology — Stacked Implementations in Camlboot"
+    #:url "https://doi.org/10.22152/programming-journal.org/2022/6/13"
+    #:authors "Nathanaëlle Courant, Julien Lepiller, Gabriel Scherer"
+    #:date (string->date "2022-02-15" "~Y-~m-~d")
     #:type (C_ "publication type" "Journal article"))))
 
 

@@ -6,7 +6,9 @@
   #:use-module (apps base types)
   #:use-module (apps base utils)
   #:use-module (apps i18n)
+  #:use-module ((apps media types) #:select (publication-date))
   #:use-module (apps media templates components)
+  #:use-module (srfi srfi-19)
   #:export (publication-list-t))
 
 
@@ -43,4 +45,9 @@
       (div
        (@ (class "publication-list centered-block limit-width"))
 
-       ,@(map publication->shtml publications))))))
+       ,@(map publication->shtml
+              ;; Show newest publications first.
+              (sort publications
+                    (lambda (p1 p2)
+                      (time<? (date->time-utc (publication-date p2))
+                              (date->time-utc (publication-date p1)))))))))))
